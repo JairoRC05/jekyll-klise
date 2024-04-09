@@ -1,24 +1,24 @@
 ---
 layout: resultados
-permalink: /team/fondo-de-bikini.html
+permalink: /team/alpha-impact.html
 categories: nortejohto042024
 date: 2020-08-29 10:29:20 +0700
-title: FONDO DE BIKINI
+title: ALPHA IMPACT
 tag: johto042024
 color: black
 puntosLJ202404: 2
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: FONDO DE BIKINI
-abr: FDB
+team: ALPHA IMPACT
+abr: AI
 t1: ETERNAL STARLIGHT
 r1:
 t2: TEAM STAR
 r2:
 t3: GODS
 r3:
-t4: ALPHA IMPACT
+t4: FONDO DE BIKINI
 r4: 
 t5: POR LA ANECDOTA
 r5: 
