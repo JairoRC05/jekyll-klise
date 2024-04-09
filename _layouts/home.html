@@ -6,8 +6,9 @@ home: true
 
 <div class="content">
   <div class="card_res">
-   <p class="title">NORTE</p>
-     {%- for post in site.categories.nortejohto042024 -%}
+   <p class="title"> GRUPO NORTE</p>
+   {% assign norte = site.categories.nortejohto042024 | sort: "puntosLJ202404" | reverse  %}
+     {%- for post in norte-%}
      <a href="{{ post.url }}">
       <div class="user">
         <div class="image"></div>
@@ -24,8 +25,9 @@ home: true
   </div> 
   
   <div class="card_res">
-   <p class="title">SUR</p>
-    {%- for post in site.categories.surjohto042024  -%}
+   <p class="title">GRUPO SUR</p>
+   {% assign sur = site.categories.surjohto042024 | sort: "puntosLJ202404" | reverse  %}
+    {%- for post in sur  -%}
     <a href="{{ post.url }}">
       <div class="user">
         <div class="image"></div>

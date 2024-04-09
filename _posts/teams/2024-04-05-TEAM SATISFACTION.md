@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: TEAM SATISFACTION
 tag: johto042024
 color: black
-puntosLJ202404: 2
+puntosLJ202404: 5
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -15,11 +15,11 @@ abr:
 t1: ETERNAL STARLIGHT
 r1:
 t2: TEAM STAR
-r2:
+r2: 3-0
 t3: GODS
-r3:
+r3: 2-0
 t4: ALPHA IMPACT
-r4: 
+r4: 0-3
 t5: POR LA ANECDOTA
 r5: 
 t6: KOD
