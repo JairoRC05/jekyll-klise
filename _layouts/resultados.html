@@ -1,0 +1,173 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include header.html %}
+
+<body data-theme="{{ site.mode }}" class="notransition">
+
+  <script>
+    const body = document.body;
+    const data = body.getAttribute("data-theme");
+
+    const initTheme = (state) => {
+      if (state === "dark") {
+        body.setAttribute("data-theme", "dark");
+      } else if (state === "light") {
+        body.removeAttribute("data-theme");
+      } else {
+        localStorage.setItem("theme", data);
+      }
+    };
+ 
+    initTheme(localStorage.getItem("theme"));
+    
+    setTimeout(() => body.classList.remove("notransition"), 75);
+  </script>
+
+  {% include navbar.html %}
+
+
+  <div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+      <article itemscope itemtype="https://schema.org/BlogPosting">
+
+        <header class="header">
+            <div class="content">
+            <div class="results-summary-container">
+                <div class="confetti">
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                  <div class="confetti-piece"></div>
+                </div>
+                <div class="results-summary-container__result">
+                  <div class="heading-tertiary"></div>
+                  <div class="result-box">
+                    <div class="heading-primary"><b>{{page.puntosLJ202404}} </b></div>
+                    <p class="result">PTS</p>
+                  </div>
+                  <div class="result-text-box">
+                    <div class="heading-secondary">{{page.team}}</div>
+                    <p class="paragraph">
+                     
+                    </p>
+                  </div>
+                </div>
+                <div class="results-summary-container__options">
+                  <div class="heading-secondary heading-secondary--blue">RESULTADOS</div>
+                  <div class="summary-result-options">
+                    <div class="result-option result-option-Visual">
+                      <div class="icon-box">
+                        
+                        <span class="visual-icon-text">{{page.t1}}</span>
+                      </div>
+                      <div class="result-box">{{page.r1}}</div>
+                    </div>
+                    <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t2}}</span>
+                        </div>
+                        <div class="result-box">{{page.r2}}</div>
+                      </div>
+                      <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t3}}</span>
+                        </div>
+                        <div class="result-box">{{page.r3}}</div>
+                      </div>
+                      <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t4}}</span>
+                        </div>
+                        <div class="result-box">{{page.r4}}</div>
+                      </div>
+                      <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t5}}</span>
+                        </div>
+                        <div class="result-box">{{page.r5}}</div>
+                      </div>
+                      <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t6}}</span>
+                        </div>
+                        <div class="result-box">{{page.r6}}</div>
+                      </div>
+                      <div class="result-option result-option-Visual">
+                        <div class="icon-box">
+                          
+                          <span class="visual-icon-text">{{page.t7}}</span>
+                        </div>
+                        <div class="result-box">{{page.r7}}</div>
+                      </div>
+                      
+                      
+
+                  
+                    <div class="summary__cta">
+                        <a href="/">
+                      <button class="btn btn__continue">VOLVER</button>
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+
+
+         
+        </header>
+
+        <div class="page-content" itemprop="articleBody">
+          {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
+          {% if page.tweet %}
+          <p>Comments this article on 
+            <a href="https://twitter.com/{{site.twitter}}/status/{{page.tweet}}">Twitter</a>.
+          </p>
+          {% endif %}
+        </div>
+      </article>
+    
+      <!-- {% if page.comments %}
+        {% include comments.html %}
+      {% endif %} -->
+
+    </main>
+
+    <!-- {% if page.modified %}
+      <small class="post-updated-at">updated_at {{page.modified | date: "%d-%m-%Y"}}</small>
+    {% endif %} -->
+    <!-- {% if page.next or page.previous %}
+      {% include navigation.html %}
+    {% endif %} -->
+
+  </div>
+  {% include footer.html %}
+</body>
+
+</html>

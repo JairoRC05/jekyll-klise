@@ -7,6 +7,10 @@
   transition: background-color 75ms ease-in, border-color 75ms ease-in;
 }
 
+a {
+  text-decoration: none;
+}
+
 .notransition {
   -webkit-transition: none;
   -moz-transition: none; 
