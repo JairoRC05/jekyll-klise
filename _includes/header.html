@@ -132,11 +132,7 @@
   {% else %}
   <meta name="twitter:image" content="{{ site.image | absolute_url }}" />
   {% endif %} {% feed_meta %}
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/assets/favicons/.png"
-  />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/.png" />
   <link
     rel="icon"
     type="image/png"
@@ -150,10 +146,11 @@
     href="/assets/favicons/.png"
   />
   <link rel="manifest" href="/assets/favicons/.webmanifest" />
-  <link
-    rel="mask-icon"
-    href="/assets/favicons/.svg"
-    color="#5bbad5"
+  <link rel="mask-icon" href="/assets/favicons/.svg" color="#5bbad5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
   />
   <meta name="apple-mobile-web-app-title" content="XFORCEUNITE" />
   <meta name="application-name" content="XFORCEUNITE" />
@@ -164,12 +161,15 @@
 
   <!-- for mathjax support -->
   {% if page.usemathjax %}
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-      });
-    </script>
-    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+  <script
+    type="text/javascript"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML"
+  ></script>
   {% endif %}
-    
 </head>

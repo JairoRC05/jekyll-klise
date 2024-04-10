@@ -352,6 +352,7 @@
 
 
 .card_res {
+  margin-top: 10px;
   width: auto;
   height: auto;
   background: #E8EAEA;
@@ -801,4 +802,48 @@
   to {
     transform: translateY(250px);
   }
+}
+
+
+
+.container{
+  width: 100%;
+  height:80vh;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  align-content: start;
+  gap: 5px;
+}
+
+.slide{
+  width: 100%;
+  height: 60%;
+  background-color: rgb(192, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.license{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  background-color: rgb(192, 192, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.johto{
+  width: 59%;
+  height: 200px;
+  background-color: rgb(21, 9, 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
