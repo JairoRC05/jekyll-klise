@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: POR LA ANECNOTA
 tag: johto042024
 color: black
-puntosLJ202404: 1
+puntosLJ202404: 3
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -19,13 +19,13 @@ r2:
 t3: GODS
 r3:
 t4: ALPHA IMPACT
-r4: 
+r4: 2-1
 t5: FONDO DE BIKINI
 r5: 
 t6: KOD
 r6:
 t7: TEAM SATISFACTION
-r7: 
+r7: 0-3
 ---
 
 

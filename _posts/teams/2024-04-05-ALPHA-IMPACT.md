@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: ALPHA IMPACT
 tag: johto042024
 color: black
-puntosLJ202404: 15
+puntosLJ202404: 16
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -21,7 +21,7 @@ r3:
 t4: FONDO DE BIKINI
 r4: 3-0
 t5: POR LA ANECDOTA
-r5: 
+r5: 1-2
 t6: KOD
 r6: 3-0
 t7: TEAM SATISFACTION
