@@ -17,7 +17,7 @@ r1: 3-0
 t2: AEP
 r2:
 t3: D&C
-r3:
+r3: 0-3
 t4: DEEP DARK
 r4: 0-3
 t5: EK GEA

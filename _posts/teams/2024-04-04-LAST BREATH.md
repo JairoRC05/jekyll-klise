@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 tag: johto042024
 color: black
-puntosLJ202404: 7
+puntosLJ202404: 10
 grupo: norte
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -25,7 +25,7 @@ r5:
 t6: J ASURA
 r6: 3-0
 t7: AEP
-r7: 
+r7: 3-0
 ---
 
 

@@ -3,21 +3,21 @@ layout: resultados
 permalink: /team/alpha-impact.html
 categories: nortejohto042024
 date: 2020-08-29 10:29:20 +0700
-title: ALPHA IMPACT
+title: SWORDS OF JUSTICE
 tag: johto042024
 color: black
-puntosLJ202404: 16
+puntosLJ202404: 18
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: ALPHA IMPACT
-abr: AI
+team: SWORDS OF JUSTICE
+abr: SOJ
 t1: ETERNAL STARLIGHT
 r1: 3-0
 t2: TEAM STAR
 r2: 3-0
 t3: GODS
-r3:
+r3: 2-1
 t4: FONDO DE BIKINI
 r4: 3-0
 t5: POR LA ANECDOTA
