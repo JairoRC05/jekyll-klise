@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: POR LA ANECNOTA
 tag: johto042024
 color: black
-puntosLJ202404: 4
+puntosLJ202404: 7
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -15,7 +15,7 @@ abr: PLA
 t1: ETERNAL STARLIGHT
 r1: 1-2
 t2: TEAM STAR
-r2:
+r2: 3-0
 t3: GODS
 r3:
 t4: ALPHA IMPACT
