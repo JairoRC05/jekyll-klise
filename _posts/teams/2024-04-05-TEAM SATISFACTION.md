@@ -17,7 +17,7 @@ r1: 1-2
 t2: TEAM STAR
 r2: 3-0
 t3: GODS
-r3: 2-0
+r3: 2-1
 t4: ALPHA IMPACT
 r4: 0-3
 t5: POR LA ANECDOTA

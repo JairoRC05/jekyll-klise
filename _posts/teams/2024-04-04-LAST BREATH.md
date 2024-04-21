@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 tag: johto042024
 color: black
-puntosLJ202404: 13
+puntosLJ202404: 14
 grupo: norte
 background: '#F16C38'
 cover: /assets/backCard.png
@@ -19,7 +19,7 @@ r2: 1-2
 t3: D&C
 r3: 3-0
 t4: DEEP DARK
-r4: 
+r4: 1-2
 t5: EK GEA
 r5: 3-0
 t6: J ASURA
