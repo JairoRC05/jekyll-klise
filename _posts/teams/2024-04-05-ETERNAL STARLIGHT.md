@@ -15,9 +15,9 @@ abr:
 t1: GODS
 r1: 3-0
 t2: TEAM STAR
-r2:
+r2: 0
 t3: FONDO DE BIKINI
-r3:
+r3: 0
 t4: ALPHA IMPACT
 r4: 0-3
 t5: POR LA ANECDOTA

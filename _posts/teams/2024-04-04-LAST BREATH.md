@@ -6,14 +6,14 @@ date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 tag: johto042024
 color: black
-puntosLJ202404: 14
+puntosLJ202404: 17
 grupo: norte
 background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 abr: 
 t1: HG REGIOS
-r1: 
+r1: 3-0
 t2: CRYSTAL STARS
 r2: 1-2
 t3: D&C
