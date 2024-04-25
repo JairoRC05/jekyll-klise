@@ -305,26 +305,7 @@
     color: hsl(224, 30%, 27%);
   }
   
-  .btn {
-    width: 100%;
-    padding: 10px;
-    color: #ffffff;
-    background-image: linear-gradient(to right, #aa076b, #61045f);
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s;
-    animation: background 10s linear infinite;
-  }
-  
-  .btn:hover {
-    transform: translateY(5px);
-    background-image: linear-gradient(to left, #aa076b, #61045f);
-  }
+ 
   
   .icon {
     cursor: pointer;
