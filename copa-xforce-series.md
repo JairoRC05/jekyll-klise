@@ -7,21 +7,27 @@ permalink: /copa-xf-platino.html
 
 <body class="gray">
 <nav class="navbar">
-  <div class="container">
-    <a class="navbar-brand text-white" href="">XFORCE UNITE</a>
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand text-white" href=""><h2>XFORCE UNITE</h2></a>
+    <div class="">
+      <a class="text-white" href="/copa-xf-oro">CXF ORO</a>
+      <a class="text-white mx-5" href="/copa-xf-plata">CXF PLATA</a>
+      <a class="text-white" href="/copa-xf-bronce">CXF BRONCE</a>
+    </div>
   </div>
 </nav>
 <div class="container mt-2">
-  <h1 class="text-white">COPA XFORCE PLATINO</h1>
+  <h3 class="text-white">COPA XFORCE PLATINO</h3>
   <iframe src="https://brackethq.com/b/myj0b/embed/?zoom=0" width="100%" height="700" frameborder="0"></iframe>
-  
-<button type="button" class="btn btn-dark"><a class="text-white" href="/copa-xf-platino">COPA XFORCE PLATINO</a></button>
- <button type="button" class="btn btn-dark"><a class="text-white" href="/copa-xf-oro">COPA XFORCE ORO</a></button>
- <button type="button" class="btn btn-dark"><a class="text-white" href="/copa-xf-plata">COPA XFORCE PLATA</a></button>
-<button type="button" class="btn btn-dark"><a class="text-white" href="/copa-xf-bronce">COPA XFORCE BRONCE</a></button>
 </div>
+<nav class="navbar fixed-bottom">
+  <div class="container">
+ 
+  </div>
+</nav>
 
-{% include footer.html %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
 

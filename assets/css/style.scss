@@ -591,7 +591,36 @@
   
   
   
-  
+  // Colors
   .gray{
     background-color: #1E1F24;
+  }
+
+  .light-blue{
+    background-color:  #F0F3FF
+  }
+
+
+  .purple{
+    background-color:  #6523B6
+  }
+
+  .bg-purple{
+    border-radius: 25px 0 0 0;
+    background: rgb(101,35,182);
+    background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0.16010154061624648) 89%, rgba(0,0,0,0) 100%);
+  }
+
+  .neon{
+    color: black;
+    background-color: white;
+    clip-path: polygon(0 0, 94% 0, 100% 11%, 99% 100%, 7% 100%, 0 89%);
+  }
+
+
+  @media only screen and (max-width: 992px) {
+    .neon{
+      clip-path: none;
+    }
+  
   }
