@@ -21,7 +21,7 @@ permalink: /liga-johto.html
         <div class="col-12 col-xl-2"></div>
         <div class="col-12 col-xl-8">
             <h3 class="bg-purple px-3 px-lg-5 py-3">LIGA JOHTO</h3>
-            <div class="neon p-3 p-lg-5">
+            <div class="neon px-3 px-lg-5 py-lg-3">
                 <h4> REGLAS </h4>      
                 <ul>
                   <li>
@@ -33,11 +33,10 @@ permalink: /liga-johto.html
                   <p>El tiempo de Tolerancia inicia una vez entregada la Antesala</p>
                   </li>
                   <li><p>Modo veto (TORNEO) (NO PERSONALIZADAS) (SERVIDOR NA05)</p></li>
-                  <li><p>cada capitan  agendara sus partidos</p></li>   
-                   <li><p>Se juegan 3 partidos, 1st pick sera desigando por el ADMIN para primer encuetro, para el 2do y 3er partido sera 1st pick el equipo que pierda el partido previo.</p></li>
+                  <li><p>Cada capitan  agendara sus partidos.</p></li>   
+                   <li><p>Se juegan 3 partidos <b>(No es BO3)</b>, 1st pick sera desigando por el ADMIN para primer MATCH, para el 2do y 3er partido sera 1st pick el equipo que pierda el partido previo.</p></li>
                   <li><p>Cada victoria vale un 1pt.</p></li> 
-                   <li><p></p></li>
-                  <li><p></p></li>           
+                   <li><p><b>NO SE PERMITEN ESPECTADORES</b> (solo bajo asignación del ADMIN)</p></li>     
                 </ul>   
             </div>
         </div>
