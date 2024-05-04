@@ -26,9 +26,9 @@ permalink: /press-kit.html
             <!-- <h2 class="text-dark mb-4">COPA XFORCE PLATINO</h2>   -->
            
            </div>
-           <div class="row">
+           <div class="row  ">
              {%- for post in site.categories.logos -%}
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 d-none d-md-block ">
               <div class="container-fluid p-3">
               <div class="card__license" style="background: {{post.background}};">
                 <!-- <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span> -->
@@ -50,6 +50,12 @@ permalink: /press-kit.html
         </div>
         <div class="col-12 col-xl-2"></div>
     </div>
+</div>
+
+
+<div class="container my-5">
+  {% include cards.html %}
+
 </div>
 
 

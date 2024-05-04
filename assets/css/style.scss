@@ -638,6 +638,87 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
   }
 
 
+  .card__container{
+    width: 100%;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden
+    
+  }
+
+  .card__media{
+    width: 90%;
+    margin: auto;
+    right: 5%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height:85%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 7px #ffffff solid ;
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+  }
+
+  .card__background {
+    position: absolute;
+    text-align: justify;
+    font-style: italic;
+    padding: 0 15px;
+    text-transform:uppercase;
+    color: black;
+    top: 10%;
+    left: 1%;
+    right: 0;
+    bottom: 0%;
+    width: 120px;
+    height: 120px;
+    background: #ff0202;
+    border-radius: 20px;
+    transform: .5s;  
+  }
+
+  .card__tittle {
+    position: absolute;
+    right: 10%;
+    width: 50%;
+    top: 5%;
+   
+  }
+
+
+
+  .card__tittle > h4 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    text-transform:uppercase;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+
+  .card__background > img{
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    filter: drop-shadow(4px 8px 10px #000000);
+  }
+
+
+  .card__background::before{
+    position: absolute;
+    background-size: 50%;
+    width: 120px;
+    height: 120px;
+    left: 0;
+    border-radius: 20px;
+    background-repeat: repeat;
+    background-image: url(/assets/img/square-pattern-30.svg);
+    content: "";
+  }
 
   // CARDS
   .card__license{
