@@ -693,7 +693,9 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 
   .card__tittle > h4 {
     text-align: center;
+    padding: 10px 0;
     font-style: italic;
+    height: 50px;
     font-weight: 900;
     text-transform:uppercase;
     color: rgb(255, 255, 255);
