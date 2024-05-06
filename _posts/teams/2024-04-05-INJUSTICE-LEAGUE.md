@@ -1,22 +1,23 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo partido4 partido10
+categories: nortejohto042024 surMayo  m3 m4  m9 
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
-title: TEAM SATISFACTION
+title: INJUSTICE LEAGUE
 tag: johto042024
 color: black
-puntosLJ202404: 12
+puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: TEAM SATISFACTION
-abr: 
-p4:  T. SATISFACTION
-pp4: last breath
-p10:  T. SATISFACTION
-pp10: S. VANGUARD
+p3:  INJUSTICE LEAGUE
+pp3: er azul
+p4:  INJUSTICE LEAGUE
+pp4:  dfs sap
+p9:  INJUSTICE LEAGUE
+pp9: AEP
 ---
+
 

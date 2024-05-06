@@ -1,14 +1,14 @@
 
-   <div class="row g-5">
+   <div class="row g-5 mt-0 mb-3">
     <div class="col-6">
          <h4 class="mb-3"><b>DIVISION NORTE</b></h4>
-   {% assign norte = site.categories.nortejohto042024 | sort: "puntosLJ202404"
-   | reverse %} {%- for post in norte-%}
+   {% assign norte = site.categories.norteMayo | sort: "puntosLJMAYO24"| reverse %} 
+   {%- for post in norte-%}
    <a class="text-white" href="{{ post.url }}">       
    <div class="container teamList d-flex justify-content-between align-items-center">
     <img src="{{post.maincover}}" class="drop img-fluid" alt="">
     <p class="text-left">{{ post.title | escape }}</p>
-    <p>{{post.puntosLJ202404}} pts</p>
+    <p>{{post.puntosLJMAYO24}} pts</p>
    </div>   
    </a>
    {%- endfor -%}
@@ -17,14 +17,15 @@
 
     <div class="col-6">
       <h4 class="mb-3"><b>DIVISION SUR</b></h4>
-      {% assign norte = site.categories.surjohto042024 | sort: "puntosLJ202404"
+      {% assign norte = site.categories.surMayo | sort: "puntosLJMAYO24"
       | reverse %} {%- for post in norte-%}
-              
+      <a class="text-white" href="{{ post.url }}">   
       <div class="container teamList d-flex justify-content-between align-items-center">
        <img src="{{post.maincover}}" class="drop img-fluid" alt="">
        <p>{{ post.title | escape }}</p>
-       <p>{{post.puntosLJ202404}} pts</p>
+       <p>{{post.puntosLJMAYO24}} pts</p>
       </div>   
+      </a>
       {%- endfor -%}
        </div>
    </div>

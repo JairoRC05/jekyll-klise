@@ -816,6 +816,8 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
     // box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
   }
 
+
+
   .card__imageTeam {
     position: absolute;
     text-align: justify;
@@ -887,6 +889,31 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
   height: 100%;
 }
 
+.match{
+  background-color: #02022B;
+  padding: 20px;
+  margin-bottom: 2px;
+
+}
+
+
+.matchTeams{
+  font-weight: 900;
+  font-style: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.textPromo > h1{
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+}
+
+.bannerPromo > img{
+  width: 150px;
+}
 .teamList{
   min-height: 50px;
   margin-bottom: 3px;
@@ -905,16 +932,7 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 }
 
 
-.bannerPromo > h1{
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 80px;
-}
 
-.bannerPromo > img{
-  width: 150px;
-}
 
   @media only screen and (max-width: 992px) {
     .neon{

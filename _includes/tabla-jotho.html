@@ -1,7 +1,7 @@
 <div class="content">
   <div class="card_res">
     <p class="title">GRUPO NORTE</p>
-    {% assign norte = site.categories.nortejohto042024 | sort: "puntosLJ202404"
+    {% assign norte = site.categories.nortejohto042024 | sort: "puntosLJMAYO04"
     | reverse %} {%- for post in norte-%}
     <a href="{{ post.url }}">
       <div class="user">
@@ -11,7 +11,7 @@
             <span class="name">{{post.team}}</span>
             <p class="username">{{post.abr}}</p>
           </div>
-          <button class="follow">{{post.puntosLJ202404}} pts</button>
+          <button class="follow">{{post.puntosLJMAYO24}} pts</button>
         </div>
       </div>
     </a>
@@ -20,7 +20,7 @@
 
   <div class="card_res">
     <p class="title">GRUPO SUR</p>
-    {% assign sur = site.categories.surjohto042024 | sort: "puntosLJ202404" |
+    {% assign sur = site.categories.surjohto042024 | sort: "puntosLJMAYO24" |
     reverse %} {%- for post in sur -%}
     <a href="{{ post.url }}">
       <div class="user">
@@ -30,7 +30,7 @@
             <span class="name">{{post.team}}</span>
             <p class="username">{{post.abr}}</p>
           </div>
-          <button class="follow">{{post.puntosLJ202404}} pts</button>
+          <button class="follow">{{post.puntosLJMAYO24}} pts</button>
         </div>
       </div>
     </a>
