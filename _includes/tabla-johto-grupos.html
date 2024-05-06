@@ -1,0 +1,34 @@
+
+   <div class="row g-5">
+    <div class="col-6">
+         <h4 class="mb-3"><b>DIVISION NORTE</b></h4>
+   {% assign norte = site.categories.nortejohto042024 | sort: "puntosLJ202404"
+   | reverse %} {%- for post in norte-%}
+   <a class="text-white" href="{{ post.url }}">       
+   <div class="container teamList d-flex justify-content-between align-items-center">
+    <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+    <p class="text-left">{{ post.title | escape }}</p>
+    <p>{{post.puntosLJ202404}} pts</p>
+   </div>   
+   </a>
+   {%- endfor -%}
+    </div>
+
+
+    <div class="col-6">
+      <h4 class="mb-3"><b>DIVISION SUR</b></h4>
+      {% assign norte = site.categories.surjohto042024 | sort: "puntosLJ202404"
+      | reverse %} {%- for post in norte-%}
+              
+      <div class="container teamList d-flex justify-content-between align-items-center">
+       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+       <p>{{ post.title | escape }}</p>
+       <p>{{post.puntosLJ202404}} pts</p>
+      </div>   
+      {%- endfor -%}
+       </div>
+   </div>
+
+
+
+

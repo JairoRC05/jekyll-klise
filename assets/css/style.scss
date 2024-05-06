@@ -593,9 +593,13 @@
   
   // Colors
 .blue{
-  background-color: #5564eb;
-
+  background-color: rgb(4, 4, 87);
 }
+
+.blue-king{
+  background-color: rgb(2, 2, 43);
+}
+
   .orange {
 	background-color: #FFA500;
   }
@@ -788,9 +792,129 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
   }
   
   
-  
+  // CARDS TEAMS GROUP
+  .card__team{
+    width: 100%;
+    min-height: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color: red;
+    
+  }
+
+  .card__teamCard{
+    width: 100%;
+    margin: auto;
+    right: 5%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    border-radius: 5px;
+    // -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+    // -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+    // box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
+  }
+
+  .card__imageTeam {
+    position: absolute;
+    text-align: justify;
+    font-style: italic;
+    padding: 0 15px;
+    text-transform:uppercase;
+    color: black;
+    top: 10%;
+    left: 1%;
+    right: 0;
+    bottom: 0%;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    transform: .5s;  
+  }
+
+  .card__teamName {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center ;
+  }
 
 
+
+  .card__teamName > p {
+    text-align: center;
+    font-style: italic;
+    height: 50px;
+    margin: 0;
+    font-weight: 900;
+    text-transform:uppercase;
+    color: rgb(255, 255, 255);
+  }
+
+  .card__imageTeam > img{
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    filter: drop-shadow(4px 8px 10px #000000);
+  }
+
+
+  .card__imageTeam::before{
+    position: absolute;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    border-radius: 20px;
+    background-repeat: repeat;
+    background-image: url(/assets/img/square-pattern-30.svg);
+    content: "";
+  }
+
+.banner{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(4, 4, 87);
+  background-image: url(/assets/img/banners.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bannerPromo{
+  height: 100%;
+}
+
+.teamList{
+  min-height: 50px;
+  margin-bottom: 3px;
+}
+
+
+.teamList > img{
+  width: 50px;
+  margin-right: 10px;
+}
+
+.teamList> p{
+  font-weight: 900;
+  font-style: normal;
+  margin: 0;
+}
+
+
+.bannerPromo > h1{
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+}
+
+.bannerPromo > img{
+  width: 150px;
+}
 
   @media only screen and (max-width: 992px) {
     .neon{

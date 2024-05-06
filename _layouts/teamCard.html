@@ -18,25 +18,15 @@ permalink: /liga-johto.html
 
     <div class="container-fluid banner">
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
-            <img src="/assets/logos/LIGA-JOHTO.png" class="img-fluid" alt="">
-        <h1 class="text-white ms-3">LIGA JOHTO</h1>
+            <img src="{{page.maincover}}" class="drop img-fluid" alt="">
+        <h1 class="text-white ms-3">{{ page.title | escape }}</h1>
         </div>
     </div>
 
 
 
 <div class="container mt-3">
-    <div class="row text-white ">
-     
-        <div class="col-12 col-xl-8">
-           <div class="container">
-            {% include tabla-johto-grupos.html %}
-           </div>
-        </div>
-        <div class="col-12 col-xl-4 text-center">
-            <a class="btn btn-outline-light" href="/liga-johto-reglas.html" role="button">REGLAS</a>
-        </div>
-    </div>
+   
 </div>
 
 

@@ -1,5 +1,5 @@
 ---
-layout: resultados
+layout: teamCard
 permalink: /team/alpha-impact.html
 categories: nortejohto042024
 date: 2020-08-29 10:29:20 +0700
@@ -9,6 +9,7 @@ color: black
 puntosLJ202404: 18
 grupo: sur
 background: '#F16C38'
+maincover: /assets/logos/BDLF.png
 cover: /assets/backCard.png
 team: SWORDS OF JUSTICE
 abr: SOJ
