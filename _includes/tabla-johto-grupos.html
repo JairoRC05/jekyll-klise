@@ -6,8 +6,10 @@
    {%- for post in norte-%}
    <a class="text-white" href="{{ post.url }}">       
    <div class="container teamList d-flex justify-content-between align-items-center">
-    <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-    <p class="text-left">{{ post.title | escape }}</p>
+     <div class="teamIN">
+      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+      <p>{{ post.title | escape }}</p>
+    </div>
     <p>{{post.puntosLJMAYO24}} pts</p>
    </div>   
    </a>
@@ -19,13 +21,15 @@
       <h4 class="mb-3"><b>DIVISION SUR</b></h4>
       {% assign norte = site.categories.surMayo | sort: "puntosLJMAYO24"
       | reverse %} {%- for post in norte-%}
-      <a class="text-white" href="{{ post.url }}">   
-      <div class="container teamList d-flex justify-content-between align-items-center">
-       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-       <p>{{ post.title | escape }}</p>
-       <p>{{post.puntosLJMAYO24}} pts</p>
-      </div>   
-      </a>
+      <a class="text-white" href="{{ post.url }}">       
+        <div class="container teamList d-flex justify-content-between align-items-center">
+          <div class="teamIN">
+           <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+           <p>{{ post.title | escape }}</p>
+         </div>
+         <p>{{post.puntosLJMAYO24}} pts</p>
+        </div>   
+        </a>
       {%- endfor -%}
        </div>
    </div>

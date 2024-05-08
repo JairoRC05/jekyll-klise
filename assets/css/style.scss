@@ -917,12 +917,25 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 .teamList{
   min-height: 50px;
   margin-bottom: 3px;
+  padding: 0;
+}
+
+.teamIN{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
 }
 
 
-.teamList > img{
+.teamIN > p{
+  font-weight: 900;
+  font-style: normal;
+  margin: 0;
+}
+.teamIN > img{
   width: 50px;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .teamList> p{

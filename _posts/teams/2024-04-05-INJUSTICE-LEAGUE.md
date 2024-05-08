@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: nortejohto042024 surMayo  m3 m4  m9 
 maincover: /assets/logos/BDLF.png
-puntosLJMAYO24: 1
+puntosLJMAYO24: 4
 date: 2020-08-29 10:29:20 +0700
 title: INJUSTICE LEAGUE
 tag: johto042024
