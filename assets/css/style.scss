@@ -892,7 +892,7 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 .match{
   background-color: #02022B;
   padding: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 
 }
 
@@ -934,9 +934,19 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 
 
 
-  @media only screen and (max-width: 992px) {
-    .neon{
-      clip-path: none;
+  @media only screen and (max-width: 768px) {
+    .textPromo > h1{
+      font-size: 50px;
+    }
+
+    .banner{
+      width: 100%;
+      min-height: 100px;
+      background-color: rgb(4, 4, 87);
+      background-image: url(/assets/img/banners.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
   
   }
@@ -955,6 +965,10 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
       -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
       box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.43);
       
+    }
+
+    .neon{
+      clip-path: none;
     }
       
     }

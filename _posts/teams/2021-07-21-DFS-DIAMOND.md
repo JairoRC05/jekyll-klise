@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo  partido2 partido3  partido8 partido9 partido7
 maincover: /assets/logos/BDLF.png
-puntosLJMAYO24: 0
+puntosLJMAYO24: 3
 date: 2020-08-29 10:29:20 +0700
 title: DRAGONFLIES GAMING DMD
 tag: johto042024
