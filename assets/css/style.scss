@@ -892,8 +892,8 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 .match{
   background-color: #02022B;
   padding: 20px;
-  margin-bottom: 5px;
-
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 
@@ -902,6 +902,11 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
   font-style: normal;
   margin: 0;
   text-transform: uppercase;
+}
+
+
+.matchTeams > p{
+ margin: 0;
 }
 
 .textPromo > h1{
@@ -948,18 +953,21 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 
 
   @media only screen and (max-width: 768px) {
-    .textPromo > h1{
-      font-size: 50px;
-    }
 
     .banner{
-      width: 100%;
-      min-height: 100px;
-      background-color: rgb(4, 4, 87);
-      background-image: url(/assets/img/banners.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      height: 130px;
+    }
+
+    .bannerPromo > img{
+      width: 90px;
+    }
+
+
+    .textPromo > h1{
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 45px;
     }
   
   }

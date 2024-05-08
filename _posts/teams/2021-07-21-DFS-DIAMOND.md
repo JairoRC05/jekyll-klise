@@ -5,7 +5,7 @@ categories: surjohto042024 norteMayo  partido2 partido3  partido8 partido9 parti
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 3
 date: 2020-08-29 10:29:20 +0700
-title: DRAGONFLIES GAMING DMD
+title: DFS DMD
 tag: johto042024
 color: black
 puntosLJ202404: 12

@@ -1,5 +1,5 @@
 <!-- R1 -->
-<div class="row g-5 mt-0 mb-3">
+<div class="row g-5 mb-3">
     <h4 class=""><b>RONDA 1</b></h4> 
     {% assign norte = site.categories.partido1 %} 
     {%- for post in norte-%}
@@ -62,7 +62,7 @@
             <p class="text-left">{{post.pp4}}</p>
             <p class="text-left ">{{post.p4}}</p>
         </div>
-         <div>
+         <div class="matchTeams">
             <p class="text-left">{{post.rr4}}</p>
             <p class="text-left">{{post.r4}}</p>
         </div> 
@@ -114,7 +114,7 @@
             <p class="text-left">{{post.pp7}}</p>
             <p class="text-left ">{{post.p7}}</p>
         </div>
-        <div>
+        <div class="matchTeams">
             <p class="text-left">{{post.rr7}}</p>
             <p class="text-left">{{post.r7}}</p>
         </div> 
@@ -149,7 +149,7 @@
             <p class="text-left">{{post.pp9}}</p>
             <p class="text-left ">{{post.p9}}</p>
         </div>
-         <div>
+         <div class="matchTeams">
             <p class="text-left">{{post.rr9}}</p>
             <p class="text-left">{{post.r9}}</p>
         </div> 
@@ -167,19 +167,12 @@
             <p class="text-left">{{post.pp10}}</p>
             <p class="text-left ">{{post.p10}}</p>
         </div>
-         <div>
+         <div class="matchTeams">
             <p class="text-left">{{post.rr10}}</p>
             <p class="text-left">{{post.r10}}</p>
         </div>
    </div>   
     </div>
     {%- endfor -%}
-
-
-   
-
- 
-
-    
-
 </div>
+
