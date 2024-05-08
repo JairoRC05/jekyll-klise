@@ -23,5 +23,7 @@ pp7: SOJ
 p8:  DFS DMD
 pp8: T. SATISFACTION
 p9:  DFS DMD
+r9: 0
+rr9: 3
 pp9: S. VANGUARD
 ---
