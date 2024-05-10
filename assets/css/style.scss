@@ -907,7 +907,16 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 
 .matchTeams > p{
  margin: 0;
+
 }
+
+.matchTeams > span{
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  color: yellow;
+
+ }
 
 .textPromo > h1{
   font-family: "Anton", sans-serif;

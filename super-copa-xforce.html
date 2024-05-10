@@ -20,8 +20,10 @@ permalink: /super-copa-xforce.html
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
             <img src="/assets/logos/SUPER CXF.png" class="img-fluid" alt="">
             <div class="textPromo">
-                <h1 class="text-white ms-3 mb-0">SUPER COPA XFORCE</h1>         
-                <span class="text-white ms-3">DEL 13 DE MAYO AL 17 DE MAYO</span>
+                <h1 class="text-white ms-3 mb-0 d-none d-md-block">SUPER COPA XFORCE</h1> 
+                <h1 class="text-white ms-3 mb-0 d-block d-md-none">SUPER CXF</h1>         
+                <span class="text-white ms-3 d-none d-md-block">DEL 13 DE MAYO AL 17 DE MAYO</span>
+                <span class="text-white ms-3 d-block d-md-none">13/05 - 17/05</span>
             </div>    
         </div>
     </div>
@@ -40,8 +42,12 @@ permalink: /super-copa-xforce.html
                   <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">BRACKETS</button>
                 </li>
                 <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hour-tab" data-bs-toggle="tab" data-bs-target="#hour-tab-pane" type="button" role="tab" aria-controls="hour-tab-pane" aria-selected="false">HORARIOS</button>
+                  </li>
+                <li class="nav-item" role="presentation">
                   <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">REGLAS</button>
                 </li>
+              
                
          
               </ul>
@@ -49,9 +55,13 @@ permalink: /super-copa-xforce.html
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                     {% include bracket.html %}
                 </div>
+                <div class="tab-pane fade" id="hour-tab-pane" role="tabpanel" aria-labelledby="hour-tab" tabindex="0">
+                    {% include horarios.html %}
+                </div>
                 <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     {% include reglas.html %}
                 </div>
+              
               
               </div>
 
