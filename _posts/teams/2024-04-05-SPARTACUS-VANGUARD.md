@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/SV.png
 puntosLJMAYO24: 3
 date: 2020-08-29 10:29:20 +0700
 title: SPARTACUS VANGUARD

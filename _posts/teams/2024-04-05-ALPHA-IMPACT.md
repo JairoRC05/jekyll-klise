@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: nortejohto042024 norteMayo partido1 partido2 partido3  partido4 partido5 partido6  partido8 partido9 partido10 partido11 
 maincover: /assets/logos/SOJ.PNG
-puntosLJMAYO24: 1
+puntosLJMAYO24: 4
 date: 2020-08-29 10:29:20 +0700
 title: SWORDS OF JUSTICE
 tag: johto042024
@@ -29,6 +29,8 @@ abr: SOJ
 # t7: TEAM SATISFACTION
 # r7: 3-0
 p1:  SOJ
+r1: 3
+rr1: 0
 pp1: DFS RUBY
 p2: SOJ
 pp2: HGO
