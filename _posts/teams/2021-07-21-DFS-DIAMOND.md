@@ -12,8 +12,8 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: TEAM SATISFACTION
-abr: HG
+team: DRAGONFLIES GAMING DIAMOND
+ID: DFS
 p2: DFS DMD
 pp2: MBO
 p3: DFS DMD

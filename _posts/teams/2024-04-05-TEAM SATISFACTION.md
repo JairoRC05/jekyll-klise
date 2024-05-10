@@ -13,7 +13,7 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
-abr: 
+ID: TSA 
 p4:  T. SATISFACTION
 pp4: last breath
 p10:  T. SATISFACTION

@@ -585,15 +585,14 @@
     display: none;
   }
   
-  
-  
-  
-  
-  
-  
+
   // Colors
 .blue{
   background-color: rgb(4, 4, 87);
+}
+
+.bg-night{
+  background-color: #000000;
 }
 
 .blue-king{
@@ -629,8 +628,14 @@
   .bg-purple{
     border-radius: 25px 0 0 0;
     background: rgb(101,35,182);
-background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
     margin-bottom: 0;
+  }
+
+  // Gradientes
+  .grBlue{
+    background: rgb(4,4,87);
+    background: linear-gradient(0deg, rgba(4,4,87,1) 0%, rgba(2,2,43,1) 80%);
   }
 
   .neon{
@@ -878,8 +883,6 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
 .banner{
   width: 100%;
   height: 300px;
-  background-color: rgb(4, 4, 87);
-  background-image: url(/assets/img/banners.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -925,7 +928,18 @@ background: linear-gradient(90deg, rgba(101,35,182,1) 0%, rgba(0,0,0,0) 80%, rgb
   font-size: 80px;
 }
 
+.textPromo > span{
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
 .bannerPromo > img{
+  width: 150px;
+}
+
+.bannerPromo > a > img{
   width: 150px;
 }
 .teamList{

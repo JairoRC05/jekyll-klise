@@ -1,15 +1,14 @@
 ---
 layout: 
-permalink: /liga-johto.html
 ---
 
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="blue">
+<body class="bg-night">
 
 
-<nav class="navbar blue-king">
+<nav class="navbar bg-night">
     <div class="container">
         <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
     </div>
@@ -18,15 +17,22 @@ permalink: /liga-johto.html
 
     <div class="container-fluid banner">
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
-            <img src="{{page.maincover}}" class="drop img-fluid" alt="">
-        <h1 class="text-white ms-3">{{ page.title | escape }}</h1>
+            <a href="{{page.maincover}}" role="button" download="{{ page.title | escape }}.png">
+                <img src="{{page.maincover}}" class="drop img-fluid" alt="" ">
+            </a>
+            <div class="textPromo">
+                <h1 class="text-white ms-3 mb-0 d-none d-lg-block">{{page.team}}</h1> 
+                <h1 class="text-white ms-3 mb-0 d-block d-lg-none">{{ page.ID | escape }}</h1>         
+                <span class="text-white ms-3 d-none d-lg-block">{{ page.ID | escape }}</span>
+                <span class="text-white ms-3 d-block d-lg-none">{{page.team}}</span>
+            </div>
         </div>
     </div>
 
 
 
 <div class="container mt-3">
-   
+ 
 </div>
 
 
