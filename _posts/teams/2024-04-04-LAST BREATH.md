@@ -14,6 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
+p3: DFS DMD
+pp3: LAST BREATH
 p5:  last breath
 pp5: s. vanguard
 ---

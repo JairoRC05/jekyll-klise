@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: teamCard2
 permalink: /team/:title.html
 categories: nortejohto042024 surMayo  m3 m4  m9 
 maincover: /assets/logos/ILEAGUE.png
