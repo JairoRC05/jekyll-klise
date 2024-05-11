@@ -632,11 +632,26 @@
     margin-bottom: 0;
   }
 
+
+  .orange-king{
+    background: rgb(255,153,46);
+  }
+
+  .bg-orange{
+    background: rgb(255,153,46);
+  }
+
   // Gradientes
   .grBlue{
     background: rgb(4,4,87);
     background: linear-gradient(0deg, rgba(4,4,87,1) 0%, rgba(2,2,43,1) 80%);
   }
+
+  .grOrange{
+    background: rgb(255,153,46);
+background: linear-gradient(180deg, rgba(255,153,46,1) 75%, rgba(255,255,255,1) 95%);
+  }
+
 
   .neon{
     margin-top: 0;
@@ -647,6 +662,10 @@
   }
 
 
+  .nav-link{
+    color: white;
+  }
+  
   .card__container{
     width: 100%;
     min-height: 150px;
@@ -893,7 +912,7 @@
 }
 
 .match{
-  background-color: #02022B;
+  background-color: #0303034f;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
