@@ -25,10 +25,11 @@
       <a class="text-white" href="{{ post.url }}">       
         <div class="container teamList d-flex justify-content-between align-items-center">
           <div class="teamIN">
-           <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-           <p>{{ post.title | escape }}</p>
+            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+            <p>{{ post.title | escape }}</p>
+            <span>{{post.pj}}</span>
          </div>
-         <span>{{post.pj}}</span>
+         
          <p>{{post.puntosLJMAYO24}} pts</p>
         </div>   
         </a>

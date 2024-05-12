@@ -14,6 +14,12 @@ puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
+pj: 3
+p2: ZERONOTE
+r2: 3
+bg2: bg-danger
+rr2: 0
+pp2: injustice league
 p3:  INJUSTICE LEAGUE
 pp3: er azul
 p4:  INJUSTICE LEAGUE
