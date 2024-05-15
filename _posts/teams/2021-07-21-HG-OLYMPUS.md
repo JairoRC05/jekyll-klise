@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo partido1 partido3  partido4 partido5 partido6  partido8 partido9 partido10 partido11
 maincover: /assets/logos/HGOLYMPUS.png
-puntosLJMAYO24: 2
+puntosLJMAYO24: 5
 date: 2020-08-29 10:29:20 +0700
 title: HG OLYMPUS
 tag: johto042024
@@ -14,10 +14,17 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: HG OLYMPUS
 ID: HG
+pj: 3
 p1:  HGO
 pp1: S.VANGUARD
+p2: SOJ
+r2: 1
+bg2: bg-info
+rr2: 2
+pp2: HGO
 p3:  HGO
 r3: 2
+bg3: bg-info
 rr3: 1
 pp3: HG REGIOS
 p4:  HGO
@@ -25,6 +32,9 @@ pp4: ZODIAC
 p5:  HGO
 pp5: MBO
 p6:  HGO
+r6: 1
+bg6: bg-warning
+rr6: 2
 pp6: LASTH BREATH
 p8:  HGO
 pp8: NO SMITE
