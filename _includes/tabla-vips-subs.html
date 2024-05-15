@@ -1,0 +1,42 @@
+
+   <div class="row g-5 mb-3">
+    <div class="col-12 col-md-4">
+         <h4 class="mb-3"><b>VIPS/SUBS</b></h4>
+   {% assign norte = site.categories.subs | sort: "tickets"| reverse %} 
+   {%- for post in norte-%}
+        
+   <div class="container teamList d-flex justify-content-between align-items-center">
+     <div class="teamIN">
+      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+      <p>{{ post.title | escape }}</p>
+    </div>
+    
+    <p>{{post.tickets}} tickets</p>
+   </div>   
+
+   {%- endfor -%}
+    </div>
+
+
+    <div class="col-12 col-md-4">
+      <h4 class="mb-3"><b>GIFTERS</b></h4>
+      {% assign norte = site.categories.gift | sort: "tickets"
+      | reverse %} {%- for post in norte-%}
+      <a class="text-white" href="{{ post.url }}">       
+        <div class="container teamList d-flex justify-content-between align-items-center">
+          <div class="teamIN">
+            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+            <p>{{ post.title | escape }}</p>
+            <span>{{post.pj}}</span>
+         </div>
+         
+         <p>{{post.tickets}} tickets</p>
+        </div>   
+        </a>
+      {%- endfor -%}
+       </div>
+   </div>
+
+
+
+

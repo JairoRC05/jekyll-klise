@@ -632,6 +632,20 @@
     margin-bottom: 0;
   }
 
+  .blue-ticket{
+    background: rgb(119,52,211);
+   
+  }
+
+  .bg-blue{
+    background-color: #5868ff
+  }
+
+  .bg-blue-light{
+    background: rgb(119,52,211);
+    background: linear-gradient(180deg, rgba(119,52,211,1) 0%, rgba(88,104,255,1) 100%);
+  }
+
 
   .orange-king{
     background: rgb(255,153,46);
@@ -928,7 +942,7 @@ background: linear-gradient(180deg, rgba(255,153,46,1) 75%, rgba(255,255,255,1) 
 
 
 .matchTeams > p{
- margin: 0;
+margin: 0;
 color: #fff;
 }
 
@@ -937,6 +951,29 @@ color: #fff;
   font-weight: 700;
   font-style: normal;
   color: yellow;
+
+ }
+
+
+
+ .matchSort{
+  font-style: normal;
+  margin: 0;
+ 
+}
+
+
+.matchSort > p{
+ margin: 0;
+color: #fff;
+}
+
+.matchSort > span{
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  color: yellow;
+  text-transform: uppercase;
 
  }
 
@@ -982,7 +1019,7 @@ color: #fff;
   margin-right: 7px;
 }
 .teamIN > img{
-  width: 50px;
+  width: 30px;
   margin-right: 7px;
 }
 

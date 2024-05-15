@@ -12,6 +12,11 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
+p9:  DFS DMD
+r9: 0
+bg9: bg-success
+rr9: 3
+pp9: S. VANGUARD
 ---
 
 
