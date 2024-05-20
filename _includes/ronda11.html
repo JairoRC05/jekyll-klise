@@ -1,18 +1,56 @@
 
 <div class="row g-5  mb-3">
 <h4 class=""><b>RONDA 11 NORTE</b></h4> 
-{% assign norte = site.categories.partido11 %} 
+{% assign norte = site.categories.28 %} 
 {%- for post in norte-%}
 <div class="col-12 col-sm-6 col-md-4 mt-0"> 
 <div class="container match d-flex justify-content-between align-items-center text-left">
     <div class="matchTeams">
+        <span>{{post.info}}</span>
         <p class="text-left">{{post.pp11}}</p>
         <p class="text-left ">{{post.p11}}</p>
     </div>
-    <!-- <div>
-        <p class="text-left">0</p>
-        <p class="text-left">0</p>
-    </div> -->
+    <div class="matchTeams">
+        <span>{{post.hora}}</span>
+        <p class="text-left">{{post.r11}}</p>
+        <p class="text-left">{{post.rr11}}</p>
+    </div>
+</div>   
+</div>
+{%- endfor -%}
+
+{% assign norte = site.categories.29 %} 
+{%- for post in norte-%}
+<div class="col-12 col-sm-6 col-md-4 mt-0"> 
+<div class="container match d-flex justify-content-between align-items-center text-left">
+    <div class="matchTeams">
+        <span>{{post.info}}</span>
+        <p class="text-left">{{post.pp11}}</p>
+        <p class="text-left ">{{post.p11}}</p>
+    </div>
+    <div class="matchTeams">
+        <span>{{post.hora}}</span>
+        <p class="text-left">{{post.r11}}</p>
+        <p class="text-left">{{post.rr11}}</p>
+    </div>
+</div>   
+</div>
+{%- endfor -%}
+
+{% assign norte = site.categories.30 | reverse %} 
+{%- for post in norte-%}
+<div class="col-12 col-sm-6 col-md-4 mt-0"> 
+<div class="container match d-flex justify-content-between align-items-center text-left">
+    <div class="matchTeams">
+        <span>{{post.info}}</span>
+        <p class="text-left">{{post.pp11}}</p>
+        <p class="text-left ">{{post.p11}}</p>
+    </div>
+    <div class="matchTeams">
+        <span>{{post.hora}}</span>
+        <p class="text-left">{{post.r11}}</p>
+        <p class="text-left">{{post.rr11}}</p>
+    </div>
 </div>   
 </div>
 {%- endfor -%}
@@ -28,6 +66,7 @@
         <p class="text-left ">{{post.pp6}}</p>
     </div>
     <div class="matchTeams">
+        <span>{{post.hora}}</span>
         <p class="text-left">{{post.r6}}</p>
         <p class="text-left">{{post.rr6}}</p>
     </div>
