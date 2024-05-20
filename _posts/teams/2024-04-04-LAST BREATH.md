@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo partido5
 maincover: /assets/logos/BDLF.png
-puntosLJMAYO24: 9
+puntosLJMAYO24: 10
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 tag: johto042024
@@ -14,8 +14,11 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
-pj: 4
+pj: 5
 p3: DFS DMD
+r3: 2
+bg3: bg-warning
+rr3: 1
 pp3: LAST BREATH
 p5:  last breath
 r5: 2
