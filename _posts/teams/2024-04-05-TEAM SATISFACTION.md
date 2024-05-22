@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo partido4 partido10
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 8
 date: 2020-08-29 10:29:20 +0700
 title: TEAM SATISFACTION
