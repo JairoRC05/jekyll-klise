@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA 
-pj: 5
+pj: 6
 p4:  T. SATISFACTION
 pp4: last breath
 p5:  DFS RUBY
@@ -22,6 +22,11 @@ r5: 1
 bg5: bg-info
 rr5: 2
 pp5: T. SATISFACTION
+p6:  no smite
+r6: 3
+rr6: 0
+bg6: bg-danger
+pp6: t. satisfaction
 p7: jas
 r7: 0
 bg7: bg-success

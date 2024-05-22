@@ -12,7 +12,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
-pj: 5
+pj: 6
 p5:  last breath
 r5: 2
 bg5: bg-warning
@@ -23,6 +23,11 @@ r6: 0
 bg6: bg-success
 rr6: 3
 pp6: S.VANGUARD
+p7:  no smite
+r7: 3
+rr7: 0
+bg7: bg-danger
+pp7: s. vanguard
 p8: jas
 r8: 1
 bg8: bg-info
@@ -35,7 +40,7 @@ rr9: 3
 pp9: S. VANGUARD    
 p10:  T. SATISFACTION
 r10: 1
-bg10: bg-success
+bg10: bg-info
 rr10: 2
 pp10: S. VANGUARD
 
