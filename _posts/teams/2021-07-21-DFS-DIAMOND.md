@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS
-pj: 9
+pj: 8
 p1: ZODIAC
 r1: 2
 bg1: bg-warning
