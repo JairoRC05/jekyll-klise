@@ -1,7 +1,7 @@
 ---
 layout: teamCard2
 permalink: /team/:title.html
-categories: nortejohto042024 surMayo  m3 m4  m9 
+categories: nortejohto042024 surMayo ljmy24 m3 m4  m9 
 maincover: /assets/logos/ILEAGUE.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700

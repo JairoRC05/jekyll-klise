@@ -1,0 +1,36 @@
+
+<div class="row g-5 mb-3">
+    <h4 class="text-left"><b>CLASIFICACION GENERAL</b></h4>
+    
+    <div class="col-12 col-md-1">   
+        {% assign norte = site.categories.pljmy24%} 
+        {%- for post in norte-%}   
+        <div class="container teamList d-flex justify-content-between align-items-center">
+          <div class="teamIN">
+           <p>{{ post.title | escape }}</p>
+
+         </div> 
+         <p>{{post.lugar}}</p>
+        </div>   
+        
+        {%- endfor -%}
+         </div>
+
+
+    <div class="col-12 col-md-11">   
+   {% assign norte = site.categories.ljmy24 | sort: "puntosLJMAYO24"| reverse %} 
+   {%- for post in norte-%}
+   <a class="text-white" href="{{ post.url }}">       
+   <div class="container teamList d-flex justify-content-between align-items-center">
+     <div class="teamIN">
+      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+      <p>{{ post.title | escape }}</p>
+      <span>{{post.pj}}</span>
+    </div>
+    
+    <p>{{post.puntosLJMAYO24}} pts</p>
+   </div>   
+   </a>
+   {%- endfor -%}
+    </div>
+</div>

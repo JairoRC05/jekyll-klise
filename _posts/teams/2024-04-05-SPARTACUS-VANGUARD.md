@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo
+categories: surjohto042024 norteMayo ljmy24
 maincover: /assets/logos/SV.png
 puntosLJMAYO24: 15
 date: 2020-08-29 10:29:20 +0700

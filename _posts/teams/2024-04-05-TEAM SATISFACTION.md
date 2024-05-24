@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo partido4 partido10
+categories: surjohto042024 norteMayo partido4 partido10 ljmy24
 maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 12
 date: 2020-08-29 10:29:20 +0700
