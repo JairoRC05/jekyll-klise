@@ -2,10 +2,11 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo partido5
-maincover: /assets/logos/BDLF.png
-puntosLJMAYO24: 13
+maincover: /assets/logos/LASTBREATH.png
+puntosLJMAYO24: 20
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
+rango: ACERO
 tag: johto042024
 color: black
 puntosLJ202404: 17
@@ -14,17 +15,24 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
-pj: 7
+pj: 9
 p1: NO SMITE
 r1: 1
 rr1: 2
 bg1: bg-info
 pp1: LAST BREATH
+p2: JAS
+r2: 0
+rr2: 3
+bg2: bg-success
+pp2: LAST BREATH
 p3: DFS DMD
 r3: 2
 bg3: bg-warning
 rr3: 1
 pp3: LAST BREATH
+p4:  T. SATISFACTION
+pp4: last breath
 p5:  last breath
 r5: 2
 bg5: bg-info
@@ -40,6 +48,11 @@ r7: 0
 bg7: bg-success
 rr7: 3
 pp7: last breath
+p8: ZODIAC
+r8: 1
+rr8: 2
+bg8: bg-success
+pp8: last breath
 p9:  MBO
 r9: 1
 rr9: 2
@@ -50,6 +63,14 @@ r10: 1
 bg10: bg-info
 rr10: 2
 pp10: LASTH BREATH
+##torneos
+##torneos
+rango: ACERO
+bg: bg-johto 
+torneo1: LIGA JOHTO A24
+tps1: 4to LUGAR
+tb1: card-johto
+timg1: /assets/logos/LIGA-JOHTO.png
 ---
 
 

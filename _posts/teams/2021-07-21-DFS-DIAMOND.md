@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo  partido2 partido3  partido8 partido9 partido7
 maincover: /assets/logos/DFS.png
-puntosLJMAYO24: 13
+puntosLJMAYO24: 14
 date: 2020-08-29 10:29:20 +0700
 title: DFS DMD
 tag: johto042024
@@ -13,8 +13,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
-ID: DFS
-pj: 8
+ID: DFS DMD
+pj: 9
 p1: ZODIAC
 r1: 2
 bg1: bg-warning
@@ -57,4 +57,16 @@ r9: 0
 bg9: bg-danger
 rr9: 3
 pp9: S. VANGUARD
+p10:  HGO
+r10: 2
+rr10: 1
+bg10: bg-warning
+pp10: DFS DMD
+##torneos
+rango: ACERO
+bg: bg-johto 
+torneo1: Lj my24
+tps1: IN PROGRESS
+tb1: card-johto
+timg1: /assets/logos/LIGA-JOHTO.png
 ---

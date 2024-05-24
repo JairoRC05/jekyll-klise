@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo partido4 partido10
 maincover: /assets/logos/TSA.png
-puntosLJMAYO24: 8
+puntosLJMAYO24: 12
 date: 2020-08-29 10:29:20 +0700
 title: TEAM SATISFACTION
 tag: johto042024
@@ -14,7 +14,17 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA 
-pj: 6
+pj: 8
+p2: ZODIAC
+r2: 0
+rr2: 3
+bg2: bg-success
+pp2: T. SATISFACTION
+p3: MBO
+r3: 2
+rr3: 1
+bg3: bg-warning
+pp3: T. SATISFACTION
 p4:  T. SATISFACTION
 pp4: last breath
 p5:  DFS RUBY

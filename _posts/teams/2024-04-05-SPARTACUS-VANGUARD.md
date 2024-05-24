@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo
 maincover: /assets/logos/SV.png
-puntosLJMAYO24: 11
+puntosLJMAYO24: 15
 date: 2020-08-29 10:29:20 +0700
 title: SPARTACUS VANGUARD
 tag: johto042024
@@ -12,7 +12,17 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
-pj: 6
+pj: 8
+p1:  HGO
+r1: 2
+rr1: 1
+bg1: bg-warning
+pp1: S.VANGUARD
+p2: HG REGIOS
+r2: 0
+rr2: 3
+bg2: bg-success
+pp2: S. VANGUARD
 p5:  last breath
 r5: 2
 bg5: bg-warning
