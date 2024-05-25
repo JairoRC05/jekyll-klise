@@ -12,7 +12,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
-pj: 8
+pj: 9
 p1:  HGO
 r1: 2
 rr1: 1
@@ -23,6 +23,11 @@ r2: 0
 rr2: 3
 bg2: bg-success
 pp2: S. VANGUARD
+p3: ZODIAC
+r3: 3
+rr3: 0
+bg3: bg-danger
+pp3: S. VANGUARD
 p5:  last breath
 r5: 2
 bg5: bg-warning
