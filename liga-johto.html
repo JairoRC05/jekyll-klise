@@ -39,9 +39,12 @@ permalink: /liga-johto.html
 
             <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">PRINCIPAL</button>
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">INICIO</button>
                   <!-- <button class="nav-link active d-block d-lg-none" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-house"></i></button> -->
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tabla-tab" data-bs-toggle="tab" data-bs-target="#tabla-tab-pane" type="button" role="tab" aria-controls="tabla-tab-pane" aria-selected="false">CLASIFICACIÓN</button>
+                    </li> 
                 <li class="nav-item" role="presentation">
                   <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">RESULTADOS NORTE</button>
                   <!-- <button class="nav-link d-block d-lg-none" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-up-long"></i></button> -->
@@ -54,11 +57,14 @@ permalink: /liga-johto.html
                   <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">RONDA STREAM</button>
                   <!-- <button class="nav-link d-block d-lg-none" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i class="fa-brands fa-twitch"></i></button>
               -->  </li> 
-         
+          
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                     {% include tabla-johto-grupos.html %}
+                </div>
+                <div class="tab-pane fade" id="tabla-tab-pane" role="tabpanel" aria-labelledby="tabla-tab" tabindex="0">
+                    {% include tabla-general.html %} 
                 </div>
                 <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     {% include rondas-johto.html %}
@@ -70,15 +76,16 @@ permalink: /liga-johto.html
                 <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                     {% include ronda11.html %} 
                 </div>
+
+                
               
               </div>
 
            </div>
         </div>
-        <div class="col-12 col-xl-12 text-center">
+      
             <!-- <a class="btn btn-outline-light" href="/liga-johto-reglas.html" role="button">REGLAS</a> -->
-            {% include tabla-general.html %} 
-        </div>
+    
     </div>
 </div>
 
