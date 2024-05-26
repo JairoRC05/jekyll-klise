@@ -13,4 +13,5 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
+rango: VIP
 ---

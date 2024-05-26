@@ -6,9 +6,10 @@
    {%- for post in norte-%}
         
    <div class="container teamList d-flex justify-content-between align-items-center">
-     <div class="teamIN">
+     <div class="playerIN">
       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-      <p>{{ post.title | escape }}</p>
+      <p class="text-uppercase">{{ post.title | escape }}</p>
+      <span>{{post.rango}}</span>
     </div>
     
     <p>{{post.tickets}} tickets</p>
@@ -24,10 +25,10 @@
       | reverse %} {%- for post in norte-%}
       <a class="text-white" href="{{ post.url }}">       
         <div class="container teamList d-flex justify-content-between align-items-center">
-          <div class="teamIN">
+          <div class="playerIN">
             <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-            <p>{{ post.title | escape }}</p>
-            <span>{{post.pj}}</span>
+            <p class="text-uppercase">{{ post.title | escape }}</p>
+            <span>{{post.rango}}</span>
          </div>
          
          <p>{{post.tickets}} tickets</p>
@@ -42,10 +43,10 @@
         | reverse %} {%- for post in norte-%}
         <a class="text-white" href="{{ post.url }}">       
           <div class="container teamList d-flex justify-content-between align-items-center">
-            <div class="teamIN">
+            <div class="playerIN">
               <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-              <p>{{ post.title | escape }}</p>
-              <span>{{post.pj}}</span>
+              <p class="text-uppercase">{{ post.title | escape }}</p>
+              <span>{{post.rango}}</span>
            </div>
            
            <p>{{post.tickets}} tickets</p>
