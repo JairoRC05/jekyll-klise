@@ -3,7 +3,7 @@ layout:
 permalink: /team/:title.html
 categories: subs
 maincover: /assets/avatars/female1.webp
-tickets: 5
+tickets: 7
 date: 2020-08-29 10:29:20 +0700
 title: LUCEROPADIERNA
 tag: johto042024

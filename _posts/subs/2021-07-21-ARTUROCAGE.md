@@ -1,11 +1,11 @@
 ---
 layout: 
 permalink: /team/:title.html
-categories: subs
+categories: gift
 maincover: /assets/avatars/male1.webp
-tickets: 10
+tickets: 2
 date: 2020-08-29 10:29:20 +0700
-title: NYANCOE
+title: arturocage
 tag: johto042024
 color: black
 puntosLJ202404: 12
@@ -27,4 +27,5 @@ r9: 0
 bg9: bg-danger
 rr9: 3
 pp9: S. VANGUARD
+rango: LUCERO
 ---

@@ -27,5 +27,5 @@ r9: 0
 bg9: bg-danger
 rr9: 3
 pp9: S. VANGUARD
-rango: ADYPOVEDANO
+rango: ADY
 ---

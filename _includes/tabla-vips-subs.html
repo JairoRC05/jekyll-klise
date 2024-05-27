@@ -1,6 +1,6 @@
 
    <div class="row g-5 mb-3">
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-6 col-lg-4">
          <h4 class="mb-3"><b>VIPS/SUBS</b></h4>
    {% assign norte = site.categories.subs | sort: "tickets"| reverse %} 
    {%- for post in norte-%}
@@ -19,7 +19,7 @@
     </div>
 
 
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-6 col-lg-4">
       <h4 class="mb-3"><b>GIFTERS</b></h4>
       {% assign norte = site.categories.gift | sort: "tickets"
       | reverse %} {%- for post in norte-%}
@@ -37,8 +37,8 @@
       {%- endfor -%}
        </div>
 
-       <div class="col-12 col-md-4">
-        <h4 class="mb-3"><b>BITS</b></h4>
+       <div class="col-12 col-md-6 col-lg-4">
+        <h4 class="mb-3"><b>BITS / FOLLOWERS</b></h4>
         {% assign norte = site.categories.bits | sort: "tickets"
         | reverse %} {%- for post in norte-%}
         <a class="text-white" href="{{ post.url }}">       
