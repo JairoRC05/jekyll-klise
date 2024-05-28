@@ -1,0 +1,64 @@
+---
+layout:
+permalink: /liga-indigo-platino.html
+---
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="blue">
+
+
+    <nav class="navbar blue-king">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid banner grBlue">
+        <div class="container bannerPromo d-flex justify-content-start align-items-center">
+            <img src="/assets/logos/LIGA-INDIGO.png" class="img-fluid" alt="">
+            <div class="textPromo">
+                <h1 class="text-white ms-3 mb-0 d-none d-lg-block liga-indigo">LIGA INDIGO</h1>
+                <h1 class="text-white ms-3 mb-0 d-block d-lg-none liga-indigo">LIGA INDIGO</h1>
+                <span class="text-white ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
+                <span class="text-white ms-3 d-block d-lg-none">10.06.24</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-white">
+        <div class="row g-5 mb-1">
+            <div class="col-12 col-md-6">
+                <h4><b>EQUIPOS PARTIPANTES</b></h4>
+                {% assign LIGA = site.categories.LI  %}
+                {%- for post in LIGA-%}
+               
+                    <div class="container teamList d-flex justify-content-between align-items-center">
+                        <div class="teamIN">
+                            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                            <p>{{ post.title | escape }}</p>
+                        
+                        </div>
+
+                       
+                    </div>
+             
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo ljmy24 partido1 partido3  partido4 partido5 partido6  partido8 partido9 partido10 partido11 30
+categories: surjohto042024 norteMayo ljmy24 partido1 partido3  partido4 partido5 partido6  partido8 partido9 partido10 partido11 30 LI
 maincover: /assets/logos/HGOLYMPUS.png
 puntosLJMAYO24: 23
 date: 2024-02-29 10:29:20 +0700
