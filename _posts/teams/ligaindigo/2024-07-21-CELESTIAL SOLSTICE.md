@@ -11,8 +11,8 @@ color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
-cover: /assets/backCard.png
+cover: /assets/ver.png
 team: CELESTIAL SOLSTICE
 ID: CS
-
+status: <i class="fa-solid fa-check"></i>
 ---
