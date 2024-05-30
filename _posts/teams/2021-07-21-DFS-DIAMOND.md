@@ -15,6 +15,17 @@ cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS DMD
 pj: 10
+pt1: 1
+pt2: 3
+pt3: 2
+pt4: 3
+pt5: 0
+pt6: 3
+pt7: 0
+pt8: 1
+pt9: 0
+pt10: 1
+pt11: 0
 p1: ZODIAC
 r1: 2
 bg1: bg-warning

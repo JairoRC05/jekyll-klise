@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo ljmy24 partido5
 maincover: /assets/logos/LASTBREATH.png
-puntosLJMAYO24: 21
+puntosLJMAYO24: 20
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 status: <i class="fa-solid fa-check"></i>
@@ -17,6 +17,17 @@ cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
 pj: 10
+pt1: 2
+pt2: 3
+pt3: 1
+pt4: 1
+pt5: 2
+pt6: 2
+pt7: 3
+pt8: 2
+pt9: 2
+pt10: 2
+pt11: 0
 p1: NO SMITE
 r1: 1
 rr1: 2
@@ -55,7 +66,7 @@ pp7: last breath
 p8: ZODIAC
 r8: 1
 rr8: 2
-bg8: bg-success
+bg8: bg-info
 pp8: last breath
 p9:  MBO
 r9: 1

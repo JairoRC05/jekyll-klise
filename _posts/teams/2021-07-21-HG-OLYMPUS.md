@@ -15,6 +15,17 @@ cover: /assets/backCard.png
 team: HG OLYMPUS
 ID: HG
 pj: 10
+pt1: 2
+pt2: 2
+pt3: 2
+pt4: 2
+pt5: 3
+pt6: 1
+pt7: 3
+pt8: 3
+pt9: 3
+pt10: 2
+pt11: 0
 p1:  HGO
 r1: 2
 rr1: 1

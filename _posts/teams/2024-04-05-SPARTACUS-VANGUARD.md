@@ -12,7 +12,18 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
-pj: 10
+pj: 11
+pt1: 1
+pt2: 3
+pt3: 0
+pt4: 2
+pt5: 1
+pt6: 3
+pt7: 0
+pt8: 2
+pt9: 3
+pt10: 2
+pt11: 0
 p1:  HGO
 r1: 2
 rr1: 1
@@ -63,7 +74,11 @@ r10: 1
 bg10: bg-info
 rr10: 2
 pp10: S. VANGUARD
-
+bg11: bg-danger
+p11:  SOJ
+r11: 3
+rr11: 0
+pp11: S.VANGUARD
 ---
 
 

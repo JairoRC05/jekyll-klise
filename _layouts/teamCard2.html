@@ -82,7 +82,23 @@ layout:
         crossorigin="anonymous"></script>
     
     
-    
+        <script type="text/javascript">
+            var p1 = {{page.pt1}}
+            var p2 = {{page.pt2}}
+            var p3 = {{page.pt3}}
+            var p4 = {{page.pt4}}
+            var p5 = {{page.pt5}}
+            var p6 = {{page.pt6}}
+            var p7 = {{page.pt7}}
+            var p8 = {{page.pt8}}
+            var p9 = {{page.pt9}}
+            var p10 = {{page.pt10}}
+            var p11 = {{page.pt11}}
+            var res;
+            res=p1+p2+p3+p4+p5+p6+p7+p8+p9+p10+p11;
+            document.getElementById('total').innerHTML= res;
+            document.getElementsByClassName('total').innerHTML= res;
+        </script>
 
 
 

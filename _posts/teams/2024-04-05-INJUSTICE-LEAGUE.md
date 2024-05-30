@@ -15,6 +15,17 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 pj: 11
+pt1: 0
+pt2: 0
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 0
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 0
 p1:  DEEP DARK
 r1: 3
 rr1: 0

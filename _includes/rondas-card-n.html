@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-between align-items-center league">
     <h1 class="text-white ms-3 mb ">LIGA JOHTO </h1>
-    <h1 class="text-white ms-3 mb d-none d-lg-block">PJ {{page.pj}} | {{page.puntosLJMAYO24}} pts</h1>
-    <h1 class="text-white ms-3 mb d-block d-lg-none">{{page.pj}} | {{page.puntosLJMAYO24}}</h1>
+    <h1 class="text-white ms-3 mb"><span class="d-none d-md-inline">PJ</span> {{page.pj}} | <b  id="total"></b> <span class="d-none d-md-inline">pts</span></h1>
+    
 </div>
 
 
@@ -144,12 +144,13 @@
                     <p class="text-left">{{page.pp11}}</p>
                     <p class="text-left ">{{page.p11}}</p>
                 </div>
-                <!-- <div>
-                                                        <p class="text-left">0</p>
-                                                        <p class="text-left">0</p>
-                                                    </div> -->
+                <div class="matchTeams">
+                    <p class="text-left">{{page.rr11}}</p>
+                    <p class="text-left">{{page.r11}}</p>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+
