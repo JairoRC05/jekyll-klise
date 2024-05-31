@@ -3,7 +3,7 @@ layout:
 permalink: /team/:title.html
 categories: subs
 maincover: /assets/avatars/male1.webp
-tickets: 1
+tickets: 7
 date: 2020-08-29 10:29:20 +0700
 title: ANGELAKIUX
 tag: johto042024

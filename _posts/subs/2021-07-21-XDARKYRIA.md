@@ -3,9 +3,9 @@ layout:
 permalink: /team/:title.html
 categories: subs
 maincover: /assets/avatars/male1.webp
-tickets: 11
+tickets: 5
 date: 2020-08-29 10:29:20 +0700
-title: LARARLY_
+title: XDarkyria
 tag: johto042024
 color: black
 puntosLJ202404: 12
