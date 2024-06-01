@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA 
-pj: 10
+pj: 11
 pt1: 2
 pt2: 3
 pt3: 1
@@ -76,5 +76,10 @@ r10: 1
 bg10: bg-warning
 rr10: 2
 pp10: S. VANGUARD
+p11:  HGO
+pp11: T. SATISFACTION
+r11: 3
+rr11: 0
+bg11: bg-danger
 ---
 

@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo ljmy24 partido1 partido3  partido4 partido5 partido6  partido8 partido9 partido10 partido11 30 LI
 maincover: /assets/logos/HGOLYMPUS.png
-puntosLJMAYO24: 23
+puntosLJMAYO24: 26
 date: 2024-02-29 10:29:20 +0700
 title: HG OLYMPUS
 tag: johto042024
@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: HG OLYMPUS
 ID: HG
-pj: 10
+pj: 11
 pt1: 2
 pt2: 2
 pt3: 2
@@ -25,7 +25,7 @@ pt7: 3
 pt8: 3
 pt9: 3
 pt10: 2
-pt11: 0
+pt11: 3
 p1:  HGO
 r1: 2
 rr1: 1
@@ -76,12 +76,13 @@ r10: 2
 rr10: 1
 bg10: bg-info
 pp10: DFS DMD
-p11:  HGO
-pp11: T. SATISFACTION
 info: 30/05/24
 hora: '21:20'
-r11: 0
+p11:  HGO
+pp11: T. SATISFACTION
+r11: 3
 rr11: 0
+bg11: bg-success
 ##torneos
 rango: ACERO
 bg: 
