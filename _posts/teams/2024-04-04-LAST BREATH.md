@@ -79,7 +79,7 @@ bg10: bg-info
 rr10: 2
 pp10: LASTH BREATH
 r11: 0
-rr11: 0
+rr11: 3
 bg11: bg-success
 p11:  DFS RUBY
 pp11: LAST BREATH

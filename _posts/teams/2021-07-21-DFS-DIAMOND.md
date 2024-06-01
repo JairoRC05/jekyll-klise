@@ -78,7 +78,7 @@ bg10: bg-warning
 pp10: DFS DM
 p11: hg regios
 r11: 0
-rr11: 0
+rr11: 3
 bg11: bg-success
 pp11: dfs dmd
 ##torneos
