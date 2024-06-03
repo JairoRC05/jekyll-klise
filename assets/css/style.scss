@@ -710,9 +710,13 @@ position: absolute;
 
   .grOrange{
     background: rgb(255,153,46);
-background: linear-gradient(180deg, rgba(255,153,46,1) 75%, rgba(255,255,255,1) 95%);
+    background: linear-gradient(180deg, rgba(255,153,46,1) 75%, rgba(255,255,255,1) 95%);
   }
 
+  .grGreen{
+    background: rgb(0,0,0);  
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(3,114,61,1) 100%);
+  }
 
   .neon{
     margin-top: 0;
