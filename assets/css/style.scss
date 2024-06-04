@@ -702,6 +702,11 @@ position: absolute;
     background: rgb(255,153,46);
   }
 
+  .grSand{
+    background: rgb(249,249,249);
+    background: linear-gradient(0deg, rgba(249,249,249,1) 0%, rgba(180,180,180,1) 100%);
+  }
+
   // Gradientes
   .grBlue{
     background: rgb(4,4,87);
