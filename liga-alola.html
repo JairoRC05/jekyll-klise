@@ -30,8 +30,8 @@ permalink: /liga-alola.html
     <div class="container">
         <div class="row">
             <div class="col-2 col-md-1 mt-0 ">
-                {% assign norte = site.categories.pljmy24  %}
-                {%- for post in norte | limit:12 -%}
+                {% assign norte = site.categories.pljmy24 | sort: "title" %}
+                {%- for post in norte limit:12 -%}
                 <div class="container teamList d-flex justify-content-end align-items-center">
                   <div class="teamIN">
                     <p>{{ post.title | escape }}</p>
