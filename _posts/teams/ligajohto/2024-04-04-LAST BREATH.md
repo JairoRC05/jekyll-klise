@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo ljmy24 partido5
+categories: surjohto042024 norteMayo ljmy24 partido5 LJ06
 maincover: /assets/logos/LASTBREATH.png
 puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700

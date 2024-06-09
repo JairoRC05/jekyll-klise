@@ -5,13 +5,15 @@
    {% assign norte = site.categories.subs | sort: "tickets"| reverse %} 
    {%- for post in norte-%}
         
-   <div class="container teamList d-flex justify-content-between align-items-center">
+   <div class="container playerList d-flex justify-content-between align-items-center">
      <div class="playerIN">
       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-      <p class="text-uppercase">{{ post.title | escape }}</p>
-      <span>{{post.rango}}</span>
+      <div class="badgeIN">
+        <p class="text-uppercase">{{ post.title | escape }}</p>
+        <span><img src="{{post.sub}}" class="drop img-fluid" alt=""></span>
+        <span><img src="{{post.vip}}" class="drop img-fluid" alt=""></span>
+      </div>
     </div>
-    
     <p>{{post.tickets}} tickets</p>
    </div>   
 
