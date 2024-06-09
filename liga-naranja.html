@@ -1,12 +1,12 @@
 ---
 layout:
-permalink: /liga-alola.html
+permalink: /liga-naranja.html
 ---
 
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class=" grSand">
+<body class=" grOrange">
 
 
     <nav class="navbar">
@@ -17,12 +17,12 @@ permalink: /liga-alola.html
 
     <div class="container-fluid banner">
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
-            <img src="/assets/logos/ALOLA.png" class="img-fluid" alt="">
+            <img src="/assets/logos/NARANJA.png" class="img-fluid" alt="">
             <div class="textPromo">
-                <h1 class=" ms-3 mb-0 d-none d-lg-block">LIGA ALOLA</h1>
-                <h1 class=" ms-3 mb-0 d-block d-lg-none">LIGA ALOLA</h1>
-                <span class=" ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
-                <span class=" ms-3 d-block d-lg-none">INICIO 10 DE JUNIO</span>
+                <h1 class="text-white mb-0 d-none d-lg-block">LIGA NARANJA</h1>
+                <h1 class="text-white ms-3 mb-0 d-block d-lg-none">LIGA NARANJA</h1>
+                <span class="text-white ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
+                <span class="text-white ms-3 d-block d-lg-none">INICIO 10 DE JUNIO</span>
             </div>
         </div>
     </div>
@@ -31,9 +31,9 @@ permalink: /liga-alola.html
         <div class="row">
             <div class="col-2 col-md-1 mt-0 ">
                 {% assign norte = site.categories.pljmy24 | sort: "title" %}
-                {%- for post in norte limit:12 -%}
+                {%- for post in norte limit:13 -%}
                 <div class="container teamList d-flex justify-content-end align-items-center">
-                  <div class="teamIN">
+                  <div class="teamIN text-white">
                     <p>{{ post.title | escape }}</p>
                   </div>
                 </div>
@@ -41,11 +41,21 @@ permalink: /liga-alola.html
                 {%- endfor -%}
               </div>
             <div class="col-10 col-md-5 mt-0">
-               
+                {% assign norte = site.categories.LA2024JN %}
+                {%- for post in norte-%}
+             
+                  <div class="container teamList d-flex justify-content-between align-items-center">
+                    <div class="teamIN text-white">
+                      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                      <p class="text-uppercase">{{ post.title | escape }}</p>
+                  
+                    </div>
+                   
+                  </div>
+          
+                {%- endfor -%}
               </div>
-              <div class="col-2 col-md-6 mt-0 ">
-                <img src="/assets/videos/Exeggutor_de_Alola.png" class="drop img-fluid d-none d-lg-block" alt="">
-              </div>
+              
         </div>
     </div>
 
