@@ -5,14 +5,104 @@ categories: LA2024JN
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
-title: GOLD AS GOLD B
+title: GOLD AS GOLD VIOLET
 tag: johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/ver.png
-team: GOLD AS GOLD B
-ID: GOD
+team: GOLD AS GOLD VIOLET
+ID: GOLD V
 status: <i class="fa-solid fa-check"></i>
+pj: 
+pt1: 
+pt2: 
+pt3: 
+pt4: 
+pt5: 
+pt6: 
+pt7: 
+pt8: 
+pt9: 
+pt10: 
+pt11: 
+#PARTIDO 1
+j1: RONDA 1
+p1: GOLD V
+pp1: P1
+r1: 
+bg1: rock
+rr1: 
+#PARTIDO 2
+j2: RONDA 2
+p2: GOLD V
+pp2: SSI
+bg2: rock
+r2: 
+rr2: 
+#PARTIDO 3
+j3: RONDA 3
+p3: IL
+pp3: GOLD V
+bg3: rock
+r3: 
+rr3:
+#PARTIDO 4
+j4: RONDA 4
+p4: GOD G
+pp4: GOLD V
+bg4: rock
+r4: 
+rr4:
+#PARTIDO 5
+j5: RONDA 5
+p5: HGHG
+pp5: GOLD V
+bg5: rock
+r5: 
+rr5:
+#PARTIDO 6
+j6: RONDA 6
+p6: GOLD V
+pp6: HGSS
+bg6: rock
+r6: 
+rr6: 
+#PARTIDO 7
+j7: RONDA 7
+p7:  GOLD V
+pp7: RN
+bg7: rock
+r7: 
+rr7: 
+#PARTIDO 8
+j8: RONDA 8
+p8:  GOLD V
+pp8: TSF
+bg8: rock
+rr8: 
+r8: 
+#PARTIDO 9
+j9: RONDA 9
+p9: BNT
+pp9: GOLD V
+bg9: rock
+r9: 
+rr9: 
+#PARTIDO 10
+j10: RONDA 10
+p10: GOD O
+pp10: GOLD V
+bg10: rock
+r10: 
+rr10:
+#PARTIDO 11
+j11: RONDA 11
+p11: GOLD V
+pp11: GOLD S
+bg11: rock
+r11: 
+rr11:
+stream: <i class="fa-brands fa-twitch text-white"></i>
 ---

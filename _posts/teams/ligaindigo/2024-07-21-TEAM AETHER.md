@@ -70,7 +70,7 @@ r6:
 rr6: 
 #PARTIDO 7
 j7: RONDA 7
-p7:  12A
+p7:  I2A
 pp7: TAE
 bg7: rock
 r7: 

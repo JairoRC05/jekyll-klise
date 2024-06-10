@@ -99,7 +99,7 @@ rr10:
 #PARTIDO 11
 j11: RONDA 11
 p11: HG OL
-pp11: 12A
+pp11: I2A
 bg11: rock
 r11: 
 rr11:

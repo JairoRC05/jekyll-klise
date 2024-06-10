@@ -39,7 +39,7 @@ rr3:
 #PARTIDO 4
 j4: RONDA 4
 p4: CS
-pp4: 12A
+pp4: I2A
 bg4: rock
 r4: 
 rr4:
