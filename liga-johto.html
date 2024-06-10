@@ -39,7 +39,7 @@ permalink: /liga-johto.html
             
                 {% assign LIGA = site.categories.LJ06%}
                 {%- for post in LIGA-%}
-               
+                   <a class="text-white" href="{{ post.url }}">
                     <div class="container teamList d-flex justify-content-between align-items-center">
                         <div class="teamIN">
                             <img src="{{post.maincover}}" class="drop img-fluid" alt="">
@@ -49,6 +49,7 @@ permalink: /liga-johto.html
 
                        
                     </div>
+                   </a>
              
                 {%- endfor -%}
        

@@ -30,24 +30,31 @@ permalink: /liga-indigo-platino.html
 
     <div class="container text-white">
         <div class="row g-5 mb-1">
+            <div class="col-2 col-md-1 mt-0 ">
+                {% assign norte = site.categories.pljmy24 | sort: "title" %}
+                {%- for post in norte limit:12 -%}
+                <div class="container teamList d-flex justify-content-end align-items-center">
+                  <div class="teamIN text-white">
+                    <p>{{ post.title | escape }}</p>
+                  </div>
+                </div>
             
-            <div class="col-10 col-md-10">
-                <h4><b>EQUIPOS PARTIPANTES</b></h4>
-                {% assign LIGA = site.categories.LI  %}
-                {%- for post in LIGA-%}
-               
-                    <div class="container teamList d-flex justify-content-between align-items-center">
-                        <div class="teamIN">
-                            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                            <p>{{ post.title | escape }}</p>
-                            <span class="bg-success text-white">{{ post.status }}</span>
-                        </div>
-
-                       
-                    </div>
-             
                 {%- endfor -%}
-            </div>
+              </div>
+            <div class="col-10 col-md-5 mt-0">
+                {% assign norte = site.categories.LI %}
+                {%- for post in norte-%}
+                <a class="text-white" href="{{ post.url }}">
+                  <div class="container teamList d-flex justify-content-between align-items-center">
+                    <div class="teamIN text-white">
+                      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                      <p class="text-uppercase">{{ post.title | escape }}</p>
+                    </div>
+                   
+                  </div>
+                  </a>
+                {%- endfor -%}
+              </div>
         </div>
     </div>
 

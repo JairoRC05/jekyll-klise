@@ -731,6 +731,10 @@ position: absolute;
     border-radius: 0 0 0 25px;
   }
 
+  .rock{
+    background-color: rgba(83, 83, 83, 0.425);
+  }
+
 
   .nav-link{
     color: white;
@@ -968,7 +972,6 @@ position: absolute;
 }
 
 .match{
-  background-color: #0303034f;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;

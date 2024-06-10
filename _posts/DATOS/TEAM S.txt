@@ -1,0 +1,83 @@
+# t1: ETERNAL STARLIGHT
+# r1: 3-0
+# t2: TEAM STAR
+# r2: 3-0
+# t3: GODS
+# r3: 2-1
+# t4: FONDO DE BIKINI
+# r4: 3-0
+# t5: POR LA ANECDOTA
+# r5: 1-2
+# t6: KOD
+# r6: 3-0
+# t7: TEAM SATISFACTION
+# r7: 3-01
+# pj: 11
+# pt1: 3
+# pt2: 1
+# pt3: 1
+# pt4: 3
+# pt5: 3
+# pt6: 3
+# pt7: 3
+# pt8: 2
+# pt9: 3
+# pt10: 1
+# pt11: 3
+# p1:  SOJ
+# r1: 3
+# bg1: bg-success
+# rr1: 0
+# pp1: DFS RUBY
+# p2: SOJ
+# r2: 1
+# bg2: bg-warning
+# rr2: 2
+# pp2: HGO
+# p3:  SOJ
+# r3: 1
+# bg3: bg-warning
+# rr3: 2
+# pp3: NO SMITE
+# p4:  SOJ
+# r4: 3
+# rr4: 0
+# bg4: bg-success
+# pp4: HGR
+# p5:  SOJ
+# r5: 3
+# rr5: 0
+# bg5: bg-success
+# pp5: JAS
+# p6:  SOJ
+# r6: 3
+# bg6: bg-success
+# rr6: 0
+# pp6: ZODIAC
+# p7:  DFS DMD
+# r7: 0
+# rr7: 3
+# bg7: bg-success
+# pp7: SOJ
+# p8:  SOJ
+# r8: 2
+# rr8: 1
+# bg8: bg-info
+# pp8: MBO
+# p9:  SOJ
+# r9: 3
+# bg9: bg-success
+# rr9: 0
+# pp9: T. SATISFACTION
+# p10:  SOJ
+# r10: 1
+# bg10: bg-warning
+# rr10: 2
+# pp10: LASTH BREATH
+# info: 28/05/24
+# hora: '21:20'
+# bg11: bg-success
+# p11:  SOJ
+# r11: 3
+# rr11: 0
+# pp11: S.VANGUARD

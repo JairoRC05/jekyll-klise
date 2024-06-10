@@ -19,7 +19,7 @@ permalink: /liga-naranja.html
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
             <img src="/assets/logos/NARANJA.png" class="img-fluid" alt="">
             <div class="textPromo">
-                <h1 class="text-white mb-0 d-none d-lg-block">LIGA NARANJA</h1>
+                <h1 class="text-white ms-3 mb-0 d-none d-lg-block">LIGA NARANJA</h1>
                 <h1 class="text-white ms-3 mb-0 d-block d-lg-none">LIGA NARANJA</h1>
                 <span class="text-white ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
                 <span class="text-white ms-3 d-block d-lg-none">INICIO 10 DE JUNIO</span>
@@ -28,10 +28,10 @@ permalink: /liga-naranja.html
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row g-5">
             <div class="col-2 col-md-1 mt-0 ">
                 {% assign norte = site.categories.pljmy24 | sort: "title" %}
-                {%- for post in norte limit:13 -%}
+                {%- for post in norte limit:12 -%}
                 <div class="container teamList d-flex justify-content-end align-items-center">
                   <div class="teamIN text-white">
                     <p>{{ post.title | escape }}</p>

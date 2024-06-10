@@ -12,73 +12,151 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
-pj: 11
-pt1: 1
-pt2: 3
-pt3: 0
-pt4: 2
-pt5: 1
-pt6: 3
-pt7: 0
-pt8: 2
-pt9: 3
-pt10: 2
-pt11: 0
-p1:  HGO
-r1: 2
-rr1: 1
-bg1: bg-warning
-pp1: S.VANGUARD
-p2: HG REGIOS
-r2: 0
-rr2: 3
-bg2: bg-success
-pp2: S. VANGUARD
-p3: ZODIAC
-r3: 3
-rr3: 0
-bg3: bg-danger
-pp3: S. VANGUARD
-p4:  MBO
-r4: 1
-rr4: 2
-bg4: bg-info
-pp4: S. vanguard
-p5:  last breath
-r5: 2
-bg5: bg-warning
-rr5: 1
-pp5: s. vanguard
-p6:  DFS RUBY
-r6: 0
-bg6: bg-success
-rr6: 3
-pp6: S.VANGUARD
-p7:  no smite
-r7: 3
-rr7: 0
-bg7: bg-danger
-pp7: s. vanguard
-p8: jas
-r8: 1
-bg8: bg-info
-rr8: 2 
-pp8: s. vanguard
-p9:  DFS DMD
-r9: 0
-bg9: bg-success
-rr9: 3
-pp9: S. VANGUARD    
-p10:  T. SATISFACTION
-r10: 1
-bg10: bg-info
-rr10: 2
-pp10: S. VANGUARD
-bg11: bg-danger
-p11:  SOJ
-r11: 3
-rr11: 0
-pp11: S.VANGUARD
+#PARTIDO 1
+j1: RONDA 1
+p1: KOD
+pp1: SV
+r1: 
+bg1: rock
+rr1: 
+#PARTIDO 2
+j2: RONDA 2
+p2: SV
+pp2: SPC
+bg2: rock
+r2: 
+rr2: 
+#PARTIDO 3
+j3: RONDA 3
+p3: SV
+pp3: TB
+bg3: rock
+r3: 
+rr3:
+#PARTIDO 4
+j4: RONDA 4
+p4: DFS RUBY
+pp4: SV
+bg4: rock
+r4: 
+rr4:
+#PARTIDO 5
+j5: RONDA 5
+p5: HG REGIOS
+pp5: SV
+bg5: rock
+r5: 
+rr5:
+#PARTIDO 6
+j6: RONDA 6
+p6: DFS SAP
+pp6: SV
+bg6: rock
+r6: 
+rr6: 
+#PARTIDO 7
+j7: RONDA 7
+p7: DFS DMD
+pp7: SV
+bg7: rock
+r7: 
+rr7:
+#PARTIDO 8
+j8: RONDA 8
+p8:  SV
+pp8: STAR
+bg8: rock
+rr8: 
+r8: 
+#PARTIDO 9
+j9: RONDA 9
+p9:  SV
+pp9: ZN
+bg9: rock
+r9: 
+rr9: 
+#PARTIDO 10
+j10: RONDA 10
+p10: AEP
+pp10: SV
+bg10: rock
+r10: 
+rr10:
+#PARTIDO 11
+j11: RONDA 11
+p11: LB
+pp11: SV
+bg11: rock
+r11: 
+rr11:
+stream: <i class="fa-brands fa-twitch text-white"></i>
+# pj: 11
+# pt1: 1
+# pt2: 3
+# pt3: 0
+# pt4: 2
+# pt5: 1
+# pt6: 3
+# pt7: 0
+# pt8: 2
+# pt9: 3
+# pt10: 2
+# pt11: 0
+# p1:  HGO
+# r1: 2
+# rr1: 1
+# bg1: bg-warning
+# pp1: S.VANGUARD
+# p2: HG REGIOS
+# r2: 0
+# rr2: 3
+# bg2: bg-success
+# pp2: S. VANGUARD
+# p3: ZODIAC
+# r3: 3
+# rr3: 0
+# bg3: bg-danger
+# pp3: S. VANGUARD
+# p4:  MBO
+# r4: 1
+# rr4: 2
+# bg4: bg-info
+# pp4: S. vanguard
+# p5:  last breath
+# r5: 2
+# bg5: bg-warning
+# rr5: 1
+# pp5: s. vanguard
+# p6:  DFS RUBY
+# r6: 0
+# bg6: bg-success
+# rr6: 3
+# pp6: S.VANGUARD
+# p7:  no smite
+# r7: 3
+# rr7: 0
+# bg7: bg-danger
+# pp7: s. vanguard
+# p8: jas
+# r8: 1
+# bg8: bg-info
+# rr8: 2 
+# pp8: s. vanguard
+# p9:  DFS DMD
+# r9: 0
+# bg9: bg-success
+# rr9: 3
+# pp9: S. VANGUARD    
+# p10:  T. SATISFACTION
+# r10: 1
+# bg10: bg-info
+# rr10: 2
+# pp10: S. VANGUARD
+# bg11: bg-danger
+# p11:  SOJ
+# r11: 3
+# rr11: 0
+# pp11: S.VANGUARD
 ---
 
 
