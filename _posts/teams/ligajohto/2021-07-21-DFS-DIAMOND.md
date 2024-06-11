@@ -104,6 +104,8 @@ bg11: rock
 r11: 
 rr11:
 stream: <i class="fa-brands fa-twitch text-white"></i>
+dia: 25
+hora: '22:10'
 # pj: 11
 # pt1: 1
 # pt2: 3
