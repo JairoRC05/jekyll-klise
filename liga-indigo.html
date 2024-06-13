@@ -66,12 +66,15 @@ permalink: /liga-indigo-platino.html
                   </a>
                 {%- endfor -%}
               </div>
-              <div class="col-12 col-md-6 mt-0">
+
+
+
+              <div class="col-12 col-md-6 mt-0 mt-">
                 <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
                   <div class="teamIMG ms-3 text-white">
                     <img src="/assets/logos/COPA XFORCE.png" alt="">
                   </div>
-                  <div>
+                  <div class="ms-3">
                     <h3 class="mb-0">COPA XFORCE</h3>
                     {% assign norte = site.categories.LI | sort: "puntos"
                     | reverse %}
@@ -91,7 +94,7 @@ permalink: /liga-indigo-platino.html
                   <div class="teamIMG ms-3 text-white">
                     <img src="/assets/logos/LIGA-JOHTO.png" alt="">
                   </div>
-                  <div>
+                  <div class="ms-3">
                     <h3 class="mb-0">LIGA JOHTO</h3>
                     {% assign norte = site.categories.LI | sort: "puntos"  %}
                     {%- for post in norte limit:3 -%}

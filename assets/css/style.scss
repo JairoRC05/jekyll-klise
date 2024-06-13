@@ -1151,7 +1151,6 @@ color: #fff;
   background-color: #0000001c;
   border-radius: 10px;
   padding: 20px 0;
-  margin: 0 20px;
   border: 1px solid #ffffff71;
 }
 
@@ -1240,7 +1239,11 @@ color: #fff;
       font-size: 28px;
     }
     
-
+    .teamIMG > img{
+      width: 50px;
+      margin-right: 7px;
+      display: none;
+    }
 
     .banner{
       height: 130px;
