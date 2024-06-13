@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LI
+categories: LI LI3 LI4 LI9
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
@@ -9,30 +9,31 @@ title: TEAM AETHER
 tag: johto042024
 color: black
 puntosLJ202404: 12
+puntos: 1
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-pj: 
-pt1: 
-pt2: 
-pt3: 
-pt4: 
-pt5: 
-pt6: 
-pt7: 
-pt8: 
-pt9: 
-pt10: 
-pt11: 
+pj: 1
+pt1: 1 #j
+pt2: 0
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 0
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: HG OL
 pp1: TAE
-r1: 
-bg1: rock
-rr1: 
+r1: 2
+rr1: 1
+bg1: info
 #PARTIDO 2
 j2: RONDA 2
 p2: EK
@@ -77,7 +78,7 @@ r7:
 rr7:
 #PARTIDO 8
 j8: RONDA 8
-p8:  E7J
+p8:  JNS
 pp8: TAE
 bg8: rock
 rr8: 

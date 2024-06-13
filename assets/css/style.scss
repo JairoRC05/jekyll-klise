@@ -632,7 +632,21 @@ position: absolute;
   background-color: #5d12A6;
 }
 
+.win{
+  background-color: green;
+}
 
+.loss{
+  background-color: red;
+}
+
+.war{
+  background-color: yellow;
+}
+
+.info{
+  background-color: blue;
+}
 
 .blue{
   background-color: rgb(4, 4, 87);
@@ -733,6 +747,10 @@ position: absolute;
 
   .rock{
     background-color: rgba(83, 83, 83, 0.425);
+  }
+
+   .black{
+    background-color: rgba(0, 0, 0, 0.425);
   }
 
 
@@ -1045,6 +1063,33 @@ color: #fff;
 }
 
 
+.textIndigo > h1{
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+
+}
+
+.textIndigo > span{
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.textIndigo > p{
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.cinzel{
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .steel{
   font-family: "Anton", sans-serif;
   font-weight: 400;
@@ -1065,8 +1110,9 @@ color: #fff;
 .bannerPromo > a > img{
   width: 150px;
 }
+
 .teamList{
-  min-height: 50px;
+  min-height: 40px;
   margin-bottom: 3px;
   padding: 0;
 }
@@ -1079,8 +1125,7 @@ color: #fff;
 }
 
 
-.teamIN > p{
-  font-weight: 900;
+.teamIN > p{  
   font-style: normal;
   margin: 0;
   margin-right: 7px;
@@ -1088,6 +1133,26 @@ color: #fff;
 .teamIN > img{
   width: 30px;
   margin-right: 7px;
+}
+
+
+.teamIMG > img{
+  width: 150px;
+  margin-right: 7px;
+}
+
+.CXF > img{
+  width: 50px;
+  margin-right: 7px;
+}
+
+
+.cardOrange{
+  background-color: #0000001c;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin: 0 20px;
+  border: 1px solid #ffffff71;
 }
 
 .teamIN > span{
@@ -1170,6 +1235,12 @@ color: #fff;
 
 
   @media only screen and (max-width: 768px) {
+
+    .textIndigo > h1{
+      font-size: 28px;
+    }
+    
+
 
     .banner{
       height: 130px;

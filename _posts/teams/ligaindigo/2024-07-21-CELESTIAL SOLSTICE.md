@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LI
+categories: LI LI1 LI3 LI4 LI5 LI6 LI7 LI8 LI9 LI10 LI11
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
@@ -24,7 +24,7 @@ bg1: rock
 rr1: 
 #PARTIDO 2
 j2: RONDA 2
-p2: E7J
+p2: JNS
 pp2: CS
 bg2: rock
 r2: 
