@@ -33,29 +33,103 @@ permalink: /liga-johto.html
 <div class="container mt-1">
    
     <div class="row text-white ">
-     
-        <div class="col-12 col-md-12 col-xl-12">
-       
-            
+        
+        <div class="col-2 col-md-1 mt-0 ">
+            {% assign norte = site.categories.pljmy24 | sort: "title" %}
+            {%- for post in norte limit:12 -%}
+            <div class="container teamList d-flex justify-content-end align-items-center">
+              <div class="teamIN  text-white">
+                <p>{{ post.title | escape }}</p>
+              </div>
+            </div>
+        
+            {%- endfor -%}
+          </div>
+
+        <div class="col-10 col-md-5">
                 {% assign LIGA = site.categories.LJ06%}
                 {%- for post in LIGA-%}
                    <a class="text-white" href="{{ post.url }}">
                     <div class="container teamList d-flex justify-content-between align-items-center">
-                        <div class="teamIN">
-                            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                            <p>{{ post.title | escape }}</p>
-                            <span class="bg-success text-white">{{ post.status }}</span>
+                        <div class="teamIN text-white">
+                          <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                          <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
                         </div>
-
+                        <div class="teamIN text-white">
+                        
+                          <p class="text-uppercase">{{ post.puntos | escape }} pts</p>
+                        </div>
                        
-                    </div>
+                      </div>
                    </a>
              
                 {%- endfor -%}
        
         </div>
+
+        <div class="col-12 col-md-6 mt-0 mt-">
+            <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
+              <div class="teamIMG ms-3 text-white">
+                <img src="/assets/logos/COPA XFORCE.png" alt="">
+              </div>
+              <div class="ms-3">
+               
+                {% assign norte = site.categories.LJ06 | sort: "puntos"
+                | reverse %}
+                {%- for post in norte limit:2 -%}
+         
+                <div class=" teamList d-flex justify-content-between align-items-center">
+                  <div class="teamIN text-white">
+                    <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                    <p class="text-uppercase">{{ post.title | escape }}</p>
+                  </div>
+                </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
+              <div class="teamIMG ms-3 text-white">
+                <img src="/assets/logos/LIGA-INDIGO.png" alt="">
+              </div>
+              <div class="ms-3">
+           
+                {% assign norte = site.categories.LJ06 | sort: "puntos" | reverse  %}
+                {%- for post in norte limit:3 -%}
+         
+                <div class=" teamList d-flex justify-content-between align-items-center">
+                  <div class="teamIN text-white">
+                    <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                    <p class="text-uppercase">{{ post.title | escape }}</p>
+                  </div>
+                </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            <div class="container cardOrange teamList d-flex justify-content-start align-items-center">
+                <div class="teamIMG ms-3 text-white">
+                  <img src="/assets/logos/NARANJA.png" alt="">
+                </div>
+                <div class="ms-3">
+             
+                  {% assign norte = site.categories.LJ06 | sort: "puntos"  %}
+                  {%- for post in norte limit:3 -%}
+           
+                  <div class=" teamList d-flex justify-content-between align-items-center">
+                    <div class="teamIN text-white">
+                      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                      <p class="text-uppercase">{{ post.title | escape }}</p>
+                    </div>
+                  </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+           
+             
+          </div>
       
-            <!-- <a class="btn btn-outline-light" href="/liga-johto-reglas.html" role="button">REGLAS</a> -->
+          
     
     </div>
 </div>
