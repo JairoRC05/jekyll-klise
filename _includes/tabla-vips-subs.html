@@ -11,7 +11,16 @@
       <div class="badgeIN">
         <p class="text-uppercase">{{ post.title | escape }}</p>
         <span><img src="{{post.sub}}" class="drop img-fluid" alt=""></span>
+        {% if post.vip == "/assets/mis/vip.png" %}
         <span><img src="{{post.vip}}" class="drop img-fluid" alt=""></span>
+        {% else %}
+        <span></span>
+      {% endif %}
+      {% if post.gift == "/assets/mis/gift.png" %}
+      <span><img src="{{post.gift}}" class="drop img-fluid" alt=""></span>
+      {% else %}
+      <span></span>
+    {% endif %}
       </div>
     </div>
     <p>{{post.tickets}} tickets</p>

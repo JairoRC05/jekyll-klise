@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: nortejohto042024 surMayo ljmy24 m3 m4  m9  LA2024JN
+categories: nortejohto042024 surMayo ljmy24 m3 m4  m9  LA2024JN LIN1 LIN2 LIN3 LIN4 LIN5 LIN6 LIN7 LIN8 LIN9 LIN10 LIN11
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700

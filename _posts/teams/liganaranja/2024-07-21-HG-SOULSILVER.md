@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN
+categories: LA2024JN  LIN2 LIN3 LIN8 LIN9
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/ver.png
 team: HG-SOULSILVER
 ID: HGSS
-status: <i class="fa-solid fa-check"></i>
+status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S

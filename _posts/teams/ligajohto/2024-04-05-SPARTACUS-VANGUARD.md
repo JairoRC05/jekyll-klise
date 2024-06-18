@@ -12,6 +12,19 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SPARTACUS VANGUARD
 ID: SV
+puntos: 6
+pj: 2
+pt1: 0
+pt2: 0
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 3 #
+pt7: 3 #
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: KOD
@@ -51,16 +64,16 @@ rr5:
 j6: RONDA 6
 p6: DFS SAP
 pp6: SV
-bg6: rock
-r6: 
-rr6: 
+bg6: win
+r6: 0
+rr6: 3
 #PARTIDO 7
 j7: RONDA 7
 p7: DFS DMD
 pp7: SV
-bg7: rock
-r7: 
-rr7:
+bg7: win
+r7: 3
+rr7: 0
 #PARTIDO 8
 j8: RONDA 8
 p8:  SV
