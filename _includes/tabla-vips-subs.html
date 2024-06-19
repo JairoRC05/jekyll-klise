@@ -1,7 +1,7 @@
 
    <div class="row g-5 mb-3">
     <div class="col-12 col-md-6 col-lg-4">
-         <h4 class="mb-3"><b>VIPS/SUBS</b></h4>
+         <h4 class="mb-3"><b>VIPS/SUBS/BITS</b></h4>
    {% assign norte = site.categories.subs | sort: "tickets"| reverse %} 
    {%- for post in norte-%}
         
@@ -10,7 +10,16 @@
       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
       <div class="badgeIN">
         <p class="text-uppercase">{{ post.title | escape }}</p>
+        {% if post.founder == "/assets/mis/founder.png" %}
+        <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
+        {% else %}
+        <span></span>
+      {% endif %}
+        {% if post.sub == "/assets/mis/sub.png" %}
         <span><img src="{{post.sub}}" class="drop img-fluid" alt=""></span>
+        {% else %}
+        <span></span>
+      {% endif %}
         {% if post.vip == "/assets/mis/vip.png" %}
         <span><img src="{{post.vip}}" class="drop img-fluid" alt=""></span>
         {% else %}
@@ -18,6 +27,11 @@
       {% endif %}
       {% if post.gift == "/assets/mis/gift.png" %}
       <span><img src="{{post.gift}}" class="drop img-fluid" alt=""></span>
+      {% else %}
+      <span></span>
+    {% endif %}
+    {% if post.bits == "/assets/mis/bits.png" %}
+      <span><img src="{{post.bits}}" class="drop img-fluid" alt=""></span>
       {% else %}
       <span></span>
     {% endif %}
@@ -32,37 +46,93 @@
 
     <div class="col-12 col-md-6 col-lg-4">
       <h4 class="mb-3"><b>GIFTERS</b></h4>
-      {% assign norte = site.categories.gift | sort: "tickets"
-      | reverse %} {%- for post in norte-%}
-      <a class="text-white" href="{{ post.url }}">       
-        <div class="container teamList d-flex justify-content-between align-items-center">
-          <div class="playerIN">
-            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-            <p class="text-uppercase">{{ post.title | escape }}</p>
-            <span>{{post.rango}}</span>
+      {% assign norte = site.categories.gift | sort: "tickets"| reverse %} 
+      {%- for post in norte-%}
+           
+      <div class="container playerList d-flex justify-content-between align-items-center">
+        <div class="playerIN">
+         <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+         <div class="badgeIN">
+           <p class="text-uppercase">{{ post.title | escape }}</p>
+           {% if post.founder == "/assets/mis/founder.png" %}
+           <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
+           {% else %}
+           <span></span>
+         {% endif %}
+           {% if post.sub == "/assets/mis/sub.png" %}
+           <span><img src="{{post.sub}}" class="drop img-fluid" alt=""></span>
+           {% else %}
+           <span></span>
+         {% endif %}
+           {% if post.vip == "/assets/mis/vip.png" %}
+           <span><img src="{{post.vip}}" class="drop img-fluid" alt=""></span>
+           {% else %}
+           <span></span>
+         {% endif %}
+         {% if post.gift == "/assets/mis/gift.png" %}
+         <span><img src="{{post.gift}}" class="drop img-fluid" alt=""></span>
+         {% else %}
+         <span></span>
+       {% endif %}
+       {% if post.bits == "/assets/mis/bits.png" %}
+         <span><img src="{{post.bits}}" class="drop img-fluid" alt=""></span>
+         {% else %}
+         <span></span>
+       {% endif %}
          </div>
-         
-         <p>{{post.tickets}} tickets</p>
-        </div>   
-        </a>
+       </div>
+       <div class="playerIN flex-column align-items-start">
+         <p>{{post.gifter}}</p>
+          <p>{{post.tickets}} tickets</p>
+         </div>
+      </div>   
+   
       {%- endfor -%}
        </div>
 
        <div class="col-12 col-md-6 col-lg-4">
-        <h4 class="mb-3"><b>BITS / FOLLOWERS</b></h4>
-        {% assign norte = site.categories.bits | sort: "tickets"
-        | reverse %} {%- for post in norte-%}
-        <a class="text-white" href="{{ post.url }}">       
-          <div class="container teamList d-flex justify-content-between align-items-center">
-            <div class="playerIN">
-              <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-              <p class="text-uppercase">{{ post.title | escape }}</p>
-              <span>{{post.rango}}</span>
+        <h4 class="mb-3"><b>FOLLOWERS</b></h4>
+        {% assign norte = site.categories.follow | sort: "tickets"| reverse %} 
+        {%- for post in norte-%}
+             
+        <div class="container playerList d-flex justify-content-between align-items-center">
+          <div class="playerIN">
+           <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+           <div class="badgeIN">
+             <p class="text-uppercase">{{ post.title | escape }}</p>
+             {% if post.founder == "/assets/mis/founder.png" %}
+             <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
+             {% else %}
+             <span></span>
+           {% endif %}
+             {% if post.sub == "/assets/mis/sub.png" %}
+             <span><img src="{{post.sub}}" class="drop img-fluid" alt=""></span>
+             {% else %}
+             <span></span>
+           {% endif %}
+             {% if post.vip == "/assets/mis/vip.png" %}
+             <span><img src="{{post.vip}}" class="drop img-fluid" alt=""></span>
+             {% else %}
+             <span></span>
+           {% endif %}
+           {% if post.gift == "/assets/mis/gift.png" %}
+           <span><img src="{{post.gift}}" class="drop img-fluid" alt=""></span>
+           {% else %}
+           <span></span>
+         {% endif %}
+         {% if post.bits == "/assets/mis/bits.png" %}
+           <span><img src="{{post.bits}}" class="drop img-fluid" alt=""></span>
+           {% else %}
+           <span></span>
+         {% endif %}
            </div>
-           
-           <p>{{post.tickets}} tickets</p>
-          </div>   
-          </a>
+         </div>
+         <div class="playerIN flex-column align-items-start">
+           <p>{{post.gifter}}</p>
+            <p>{{post.tickets}} tickets</p>
+           </div>
+        </div>   
+     
         {%- endfor -%}
          </div>
    </div>

@@ -15,12 +15,12 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: HG OLYMPUS
 ID: HG
-pj: 1
+pj: 2
 pt1: 2 #j
 pt2: 0
 pt3: 0
 pt4: 0
-pt5: 0
+pt5: 0 #
 pt6: 0
 pt7: 0
 pt8: 0
@@ -59,9 +59,9 @@ rr4:
 j5: RONDA 5
 p5: JNS
 pp5: HG OL
-bg5: rock
-r5: 
-rr5:
+bg5: loss 
+r5: 3
+rr5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: HG OL
