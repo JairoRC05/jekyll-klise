@@ -14,6 +14,19 @@ puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
+puntos: 6
+pj: 1
+pt1: 0
+pt2: 2
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 3
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 1
 #PARTIDO 1
 j1: RONDA 1
 p1: HGHG
@@ -26,8 +39,8 @@ j2: RONDA 2
 p2: IL
 pp2: GOD G
 bg2: rock
-r2: 
-rr2: 
+r2: 2
+rr2: 2
 #PARTIDO 3
 j3: RONDA 3
 p3: IL
@@ -61,8 +74,8 @@ j7: RONDA 7
 p7:  IL
 pp7: BNT
 bg7: rock
-r7: 
-rr7: 
+r7: 3
+rr7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  IL
@@ -89,8 +102,8 @@ j11: RONDA 11
 p11: IL
 pp11: SSI
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 3
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 18
 hora: '22:10'

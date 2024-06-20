@@ -15,39 +15,40 @@ cover: /assets/ver.png
 team: PROJECT ONE
 ID: P1
 status: <i class="fa-solid fa-check"></i>
-pj: 
-pt1: 
-pt2: 
-pt3: 
-pt4: 
-pt5: 
-pt6: 
-pt7: 
-pt8: 
-pt9: 
-pt10: 
-pt11: 
+puntos: 23
+pj: 6
+pt1: 4 #
+pt2: 0
+pt3: 4 #
+pt4: 0
+pt5: 4 #
+pt6: 0
+pt7: 3 #
+pt8: 4 #
+pt9: 0
+pt10: 0
+pt11: 4 #
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
 pp1: P1
-r1: 
+r1: 0
 bg1: rock
-rr1: 
+rr1: 4 
 #PARTIDO 2
 j2: RONDA 2
 p2: HGSS
 pp2: P1
 bg2: rock
-r2: 
-rr2: 
+r2: 0
+rr2: 4
 #PARTIDO 3
 j3: RONDA 3
 p3: P1
 pp3: RN
 bg3: rock
-r3: 
-rr3:
+r3: 4
+rr3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: P1
@@ -60,8 +61,8 @@ j5: RONDA 5
 p5: BNT
 pp5: P1
 bg5: rock
-r5: 
-rr5:
+r5: 0
+rr5: 4
 #PARTIDO 6
 j6: RONDA 6
 p6: GOD O
@@ -74,15 +75,15 @@ j7: RONDA 7
 p7:  GOLD S
 pp7: P1
 bg7: rock
-r7: 
-rr7:
+r7: 1
+rr7: 3
 #PARTIDO 8
 j8: RONDA 8
 p8:  HGHG
 pp8: P1
 bg8: rock
-rr8: 
-r8: 
+rr8: 0
+r8: 4
 #PARTIDO 9
 j9: RONDA 9
 p9:  P1
@@ -102,9 +103,9 @@ j11: RONDA 11
 p11: GOD G
 pp11: P1
 bg11: rock
-r11: 
-rr11:
+r11: 0
+rr11: 4
 stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 19
-hora: '22:10'
+# dia: 19
+# hora: '22:10'
 ---

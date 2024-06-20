@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LA2024JN LIN1 LIN2 LIN6 LIN7 LIN8 LIN10 LIN11
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/GAG.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
 title: GOLD AS GOLD VIOLET
@@ -15,25 +15,26 @@ cover: /assets/ver.png
 team: GOLD AS GOLD VIOLET
 ID: GOLD V
 status: <i class="fa-soLINd fa-check"></i>
-pj: 
-pt1: 
-pt2: 
-pt3: 
-pt4: 
-pt5: 
-pt6: 
-pt7: 
-pt8: 
-pt9: 
-pt10: 
-pt11: 
+puntos: 0
+pj: 1
+pt1: 0
+pt2: 0
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 0
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
 pp1: P1
-r1: 
+r1: 0
 bg1: rock
-rr1: 
+rr1: 4 
 #PARTIDO 2
 j2: RONDA 2
 p2: GOLD V

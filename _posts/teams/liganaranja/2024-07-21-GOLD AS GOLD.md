@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LA2024JN LIN1 LIN LIN2 LIN3 LIN7 LIN8
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/GAG.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
 title: GOLD AS GOLD SCARLET
@@ -15,6 +15,19 @@ cover: /assets/ver.png
 team: GOLD AS GOLD SCARLET
 ID: GOLD S
 status: <i class="fa-soLINNd fa-check"></i>
+puntos: 1
+pj: 1
+pt1: 0
+pt2: 0
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 1 #
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -62,8 +75,8 @@ j7: RONDA 7
 p7:  GOLD S
 pp7: P1
 bg7: rock
-r7: 
-rr7: 
+r7: 1
+rr7: 3
 #PARTIDO 8
 j8: RONDA 8
 p8:  GOLD S
