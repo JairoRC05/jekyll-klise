@@ -27,8 +27,8 @@ j2: RONDA 2
 p2: GOD O
 pp2: TSF
 bg2: rock
-r2: 
-rr2: 
+r2: 1
+rr2: 3
 #PARTIDO 3
 j3: RONDA 3
 p3: BNT
