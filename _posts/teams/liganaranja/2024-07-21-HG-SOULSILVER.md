@@ -16,8 +16,8 @@ team: HG-SOULSILVER
 ID: HGSS
 status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
-puntos: 3
-pj: 2
+puntos: 4
+pj: 3
 pt1: 0
 pt2: 0 #
 pt3: 0
@@ -27,7 +27,7 @@ pt6: 0
 pt7: 0
 pt8: 0
 pt9: 0
-pt10: 0
+pt10: 1 #
 pt11: 3 #
 j1: RONDA 1
 p1: GOLD S
@@ -96,15 +96,15 @@ j10: RONDA 10
 p10: BNT
 pp10: HGSS
 bg10: rock
-r10: 
-rr10:
+r10: 3
+rr10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: GOD O
 pp11: HGSS
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 3
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '21:10'
