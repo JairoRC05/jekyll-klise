@@ -15,6 +15,19 @@ cover: /assets/ver.png
 team: GODS OMEGA
 ID: GOD O
 status: <i class="fa-soLINd fa-check"></i>
+puntos: 2
+pj: 2
+pt1: 0 
+pt2: 1 #
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 0
+pt8: 0
+pt9: 0
+pt10: 0
+pt11: 1 #
 #PARTIDO 1
 j1: RONDA 1
 p1: GOD O
@@ -90,8 +103,8 @@ j11: RONDA 11
 p11: GOD O
 pp11: HGSS
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 3
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '21:10'
