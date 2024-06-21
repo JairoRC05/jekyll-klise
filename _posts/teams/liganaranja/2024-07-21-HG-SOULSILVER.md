@@ -16,10 +16,10 @@ team: HG-SOULSILVER
 ID: HGSS
 status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
-puntos: 0
-pj: 1
+puntos: 3
+pj: 2
 pt1: 0
-pt2: 0
+pt2: 0 #
 pt3: 0
 pt4: 0
 pt5: 0
@@ -28,7 +28,7 @@ pt7: 0
 pt8: 0
 pt9: 0
 pt10: 0
-pt11: 0
+pt11: 3 #
 j1: RONDA 1
 p1: GOLD S
 pp1: HGSS
