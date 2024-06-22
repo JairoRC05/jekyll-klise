@@ -15,20 +15,33 @@ cover: /assets/ver.png
 team: GODS OMEGA
 ID: GOD O
 status: <i class="fa-soLINd fa-check"></i>
+puntos: 7
+pj: 4
+pt1: 2
+pt2: 1 #
+pt3: 0
+pt4: 0
+pt5: 0
+pt6: 0
+pt7: 0
+pt8: 3
+pt9: 0
+pt10: 0
+pt11: 1 #
 #PARTIDO 1
 j1: RONDA 1
 p1: GOD O
 pp1: RN
-r1: 
+r1: 2
 bg1: rock
-rr1: 
+rr1: 2
 #PARTIDO 2
 j2: RONDA 2
 p2: GOD O
 pp2: TSF
 bg2: rock
-r2: 
-rr2: 
+r2: 1
+rr2: 3
 #PARTIDO 3
 j3: RONDA 3
 p3: BNT
@@ -69,8 +82,8 @@ j8: RONDA 8
 p8:  IL
 pp8: GOD O
 bg8: rock
-rr8: 
-r8: 
+rr8: 3
+r8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: GOD G
@@ -90,8 +103,8 @@ j11: RONDA 11
 p11: GOD O
 pp11: HGSS
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 3
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '21:10'

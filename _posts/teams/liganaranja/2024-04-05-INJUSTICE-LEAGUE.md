@@ -14,19 +14,19 @@ puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-puntos: 6
-pj: 1
+puntos: 11
+pj: 6
 pt1: 0
-pt2: 2
-pt3: 0
-pt4: 0
+pt2: 2 #
+pt3: 2 #
+pt4: 0 
 pt5: 0
-pt6: 0
-pt7: 3
-pt8: 0
+pt6: 2 #
+pt7: 3 #
+pt8: 1 #
 pt9: 0
 pt10: 0
-pt11: 1
+pt11: 1 #
 #PARTIDO 1
 j1: RONDA 1
 p1: HGHG
@@ -46,8 +46,8 @@ j3: RONDA 3
 p3: IL
 pp3: GOLD V
 bg3: rock
-r3: 
-rr3:
+r3: 2
+rr3: 2
 #PARTIDO 4
 j4: RONDA 4
 p4: IL
@@ -67,8 +67,8 @@ j6: RONDA 6
 p6: IL
 pp6: TSF
 bg6: rock
-r6: 
-rr6: 
+r6: 2
+rr6: 2
 #PARTIDO 7
 j7: RONDA 7
 p7:  IL
@@ -81,8 +81,8 @@ j8: RONDA 8
 p8:  IL
 pp8: GOD O
 bg8: rock
-rr8: 
-r8: 
+rr8: 1
+r8: 3
 #PARTIDO 9
 j9: RONDA 9
 p9:  IL

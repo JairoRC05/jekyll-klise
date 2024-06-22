@@ -15,8 +15,8 @@ cover: /assets/ver.png
 team: GOLD AS GOLD SCARLET
 ID: GOLD S
 status: <i class="fa-soLINNd fa-check"></i>
-puntos: 1
-pj: 1
+puntos: 3
+pj: 2
 pt1: 0
 pt2: 0
 pt3: 0
@@ -27,7 +27,7 @@ pt7: 1 #
 pt8: 0
 pt9: 0
 pt10: 0
-pt11: 0
+pt11: 2
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -103,8 +103,8 @@ j11: RONDA 11
 p11: GOLD V
 pp11: GOLD S
 bg11: rock
-r11: 
-rr11:
+r11: 2
+rr11: 2
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '22:10'

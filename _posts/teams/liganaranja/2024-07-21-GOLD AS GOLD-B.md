@@ -15,11 +15,11 @@ cover: /assets/ver.png
 team: GOLD AS GOLD VIOLET
 ID: GOLD V
 status: <i class="fa-soLINd fa-check"></i>
-puntos: 0
-pj: 1
-pt1: 0
+puntos: 4
+pj: 3
+pt1: 0 #
 pt2: 0
-pt3: 0
+pt3: 2 #
 pt4: 0
 pt5: 0
 pt6: 0
@@ -27,7 +27,7 @@ pt7: 0
 pt8: 0
 pt9: 0
 pt10: 0
-pt11: 0
+pt11: 2 #
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
@@ -47,8 +47,8 @@ j3: RONDA 3
 p3: IL
 pp3: GOLD V
 bg3: rock
-r3: 
-rr3:
+r3: 2
+rr3: 2
 #PARTIDO 4
 j4: RONDA 4
 p4: GOD G
@@ -103,8 +103,8 @@ j11: RONDA 11
 p11: GOLD V
 pp11: GOLD S
 bg11: rock
-r11: 
-rr11:
+r11: 2
+rr11: 2
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '22:10'
