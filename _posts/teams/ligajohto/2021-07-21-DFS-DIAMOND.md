@@ -14,14 +14,14 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS DMD
-puntos: 3
-pj: 3
-pt1: 0
+puntos: 9
+pj: 6
+pt1: 2 #
 pt2: 0
-pt3: 0
+pt3: 1
 pt4: 0
 pt5: 0
-pt6: 0 #
+pt6: 3 #
 pt7: 0
 pt8: 0
 pt9: 1 #j
@@ -31,9 +31,9 @@ pt11: 0
 j1: RONDA 1
 p1: DFS DMD
 pp1: DFS RUBY
-r1: 
 bg1: rock
-rr1: 
+r1: 2
+rr1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: DFS DMD
@@ -46,8 +46,8 @@ j3: RONDA 3
 p3: DFS DMD
 pp3: HG REGIOS
 bg3: rock
-r3: 
-rr3:
+r3: 1
+rr3: 2
 #PARTIDO 4
 j4: RONDA 4
 p4: DFS DMD
@@ -67,13 +67,13 @@ j6: RONDA 6
 p6: DFS DMD
 pp6: KOD
 bg6: rock
-r6: 
-rr6: 
+r6: 3
+rr6: 0 
 #PARTIDO 7
 j7: RONDA 7
 p7: DFS DMD
 pp7: SV
-bg7: loss
+bg7: rock
 r7: 3
 rr7: 0
 #PARTIDO 8
@@ -87,14 +87,14 @@ r8:
 j9: RONDA 9
 p9: DFS DMD
 pp9: STAR
-bg9: war
+bg9: rock
 r9: 1
 rr9: 2
 #PARTIDO 10
 j10: RONDA 10
 p10: DFS SAP
 pp10: TB
-bg10: info
+bg10: rock
 r10: 2
 rr10: 1
 #PARTIDO 11
