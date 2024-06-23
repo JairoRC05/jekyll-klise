@@ -2,106 +2,117 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: surjohto042024 norteMayo ljmy24 LJ06
-maincover: /assets/logos/SV.png
+maincover: /assets/logos/SKILLZ.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
-title: SPARTACUS VANGUARD
+title: SKILLZ
 tag: johto042024
 color: black
 background: '#F16C38'
 cover: /assets/backCard.png
-team: SPARTACUS VANGUARD
-ID: SV
-puntos: 6
-pj: 2
-pt1: 0
-pt2: 0
-pt3: 0
-pt4: 0
-pt5: 0
-pt6: 3 #
-pt7: 3 #
-pt8: 0
-pt9: 0
-pt10: 0
-pt11: 0
+team: SKILLZ
+ID: SKZ
+puntos: 8
+pj: 5
 #PARTIDO 1
 j1: RONDA 1
 p1: KOD
-pp1: SV
-r1: 
+pp1: SKZ
 bg1: rock
-rr1: 
+r1: 0
+rr1: 3
+pt1: 3
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
-p2: SV
+p2: SKZ
 pp2: SPC
 bg2: rock
-r2: 
-rr2: 
+r2: 3
+rr2: 0
+pt2: 3
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
-p3: SV
+p3: SKZ
 pp3: TB
 bg3: rock
 r3: 
 rr3:
+pt3: 0
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: DFS RUBY
-pp4: SV
+pp4: SKZ
 bg4: rock
-r4: 
-rr4:
+r4: 3
+rr4: 0
+pt4: 0
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 p5: HG REGIOS
-pp5: SV
+pp5: SKZ
 bg5: rock
 r5: 
 rr5:
+pt5: 0
+pj5: 0 
 #PARTIDO 6
 j6: RONDA 6
 p6: DFS SAP
-pp6: SV
-bg6: win
+pp6: SKZ
+bg6: rock
 r6: 0
 rr6: 3
+pt6: 0
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: DFS DMD
-pp7: SV
-bg7: win
-r7: 3
-rr7: 0
+pp7: SKZ
+bg7: rock
+r7: 
+rr7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
-p8:  SV
+p8:  SKZ
 pp8: STAR
 bg8: rock
 rr8: 
-r8: 
+r8:
+pt8: 0
+pj8: 0   
 #PARTIDO 9
 j9: RONDA 9
-p9:  SV
+p9:  SKZ
 pp9: ZN
 bg9: rock
 r9: 
 rr9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: AEP
-pp10: SV
+pp10: SKZ
 bg10: rock
 r10: 
 rr10:
+pt10: 0
+pj10: 0 
 #PARTIDO 11
 j11: RONDA 11
 p11: LB
-pp11: SV
+pp11: SKZ
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 2
+pt11: 2
+pj11 : 1 
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 21
 hora: '21:10'

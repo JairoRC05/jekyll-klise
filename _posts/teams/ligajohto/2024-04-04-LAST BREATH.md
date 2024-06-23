@@ -16,19 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
-puntos: 3
-pj: 1
-pt1: 0
-pt2: 0
-pt3: 0
-pt4: 0
-pt5: 3
-pt6: 0
-pt7: 0
-pt8: 0
-pt9: 0
-pt10: 0
-pt11: 0
+puntos: 4
+pj: 2
 #PARTIDO 1
 j1: RONDA 1
 p1: LB
@@ -36,6 +25,8 @@ pp1: STAR
 r1: 
 bg1: rock
 rr1: 
+pt1: 0
+pj1: 0
 #PARTIDO 2
 j2: RONDA 2
 p2: LB
@@ -43,6 +34,8 @@ pp2: ZN
 bg2: rock
 r2: 
 rr2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: AEP
@@ -50,6 +43,8 @@ pp3: LB
 bg3: rock
 r3: 
 rr3:
+pt3: 0
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: DFS DMD
@@ -57,13 +52,17 @@ pp4: LB
 bg4: rock
 r4: 
 rr4:
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: LB
 pp5: KOD
-bg5: win
+bg5: rock
 r5: 3
 rr5: 0
+pt5: 3
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: LB
@@ -71,6 +70,8 @@ pp6: SPC
 bg6: rock
 r6: 
 rr6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 j7: RONDA 7
 p7:  LB
@@ -78,6 +79,8 @@ pp7: TB
 bg7: rock
 r7: 
 rr7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
 p8:  DFS RUBY
@@ -85,6 +88,9 @@ pp8: LB
 bg8: rock
 rr8: 
 r8: 
+pt8: 0
+pj8: 0
+
 #PARTIDO 9
 j9: RONDA 9
 p9:  HG REGIOS
@@ -92,6 +98,8 @@ pp9: LB
 bg9: rock
 r9: 
 rr9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: LB
@@ -99,13 +107,17 @@ pp10: DFS SAP
 bg10: rock
 r10: 
 rr10:
+pt10: 0
+pj10: 0
 #PARTIDO 11
 j11: RONDA 11
 p11: LB
-pp11: SV
+pp11: SKZ
 bg11: rock
-r11: 
-rr11:
+r11: 1
+rr11: 2
+pt11: 1
+pj11 : 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 21
 hora: '21:10'

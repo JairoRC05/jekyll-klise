@@ -14,19 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS DMD
-puntos: 9
+puntos: 11
 pj: 6
-pt1: 2 #
-pt2: 0
-pt3: 1
-pt4: 0
-pt5: 0
-pt6: 3 #
-pt7: 0
-pt8: 0
-pt9: 1 #j
-pt10: 2 #j
-pt11: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: DFS DMD
@@ -34,6 +23,8 @@ pp1: DFS RUBY
 bg1: rock
 r1: 2
 rr1: 1
+pt1: 2
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: DFS DMD
@@ -41,6 +32,8 @@ pp2: AEP
 bg2: rock
 r2: 
 rr2: 
+pt2: 0
+pj2: 0 
 #PARTIDO 3
 j3: RONDA 3
 p3: DFS DMD
@@ -48,6 +41,8 @@ pp3: HG REGIOS
 bg3: rock
 r3: 1
 rr3: 2
+pt3: 1
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: DFS DMD
@@ -55,6 +50,8 @@ pp4: LB
 bg4: rock
 r4: 
 rr4:
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: DFS DMD
@@ -62,6 +59,8 @@ pp5: DFS SAP
 bg5: rock
 r5: 
 rr5:
+pt5: 0
+pj5: 0 
 #PARTIDO 6
 j6: RONDA 6
 p6: DFS DMD
@@ -69,13 +68,17 @@ pp6: KOD
 bg6: rock
 r6: 3
 rr6: 0 
+pt6: 3
+pj6: 1 
 #PARTIDO 7
 j7: RONDA 7
 p7: DFS DMD
 pp7: SV
 bg7: rock
-r7: 3
-rr7: 0
+r7: 
+rr7: 
+pt7: 0
+pj7: 0 
 #PARTIDO 8
 j8: RONDA 8
 p8:  DFS DMD
@@ -83,6 +86,8 @@ pp8: SPC
 bg8: rock
 rr8: 
 r8: 
+pt8: 0
+pj8: 0  
 #PARTIDO 9
 j9: RONDA 9
 p9: DFS DMD
@@ -90,13 +95,17 @@ pp9: STAR
 bg9: rock
 r9: 1
 rr9: 2
+pt9: 1
+pj9: 1
 #PARTIDO 10
 j10: RONDA 10
-p10: DFS SAP
+p10: DFS DMD
 pp10: TB
 bg10: rock
 r10: 2
 rr10: 1
+pt10: 2
+pj10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: DFS DMD
@@ -104,6 +113,8 @@ pp11: ZN
 bg11: rock
 r11: 
 rr11:
+pt11: 0
+pj11 : 0 
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 25
 hora: '22:10'

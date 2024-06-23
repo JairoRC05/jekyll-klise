@@ -20,6 +20,8 @@ permalink: /liga-indigo-platino.html
 
 
 
+
+
   <div class="container-fluid banner grBlue">
     <div class="container bannerPromo d-flex justify-content-start align-items-center">
       <img src="/assets/logos/LIGA-INDIGO.png" class="img-fluid" alt="">
@@ -56,6 +58,7 @@ permalink: /liga-indigo-platino.html
             <div class="teamIN text-white">
               <img src="{{post.maincover}}" class="drop img-fluid" alt="">
               <p class="text-uppercase cinzel">{{ post.title | escape }}</p>
+              <span>{{ post.pj }}</span>
             </div>
             <div class="teamIN text-white">
               <p class="text-uppercase cinzel">{{ post.puntos | escape }} pts</p>
@@ -82,7 +85,7 @@ permalink: /liga-indigo-platino.html
               <div class="teamIN text-white">
                 <img src="{{post.maincover}}" class="drop img-fluid" alt="">
                 <p class="text-uppercase">{{ post.title | escape }}</p>
-              </div>
+              </div> 
             </div>
             {%- endfor -%}
           </div>
@@ -94,8 +97,8 @@ permalink: /liga-indigo-platino.html
           </div>
           <div class="ms-3">
 
-            {% assign norte = site.categories.LI | sort: "puntos" %}
-            {%- for post in norte limit:3 -%}
+            {% assign norte = site.categories.LI | sort: "puntos" | reverse %}
+            {%- for post in norte limit:3 offset:9 -%}
 
             <div class=" teamList d-flex justify-content-between align-items-center">
               <div class="teamIN text-white">
@@ -119,9 +122,6 @@ permalink: /liga-indigo-platino.html
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-
-  
 
 </body>
 
