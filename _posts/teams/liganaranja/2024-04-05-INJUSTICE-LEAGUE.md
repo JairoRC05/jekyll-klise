@@ -14,26 +14,17 @@ puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-puntos: 11
-pj: 6
-pt1: 0
-pt2: 2 #
-pt3: 2 #
-pt4: 0 
-pt5: 0
-pt6: 2 #
-pt7: 3 #
-pt8: 1 #
-pt9: 0
-pt10: 0
-pt11: 1 #
+puntos: 16
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: HGHG
 pp1: IL
-r1: 
+r1: 0
 bg1: rock
-rr1: 
+rr1: 4
+pt1: 4
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: IL
@@ -41,6 +32,8 @@ pp2: GOD G
 bg2: rock
 r2: 2
 rr2: 2
+pt2: 2
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: IL
@@ -48,6 +41,8 @@ pp3: GOLD V
 bg3: rock
 r3: 2
 rr3: 2
+pt3: 2
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: IL
@@ -55,6 +50,8 @@ pp4: HG SS
 bg4: rock
 r4: 
 rr4:
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: IL
@@ -62,6 +59,8 @@ pp5: RN
 bg5: rock
 r5: 
 rr5:
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: IL
@@ -69,6 +68,8 @@ pp6: TSF
 bg6: rock
 r6: 2
 rr6: 2
+pt6: 2
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7:  IL
@@ -76,13 +77,17 @@ pp7: BNT
 bg7: rock
 r7: 3
 rr7: 1
+pt7: 3
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  IL
 pp8: GOD O
 bg8: rock
-rr8: 1
-r8: 3
+r8: 1
+rr8: 3
+pt8: 1
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9:  IL
@@ -90,13 +95,17 @@ pp9: GOLD S
 bg9: rock
 r9: 
 rr9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: IL
 pp10: P1
 bg10: rock
-r10: 
-rr10:
+r10: 1
+rr10: 3
+pt10: 1
+pj10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: IL
@@ -104,6 +113,8 @@ pp11: SSI
 bg11: rock
 r11: 1
 rr11: 3
+pt11: 1
+pj11: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 18
 hora: '22:10'

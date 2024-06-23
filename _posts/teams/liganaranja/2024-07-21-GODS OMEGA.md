@@ -16,18 +16,7 @@ team: GODS OMEGA
 ID: GOD O
 status: <i class="fa-soLINd fa-check"></i>
 puntos: 7
-pj: 4
-pt1: 2
-pt2: 1 #
-pt3: 0
-pt4: 0
-pt5: 0
-pt6: 0
-pt7: 0
-pt8: 3
-pt9: 0
-pt10: 0
-pt11: 1 #
+pj: 6
 #PARTIDO 1
 j1: RONDA 1
 p1: GOD O
@@ -35,6 +24,8 @@ pp1: RN
 r1: 2
 bg1: rock
 rr1: 2
+pt1: 2
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: GOD O
@@ -42,13 +33,19 @@ pp2: TSF
 bg2: rock
 r2: 1
 rr2: 3
+pt2: 1
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: BNT
 pp3: GOD O
 bg3: rock
-r3: 
-rr3:
+r3: 4
+rr3: 0
+pt3: 0
+pj3: 1
+pt3: 0
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: HGHG
@@ -56,6 +53,8 @@ pp4: GOD O
 bg4: rock
 r4: 
 rr4:
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: GOD O
@@ -63,6 +62,8 @@ pp5: GOLD S
 bg5: rock
 r5: 
 rr5:
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: GOD O
@@ -70,20 +71,26 @@ pp6: P1
 bg6: rock
 r6: 
 rr6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 j7: RONDA 7
 p7:  GOD O
 pp7: SSI
 bg7: rock
-r7: 
-rr7: 
+r7: 0
+rr7: 4
+pt7: 0
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  IL
 pp8: GOD O
 bg8: rock
-rr8: 3
 r8: 1
+rr8: 3
+pt8: 3
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: GOD G
@@ -91,6 +98,8 @@ pp9: GOD O
 bg9: rock
 r9: 
 rr9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: GOD O
@@ -98,6 +107,8 @@ pp10: GOLD V
 bg10: rock
 r10: 
 rr10:
+pt10: 0
+pj10: 0
 #PARTIDO 11
 j11: RONDA 11
 p11: GOD O
@@ -105,6 +116,8 @@ pp11: HGSS
 bg11: rock
 r11: 1
 rr11: 3
+pt11: 1
+pj11: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 20
 hora: '21:10'

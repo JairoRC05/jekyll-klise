@@ -6,27 +6,27 @@ permalink: /liga-naranja.html
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="">
+<body class="orange">
 
 
 
   <nav class="navbar ">
     <div class="container d-flex justify-content-between align-items-center">
-      <span class="navbar-brand mb-0 h1  ms-3">XFORCE UNITE</span>
+      <span class="navbar-brand mb-0 h1 ms-3 text-white">XFORCE UNITE</span>
       <div class="d-none d-lg-block">
-        <span class="navbar-brand mb-0 h1 ms-3"><a href="/liga-naranja-rondas" class="text-dark">RONDAS</a></span>
+        <span class="navbar-brand mb-0 h1 ms-3"><a href="/liga-naranja-rondas" class="text-white">RONDAS</a></span>
       </div>
     </div>
 </nav>
 
   <div class="container-fluid banner">
     <div class="container bannerPromo d-flex justify-content-start align-items-center">
-      <img src="/assets/logos/NARANJA.png" class="img-fluid" alt="">
+      <img src="/assets/logos/NARANJA-alt.png" class="img-fluid" alt="">
       <div class="textPromo">
-        <h1 class="ms-3 mb-0 d-none d-lg-block text-orange">LIGA NARANJA</h1>
-        <h1 class="ms-3 mb-0 d-block d-lg-none text-orange">LN</h1>
-        <span class="ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
-        <span class="ms-3 d-block d-lg-none">10.06.24</span>
+        <h1 class="ms-3 mb-0 d-none d-lg-block text-white">LIGA NARANJA</h1>
+        <h1 class="ms-3 mb-0 d-block d-lg-none text-white">LN</h1>
+        <span class="ms-3 d-none d-lg-block text-white">INICIO 10 DE JUNIO</span>
+        <span class="ms-3 d-block d-lg-none text-white">10.06.24</span>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ permalink: /liga-naranja.html
         {% assign norte = site.categories.pljmy24 | sort: "title" %}
         {%- for post in norte limit:12 -%}
         <div class="container teamList d-flex justify-content-end align-items-center">
-          <div class="teamIN">
+          <div class="teamIN text-white">
             <p><b>{{ post.title | escape }}</b></p>
           </div>
         </div>
@@ -50,17 +50,81 @@ permalink: /liga-naranja.html
         {%- for post in norte-%}
         <a href="{{ post.url }}" class="text-dark">
           <div class="container teamList d-flex justify-content-between align-items-center">
-            <div class="teamIN">
+            <div class="teamIN text-white">
               <img src="{{post.maincover}}" class="drop img-fluid" alt="">
               <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+              <span>{{post.pj}}</span>
             </div>
-            <div class="teamIN">
+            <div class="teamIN text-white">
               <p><b>{{ post.puntos | escape }} pts</b></p>
             </div>
 
           </div>
         </a>
         {%- endfor -%}
+      </div>
+
+      
+      <div class="col-12 col-md-6 mt-0">
+        <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
+          <div class="teamIMG ms-3 text-white">
+            <img src="/assets/logos/COPA XFORCE.png" alt="">
+          </div>
+          <div class="ms-3">
+           
+            {% assign norte = site.categories.LA2024JN | sort: "puntos"
+            | reverse %}
+            {%- for post in norte limit:2 -%}
+     
+            <div class=" teamList d-flex justify-content-between align-items-center">
+              <div class="teamIN text-white">
+                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                <p class="text-uppercase">{{ post.title | escape }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
+          <div class="teamIMG ms-3 text-white">
+            <img src="/assets/logos/LIGA-JOHTO.png" alt="">
+          </div>
+          <div class="ms-3">
+       
+            {% assign norte = site.categories.LA2024JN | sort: "puntos" | reverse  %}
+            {%- for post in norte limit:3 -%}
+     
+            <div class=" teamList d-flex justify-content-between align-items-center">
+              <div class="teamIN text-white">
+                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                <p class="text-uppercase">{{ post.title | escape }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="container cardOrange teamList d-flex justify-content-start align-items-center">
+            <div class="teamIMG ms-3 text-white">
+              <img src="/assets/logos/ALOLA.png" alt="">
+            </div>
+            <div class="ms-3">
+         
+              {% assign norte = site.categories.LA2024JN | sort: "puntos"  %}
+              {%- for post in norte limit:3 -%}
+       
+              <div class=" teamList d-flex justify-content-between align-items-center">
+                <div class="teamIN text-white">
+                  <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                  <p class="text-uppercase">{{ post.title | escape }}</p>
+                </div>
+              </div>
+              {%- endfor -%}
+            </div>
+          </div>
+       
+         
       </div>
 
     </div>
