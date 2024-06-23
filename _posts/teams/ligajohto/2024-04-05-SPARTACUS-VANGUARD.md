@@ -12,7 +12,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SKILLZ
 ID: SKZ
-puntos: 8
+puntos: 11
 pj: 5
 #PARTIDO 1
 j1: RONDA 1
@@ -66,7 +66,7 @@ pp6: SKZ
 bg6: rock
 r6: 0
 rr6: 3
-pt6: 0
+pt6: 3
 pj6: 1
 #PARTIDO 7
 j7: RONDA 7
