@@ -15,8 +15,8 @@ cover: /assets/ver.png
 team: GOOD AS GOLD SCARLET
 ID: GOOD S
 status: <i class="fa-soLINNd fa-check"></i>
-puntos: 15
-pj: 5
+puntos: 20
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -88,8 +88,8 @@ j8: RONDA 8
 p8:  GOLD S
 pp8: SSI    
 bg8: rock
-rr8: 0
-r8: 4
+rr8: 4
+r8: 0
 pt8: 0
 pj8: 1
 #PARTIDO 9
