@@ -1,12 +1,12 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo ljmy24 partido5 LJ06
+categories: surjohto042024 norteMayo ljmy24 partido5 LJ06 LJ1 LJ2 LJ5 LJ6 LJ7 LJ10 LJ11
 maincover: /assets/logos/LASTBREATH.png
 puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
-status: <i class="fa-solid fa-check"></i>
+status: <i class="fa-soLJd fa-check"></i>
 rango: ACERO
 tag: johto042024
 color: black
@@ -192,10 +192,10 @@ hora: '21:10'
 ##torneos
 rango: ACERO
 bg: bg-johto 
-torneo1: LIGA JOHTO A24
+torneo1: LJGA JOHTO A24
 tps1: 4to LUGAR
 tb1: card-johto
-timg1: /assets/logos/LIGA-JOHTO.png
+timg1: /assets/logos/LJGA-JOHTO.png
 ---
 
 

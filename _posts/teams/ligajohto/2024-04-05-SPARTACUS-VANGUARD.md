@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo ljmy24 LJ06
+categories: surjohto042024 norteMayo ljmy24 LJ06 LJ LJ2 LJ3 LJ8 LJ9
 maincover: /assets/logos/SKILLZ.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
