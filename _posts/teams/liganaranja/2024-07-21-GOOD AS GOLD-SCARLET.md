@@ -15,8 +15,8 @@ cover: /assets/ver.png
 team: GOOD AS GOLD SCARLET
 ID: GOOD S
 status: <i class="fa-soLINNd fa-check"></i>
-puntos: 10
-pj: 4
+puntos: 15
+pj: 5
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -31,10 +31,10 @@ j2: RONDA 2
 p2: GOLD S
 pp2: RN
 bg2: rock
-r2: 
-rr2: 
-pt2: 0
-pj2: 0
+r2: 3
+rr2: 1
+pt2: 3
+pj2: 1
 
 #PARTIDO 3
 j3: RONDA 3
@@ -60,18 +60,19 @@ j5: RONDA 5
 p5: GOD O
 pp5: GOLD S
 bg5: rock
-r5: 
-rr5:
-pt5: 0
-pj5: 0
+r5: 0
+rr5: 4
+pt5: 4
+pj5: 1
+
 #PARTIDO 6
 j6: RONDA 6
 p6: HGHG
 pp6: GOLD S
 bg6: rock
-r6: 1
-rr6: 3
-pt6: 3
+r6: 0
+rr6: 4
+pt6: 4
 pj6: 1
 #PARTIDO 7
 j7: RONDA 7
@@ -85,21 +86,21 @@ pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  GOLD S
-pp8: SSI 
+pp8: SSI    
 bg8: rock
-rr8: 
-r8: 
+rr8: 0
+r8: 4
 pt8: 0
-pj8: 0
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: IL
 pp9: GOLD S
 bg9: rock
-r9: 
-rr9:  
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 2
+pt9: 2
+pj9: 1
 
 #PARTIDO 10
 j10: RONDA 10

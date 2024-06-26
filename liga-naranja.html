@@ -33,35 +33,46 @@ permalink: /liga-naranja.html
 
   <div class="container">
     <div class="row">
-      <div class="col-2 col-md-1 mt-0 ">
-        {% assign norte = site.categories.pljmy24 | sort: "title" %}
-        {%- for post in norte limit:12 -%}
-        <div class="container teamList d-flex justify-content-end align-items-center">
-          <div class="teamIN text-white">
-            <p><b>{{ post.title | escape }}</b></p>
-          </div>
-        </div>
 
-        {%- endfor -%}
-      </div>
 
-      <div class="col-10 col-md-5 mt-0">
-        {% assign norte = site.categories.LA2024JN | sort: "puntos" | reverse %}
-        {%- for post in norte-%}
-        <a href="{{ post.url }}" class="text-dark">
-          <div class="container teamList d-flex justify-content-between align-items-center">
-            <div class="teamIN text-white">
-              <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-              <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
-              <span>{{post.pj}}</span>
+      <div class="col-12 col-md-6">
+        <div class="container d-flex teamList justify-content-start align-items-center">
+            <div>
+              {% assign norte = site.categories.pljmy24 | sort: "title" %}
+              {%- for post in norte limit:12 -%}
+    
+                <div class="container d-flex teamList justify-content-between align-items-center"> 
+                  <div class="teamIN text-white"><p><b>{{ post.title | escape }}</b></p></div>
+                </div>
+           
+         
+             
+              {%- endfor -%}
+    
             </div>
-            <div class="teamIN text-white">
-              <p><b>{{ post.puntos | escape }} pts</b></p>
+             <div class="w-100">
+              {% assign LIGA = site.categories.LA2024JN  | sort: "puntos"
+              | reverse %}
+              {%- for post in LIGA-%}
+              
+                 <a class="text-white" href="{{ post.url }}">
+                  <div class="container teamList d-flex justify-content-between align-items-center">
+                      <div class="teamIN text-white">
+                        <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                        <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+                        <span>{{post.pj}}</span>
+                      </div>
+                      <div class="teamIN text-white">
+                      
+                        <p>{{ post.puntos | escape }} pts</p>
+                      </div>
+                     
+                    </div>
+                 </a>
+           
+              {%- endfor -%}
+             </div>
             </div>
-
-          </div>
-        </a>
-        {%- endfor -%}
       </div>
 
       

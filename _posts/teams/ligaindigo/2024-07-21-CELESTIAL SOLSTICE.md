@@ -14,8 +14,8 @@ background: '#F16C38'
 cover: /assets/ver.png
 team: CELESTIAL SOLSTICE
 ID: CS
-puntos: 1
-pj: 3
+puntos: 2
+pj: 4
 status: <i class="fa-solid fa-check"></i>
 #PARTIDO 1
 j1: RONDA 1
@@ -40,10 +40,10 @@ j3: RONDA 3
 p3: CS
 pp3: RNT
 bg3: rock
-r3: 
-rr3:
-pt3: 0
-pj3: 0 
+r3: 1
+rr3: 2
+pt3: 1
+pj3: 1 
 #PARTIDO 4
 j4: RONDA 4
 p4: CS

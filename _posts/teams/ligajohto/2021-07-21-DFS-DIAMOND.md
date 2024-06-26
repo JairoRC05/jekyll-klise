@@ -14,8 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS DMD
-puntos: 11
-pj: 6
+puntos: 14
+pj: 7
 #PARTIDO 1
 j1: RONDA 1
 p1: DFS DMD
@@ -30,10 +30,10 @@ j2: RONDA 2
 p2: DFS DMD
 pp2: AEP
 bg2: rock
-r2: 
-rr2: 
-pt2: 0
-pj2: 0 
+r2: 3
+rr2: 0
+pt2: 3
+pj2: 1 
 #PARTIDO 3
 j3: RONDA 3
 p3: DFS DMD
@@ -111,10 +111,10 @@ j11: RONDA 11
 p11: DFS DMD
 pp11: ZN
 bg11: rock
-r11: 
-rr11:
-pt11: 0
-pj11 : 0 
+r11: 2
+rr11: 1
+pt11: 2
+pj11 : 1 
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 25
 hora: '22:10'

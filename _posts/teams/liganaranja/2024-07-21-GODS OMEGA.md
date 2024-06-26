@@ -15,8 +15,8 @@ cover: /assets/ver.png
 team: GODS OMEGA
 ID: GOD O
 status: <i class="fa-soLINd fa-check"></i>
-puntos: 11
-pj: 7
+puntos: 0
+pj: 11
 #PARTIDO 1
 j1: RONDA 1
 p1: GOD O
