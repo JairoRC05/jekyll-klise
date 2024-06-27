@@ -17,7 +17,7 @@ team: GOOD AS GOLD SCARLET
 ID: GOOD S
 status: <i class="fa-soLINNd fa-check"></i>
 puntos: 20
-pj: 8
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -42,10 +42,10 @@ j3: RONDA 3
 p3: TSF
 pp3: GOLD S
 bg3: rock
-r3: 
-rr3:
+r3: 4
+rr3: 0
 pt3: 0
-pj3: 0
+pj3: 1
 
 #PARTIDO 4
 j4: RONDA 4
