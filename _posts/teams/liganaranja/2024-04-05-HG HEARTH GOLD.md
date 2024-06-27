@@ -7,6 +7,7 @@ puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
 title: HG HEARTH GOLD
 team: HG HEARTH GOLD
+route: /liga-naranja
 ID: HG
 tag: johto042024
 color: black

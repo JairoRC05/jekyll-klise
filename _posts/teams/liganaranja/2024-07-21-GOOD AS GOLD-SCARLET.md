@@ -6,6 +6,7 @@ maincover: /assets/logos/GAG.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
 title: GOOD AS GOLD SCARLET
+route: /liga-naranja
 tag: johto042024
 color: black
 puntosLJ202404: 12

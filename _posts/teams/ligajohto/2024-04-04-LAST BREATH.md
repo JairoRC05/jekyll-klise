@@ -6,6 +6,7 @@ maincover: /assets/logos/LASTBREATH.png
 puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
+route: /liga-johto
 status: <i class="fa-soLJd fa-check"></i>
 rango: ACERO
 tag: johto042024

@@ -9,9 +9,13 @@ layout:
 
 
     <nav class="navbar bg-night">
-        <div class="container">
-            <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
-        </div>
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="navbar-brand mb-0 h1 text-white ms-3">XFORCE UNITE</span>
+            <div class="d-none d-lg-block">
+              <span class="navbar-brand mb-0 h1 text-white ms-3"><a href="{{page.route}}"
+                  class="text-white"><i class="fa-solid fa-angles-left"></i></a></span>
+            </div>
+          </div>  
     </nav>
 
 
@@ -39,36 +43,7 @@ layout:
          
             <div class="col-12 col-md-12 col-xl-12">
                 
-    
-                <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-tab-pane" type="button" role="tab" aria-controls="team-tab-pane" aria-selected="true">INICIO</button>
-                      <!-- <button class="nav-link active d-block d-lg-none" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-house"></i></button> -->
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">LOGROS</button>
-                      <!-- <button class="nav-link d-block d-lg-none" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-up-long"></i></button> -->
-                    </li>
-                  
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">INFORMACIÓN</button>
-                      <!-- <button class="nav-link d-block d-lg-none" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><i class="fa-brands fa-twitch"></i></button>
-                  -->  </li> 
-             
-                  </ul>
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="team-tab-pane" role="tabpanel" aria-labelledby="team-tab" tabindex="0">
-                        {% include rondas.html %}
-
-                    </div>
-                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                        {% include logros.html %}
-                    </div>
-                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                    
-                    </div>
-                  
-                  </div>
+                {% include rondas.html %}
     
              
             </div>
