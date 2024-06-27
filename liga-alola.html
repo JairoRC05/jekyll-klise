@@ -21,8 +21,8 @@ permalink: /liga-alola.html
             <div class="textPromo">
                 <h1 class=" ms-3 mb-0 d-none d-lg-block">LIGA ALOLA</h1>
                 <h1 class=" ms-3 mb-0 d-block d-lg-none">LIGA ALOLA</h1>
-                <span class=" ms-3 d-none d-lg-block">INICIO 10 DE JUNIO</span>
-                <span class=" ms-3 d-block d-lg-none">INICIO 10 DE JUNIO</span>
+                <span class=" ms-3 d-none d-lg-block">INICIO 10 DE JULIO</span>
+                <span class=" ms-3 d-block d-lg-none">INICIO 10 DE JULIO</span>
             </div>
         </div>
     </div>
@@ -40,16 +40,22 @@ permalink: /liga-alola.html
             
                 {%- endfor -%}
               </div> -->
-            <div class="col-12 col-md-4 mt-0">
-              <div class="banner">
-                <div class="bannerPromo d-flex justify-content-start align-items-center">
+
+              {% assign LIGA = site.categories.LA | sort: "ID"
+               %}
+              {%- for post in LIGA-%}
+              <div class="col-12 col-sm-6 col-md-3 mt-0">
+                <div class="container team black d-flex justify-content-start  align-items-center text-left">
+                  <div class="cardTeam">
                     <img src="/assets/logos/ALOLA.png" class="img-fluid" alt="">
-                    <div class="textPromo">
-                        <h1 class=" ms-3 mb-0 d-none d-lg-block"></h1>
-                    </div>
+                  </div>
+                  <div class="matchTeams">
+                    <h1 class="text-white"><b>{{post.ID}}</b></h1>
+                  </div>
                 </div>
-            </div>
               </div>
+
+              {%- endfor -%}
              
         </div>
     </div>
