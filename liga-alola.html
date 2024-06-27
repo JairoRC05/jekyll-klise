@@ -17,7 +17,9 @@ permalink: /liga-alola.html
 
     <div class="container-fluid banner">
         <div class="container bannerPromo d-flex justify-content-start align-items-center">
-            <img src="/assets/logos/ALOLA.png" class="img-fluid" alt="">
+          <a href="/assets/logos/ALOLA.png" role="button" download="{{ page.title | escape }}.png">
+            <img src="/assets/logos/ALOLA.png" class="drop img-fluid" alt="" ">
+        </a>
             <div class="textPromo">
                 <h1 class=" ms-3 mb-0 d-none d-lg-block">LIGA ALOLA</h1>
                 <h1 class=" ms-3 mb-0 d-block d-lg-none">LIGA ALOLA</h1>
@@ -27,7 +29,7 @@ permalink: /liga-alola.html
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-1">
         <div class="row">
             <!-- <div class="col-2 col-md-1 mt-0 ">
                 {% assign norte = site.categories.pljmy24 | sort: "title" %}
@@ -44,7 +46,7 @@ permalink: /liga-alola.html
               {% assign LIGA = site.categories.LA | sort: "ID"
                %}
               {%- for post in LIGA-%}
-              <div class="col-12 col-sm-6 col-md-3 mt-0">
+              <div class="col-12 col-sm-6 col-md-3 mt-1">
                 <div class="container team black d-flex justify-content-start  align-items-center text-left">
                   <div class="cardTeam">
                     <img src="/assets/logos/ALOLA.png" class="img-fluid" alt="">
