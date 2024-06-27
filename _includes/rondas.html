@@ -1,4 +1,13 @@
 <div class="container mb-2 d-flex justify-content-between align-items-center league p-0">
+
+
+{% if page.route == "/liga-indigo-platino" %}
+<h1 class="text-white m-0 p-0">LIGA INDIGO</h1>
+{% elsif page.route == "/liga-johto" %}
+<h1 class="text-white m-0 p-0">LIGA JOHTO</h1>
+{% else %}
+<h1 class="text-white m-0 p-0">LIGA NARANJA</h1>
+{% endif %}
     <h1 class="text-white m-0 p-0">{{page.liga}} </h1>
     <h1 class="text-white ms-3"><span class="d-none d-md-inline">PJ</span> <b id="partidosJugados"></b> | <b id="total"></b> <span
             class="d-none d-md-inline">pts</span></h1>
