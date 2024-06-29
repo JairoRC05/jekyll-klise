@@ -9,7 +9,7 @@
      <div class="playerIN">
       <img src="{{post.maincover}}" class="drop img-fluid" alt="">
       <div class="badgeIN">
-        <p class="text-uppercase">{{ post.title | escape }}</p>
+        <p class="text-uppercase">{{ post.title | escape  | truncate: 15}}</p>
         {% if post.founder == "/assets/mis/founder.png" %}
         <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
         {% else %}
@@ -53,7 +53,7 @@
         <div class="playerIN">
          <img src="{{post.maincover}}" class="drop img-fluid" alt="">
          <div class="badgeIN">
-           <p class="text-uppercase">{{ post.title | escape }}</p>
+           <p class="text-uppercase">{{ post.title | escape  | truncate: 15 }}</p>
            {% if post.founder == "/assets/mis/founder.png" %}
            <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
            {% else %}
@@ -99,7 +99,7 @@
           <div class="playerIN">
            <img src="{{post.maincover}}" class="drop img-fluid" alt="">
            <div class="badgeIN">
-             <p class="text-uppercase">{{ post.title | escape }}</p>
+             <p class="text-uppercase">{{ post.title | escape  | truncate: 15 }}</p>
              {% if post.founder == "/assets/mis/founder.png" %}
              <span><img src="{{post.founder}}" class="drop img-fluid" alt=""></span>
              {% else %}

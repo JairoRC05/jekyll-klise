@@ -1,31 +1,14 @@
 ---
 layout: 
 permalink: /team/:title.html
-categories: bits
+categories: gift
 maincover: /assets/avatars/male1.webp
-tickets: 6
+tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: CHAQZOULS
-tag: johto042024
-color: black
-puntosLJ202404: 12
-grupo: sur
-background: '#F16C38'
-cover: /assets/backCard.png
-team: DRAGONFLIES GAMING DIAMOND
-ID: DFS
-p2: DFS DMD
-pp2: MBO
-p3: DFS DMD
-pp3: LAST BREATH
-p7:  DFS DMD
-pp7: SOJ
-p8:  DFS DMD
-pp8: T. SATISFACTION
-p9:  DFS DMD
-r9: 0
-bg9: bg-danger
-rr9: 3
-pp9: S. VANGUARD
-rango: FOLLOWER
+vip: #/assets/mis/vip.png
+sub: /assets/mis/sub.png
+gift: /assets/mis/gift.png
+bits: #/assets/mis/bits.png
+gifter: LARARLY
 ---

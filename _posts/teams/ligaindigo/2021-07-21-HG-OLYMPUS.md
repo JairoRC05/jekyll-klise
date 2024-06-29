@@ -15,8 +15,8 @@ cover: /assets/backCard.png
 team: HG OLYMPUS
 route: /liga-indigo-platino
 ID: HG
-puntos: 4
-pj: 4
+puntos: 0
+pj: 11
 #PARTIDO 1
 j1: RONDA 1
 p1: HG OL

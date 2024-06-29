@@ -17,8 +17,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
-puntos: 18
-pj: 7
+puntos: 19
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: LB
@@ -97,10 +97,10 @@ j9: RONDA 9
 p9:  HG REGIOS
 pp9: LB
 bg9: rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 1
+pt9: 1
+pj9: 1
 #PARTIDO 10
 j10: RONDA 10
 p10: LB

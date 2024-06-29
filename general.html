@@ -1,0 +1,175 @@
+---
+layout: 
+permalink: /general.html
+---
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-lj">
+
+
+<nav class="navbar blue-king">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+    <div class="d-none d-lg-block">
+      <span class="navbar-brand mb-0 h1 text-white ms-3"><a href="/liga-johto-rondas"
+          class="text-white">RONDAS</a></span>
+    </div>
+  </div>  
+</nav>
+
+
+    <div class="container-fluid banner grDark">
+        <div class="container bannerPromo d-flex justify-content-start align-items-center">
+            <a href="/assets/logos/BDLF.png" role="button" download="{{ page.title | escape }}.png">
+              <img src="/assets/logos/BDLF.png" class="drop img-fluid" alt="" ">
+          </a>
+            <div class="textPromo">
+                <h1 class="text-white ms-3 mb-0 d-none d-lg-block">GENERAL</h1>
+                <h1 class="text-white ms-3 mb-0 d-block d-lg-none">LIGA JOHTO</h1>
+                <span class="text-white ms-3 d-none d-lg-block"></span>
+                <span class="text-white ms-3 d-block d-lg-none"></span>
+            </div>    
+        </div>
+    </div>
+
+
+
+<div class="container mt-1">
+   
+    <div class="row text-white ">
+        
+
+      <div class="col-12 col-md-4 mt-0">
+        <div class="container d-flex teamList justify-content-start align-items-center">
+          <div>
+            {% assign norte = site.categories.pljmy24 | sort: "title" %}
+            {%- for post in norte limit:12 -%}
+  
+              <div class="container d-flex teamList justify-content-between align-items-center"> 
+                <div class="teamIN"><p><b>{{ post.title | escape }}</b></p></div>
+              </div>
+         
+       
+           
+            {%- endfor -%}
+  
+          </div>
+           <div class="w-100">
+            {% assign LIGA = site.categories.LI | sort: "puntos"
+            | reverse %}
+            {%- for post in LIGA-%}
+            
+               <a class="text-white" href="{{ post.url }}">
+                <div class="container teamList d-flex justify-content-between align-items-center">
+                    <div class="teamIN text-white">
+                      <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                      <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+                      <span>{{post.pj}}</span>
+                    </div>
+                    <div class="teamIN text-white">
+                    
+                      <p>{{ post.puntos | escape }} pts</p>
+                    </div>
+                   
+                  </div>
+               </a>
+         
+            {%- endfor -%}
+           </div>
+          </div>
+      </div>
+
+        <div class="col-12 col-md-4">
+          <div class="container d-flex teamList justify-content-start align-items-center">
+              <div>
+                {% assign norte = site.categories.pljmy24 | sort: "title" %}
+                {%- for post in norte limit:12 -%}
+      
+                  <div class="container d-flex teamList justify-content-between align-items-center"> 
+                    <div class="teamIN"><p><b>{{ post.title | escape }}</b></p></div>
+                  </div>
+             
+           
+               
+                {%- endfor -%}
+      
+              </div>
+               <div class="w-100
+               ">
+                {% assign LIGA = site.categories.LJ06 | sort: "puntos"
+                | reverse %}
+                {%- for post in LIGA-%}
+                
+                   <a class="text-white" href="{{ post.url }}">
+                    <div class="container teamList d-flex justify-content-between align-items-center">
+                        <div class="teamIN text-white">
+                          <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                          <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+                          <span>{{post.pj}}</span>
+                        </div>
+                        <div class="teamIN text-white">
+                        
+                          <p>{{ post.puntos | escape }} pts</p>
+                        </div>
+                       
+                      </div>
+                   </a>
+             
+                {%- endfor -%}
+               </div>
+              </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="container d-flex teamList justify-content-start align-items-center">
+              <div>
+                {% assign norte = site.categories.pljmy24 | sort: "title" %}
+                {%- for post in norte limit:12 -%}
+      
+                  <div class="container d-flex teamList justify-content-between align-items-center"> 
+                    <div class="teamIN text-white"><p><b>{{ post.title | escape }}</b></p></div>
+                  </div>
+             
+           
+               
+                {%- endfor -%}
+      
+              </div>
+               <div class="w-100">
+                {% assign LIGA = site.categories.LA2024JN  | sort: "puntos"
+                | reverse %}
+                {%- for post in LIGA-%}
+                
+                   <a class="text-white" href="{{ post.url }}">
+                    <div class="container teamList d-flex justify-content-between align-items-center">
+                        <div class="teamIN text-white">
+                          <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                          <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+                          <span>{{post.pj}}</span>
+                        </div>
+                        <div class="teamIN text-white">
+                        
+                          <p>{{ post.puntos | escape }} pts</p>
+                        </div>
+                       
+                      </div>
+                   </a>
+             
+                {%- endfor -%}
+               </div>
+              </div>
+        </div>
+  
+      
+          
+    
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
