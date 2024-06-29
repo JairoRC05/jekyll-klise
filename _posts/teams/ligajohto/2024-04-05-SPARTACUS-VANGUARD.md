@@ -12,8 +12,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SKILLZ
 ID: SKZ
-puntos: 24
-pj: 10
+puntos: 26
+pj: 11
 #PARTIDO 1
 route: /liga-indigo-platino
 j1: RONDA 1
@@ -83,10 +83,10 @@ j8: RONDA 8
 p8:  SKZ
 pp8: STAR
 bg8: rock
-rr8: 
-r8:
-pt8: 0
-pj8: 0   
+rr8: 2
+r8: 1
+pt8: 2
+pj8: 1   
 #PARTIDO 9
 j9: RONDA 9
 p9:  SKZ

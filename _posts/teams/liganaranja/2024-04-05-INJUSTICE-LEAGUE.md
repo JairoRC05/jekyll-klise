@@ -85,8 +85,8 @@ j8: RONDA 8
 p8:  IL
 pp8: GOD O
 bg8: rock
-r8: 0
-rr8: 4
+r8: 4
+rr8: 0
 pt8: 4
 pj8: 1
 #PARTIDO 9
