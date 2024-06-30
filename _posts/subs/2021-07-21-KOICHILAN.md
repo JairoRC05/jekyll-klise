@@ -3,11 +3,11 @@ layout:
 permalink: /team/:title.html
 categories: subs
 maincover: /assets/avatars/male1.webp
-tickets: 1
+tickets: 5
 date: 2020-08-29 10:29:20 +0700
-title: KARNAK27
+title: KOICHILAN
 vip: #/assets/mis/vip.png
-sub: #/assets/mis/sub.png
+sub: /assets/mis/sub.png
 gift: #/assets/mis/gift.png
-bits: /assets/mis/bits.png
+bits: #/assets/mis/bits.png
 ---

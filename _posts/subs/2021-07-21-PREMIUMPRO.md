@@ -3,7 +3,7 @@ layout:
 permalink: /team/:title.html
 categories: subs
 maincover: /assets/avatars/male1.webp
-tickets: 3
+tickets: 4
 date: 2020-08-29 10:29:20 +0700
 title: ANGELAKIUX
 vip: /assets/mis/vip.png
