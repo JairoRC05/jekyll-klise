@@ -31,3 +31,40 @@ BERGERS (10 SUBS +1UB) TS_IBU, ICKER_330, ESTEBAN_GARCIA1234, VEL_GABS_ANGEMON, 
 EROX SUB
 BERE SUB + 3TP + (GIFT | THEMIMIC +1TP, VITAALY,BALDOMOZTAZAMX ) + 1TP
 BARBIUX (JACKOSMO30 MOSHIS11    )
+
+
+
+  <form action="https://formspree.io/f/xzzpbbbo" method="POST" enctype="multipart/form-data"  id="form">
+          <div class="mb-3 ">
+            <label class="form-label w-100">NICKNAME
+              <input class="form-control " type="text" name="name" placeholder="xforce05" required>
+            </label>
+           </div>
+       
+          <div class="mb-3 ">
+          <label class="form-label w-100">CORREO ELECTRÓNICO
+            <input class="form-control " type="email" name="email" placeholder="xforce@gmail.com" required>
+          </label>
+         </div>
+         <div class="mb-3 ">
+          <label class="form-label w-100">WHATSAPP
+            <input class="form-control " type="telephone" name="whatsapp" placeholder="+52 (000) 000 0000" required>
+          </label>
+         </div>
+         <div class="mb-3 ">
+          <label class="form-label w-100">NOMBRE DEL TEAM
+            <input class="form-control " type="text" name="team" placeholder="XF TEAM" required>
+          </label>
+         </div>
+         <div class="mb-3 ">
+          <label class="form-label w-100">TAG
+            <input class="form-control " type="text"  name="tag" placeholder="XF" required>
+          </label>
+         </div>
+          <div class="mb-3">
+            <label class="form-label w-100"> COMPROBANTE DE PAGO
+              <input type="file" name="upload" class="form-control" required>
+            </label>
+          </div>
+          <button  type="button" class="btn btn-primary " type="submit">ENVIAR</button>
+        </form>

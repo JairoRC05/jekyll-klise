@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/ver.png
 team: CELESTIAL SOLSTICE
 ID: CS
-puntos: 7
-pj: 6
+puntos: 15
+pj: 10
 status: <i class="fa-solid fa-check"></i>
 #PARTIDO 1
 j1: RONDA 1
@@ -59,28 +59,28 @@ j5: RONDA 5
 p5: CS
 pp5: TAE
 bg5: rock
-r5: 
-rr5:
+r5: 0
+rr5: 3
 pt5: 0
-pj5: 0
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: CS
 pp6: GOD
 bg6: rock
-r6: 
-rr6: 
-pt6: 0
-pj6: 0 
+r6: 2
+rr6: 1 
+pt6: 2
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7:  SOJ
 pp7: CS
 bg7: rock
-r7: 
-rr7:  
-pt7: 0
-pj7: 0
+r7: 0
+rr7: 3 
+pt7: 3
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  CS
@@ -113,10 +113,10 @@ j11: RONDA 11
 p11: CS
 pp11: NL
 bg11: rock
-r11: 
-rr11:
-pt11: 0
-pj11 : 0 
+r11: 3
+rr11: 0
+pt11: 3
+pj11 : 1 
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 28
 hora: '21:10'
