@@ -16,8 +16,8 @@ cover: /assets/ver.png
 team: GOOD AS GOLD VIOLET
 ID: GOOD V
 status: <i class="fa-soLINd fa-check"></i>
-puntos: 21
-pj: 10
+puntos: 24
+pj: 11
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
@@ -80,10 +80,10 @@ j7: RONDA 7
 p7:  GOLD V
 pp7: RN
 bg7: rock
-r7: 
-rr7: 
-pt7: 0
-pj7: 0
+r7: 3
+rr7: 1
+pt7: 3
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  GOLD V

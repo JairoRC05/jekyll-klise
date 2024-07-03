@@ -17,8 +17,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LAST BREATH
 ID: LB
-puntos: 22
-pj: 9
+puntos: 27
+pj: 11
 #PARTIDO 1
 j1: RONDA 1
 p1: LB
@@ -33,10 +33,10 @@ j2: RONDA 2
 p2: LB
 pp2: ZN
 bg2: rock
-r2: 
-rr2: 
-pt2: 0
-pj2: 0
+r2: 3
+rr2: 0
+pt2: 3
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: AEP
@@ -106,10 +106,10 @@ j10: RONDA 10
 p10: LB
 pp10: DFS SAP
 bg10: rock
-r10: 
-rr10:
-pt10: 0
-pj10: 0
+r10: 1
+rr10: 2
+pt10: 2
+pj10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: LB

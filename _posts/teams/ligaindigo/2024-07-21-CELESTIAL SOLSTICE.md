@@ -16,7 +16,7 @@ cover: /assets/ver.png
 team: CELESTIAL SOLSTICE
 ID: CS
 puntos: 15
-pj: 10
+pj: 11
 status: <i class="fa-solid fa-check"></i>
 #PARTIDO 1
 j1: RONDA 1
@@ -32,10 +32,10 @@ j2: RONDA 2
 p2: JNS
 pp2: CS
 bg2: rock
-r2: 
-rr2: 
+r2: 3
+rr2: 0
 pt2: 0
-pj2: 0 
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: CS
