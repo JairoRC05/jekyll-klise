@@ -16,8 +16,8 @@ cover: /assets/ver.png
 team: PROJECT ONE
 ID: P1
 status: <i class="fa-solid fa-check"></i>
-puntos: 37
-pj: 10
+puntos: 39
+pj: 11
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
@@ -95,10 +95,10 @@ j9: RONDA 9
 p9:  P1
 pp9: SSI
 bg9: rock
-r9: 
-rr9:
-pt9: 0
-pj9: 0 
+r9: 2
+rr9: 2
+pt9: 2
+pj9: 1 
 #PARTIDO 10
 j10: RONDA 10
 p10: IL

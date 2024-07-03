@@ -17,7 +17,7 @@ team: GOOD AS GOLD VIOLET
 ID: GOOD V
 status: <i class="fa-soLINd fa-check"></i>
 puntos: 21
-pj: 9
+pj: 10
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD V
@@ -33,10 +33,10 @@ j2: RONDA 2
 p2: GOLD V
 pp2: SSI
 bg2: rock
-r2: 
-rr2: 
+r2: 0
+rr2: 4
 pt2: 0
-pj2: 0
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: IL

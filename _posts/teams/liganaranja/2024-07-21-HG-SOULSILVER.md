@@ -18,7 +18,7 @@ ID: HGSS
 status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
 puntos: 25
-pj: 9
+pj: 10
 #PARTIDO 1
 j1: RONDA 1
 p1: GOLD S
@@ -46,7 +46,7 @@ bg3: rock
 r3: 0
 rr3: 4
 pt3: 0
-pj3: 0
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: IL

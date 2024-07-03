@@ -83,8 +83,8 @@ j8: RONDA 8
 p8:  SKZ
 pp8: STAR
 bg8: rock
-rr8: 2
-r8: 1
+rr8: 1
+r8: 2
 pt8: 2
 pj8: 1   
 #PARTIDO 9
