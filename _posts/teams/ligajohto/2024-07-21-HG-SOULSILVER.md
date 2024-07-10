@@ -1,44 +1,46 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LI LI2 LI3  LI7  
+categories: LJ3 LJ8 LJ06
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
-title: TEAM AETHER
-route: /liga-indigo-platino
+title: HG SOULSILVER
+route: /liga-naranja
 tag: johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
-cover: /assets/backCard.png
-team: TEAM AETHER
-ID: TAE
+cover: /assets/ver.png
+team: HG-SOULSILVER
+ID: HGSS
+status: <i class="fa-soLINd fa-check"></i>
+#PARTIDO 1
 puntos: 
 pj: 
 #PARTIDO 1
 j1: RONDA 1
-p1: TEAM STAR
-pp1: TAE
+p1: GG GHOST
+pp1: STAR
 r1: 
-rr1: 
 bg1: rock
+rr1: 
 pt1: 
 pj1: 
 #PARTIDO 2
 j2: RONDA 2
-p2: TAE
-pp2: STAR-TEC
+p2: SSI
+pp2: HG SOULSILVER
 bg2: rock
 r2: 
 rr2: 
 pt2: 
-pj2:  
+pj2: 
 #PARTIDO 3
 j3: RONDA 3
-p3: TAE
-pp3: SPC ES
+p3: HG SOULSILVER
+pp3: T-BONERS
 bg3: rock
 r3: 
 rr3: 
@@ -46,8 +48,8 @@ pt3:
 pj3: 
 #PARTIDO 4
 j4: RONDA 4
-p4: POA
-pp4: TAE
+p4: DFS SAPPHIRE
+pp4: HG SOULSILVER
 bg4: rock
 r4: 
 rr4: 
@@ -55,50 +57,50 @@ pt4:
 pj4: 
 #PARTIDO 5
 j5: RONDA 5
-p5: LAST BREATH
-pp5: TAE
+p5: DFS DIAMOND
+pp5: HG SOULSILVER
 bg5: rock
 r5: 
 rr5: 
-pt5:
+pt5: 
 pj5:  
 #PARTIDO 6
 j6: RONDA 6
-p6: HG REGIOS
-pp6: TAE
+p6: PROJECT ONE
+pp6: HG SOULSILVER
 bg6: rock
 r6: 
 rr6: 
-pt6: 
-pj6:  
+pt6:
+pj6: 
 #PARTIDO 7
 j7: RONDA 7
-p7: TAE
-pp7: FLIES
+p7: ZERONOTE
+pp7: HG SOULSILVER
 bg7: rock
 r7: 
 rr7: 
 pt7: 
-pj7:  
+pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p8: DFS RUBY
-pp8: TAE
+p8: HG SOULSILVER
+pp8: GG STEEL
 bg8: rock
-r8: 
 rr8: 
+r8: 
 pt8: 
-pj8:   
+pj8: 
 #PARTIDO 9
 j9: RONDA 9
-p9: DFS PLATINUM
-pp9: TAE
+p9: IL ULTIMATE
+pp9: HG SOULSILVER
 bg9: rock
 r9: 
-rr9: 
+rr9:
 pt9: 
 pj9: 
-stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 27
-hora: '21:10'
+
+dia: 24
+hora: '22:10'
 ---

@@ -28,8 +28,8 @@ permalink: /liga-indigo-platino.html
       <div class="textIndigo">
         <h1 class="text-white ms-3 mb-0 d-none d-lg-block liga-indigo">LIGA INDIGO</h1>
         <h1 class="text-white ms-3 mb-0 d-block d-lg-none liga-indigo">LIGA INDIGO</h1>
-        <span class="text-white ms-3 d-none d-lg-block">10 DE JUNIO</span>
-        <span class="text-white ms-3 d-block d-lg-none">10.06.24</span>
+        <span class="text-white ms-3 d-none d-lg-block"></span>
+        <span class="text-white ms-3 d-block d-lg-none"></span>
       </div>
     </div>
 
@@ -44,7 +44,7 @@ permalink: /liga-indigo-platino.html
         <div class="container d-flex teamList justify-content-start align-items-center">
           <div>
             {% assign norte = site.categories.pljmy24 | sort: "title" %}
-            {%- for post in norte limit:12 -%}
+            {%- for post in norte limit:10 -%}
   
               <div class="container d-flex teamList justify-content-between align-items-center"> 
                 <div class="teamIN"><p><b>{{ post.title | escape }}</b></p></div>
@@ -110,7 +110,7 @@ permalink: /liga-indigo-platino.html
           <div class="ms-3">
 
             {% assign norte = site.categories.LI | sort: "puntos" | reverse %}
-            {%- for post in norte limit:3 offset:9 -%}
+            {%- for post in norte limit:3 offset:7 -%}
 
             <div class=" teamList d-flex justify-content-between align-items-center">
               <div class="teamIN text-white">

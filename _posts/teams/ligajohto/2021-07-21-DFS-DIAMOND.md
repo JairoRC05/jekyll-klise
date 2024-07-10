@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: surjohto042024 norteMayo ljmy24 partido2 partido3  partido8 partido9 partido7 LJ06 LJ1 LJ2 LJ3 LJ4 LJ5 LJ6 LJ7 LJ8 LJ9 LJ10 LJ11
+categories: LJ06 LJ1   LJ4 LJ5 LJ6 LJ7 LJ8 LJ9 
 maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
@@ -15,110 +15,91 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 ID: DFS DMD
-puntos: 16
-pj: 11
+puntos: 
+pj: 
 #PARTIDO 1
 j1: RONDA 1
-p1: DFS DMD
-pp1: DFS RUBY
+p1:  DFS DIAMOND
+pp1: T-BONERS
 bg1: rock
-r1: 2
-rr1: 1
-pt1: 2
-pj1: 1
+r1: 
+rr1: 
+pt1: 
+pj1: 
 #PARTIDO 2
 j2: RONDA 2
-p2: DFS DMD
-pp2: AEP
+p2: DFS SAPHIRE
+pp2: DFS DIAMOND
 bg2: rock
-r2: 3
-rr2: 0
-pt2: 3
-pj2: 1 
+r2: 
+rr2: 
+pt2: 
+pj2: 
 #PARTIDO 3
 j3: RONDA 3
-p3: DFS DMD
-pp3: HG REGIOS
-bg3: rock
-r3: 1
-rr3: 2
-pt3: 1
-pj3: 1
+p3: ZERONOTE
+pp3: DFS DIAMOND
+bg3:
+r3: 
+rr3: 
+pt3: 
+pj3: 
 #PARTIDO 4
 j4: RONDA 4
-p4: DFS DMD
-pp4: LB
-bg4: rock
-r4: 0
-rr4: 3
-pt4: 0
-pj4: 1
+p4:  DFS DIAMOND
+pp4: PROJECT ONE
+bg4: 
+r4: 
+rr4: 
+pt4: 
+pj4: 
 #PARTIDO 5
 j5: RONDA 5
-p5: DFS DMD
-r5: 2
-pp5: DFS SAP
-rr5: 1
-bg5: rock
-pt5: 1
-pj5: 1 
+p5: DFS DIAMOND
+pp5: HG SOULSILVER
+bg5: 
+r5: 
+rr5: 
+pt5: 
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
-p6: DFS DMD
-pp6: KOD
-bg6: rock
-r6: 3
-rr6: 0 
-pt6: 3
-pj6: 1 
+p6:  DFS DIAMOND
+pp6: GG STEEL
+bg6: 
+r6: 
+rr6: 
+pt6: 
+pj6: 
 #PARTIDO 7
 j7: RONDA 7
-p7: DFS DMD
-pp7: SKZ
-bg7: rock
-r7: 0
-rr7: 3
-pt7: 0
-pj7: 1 
+p7: IL ULTIMATE
+pp7: DFS DIAMOND
+bg7: 
+r7: 
+rr7: 
+pt7: 
+pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p8:  DFS DMD
-pp8: SPC
-bg8: rock
-r8: 1
-rr8: 2
-pt8: 1
-pj8: 1 
+p8:  DFS DIAMOND
+pp8: GG GHOST
+bg8: 
+rr8: 
+r8: 
+pt8: 
+pj8: 
 #PARTIDO 9
 j9: RONDA 9
-p9: DFS DMD
-pp9: STAR
-bg9: rock
-r9: 1
-rr9: 2
-pt9: 1
-pj9: 1
-#PARTIDO 10
-j10: RONDA 10
-p10: DFS DMD
-pp10: TB
-bg10: rock
-r10: 2
-rr10: 1
-pt10: 2
-pj10: 1
-#PARTIDO 11
-j11: RONDA 11
-p11: DFS DMD
-pp11: ZN
-bg11: rock
-r11: 2
-rr11: 1
-pt11: 2
-pj11 : 1 
-stream: <i class="fa-brands fa-twitch text-white"></i>
+p9:  DFS DIAMOND
+pp9: SSI
+bg9:
+r9: 
+rr9: 
+pt9: 
+pj9: 
 dia: 25
-hora: '22:10'
+hora: '21:10'
 # pj: 11
 # pt1: 1
 # pt2: 3

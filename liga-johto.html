@@ -45,7 +45,7 @@ permalink: /liga-johto.html
           <div class="container d-flex teamList justify-content-start align-items-center">
               <div>
                 {% assign norte = site.categories.pljmy24 | sort: "title" %}
-                {%- for post in norte limit:12 -%}
+                {%- for post in norte limit:10 -%}
       
                   <div class="container d-flex teamList justify-content-between align-items-center"> 
                     <div class="teamIN"><p><b>{{ post.title | escape }}</b></p></div>
