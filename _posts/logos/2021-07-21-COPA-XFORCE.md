@@ -39,7 +39,7 @@ rll10:
 cxf10: P1 #CXF4-45
 #LLAVE6
 cxff6: 10 DE JULIO
-cxf11: LB #CXF3-36
+cxf11: SSI #CXF3-36
 rll11:
 rll12: 
 cxf12: TBD #CXF2-27
