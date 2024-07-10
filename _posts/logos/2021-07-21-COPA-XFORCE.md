@@ -27,8 +27,8 @@ cxf6: SSI
 #LLAVE4
 cxff4: 9 DE JULIO
 cxf2: NS
-rll2:
-rll7: 
+rll2: 2
+rll7: 1
 cxf7: SPC
 # SEMIFINALES
 #LLAVE5
@@ -42,7 +42,7 @@ cxff6: 10 DE JULIO
 cxf11: SSI #CXF3-36
 rll11:
 rll12: 
-cxf12: TBD #CXF2-27
+cxf12: NS #CXF2-27
 # GRAN FINAL
 #LLAVE7
 cxff7: 10 DE JULIO
