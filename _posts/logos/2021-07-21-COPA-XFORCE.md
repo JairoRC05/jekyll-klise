@@ -9,8 +9,8 @@ cxf: COPA XFORCE
 #LLAVE1
 cxff1: 9 DE JULIO
 cxf1: JNS
-rll1:
-rll8: 
+rll1: 2
+rll8: 0
 cxf8: TSF
 #LLAVE2
 cxff2: 8 DE JULIO
@@ -33,7 +33,7 @@ cxf7: SPC
 # SEMIFINALES
 #LLAVE5
 cxff5: 10 DE JULIO
-cxf9: TBD #CXF1-18
+cxf9: JNS #CXF1-18
 rll9:
 rll10: 
 cxf10: P1 #CXF4-45
