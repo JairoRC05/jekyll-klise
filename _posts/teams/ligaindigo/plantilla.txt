@@ -105,13 +105,13 @@ pj11: 0
 
 #PARTIDO 1
 j1: RONDA 1
-p1: DFS 
-pp1: DFS 
+p1: 
+pp1: 
 bg1: rock
-r1: 0
-rr1: 0
-pt1: 0
-pj1: 0
+r1: 
+rr1: 
+pt1: 
+pj1: 
 #PARTIDO 2
 j2: RONDA 2
 p2: 

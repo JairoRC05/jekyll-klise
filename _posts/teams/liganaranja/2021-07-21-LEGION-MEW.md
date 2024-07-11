@@ -1,11 +1,11 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA 
+categories: LA2024JN
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
-title: RISING STARS
+title: LEGION MEW
 route: /liga-johto
 tag: johto042024
 color: black
@@ -13,14 +13,14 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: RISING STARS
-ID: RS
-puntos: 14
-pj: 7
+team: LEGION MEW
+ID: LGNM
+puntos: 
+pj: 
 #PARTIDO 1
 j1: RONDA 1
-p1: RISING STARS
-pp1: STAR-TEC
+p1: LEGIO MEW 
+pp1: POA GIRLS
 bg1: rock
 r1: 
 rr1: 
@@ -28,8 +28,8 @@ pt1:
 pj1: 
 #PARTIDO 2
 j2: RONDA 2
-p2: POA GIRLS
-pp2: RISING STARS
+p2: MEW 
+pp2: TEAM AQUA
 bg2: rock
 r2: 
 rr2: 
@@ -46,8 +46,8 @@ pt3:
 pj3: 
 #PARTIDO 4
 j4: RONDA 4
-p4: RISING STARS
-pp4: LOT
+p4: LEGION MEW
+pp4: IL REBORN
 bg4: 
 r4: 
 rr4: 
@@ -55,17 +55,17 @@ pt4:
 pj4: 
 #PARTIDO 5
 j5: RONDA 5
-p5: RISING STARS
-pp5: 7DS
+p5: LEGION MEW
+pp5: LOT
 bg5: 
 r5: 
 rr5: 
 pt5: 
-pj5: 1
+pj5: 
 #PARTIDO 6
 j6: RONDA 6
-p6: RISING STARS
-pp6: TSA
+p6: LEGION MEW
+pp6: LEGION P&S
 bg6: 
 r6: 
 rr6: 
@@ -73,8 +73,8 @@ pt6:
 pj6: 
 #PARTIDO 7
 j7: RONDA 7
-p7:  RISING STARS
-pp7: DESCANSO
+p7:  LEGION MEW
+pp7: 7DS
 bg7: 
 r7: 
 rr7: 
@@ -82,8 +82,8 @@ pt7:
 pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p8: TEAM AQUA
-pp8: RISING STARS
+p7:  LEGION MEW
+pp8: EK BLACK
 bg8: 
 rr8: 
 r8: 
@@ -91,8 +91,8 @@ pt8:
 pj8: 
 #PARTIDO 9
 j9: RONDA 9
-p9: RISING STARS
-pp9: IL REBORN
+p9: LEGION MEW
+pp9: TSA
 bg9:
 r9: 
 rr9: 
@@ -100,24 +100,22 @@ pt9:
 pj9: 
 #PARTIDO 10
 j10: RONDA 10
-p10: RISING STARS
-pp10: LEGION P&S
+p10: LEGION MEW
+pp10: STAR-TEC B
 bg10: 
 r10: 
 rr10: 
 pt10: 
 pj10: 
 #PARTIDO 11
-j11: RONDA 11
-p11: RISING STARS
-pp11: EK BLACK
-bg11: 
-r11: 
-rr11: 
-pt11: 
-pj11: 
-stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 25
+j10: RONDA 11
+p10: LEGION MEW
+pp10: DESCANSO
+bg10: 
+r10: 
+rr10: 
+pt10: 
+pj10: 
 hora: '21:10'
 # pj: 11
 # pt1: 1
