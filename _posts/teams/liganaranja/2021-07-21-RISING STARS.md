@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: RISING STARS
 ID: RS
-puntos: 14
-pj: 7
+puntos: 
+pj: 
 #PARTIDO 1
 j1: RONDA 1
 p1: RISING STARS
