@@ -6,7 +6,7 @@ maincover: /assets/logos/BDLF.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
 title: PROJECT ONE
-route: /liga-naranja
+route: /liga-johto
 tag: johto042024
 color: black
 puntosLJ202404: 12

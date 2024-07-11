@@ -16,6 +16,7 @@ team: TEAM SATISFACTION
 ID: TSA
 puntos: 
 pj: 
+route: /liga-naranja
 #PARTIDO 1
 j1: RONDA 1
 p1: IL REBORN

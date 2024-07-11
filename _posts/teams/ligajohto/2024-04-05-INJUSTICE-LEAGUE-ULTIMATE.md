@@ -7,7 +7,7 @@ puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
 title: INJUSTICE LEAGUE ULTIMATE
 team: INJUSTICE LEAGUE ULTIMATE
-route: /liga-naranja
+route: /liga-johto
 ID: IL
 tag: johto042024
 color: black
