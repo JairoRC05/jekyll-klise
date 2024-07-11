@@ -20,7 +20,7 @@ pj:
 #PARTIDO 1
 j1: RONDA 1
 p1: RISING STARS
-pp1: STAR-TEC
+pp1: STAR-TEC B
 bg1: rock
 r1: 
 rr1: 
