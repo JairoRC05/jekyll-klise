@@ -22,7 +22,7 @@ pj:
 j1: RONDA 1
 p1:  DFS PLATINUM
 pp1: FLIES ES
-bg1: rock
+bg1: rock rock
 r1: 0
 rr1: 0
 pt1: 0
@@ -31,7 +31,7 @@ pj1: 0
 j2: RONDA 2
 p2: DFS RUBY
 pp2: DFS PLATINUM
-bg2: rock
+bg2: rock rock
 r2: 
 rr2: 
 pt2: 
@@ -40,7 +40,7 @@ pj2:
 j3: RONDA 3
 p3: HG REGIOS
 pp3: DFS PLATINUM
-bg3:
+bg3: rock
 r3: 
 rr3: 
 pt3: 
@@ -49,7 +49,7 @@ pj3:
 j4: RONDA 4
 p4:  DFS PLATINUM
 pp4: TEAM STAR
-bg4: 
+bg4: rock 
 r4: 
 rr4: 
 pt4: 
@@ -58,7 +58,7 @@ pj4:
 j5: RONDA 5
 p5: DFS PLATINUM
 pp5: STAR-TEC
-bg5: 
+bg5: rock 
 r5: 
 rr5: 
 pt5: 
@@ -67,7 +67,7 @@ pj5: 1
 j6: RONDA 6
 p6:  DFS PLATINUM
 pp6: SPC ES
-bg6: 
+bg6: rock 
 r6: 
 rr6: 
 pt6: 
@@ -76,7 +76,7 @@ pj6:
 j7: RONDA 7
 p7: POA
 pp7: DFS PLATINUM
-bg7: 
+bg7: rock 
 r7: 
 rr7: 
 pt7: 
@@ -85,7 +85,7 @@ pj7:
 j8: RONDA 8
 p8:  DFS PLATINUM
 pp8: LAST BREATH
-bg8: 
+bg8: rock 
 rr8: 
 r8: 
 pt8: 
@@ -94,7 +94,7 @@ pj8:
 j9: RONDA 9
 p9:  DFS PLATINUM
 pp9: TAE
-bg9:
+bg9: rock
 r9: 
 rr9: 
 pt9: 
@@ -115,59 +115,59 @@ hora: '21:10'
 # pt11: 0
 # p1:  DFS RUBY
 # r1: 3
-# bg1: bg-danger
+# bg1: rock bg-danger
 # rr1: 0
 # pp1: DFS RUBY
 # p2: DFS RUBY
 # r2: 0
 # rr2: 3
-# bg2: bg-danger
+# bg2: rock bg-danger
 # pp2: NO SMITE
 # p3:  DFS RUBY
 # r3: 1
-# bg3: bg-warning
+# bg3: rock bg-warning
 # rr3: 2
 # pp3: JAS
 # p4:  DFS RUBY
 # r4: 0
-# bg4: bg-danger
+# bg4: rock bg-danger
 # rr4: 3
 # pp4: DFS DMD
 # p5:  DFS RUBY
 # r5: 1
-# bg5: bg-warning
+# bg5: rock bg-warning
 # rr5: 2
 # pp5: T. SATISFACTION
 # p6:  DFS RUBY
 # r6: 0
-# bg6: bg-danger
+# bg6: rock bg-danger
 # rr6: 3
 # pp6: S.VANGUARD
 # p7:  DFS RUBY
 # r7: 0
 # rr7: 3
-# bg7: bg-danger
+# bg7: rock bg-danger
 # pp7: HGO
 # p8:  DFS RUBY
 # r8: 1
 # rr8: 2 
-# bg8: bg-warning
+# bg8: rock bg-warning
 # pp8: HG REGIOS
 # p9:  DFS RUBY
 # r9: 3
-# bg9: bg-success
+# bg9: rock bg-success
 # rr9: 0
 # pp9: ZODIAC
 # p10: DFS RUBY
 # r10: 0
 # rr10: 3
-# bg10: bg-danger
+# bg10: rock bg-danger
 # pp10: MBO
 # info: 28/05/24
 # hora: '22:20'
 # r11: 0
 # rr11: 0
-# bg11: bg-danger
+# bg11: rock bg-danger
 # p11:  DFS RUBY
 # pp11: LAST BREATH
 

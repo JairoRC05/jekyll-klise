@@ -23,7 +23,7 @@ j1: RONDA 1
 p1: GG GHOST
 pp1: HG SOULSILVER
 r1: 0
-bg1: rock
+bg1: rock rock
 rr1: 0
 pt1: 0
 pj1: 0
@@ -31,7 +31,7 @@ pj1: 0
 j2: RONDA 2
 p2: GG GHOST
 pp2: GG STEEL
-bg2: rock
+bg2: rock rock
 r2: 0
 rr2: 0
 pt2: 0
@@ -40,7 +40,7 @@ pj2: 0
 j3: RONDA 3
 p3: IL ULTIMATE
 pp3: GG GHOST
-bg3: rock
+bg3: rock rock
 r3: 0
 rr3: 0
 pt3: 0
@@ -49,7 +49,7 @@ pj3: 0
 j4: RONDA 4
 p4: ZERONOTE
 pp4: GG GHOST
-bg4: rock
+bg4: rock rock
 r4: 0
 rr4: 
 pt4: 
@@ -58,7 +58,7 @@ pj4:
 j5: RONDA 5
 p5: GG GHOST
 pp5: SSI
-bg5: rock
+bg5: rock rock
 r5: 
 rr5: 0
 pt5: 
@@ -67,7 +67,7 @@ pj5:
 j6: RONDA 6
 p6: GG GHOST
 pp6: T-BONERS
-bg6: rock
+bg6: rock rock
 r6: 
 rr6:  
 pt6: 
@@ -76,7 +76,7 @@ pj6:
 j7: RONDA 7
 p7:  DFS SAPPHIRE
 pp7: GG GHOST
-bg7: rock
+bg7: rock rock
 r7: 0
 rr7: 0
 pt7: 0
@@ -85,7 +85,7 @@ pj7: 0
 j8: RONDA 8
 p8:  DFS DIAMOND
 pp8: GG GHOST
-bg8: rock
+bg8: rock rock
 rr8: 0
 r8: 
 pt8: 
@@ -95,7 +95,7 @@ pj8:
 j9: RONDA 9
 p9:  GG GHOST
 pp9: PROJECT ONE
-bg9: rock
+bg9: rock rock
 r9: 
 rr9: 
 pt9: 

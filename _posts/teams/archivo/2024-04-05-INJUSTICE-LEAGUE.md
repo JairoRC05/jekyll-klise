@@ -29,57 +29,57 @@ pt11: 0
 p1:  DEEP DARK
 r1: 3
 rr1: 0
-bg1: bg-danger
+bg1: rock bg-danger
 pp1: injustice league
 p2: ZERONOTE
 r2: 3
-bg2: bg-danger
+bg2: rock bg-danger
 rr2: 0
 pp2: injustice league
 p3:  INJUSTICE LEAGUE
 r3: 0
-bg3: bg-danger
+bg3: rock bg-danger
 rr3: 3
 pp3: er azul
 p4:  INJUSTICE LEAGUE
 r4: 0
-bg4: bg-danger
+bg4: rock bg-danger
 rr4: 3
 pp4:  dfs sap
 p5:  KOD
 r5: 3
-bg5: bg-danger
+bg5: rock bg-danger
 rr5: 0
 pp5: INJUSTICE LEAGUE
 p6:  SPC ES
 r6: 3
 rr6: 0
-bg6: bg-danger
+bg6: rock bg-danger
 pp6: injustice league
 p7:  EK WHITE
 r7: 3
 rr7: 0
-bg7: bg-danger
+bg7: rock bg-danger
 pp7: injustice league
 p8:  t-boners
 r8: 3
-bg8: bg-danger
+bg8: rock bg-danger
 rr8: 0
 pp8: injustice league
 p9:  INJUSTICE LEAGUE
 r9: 0
-bg9: bg-danger
+bg9: rock bg-danger
 rr9: 3
 pp9: AEP
 p10:  STAR TEC
 r10: 3
-bg10: bg-danger
+bg10: rock bg-danger
 rr10: 0
 pp10: INJUSTICE LEAGUE
 p11: TSR
 r11: 3
 rr11: 0
-bg11: bg-danger
+bg11: rock bg-danger
 pp11: INJUSTICE LEAGUE
 ---
 

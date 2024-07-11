@@ -19,7 +19,7 @@ route: /liga-indigo-platino
 j1: RONDA 1
 p1: KOD
 pp1: SKZ
-bg1: rock
+bg1: rock rock
 r1: 0
 rr1: 3
 pt1: 3
@@ -28,7 +28,7 @@ pj1: 1
 j2: RONDA 2
 p2: SKZ
 pp2: SPC
-bg2: rock
+bg2: rock rock
 r2: 3
 rr2: 0
 pt2: 3
@@ -37,7 +37,7 @@ pj2: 1
 j3: RONDA 3
 p3: SKZ
 pp3: TB
-bg3: rock
+bg3: rock rock
 r3: 3
 rr3: 0
 pt3: 3
@@ -46,7 +46,7 @@ pj3: 1
 j4: RONDA 4
 p4: DFS RUBY
 pp4: SKZ
-bg4: rock
+bg4: rock rock
 r4: 3
 rr4: 0
 pt4: 0
@@ -55,7 +55,7 @@ pj4: 1
 j5: RONDA 5
 p5: HG REGIOS
 pp5: SKZ
-bg5: rock
+bg5: rock rock
 r5: 1
 rr5: 2
 pt5: 2
@@ -64,7 +64,7 @@ pj5: 1
 j6: RONDA 6
 p6: DFS SAP
 pp6: SKZ
-bg6: rock
+bg6: rock rock
 r6: 0
 rr6: 3
 pt6: 3
@@ -73,7 +73,7 @@ pj6: 1
 j7: RONDA 7
 p7: DFS DMD
 pp7: SKZ
-bg7: rock
+bg7: rock rock
 r7: 0
 rr7: 3
 pt7: 3
@@ -82,7 +82,7 @@ pj7: 1
 j8: RONDA 8
 p8:  SKZ
 pp8: STAR
-bg8: rock
+bg8: rock rock
 rr8: 1
 r8: 2
 pt8: 2
@@ -91,7 +91,7 @@ pj8: 1
 j9: RONDA 9
 p9:  SKZ
 pp9: ZN
-bg9: rock
+bg9: rock rock
 r9: 2
 rr9: 1
 pt9: 2
@@ -100,7 +100,7 @@ pj9: 1
 j10: RONDA 10
 p10: AEP
 pp10: SKZ
-bg10: rock
+bg10: rock rock
 r10: 0
 rr10: 3
 pt10: 3
@@ -109,7 +109,7 @@ pj10: 1
 j11: RONDA 11
 p11: LB
 pp11: SKZ
-bg11: rock
+bg11: rock rock
 r11: 1
 rr11: 2
 pt11: 2
@@ -132,54 +132,54 @@ hora: '21:10'
 # p1:  HGO
 # r1: 2
 # rr1: 1
-# bg1: bg-warning
+# bg1: rock bg-warning
 # pp1: S.VANGUARD
 # p2: HG REGIOS
 # r2: 0
 # rr2: 3
-# bg2: bg-success
+# bg2: rock bg-success
 # pp2: S. VANGUARD
 # p3: ZODIAC
 # r3: 3
 # rr3: 0
-# bg3: bg-danger
+# bg3: rock bg-danger
 # pp3: S. VANGUARD
 # p4:  MBO
 # r4: 1
 # rr4: 2
-# bg4: bg-info
+# bg4: rock bg-info
 # pp4: S. vanguard
 # p5:  last breath
 # r5: 2
-# bg5: bg-warning
+# bg5: rock bg-warning
 # rr5: 1
 # pp5: s. vanguard
 # p6:  DFS RUBY
 # r6: 0
-# bg6: bg-success
+# bg6: rock bg-success
 # rr6: 3
 # pp6: S.VANGUARD
 # p7:  no smite
 # r7: 3
 # rr7: 0
-# bg7: bg-danger
+# bg7: rock bg-danger
 # pp7: s. vanguard
 # p8: jas
 # r8: 1
-# bg8: bg-info
+# bg8: rock bg-info
 # rr8: 2 
 # pp8: s. vanguard
 # p9:  DFS DMD
 # r9: 0
-# bg9: bg-success
+# bg9: rock bg-success
 # rr9: 3
 # pp9: S. VANGUARD    
 # p10:  T. SATISFACTION
 # r10: 1
-# bg10: bg-info
+# bg10: rock bg-info
 # rr10: 2
 # pp10: S. VANGUARD
-# bg11: bg-danger
+# bg11: rock bg-danger
 # p11:  SOJ
 # r11: 3
 # rr11: 0

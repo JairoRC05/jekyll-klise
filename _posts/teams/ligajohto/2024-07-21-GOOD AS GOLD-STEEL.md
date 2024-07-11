@@ -22,7 +22,7 @@ pj:
 j1: RONDA 1
 p1: IL ULTIMATE
 pp1: GG STEEL
-bg1: rock
+bg1: rock rock
 r1: 
 rr1: 
 pt1: 
@@ -31,7 +31,7 @@ pj1:
 j2: RONDA 2
 p2: GG GHOST
 pp2: GG STEEL
-bg2: rock
+bg2: rock rock
 r2: 
 rr2: 
 pt2: 
@@ -40,7 +40,7 @@ pj2:
 j3: RONDA 3
 p3: SSI
 pp3: GG STEEL
-bg3:
+bg3: rock
 r3: 
 rr3: 
 pt3: 
@@ -49,7 +49,7 @@ pj3:
 j4: RONDA 4
 p4: T-BONERS
 pp4: GG STEEL
-bg4: 
+bg4: rock 
 r4: 
 rr4: 
 pt4: 
@@ -58,7 +58,7 @@ pj4:
 j5: RONDA 5
 p5: DFS SAPPHIRE
 pp5: GG STEEL
-bg5: 
+bg5: rock 
 r5: 
 rr5: 
 pt5: 
@@ -67,7 +67,7 @@ pj5:
 j6: RONDA 6
 p6: DFS DIAMOND
 pp6: GG STEEL
-bg6: 
+bg6: rock 
 r6: 
 rr6: 
 pt6: 
@@ -76,7 +76,7 @@ pj6:
 j7: RONDA 7
 p7: PROJECT ONE
 pp7: GG STEEL
-bg7: 
+bg7: rock 
 r7: 
 rr7: 
 pt7: 
@@ -85,7 +85,7 @@ pj7:
 j8: RONDA 8
 p8: HG SOULSILVER
 pp8: GG STEEL
-bg8: 
+bg8: rock 
 rr8: 
 r8: 
 pt8: 
@@ -94,7 +94,7 @@ pj8:
 j9: RONDA 9
 p9: ZERONOTE
 pp9: GG STEEL
-bg9:
+bg9: rock
 r9: 
 rr9: 
 pt9: 

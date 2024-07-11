@@ -12,58 +12,58 @@ pt10:
 pt11: 
 p1: 
 r1: 
-bg1:
+bg1: rock
 rr1:
 pp1:
 p2: 
 r2: 
 rr2: 
-bg2: 
+bg2: rock 
 pp2: 
 p3:
 r3: 
-bg3:
+bg3: rock
 rr3:
 pp3:
 p4: 
 r4: 
 rr4:
-bg4:
+bg4: rock
 pp4:
 p5: 
 r5: 
 rr5:
-bg5:
+bg5: rock
 pp5:
 p6: 
 pp6:
 r6: 
 rr6: 
-bg6: 
+bg6: rock 
 p7:  
 r7: 
 rr7: 
-bg7: 
+bg7: rock 
 pp7: 
 p8:  
 r8: 
-bg8: 
+bg8: rock 
 rr8: 
 pp8: 
 p9:  
 r9: 
-bg9: 
+bg9: rock 
 rr9: 
 pp9: 
 p10: 
 r10: 
 rr10:
-bg10:
+bg10: rock
 pp10:
 p11: 
 r11: 
 rr11:
-bg11: 
+bg11: rock 
 pp11: 
 
 
@@ -107,7 +107,7 @@ pj11: 0
 j1: RONDA 1
 p1: 
 pp1: 
-bg1: rock
+bg1: rock rock
 r1: 
 rr1: 
 pt1: 
@@ -116,7 +116,7 @@ pj1:
 j2: RONDA 2
 p2: 
 pp2: 
-bg2: rock
+bg2: rock rock
 r2: 
 rr2: 
 pt2: 
@@ -125,7 +125,7 @@ pj2:
 j3: RONDA 3
 p3: 
 pp3: 
-bg3:
+bg3: rock
 r3: 
 rr3: 
 pt3: 
@@ -134,7 +134,7 @@ pj3:
 j4: RONDA 4
 p4: 
 pp4: 
-bg4: 
+bg4: rock 
 r4: 
 rr4: 
 pt4: 
@@ -143,7 +143,7 @@ pj4:
 j5: RONDA 5
 p5: 
 pp5: 
-bg5: 
+bg5: rock 
 r5: 
 rr5: 
 pt5: 
@@ -152,7 +152,7 @@ pj5: 1
 j6: RONDA 6
 p6: 
 pp6: 
-bg6: 
+bg6: rock 
 r6: 
 rr6: 
 pt6: 
@@ -161,7 +161,7 @@ pj6:
 j7: RONDA 7
 p7:  
 pp7: 
-bg7: 
+bg7: rock 
 r7: 
 rr7: 
 pt7: 
@@ -170,7 +170,7 @@ pj7:
 j8: RONDA 8
 p8:  
 pp8: 
-bg8: 
+bg8: rock 
 rr8: 
 r8: 
 pt8: 
@@ -179,7 +179,7 @@ pj8:
 j9: RONDA 9
 p9: 
 pp9: 
-bg9:
+bg9: rock
 r9: 
 rr9: 
 pt9: 
@@ -188,7 +188,7 @@ pj9:
 j10: RONDA 10
 p10: 
 pp10:
-bg10: 
+bg10: rock 
 r10: 
 rr10: 
 pt10: 
@@ -197,7 +197,7 @@ pj10:
 j11: RONDA 11
 p11: 
 pp11:
-bg11: 
+bg11: rock 
 r11: 
 rr11: 
 pt11: 

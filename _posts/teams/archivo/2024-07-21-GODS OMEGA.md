@@ -23,7 +23,7 @@ j1: RONDA 1
 p1: GOD O
 pp1: RN
 r1: 2
-bg1: rock
+bg1: rock rock
 rr1: 2
 pt1: 2
 pj1: 1
@@ -31,7 +31,7 @@ pj1: 1
 j2: RONDA 2
 p2: GOD O
 pp2: TSF
-bg2: rock
+bg2: rock rock
 r2: 1
 rr2: 3
 pt2: 1
@@ -40,7 +40,7 @@ pj2: 1
 j3: RONDA 3
 p3: BNT
 pp3: GOD O
-bg3: rock
+bg3: rock rock
 r3: 4
 rr3: 0
 pt3: 0
@@ -51,7 +51,7 @@ pj3: 1
 j4: RONDA 4
 p4: HGHG
 pp4: GOD O
-bg4: rock
+bg4: rock rock
 r4: 
 rr4:
 pt4: 0
@@ -60,7 +60,7 @@ pj4: 0
 j5: RONDA 5
 p5: GOD O
 pp5: GOLD S
-bg5: rock
+bg5: rock rock
 r5: 
 rr5:
 pt5: 0
@@ -69,7 +69,7 @@ pj5: 0
 j6: RONDA 6
 p6: GOD O
 pp6: P1
-bg6: rock
+bg6: rock rock
 r6: 
 rr6: 
 pt6: 0
@@ -78,7 +78,7 @@ pj6: 0
 j7: RONDA 7
 p7:  GOD O
 pp7: SSI
-bg7: rock
+bg7: rock rock
 r7: 0
 rr7: 4
 pt7: 0
@@ -87,7 +87,7 @@ pj7: 1
 j8: RONDA 8
 p8:  IL
 pp8: GOD O
-bg8: rock
+bg8: rock rock
 r8: 1
 rr8: 3
 pt8: 3
@@ -96,7 +96,7 @@ pj8: 1
 j9: RONDA 9
 p9:  GOD G
 pp9: GOD O
-bg9: rock
+bg9: rock rock
 r9: 0
 rr9: 4 
 pt9: 4
@@ -105,7 +105,7 @@ pj9: 1
 j10: RONDA 10
 p10: GOD O
 pp10: GOLD V
-bg10: rock
+bg10: rock rock
 r10: 
 rr10:
 pt10: 0
@@ -114,7 +114,7 @@ pj10: 0
 j11: RONDA 11
 p11: GOD O
 pp11: HGSS
-bg11: rock
+bg11: rock rock
 r11: 1
 rr11: 3
 pt11: 1

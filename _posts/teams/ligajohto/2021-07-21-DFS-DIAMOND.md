@@ -22,7 +22,7 @@ pj:
 j1: RONDA 1
 p1:  DFS DIAMOND
 pp1: T-BONERS
-bg1: rock
+bg1: rock rock
 r1: 
 rr1: 
 pt1: 
@@ -31,7 +31,7 @@ pj1:
 j2: RONDA 2
 p2: DFS SAPHIRE
 pp2: DFS DIAMOND
-bg2: rock
+bg2: rock rock
 r2: 
 rr2: 
 pt2: 
@@ -40,7 +40,7 @@ pj2:
 j3: RONDA 3
 p3: ZERONOTE
 pp3: DFS DIAMOND
-bg3:
+bg3: rock
 r3: 
 rr3: 
 pt3: 
@@ -49,7 +49,7 @@ pj3:
 j4: RONDA 4
 p4:  DFS DIAMOND
 pp4: PROJECT ONE
-bg4: 
+bg4: rock 
 r4: 
 rr4: 
 pt4: 
@@ -58,7 +58,7 @@ pj4:
 j5: RONDA 5
 p5: DFS DIAMOND
 pp5: HG SOULSILVER
-bg5: 
+bg5: rock 
 r5: 
 rr5: 
 pt5: 
@@ -67,7 +67,7 @@ pj5: 1
 j6: RONDA 6
 p6:  DFS DIAMOND
 pp6: GG STEEL
-bg6: 
+bg6: rock 
 r6: 
 rr6: 
 pt6: 
@@ -76,7 +76,7 @@ pj6:
 j7: RONDA 7
 p7: IL ULTIMATE
 pp7: DFS DIAMOND
-bg7: 
+bg7: rock 
 r7: 
 rr7: 
 pt7: 
@@ -85,7 +85,7 @@ pj7:
 j8: RONDA 8
 p8:  DFS DIAMOND
 pp8: GG GHOST
-bg8: 
+bg8: rock 
 rr8: 
 r8: 
 pt8: 
@@ -94,7 +94,7 @@ pj8:
 j9: RONDA 9
 p9:  DFS DIAMOND
 pp9: SSI
-bg9:
+bg9: rock
 r9: 
 rr9: 
 pt9: 
@@ -115,58 +115,58 @@ hora: '21:10'
 # pt11: 3
 # p1: ZODIAC
 # r1: 2
-# bg1: bg-warning
+# bg1: rock bg-warning
 # rr1: 1
 # pp1: DFS DMD
 # p2: DFS DMD
 # r2: 3
 # rr2: 0
-# bg2: bg-success
+# bg2: rock bg-success
 # pp2: MBO
 # p3: DFS DMD
 # r3: 2
-# bg3: bg-info
+# bg3: rock bg-info
 # rr3: 1
 # pp3: LAST BREATH
 # p4:  DFS RUBY
 # r4: 0
-# bg4: bg-success
+# bg4: rock bg-success
 # rr4: 3
 # pp4: DFS DMD
 # p5:  no smite
 # r5: 3
-# bg5: bg-danger
+# bg5: rock bg-danger
 # rr5: 0
 # pp5: dfs dmd
 # p6: jas
 # r6: 0
 # rr6: 3
-# bg6: bg-success
+# bg6: rock bg-success
 # pp6: dfs dmd
 # p7:  DFS DMD
 # r7: 0
 # rr7: 2
-# bg7: bg-danger
+# bg7: rock bg-danger
 # pp7: SOJ
 # p8:  DFS DMD
 # r8: 1
-# bg8: bg-warning
+# bg8: rock bg-warning
 # rr8: 2
 # pp8: T. SATISFACTION
 # p9:  DFS DMD
 # r9: 0
-# bg9: bg-danger
+# bg9: rock bg-danger
 # rr9: 3
 # pp9: S. VANGUARD
 # p10:  HGO
 # r10: 2
 # rr10: 1
-# bg10: bg-warning
+# bg10: rock bg-warning
 # pp10: DFS DM
 # p11: hg regios
 # r11: 0
 # rr11: 3
-# bg11: bg-success
+# bg11: rock bg-success
 # pp11: dfs dmd
 ##torneos
 rango: ACERO

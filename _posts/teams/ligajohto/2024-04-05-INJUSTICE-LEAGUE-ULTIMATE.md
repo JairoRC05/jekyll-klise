@@ -23,7 +23,7 @@ pj:
 j1: RONDA 1
 p1: IL ULTIMATE 
 pp1: GG STEEL
-bg1: rock
+bg1: rock rock
 r1: 0
 rr1: 0
 pt1: 0
@@ -32,7 +32,7 @@ pj1: 0
 j2: RONDA 2
 p2: ZERONOTE
 pp2: IL ULTIMATE
-bg2: rock
+bg2: rock rock
 r2: 
 rr2: 
 pt2: 
@@ -41,7 +41,7 @@ pj2:
 j3: RONDA 3
 p3: IL ULTIMATE
 pp3: GG GHOST
-bg3:
+bg3: rock
 r3: 
 rr3: 
 pt3: 
@@ -50,7 +50,7 @@ pj3:
 j4: RONDA 4
 p4: IL ULTIMATE 
 pp4: SSI
-bg4: 
+bg4: rock 
 r4: 
 rr4: 
 pt4: 
@@ -59,7 +59,7 @@ pj4:
 j5: RONDA 5
 p5: IL ULTIMATE
 pp5: T-BONERS
-bg5: 
+bg5: rock 
 r5: 
 rr5: 
 pt5: 
@@ -68,7 +68,7 @@ pj5: 1
 j6: RONDA 6
 p6: DFS SAPPHIRE
 pp6: IL ULTIMATE
-bg6: 
+bg6: rock 
 r6: 
 rr6: 
 pt6: 
@@ -77,7 +77,7 @@ pj6:
 j7: RONDA 7
 p7: IL ULTIMATE
 pp7: DFS DIAMOND
-bg7: 
+bg7: rock 
 r7: 
 rr7: 
 pt7: 
@@ -86,7 +86,7 @@ pj7:
 j8: RONDA 8
 p8: IL ULTIMATE 
 pp8: PROJECT ONE
-bg8: 
+bg8: rock 
 rr8: 
 r8: 
 pt8: 
@@ -95,7 +95,7 @@ pj8:
 j9: RONDA 9
 p9: IL ULTIMATE
 pp9: HG SOULSILVER
-bg9:
+bg9: rock
 r9: 
 rr9: 
 pt9: 
@@ -118,57 +118,57 @@ hora: '21:10'
 # p1:  DEEP DARK
 # r1: 3
 # rr1: 0
-# bg1: bg-danger
+# bg1: rock bg-danger
 # pp1: injustice league
 # p2: ZERONOTE
 # r2: 3
-# bg2: bg-danger
+# bg2: rock bg-danger
 # rr2: 0
 # pp2: injustice league
 # p3:  INJUSTICE LEAGUE
 # r3: 0
-# bg3: bg-danger
+# bg3: rock bg-danger
 # rr3: 3
 # pp3: er azul
 # p4:  INJUSTICE LEAGUE
 # r4: 0
-# bg4: bg-danger
+# bg4: rock bg-danger
 # rr4: 3
 # pp4:  dfs sap
 # p5:  KOD
 # r5: 3
-# bg5: bg-danger
+# bg5: rock bg-danger
 # rr5: 0
 # pp5: INJUSTICE LEAGUE
 # p6:  SPC ES
 # r6: 3
 # rr6: 0
-# bg6: bg-danger
+# bg6: rock bg-danger
 # pp6: injustice league
 # p7:  EK WHITE
 # r7: 3
 # rr7: 0
-# bg7: bg-danger
+# bg7: rock bg-danger
 # pp7: injustice league
 # p8:  t-boners
 # r8: 3
-# bg8: bg-danger
+# bg8: rock bg-danger
 # rr8: 0
 # pp8: injustice league
 # p9:  INJUSTICE LEAGUE
 # r9: 0
-# bg9: bg-danger
+# bg9: rock bg-danger
 # rr9: 3
 # pp9: AEP
 # p10:  STAR TEC
 # r10: 3
-# bg10: bg-danger
+# bg10: rock bg-danger
 # rr10: 0
 # pp10: INJUSTICE LEAGUE
 # p11: TSR
 # r11: 3
 # rr11: 0
-# bg11: bg-danger
+# bg11: rock bg-danger
 # pp11: INJUSTICE LEAGUE
 ---
 
