@@ -15,6 +15,7 @@ permalink: /liga-indigo-rondas.html
       <div class="d-none d-lg-block">
         <span class="navbar-brand mb-0 h1 text-white ms-3"><a href="/liga-indigo-platino"
             class="text-white">INICIO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento" class="text-white">REGLAMENTO</a></span>
       </div>
     </div>
   </nav>
@@ -26,13 +27,13 @@ permalink: /liga-indigo-rondas.html
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
     </a>
-      <div class="textIndigo">
+      <div class=" textIndigo">
         <h1 class="text-white ms-3 mb-0 d-none d-lg-block liga-indigo">RONDAS</h1>
         <h1 class="text-white ms-3 mb-0 d-block d-lg-none liga-indigo">RONDAS</h1>
         <span class="text-white ms-3 d-none d-lg-block">LIGA INDIGO</span>
         <span class="text-white ms-3 d-block d-lg-none">LIGA INDIGO</span>
-      </div>
     </div>
+  </div>
   </div>
 
 
@@ -40,72 +41,81 @@ permalink: /liga-indigo-rondas.html
   <div class="container text-white ">
     <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="true">1</button>
+        <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button"
+          role="tab" aria-controls="pills-1" aria-selected="true">1</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false">2</button>
+        <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button"
+          role="tab" aria-controls="pills-2" aria-selected="false">2</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-3" aria-selected="false">3</button>
+        <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button"
+          role="tab" aria-controls="pills-3" aria-selected="false">3</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-4" aria-selected="false">4</button>
+        <button class="nav-link" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button"
+          role="tab" aria-controls="pills-4" aria-selected="false">4</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-5-tab" data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-5" aria-selected="false">5</button>
+        <button class="nav-link" id="pills-5-tab" data-bs-toggle="pill" data-bs-target="#pills-5" type="button"
+          role="tab" aria-controls="pills-5" aria-selected="false">5</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-6-tab" data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-6" aria-selected="false">6</button>
+        <button class="nav-link" id="pills-6-tab" data-bs-toggle="pill" data-bs-target="#pills-6" type="button"
+          role="tab" aria-controls="pills-6" aria-selected="false">6</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-7-tab" data-bs-toggle="pill" data-bs-target="#pills-7" type="button" role="tab" aria-controls="pills-7" aria-selected="false">7</button>
+        <button class="nav-link" id="pills-7-tab" data-bs-toggle="pill" data-bs-target="#pills-7" type="button"
+          role="tab" aria-controls="pills-7" aria-selected="false">7</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-8-tab" data-bs-toggle="pill" data-bs-target="#pills-8" type="button" role="tab" aria-controls="pills-8" aria-selected="false">8</button>
+        <button class="nav-link" id="pills-8-tab" data-bs-toggle="pill" data-bs-target="#pills-8" type="button"
+          role="tab" aria-controls="pills-8" aria-selected="false">8</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-9-tab" data-bs-toggle="pill" data-bs-target="#pills-9" type="button" role="tab" aria-controls="pills-9" aria-selected="false">9</button>
+        <button class="nav-link" id="pills-9-tab" data-bs-toggle="pill" data-bs-target="#pills-9" type="button"
+          role="tab" aria-controls="pills-9" aria-selected="false">9</button>
       </li>
 
-      
+
     </ul>
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">
         <div class="row mb-3">
-      {% assign norte = site.categories.LI1 %}
-      {%- for post in norte-%}
-      <div class="col-12 col-sm-6 col-md-4 mt-0">
-        <div class="container match black d-flex justify-content-between align-items-center text-left">
-          <div class="matchTeams">
-            <p class="text-left ">{{post.p1}}</p>
-            <p class="text-left">{{post.pp1}}</p>
+          {% assign norte = site.categories.LI1 %}
+          {%- for post in norte-%}
+          <div class="col-12 col-sm-6 col-md-4 mt-0">
+            <div class="container match black d-flex justify-content-between align-items-center text-left">
+              <div class="matchTeams">
+                <p class="text-left ">{{post.p1}}</p>
+                <p class="text-left">{{post.pp1}}</p>
+              </div>
+              <div class="matchTeams">
+                <p class="text-left">{{post.r1}}</p>
+                <p class="text-left">{{post.rr1}}</p>
+              </div>
+            </div>
           </div>
-          <div class="matchTeams">
-            <p class="text-left">{{post.r1}}</p>
-            <p class="text-left">{{post.rr1}}</p>
-          </div>
+          {%- endfor -%}
         </div>
-      </div>
-      {%- endfor -%}
-    </div>
       </div>
       <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
         <div class="row mb-3">
           {% assign norte = site.categories.LI2 %}
-      {%- for post in norte-%}
-      <div class="col-12 col-sm-6 col-md-4 mt-0">
-        <div class="container match black d-flex justify-content-between align-items-center text-left">
-          <div class="matchTeams">
-            <p class="text-left">{{post.pp2}}</p>
-            <p class="text-left ">{{post.p2}}</p>
+          {%- for post in norte-%}
+          <div class="col-12 col-sm-6 col-md-4 mt-0">
+            <div class="container match black d-flex justify-content-between align-items-center text-left">
+              <div class="matchTeams">
+                <p class="text-left">{{post.pp2}}</p>
+                <p class="text-left ">{{post.p2}}</p>
+              </div>
+              <div class="matchTeams">
+                <p class="text-left">{{post.rr2}}</p>
+                <p class="text-left">{{post.r2}}</p>
+              </div>
+            </div>
           </div>
-          <div class="matchTeams">
-            <p class="text-left">{{post.rr2}}</p>
-            <p class="text-left">{{post.r2}}</p>
-          </div>
-        </div>
-      </div>
-      {%- endfor -%}
+          {%- endfor -%}
         </div>
       </div>
       <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
@@ -241,7 +251,7 @@ permalink: /liga-indigo-rondas.html
           {%- endfor -%}
         </div>
       </div>
-   
+
     </div>
   </div>
 
