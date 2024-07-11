@@ -5,7 +5,7 @@ categories: LA2024JN
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
-title: IL REBORN
+title: 7 DEADLY SINS
 route: /liga-johto
 tag: johto042024
 color: black
@@ -13,14 +13,14 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: IL REBORN
-ID: IL REBORN
+team: 7DEADLY-SINS
+ID: 7DS
 puntos: 
 pj: 
 #PARTIDO 1
 j1: RONDA 1
-p1: IL REBORN
-pp1: TSA
+p1: LEGION P&S
+pp1: 7DS
 bg1: rock
 r1: 
 rr1: 
@@ -28,8 +28,8 @@ pt1:
 pj1: 
 #PARTIDO 2
 j2: RONDA 2
-p2: IL REBORN
-pp2: DESCANSO
+p2: 7DS
+pp2: EK
 bg2: rock
 r2: 
 rr2: 
@@ -37,8 +37,8 @@ pt2:
 pj2: 
 #PARTIDO 3
 j3: RONDA 3
-p3: TA
-pp3: IL REBORN
+p3: 7DS
+pp3: STAR-TEC B
 bg3:
 r3: 
 rr3: 
@@ -46,8 +46,8 @@ pt3:
 pj3: 
 #PARTIDO 4
 j4: RONDA 4
-p4: LEGION MEW
-pp4: IL REBORN
+p4: POA GIRLS
+pp4: 7DS
 bg4: 
 r4: 
 rr4: 
@@ -55,8 +55,8 @@ pt4:
 pj4: 
 #PARTIDO 5
 j5: RONDA 5
-p5: IL REBORN
-pp5: LEGION P&S
+p5: RISING STARS
+pp5: 7DS
 bg5: 
 r5: 
 rr5: 
@@ -64,8 +64,8 @@ pt5:
 pj5: 
 #PARTIDO 6
 j6: RONDA 6
-p6: IL REBORN
-pp6: EK BLACK
+p6: LOT
+pp6: 7DS
 bg6: 
 r6: 
 rr6: 
@@ -73,8 +73,8 @@ pt6:
 pj6: 
 #PARTIDO 7
 j7: RONDA 7
-p7:  IL REBORN
-pp7: STAR-TEC
+p7:  LEGION MEW
+pp7: 7DS
 bg7: 
 r7: 
 rr7: 
@@ -82,8 +82,8 @@ pt7:
 pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p7: POA GIRLS
-pp8: IL REBORN
+p7:  7DS
+pp8: TSA
 bg8: 
 rr8: 
 r8: 
@@ -91,17 +91,17 @@ pt8:
 pj8: 
 #PARTIDO 9
 j9: RONDA 9
-p9: RISING STARS
-pp9: IL REBORN
-bg9: 
+p9: 7DS
+pp9: DESCANSO
+bg9:
 r9: 
 rr9: 
 pt9: 
 pj9: 
 #PARTIDO 10
 j10: RONDA 10
-p10: IL REBORN
-pp10: LOT
+p10: TA
+pp10: 7DS
 bg10: 
 r10: 
 rr10: 
@@ -109,7 +109,7 @@ pt10:
 pj10: 
 #PARTIDO 11
 j11: RONDA 11
-p11: IL
+p11: IL REBORN
 pp11: 7DS
 bg11: 
 r11: 

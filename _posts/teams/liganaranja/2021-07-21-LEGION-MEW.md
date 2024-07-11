@@ -108,14 +108,14 @@ rr10:
 pt10: 
 pj10: 
 #PARTIDO 11
-j10: RONDA 11
-p10: LEGION MEW
-pp10: DESCANSO
-bg10: 
-r10: 
-rr10: 
-pt10: 
-pj10: 
+j11: RONDA 11
+p11: LEGION MEW
+pp11: DESCANSO
+bg11: 
+r11: 
+rr11: 
+pt11: 
+pj11: 
 hora: '21:10'
 # pj: 11
 # pt1: 1
