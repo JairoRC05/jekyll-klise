@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LJ06
-maincover: /assets/logos/GAG.png
+maincover: /assets/logos/GGS.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
 title: GOOD AS GOLD STEEL
