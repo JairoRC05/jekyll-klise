@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: themeTeam
 permalink: /team/:title.html
 categories: LJ06 LJ1   LJ4 LJ5 LJ6 LJ7 LJ8 LJ9 
 maincover: /assets/logos/DFS.png

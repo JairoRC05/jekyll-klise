@@ -1954,6 +1954,9 @@ color: #fff;
 }
 
 
+
+
+
 .bannerPromo > img{
   width: 150px;
 }
@@ -2084,6 +2087,33 @@ color: #fff;
 .text-orange{ 
   color: #E89600;
 }
+
+
+.themeTeam{
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bannerTeam{
+  height: 100%;
+  padding: 0;
+}
+
+
+.bannerTeam > img{
+  width: 380px;
+}
+
+.bannerTeam> a > img{
+  width: 380px;
+}
+
+
+
+
 
 
   @media only screen and (max-width: 768px) {
