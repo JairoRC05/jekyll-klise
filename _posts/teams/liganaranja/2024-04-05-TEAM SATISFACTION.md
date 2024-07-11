@@ -81,7 +81,7 @@ pt7:
 pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p7:  7DS
+p8:  7DS
 pp8: TSA
 bg8: rock 
 rr8: 
