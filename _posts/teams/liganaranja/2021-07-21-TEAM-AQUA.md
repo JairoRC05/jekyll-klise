@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: teamCard3
 permalink: /team/:title.html
 categories: LA2024JN 
 maincover: /assets/logos/BDLF.png

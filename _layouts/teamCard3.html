@@ -1,0 +1,96 @@
+---
+layout:
+---
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-night">
+
+
+    <nav class="navbar bg-night">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="navbar-brand mb-0 h1 text-white ms-3">XFORCE UNITE</span>
+            <div class="">
+              <span class="navbar-brand mb-0 h1 text-white ms-3"><a href="{{page.route}}"
+                  class="text-white"><i class="fa-solid fa-angles-left"></i></a></span>
+            </div>
+          </div>  
+    </nav>
+
+
+    <div class="container-fluid banner">
+        <div class="container bannerPromo d-flex justify-content-start align-items-center">
+            <a href="{{page.maincover}}" role="button" download="{{ page.title | escape }}.png">
+                <img src="{{page.maincover}}" class="drop img-fluid" alt="" ">
+            </a>
+            <div class="textPromo">
+                <div class=" textPromo d-flex justify-content-start align-items-start">
+                    <h1 class="text-white ms-3 mb-0 d-none d-lg-block">{{page.team}}</h1>
+                    <h1 class="text-white ms-3 mb-0 d-block d-lg-none">{{ page.ID | escape }} </h1>
+                    <!-- <span class="steel ms-3 d-none d-lg-block">{{page.rango}}</span> -->
+                </div>
+                <p class="text-white ms-3 d-none d-lg-block">{{ page.ID}}</p>
+                <!-- <span class="steel ms-3 d-block d-lg-none">{{page.rango}}</span> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-xl-0">
+   
+        <div class="row text-white ">
+         
+            <div class="col-12 col-md-12 col-xl-12">
+                
+               
+    
+             
+            </div>
+        </div>
+    </div>
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+   
+
+        <script type="text/javascript">
+            var p1 = {{page.pt1}}
+            var p2 = {{page.pt2}}
+            var p3 = {{page.pt3}}
+            var p4 = {{page.pt4}}
+            var p5 = {{page.pt5}}
+            var p6 = {{page.pt6}}
+            var p7 = {{page.pt7}}
+            var p8 = {{page.pt8}}
+            var p9 = {{page.pt9}}
+            var p10 = {{page.pt10}}
+            var p11 = {{page.pt11}}
+            var res;
+            res=p1+p2+p3+p4+p5+p6+p7+p8+p9+p10+p11;
+            document.getElementById('total').innerHTML= res;
+            document.getElementsByClassName('total').innerHTML= res;
+  
+            var ptj1 = {{page.pj1}}
+            var ptj2 = {{page.pj2}}
+            var ptj3 = {{page.pj3}}
+            var ptj4 = {{page.pj4}}
+            var ptj5 = {{page.pj5}}
+            var ptj6 = {{page.pj6}}
+            var ptj7 = {{page.pj7}}
+            var ptj8 = {{page.pj8}}
+            var ptj9 = {{page.pj9}}
+            var ptj10 = {{page.pj10}}
+            var ptj11 = {{page.pj11}}
+            var sumP;
+            sumP=ptj1+ptj2+ptj3+ptj4+ptj5+ptj6+ptj7+ptj8+ptj9+ptj10+ptj11;
+            document.getElementById('partidosJugados').innerHTML= sumP;
+            document.getElementsByClassName('partidosJugados').innerHTML= sumP;
+        </script>
+
+</body>
+
+</html>
