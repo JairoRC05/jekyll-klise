@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA 
+categories: LA2024JN 
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
