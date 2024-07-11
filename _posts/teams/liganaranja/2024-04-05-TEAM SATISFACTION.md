@@ -1,23 +1,25 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA
+categories: LA2024JN
 maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 16
 date: 2020-08-29 10:29:20 +0700
-title: STAR-TEC B
+title: TEAM SATISFACTION
 tag: johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: STAR-TEC B
-ID: STAR
+team: TEAM SATISFACTION
+ID: TSA
+puntos: 
+pj: 
 #PARTIDO 1
 j1: RONDA 1
-p1: RISING STARS
-pp1: STAR-TEC B
+p1: IL REBORN
+pp1: TSA
 bg1: rock
 r1: 
 rr1: 
