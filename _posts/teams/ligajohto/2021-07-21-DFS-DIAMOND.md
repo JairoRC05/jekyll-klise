@@ -1,5 +1,5 @@
 ---
-layout: themeTeam
+layout: teamCard
 permalink: /team/:title.html
 categories: LJ06 LJ1   LJ4 LJ5 LJ6 LJ7 LJ8 LJ9 
 maincover: /assets/logos/DFS.png
@@ -14,6 +14,7 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
+
 ID: DFS DMD
 puntos: 
 pj: 

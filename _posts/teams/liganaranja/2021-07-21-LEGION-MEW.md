@@ -82,7 +82,7 @@ pt7:
 pj7: 
 #PARTIDO 8
 j8: RONDA 8
-p7:  LEGION MEW
+p8:  LEGION MEW
 pp8: EK BLACK
 bg8: 
 rr8: 
