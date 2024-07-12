@@ -10,9 +10,9 @@ layout:
 
     <nav class="navbar bg-night">
         <div class="container d-flex justify-content-between align-items-center">
-            <span class="navbar-brand mb-0 h1 text-white ms-3">XFORCE UNITE</span>
+            <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
             <div class="">
-              <span class="navbar-brand mb-0 h1 text-white ms-3"><a href="{{page.route}}"
+              <span class="navbar-brand mb-0 h1 text-white "><a href="{{page.route}}"
                   class="text-white"><i class="fa-solid fa-angles-left"></i></a></span>
             </div>
           </div>  
@@ -26,11 +26,11 @@ layout:
             </a>
             <div class="textPromo">
                 <div class=" textPromo d-flex justify-content-start align-items-start">
-                    <h1 class="text-white ms-3 mb-0 d-none d-lg-block">{{page.team}}</h1>
-                    <h1 class="text-white ms-3 mb-0 d-block d-lg-none">{{ page.ID | escape }} </h1>
+                    <h1 class="text-white mb-0 ">{{page.team}}</h1>
+                   
                     <!-- <span class="steel ms-3 d-none d-lg-block">{{page.rango}}</span> -->
                 </div>
-                <p class="text-white ms-3 d-none d-lg-block">{{ page.ID}}</p>
+                <p class="text-white">{{ page.ID}}</p>
                 <!-- <span class="steel ms-3 d-block d-lg-none">{{page.rango}}</span> -->
             </div>
         </div>
@@ -48,9 +48,9 @@ layout:
         {% endif %}
             <h1 class="text-white ms-3"><span class="d-none d-md-inline">PJ</span> <b id="partidosJugados"></b> | <b id="total"></b> <span
                     class="d-none d-md-inline">pts</span></h1>
-        </div>
+    </div>
 
-    <div class="container mt-xl-0">
+    <div class="container ">
    
         <div class="row text-white ">
          
@@ -58,7 +58,7 @@ layout:
                     <div class="container   roundCard {{page.bg1}}">
                         <img src="{{page.IMG1}}" alt="" class="img-fluid">
                         <h6>{{page.j1}}</h6>
-                        <h2>{{page.vs1}}</h2>
+                        <h2>{{page.vs1 | truncate: 9}}</h2>
                         <p>{{page.r1}} - {{page.rr1}}</p>
                     </div>
             </div>
@@ -66,7 +66,7 @@ layout:
                 <div class="container   roundCard {{page.bg2}}">
                     <img src="{{page.IMG2}}" alt="" class="img-fluid">
                     <h6>{{page.j2}}</h6>
-                    <h2>{{page.vs2}}</h2>
+                    <h2>{{page.vs2 | truncate: 9}}</h2>
                     <p>{{page.r2}} - {{page.rr2}}</p>
                 </div>
         </div>
@@ -74,7 +74,7 @@ layout:
                 <div class="container   roundCard {{page.bg3}}">
                     <img src="{{page.IMG3}}" alt="" class="img-fluid">
                     <h6>{{page.j3}}</h6>
-                    <h2>{{page.vs3}}</h2>
+                    <h2>{{page.vs3 | truncate: 9}}</h2>
                     <p>{{page.r3}} - {{page.rr3}}</p>
                 </div>
         </div>
@@ -82,7 +82,7 @@ layout:
                 <div class="container   roundCard {{page.bg4}}">
                     <img src="{{page.IMG4}}" alt="" class="img-fluid">
                     <h6>{{page.j4}}</h6>
-                    <h2>{{page.vs4}}</h2>
+                    <h2>{{page.vs4 | truncate: 9}}</h2>
                     <p>{{page.r4}} - {{page.rr4}}</p>
                 </div>
         </div>
@@ -90,7 +90,7 @@ layout:
                 <div class="container   roundCard {{page.bg5}}">
                     <img src="{{page.IMG5}}" alt="" class="img-fluid">
                     <h6>{{page.j5}}</h6>
-                    <h2>{{page.vs5}}</h2>
+                    <h2>{{page.vs5| truncate: 9 }}</h2>
                     <p>{{page.r5}} - {{page.rr5}}</p>
                 </div>
         </div>
@@ -98,7 +98,7 @@ layout:
                 <div class="container   roundCard {{page.bg6}}">
                     <img src="{{page.IMG6}}" alt="" class="img-fluid">
                     <h6>{{page.j6}}</h6>
-                    <h2>{{page.vs6}}</h2>
+                    <h2>{{page.vs6 | truncate: 9}}</h2>
                     <p>{{page.r6}} - {{page.rr6}}</p>
                 </div>
         </div>
@@ -106,7 +106,7 @@ layout:
                 <div class="container   roundCard {{page.bg7}}">
                     <img src="{{page.IMG7}}" alt="" class="img-fluid">
                     <h6>{{page.j7}}</h6>
-                    <h2>{{page.vs7}}</h2>
+                    <h2>{{page.vs7 | truncate: 9}}</h2>
                     <p>{{page.r7}} - {{page.rr7}}</p>
                 </div>
         </div>
@@ -114,7 +114,7 @@ layout:
                 <div class="container   roundCard {{page.bg8}}">
                     <img src="{{page.IMG8}}" alt="" class="img-fluid">
                     <h6>{{page.j8}}</h6>
-                    <h2>{{page.vs8}}</h2>
+                    <h2>{{page.vs8 | truncate: 9}}</h2>
                     <p>{{page.r8}} - {{page.rr8}}</p>
                 </div>
         </div>
@@ -122,7 +122,7 @@ layout:
                 <div class="container   roundCard {{page.bg9}}">
                     <img src="{{page.IMG9}}" alt="" class="img-fluid">
                     <h6>{{page.j9}}</h6>
-                    <h2>{{page.vs9}}</h2>
+                    <h2>{{page.vs9 | truncate: 9}}</h2>
                     <p>{{page.r9}} - {{page.rr9}}</p>
                 </div>
         </div>
