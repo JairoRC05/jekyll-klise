@@ -1,7 +1,7 @@
 ---
 layout: teamCard3
 permalink: /team/:title.html
-categories: LA2024JN
+categories: LA2024JN LIN1 LIN2 LIN3 LIN4 LIN5 LIN6 LIN7 LIN8  LIN10 LIN11
 maincover: /assets/logos/BDLF.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700

@@ -13,6 +13,19 @@
   }
 
 
+
+  .LIN{
+    background-image: url(/assets/backgrounds/lin.jpg);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  } 
+
+  /* .LIN{
+    background-color: #F4F2F3;
+  } */
+
   .fire{
     background-color: rgba(136, 5, 5, 0.678);
   }
