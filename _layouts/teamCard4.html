@@ -5,10 +5,10 @@ layout:
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="bg-night">
+<body class="{{page.cover}}">
 
 
-    <nav class="navbar bg-night">
+    <nav class="navbar">
         <div class="container d-flex justify-content-between align-items-center">
             <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
             <div class="">
@@ -26,17 +26,20 @@ layout:
             </a>
             <div class=" textPromo">
                 <div class=" textPromo d-flex justify-content-start align-items-start">
-                    <h1 class="text-white mb-0 ">{{page.team}}</h1>
+                    <h1 class="text-white mb-0 ms-3 d-block d-md-none">{{page.team | truncate: 11}}</h1>
+                    <h1 class="text-white mb-0 ms-3 d-none d-md-block d-lg-none">{{page.team | truncate: 15}}</h1>
+                    <h1 class="text-white mb-0 ms-3 d-none d-lg-block d-xl-none">{{page.team | truncate: 22}}</h1>
+                    <h1 class="text-white mb-0 ms-3 d-none d-xl-block">{{page.team}}</h1>
 
                     <!-- <span class="steel ms-3 d-none d-lg-block">{{page.rango}}</span> -->
                 </div>
-                <p class="text-white">{{ page.ID}}</p>
+                <p class="text-white ms-3">{{ page.ID}}</p>
                 <!-- <span class="steel ms-3 d-block d-lg-none">{{page.rango}}</span> -->
         </div>
     </div>
     </div>
 
-    <div class="container mb-2 d-flex justify-content-between align-items-center league ">
+    <div class="container mb-2 d-flex justify-content-between align-items-center  ">
 
 
         {% if page.route == "/liga-indigo-platino" %}

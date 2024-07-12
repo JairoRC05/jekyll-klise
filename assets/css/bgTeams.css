@@ -1,0 +1,27 @@
+.DFSPL{
+    background-image: url(/assets/backgrounds/platino.png);
+    background-color: rgb(2, 2, 43);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .DFSRU{
+    background-image: url(/assets/backgrounds/ruby.png);
+    background-color: rgb(2, 2, 43);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .fire{
+    background-color: rgba(136, 5, 5, 0.678);
+  }
+
+  .ofire{
+    background-color: rgba(83, 4, 4, 0.678);
+  }
+
+
+  .orock {
+    border: 1px solid rgb(83, 83, 83);
+}

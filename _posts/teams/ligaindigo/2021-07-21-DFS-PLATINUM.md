@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: teamCard4
 permalink: /team/:title.html
 categories: LI LI1   LI4 LI5 LI6 LI7 LI8 LI9 
 maincover: /assets/logos/DFS.png
@@ -12,7 +12,7 @@ color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
-cover: /assets/backCard.png
+cover: DFSPL
 team: DRAGONFLIES GAMING PLATINUM
 ID: DFS PLATINUM
 puntos: 
@@ -20,15 +20,19 @@ pj:
 
 #PARTIDO 1
 j1: RONDA 1
+vs1: FLIES ES
+IMG1: /assets/logos/BDLF.png
 p1:  DFS PLATINUM
 pp1: FLIES ES
-bg1: rock rock
-r1: 0
-rr1: 0
+bg1: rock 
+r1: 
+rr1: 
 pt1: 0
 pj1: 0
 #PARTIDO 2
 j2: RONDA 2
+vs2: DFS RUBY
+IMG2: /assets/logos/DFS.png
 p2: DFS RUBY
 pp2: DFS PLATINUM
 bg2: rock rock
@@ -37,25 +41,31 @@ rr2:
 pt2: 
 pj2: 
 #PARTIDO 3
+vs3:  HG REGIOS
+IMG3: /assets/logos/HGREGIOS.png
 j3: RONDA 3
 p3: HG REGIOS
 pp3: DFS PLATINUM
-bg3: rock
+bg3: Orock
 r3: 
 rr3: 
 pt3: 
 pj3: 
 #PARTIDO 4
+vs4: TEAM STAR
+IMG4: /assets/logos/TSR.png
 j4: RONDA 4
 p4:  DFS PLATINUM
 pp4: TEAM STAR
-bg4: rock 
+bg4: orock 
 r4: 
 rr4: 
 pt4: 
 pj4: 
 #PARTIDO 5
 j5: RONDA 5
+vs5:  STAR-TEC
+IMG5: /assets/logos/STARTEC.png
 p5: DFS PLATINUM
 pp5: STAR-TEC
 bg5: rock 
@@ -64,33 +74,41 @@ rr5:
 pt5: 
 pj5: 1
 #PARTIDO 6
+vs6:  SPC ES
+IMG6: /assets/logos/SPCES.png
 j6: RONDA 6
 p6:  DFS PLATINUM
 pp6: SPC ES
-bg6: rock 
+bg6: orock 
 r6: 
 rr6: 
 pt6: 
 pj6: 
 #PARTIDO 7
+vs7:  POA
+IMG7: /assets/logos/POAX.png
 j7: RONDA 7
 p7: POA
 pp7: DFS PLATINUM
-bg7: rock 
+bg7: orock 
 r7: 
 rr7: 
 pt7: 
 pj7: 
 #PARTIDO 8
+vs8: LAST BREATH
+IMG8: /assets/logos/LASTBREATH.png
 j8: RONDA 8
 p8:  DFS PLATINUM
 pp8: LAST BREATH
-bg8: rock 
+bg8: orock 
 rr8: 
 r8: 
 pt8: 
 pj8: 
 #PARTIDO 9
+vs9: TAE
+IMG9: /assets/logos/TAE.png
 j9: RONDA 9
 p9:  DFS PLATINUM
 pp9: TAE

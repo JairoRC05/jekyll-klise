@@ -14,7 +14,7 @@ color: black
 puntosLJ202404: 17
 grupo: norte
 background: '#F16C38'
-cover: /assets/backCard.png
+cover: bgBlack
 team: LAST BREATH
 ID: LB
 puntos: 
@@ -66,7 +66,7 @@ pj4:
 #PARTIDO 5
 j5: RONDA 5
 vs5: TAE
-IMG5: /assets/logos/BDLF.png
+IMG5: /assets/logos/TAE.png
 p5: LAST BREATH
 pp5: TAE
 bg5: rock rock
@@ -110,7 +110,7 @@ pj8:
 
 #PARTIDO 9
 vs9: TEAM STAR
-IMG9: /assets/logos/BDLF.png
+IMG9: /assets/logos/TSR.png
 j9: RONDA 9
 p9:  LAST BREATH
 pp9: TEAM STAR
