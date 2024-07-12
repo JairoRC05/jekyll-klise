@@ -1,0 +1,53 @@
+.roundCard{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex ;
+   justify-items: center;
+   align-items: center;
+   flex-direction: column;
+  }
+
+
+
+.roundCard > img {
+    width: 200px;
+}
+
+.roundCard > h2 {
+    margin: 0;
+}
+.roundCard > h6 {
+    margin-bottom: 0;
+}
+
+
+.roundCard > p {
+    margin: 0;
+
+}
+
+
+.orock{
+    border: 1px solid rgb(53, 53, 53) ;
+}
+
+
+
+
+@media (max-width: 767.98px) { 
+    .roundCard{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .roundCard > img {
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    .roundCard > h2, p, h6 {
+       font-size: 18px;
+    }
+    
+
+}
