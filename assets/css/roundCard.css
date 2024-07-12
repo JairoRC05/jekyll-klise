@@ -1,53 +1,102 @@
-.roundCard{
+.roundCard {
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
-    display: flex ;
-   justify-items: center;
-   align-items: center;
-   flex-direction: column;
-  }
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-
-
-.roundCard > img {
+.roundCard>img {
     width: 200px;
 }
 
-.roundCard > h2 {
-    margin: 0;
-}
-.roundCard > h6 {
+.roundCard>h6 {
     margin-bottom: 0;
+
 }
 
-
-.roundCard > p {
+.roundCard>p {
     margin: 0;
 
 }
 
+.round {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-.orock{
-    border: 1px solid rgb(53, 53, 53) ;
+.round > p{
+margin: 0;
+}
+.roundInfo > h6{
+    color: yellow;
 }
 
 
 
 
-@media (max-width: 767.98px) { 
-    .roundCard{
+.roundInfo {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.roundInfo>h2, h6 {
+    margin: 0;
+}
+
+
+
+
+.orock {
+    border: 1px solid rgb(53, 53, 53);
+}
+
+@media (max-width: 767.98px) {
+    .roundCard {
+        flex-direction: row;
+        justify-content: start;
+    }
+    .roundInfo {
+        align-items: start;
+       
+    }
+
+    .round{
         flex-direction: row;
         justify-content: space-between;
-      }
-      .roundCard > img {
-        width: 50px;
-        margin-right: 20px;
+        width: 100%;
+        margin-left: 10px;
     }
 
-    .roundCard > h2, p, h6 {
-       font-size: 18px;
+    .roundInfo > h6{
+        font-size: 16px;
     }
-    
+
+    .roundInfo>h2,
+    p{
+        font-size: 18px;
+    }
+
+    .roundCard>img {
+        width: 50px;
+        
+    }
+
+    .roundCard>h2,
+    p,
+    h6 {
+        font-size: 18px;
+    }
+
+ 
 
 }
