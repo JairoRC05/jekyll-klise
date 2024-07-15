@@ -16,6 +16,8 @@ team: TEAM SATISFACTION
 ID: TSA
 puntos: 
 pj: 
+dia: '26'
+hora: '22:10'
 route: /liga-naranja
 #PARTIDO 1
 j1: RONDA 1
@@ -117,8 +119,6 @@ rr11:
 pt11: 
 pj11: 
 stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 25
-hora: '21:10'
 # pj: 11
 # pt1: 2
 # pt2: 3

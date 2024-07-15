@@ -101,8 +101,8 @@ rr9:
 pt9: 
 pj9: 
 stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 25
-hora: '21:10'
+dia: 23
+hora: '21:50'
 # pj: 11
 # pt1: 0
 # pt2: 0

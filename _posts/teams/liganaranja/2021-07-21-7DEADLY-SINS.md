@@ -17,6 +17,8 @@ team: 7DEADLY-SINS
 ID: 7DS
 puntos: 0
 pj: 1
+dia: '26'
+hora: '21:10'
 #PARTIDO 1
 j1: RONDA 1
 p1: LEGION P&S
@@ -116,7 +118,6 @@ r11:
 rr11: 
 pt11: 0
 pj11: 0
-hora: '21:10'
 # pj: 11
 # pt1: 1
 # pt2: 3

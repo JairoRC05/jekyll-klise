@@ -17,6 +17,8 @@ team: RISING STARS
 ID: RS
 puntos: 
 pj: 
+dia: 25
+hora: '21:10'
 #PARTIDO 1
 j1: RONDA 1
 p1: RISING STARS
@@ -117,8 +119,7 @@ rr11:
 pt11: 
 pj11: 
 stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 25
-hora: '21:10'
+
 # pj: 11
 # pt1: 1
 # pt2: 3

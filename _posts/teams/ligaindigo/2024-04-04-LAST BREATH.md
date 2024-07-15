@@ -120,7 +120,7 @@ rr9: 0
 pt9: 
 pj9: 
 stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 21
+dia: 30
 hora: '21:10'
 # pj: 11
 # pt1: 2
