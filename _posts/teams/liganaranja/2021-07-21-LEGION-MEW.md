@@ -2,7 +2,7 @@
 layout: teamCard3
 permalink: /team/:title.html
 categories: LA2024JN LIN1 LIN2 LIN3 LIN5 LIN6 LIN9  LIN10 
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/LGN.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
 title: LEGION MEW

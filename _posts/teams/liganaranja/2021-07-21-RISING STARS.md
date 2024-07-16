@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: RISING STARS
 ID: RS
-puntos: 
-pj: 
+puntos: 0
+pj: 1
 dia: 25
 hora: '21:10'
 #PARTIDO 1
@@ -26,8 +26,8 @@ pp1: STAR-TEC B
 bg1: rock rock
 r1: 
 rr1: 
-pt1: 
-pj1: 
+pt1: 0
+pj1: 0
 #PARTIDO 2
 j2: RONDA 2
 p2: POA GIRLS
@@ -35,8 +35,8 @@ pp2: RISING STARS
 bg2: rock rock
 r2: 
 rr2: 
-pt2: 
-pj2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: LEGION MEW
@@ -44,8 +44,8 @@ pp3: RISING STARS
 bg3: rock
 r3: 
 rr3: 
-pt3: 
-pj3: 
+pt3: 0
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: RISING STARS
@@ -53,8 +53,8 @@ pp4: LOT
 bg4: rock 
 r4: 
 rr4: 
-pt4: 
-pj4: 
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: RISING STARS
@@ -62,8 +62,8 @@ pp5: 7DS
 bg5: rock 
 r5: 
 rr5: 
-pt5: 
-pj5: 1
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: RISING STARS
@@ -71,8 +71,8 @@ pp6: TSA
 bg6: rock 
 r6: 
 rr6: 
-pt6: 
-pj6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 j7: RONDA 7
 p7:  RISING STARS
@@ -80,8 +80,8 @@ pp7: DESCANSO
 bg7: rock 
 r7: 
 rr7: 
-pt7: 
-pj7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
 p8: TEAM AQUA
@@ -89,8 +89,8 @@ pp8: RISING STARS
 bg8: rock 
 rr8: 
 r8: 
-pt8: 
-pj8: 
+pt8: 0
+pj8: 0
 #PARTIDO 9
 j9: RONDA 9
 p9: RISING STARS
@@ -98,17 +98,17 @@ pp9: IL REBORN
 bg9: rock
 r9: 
 rr9: 
-pt9: 
-pj9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: RISING STARS
 pp10: LEGION P&S
 bg10: rock 
-r10: 
-rr10: 
-pt10: 
-pj10: 
+r10: 0
+rr10: 3
+pt10: 0
+pj10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: RISING STARS
@@ -116,8 +116,8 @@ pp11: EK BLACK
 bg11: rock 
 r11: 
 rr11: 
-pt11: 
-pj11: 
+pt11: 0
+pj11: 0
 stream: <i class="fa-brands fa-twitch text-white"></i>
 
 # pj: 11

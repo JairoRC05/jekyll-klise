@@ -14,8 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA
-puntos: 
-pj: 
+puntos: 2
+pj: 1
 dia: '26'
 hora: '22:10'
 route: /liga-naranja
@@ -26,8 +26,8 @@ pp1: TSA
 bg1: rock rock
 r1: 
 rr1: 
-pt1: 
-pj1: 
+pt1: 0
+pj1: 0
 #PARTIDO 2
 j2: RONDA 2
 p2: LEGION P&S
@@ -35,8 +35,8 @@ pp2: TSA
 bg2: rock rock
 r2: 
 rr2: 
-pt2: 
-pj2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: EK BLACK
@@ -44,8 +44,8 @@ pp3: TSA
 bg3: rock
 r3: 
 rr3: 
-pt3: 
-pj3: 
+pt3: 0
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: TSA
@@ -53,8 +53,8 @@ pp4: STAR-TEC
 bg4: rock 
 r4: 
 rr4: 
-pt4: 
-pj4:
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: POA GIRLS
@@ -62,8 +62,8 @@ pp5: TSA
 bg5: rock 
 r5: 
 rr5: 
-pt5: 
-pj5: 
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: RISING STARS
@@ -71,17 +71,17 @@ pp6: TSA
 bg6: rock 
 r6: 
 rr6: 
-pt6: 
-pj6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 j7: RONDA 7
 p7: LOT
 pp7: TSA
 bg7: rock 
-r7: 
-rr7: 
-pt7: 
-pj7: 
+r7: 1
+rr7: 2
+pt7: 2
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  7DS
@@ -89,8 +89,8 @@ pp8: TSA
 bg8: rock 
 rr8: 
 r8: 
-pt8: 
-pj8: 
+pt8: 0
+pj8: 0
 #PARTIDO 9
 j9: RONDA 9
 p9: LEGION MEW
@@ -98,8 +98,8 @@ pp9: TSA
 bg9: rock
 r9: 
 rr9: 
-pt9: 
-pj9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
 p10: TSA
@@ -107,8 +107,8 @@ pp10: DESCANSO
 bg10: rock 
 r10: 
 rr10: 
-pt10: 
-pj10: 
+pt10: 0
+pj10: 0
 #PARTIDO 11
 j11: RONDA 11
 p11: TEAM AQUA
@@ -116,8 +116,8 @@ pp11: TSA
 bg11: rock 
 r11: 
 rr11: 
-pt11: 
-pj11: 
+pt11: 0
+pj11: 0
 stream: <i class="fa-brands fa-twitch text-white"></i>
 # pj: 11
 # pt1: 2

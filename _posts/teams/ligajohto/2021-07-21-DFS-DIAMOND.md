@@ -16,8 +16,8 @@ cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 
 ID: DFS DMD
-puntos: 
-pj: 
+puntos: 0
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 p1:  DFS DIAMOND
@@ -38,13 +38,13 @@ pt2:
 pj2: 
 #PARTIDO 3
 j3: RONDA 3
-p3: ZERONOTE
+p3: ZERONOTE 
 pp3: DFS DIAMOND
 bg3: rock
-r3: 
-rr3: 
-pt3: 
-pj3: 
+r3: 3
+rr3: 0
+pt3: 3
+pj3: 1 
 #PARTIDO 4
 j4: RONDA 4
 p4:  DFS DIAMOND

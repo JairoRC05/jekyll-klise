@@ -2,7 +2,7 @@
 layout: teamCard3
 permalink: /team/:title.html
 categories: LA2024JN LIN1 LIN2 LIN3 LIN4 LIN5 LIN6 LIN7 LIN8  LIN10 LIN11
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/7DS.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
 title: 7 DEADLY SINS
@@ -13,10 +13,10 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: 7DEADLY-SINS
+team: 7 DEADLY SINS
 ID: 7DS
-puntos: 0
-pj: 1
+puntos: 1
+pj: 2
 dia: '26'
 hora: '21:10'
 #PARTIDO 1
@@ -42,10 +42,10 @@ j3: RONDA 3
 p3: 7DS
 pp3: STAR-TEC B
 bg3: rock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+r3: 1
+rr3: 2
+pt3: 1
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: POA GIRLS
