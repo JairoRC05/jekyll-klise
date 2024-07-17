@@ -52,7 +52,11 @@ permalink: /liga-naranja.html
                  <a class="text-dark" href="{{ post.url }}">
                   <div class="container teamList d-flex justify-content-between align-items-center">
                       <div class="teamIN text-dark">
+                        {% if post.ID == "RS" %}
+                        <img src="/assets/logos/RSALT.png" class="drop img-fluid" alt="">
+                        {% else %}
                         <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                        {% endif %}
                         <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
                         <span>{{post.pj}}</span>
                       </div>
