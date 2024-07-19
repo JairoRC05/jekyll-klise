@@ -8,27 +8,14 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  text-align: center;
   font-family: "Exo 2", sans-serif;
   background: #5a7fff url(/assets/backgrounds/pokedex.jpg) center top no-repeat;
   background-size: 100% auto;
-  border-color: #000000;
+
+  @media screen and (max-width: 1400px) {
+    background-size:  auto;
 }
-
-.container {
-  flex-direction: column;
-  gap: 50px;
-  padding: 30px;
 }
-
-
-
-
 
 
 .screen{
@@ -64,11 +51,11 @@ body {
 button {
   height: 52px;
   margin: 10px;
-  position: relative;
+
   width: calc(50% - 20px);
   font-weight: 700;
   font-size: 17px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -118,7 +105,16 @@ button.wrong {
 }
 
 
+.navbar-brand > a{
+  text-decoration: none;
+  color: white;
+}
 
+
+
+.blue{
+ background:  #5a7fff
+}
 
 /* HTML: <div class="loader"></div> */
 .loader {
