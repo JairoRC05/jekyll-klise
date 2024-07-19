@@ -16,8 +16,8 @@ cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 
 ID: DFS DMD
-puntos: 0
-pj: 1
+puntos: 1
+pj: 2
 #PARTIDO 1
 j1: RONDA 1
 p1:  DFS DIAMOND
@@ -83,13 +83,14 @@ pt7:
 pj7: 
 #PARTIDO 8
 j8: RONDA 8
+bg8: rock rock
 p8:  DFS DIAMOND
 pp8: GG GHOST
-bg8: rock 
-rr8: 
-r8: 
-pt8: 
-pj8: 
+r8: 1
+rr8: 2
+pt8: 1
+pj8: 1
+
 #PARTIDO 9
 j9: RONDA 9
 p9:  DFS DIAMOND

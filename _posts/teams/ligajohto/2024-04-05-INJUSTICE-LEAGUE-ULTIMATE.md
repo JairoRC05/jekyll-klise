@@ -15,10 +15,9 @@ puntosLJ202404: 20
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-puntos: 0
-pj: 0
-puntos: 
-pj: 
+
+puntos: 2
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 p1: IL ULTIMATE 
@@ -35,8 +34,8 @@ pp2: IL ULTIMATE
 bg2: rock rock
 r2: 
 rr2: 
-pt2: 
-pj2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: IL ULTIMATE
@@ -44,8 +43,8 @@ pp3: GG GHOST
 bg3: rock
 r3: 
 rr3: 
-pt3: 
-pj3: 
+pt3: 0
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: IL ULTIMATE 
@@ -53,8 +52,8 @@ pp4: SSI
 bg4: rock 
 r4: 
 rr4: 
-pt4: 
-pj4: 
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 p5: IL ULTIMATE
@@ -62,17 +61,17 @@ pp5: T-BONERS
 bg5: rock 
 r5: 
 rr5: 
-pt5: 
-pj5: 1
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6: DFS SAPPHIRE
 pp6: IL ULTIMATE
 bg6: rock 
-r6: 
-rr6: 
-pt6: 
-pj6: 
+r6: 1
+rr6: 2
+pt6: 2
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: IL ULTIMATE
@@ -80,8 +79,8 @@ pp7: DFS DIAMOND
 bg7: rock 
 r7: 
 rr7: 
-pt7: 
-pj7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
 p8: IL ULTIMATE 
@@ -89,8 +88,8 @@ pp8: PROJECT ONE
 bg8: rock 
 rr8: 
 r8: 
-pt8: 
-pj8: 
+pt8: 0
+pj8: 0
 #PARTIDO 9
 j9: RONDA 9
 p9: IL ULTIMATE
@@ -98,8 +97,8 @@ pp9: HG SOULSILVER
 bg9: rock
 r9: 
 rr9: 
-pt9: 
-pj9: 
+pt9: 0
+pj9: 0
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 23
 hora: '21:50'
