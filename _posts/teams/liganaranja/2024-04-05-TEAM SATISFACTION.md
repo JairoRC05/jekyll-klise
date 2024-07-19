@@ -15,7 +15,7 @@ cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA
 puntos: 2
-pj: 1
+pj: 2
 dia: '26'
 hora: '22:10'
 route: /liga-naranja
@@ -30,13 +30,13 @@ pt1: 0
 pj1: 0
 #PARTIDO 2
 j2: RONDA 2
-p2: LEGION P&S
-pp2: TSA
 bg2: rock rock
-r2: 
-rr2: 
+p2: LEGION P&S
+r2: 3
+pp2: TSA
+rr2: 0
 pt2: 0
-pj2: 0
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: EK BLACK
