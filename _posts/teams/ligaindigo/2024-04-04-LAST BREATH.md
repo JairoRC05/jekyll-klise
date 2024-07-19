@@ -6,7 +6,7 @@ maincover: /assets/logos/LASTBREATH.png
 puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
-route: /liga-indigo-platino
+route: /liga-indigo
 status: <i class="fa-soLJd fa-check"></i>
 rango: ACERO
 tag: johto042024
@@ -17,8 +17,8 @@ background: '#F16C38'
 cover: bgBlack
 team: LAST BREATH
 ID: LB
-puntos: 
-pj: 
+puntos: 3
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 vs1:  STAR-TEC
@@ -61,8 +61,8 @@ pp4: LAST BREATH
 bg4: rock
 r4: 0
 rr4: 0
-pt4: 
-pj4: 
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 vs5: TAE
@@ -72,19 +72,19 @@ pp5: TAE
 bg5: rock rock
 r5: 0
 rr5: 0
-pt5: 
-pj5: 
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
-vs6 : FLIES ES
-IMG6: /assets/logos/BDLF.png
+vs6 : FLYZ EZ
+IMG6: /assets/logos/FZ.png
 p6: LAST BREATH
-pp6: FLIES ES
+pp6: FLYZ EZ
 bg6: orock
 r6: 0
 rr6:  0
-pt6: 
-pj6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 vs7: DFS RUBY
 IMG7: /assets/logos/DFS.png
@@ -93,9 +93,9 @@ p7:  DFS RUBY
 pp7: LAST BREATH
 bg7: orock
 r7: 0
-rr7: 0
-pt7: 0
-pj7: 0
+rr7: 3
+pt7: 3
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 vs8: DFS PLATINUM
@@ -105,8 +105,8 @@ pp8: LAST BREATH
 bg8: rock
 rr8: 0
 r8: 0
-pt8: 
-pj8: 
+pt8: 0
+pj8: 0
 
 #PARTIDO 9
 vs9: TEAM STAR
@@ -117,8 +117,8 @@ pp9: TEAM STAR
 bg9: rock
 r9: 0
 rr9: 0
-pt9: 
-pj9: 
+pt9: 0
+pj9: 0
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 30
 hora: '21:10'

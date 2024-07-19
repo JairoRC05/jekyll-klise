@@ -15,7 +15,7 @@ ID: SKZ
 puntos: 26
 pj: 11
 #PARTIDO 1
-route: /liga-indigo-platino
+route: /liga-indigo
 j1: RONDA 1
 p1: KOD
 pp1: SKZ

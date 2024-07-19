@@ -13,7 +13,7 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: HG OLYMPUS
-route: /liga-indigo-platino
+route: /liga-indigo
 ID: HG
 puntos: 0
 pj: 11

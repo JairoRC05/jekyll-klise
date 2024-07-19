@@ -6,7 +6,7 @@ maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: DFS PLATINUM
-route: /liga-indigo-platino
+route: /liga-indigo
 tag: johto042024
 color: black
 puntosLJ202404: 12
@@ -20,10 +20,10 @@ pj:
 
 #PARTIDO 1
 j1: RONDA 1
-vs1: FLIES ES
-IMG1: /assets/logos/BDLF.png
+vs1: FLYZ EZ
+IMG1: /assets/logos/FZ.png
 p1:  DFS PLATINUM
-pp1: FLIES ES
+pp1: FLYZ EZ
 bg1: rock 
 r1: 
 rr1: 
