@@ -24,7 +24,7 @@ author:
 url: "https://xforceunite.com" #
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics: G-4M64EKVQ7H # leave it blank if not wish
 fb_appid:
 
 # Collection setting
