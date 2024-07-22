@@ -16,18 +16,18 @@ cover: /assets/backCard.png
 team: 7 DEADLY SINS
 ID: 7DS
 puntos: 1
-pj: 2
+pj: 3
 dia: '26'
 hora: '21:10'
 #PARTIDO 1
 j1: RONDA 1
+bg1: rock
 p1: LEGION P&S
+r1: 3
 pp1: 7DS
-bg1: rock rock
-r1: 
-rr1: 
+rr1: 0
 pt1: 0
-pj1: 0
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: 7DS
