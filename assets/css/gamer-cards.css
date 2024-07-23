@@ -1,0 +1,61 @@
+.gamer-card {
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+
+.gamer-top{
+
+position: relative;
+background: rgb(27,32,52);
+background: -moz-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
+background: -webkit-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
+background: linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endColorstr="#1b2034",GradientType=1);
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: start;
+align-items: center;
+padding: 10px;
+border-radius: 20px 0 0 0;
+overflow: hidden;
+}
+
+
+
+.gamer-top > img{
+    position: absolute;
+    width: 120px;
+}
+
+.gamer-title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    
+}
+
+
+.gamer-title > img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.gamer-title > h4 {
+   margin: 0;
+   font-style: italic;
+    font-weight:600;
+    text-shadow: 2px 3px 2px rgba(0,0,0,0.6);
+}
+
+
+.gamer-desc{
+    background: #fff;
+    height: 70px;
+    clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
+    color: #220a3d;
+    padding: 10px
+}
+

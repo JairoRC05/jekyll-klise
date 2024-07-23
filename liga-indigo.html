@@ -3,6 +3,7 @@ layout:
 permalink: /liga-indigo-beta.html
 ---
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
@@ -13,118 +14,113 @@ permalink: /liga-indigo-beta.html
 
 
   <div class="container-fluid banner grBlue">
-
     <div class="container bannerPromo d-flex justify-content-start align-items-center">
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
       </a>
-      <div class=" textIndigo">
-        <h1 class="text-white ms-3 mb-0 d-none d-lg-block liga-indigo">LIGA INDIGO</h1>
-        <h1 class="text-white ms-3 mb-0 d-block d-lg-none liga-indigo">LIGA INDIGO</h1>
-        <span class="text-white ms-3 d-none d-lg-block"></span>
-        <span class="text-white ms-3 d-block d-lg-none"></span>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+      </div>
     </div>
   </div>
 
-  </div>
 
-
-  <div class="container ">
+  <div class="container d-none d-md-block">
     {% include cards-teams-icon.html %}
   </div>
 
 
-    <div class="container text-white ">
-      <div class="row">
+  <div class="container text-white d-block d-md-none">
+    <div class="row">
 
-        <div class="col-12 col-md-6 mt-5">
-          <div class="container d-flex teamList justify-content-start align-items-center">
-            <div>
-              {% assign norte = site.categories.pljmy24 | sort: "title" %}
-              {%- for post in norte limit:10 -%}
+      <div class="col-12 col-md-6 ">
+        <div class="container d-flex teamList justify-content-start align-items-center">
+          <div>
+            {% assign norte = site.categories.pljmy24 | sort: "title" %}
+            {%- for post in norte limit:10 -%}
 
-              <div class="container d-flex teamList justify-content-between align-items-center">
-                <div class="teamIN">
-                  <p><b>{{ post.title | escape }}</b></p>
-                </div>
+            <div class="container d-flex teamList justify-content-between align-items-center">
+              <div class="teamIN">
+                <p><b>{{ post.title | escape }}</b></p>
               </div>
-
-
-
-              {%- endfor -%}
-
             </div>
-            <div class="w-100">
-              {% assign LIGA = site.categories.LI | sort: "puntos"
-              | reverse %}
-              {%- for post in LIGA-%}
 
-              <a class="text-white" href="{{ post.url }}">
-                <div class="container teamList d-flex justify-content-between align-items-center">
-                  <div class="teamIN text-white">
-                    <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                    <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
-                    <span>{{post.pj}}</span>
-                  </div>
-                  <div class="teamIN text-white">
 
-                    <p>{{ post.puntos | escape }} pts</p>
-                  </div>
 
-                </div>
-              </a>
+            {%- endfor -%}
 
-              {%- endfor -%}
-            </div>
           </div>
-        </div>
+          <div class="w-100">
+            {% assign LIGA = site.categories.LI | sort: "puntos"
+            | reverse %}
+            {%- for post in LIGA-%}
 
-
-
-        <div class="col-12 col-md-6 mt-0 mt-5">
-          <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
-            <div class="teamIMG ms-3 text-white">
-              <img src="/assets/logos/COPA XFORCE.png" alt="">
-            </div>
-            <div class="ms-3">
-
-              {% assign norte = site.categories.LI | sort: "puntos"
-              | reverse %}
-              {%- for post in norte limit:2 -%}
-
-              <div class=" teamList d-flex justify-content-between align-items-center">
+            <a class="text-white" href="{{ post.url }}">
+              <div class="container teamList d-flex justify-content-between align-items-center">
                 <div class="teamIN text-white">
                   <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                  <p class="text-uppercase">{{ post.title | escape }}</p>
+                  <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
+                  <span>{{post.pj}}</span>
                 </div>
-              </div>
-              {%- endfor -%}
-            </div>
-          </div>
-
-          <div class="container cardOrange teamList d-flex justify-content-start align-items-center">
-            <div class="teamIMG ms-3 text-white">
-              <img src="/assets/logos/LIGA-JOHTO.png" alt="">
-            </div>
-            <div class="ms-3">
-
-              {% assign norte = site.categories.LI | sort: "puntos" | reverse %}
-              {%- for post in norte limit:3 offset:7 -%}
-
-              <div class=" teamList d-flex justify-content-between align-items-center">
                 <div class="teamIN text-white">
-                  <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                  <p class="text-uppercase">{{ post.title | escape }}</p>
+
+                  <p>{{ post.puntos | escape }} pts</p>
                 </div>
+
               </div>
-              {%- endfor -%}
-            </div>
+            </a>
+
+            {%- endfor -%}
           </div>
-
-
         </div>
       </div>
+
+
+
+      <div class="col-12 col-md-6 mt-0 ">
+        <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
+          <div class="teamIMG ms-3 text-white">
+            <img src="/assets/logos/COPA XFORCE.png" alt="">
+          </div>
+          <div class="ms-3">
+
+            {% assign norte = site.categories.LI | sort: "puntos"
+            | reverse %}
+            {%- for post in norte limit:2 -%}
+
+            <div class=" teamList d-flex justify-content-between align-items-center">
+              <div class="teamIN text-white">
+                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                <p class="text-uppercase">{{ post.title | escape }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="container cardOrange teamList d-flex justify-content-start align-items-center">
+          <div class="teamIMG ms-3 text-white">
+            <img src="/assets/logos/LIGA-JOHTO.png" alt="">
+          </div>
+          <div class="ms-3">
+
+            {% assign norte = site.categories.LI | sort: "puntos" | reverse %}
+            {%- for post in norte limit:3 offset:7 -%}
+
+            <div class=" teamList d-flex justify-content-between align-items-center">
+              <div class="teamIN text-white">
+                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
+                <p class="text-uppercase">{{ post.title | escape }}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+
+      </div>
     </div>
+  </div>
 
 
 

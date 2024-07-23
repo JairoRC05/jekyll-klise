@@ -1,3 +1,35 @@
 .home{
     background-color: #F6F7F9;
 }
+
+
+.rsl{
+    background: linear-gradient(24deg, #000000, #082f8e, #9810d7, #9e05ae, #000000, #ff00d4);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 38s ease infinite;
+    -moz-animation: AnimationName 38s ease infinite;
+    -o-animation: AnimationName 38s ease infinite;
+    animation: AnimationName 38s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}

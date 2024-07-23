@@ -12,12 +12,18 @@
     font-family: "Exo 2", sans-serif;
   }
 
+
+
+
+
 @import url("/assets/css/slider.css");
 @import url("/assets/css/roundCard.css");
 @import url("/assets/css/bgTeams.css");
 @import url("/assets/css/colors.css");
 @import url("/assets/css/cards.css");
 @import url("/assets/css/home.css");
+@import url("/assets/css/banner.css");
+
 
   
 @font-face {
@@ -46,11 +52,7 @@
   }
   
 
-  .liga-indigo{
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+
   
 
 // OWN
@@ -1816,18 +1818,7 @@ position: absolute;
     border-radius: 10px;
   }
 
-.banner{
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
-.bannerPromo{
-  height: 100%;
-  padding: 0;
-}
 
 .match{
   padding: 20px;
@@ -1974,13 +1965,6 @@ color: #fff;
 
 
 
-.bannerPromo > img{
-  width: 150px;
-}
-
-.bannerPromo > a > img{
-  width: 150px;
-}
 
 .teamList{
   min-height: 40px;
@@ -2164,9 +2148,7 @@ color: #fff;
 
   @media only screen and (max-width: 768px) {
 
-    .textIndigo > h1{
-      font-size: 28px;
-    }
+ 
     
     .teamIMG > img{
       width: 50px;
@@ -2174,13 +2156,6 @@ color: #fff;
       display: none;
     }
 
-    .banner{
-      height: 100px;
-    }
-
-    .bannerPromo > a > img{
-      width: 90px;
-    }
 
 
     .textPromo > h1{
