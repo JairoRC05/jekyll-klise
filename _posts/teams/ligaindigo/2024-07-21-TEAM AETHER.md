@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 2
-pj: 1
+puntos: 5
+pj: 2
 #PARTIDO 1
 j1: RONDA 1
 p1: TEAM STAR
@@ -83,12 +83,12 @@ pj7: 0
 #PARTIDO 8
 j8: RONDA 8
 p8: DFS RUBY
+r8: 0
 pp8: TAE
 bg8: rock rock
-r8: 
-rr8: 
-pt8: 0
-pj8: 0  
+rr8: 3
+pt8: 3
+pj8: 1  
 #PARTIDO 9
 j9: RONDA 9
 p9: DFS PLATINUM

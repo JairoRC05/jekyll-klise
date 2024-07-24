@@ -17,8 +17,8 @@ background: '#F16C38'
 cover: bgBlack
 team: LAST BREATH
 ID: LB
-puntos: 3
-pj: 1
+puntos: 9
+pj: 3
 #PARTIDO 1
 j1: RONDA 1
 vs1:  STAR-TEC
@@ -60,9 +60,9 @@ p4: HG REGIOS
 pp4: LAST BREATH
 bg4: rock
 r4: 0
-rr4: 0
-pt4: 0
-pj4: 0
+rr4: 3
+pt4: 3
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 vs5: TAE
@@ -81,10 +81,10 @@ IMG6: /assets/logos/FZ.png
 p6: LAST BREATH
 pp6: FLYZ EZ
 bg6: orock
-r6: 0
+r6: 3
 rr6:  0
-pt6: 0
-pj6: 0
+pt6: 3
+pj6: 1
 #PARTIDO 7
 vs7: DFS RUBY
 IMG7: /assets/logos/DFS.png
