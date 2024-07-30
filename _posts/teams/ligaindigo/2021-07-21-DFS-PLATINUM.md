@@ -15,20 +15,20 @@ background: '#F16C38'
 cover: DFSPL
 team: DRAGONFLIES GAMING PLATINUM
 ID: DFS PLATINUM
-puntos: 
-pj: 
+puntos: 2
+pj: 4
 
 #PARTIDO 1
 j1: RONDA 1
 vs1: FLYZ EZ
 IMG1: /assets/logos/FZ.png
-p1:  DFS PLATINUM
-pp1: FLYZ EZ
 bg1: rock 
-r1: 
-rr1: 
-pt1: 0
-pj1: 0
+p1:  DFS PLATINUM
+r1: 1
+pp1: FLYZ EZ
+rr1: 2
+pt1: 1
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 vs2: DFS RUBY
@@ -38,8 +38,8 @@ pp2: DFS PLATINUM
 bg2: rock rock
 r2: 
 rr2: 
-pt2: 
-pj2: 
+pt2: 0 
+pj2: 0
 #PARTIDO 3
 vs3:  HG REGIOS
 IMG3: /assets/logos/HGREGIOS.png
@@ -49,19 +49,19 @@ pp3: DFS PLATINUM
 bg3: Orock
 r3: 
 rr3: 
-pt3: 
-pj3: 
+pt3: 0
+pj3: 0
 #PARTIDO 4
 vs4: TEAM STAR
 IMG4: /assets/logos/TSR.png
+bg4: orock 
 j4: RONDA 4
 p4:  DFS PLATINUM
+r4: 1
 pp4: TEAM STAR
-bg4: orock 
-r4: 
-rr4: 
-pt4: 
-pj4: 
+rr4: 2
+pt4: 1
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 vs5:  STAR-TEC
@@ -71,7 +71,7 @@ pp5: STAR-TEC
 bg5: rock 
 r5: 
 rr5: 
-pt5: 
+pt5: 0
 pj5: 1
 #PARTIDO 6
 vs6:  SPC ES
@@ -82,8 +82,8 @@ pp6: SPC ES
 bg6: orock 
 r6: 
 rr6: 
-pt6: 
-pj6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 vs7:  POA
 IMG7: /assets/logos/POAX.png
@@ -93,19 +93,19 @@ pp7: DFS PLATINUM
 bg7: orock 
 r7: 
 rr7: 
-pt7: 
-pj7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 vs8: LAST BREATH
 IMG8: /assets/logos/LASTBREATH.png
 j8: RONDA 8
 p8:  DFS PLATINUM
+r8: 0
 pp8: LAST BREATH
+rr8: 3 
 bg8: orock 
-rr8: 
-r8: 
-pt8: 
-pj8: 
+pt8: 0
+pj8: 1
 #PARTIDO 9
 vs9: TAE
 IMG9: /assets/logos/TAE.png
@@ -115,8 +115,8 @@ pp9: TAE
 bg9: rock
 r9: 
 rr9: 
-pt9: 
-pj9: 
+pt9: 0
+pj9: 0
 dia: 31
 hora: '22:10'
 # pj: 11

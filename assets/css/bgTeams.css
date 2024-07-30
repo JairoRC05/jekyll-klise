@@ -38,3 +38,21 @@
   .orock {
     border: 1px solid rgb(83, 83, 83);
 }
+
+
+
+
+.bgDuos{
+  background: rgb(247,244,239);
+  background: linear-gradient(360deg, rgba(247,244,239,1) 10%, rgba(221,233,247,1) 90%);
+}
+
+.bgBanner{
+  background-color: #FF9F15;
+}
+
+.slice{
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 93%);
+
+  
+}

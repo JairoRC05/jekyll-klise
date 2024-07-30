@@ -1,5 +1,5 @@
 .gamer-card {
-    height: 100%;
+    height: AUTO;
     margin-bottom: 10px;
 }
 
@@ -53,9 +53,13 @@ overflow: hidden;
 
 .gamer-desc{
     background: #fff;
-    height: 70px;
+    height: auto;
     clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
     color: #220a3d;
-    padding: 10px
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 0.5;
 }
 

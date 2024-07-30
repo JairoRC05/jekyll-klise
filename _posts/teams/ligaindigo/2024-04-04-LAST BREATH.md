@@ -7,7 +7,6 @@ puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700
 title: LAST BREATH
 route: /liga-indigo
-status: <i class="fa-soLJd fa-check"></i>
 rango: ACERO
 tag: johto042024
 color: black
@@ -17,8 +16,8 @@ background: '#F16C38'
 cover: bgBlack
 team: LAST BREATH
 ID: LB
-puntos: 9
-pj: 3
+puntos: 17
+pj: 6
 #PARTIDO 1
 j1: RONDA 1
 vs1:  STAR-TEC
@@ -48,10 +47,10 @@ j3: RONDA 3
 p3: POA
 pp3: LAST BREATH
 bg3: orock
-r3: 0
-rr3: 0
-pt3: 0
-pj3: 0
+r3: 1
+rr3: 2
+pt3: 2
+pj3: 1
 #PARTIDO 4
 vs4 : HG REGIOS
 IMG4: /assets/logos/HGREGIOS.png
@@ -67,13 +66,13 @@ pj4: 1
 j5: RONDA 5
 vs5: TAE
 IMG5: /assets/logos/TAE.png
-p5: LAST BREATH
-pp5: TAE
 bg5: rock rock
-r5: 0
+p5: LAST BREATH
+r5: 3
 rr5: 0
-pt5: 0
-pj5: 0
+pp5: TAE
+pt5: 3
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 vs6 : FLYZ EZ
@@ -101,12 +100,12 @@ j8: RONDA 8
 vs8: DFS PLATINUM
 IMG8: /assets/logos/DFS.png
 p8:  DFS PLATINUM
-pp8: LAST BREATH
-bg8: rock
-rr8: 0
 r8: 0
-pt8: 0
-pj8: 0
+pp8: LAST BREATH
+rr8: 3
+bg8: rock
+pt8: 3
+pj8: 1
 
 #PARTIDO 9
 vs9: TEAM STAR

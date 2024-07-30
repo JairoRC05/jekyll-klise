@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
 puntos: 5
-pj: 2
+pj: 3
 #PARTIDO 1
 j1: RONDA 1
 p1: TEAM STAR
@@ -55,13 +55,13 @@ pt4: 0
 pj4: 0
 #PARTIDO 5
 j5: RONDA 5
-p5: LAST BREATH
-pp5: TAE
 bg5: rock rock
-r5: 
-rr5: 
+p5: LAST BREATH
+r5: 3
+pp5: TAE
+rr5: 0
 pt5: 0
-pj5: 0
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: HG REGIOS
