@@ -12,8 +12,9 @@ layout:
         <div class="container d-flex justify-content-between align-items-center">
             <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
             <div class="d-none d-lg-block">
-
-
+                <span class="navbar-brand mb-0 h1 text-white"><a target="_blank" href="https://www.twitch.tv/x_force05" class="text-white"><i class="fa-brands fa-twitch"></i></a></span>
+                <span class="navbar-brand mb-0 h1 text-white"><a target="_blank" href="https://discord.gg/T6VpvUmn" class="text-white"><i class="fa-brands fa-discord"></i></a></span>
+              
             </div>
         </div>
     </nav>
@@ -26,10 +27,12 @@ layout:
             <a href="/assets/logos/COPA XFORCE.png" role="button" download="{{ post.title | escape }}.png">
                 <img src="{{page.ICONSL}}" class="drop img-fluid" alt="" ">
         </a>
-        <div class=" textPromo">
-                <h1 class="text-white ms-3 mb-0">{{ page.titleSLR }}</h1>
-
-
+        <div class="textPromo">
+                
+                <h1 class="text-white mb-0 ms-3 d-block d-md-none">{{page.titleSLR | truncate: 15}}</h1>
+                <h1 class="text-white mb-0 ms-3 d-none d-md-block d-lg-none">{{page.titleSLR | truncate: 12}}</h1>
+                <h1 class="text-white mb-0 ms-3 d-none d-lg-block d-xl-none">{{page.titleSLR | truncate: 18}}</h1>
+                <h1 class="text-white mb-0 ms-3 d-none d-xl-block">{{page.titleSLR}}</h1>
         </div>
     </div>
 
@@ -50,10 +53,10 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>INICIO 4PM DIA 10 DE AGOSTO</p>
-                        <p>CIERRE DE INSCRIPCION 8 DE AGOSTO</p>
-                        <p>32 CUPOS</p>
-                        <p>SERVIDOR NA04</p>
+                        <p>INICIO 10 DE AGOSTO A LAS 4PM.</p>
+                        <p>CIERRE DE INSCRIPCION 8 DE AGOSTO.</p>
+                        <p>32 CUPOS.</p>
+                        <p>SERVIDOR NA04.</p>
 
                     </div>
                 </div>
@@ -67,11 +70,11 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA</p>
-                        <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO</p>
+                        <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA.</p>
+                        <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO.</p>
                         <p>EN CASO DE EMPATE, SE DESEMPATARÁ CON LAS SUMA DE LOS MVP´S OBTENIDOS DURANTE EL PARTIDO.</p>
-                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL REPITE PICKS</p>
-                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE TOLERANCIA</p>
+                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL REPITE PICKS.</p>
+                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE TOLERANCIA.</p>
 
                     </div>
                 </div>
@@ -85,9 +88,9 @@ layout:
                     </div>
                     <div class="gamer-desc">
                         <p>EL ENCUENTRO NO SE DETENDRÁ UNA VEZ INICIANDO LA FASE DE ELECCIÓN, DEBIDO QUE ES
-                            RESPONSABILIDAD DE CADA PARTICIPANTE REVISAR SU CONEXIÓN DE LUZ E INTERNET</p>
+                            RESPONSABILIDAD DE CADA PARTICIPANTE REVISAR SU CONEXIÓN DE LUZ E INTERNET.</p>
                         <p>SOLO SE PODRÁ HACER RESET DE LA PARTIDA SI AL JUGADOR SE LE CIERRA EL JUEGO DURANTE LA FASE
-                            DE ELECCIÓN (PRESENTAR PRUEBAS DE DICHO SUCESO)</p>
+                            DE ELECCIÓN (PRESENTAR PRUEBAS DE DICHO SUCESO).</p>
                     </div>
                 </div>
 
@@ -128,10 +131,10 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>ELIMINACIÓN DIRECTA</p>
-                        <p>ZONA DEL MAPA: TOP LINE</p>
-                        <p>2vs2</p>
-                        <p>5 MINUTOS DE JUEGO</p>
+                        <p>ELIMINACIÓN DIRECTA.</p>
+                        <p>ZONA DEL MAPA: TOP LINE.</p>
+                        <p>2vs2.</p>
+                        <p>5 MINUTOS DE JUEGO.</p>
                     </div>
                 </div>
 
@@ -144,11 +147,11 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>16VOS DE FINAL (BO1)</p>
-                        <p>8VOS DE FINAL (BO1)</p>
-                        <p>4TOS DE FINAL (BO1)</p>
-                        <p>SEMIFINALES (BO3)</p>
-                        <p>GRAN FINAL (BO3)</p>
+                        <p>16VOS DE FINAL (BO1).</p>
+                        <p>8VOS DE FINAL (BO1).</p>
+                        <p>4TOS DE FINAL (BO1).</p>
+                        <p>SEMIFINALES (BO3).</p>
+                        <p>GRAN FINAL (BO3).</p>
                     </div>
                 </div>
 
@@ -161,7 +164,7 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>NO SE PUEDEN REPETIR PICKS DURANTE CADA FASE DEL TORNEO</p>
+                        <p>EL DÚO NO PUEDE REPETIR PICKS DURANTE CADA FASE DEL TORNEO.</p>
                     </div>
                 </div>
 
@@ -175,7 +178,7 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>3 MINUTOS</p>
+                        <p>3 MINUTOS.</p>
 
                     </div>
                 </div>
@@ -191,11 +194,11 @@ layout:
                         </div>
                     </div>
                     <div class="gamer-desc">
-                        <p>$1000 MXN</p>
-                        <p>1ER LUGAR 70% DEL PRIZEPOOL</p>
-                        <p>2DO LUGAR 30% DEL PRIZEPOOL</p>
-                        <p>$1000 MXN</p>
-                        <p>EL PREMIO SE PAGARÁ 3 DÍAS DESPUÉS DEL TORNEO</p>
+                        <p>$1000 MXN.</p>
+                        <p>1ER LUGAR 70% DEL PRIZEPOOL.</p>
+                        <p>2DO LUGAR 30% DEL PRIZEPOOL.</p>
+                        <p>$1000 MXN.</p>
+                        <p>EL PREMIO SE PAGARÁ 3 DÍAS DESPUÉS DEL TORNEO.</p>
 
                     </div>
                 </div>
@@ -291,7 +294,7 @@ layout:
 
                         <div class="gamer-note">
                             <p>Al registar a tu dúo estas de acuerdo con las reglas para el torneo Copa XForce Dúos. Si tienes dudas ingresa a nuestro a <a tabindex="_blank" href="https://discord.gg/T6VpvUmn">Discord</a> 
-                                en el canal #torneo-copa-xforce-duos. Los Licencias Unite en prohibición pueden cambiar durante lapso de inscripción esto se avisará en el grupo de Whatsapp del torneo todo depende si hay un parche en el juego.</p>
+                                en el canal #torneo-copa-xforce-duos. Las Licencias Unite en prohibición pueden cambiar durante lapso de inscripción esto se avisará en el grupo de Whatsapp del torneo todo es bajo la situación de un parche, actualización en el juego.</p>
                         </div>
                     </div>
 
@@ -301,6 +304,11 @@ layout:
             </div>
         </div>
     </div>
+
+
+    {% include footer-new.html %}
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -314,22 +322,7 @@ layout:
 
     <script src="/assets/js/email.js"></script>
 
-    {%- if site.google_analytics -%}
-  <!-- Google tag (gtag.js) -->
-  <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "{{ site.google_analytics }}");
-  </script>
-{%- endif -%}
+  
 
 
 </body>
