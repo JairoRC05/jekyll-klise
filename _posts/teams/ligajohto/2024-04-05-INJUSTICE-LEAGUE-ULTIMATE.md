@@ -16,26 +16,26 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 5
-pj: 2
+puntos: 18
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: IL ULTIMATE 
 pp1: GG STEEL
 bg1: rock rock
-r1: 0
-rr1: 0
-pt1: 0
-pj1: 0
+r1: 2
+rr1: 1
+pt1: 2
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: ZERONOTE
+r2: 1
 pp2: IL ULTIMATE
+rr2: 2
 bg2: rock rock
-r2: 
-rr2: 
-pt2: 0
-pj2: 0
+pt2: 2
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: IL ULTIMATE
@@ -47,13 +47,13 @@ pt3: 0
 pj3: 0
 #PARTIDO 4
 j4: RONDA 4
-p4: IL ULTIMATE 
+p4: IL ULTIMATE
+r4: 1
 pp4: SSI
-bg4: rock 
-r4: 
-rr4: 
-pt4: 0
-pj4: 0
+bg4: rock rock
+rr4: 2
+pt4: 1
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 bg5: rock 
@@ -75,30 +75,30 @@ pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: IL ULTIMATE
+r7: 2
 pp7: DFS DIAMOND
+rr7: 1
 bg7: rock 
-r7: 
-rr7: 
-pt7: 0
-pj7: 0
+pt7: 2
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8: IL ULTIMATE 
+r8: 3
 pp8: PROJECT ONE
+rr8: 0
 bg8: rock 
-rr8: 
-r8: 
-pt8: 0
-pj8: 0
+pt8: 3
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: IL ULTIMATE
+r9: 3
 pp9: HG SOULSILVER
+rr9: 0
 bg9: rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+pt9: 3
+pj9: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 23
 hora: '21:50'

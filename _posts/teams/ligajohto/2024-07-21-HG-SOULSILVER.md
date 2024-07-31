@@ -17,17 +17,17 @@ team: HG-SOULSILVER
 ID: HGSS
 status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
-puntos: 1
-pj: 2
+puntos: 2
+pj: 3
 #PARTIDO 1
 j1: RONDA 1
 p1: GG GHOST
-pp1: STAR
-r1: 
+r1: 2
+pp1: HG SOULSILVER
+rr1: 1
 bg1: rock rock
-rr1: 
-pt1: 0
-pj1: 0
+pt1: 2
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: SSI
@@ -94,12 +94,12 @@ pj8: 0
 #PARTIDO 9
 j9: RONDA 9
 p9: IL ULTIMATE
+r9: 3
 pp9: HG SOULSILVER
-bg9: rock rock
-r9: 
-rr9:
-pt9: 0
-pj9: 0
+rr9: 0
+bg9: rock
+pt9: 3
+pj9: 1
 
 dia: 23
 hora: '21:50'

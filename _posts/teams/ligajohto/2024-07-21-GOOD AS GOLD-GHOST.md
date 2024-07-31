@@ -16,17 +16,17 @@ cover: /assets/ver.png
 team: GOOD AS GOLD GHOST
 ID: GG GHOST
 status: <i class="fa-soLINNd fa-check"></i>
-puntos: 7
-pj: 3
+puntos: 18
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: GG GHOST
+r1: 2
 pp1: HG SOULSILVER
-r1: 0
+rr1: 1
 bg1: rock rock
-rr1: 0
-pt1: 0
-pj1: 0
+pt1: 2
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: GG GHOST
@@ -48,30 +48,30 @@ pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: ZERONOTE
+r4: 0
 pp4: GG GHOST
+rr4: 3 
 bg4: rock rock
-r4: 
-rr4: 
-pt4: 0
-pj4: 0 
+pt4: 3
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 p5: GG GHOST
+r5: 0
 pp5: SSI
-bg5: rock rock
-r5: 
-rr5: 
+rr5: 3 
+bg5: rock
 pt5: 0
-pj5: 0
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: GG GHOST
 pp6: T-BONERS
 bg6: rock rock
-r6: 
-rr6:  
-pt6: 0
-pj6: 0
+r6: 3
+rr6: 0 
+pt6: 3
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7:  DFS SAPPHIRE
@@ -95,12 +95,12 @@ pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9:  GG GHOST
+r9: 3
 pp9: PROJECT ONE
 bg9: rock rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+rr9: 0
+pt9: 3
+pj9: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 23
 hora: '21:00'

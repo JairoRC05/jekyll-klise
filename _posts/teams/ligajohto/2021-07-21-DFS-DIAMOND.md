@@ -16,17 +16,17 @@ cover: /assets/backCard.png
 team: DRAGONFLIES GAMING DIAMOND
 
 ID: DFS DMD
-puntos: 1
-pj: 2
+puntos: 11
+pj: 7
 #PARTIDO 1
 j1: RONDA 1
 p1:  DFS DIAMOND
 pp1: T-BONERS
 bg1: rock rock
-r1: 
-rr1: 
-pt1: 
-pj1: 
+r1: 3
+rr1: 0
+pt1: 3
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: DFS SAPHIRE
@@ -34,8 +34,8 @@ pp2: DFS DIAMOND
 bg2: rock rock
 r2: 
 rr2: 
-pt2: 
-pj2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: ZERONOTE 
@@ -43,17 +43,17 @@ pp3: DFS DIAMOND
 bg3: rock
 r3: 3
 rr3: 0
-pt3: 3
+pt3: 0
 pj3: 1 
 #PARTIDO 4
 j4: RONDA 4
 p4:  DFS DIAMOND
 pp4: PROJECT ONE
 bg4: rock 
-r4: 
-rr4: 
-pt4: 
-pj4: 
+r4: 3
+rr4: 0
+pt4: 3
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 p5: DFS DIAMOND
@@ -61,26 +61,26 @@ pp5: HG SOULSILVER
 bg5: rock 
 r5: 
 rr5: 
-pt5: 
-pj5: 1
+pt5: 0
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 p6:  DFS DIAMOND
+r6: 2
 pp6: GG STEEL
+rr6: 1 
 bg6: rock 
-r6: 
-rr6: 
-pt6: 
-pj6: 
+pt6: 2
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: IL ULTIMATE
+r7: 2
 pp7: DFS DIAMOND
+rr7: 1
 bg7: rock 
-r7: 
-rr7: 
-pt7: 
-pj7: 
+pt7: 1
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 bg8: rock rock
@@ -93,13 +93,13 @@ pj8: 1
 
 #PARTIDO 9
 j9: RONDA 9
-p9:  DFS DIAMOND
+p9: DFS DIAMOND
+r9: 1
 pp9: SSI
-bg9: rock
-r9: 
-rr9: 
-pt9: 
-pj9: 
+rr9: 2
+bg9: rock rock
+pt9: 1
+pj9: 1
 dia: 24
 hora: '22:10'
 # pj: 11

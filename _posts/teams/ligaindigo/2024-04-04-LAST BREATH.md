@@ -16,19 +16,19 @@ background: '#F16C38'
 cover: bgBlack
 team: LAST BREATH
 ID: LB
-puntos: 17
-pj: 6
+puntos: 22
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 vs1:  STAR-TEC
 IMG1: /assets/logos/STARTEC.png
 bg1: rock
 p1: LAST BREATH
-r1: 0
-rr1: 0
+r1: 3
 pp1: STAR-TEC
-pt1: 0
-pj1: 0
+rr1: 0
+pt1: 3
+pj1: 1
 #PARTIDO 2
 bg2: orock
 vs2:  SPC ES
@@ -111,13 +111,13 @@ pj8: 1
 vs9: TEAM STAR
 IMG9: /assets/logos/TSR.png
 j9: RONDA 9
-p9:  LAST BREATH
-pp9: TEAM STAR
 bg9: rock
-r9: 0
-rr9: 0
-pt9: 0
-pj9: 0
+p9:  LAST BREATH
+r9: 2
+pp9: TEAM STAR
+rr9: 1
+pt9: 2
+pj9: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 30
 hora: '21:10'
