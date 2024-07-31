@@ -1,17 +1,25 @@
 .gamer-card {
-    height: AUTO;
-    margin-bottom: 10px;
+    height: auto;
+    margin-bottom: 25px
+
+   
+ 
 }
 
 
 .gamer-top{
 
 position: relative;
-background: rgb(27,32,52);
+/* background: rgb(27,32,52);
 background: -moz-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
 background: -webkit-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
 background: linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endColorstr="#1b2034",GradientType=1);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endColorstr="#1b2034",GradientType=1); */
+background: rgb(255,159,21);
+background: -moz-linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
+background: -webkit-linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
+background: linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9f15",endColorstr="#ff9f15",GradientType=1);
 width: 100%;
 height: 40px;
 display: flex;
@@ -57,9 +65,47 @@ overflow: hidden;
     clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
     color: #220a3d;
     padding: 10px;
+    padding-left: 15px;
     font-size: 20px;
     font-weight: 700;
     font-style: italic;
-    line-height: 0.5;
+    line-height: 1;
+
+
+    img{
+        padding: 10px;
+    }
+}
+
+
+.gamer-form{
+    background: #fff;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 6% 100%, 0 96%, 0% 20%);
+    color: #220a3d;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
+
+
+    img{
+        padding: 10px;
+    }
+}
+
+
+.gamer-note{
+    color: #fff;
+    margin-top: 5px;
+}
+
+
+.btn-orange{
+    background: rgb(255,159,21);
+    color: #fff;
+    border-radius: 20px;
 }
 

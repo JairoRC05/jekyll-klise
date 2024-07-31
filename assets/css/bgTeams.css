@@ -52,7 +52,7 @@
 }
 
 .slice{
-  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 93%);
-
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 85%);
+  margin-bottom: 20px;
   
 }
