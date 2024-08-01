@@ -16,7 +16,7 @@ cover: /assets/ver.png
 team: GOOD AS GOLD GHOST
 ID: GG GHOST
 status: <i class="fa-soLINNd fa-check"></i>
-puntos: 21
+puntos: 20
 pj: 9
 #PARTIDO 1
 j1: RONDA 1
