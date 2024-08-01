@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
 puntos: 15
-pj: 6
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: LEGIO MEW 
@@ -67,10 +67,10 @@ j6: RONDA 6
 p6: LEGION MEW
 pp6: LEGION P&S
 bg6: rock 
-r6: 
-rr6: 
+r6: 0
+rr6: 3
 pt6: 0
-pj6: 0
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7:  LEGION MEW
@@ -103,10 +103,10 @@ j10: RONDA 10
 p10: LEGION MEW
 pp10: STAR-TEC B
 bg10: rock 
-r10: 
-rr10: 
+r10: 0
+rr10: 3
 pt10: 0
-pj10: 0
+pj10: 1
 #PARTIDO 11
 j11: RONDA 11
 p11: LEGION MEW

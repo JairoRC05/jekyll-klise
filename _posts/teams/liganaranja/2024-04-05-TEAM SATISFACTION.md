@@ -14,8 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA
-puntos: 2
-pj: 2
+puntos: 9
+pj: 5
 dia: '26'
 hora: '22:10'
 route: /liga-naranja
@@ -69,10 +69,10 @@ j6: RONDA 6
 p6: RISING STARS
 pp6: TSA
 bg6: rock 
-r6: 
-rr6: 
-pt6: 0
-pj6: 0
+r6: 0
+rr6: 3
+pt6: 3
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: LOT
@@ -87,10 +87,10 @@ j8: RONDA 8
 p8:  7DS
 pp8: TSA
 bg8: rock 
-rr8: 
-r8: 
-pt8: 0
-pj8: 0
+r8: 0
+rr8: 3
+pt8: 3
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: LEGION MEW
