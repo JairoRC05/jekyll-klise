@@ -16,8 +16,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 18
-pj: 8
+puntos: 19
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 p1: IL ULTIMATE 
@@ -40,11 +40,11 @@ pj2: 1
 j3: RONDA 3
 p3: IL ULTIMATE
 pp3: GG GHOST
-bg3: rock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+bg3: rock rock
+r3: 1
+rr3: 2
+pt3: 1
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: IL ULTIMATE

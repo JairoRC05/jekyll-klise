@@ -17,8 +17,8 @@ team: HG-SOULSILVER
 ID: HGSS
 status: <i class="fa-soLINd fa-check"></i>
 #PARTIDO 1
-puntos: 2
-pj: 3
+puntos: 7
+pj: 6
 #PARTIDO 1
 j1: RONDA 1
 p1: GG GHOST
@@ -26,7 +26,7 @@ r1: 2
 pp1: HG SOULSILVER
 rr1: 1
 bg1: rock rock
-pt1: 2
+pt1: 1
 pj1: 1
 #PARTIDO 2
 j2: RONDA 2
@@ -42,10 +42,10 @@ j3: RONDA 3
 p3: HG SOULSILVER
 pp3: T-BONERS
 bg3: rock rock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+r3: 3
+rr3: 0
+pt3: 3
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: DFS SAPPHIRE
@@ -69,10 +69,10 @@ j6: RONDA 6
 p6: PROJECT ONE
 pp6: HG SOULSILVER
 bg6: rock rock
-r6: 
-rr6: 
-pt6: 0
-pj6: 0
+r6: 0
+rr6: 3
+pt6: 3
+pj6: 1
 #PARTIDO 7
 j7: RONDA 7
 p7: ZERONOTE
@@ -98,7 +98,7 @@ r9: 3
 pp9: HG SOULSILVER
 rr9: 0
 bg9: rock
-pt9: 3
+pt9: 0
 pj9: 1
 
 dia: 23

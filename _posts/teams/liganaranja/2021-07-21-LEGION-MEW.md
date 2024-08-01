@@ -15,17 +15,17 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
-puntos: 0
-pj: 1
+puntos: 15
+pj: 6
 #PARTIDO 1
 j1: RONDA 1
 p1: LEGIO MEW 
 pp1: POA GIRLS
 bg1: rock rock
-r1: 
-rr1: 
-pt1: 0
-pj1: 0
+r1: 3
+rr1: 0
+pt1: 3
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: LEGION MEW 
@@ -40,10 +40,10 @@ j3: RONDA 3
 p3: LEGION MEW
 pp3: RISING STARS
 bg3: rock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+r3: 3
+rr3: 0
+pt3: 3
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 bg4: rock 
@@ -58,10 +58,10 @@ j5: RONDA 5
 p5: LEGION MEW
 pp5: LOT
 bg5: rock 
-r5: 
-rr5: 
-pt5: 0
-pj5: 0
+r5: 3
+rr5: 0
+pt5: 3
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: LEGION MEW
@@ -76,19 +76,19 @@ j7: RONDA 7
 p7:  LEGION MEW
 pp7: 7DS
 bg7: rock 
-r7: 
-rr7: 
-pt7: 0
-pj7: 0
+r7: 3
+rr7: 0
+pt7: 3
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8:  LEGION MEW
 pp8: EK BLACK
 bg8: rock 
-rr8: 
-r8: 
-pt8: 0
-pj8: 0
+r8: 3
+rr8: 0
+pt8: 3
+pj8: 1
 #PARTIDO 9
 j9: RONDA 9
 p9: LEGION MEW

@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: RISING STARS
 ID: RS
 puntos: 0
-pj: 1
+pj: 0
 dia: 25
 hora: '21:10'
 #PARTIDO 1

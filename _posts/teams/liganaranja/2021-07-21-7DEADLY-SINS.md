@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: 7 DEADLY SINS
 ID: 7DS
-puntos: 1
-pj: 3
+puntos: 0
+pj: 0
 dia: '26'
 hora: '21:10'
 #PARTIDO 1

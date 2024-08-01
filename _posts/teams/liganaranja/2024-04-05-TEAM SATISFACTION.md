@@ -22,12 +22,12 @@ route: /liga-naranja
 #PARTIDO 1
 j1: RONDA 1
 p1: IL REBORN
+r1: 2
 pp1: TSA
 bg1: rock rock
-r1: 
-rr1: 
-pt1: 0
-pj1: 0
+rr1: 1
+pt1: 1
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 bg2: rock rock
