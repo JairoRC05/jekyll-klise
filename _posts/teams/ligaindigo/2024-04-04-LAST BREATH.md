@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: bgBlack
 team: LAST BREATH
 ID: LB
-puntos: 22
-pj: 8
+puntos: 24
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 vs1:  STAR-TEC
@@ -36,10 +36,10 @@ IMG2: /assets/logos/SPCES.png
 j2: RONDA 2
 p2: LAST BREATH
 pp2: SPC ES
-r2: 0
-rr2: 0
-pt2: 0
-pj2: 0
+r2: 2
+rr2: 1
+pt2: 2
+pj2: 1
 #PARTIDO 3
 vs3:  POA
 IMG3: /assets/logos/POAX.png
