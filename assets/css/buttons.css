@@ -7,6 +7,7 @@ button {
     font-family: "Exo 2", serif;
     font-optical-sizing: auto;
     font-style: italic;
+    width: 100%;
     font-weight: 700;
     border-radius: 0.6em;
     overflow: hidden;
