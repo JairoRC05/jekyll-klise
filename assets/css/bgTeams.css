@@ -62,3 +62,9 @@
   font-family: "Exo 2", sans-serif;
   font-style: italic;
 }
+
+
+
+.bg-op{
+  background-color: rgba(0, 0, 0, 0.265);
+}
