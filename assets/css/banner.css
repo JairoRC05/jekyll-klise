@@ -25,6 +25,8 @@
     }
 
     .bannerText {
+      text-align: center;
+
       h1 {
       font-size: 90px;
         margin: 0;
@@ -40,8 +42,25 @@
 
       }
     }
+
+
+
+    h3 {
+      font-size: 50px;
+      margin: 0;
+
+        @media screen and (max-width: 991px) {
+          font-size: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+
+
+      }
+    }
   }
-}
 
 
 .indigo {
@@ -73,6 +92,15 @@
     font-style: italic;
     padding-bottom: 5px;
     color: rgb(255, 255, 255);
+
+
+    @media screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 }
 
