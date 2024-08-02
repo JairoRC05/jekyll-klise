@@ -109,3 +109,10 @@ overflow: hidden;
     border-radius: 20px;
 }
 
+
+.btn-orange:hover{
+    background: rgb(221, 130, 2);
+    color: #fff;
+    border-radius: 20px;
+}
+
