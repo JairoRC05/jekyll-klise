@@ -17,7 +17,7 @@ team: PROJECT ONE
 ID: P1
 status: <i class="fa-solid fa-check"></i>
 puntos: 0
-pj: 1
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 p1: PROJECT ONE

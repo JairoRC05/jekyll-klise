@@ -1,5 +1,5 @@
 ---
-layout: teamCard4
+layout: teamCard
 permalink: /team/:title.html
 categories: LI LI1 LI2 LI5 LI6 LI9 
 maincover: /assets/logos/LASTBREATH.png

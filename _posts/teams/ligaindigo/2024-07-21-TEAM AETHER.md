@@ -15,26 +15,26 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 5
-pj: 3
+puntos: 12
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: TEAM STAR
 pp1: TAE
-r1: 
-rr1: 
+r1: 2
+rr1: 1
 bg1: rock rock
-pt1: 0
-pj1: 0
+pt1: 1
+pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: TAE
 pp2: STAR-TEC
 bg2: rock rock
-r2: 
-rr2: 
-pt2: 0
-pj2:  0
+r2: 3
+rr2: 0
+pt2: 3
+pj2: 1
 #PARTIDO 3
 j3: RONDA 3
 p3: TAE
@@ -49,10 +49,10 @@ j4: RONDA 4
 p4: POA
 pp4: TAE
 bg4: rock rock
-r4: 
-rr4: 
-pt4: 0
-pj4: 0
+r4: 2
+rr4: 1
+pt4: 2
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 bg5: rock rock
@@ -76,10 +76,10 @@ j7: RONDA 7
 p7: TAE
 pp7: FLIES
 bg7: rock rock
-r7: 
-rr7: 
+r7: 0
+rr7: 3
 pt7: 0
-pj7: 0
+pj7: 1
 #PARTIDO 8
 j8: RONDA 8
 p8: DFS RUBY
@@ -94,10 +94,10 @@ j9: RONDA 9
 p9: DFS PLATINUM
 pp9: TAE
 bg9: rock rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 1
+pt9: 1
+pj9: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 31
 hora: '22:10'

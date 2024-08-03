@@ -1,5 +1,5 @@
 ---
-layout: teamCard4
+layout: teamCard
 permalink: /team/:title.html
 categories: LI LI1   LI4 LI5 LI6 LI7 LI8 LI9 
 maincover: /assets/logos/DFS.png
@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: DFSPL
 team: DRAGONFLIES GAMING PLATINUM
 ID: DFS PLATINUM
-puntos: 2
-pj: 3
+puntos: 12
+pj: 7
 
 #PARTIDO 1
 j1: RONDA 1
@@ -36,10 +36,10 @@ IMG2: /assets/logos/DFS.png
 p2: DFS RUBY
 pp2: DFS PLATINUM
 bg2: rock rock
-r2: 
-rr2: 
-pt2: 0 
-pj2: 0
+r2: 2
+rr2: 1
+pt2: 2 
+pj2: 1
 #PARTIDO 3
 vs3:  HG REGIOS
 IMG3: /assets/logos/HGREGIOS.png
@@ -47,10 +47,10 @@ j3: RONDA 3
 p3: HG REGIOS
 pp3: DFS PLATINUM
 bg3: Orock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+r3: 0
+rr3: 3
+pt3: 3
+pj3: 1
 #PARTIDO 4
 vs4: TEAM STAR
 IMG4: /assets/logos/TSR.png
@@ -91,10 +91,10 @@ j7: RONDA 7
 p7: POA
 pp7: DFS PLATINUM
 bg7: orock 
-r7: 
-rr7: 
-pt7: 0
-pj7: 0
+r7: 3
+rr7: 0
+pt7: 3
+pj7: 1
 #PARTIDO 8
 vs8: LAST BREATH
 IMG8: /assets/logos/LASTBREATH.png
@@ -113,10 +113,10 @@ j9: RONDA 9
 p9:  DFS PLATINUM
 pp9: TAE
 bg9: rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 1
+pt9: 2
+pj9: 1
 dia: 31
 hora: '22:10'
 # pj: 11

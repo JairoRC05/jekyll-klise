@@ -14,8 +14,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA
-puntos: 9
-pj: 5
+puntos: 16
+pj: 10
 dia: '26'
 hora: '22:10'
 route: /liga-naranja
@@ -42,28 +42,28 @@ j3: RONDA 3
 p3: EK BLACK
 pp3: TSA
 bg3: rock
-r3: 
-rr3: 
-pt3: 0
-pj3: 0
+r3: 1
+rr3: 2
+pt3: 2
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: TSA
 pp4: STAR-TEC
 bg4: rock 
-r4: 
-rr4: 
+r4: 3
+rr4: 0
 pt4: 0
-pj4: 0
+pj4: 1
 #PARTIDO 5
 j5: RONDA 5
 p5: POA GIRLS
 pp5: TSA
 bg5: rock 
-r5: 
-rr5: 
-pt5: 0
-pj5: 0
+r5: 0
+rr5: 3
+pt5: 3
+pj5: 1
 #PARTIDO 6
 j6: RONDA 6
 p6: RISING STARS
@@ -96,10 +96,10 @@ j9: RONDA 9
 p9: LEGION MEW
 pp9: TSA
 bg9: rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 1
+pt9: 2
+pj9: 1
 #PARTIDO 10
 j10: RONDA 10
 p10: TSA
@@ -114,10 +114,10 @@ j11: RONDA 11
 p11: TEAM AQUA
 pp11: TSA
 bg11: rock 
-r11: 
-rr11: 
+r11: 3
+rr11: 0
 pt11: 0
-pj11: 0
+pj11: 1
 stream: <i class="fa-brands fa-twitch text-white"></i>
 # pj: 11
 # pt1: 2

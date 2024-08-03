@@ -16,8 +16,8 @@ cover: /assets/ver.png
 team: GOOD AS GOLD STEEL
 ID: GG STEEL
 status: <i class="fa-soLINd fa-check"></i>
-puntos: 12
-pj: 7
+puntos: 13
+pj: 8
 #PARTIDO 1
 j1: RONDA 1
 p1: IL ULTIMATE 
@@ -94,13 +94,13 @@ pt8: 0
 pj8: 0
 #PARTIDO 9
 j9: RONDA 9
-p9: ZERONOTE
+p9: ZERONOTE 
 pp9: GG STEEL
 bg9: rock
-r9: 
-rr9: 
-pt9: 0
-pj9: 0
+r9: 2
+rr9: 1
+pt9: 1
+pj9: 1
 dia: 24
 hora: '21:10'
 ---
