@@ -16,7 +16,7 @@ cover: DFSPL
 team: DRAGONFLIES GAMING PLATINUM
 ID: DFS PLATINUM
 puntos: 12
-pj: 7
+pj: 9
 
 #PARTIDO 1
 j1: RONDA 1
@@ -69,10 +69,10 @@ IMG5: /assets/logos/STARTEC.png
 p5: DFS PLATINUM
 pp5: STAR-TEC
 bg5: rock 
-r5: 
-rr5: 
+r5: 0
+rr5: 0
 pt5: 0
-pj5: 0
+pj5: 1
 #PARTIDO 6
 vs6:  SPC ES
 IMG6: /assets/logos/SPCES.png
@@ -80,10 +80,10 @@ j6: RONDA 6
 p6:  DFS PLATINUM
 pp6: SPC ES
 bg6: orock 
-r6: 
-rr6: 
+r6: 0
+rr6: 0
 pt6: 0
-pj6: 0
+pj6: 1
 #PARTIDO 7
 vs7:  POA
 IMG7: /assets/logos/POAX.png

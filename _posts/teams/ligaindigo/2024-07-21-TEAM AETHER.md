@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
 puntos: 12
-pj: 8
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 p1: TEAM STAR
@@ -40,10 +40,10 @@ j3: RONDA 3
 p3: TAE
 pp3: SPC ES
 bg3: rock rock
-r3: 
-rr3: 
+r3: 0
+rr3: 3
 pt3: 0
-pj3: 0
+pj3: 1
 #PARTIDO 4
 j4: RONDA 4
 p4: POA
