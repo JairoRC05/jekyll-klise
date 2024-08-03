@@ -11,6 +11,9 @@
 .roundCard> a > img {
     width: 200px;
 }
+.roundCard > img {
+    width: 200px;
+}
 
 .roundCard>h6 {
     margin-bottom: 0;
@@ -87,6 +90,10 @@ margin: 0;
     }
 
     .roundCard>a>img {
+        width: 50px;
+        
+    }
+    .roundCard > img {
         width: 50px;
         
     }
