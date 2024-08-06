@@ -1,0 +1,33 @@
+ul#countdown {
+    position: relative;
+    top: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateY(-50%);
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0 20px 0;
+    color: #fff;
+    /* border: 1px solid #adafb2;
+    border-width: 1px 0; */
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    
+    li {
+      margin: 0 -3px 0 0;
+      padding: 0;
+      display: inline-block;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 72px;
+      text-align: center;
+      
+      .label {
+        color: #adafb2;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
