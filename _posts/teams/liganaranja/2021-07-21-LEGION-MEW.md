@@ -94,8 +94,8 @@ j9: RONDA 9
 p9: LEGION MEW
 pp9: TSA
 bg9: rock
-r9: 2
-rr9: 1
+r9: 1
+rr9: 2
 pt9: 1
 pj9: 1
 #PARTIDO 10

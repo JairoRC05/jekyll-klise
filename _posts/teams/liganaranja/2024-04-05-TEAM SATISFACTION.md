@@ -14,7 +14,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
 ID: TSA
-puntos: 16
+puntos: 19
 pj: 10
 dia: '26'
 hora: '22:10'
@@ -53,7 +53,7 @@ pp4: STAR-TEC
 bg4: rock 
 r4: 3
 rr4: 0
-pt4: 0
+pt4: 3
 pj4: 1
 #PARTIDO 5
 j5: RONDA 5
@@ -96,8 +96,8 @@ j9: RONDA 9
 p9: LEGION MEW
 pp9: TSA
 bg9: rock
-r9: 2
-rr9: 1
+r9: 1
+rr9: 2
 pt9: 2
 pj9: 1
 #PARTIDO 10
