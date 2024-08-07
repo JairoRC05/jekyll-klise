@@ -7,45 +7,48 @@ title: COPA XFORCE
 cxf: COPA XFORCE
 # 4TOS DE FINAL
 #LLAVE1
-cxff1: 9 DE JULIO
-cxf1: JNS
+cxff1: 6 DE AGOSTO
+cxf1: FLYZ
 rll1: 2
 rll8: 0
-cxf8: TSF
+cxf8: GG
 #LLAVE2
-cxff2: 8 DE JULIO
-cxf4: SKZ
+cxff2: 7 DE AGOSTO
+cxf4: MCH
 rll4: 0
-rll5: 2
-cxf5: P1
+rll5: 0
+cxf5: ZN
 #LLAVE3
-cxff3: 8 DE JULIO
-cxf3: LB
+cxff3: 7 DE AGOSTO
+cxf3: LGN
 rll3: 0
-rll6: 2
-cxf6: SSI
+rll6: 0
+cxf6: TA
 #LLAVE4
-cxff4: 9 DE JULIO
-cxf2: NS
-rll2: 2
-rll7: 1
-cxf7: SPC
+cxff4: 6 DE AGOSTO
+cxf2: SSI
+rll2: 1
+rll7: 2
+cxf7: TSR
+
+
+
 # SEMIFINALES
 #LLAVE5
-cxff5: 10 DE JULIO
-cxf9: JNS #CXF1-18
+cxff5: 8 DE AGOSTO
+cxf9: FLYZ #CXF1-18
 rll9:
 rll10: 
-cxf10: P1 #CXF4-45
+cxf10: TBD #CXF4-45
 #LLAVE6
-cxff6: 10 DE JULIO
-cxf11: SSI #CXF3-36
+cxff6: 8 DE AGOSTO
+cxf11: TDB #CXF3-36
 rll11:
 rll12: 
-cxf12: NS #CXF2-27
+cxf12: TSR #CXF2-27
 # GRAN FINAL
 #LLAVE7
-cxff7: 10 DE JULIO
+cxff7: 8 DE AGOSTO
 cxf13: TBD
 rll13:
 rll14: 
