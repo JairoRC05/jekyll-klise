@@ -45,24 +45,64 @@ layout:
     <div class="container mt-1 mb-3">
         <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">BRACKETS</button>
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">BRACKETS</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">REGLAMENTO</button>
+                <button class="nav-link" id="pills-team-tab" data-bs-toggle="pill" data-bs-target="#pills-team"
+                    type="button" role="tab" aria-controls="pills-team" aria-selected="false">DÚOS</button>
             </li>
-        
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">REGLAMENTO</button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-2 col-xl-2">
+                <div class="row ">
+                    <div
+                        class="col-12 col-md-12 col-lg-2 col-xl-2 d-flex flex-column justify-content-between align-items-center">
                         <h5>16vos de FINAL</h5>
                         {% include 16vos.html %}
                     </div>
+                    <div
+                        class="col-12 col-md-12 col-lg-2 col-xl-2 d-flex flex-column justify-content-center align-items-center">
+
+                        <h5>8vos de FINAL</h5>
+                        {% include 8VOS.html %}
+
+
+                    </div>
+                    <div
+                        class="col-12 col-md-12 col-lg-2 col-xl-2 d-flex flex-column justify-content-center align-items-center">
+
+                        <h5>4tos de FINAL</h5>
+                        {% include 4TOS.html %}
+
+                    </div>
+
+                    <div
+                    class="col-12 col-md-12 col-lg-2 col-xl-2 d-flex flex-column justify-content-center align-items-center">
+
+                    <h5>SEMIFINALES</h5>
+                    {% include SEM.html %}
+
+                </div>
+                <div
+                class="col-12 col-md-12 col-lg-2 col-xl-2 d-flex flex-column justify-content-center align-items-center">
+
+                <h5>GRAN FINAL</h5>
+                {% include GRANFINAL.html %}
+
+            </div>
                 </div>
 
             </div>
 
+            <div class="tab-pane fade show active" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab">
+                {% include duos.html %}
+            </div>
 
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="container mt-1 mb-3">
@@ -81,10 +121,10 @@ layout:
                                     <p>CIERRE DE INSCRIPCION 8 DE AGOSTO.</p>
                                     <p>32 CUPOS.</p>
                                     <p>SERVIDOR NA04.</p>
-            
+
                                 </div>
                             </div>
-            
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -94,12 +134,16 @@ layout:
                                     </div>
                                 </div>
                                 <div class="gamer-desc">
-                                    <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA.</p>
-                                    <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO.</p>
-                                    <p>EN CASO DE EMPATE, SE DESEMPATARÁ CON LAS SUMA DE LOS MVP´S OBTENIDOS DURANTE EL PARTIDO.</p>
+                                    <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA.
+                                    </p>
+                                    <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO.
+                                    </p>
+                                    <p>EN CASO DE EMPATE, SE DESEMPATARÁ CON LAS SUMA DE LOS MVP´S OBTENIDOS DURANTE EL
+                                        PARTIDO.</p>
                                     <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL REPITE PICKS.</p>
-                                    <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE TOLERANCIA.</p>
-            
+                                    <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE
+                                        TOLERANCIA.</p>
+
                                 </div>
                             </div>
                             <div class="gamer-card">
@@ -113,11 +157,12 @@ layout:
                                 <div class="gamer-desc">
                                     <p>EL ENCUENTRO NO SE DETENDRÁ UNA VEZ INICIANDO LA FASE DE ELECCIÓN, DEBIDO QUE ES
                                         RESPONSABILIDAD DE CADA PARTICIPANTE REVISAR SU CONEXIÓN DE LUZ E INTERNET.</p>
-                                    <p>SOLO SE PODRÁ HACER RESET DE LA PARTIDA SI AL JUGADOR SE LE CIERRA EL JUEGO DURANTE LA FASE
+                                    <p>SOLO SE PODRÁ HACER RESET DE LA PARTIDA SI AL JUGADOR SE LE CIERRA EL JUEGO
+                                        DURANTE LA FASE
                                         DE ELECCIÓN (PRESENTAR PRUEBAS DE DICHO SUCESO).</p>
                                 </div>
                             </div>
-            
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -130,7 +175,7 @@ layout:
                                     <img src="/assets/mis/ITEMS.png" alt="items" class="img-fluid">
                                 </div>
                             </div>
-            
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -143,7 +188,7 @@ layout:
                                     <img src="/assets/mis/PICKS.png" alt="items" class="img-fluid">
                                 </div>
                             </div>
-            
+
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-4">
                             <div class="gamer-card">
@@ -161,7 +206,7 @@ layout:
                                     <p>5 MINUTOS DE JUEGO.</p>
                                 </div>
                             </div>
-            
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -178,7 +223,7 @@ layout:
                                     <p>GRAN FINAL (BO3).</p>
                                 </div>
                             </div>
-            
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -191,8 +236,8 @@ layout:
                                     <p>EL DÚO NO PUEDE REPETIR PICKS DURANTE CADA FASE DEL TORNEO.</p>
                                 </div>
                             </div>
-            
-            
+
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -203,12 +248,12 @@ layout:
                                 </div>
                                 <div class="gamer-desc">
                                     <p>3 MINUTOS.</p>
-            
+
                                 </div>
                             </div>
-            
-            
-            
+
+
+
                             <div class="gamer-card">
                                 <div class="gamer-top">
                                     <img src="/assets/mis/circle-orange.png" alt="">
@@ -223,23 +268,23 @@ layout:
                                     <p>2DO LUGAR 30% DEL PRIZEPOOL.</p>
                                     <p>$1000 MXN.</p>
                                     <p>EL PREMIO SE PAGARÁ 3 DÍAS DESPUÉS DEL TORNEO.</p>
-            
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
+
             </div>
-            
-          </div>
+
+        </div>
 
     </div>
-  
-    
-   
 
-  
+
+
+
+
     <!-- <div class="container-fluid bgBanner">
         <div class="container mt-1 mb-3">
             <div class="row">
