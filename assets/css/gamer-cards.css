@@ -1,65 +1,62 @@
 .gamer-card {
     height: auto;
     margin-bottom: 25px
-
-   
- 
 }
 
 
-.gamer-top{
+.gamer-top {
 
-position: relative;
-/* background: rgb(27,32,52);
+    position: relative;
+    /* background: rgb(27,32,52);
 background: -moz-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
 background: -webkit-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
 background: linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endColorstr="#1b2034",GradientType=1); */
-background: rgb(255,159,21);
-background: -moz-linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
-background: -webkit-linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
-background: linear-gradient(100deg, rgba(255,159,21,1) 10%, rgba(255,159,21,1) 68%, rgba(255,159,21,0) 90%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9f15",endColorstr="#ff9f15",GradientType=1);
-width: 100%;
-height: 40px;
-display: flex;
-justify-content: start;
-align-items: center;
-padding: 10px;
-border-radius: 20px 0 0 0;
-overflow: hidden;
+    background: rgb(255, 159, 21);
+    background: -moz-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    background: -webkit-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    background: linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9f15", endColorstr="#ff9f15", GradientType=1);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px 0 0 0;
+    overflow: hidden;
 }
 
 
 
-.gamer-top > img{
+.gamer-top>img {
     position: absolute;
     width: 120px;
 }
 
-.gamer-title{
+.gamer-title {
     display: flex;
     justify-content: start;
     align-items: center;
     position: absolute;
-    
+
 }
 
 
-.gamer-title > img {
+.gamer-title>img {
     width: 28px;
     margin-right: 10px;
 }
 
-.gamer-title > h4 {
-   margin: 0;
-   font-style: italic;
-    font-weight:600;
-    text-shadow: 2px 3px 2px rgba(0,0,0,0.6);
+.gamer-title>h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.6);
 }
 
 
-.gamer-desc{
+.gamer-desc {
     background: #fff;
     height: auto;
     clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
@@ -72,13 +69,13 @@ overflow: hidden;
     line-height: 1;
 
 
-    img{
+    img {
         padding: 10px;
     }
 }
 
 
-.gamer-form{
+.gamer-form {
     background: #fff;
     height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 6% 100%, 0 96%, 0% 20%);
@@ -91,28 +88,69 @@ overflow: hidden;
     line-height: 1;
 
 
-    img{
+    img {
         padding: 10px;
     }
 }
 
 
-.gamer-note{
+.gamer-note {
     color: #fff;
     margin-top: 5px;
 }
 
 
-.btn-orange{
-    background: rgb(255,159,21);
+.btn-orange {
+    background: rgb(255, 159, 21);
     color: #fff;
     border-radius: 20px;
 }
 
 
-.btn-orange:hover{
+.btn-orange:hover {
     background: rgb(221, 130, 2);
     color: #fff;
     border-radius: 20px;
 }
 
+
+
+
+.match {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgb(255, 159, 21);
+    display: block;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.matchTeams {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    line-height: 0.7;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.matchTeams:first-child {
+    margin-bottom: 15px;
+}
+
+.matchTeams > p {
+    margin: 0;
+    color: #fff;
+}
+
+.matchTeams>span {
+   
+    font-size: 10px;
+    font-weight: 700;
+    font-style: normal;
+    color: yellow;
+
+}

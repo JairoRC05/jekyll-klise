@@ -43,21 +43,195 @@ layout:
     </div>
 
     <div class="container mt-1 mb-3">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">BRACKETS</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">REGLAMENTO</button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-            </li>
+        
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">gggg</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">bbb</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">bbb</div>
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-xl-2">
+                        <h5>16vos de FINAL</h5>
+                        {% include 16vos.html %}
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="container mt-1 mb-3">
+                    <div class="row text-white g-3">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>DATOS GENERALES</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>INICIO 10 DE AGOSTO A LAS 4PM.</p>
+                                    <p>CIERRE DE INSCRIPCION 8 DE AGOSTO.</p>
+                                    <p>32 CUPOS.</p>
+                                    <p>SERVIDOR NA04.</p>
+            
+                                </div>
+                            </div>
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>CONDICIONES DE VICTORIA </h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA.</p>
+                                    <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO.</p>
+                                    <p>EN CASO DE EMPATE, SE DESEMPATARÁ CON LAS SUMA DE LOS MVP´S OBTENIDOS DURANTE EL PARTIDO.</p>
+                                    <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL REPITE PICKS.</p>
+                                    <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE TOLERANCIA.</p>
+            
+                                </div>
+                            </div>
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>CONEXIÓN</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>EL ENCUENTRO NO SE DETENDRÁ UNA VEZ INICIANDO LA FASE DE ELECCIÓN, DEBIDO QUE ES
+                                        RESPONSABILIDAD DE CADA PARTICIPANTE REVISAR SU CONEXIÓN DE LUZ E INTERNET.</p>
+                                    <p>SOLO SE PODRÁ HACER RESET DE LA PARTIDA SI AL JUGADOR SE LE CIERRA EL JUEGO DURANTE LA FASE
+                                        DE ELECCIÓN (PRESENTAR PRUEBAS DE DICHO SUCESO).</p>
+                                </div>
+                            </div>
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>OBJETOS PROHIBIDOS</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <img src="/assets/mis/ITEMS.png" alt="items" class="img-fluid">
+                                </div>
+                            </div>
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>LICENCIAS PROHIBIDAS</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <img src="/assets/mis/PICKS.png" alt="items" class="img-fluid">
+                                </div>
+                            </div>
+            
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>FORMATO </h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>ELIMINACIÓN DIRECTA.</p>
+                                    <p>ZONA DEL MAPA: TOP LINE.</p>
+                                    <p>2vs2.</p>
+                                    <p>5 MINUTOS DE JUEGO.</p>
+                                </div>
+                            </div>
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>FASES DEL TORNEO</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>16VOS DE FINAL (BO1).</p>
+                                    <p>8VOS DE FINAL (BO1).</p>
+                                    <p>4TOS DE FINAL (BO1).</p>
+                                    <p>SEMIFINALES (BO3).</p>
+                                    <p>GRAN FINAL (BO3).</p>
+                                </div>
+                            </div>
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>REGLA DE FASE</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>EL DÚO NO PUEDE REPETIR PICKS DURANTE CADA FASE DEL TORNEO.</p>
+                                </div>
+                            </div>
+            
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>TOLERANCIA</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>3 MINUTOS.</p>
+            
+                                </div>
+                            </div>
+            
+            
+            
+                            <div class="gamer-card">
+                                <div class="gamer-top">
+                                    <img src="/assets/mis/circle-orange.png" alt="">
+                                    <div class="gamer-title">
+                                        <img src="/assets/mis/POKEBALL.png" alt="">
+                                        <h4>PRIZEPOOL</h4>
+                                    </div>
+                                </div>
+                                <div class="gamer-desc">
+                                    <p>$1000 MXN.</p>
+                                    <p>1ER LUGAR 70% DEL PRIZEPOOL.</p>
+                                    <p>2DO LUGAR 30% DEL PRIZEPOOL.</p>
+                                    <p>$1000 MXN.</p>
+                                    <p>EL PREMIO SE PAGARÁ 3 DÍAS DESPUÉS DEL TORNEO.</p>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
           </div>
 
     </div>
@@ -65,171 +239,7 @@ layout:
     
    
 
-    <div class="container mt-1 mb-3">
-        <div class="row text-white g-3">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>DATOS GENERALES</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>INICIO 10 DE AGOSTO A LAS 4PM.</p>
-                        <p>CIERRE DE INSCRIPCION 8 DE AGOSTO.</p>
-                        <p>32 CUPOS.</p>
-                        <p>SERVIDOR NA04.</p>
-
-                    </div>
-                </div>
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>CONDICIONES DE VICTORIA </h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>EL DUO GANA EL PARTIDO SI ROMPE LA PRIMERA BASE DEL LA PARTE SUPERIOR DEL MAPA.</p>
-                        <p>EL DUO QUÉ TENGA MÁS PUNTOS DENTRO DEL TIEMPO LÍMITE (5 MINUTOS) GANA EL PARTIDO.</p>
-                        <p>EN CASO DE EMPATE, SE DESEMPATARÁ CON LAS SUMA DE LOS MVP´S OBTENIDOS DURANTE EL PARTIDO.</p>
-                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL REPITE PICKS.</p>
-                        <p>EL DUO GANA LA PARTIDA SI EL DUO RIVAL NO ENTRA DURANTE LOS 3 MINUTOS DE TOLERANCIA.</p>
-
-                    </div>
-                </div>
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>CONEXIÓN</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>EL ENCUENTRO NO SE DETENDRÁ UNA VEZ INICIANDO LA FASE DE ELECCIÓN, DEBIDO QUE ES
-                            RESPONSABILIDAD DE CADA PARTICIPANTE REVISAR SU CONEXIÓN DE LUZ E INTERNET.</p>
-                        <p>SOLO SE PODRÁ HACER RESET DE LA PARTIDA SI AL JUGADOR SE LE CIERRA EL JUEGO DURANTE LA FASE
-                            DE ELECCIÓN (PRESENTAR PRUEBAS DE DICHO SUCESO).</p>
-                    </div>
-                </div>
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>OBJETOS PROHIBIDOS</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <img src="/assets/mis/ITEMS.png" alt="items" class="img-fluid">
-                    </div>
-                </div>
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>LICENCIAS PROHIBIDAS</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <img src="/assets/mis/PICKS.png" alt="items" class="img-fluid">
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>FORMATO </h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>ELIMINACIÓN DIRECTA.</p>
-                        <p>ZONA DEL MAPA: TOP LINE.</p>
-                        <p>2vs2.</p>
-                        <p>5 MINUTOS DE JUEGO.</p>
-                    </div>
-                </div>
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>FASES DEL TORNEO</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>16VOS DE FINAL (BO1).</p>
-                        <p>8VOS DE FINAL (BO1).</p>
-                        <p>4TOS DE FINAL (BO1).</p>
-                        <p>SEMIFINALES (BO3).</p>
-                        <p>GRAN FINAL (BO3).</p>
-                    </div>
-                </div>
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>REGLA DE FASE</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>EL DÚO NO PUEDE REPETIR PICKS DURANTE CADA FASE DEL TORNEO.</p>
-                    </div>
-                </div>
-
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>TOLERANCIA</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>3 MINUTOS.</p>
-
-                    </div>
-                </div>
-
-
-
-                <div class="gamer-card">
-                    <div class="gamer-top">
-                        <img src="/assets/mis/circle-orange.png" alt="">
-                        <div class="gamer-title">
-                            <img src="/assets/mis/POKEBALL.png" alt="">
-                            <h4>PRIZEPOOL</h4>
-                        </div>
-                    </div>
-                    <div class="gamer-desc">
-                        <p>$1000 MXN.</p>
-                        <p>1ER LUGAR 70% DEL PRIZEPOOL.</p>
-                        <p>2DO LUGAR 30% DEL PRIZEPOOL.</p>
-                        <p>$1000 MXN.</p>
-                        <p>EL PREMIO SE PAGARÁ 3 DÍAS DESPUÉS DEL TORNEO.</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+  
     <!-- <div class="container-fluid bgBanner">
         <div class="container mt-1 mb-3">
             <div class="row">
