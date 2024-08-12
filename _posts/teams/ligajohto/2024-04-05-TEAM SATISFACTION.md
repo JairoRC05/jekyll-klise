@@ -1,7 +1,7 @@
 ---
 layout: teamCard3
 permalink: /team/:title.html
-categories: LA2024JN
+categories: LJ06
 maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 16
 date: 2020-08-29 10:29:20 +0700
@@ -13,12 +13,12 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM SATISFACTION
+route: /liga-naranja
 ID: TSA
-puntos: 19
-pj: 10
+puntos: 0
+pj: 0
 dia: '26'
 hora: '22:10'
-route: /liga-naranja
 #PARTIDO 1
 j1: RONDA 1
 p1: IL REBORN
