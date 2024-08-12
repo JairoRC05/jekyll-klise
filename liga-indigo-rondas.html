@@ -72,7 +72,7 @@ permalink: /liga-indigo-rondas.html
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">
         <div class="row mb-3">
-          <h3>RONDA 1 DEL 12 AL 14 DE AGOSTO</h3>
+          <h3><i class="fa-regular fa-calendar me-3"></i>12-14 DE AGOSTO</h3>
           {% assign norte = site.categories.LI1 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -96,6 +96,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>15-16 DE AGOSTO</h3>
           {% assign norte = site.categories.LI2 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -119,6 +120,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>19-20 DE AGOSTO</h3>
           {% assign norte = site.categories.LI3 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -142,6 +144,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>21-22 DE AGOSTO</h3>
           {% assign norte = site.categories.LI4 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -165,6 +168,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>23-26 DE AGOSTO</h3>
           {% assign norte = site.categories.LI5 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -188,6 +192,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>27-28 DE AGOSTO</h3>
           {% assign norte = site.categories.LI6 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -211,6 +216,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-7" role="tabpanel" aria-labelledby="pills-7-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>29-30 DE AGOSTO</h3>
           {% assign norte = site.categories.LI7 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -234,6 +240,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-8" role="tabpanel" aria-labelledby="pills-8-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>2-3 SEPTIEMBRE</h3>
           {% assign norte = site.categories.LI8 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -257,6 +264,7 @@ permalink: /liga-indigo-rondas.html
       </div>
       <div class="tab-pane fade" id="pills-9" role="tabpanel" aria-labelledby="pills-9-tab" tabindex="0">
         <div class="row mb-3">
+          <h3><i class="fa-regular fa-calendar me-3"></i>4-5 DE SEPTIEMBRE</h3>
           {% assign norte = site.categories.LI9 %}
           {%- for post in norte-%}
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
@@ -286,7 +294,16 @@ permalink: /liga-indigo-rondas.html
   <div id="stars2"></div>
   <div id="stars3"></div>
 
-  {% include footer-indigo.html %}
+  <div class="d-none d-md-block">
+
+    {% include footer-indigo.html %}
+  </div> 
+  
+  <div class="d-block d-md-none">
+    {% include nav-mobile-indigo.html %}
+    
+    </div>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
