@@ -30,6 +30,7 @@ pt1: 0
 pj1: 0
 #PARTIDO 2
 j2: RONDA 2
+maincover2: /assets/logos/DFS.png
 p2: DMD
 pp2: SAP
 bg2: rock rock

@@ -52,6 +52,7 @@ pt5: 0
 pj5: 0
 #PARTIDO 6
 j6: RONDA 6
+maincover6: /assets/logos/DFS.png
 p6: IL
 pp6: SAP
 bg6: rock 
@@ -62,6 +63,7 @@ pj6: 0
 
 #PARTIDO 9
 j9: RONDA 9
+maincover9: /assets/logos/DFS.png
 p9: IL
 r9: 0
 pp9: DMD

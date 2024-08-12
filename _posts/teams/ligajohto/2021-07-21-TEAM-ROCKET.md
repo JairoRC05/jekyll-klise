@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9
-maincover: /assets/logos/.png
+maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700
 title: TEAM ROCKET
@@ -20,6 +20,7 @@ pj: 0
 
 #PARTIDO 1
 j1: RONDA 1
+maincover1: /assets/logos/TA.png
 p1: TR
 r1: 0
 pp1: TA
@@ -30,7 +31,7 @@ pj1: 0
 
 
 #PARTIDO 4
-
+maincover4: /assets/logos/ZODIAC.png
 j4: RONDA 4
 p4: TR
 pp4: ZC
@@ -40,7 +41,7 @@ rr4: 0
 pt4: 0
 pj4: 0
 #PARTIDO 5
-
+maincover5: /assets/logos/DFS.png
 j5: RONDA 5
 p5: TR
 pp5: PEARL
@@ -50,6 +51,7 @@ rr5: 0
 pt5: 0
 pj5: 0
 #PARTIDO 6
+maincover6: /assets/logos/TSA.png
 j6: RONDA 6
 bg6: ofire 
 p6: TR
@@ -60,8 +62,7 @@ pt6: 0
 pj6: 0
 
 #PARTIDO 8
-vs8: TAE
-IMG8: /assets/logos/TAE.png
+maincover8: /assets/logos/ILEAGUE.png
 j8: RONDA 8
 p8: TR
 r8: 0
@@ -71,8 +72,7 @@ bg8: ofire
 pt8: 0
 pj8: 0
 #PARTIDO 9
-vs9 : FLYZ EZ
-IMG9: /assets/logos/FZ.png
+maincover9: /assets/logos/LGN.png
 j9: RONDA 9
 p9: TR
 pp9: MEW

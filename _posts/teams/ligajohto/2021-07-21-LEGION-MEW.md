@@ -19,6 +19,7 @@ puntos: 0
 pj: 0
 #PARTIDO 2
 j2: RONDA 2
+maincover2: /assets/logos/DFS.png
 p2: MEW
 pp2: PEARL
 bg2: rock rock
@@ -27,6 +28,7 @@ rr2: 0
 pt2: 0
 pj2: 0
 #PARTIDO 3
+maincover3: /assets/logos/TSA.png
 j3: RONDA 3
 p3: MEW
 pp3: TSA
@@ -38,6 +40,7 @@ pj3: 0
 
 #PARTIDO 7
 j7: RONDA 7
+maincover7: /assets/logos/TA.png
 p7: MEW
 pp7: TA
 bg7: rock rock
