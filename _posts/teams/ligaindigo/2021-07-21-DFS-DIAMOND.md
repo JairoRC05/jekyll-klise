@@ -19,6 +19,7 @@ ID: DFS DMD
 puntos: 0
 pj: 0
 #PARTIDO 1
+maincover1: /assets/logos/TAE.png
 j1: RONDA 1
 p1:  DMD
 pp1: TAE
@@ -39,6 +40,7 @@ pj2: 0
 
 #PARTIDO 6
 j6: RONDA 6
+maincover6: /assets/logos/TSR.png
 p6:  DMD
 r6: 0
 pp6: TSR
@@ -47,6 +49,7 @@ bg6: rock
 pt6: 0
 pj6: 0
 #PARTIDO 7
+maincover7: /assets/logos/SSI.png
 j7: RONDA 7
 p7: DMD
 r7: 0
@@ -55,27 +58,7 @@ rr7: 0
 bg7: rock 
 pt7: 0
 pj7: 0
-#PARTIDO 8
-j8: RONDA 8
-bg8: rock rock
-p8:  DMD
-pp8: GG GHOST
-r8: 0
-rr8: 0
-pt8: 0
-pj8: 0
 
-#PARTIDO 9
-j9: RONDA 9
-p9: DMD
-r9: 0
-pp9: SSI
-rr9: 0
-bg9: rock rock
-pt9: 0
-pj9: 0
-dia: 24
-hora: '22:10'
 # pj: 11
 # pt1: 0
 # pt2: 0

@@ -20,6 +20,7 @@ puntos: 0
 pj: 0
 #PARTIDO 1
 j1: RONDA 1
+maincover1: /assets/logos/TSR.png
 p1: IL 
 pp1: TSR
 bg1: rock rock
@@ -29,6 +30,7 @@ pt1: 0
 pj1: 0
 #PARTIDO 2
 j2: RONDA 2
+maincover2: /assets/logos/SSI.png
 p2: IL
 r2: 0
 pp2: SSI
@@ -41,6 +43,7 @@ pj2: 0
 #PARTIDO 5
 j5: RONDA 5
 bg5: rock 
+maincover5: /assets/logos/TAE.png
 p5: IL
 r5: 0
 pp5: TAE
