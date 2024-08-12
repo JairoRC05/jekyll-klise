@@ -3,141 +3,66 @@ layout:
 permalink: /liga-naranja.html
 ---
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="LIN">
-
-  {% include nav-lin.html %}
+<body class="blue">
 
 
-  <div class="container-fluid banner">
+  {% include nav-naranja.html %}
+
+
+  <div class="container-fluid banner grBlue">
     <div class="container bannerPromo d-flex justify-content-start align-items-center">
       <a href="/assets/logos/NARANJA.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/NARANJA.png" class="drop img-fluid" alt="" ">
-    </a>
-      <div class="textPromo">
-        <h1 class="ms-3 mb-0 d-none d-lg-block text-orange">LIGA NARANJA</h1>
-        <h1 class="ms-3 mb-0 d-block d-lg-none text-orange">L NARANJA</h1>
-        <span class="ms-3">En proceso...</span>
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA NARANJA</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container teams-table d-none d-md-block">
+    <h1 class="teams-title">CAMPEONATO</h1>
+    {% include cards-teams-icon-naranja.html %}
+  </div>
+
+  <!-- <div class="container teams-table d-none d-md-block mt-5 mb-5">
+    <h1 class="teams-title">MVP´S</h1>
+    {% include cards-mvp-icon.html %}
+
+  </div> -->
+
+  <div class="container text-white d-block d-md-none">
+    {% include list-mobile-naranja.html %} 
+  </div>
+
+
+
+
+
+
+  <div id="stars1"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <div class="d-none d-md-block">
+
+  {% include footer-indigo.html %}
+</div> 
+
+<div class="d-block d-md-none">
+  {% include nav-mobile-naranja.html %}
   
-      </div>
-    </div>
   </div>
 
-  <div class="container">
-    <div class="row">
+ 
 
 
-      <div class="col-12 col-md-6 ">
-        <div class="container d-flex teamList justify-content-start align-items-center">
-            <div>
-              {% assign norte = site.categories.pljmy24 | sort: "title" %}
-              {%- for post in norte limit:11 -%}
-    
-                <div class="container d-flex teamList justify-content-between align-items-center"> 
-                  <div class="teamIN text-dark"><p><b>{{ post.title | escape }}</b></p></div>
-                </div>
-           
-         
-             
-              {%- endfor -%}
-    
-            </div>
-             <div class="w-100">
-              {% assign LIGA = site.categories.LA2024JN  | sort: "puntos"
-              | reverse %}
-              {%- for post in LIGA-%}
-              
-                 <a class="text-dark" href="{{ post.url }}">
-                  <div class="container teamList d-flex justify-content-between align-items-center">
-                      <div class="teamIN text-dark">
-                        {% if post.ID == "RS" %}
-                        <img src="/assets/logos/RSALT.png" class="drop img-fluid" alt="">
-                        {% else %}
-                        <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                        {% endif %}
-                        <p class="text-uppercase"><b>{{ post.title | escape }}</b></p>
-                        <span>{{post.pj}}</span>
-                      </div>
-                      <div class="teamIN text-dark">
-                      
-                        <p>{{ post.puntos | escape }} pts</p>
-                      </div>
-                     
-                    </div>
-                 </a>
-           
-              {%- endfor -%}
-             </div>
-            </div>
-      </div>
 
-      
-      <div class="col-12 col-md-6 mt-0">
-        <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
-          <div class="teamIMG ms-3 text-white">
-            <img src="/assets/logos/COPA XFORCE.png" alt="">
-          </div>
-          <div class="ms-3">
-           
-            {% assign norte = site.categories.LA2024JN | sort: "puntos"
-            | reverse %}
-            {%- for post in norte limit:2 -%}
-     
-            <div class=" teamList d-flex justify-content-between align-items-center">
-              <div class="teamIN text-white">
-                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                <p class="text-uppercase">{{ post.title | escape }}</p>
-              </div>
-            </div>
-            {%- endfor -%}
-          </div>
-        </div>
-
-        <div class="container cardOrange teamList d-flex justify-content-start align-items-center mb-3">
-          <div class="teamIMG ms-3 text-white">
-            <img src="/assets/logos/LIGA-JOHTO.png" alt="">
-          </div>
-          <div class="ms-3">
-       
-            {% assign norte = site.categories.LA2024JN | sort: "puntos" | reverse  %}
-            {%- for post in norte limit:3 -%}
-     
-            <div class=" teamList d-flex justify-content-between align-items-center">
-              <div class="teamIN text-white">
-                <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                <p class="text-uppercase">{{ post.title | escape }}</p>
-              </div>
-            </div>
-            {%- endfor -%}
-          </div>
-        </div>
-
-        <div class="container cardOrange teamList d-flex justify-content-start align-items-center">
-            <div class="teamIMG ms-3 text-white">
-              <img src="/assets/logos/ALOLA.png" alt="">
-            </div>
-            <div class="ms-3">
-         
-              {% assign norte = site.categories.LA2024JN | sort: "puntos"  %}
-              {%- for post in norte limit:3 -%}
-       
-              <div class=" teamList d-flex justify-content-between align-items-center">
-                <div class="teamIN text-white">
-                  <img src="{{post.maincover}}" class="drop img-fluid" alt="">
-                  <p class="text-uppercase">{{ post.title | escape }}</p>
-                </div>
-              </div>
-              {%- endfor -%}
-            </div>
-          </div>
-       
-         
-      </div>
-
-    </div>
-  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
