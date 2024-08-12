@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LI LI1   LI4 LI5 LI6 LI7 LI8 LI9 
+categories: 
 maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700

@@ -1,11 +1,11 @@
 ---
 layout: teamCard3
 permalink: /team/:title.html
-categories: LA2024JN LIN1  LIN3  LIN5 LIN6 LIN7 LIN8 LIN9 LIN10 LIN11
-maincover: /assets/logos/EKBLACK.png
+categories: 
+maincover: /assets/logos/7DS.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
-title: EK BLACK
+title: 7 DEADLY SINS
 route: /liga-naranja
 tag: johto042024
 color: black
@@ -13,34 +13,34 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: EK BLACK
-ID: EK BLACK
-puntos: 12
-pj: 10
-dia: 25
-hora: '22:10'
+team: 7 DEADLY SINS
+ID: 7DS
+puntos: 0
+pj: 0
+dia: '26'
+hora: '21:10'
 #PARTIDO 1
 j1: RONDA 1
-bg1: rock rock
-p1: LOT 
-r1: 1
-pp1: EK BLACK
-rr1: 2
-pt1: 2
+bg1: rock
+p1: LEGION P&S
+r1: 3
+pp1: 7DS
+rr1: 0
+pt1: 0
 pj1: 1
 #PARTIDO 2
 j2: RONDA 2
 p2: 7DS
-pp2: EK BLACK
+pp2: EK
 bg2: rock rock
-r2: 0
-rr2: 3
-pt2: 3
-pj2: 1
+r2: 
+rr2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
-p3: EK BLACK
-pp3: TSA
+p3: 7DS
+pp3: STAR-TEC B
 bg3: rock
 r3: 1
 rr3: 2
@@ -48,8 +48,8 @@ pt3: 1
 pj3: 1
 #PARTIDO 4
 j4: RONDA 4
-p4: EK BLACK
-pp4: DESCANSO
+p4: POA GIRLS
+pp4: 7DS
 bg4: rock 
 r4: 
 rr4: 
@@ -57,70 +57,67 @@ pt4: 0
 pj4: 0
 #PARTIDO 5
 j5: RONDA 5
-p5: TEAM AQUA
-pp5: EK BLACK
+p5: RISING STARS
+pp5: 7DS
 bg5: rock 
-r5: 3
-rr5: 0
+r5: 
+rr5: 
 pt5: 0
-pj5: 1
+pj5: 0
 #PARTIDO 6
 j6: RONDA 6
-p6: IL REBORN
-pp6: EK BLACK
+p6: LOT
+pp6: 7DS
 bg6: rock 
-r6: 2
-rr6: 1
-pt6: 1
-pj6: 1
+r6: 3
+rr6: 0
+pt6: 0
+pj6: 1 
 #PARTIDO 7
 j7: RONDA 7
-p7:  LEGION P&S
-pp7: EK BLACK
+p7:  LEGION MEW
+pp7: 7DS
 bg7: rock 
-r7: 3
-rr7: 0
+r7: 
+rr7: 
 pt7: 0
-pj7: 1
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
-p8:  LEGION MEW
-pp8: EK BLACK
+p8:  7DS
+pp8: TSA
 bg8: rock 
-r8: 3
-rr8: 0
+rr8: 
+r8: 
 pt8: 0
-pj8: 1
+pj8: 0
 #PARTIDO 9
 j9: RONDA 9
-p9: EK BLACK
-pp9: STAR-TEC
+p9: 7DS
+pp9: DESCANSO
 bg9: rock
-r9: 2
-rr9: 1
-pt9: 2
-pj9: 1
+r9: 
+rr9: 
+pt9: 0
+pj9: 0
 #PARTIDO 10
 j10: RONDA 10
-p10: POA GIRLS
-pp10: EK BLACK
+p10: TA
+pp10: 7DS
 bg10: rock 
-r10: 3
-rr10: 0
+r10: 
+rr10: 
 pt10: 0
-pj10: 1
+pj10: 0
 #PARTIDO 11
 j11: RONDA 11
-p11: RISING STARS
-pp11: EK BLACK
+p11: IL REBORN
+pp11: 7DS
 bg11: rock 
-r11: 0
-rr11: 3
-pt11: 3
-pj11: 1
-stream: <i class="fa-brands fa-twitch text-white"></i>
-dia: 25
-hora: '21:10'
+r11: 
+rr11: 
+pt11: 0
+pj11: 0
 # pj: 11
 # pt1: 1
 # pt2: 3

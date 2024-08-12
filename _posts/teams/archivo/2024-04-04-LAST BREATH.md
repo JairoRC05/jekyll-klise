@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI5 LI6 LI9 
+categories: 
 maincover: /assets/logos/LASTBREATH.png
 puntosLJMAYO24: 23
 date: 2020-08-29 10:29:20 +0700

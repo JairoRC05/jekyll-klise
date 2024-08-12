@@ -1,11 +1,11 @@
 ---
-layout: teamCard
+layout: teamCard3
 permalink: /team/:title.html
-categories: LJ06 LJ1   LJ4 LJ5 LJ6 LJ7 LJ8 LJ9 
-maincover: /assets/logos/DFS.png
+categories:
+maincover: /assets/logos/RS.png
 puntosLJMAYO24: 17
-date: 2020-08-29 10:29:20 +0700
-title: DFS DMD
+date: 2020-08-28 10:29:20 +0700
+title: RISING STARS
 route: /liga-johto
 tag: johto042024
 color: black
@@ -13,51 +13,52 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: DRAGONFLIES GAMING DIAMOND
-
-ID: DFS DMD
-puntos: 13
-pj: 8
+team: RISING STARS
+ID: RS
+puntos: 0
+pj: 0
+dia: 25
+hora: '21:10'
 #PARTIDO 1
 j1: RONDA 1
-p1:  DFS DIAMOND
-pp1: T-BONERS
+p1: RISING STARS
+pp1: STAR-TEC B
 bg1: rock rock
-r1: 3
-rr1: 0
-pt1: 3
-pj1: 1
+r1: 
+rr1: 
+pt1: 0
+pj1: 0
 #PARTIDO 2
 j2: RONDA 2
-p2: DFS SAPHIRE
-pp2: DFS DIAMOND
+p2: POA GIRLS
+pp2: RISING STARS
 bg2: rock rock
-r2: 1
-rr2: 2
-pt2: 2
-pj2: 1
+r2: 
+rr2: 
+pt2: 0
+pj2: 0
 #PARTIDO 3
 j3: RONDA 3
-p3: ZERONOTE 
-pp3: DFS DIAMOND
+p3: LEGION MEW
+pp3: RISING STARS
 bg3: rock
-r3: 3
-rr3: 0
+r3: 
+rr3: 
 pt3: 0
-pj3: 1 
+pj3: 0
 #PARTIDO 4
 j4: RONDA 4
-p4:  DFS DIAMOND
-pp4: PROJECT ONE
+p4: RISING STARS
+pp4: LOT
 bg4: rock 
-r4: 3
-rr4: 0
-pt4: 3
-pj4: 1
+r4: 
+rr4: 
+pt4: 0
+pj4: 0
 #PARTIDO 5
 j5: RONDA 5
-p5: DFS DIAMOND
-pp5: HG SOULSILVER
+p5: RISING STARS
+pp5: 7DS
 bg5: rock 
 r5: 
 rr5: 
@@ -65,43 +66,60 @@ pt5: 0
 pj5: 0
 #PARTIDO 6
 j6: RONDA 6
-p6:  DFS DIAMOND
-r6: 2
-pp6: GG STEEL
-rr6: 1 
+p6: RISING STARS
+pp6: TSA
 bg6: rock 
-pt6: 2
-pj6: 1
+r6: 
+rr6: 
+pt6: 0
+pj6: 0
 #PARTIDO 7
 j7: RONDA 7
-p7: IL ULTIMATE
-r7: 2
-pp7: DFS DIAMOND
-rr7: 1
+p7:  RISING STARS
+pp7: DESCANSO
 bg7: rock 
-pt7: 1
-pj7: 1
+r7: 
+rr7: 
+pt7: 0
+pj7: 0
 #PARTIDO 8
 j8: RONDA 8
-bg8: rock rock
-p8:  DFS DIAMOND
-pp8: GG GHOST
-r8: 1
-rr8: 2
-pt8: 1
-pj8: 1
-
+p8: TEAM AQUA
+pp8: RISING STARS
+bg8: rock 
+rr8: 
+r8: 
+pt8: 0
+pj8: 0
 #PARTIDO 9
 j9: RONDA 9
-p9: DFS DIAMOND
-r9: 1
-pp9: SSI
-rr9: 2
-bg9: rock rock
-pt9: 1
-pj9: 1
-dia: 24
-hora: '22:10'
+p9: RISING STARS
+pp9: IL REBORN
+bg9: rock
+r9: 
+rr9: 
+pt9: 0
+pj9: 0
+#PARTIDO 10
+j10: RONDA 10
+p10: RISING STARS
+pp10: LEGION P&S
+bg10: rock 
+r10: 0
+rr10: 3
+pt10: 0
+pj10: 1
+#PARTIDO 11
+j11: RONDA 11
+p11: RISING STARS
+pp11: EK BLACK
+bg11: rock 
+r11: 
+rr11: 
+pt11: 0
+pj11: 0
+stream: <i class="fa-brands fa-twitch text-white"></i>
+
 # pj: 11
 # pt1: 1
 # pt2: 3

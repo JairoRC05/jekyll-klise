@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LJ06 LJ1 LJ2 LJ6 LJ7 
+categories: 
 maincover: /assets/logos/P1.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
