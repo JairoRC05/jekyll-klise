@@ -1,8 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN  N4 N5 N6 N8 N9
-maincover: /assets/logos/.png
+categories: LA2024JN N1 N4 N5 N6 N8 N9
+maincover: /assets/logos/SIG.png
 puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700
 title: SUMMUS IGNUS

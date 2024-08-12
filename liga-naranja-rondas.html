@@ -75,6 +75,21 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>12-14 DE AGOSTO</h3>
           {% assign norte = site.categories.N1 %}
           {%- for post in norte-%}
+            {% if post.pp1 == "DES" %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+              <div class="container roundTeams">
+                <div class="roundTeam">
+                  <img src="{{post.maincover}}" alt="" class="img-fluid">
+                  <p class="text-left">{{post.p1 | truncate: 8}}</p>
+                </div>
+                <div class="roundScore">
+                  <p>DESCANSO</p>
+               
+                </div>
+               
+              </div>
+            </div>
+          {% else %} 
           <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -91,6 +106,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -99,6 +115,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>15-16 DE AGOSTO</h3>
           {% assign norte = site.categories.N2 %}
           {%- for post in norte-%}
+          {% if post.pp2 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p2 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -115,6 +144,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -123,6 +153,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>19-20 DE AGOSTO</h3>
           {% assign norte = site.categories.N3 %}
           {%- for post in norte-%}
+          {% if post.pp3 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p3 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -139,6 +182,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -147,6 +191,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>21-22 DE AGOSTO</h3>
           {% assign norte = site.categories.N4 %}
           {%- for post in norte-%}
+          {% if post.pp4 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p4 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -163,6 +220,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -171,6 +229,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>23-26 DE AGOSTO</h3>
           {% assign norte = site.categories.N5 %}
           {%- for post in norte-%}
+          {% if post.pp5 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p5 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -187,6 +258,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -195,6 +267,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>27-28 DE AGOSTO</h3>
           {% assign norte = site.categories.N6 %}
           {%- for post in norte-%}
+          {% if post.pp6 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p6 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -211,6 +296,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -219,6 +305,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>29-30 DE AGOSTO</h3>
           {% assign norte = site.categories.N7 %}
           {%- for post in norte-%}
+          {% if post.pp7 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p7 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -235,6 +334,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -243,6 +343,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>2-3 SEPTIEMBRE</h3>
           {% assign norte = site.categories.N8 %}
           {%- for post in norte-%}
+          {% if post.pp8 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p8 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -259,6 +372,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>
@@ -267,6 +381,19 @@ permalink: /liga-naranja-rondas.html
           <h3><i class="fa-regular fa-calendar me-3"></i>4-5 DE SEPTIEMBRE</h3>
           {% assign norte = site.categories.N9 %}
           {%- for post in norte-%}
+          {% if post.pp9 == "DES" %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0">
+            <div class="container roundTeams">
+              <div class="roundTeam">
+                <img src="{{post.maincover}}" alt="" class="img-fluid">
+                <p class="text-left">{{post.p9 | truncate: 8}}</p>
+              </div>
+              <div class="roundScore">
+                <p>DESCANSO</p>
+              </div>
+            </div>
+          </div>
+        {% else %} 
           <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mt-0">
             <div class="container roundTeams">
               <div class="roundTeam">
@@ -283,6 +410,7 @@ permalink: /liga-naranja-rondas.html
               </div>
             </div>
           </div>
+          {% endif %}
           {%- endfor -%}
         </div>
       </div>

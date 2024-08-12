@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LA2024JN N1 N2 N5 N6 N9
-maincover: /assets/logos/.png
+maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
 title: FROSTBITE
