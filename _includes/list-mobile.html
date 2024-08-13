@@ -154,7 +154,7 @@
         </div>
         {%- endfor -%}
     </div>
-    <div class="col-12">
+    <div class="col-12 mb-5">
         {% assign norte = site.categories.LI | sort: "puntos" | reverse %}
         {%- for post in norte limit:1 offset:9 -%}
             <div class="container  roundCard bg-op">
