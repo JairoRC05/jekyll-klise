@@ -13,7 +13,7 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
-team: DRAGONFLIES GAMING DIAMOND
+team: DFS DIAMOND
 
 ID: DFS DMD
 puntos: 0
