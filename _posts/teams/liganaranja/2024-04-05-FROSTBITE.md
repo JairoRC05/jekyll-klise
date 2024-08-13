@@ -21,6 +21,7 @@ pj: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: FTB 
+maincover1: /assets/logos/DFS.png
 pp1: EME
 bg1: rock rock
 r1: 0
@@ -28,6 +29,7 @@ rr1: 0
 pt1: 0
 pj1: 0
 #PARTIDO 2
+
 j2: RONDA 2
 p2: FTB
 r2: 0
@@ -40,6 +42,7 @@ pj2: 0
 
 #PARTIDO 5
 j5: RONDA 5
+maincover5: /assets/logos/EVL.png
 bg5: rock 
 p5: FTB
 r5: 0
@@ -51,6 +54,7 @@ pj5: 0
 j6: RONDA 6
 p6: FTB
 pp6: HG
+maincover6: /assets/logos/KARASUNO.png
 bg6: rock 
 r6: 0
 rr6: 0
@@ -61,6 +65,7 @@ pj6: 0
 j9: RONDA 9
 p9: FTB
 r9: 0
+maincover9: /assets/logos/NARANJA.png
 pp9: BNT
 rr9: 0
 bg9: rock

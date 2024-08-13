@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9
-maincover: /assets/logos/LIGA-JOHTO.png
+maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
 title: TEAM GALAXY
@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 0
-pj: 0
+puntos: 1
+pj: 1
 
 pt1: 0
 pj1: 0

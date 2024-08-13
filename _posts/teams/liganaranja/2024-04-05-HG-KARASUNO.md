@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LA2024JN N4
-maincover: /assets/logos/LIGA-JOHTO.png
+maincover: /assets/logos/KARASUNO.png
 puntosLJMAYO24: 19
 date: 2020-08-29 10:29:20 +0700
 title: HG KARASUNO

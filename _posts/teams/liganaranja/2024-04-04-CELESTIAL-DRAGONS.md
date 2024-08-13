@@ -19,7 +19,7 @@ puntos: 0
 pj: 0
 #PARTIDO 1
 j1: RONDA 1
-p1: CS
+p1: CD
 r1: 0
 pp1: DES
 rr1: 0
@@ -30,6 +30,7 @@ pj1: 0
 #PARTIDO 3
 j3: RONDA 3
 p3: CD
+maincover3: /assets/logos/FTB.png
 pp3: FTB
 bg3: rock
 r3: 0
@@ -42,12 +43,14 @@ p4: CD
 pp4: EVL
 bg4: rock
 r4: 0
+maincover4: /assets/logos/EVL.png
 rr4: 0
 pt4: 0
 pj4: 0
 #PARTIDO 5
 j5: RONDA 5
 bg5: rock 
+maincover5: /assets/logos/KARASUNO.png
 p5: CD
 r5: 0
 pp5: HG
@@ -58,6 +61,7 @@ pj5: 0
 #PARTIDO 7
 j7: RONDA 7
 p7: CD 
+maincover7: /assets/logos/SIG.png
 pp7: SIG
 bg7: rock 
 r7: 0
@@ -66,6 +70,7 @@ pt7: 0
 pj7: 0
 #PARTIDO 8
 j8: RONDA 8
+maincover8: /assets/logos/NARANJA.png
 p8:  CD
 r8: 0
 pp8: BNT
@@ -75,6 +80,7 @@ pt8: 0
 pj8: 0
 #PARTIDO 9
 j9: RONDA 9
+maincover9: /assets/logos/DFS.png
 p9: CD 
 r9: 0
 pp9: EME

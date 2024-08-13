@@ -24,6 +24,7 @@ pt1: 0
 pj1: 0
 #PARTIDO 2
 j2: RONDA 2
+maincover2: /assets/logos/SIG.png
 p2: MCH
 pp2: SIG
 bg2: rock rock
@@ -33,6 +34,7 @@ pt2: 0
 pj2: 0
 #PARTIDO 3
 j3: RONDA 3
+maincover3: /assets/logos/LIGA-JOHTO.png
 p3: MCH
 pp3: BNT
 bg3: rock
@@ -43,6 +45,7 @@ pj3: 0
 #PARTIDO 4
 j4: RONDA 4
 p4: MCH
+maincover4: /assets/logos/DFS.png
 pp4: EME
 bg4: rock rock
 r4: 0
@@ -61,6 +64,7 @@ pj5: 0
 #PARTIDO 6
 j6: RONDA 6
 bg6: rock 
+maincover6: /assets/logos/LIGA-JOHTO.png
 p6: MCH
 r6: 0
 pp6: CD
@@ -69,6 +73,7 @@ pt6: 0
 pj6: 0
 #PARTIDO 7
 j7: RONDA 7
+maincover7: /assets/logos/FTB.png
 p7: MCH
 pp7: FTB
 bg7: rock 
@@ -77,6 +82,7 @@ rr7: 0
 pt7: 0
 pj7: 0
 #PARTIDO 8
+maincover8: /assets/logos/EVL.png
 j8: RONDA 8
 bg8: rock 
 p8: MCH
@@ -86,6 +92,7 @@ rr8: 0
 pt8: 0
 pj8: 0
 #PARTIDO 9
+maincover9: /assets/logos/KARASUNO.png
 j9: RONDA 9
 bg9: rock
 p9: MCH

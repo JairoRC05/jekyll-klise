@@ -23,6 +23,7 @@ j1: RONDA 1
 p1: SIG
 r1: 0
 pp1: HG
+maincover1: /assets/logos/KARASUNO.png
 rr1: 0
 bg1: ofire
 pt1: 0
@@ -34,6 +35,7 @@ pj1: 0
 j4: RONDA 4
 p4: SIG
 pp4: BNT
+maincover4: /assets/logos/NARANJA.png
 bg4: ofire 
 r4: 0
 rr4: 0
@@ -42,6 +44,7 @@ pj4: 0
 #PARTIDO 5
 
 j5: RONDA 5
+maincover5: /assets/logos/DFS.png
 p5: SIG
 pp5: EME
 bg5: fire 
@@ -65,6 +68,7 @@ j8: RONDA 8
 p8: SIG
 r8: 0
 pp8: FTB
+maincover8: /assets/logos/FTB.png
 rr8: 0
 bg8: ofire 
 pt8: 0
@@ -73,6 +77,7 @@ pj8: 0
 
 j9: RONDA 9
 p9: SIG
+maincover9: /assets/logos/EVL.png
 pp9: EVL
 bg9: fire
 r9: 0
