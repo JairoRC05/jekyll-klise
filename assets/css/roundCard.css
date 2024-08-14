@@ -139,6 +139,9 @@ margin: 0;
         p{
             margin: 0;
             font-weight: bold;
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            }
         }
     }
 
