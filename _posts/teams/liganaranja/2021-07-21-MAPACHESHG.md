@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: MAPACHES HG
 ID: MCH
-puntos: 0
-pj: 0
+puntos: 2
+pj: 1
 dia: 29
 hora: '22:10'
 

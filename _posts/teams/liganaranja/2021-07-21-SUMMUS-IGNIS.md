@@ -15,16 +15,16 @@ background: '#F16C38'
 
 team: SUMMUS IGNUS
 ID: SIG
-puntos: 0
-pj: 0
+puntos: 1
+pj: 1
 
 #PARTIDO 1
 j1: RONDA 1
 p1: SIG
-r1: 0
+r1: 1
 pp1: HG
 maincover1: /assets/logos/KARASUNO.png
-rr1: 0
+rr1: 2
 bg1: ofire
 pt1: 0
 pj1: 0
