@@ -34,7 +34,7 @@ pt2: 0
 pj2: 0
 #PARTIDO 3
 j3: RONDA 3
-maincover3: /assets/logos/LIGA-JOHTO.png
+maincover3: /assets/logos/BNT.png
 p3: MCH
 pp3: BNT
 bg3: rock

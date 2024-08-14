@@ -70,7 +70,7 @@ pt7: 0
 pj7: 0
 #PARTIDO 8
 j8: RONDA 8
-maincover8: /assets/logos/NARANJA.png
+maincover8: /assets/logos/BNT.png
 p8:  CD
 r8: 0
 pp8: BNT

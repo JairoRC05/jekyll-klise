@@ -65,7 +65,7 @@ pj6: 0
 j9: RONDA 9
 p9: FTB
 r9: 0
-maincover9: /assets/logos/NARANJA.png
+maincover9: /assets/logos/BNT.png
 pp9: BNT
 rr9: 0
 bg9: rock

@@ -35,7 +35,7 @@ pj1: 0
 j4: RONDA 4
 p4: SIG
 pp4: BNT
-maincover4: /assets/logos/NARANJA.png
+maincover4: /assets/logos/BNT.png
 bg4: ofire 
 r4: 0
 rr4: 0
