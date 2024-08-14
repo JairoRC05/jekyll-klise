@@ -130,6 +130,9 @@ margin: 0;
         img{
             width: 70px;
             margin-bottom: 0;
+            @media screen and (max-width: 576px) {
+                width: 40px;
+            }
         }
 
 

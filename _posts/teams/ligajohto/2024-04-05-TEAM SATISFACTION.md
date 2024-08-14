@@ -15,8 +15,8 @@ cover: /assets/backCard.png
 team: TEAM SATISFACTION
 route: /liga-naranja
 ID: TSA
-puntos: 0
-pj: 0
+puntos: 2
+pj: 1
 dia: '26'
 hora: '22:10'
 #PARTIDO 1

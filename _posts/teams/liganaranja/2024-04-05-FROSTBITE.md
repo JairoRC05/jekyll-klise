@@ -16,16 +16,16 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 0
-pj: 0
+puntos: 2
+pj: 1
 #PARTIDO 1
+maincover1: /assets/logos/DFS.png
 j1: RONDA 1
 p1: FTB 
-maincover1: /assets/logos/DFS.png
+r1: 2
+rr1: 0
 pp1: EME
 bg1: rock rock
-r1: 0
-rr1: 0
 pt1: 0
 pj1: 0
 #PARTIDO 2
