@@ -11,7 +11,7 @@
 
 
 @media screen and (max-width: 576px) {
-    .nav-pills .nav-link.active,
+    .nav-pills .nav-link,
 .show>.nav-pills .nav-link{
   
     padding-left: 0;
