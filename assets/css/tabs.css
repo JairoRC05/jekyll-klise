@@ -2,7 +2,24 @@
 .show>.nav-pills .nav-link{
     background: rgb(255,159,21) !important;
     color: rgb(255, 255, 255) !important
+
+    
+
+
 }
+
+
+
+@media screen and (max-width: 576px) {
+    .nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+  
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+  }
 
 
 .nav-link {
