@@ -16,16 +16,16 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 0
-pj: 0
+puntos: 1
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 maincover1: /assets/logos/TSR.png
 p1: IL 
 pp1: TSR
 bg1: rock rock
-r1: 0
-rr1: 0
+r1: 1
+rr1: 2
 pt1: 0
 pj1: 0
 #PARTIDO 2
