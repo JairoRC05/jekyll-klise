@@ -6,56 +6,105 @@
     justify-items: center;
     align-items: center;
     flex-direction: column;
+
+    @media screen and (max-width: 767.98px) {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+
+    @media screen and (max-width: 576px) {
+        padding: 5px 20px;
+    }
+
+    a>img {
+        width: 200px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 50px;
+        }
+    }
+
+    img {
+        width: 200px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 50px;
+        }
+    }
+
+
+    h6 {
+        margin-bottom: 0;
+
+    }
+
+
+    p {
+        margin: 0;
+
+    }
+
+    .round {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        p {
+            margin: 0;
+        }
+
+        h6 {
+            color: yellow;
+        }
+
+        @media screen and (max-width: 767.98px) {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-left: 10px;
+        }
+
+
+        .roundInfo {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+                margin: 0;
+                @media screen and (max-width: 576px) {
+                    font-size: 16px;
+                }
+            }
+
+
+
+            h6 {
+                margin: 0;
+
+                @media screen and (max-width: 767.98px) {
+                    font-size: 16px;
+
+                }
+            }
+
+            @media screen and (max-width: 767.98px) {
+                align-items: start;
+
+            }
+
+        }
+
+
+    }
+
 }
-
-.roundCard> a > img {
-    width: 200px;
-}
-.roundCard > img {
-    width: 200px;
-}
-
-.roundCard>h6 {
-    margin-bottom: 0;
-
-}
-
-.roundCard>p {
-    margin: 0;
-
-}
-
-.round {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.round > p{
-margin: 0;
-}
-.roundInfo > h6{
-    color: yellow;
-}
-
-
-
-
-.roundInfo {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.roundInfo>h2, h6 {
-    margin: 0;
-}
-
 
 
 
@@ -63,82 +112,44 @@ margin: 0;
     border: 1px solid rgb(83, 83, 83);
 }
 
-@media (max-width: 767.98px) {
-    .roundCard {
-        flex-direction: row;
-        justify-content: start;
-    }
-    .roundInfo {
-        align-items: start;
-       
-    }
-
-    .round{
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin-left: 10px;
-    }
-
-    .roundInfo > h6{
-        font-size: 16px;
-    }
-
-    .roundInfo>h2,
-    p{
-        font-size: 18px;
-    }
-
-    .roundCard>a>img {
-        width: 50px;
-        
-    }
-    .roundCard > img {
-        width: 50px;
-        
-    }
-
-    .roundCard>h2,
-    p,
-    h6 {
-        font-size: 18px;
-    }
-
-}
 
 
 
 
 
-.roundTeams{
+
+
+.roundTeams {
     padding: 10px 25px;
     margin-bottom: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     background: #0000005b;
 
 
-    .roundTeam{
+    .roundTeam {
         display: flex;
         justify-items: center;
         align-items: center;
         flex-direction: column;
 
-    
-        img{
+
+        img {
             width: 70px;
             margin-bottom: 0;
+
             @media screen and (max-width: 576px) {
                 width: 40px;
             }
         }
 
-        p{
+        p {
             margin: 0;
             font-weight: bold;
+
             @media screen and (max-width: 576px) {
                 font-size: 10px;
             }
@@ -146,14 +157,14 @@ margin: 0;
     }
 
 
-    .roundScore{
+    .roundScore {
         display: flex;
         justify-items: center;
         align-items: center;
         flex-direction: row;
 
 
-        p{
+        p {
             font-size: 20px;
             margin: 0;
             font-weight: bold;
