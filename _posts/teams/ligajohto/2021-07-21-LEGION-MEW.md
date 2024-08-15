@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
-puntos: 0
-pj: 0
+puntos: 1
+pj: 1
 #PARTIDO 2
 j2: RONDA 2
 maincover2: /assets/logos/DFS.png

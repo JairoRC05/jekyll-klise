@@ -16,7 +16,7 @@ background: '#F16C38'
 team: TEAM ROCKET
 ID: TR
 puntos: 0
-pj: 0
+pj: 1
 
 #PARTIDO 1
 j1: RONDA 1
@@ -24,7 +24,7 @@ maincover1: /assets/logos/TA.png
 p1: TR
 r1: 0
 pp1: TA
-rr1: 0
+rr1: 2
 bg1: ofire
 pt1: 0
 pj1: 0

@@ -17,7 +17,7 @@ team: DFS DIAMOND
 
 ID: DFS DMD
 puntos: 0
-pj: 0
+pj: 1
 #PARTIDO 1
 maincover1: /assets/logos/TAE.png
 j1: RONDA 1
@@ -25,7 +25,7 @@ p1:  DMD
 pp1: TAE
 bg1: rock rock
 r1: 0
-rr1: 0
+rr1: 2
 pt1: 0
 pj1: 0
 #PARTIDO 2
