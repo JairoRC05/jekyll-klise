@@ -170,8 +170,11 @@
             font-weight: bold;
         }
     }
+}
 
 
-
-
+.roundTittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -39,7 +39,33 @@
     border: 1px solid rgb(83, 83, 83);
 }
 
+.bg-youtube{
+  background: #FF0000;;
+}
 
+
+.bg-twitch{
+  background: #A970FF;;
+}
+.bg-transparent{
+  background: transparent;;
+}
+.bg-facebook{
+  background: #0965fe;
+}
+.bg-discord{
+  background: #5320fb;
+}
+.bg-telegram{
+  background: 	#24A1DE;
+}
+.bg-instagram{
+  background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+}
 
 
 .bgDuos{
