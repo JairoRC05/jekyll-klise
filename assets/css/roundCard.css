@@ -175,13 +175,29 @@
 
 .roundTittle{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding: 15px;
 
-   h3{
+  
+    @media screen and (max-width: 992px) {
+        justify-content: center;
+
+    }
+
+    @media screen and (max-width: 576px) {
+        padding: 10px;
+    }
+
+
+  h3{
+    @media screen and (max-width: 768px) {
+        font-size: 16px !important;
+    }
     @media screen and (max-width: 576px) {
         font-size: 10px !important;
     }
-   }
+  }
+
 
 }
