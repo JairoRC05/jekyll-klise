@@ -1,7 +1,7 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI6 LI7
+categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6
 maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
@@ -18,6 +18,16 @@ team: DFS DIAMOND
 ID: DFS DMD
 puntos: 0
 pj: 1
+
+
+team1: partido5
+team2: partido5
+team3: DMD3
+team4: DMD4
+team5: DMD5
+team6: partido5 
+
+
 #PARTIDO 1
 maincover1: /assets/logos/TAE.png
 j1: RONDA 1

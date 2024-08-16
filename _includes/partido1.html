@@ -1,0 +1,44 @@
+{% if page.team1 == "partido1" %}
+{% include ronda1.html %}
+{% elsif page.team1 == "POA1" %}
+{% assign norte = site.categories.POA1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "partido2" %}
+{% include ronda1.html %}
+{% elsif page.team1 == "SSI1" %}
+{% assign norte = site.categories.SSI1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "partido3" %}
+{% include ronda1.html %}
+{% elsif page.team1 == "TSR1" %}
+{% assign norte = site.categories.TSR1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "partido4" %}
+{% include ronda1.html %}
+{% elsif page.team1 == "SAP1" %}
+{% assign norte = site.categories.SAP1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "partido5" %}
+{% include ronda1.html %}
+{% elsif page.team1 == "TAE1" %}
+{% assign norte = site.categories.TAE1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}

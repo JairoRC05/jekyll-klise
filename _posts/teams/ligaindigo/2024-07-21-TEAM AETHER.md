@@ -1,7 +1,7 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI2 LI3 LI7
+categories: LI LI2 LI3 LI7 TSR2 SSI3
 maincover: /assets/logos/TAE.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
@@ -17,6 +17,14 @@ team: TEAM AETHER
 ID: TAE
 puntos: 2
 pj: 1
+
+
+team1: TAE1
+team2: partido1
+team3: partido1
+team4: TAE4
+team5: TAE5
+team6: TAE6
 
 #PARTIDO 2
 j2: RONDA 2
