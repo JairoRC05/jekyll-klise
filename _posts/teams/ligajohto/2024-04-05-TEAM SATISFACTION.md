@@ -16,7 +16,7 @@ team: TEAM SATISFACTION
 route: /liga-naranja
 ID: TSA
 puntos: 1
-pj: 1
+pj: 2
 dia: '26'
 hora: '22:10'
 #PARTIDO 1
