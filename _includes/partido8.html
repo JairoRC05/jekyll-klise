@@ -1,0 +1,49 @@
+{% if page.team8 == "partido1" %}
+{% include ronda8.html %}
+{% elsif page.team8 == "SSI8" %}
+{% assign norte = site.categories.SSI8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team8 == "partido2" %}
+{% include ronda8.html %}
+{% elsif page.team8 == "DMD8" %}
+{% assign norte = site.categories.DMD8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team8 == "partido3" %}
+{% include ronda8.html %}
+{% elsif page.team8 == "SAP8" %}
+{% assign norte = site.categories.SAP8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team8 == "partido4" %}
+{% include ronda8.html %}
+{% elsif page.team8 == "TAE8" %}
+{% assign norte = site.categories.TAE8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team8 == "partido5" %}
+{% include ronda8.html %}
+{% elsif page.team8 == "IL8" %}
+{% assign norte = site.categories.IL8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+
+
+
+

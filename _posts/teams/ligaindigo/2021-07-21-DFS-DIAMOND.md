@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6
+categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6 SSI7
 maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
@@ -26,6 +26,9 @@ team3: DMD3
 team4: DMD4
 team5: DMD5
 team6: partido5 
+team7: partido5 
+team8: DMD8 
+team9: DMD9 
 
 
 #PARTIDO 1

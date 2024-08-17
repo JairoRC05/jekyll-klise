@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI2 LI3 LI7 TSR2 SSI3
+categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7
 maincover: /assets/logos/TAE.png
 puntosLJMAYO24:
 date: 2024-05-02 10:29:20 +0700
@@ -25,6 +25,9 @@ team3: partido1
 team4: TAE4
 team5: TAE5
 team6: TAE6
+team7: partido1
+team8: TAE8
+team9: TAE9
 
 #PARTIDO 2
 j2: RONDA 2

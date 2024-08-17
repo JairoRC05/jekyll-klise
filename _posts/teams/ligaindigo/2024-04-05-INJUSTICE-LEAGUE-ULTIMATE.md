@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI5 LI6 LI9 SSI2 TSR1 SSI2 TAE5 SAP6
+categories: LI LI1 LI2 LI5 LI6 LI9 SSI2 TSR1 SSI2 TAE5 SAP6 DMD9
 maincover: /assets/logos/ILEAGUE.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
@@ -22,6 +22,9 @@ team3: IL3
 team4: IL4
 team5: partido1
 team6: partido1
+team7: IL7
+team8: IL8
+team9: partido1
 
 
 puntos: 1

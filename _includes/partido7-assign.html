@@ -1,0 +1,24 @@
+<div class="col-12 col-md-12 col-lg-4 col-xl-4 mt-0">
+  <div class="container roundTeams">
+    <div class="roundTeam">
+      <img src="{{post.maincover}}" alt="" class="img-fluid">
+      <p >{{post.p7 | truncate: 8}}</p>
+    </div>
+    <div class="roundScore">
+      {% assign FH = site.categories.FECHA %}
+      {%- for page in FH-%}
+      <span>{{page.j7}}</span>
+      <span class="small">{{page.f7}}</span>
+      {%- endfor -%}
+      <p>{{post.r7}} - {{post.rr7}}</p>
+   
+    </div>
+    <div class="roundTeam">
+      <img src="{{post.maincover7}}" alt="">
+      <p >{{post.pp7 | truncate: 8}}</p>
+    </div>
+  </div>
+</div>
+
+
+  
