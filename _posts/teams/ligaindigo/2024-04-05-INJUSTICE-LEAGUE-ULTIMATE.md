@@ -28,7 +28,7 @@ team9: partido1
 
 
 puntos: 1
-pj: 1
+pj: 2
 #PARTIDO 1
 j1: RONDA 1
 maincover1: /assets/logos/TSR.png
@@ -45,7 +45,7 @@ maincover2: /assets/logos/SSI.png
 p2: IL
 r2: 0
 pp2: SSI
-rr2: 0
+rr2: 2
 bg2: rock rock
 pt2: 0
 pj2: 0

@@ -16,15 +16,17 @@ cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
 puntos: 1
-pj: 1
+pj: 2
+
+
 #PARTIDO 2
 j2: RONDA 2
 maincover2: /assets/logos/DFS.png
 p2: MEW
+r2: 0
+rr2: 2
 pp2: PEARL
 bg2: rock rock
-r2: 0
-rr2: 0
 pt2: 0
 pj2: 0
 #PARTIDO 3

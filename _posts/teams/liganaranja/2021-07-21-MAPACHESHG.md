@@ -15,10 +15,9 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: MAPACHES HG
 ID: MCH
-puntos: 2
-pj: 1
-dia: 29
-hora: '22:10'
+puntos: 4
+pj: 2
+
 
 pt1: 0
 pj1: 0
@@ -26,10 +25,10 @@ pj1: 0
 j2: RONDA 2
 maincover2: /assets/logos/SIG.png
 p2: MCH
+r2: 2
+rr2: 1
 pp2: SIG
 bg2: rock rock
-r2: 0
-rr2: 0
 pt2: 0
 pj2: 0
 #PARTIDO 3
