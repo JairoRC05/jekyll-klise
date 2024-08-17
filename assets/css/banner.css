@@ -26,6 +26,7 @@
 
     .bannerText {
       text-align: center;
+      margin-left: 10px;
 
       h1 {
       font-size: 90px;

@@ -16,8 +16,8 @@ cover: /assets/backCard.png
 team: DFS DIAMOND
 
 ID: DFS DMD
-puntos: 0
-pj: 1
+puntos: 2
+pj: 2
 
 
 team1: partido5
@@ -45,10 +45,10 @@ pj1: 0
 j2: RONDA 2
 maincover2: /assets/logos/DFS.png
 p2: DMD
+r2: 2
+rr2: 0
 pp2: SAP
 bg2: rock rock
-r2: 0
-rr2: 0
 pt2: 0
 pj2: 0
 

@@ -6,7 +6,7 @@ maincover: /assets/logos/ILEAGUE.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
 title: INJUSTICE LEAGUE ULTIMATE
-team: INJUSTICE LEAGUE ULTIMATE
+team: IL ULTIMATE
 route: /liga-johto
 ID: IL
 tag: johto042024
