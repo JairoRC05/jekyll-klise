@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: LA2024JN N1 N3 N4 N5 N7 N8 N9
-maincover: /assets/logos/NARANJA.png
+maincover: /assets/logos/CD.png
 puntosLJMAYO24: 8
 date: 2020-08-29 10:29:20 +0700
 title: CELESTIAL DRAGONS
@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: CELESTIAL DRAGONS
 ID: CD
 puntos: 0
-pj: 0
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 p1: CD

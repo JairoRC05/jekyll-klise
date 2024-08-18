@@ -85,7 +85,7 @@
 
 
 .teams-table {
-  text-align: left;
+
 
   .teams-title {
     background: rgb(18, 4, 139);
@@ -103,9 +103,33 @@
       font-size: 20px;
     }
   }
+
+  
+  .teams-title--orange {
+    background: rgb(255,190,0);
+    background: linear-gradient(100deg, rgba(255,190,0,0) 10%, rgba(255,190,0,1) 20%, rgba(255,190,0,1) 80%, rgba(255,190,0,0) 90%);
+    font-style: italic;
+    padding-bottom: 5px;
+    color: rgb(255, 255, 255);
+
+
+    @media screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
 }
 
 
 .solid{
   background: rgb(18, 4, 139);
 }
+
+.white{
+  background: rgb(255, 255, 255);
+}
+

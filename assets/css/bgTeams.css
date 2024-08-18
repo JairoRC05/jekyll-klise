@@ -106,3 +106,18 @@
 .clip-wrapper{
   filter:drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
 }
+
+/* BACKGROUNDS LIGAS */
+.grOrange{
+ background: #f6f6f6;
+}
+
+
+
+
+.bg-indigo{
+  background: rgb(18, 4, 139);
+  color: #fff;
+
+}
+
