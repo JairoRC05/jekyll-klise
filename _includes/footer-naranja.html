@@ -1,0 +1,67 @@
+<!-- Footer 1 - Bootstrap Brain Component -->
+<footer class="footer">
+
+    <!-- Copyright - Bootstrap Brain Component -->
+    <div class="bg-white py-5 py-xl-8 py-xxl-9 ">
+      <div class="container overflow-hidden">
+        <div class="row gy-5 gy-md-0 align-items-md-center">
+          <div class="col-xs-12 col-md-7 order-1 order-md-0">
+            <div class="copyright text-center text-md-start">
+              &copy; 2024.  All Rights Reserved XForce05.
+            </div>
+            <div class="credits text-warning text-center text-md-start mt-2 fs-8">
+             
+             #TodosSomosUnite
+            </div>
+          </div>
+  
+          <div class="col-xs-12 col-md-5 order-0 order-md-1">
+            <div class="social-media-wrapper">
+              <ul class="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-md-end">
+                <li class="me-3">
+                  <a href="https://www.facebook.com/profile.php?id=100079075191093" class="link-light link-opacity-75-hover" target="_blank">
+                    <i class="fa-brands fa-facebook text-orange"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="https://www.youtube.com/channel/UCBq7KYCM-cQJFuUImuqTklA" class="link-light link-opacity-75-hover" target="_blank">
+                    <i class="fa-brands fa-youtube text-orange"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="https://discord.gg/T6VpvUmn" class="link-light link-opacity-75-hover" target="_blank">
+                    <i class="fa-brands fa-discord text-orange"></i>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="https://www.twitch.tv/x_force05" class="link-light link-opacity-75-hover" target="_blank">
+                    <i class="fa-brands fa-twitch text-orange"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+  
+
+
+  {%- if site.google_analytics -%}
+  <!-- Google tag (gtag.js) -->
+  <script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "{{ site.google_analytics }}");
+  </script>
+{%- endif -%}
