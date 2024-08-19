@@ -45,8 +45,15 @@
 
 
 .bg-twitch{
-  background: #A970FF;;
+  background: #9146ff;
+
+  &:hover{
+    background: #6500fe;
+  }
 }
+
+
+
 .bg-transparent{
   background: transparent;;
 }
