@@ -27,8 +27,8 @@ team8: IL8
 team9: partido1
 
 
-puntos: 1
-pj: 2
+puntos: 2
+pj: 3
 #PARTIDO 1
 j1: RONDA 1
 maincover1: /assets/logos/TSR.png

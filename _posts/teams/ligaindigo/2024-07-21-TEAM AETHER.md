@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 4
-pj: 2
+puntos: 6
+pj: 3
 
 
 team1: TAE1
@@ -43,10 +43,10 @@ pj2: 0
 j3: RONDA 3
 maincover3: /assets/logos/SSI.png
 p3: TAE
+r3: 2
+rr3: 1
 pp3: SSI
 bg3: rock rock
-r3: 0
-rr3: 0
 pt3: 0
 pj3: 0
 
