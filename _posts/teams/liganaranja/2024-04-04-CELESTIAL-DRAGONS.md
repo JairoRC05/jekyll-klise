@@ -16,7 +16,7 @@ cover: /assets/backCard.png
 team: CELESTIAL DRAGONS
 ID: CD
 puntos: 0
-pj: 1
+pj: 2
 #PARTIDO 1
 j1: RONDA 1
 p1: CD
@@ -28,13 +28,13 @@ pt1: 0
 pj1: 0
 
 #PARTIDO 3
+maincover3: /assets/logos/FTB.png
 j3: RONDA 3
 p3: CD
-maincover3: /assets/logos/FTB.png
+r3: 0
+rr3: 2
 pp3: FTB
 bg3: rock
-r3: 0
-rr3: 0
 pt3: 0
 pj3: 0
 #PARTIDO 4

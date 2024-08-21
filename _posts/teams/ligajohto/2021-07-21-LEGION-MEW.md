@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
-puntos: 1
-pj: 2
+puntos: 3
+pj: 3
 
 
 #PARTIDO 2
@@ -33,10 +33,10 @@ pj2: 0
 maincover3: /assets/logos/TSA.png
 j3: RONDA 3
 p3: MEW
+r3: 2
+rr3: 0
 pp3: TSA
 bg3: rock rock
-r3: 0
-rr3: 0
 pt3: 0
 pj3: 0
 

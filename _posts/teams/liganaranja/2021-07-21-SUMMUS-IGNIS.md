@@ -16,7 +16,7 @@ background: '#F16C38'
 team: SUMMUS IGNUS
 ID: SIG
 puntos: 2
-pj: 2
+pj: 3
 
 #PARTIDO 1
 j1: RONDA 1
@@ -31,7 +31,6 @@ pj1: 0
 
 
 #PARTIDO 4
-
 j4: RONDA 4
 p4: SIG
 pp4: BNT

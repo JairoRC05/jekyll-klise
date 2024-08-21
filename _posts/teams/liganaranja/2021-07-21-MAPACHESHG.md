@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: MAPACHES HG
 ID: MCH
-puntos: 4
-pj: 2
+puntos: 6
+pj: 3
 
 
 pt1: 0
@@ -35,10 +35,10 @@ pj2: 0
 j3: RONDA 3
 maincover3: /assets/logos/BNT.png
 p3: MCH
+r3: 2
+rr3: 0
 pp3: BNT
 bg3: rock
-r3: 0
-rr3: 0
 pt3: 0
 pj3: 0
 #PARTIDO 4
