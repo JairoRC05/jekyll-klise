@@ -43,7 +43,20 @@
 {% endfor %}
 {% endif %}
 
+<!-- LJ -->
+{% if page.team9 == "TA9" %}
+{% assign norte = site.categories.TA9 %}
+{%- for post in norte-%}
+{% include partido9-assign.html %}
+{% endfor %}
+{% endif %}
 
+{% if page.team9 == "MEW9" %}
+{% assign norte = site.categories.MEW9 %}
+{%- for post in norte-%}
+{% include partido9-assign.html %}
+{% endfor %}
+{% endif %}
 
 
 

@@ -1,7 +1,7 @@
 ---
-layout: teamCard3
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 LIJ2 LIJ3 LIJ7 
+categories: LJ06 LIJ2 LIJ3 LIJ7 TA7
 maincover: /assets/logos/LGN.png
 puntosLJMAYO24: 17
 date: 2020-08-28 10:29:20 +0700
@@ -18,6 +18,16 @@ ID: LGNM
 puntos: 3
 pj: 3
 
+
+team1: MEW1
+team2: partido1
+team3: partido1
+team4: MEW4
+team5: MEW5
+team6: MEW6
+team7: partido1
+team8: MEW8
+team9: MEW9
 
 #PARTIDO 2
 j2: RONDA 2

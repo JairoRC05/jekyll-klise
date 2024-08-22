@@ -1,7 +1,7 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9
+categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
@@ -17,6 +17,21 @@ team: TEAM GALAXY
 ID: TG
 puntos: 5
 pj: 3
+
+
+team1: TG1
+team2: partido4
+team3: partido5
+team4: partido4
+team5: partido4
+team6: partido3
+team7: partido4
+team8: partido4
+team9: partido4
+
+
+
+
 
 pt1: 0
 pj1: 0

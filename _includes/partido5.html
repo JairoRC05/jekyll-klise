@@ -43,3 +43,18 @@
 {% include partido5-assign.html %}
 {% endfor %}
 {% endif %}
+
+<!-- LJ -->
+{% if page.team5 == "TA5" %}
+{% assign norte = site.categories.TA5 %}
+{%- for post in norte-%}
+{% include partido5-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team5 == "MEW5" %}
+{% assign norte = site.categories.MEW5 %}
+{%- for post in norte-%}
+{% include partido5-assign.html %}
+{% endfor %}
+{% endif %}

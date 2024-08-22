@@ -44,6 +44,26 @@
 {% endif %}
 
 
+<!-- LIGA JOHTO -->
+{% if page.team8 == "ILR8" %}
+{% assign norte = site.categories.ILR8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
 
 
+{% if page.team8 == "TA8" %}
+{% assign norte = site.categories.TA8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team8 == "MEW8" %}
+{% assign norte = site.categories.MEW8 %}
+{%- for post in norte-%}
+{% include partido8-assign.html %}
+{% endfor %}
+{% endif %}
 

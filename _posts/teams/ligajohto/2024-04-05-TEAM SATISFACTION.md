@@ -1,5 +1,5 @@
 ---
-layout: teamCard3
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: LJ06
 maincover: /assets/logos/TSA.png

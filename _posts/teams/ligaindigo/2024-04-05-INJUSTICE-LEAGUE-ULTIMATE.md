@@ -18,12 +18,12 @@ cover: /assets/backCard.png
 
 team1: partido3
 team2: partido2
-team3: IL3
-team4: IL4
+team3: ILR3
+team4: ILR4
 team5: partido1
 team6: partido1
-team7: IL7
-team8: IL8
+team7: ILR7
+team8: ILR8
 team9: partido1
 
 

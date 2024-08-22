@@ -25,6 +25,8 @@
 {% endfor %}
 {% endif %}
 
+
+
 {% if page.team3 == "partido4" %}
 {% include ronda3.html %}
 {% elsif page.team3 == "RUBY3" %}
@@ -43,5 +45,20 @@
 {% endfor %}
 {% endif %}
 
+
+<!-- LIGA JOHTO -->
+{% if page.team3 == "ILR3" %}
+{% assign norte = site.categories.ILR3 %}
+{%- for post in norte-%}
+{% include partido3-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team3 == "TA3" %}
+{% assign norte = site.categories.TA3 %}
+{%- for post in norte-%}
+{% include partido3-assign.html %}
+{% endfor %}
+{% endif %}
 
 

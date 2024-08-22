@@ -44,3 +44,19 @@
 {% endif %}
 
 
+
+<!-- LIGA JOHTO -->
+{% if page.team4 == "ILR4" %}
+{% assign norte = site.categories.ILR4 %}
+{%- for post in norte-%}
+{% include partido4-assign.html %}
+{% endfor %}
+{% endif %}
+
+
+{% if page.team4 == "MEW4" %}
+{% assign norte = site.categories.MEW4 %}
+{%- for post in norte-%}
+{% include partido4-assign.html %}
+{% endfor %}
+{% endif %}

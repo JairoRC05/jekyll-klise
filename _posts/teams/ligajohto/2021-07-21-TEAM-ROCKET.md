@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9
+categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9 ILR8 TA1 MEW9
 maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700
@@ -17,6 +17,9 @@ team: TEAM ROCKET
 ID: TR
 puntos: 0
 pj: 3
+
+team1: partido1
+team8: partido3
 
 #PARTIDO 1
 j1: RONDA 1

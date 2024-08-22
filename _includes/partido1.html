@@ -42,3 +42,37 @@
 {% include partido1-assign.html %}
 {% endfor %}
 {% endif %}
+
+
+
+<!-- LIGA JOHTO -->
+{% if page.team1 == "TG1" %}
+{% assign norte = site.categories.TG1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "TA1" %}
+{% assign norte = site.categories.TA1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team1 == "MEW1" %}
+{% assign norte = site.categories.MEW1 %}
+{%- for post in norte-%}
+{% include partido1-assign.html %}
+{% endfor %}
+{% endif %}
+
+
+{% if page.team1 == "LIJ1" %}
+{% assign norte = site.categories.LIJ1  %}
+{%- for post in norte-%}
+{% if post.pos == 1 %}
+{% include partido1-assign.html %}
+{% endif %}
+{% endfor %}
+{% endif %}

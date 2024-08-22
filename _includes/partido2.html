@@ -46,3 +46,26 @@
 {% include partido2-assign.html %}
 {% endfor %}
 {% endif %}
+
+
+<!-- LIGA JOHTO -->
+{% if page.team2 == "TXG2" %}
+{% assign norte = site.categories.TXG2 %}
+{%- for post in norte-%}
+{% include partido2-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team2 == "TA2" %}
+{% assign norte = site.categories.TA2 %}
+{%- for post in norte-%}
+{% include partido2-assign.html %}
+{% endfor %}
+{% endif %}
+
+{% if page.team2 == "MEW2" %}
+{% assign norte = site.categories.MEW2 %}
+{%- for post in norte-%}
+{% include partido2-assign.html %}
+{% endfor %}
+{% endif %}
