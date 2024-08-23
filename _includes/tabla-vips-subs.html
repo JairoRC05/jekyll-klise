@@ -2,7 +2,7 @@
    <div class="row g-5 mb-3">
     <div class="col-12 col-md-6 col-lg-4">
          <h4 class="mb-3"><b>VIPS/SUBS/BITS</b></h4>
-   {% assign norte = site.categories.subs | sort: "tickets"| reverse %} 
+   {% assign norte = site.categories.subs08 | sort: "tickets"| reverse %} 
    {%- for post in norte-%}
         
    <div class="container playerList d-flex justify-content-between align-items-center">
@@ -45,8 +45,8 @@
 
 
     <div class="col-12 col-md-6 col-lg-4">
-      <h4 class="mb-3"><b>GIFTERS</b></h4>
-      {% assign norte = site.categories.gift | sort: "tickets"| reverse %} 
+      <h4 class="mb-3"><b>X GIFT</b></h4>
+      {% assign norte = site.categories.gift08 | sort: "tickets"| reverse %} 
       {%- for post in norte-%}
            
       <div class="container playerList d-flex justify-content-between align-items-center">
@@ -92,7 +92,7 @@
 
        <div class="col-12 col-md-6 col-lg-4">
         <h4 class="mb-3"><b>FOLLOWERS</b></h4>
-        {% assign norte = site.categories.follow | sort: "tickets"| reverse %} 
+        {% assign norte = site.categories.follow08 | sort: "tickets"| reverse %} 
         {%- for post in norte-%}
              
         <div class="container playerList d-flex justify-content-between align-items-center">

@@ -1,11 +1,11 @@
 ---
 layout: 
 permalink: /team/:title.html
-categories: bits
+categories: follow08
 maincover: /assets/avatars/male1.webp
-tickets: 1
+tickets: 3
 date: 2020-08-29 10:29:20 +0700
-title: LOLFEYEPIS
+title: FERNANUNITE
 tag: johto042024
 color: black
 puntosLJ202404: 12
@@ -27,5 +27,5 @@ r9: 0
 bg9: rock bg-danger
 rr9: 3
 pp9: S. VANGUARD
-rango: FOLLOWER S
+rango: FOLLOWER
 ---
