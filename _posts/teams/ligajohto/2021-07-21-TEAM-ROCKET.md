@@ -15,8 +15,8 @@ background: '#F16C38'
 
 team: TEAM ROCKET
 ID: TR
-puntos: 0
-pj: 3
+puntos: 2
+pj: 4
 
 team1: partido1
 team8: partido3
@@ -37,10 +37,10 @@ pj1: 0
 maincover4: /assets/logos/ZODIAC.png
 j4: RONDA 4
 p4: TR
+r4: 2
+rr4: 1
 pp4: ZC
 bg4: ofire 
-r4: 0
-rr4: 0
 pt4: 0
 pj4: 0
 #PARTIDO 5

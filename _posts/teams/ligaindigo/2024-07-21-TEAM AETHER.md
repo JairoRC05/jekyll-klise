@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 6
-pj: 3
+puntos: 8
+pj: 4
 
 
 team1: TAE1

@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 5
-pj: 3
+puntos: 7
+pj: 4
 
 
 team1: TG1
@@ -59,10 +59,10 @@ pj3: 0
 maincover4: /assets/logos/DFS.png
 j4: RONDA 4
 p4: TG
+r4: 2
+rr4: 0
 pp4: PEARL
 bg4: rock rock
-r4: 0
-rr4: 0
 pt4: 0
 pj4: 0
 #PARTIDO 5
