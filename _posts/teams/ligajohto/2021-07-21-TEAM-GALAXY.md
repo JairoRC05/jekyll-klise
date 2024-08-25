@@ -1,7 +1,8 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9
+categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9 team
+liga: LIGA JOHTO
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700

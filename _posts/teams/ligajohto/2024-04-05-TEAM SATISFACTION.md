@@ -1,7 +1,8 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06
+categories: LJ06 team
+liga: LIGA JOHTO
 maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 16
 date: 2020-08-29 10:29:20 +0700

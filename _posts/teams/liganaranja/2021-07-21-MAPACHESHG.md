@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N2 N3 N4 N5 N6 N7 N8 N9
+categories: LA2024JN N2 N3 N4 N5 N6 N7 N8 N9 team
 maincover: /assets/logos/MCH.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
@@ -17,7 +17,7 @@ team: MAPACHES HG
 ID: MCH
 puntos: 8
 pj: 4
-
+liga: LIGA NARANJA
 
 pt1: 0
 pj1: 0

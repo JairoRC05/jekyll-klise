@@ -1,7 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N4
+categories: LA2024JN N4 team
+liga: LIGA NARANJA
 maincover: /assets/logos/KARASUNO.png
 puntosLJMAYO24: 19
 date: 2020-08-29 10:29:20 +0700

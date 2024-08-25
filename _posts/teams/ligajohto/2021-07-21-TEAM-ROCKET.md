@@ -1,7 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9 ILR8 TA1 MEW9
+categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9 ILR8 TA1 MEW9 team
+liga: LIGA JOHTO
 maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700

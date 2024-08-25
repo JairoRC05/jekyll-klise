@@ -1,7 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N1 N3 N4 N5 N7 N8 N9
+categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team
+liga: LIGA NARANJA
 maincover: /assets/logos/CD.png
 puntosLJMAYO24: 8
 date: 2020-08-29 10:29:20 +0700
