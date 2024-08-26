@@ -5,13 +5,6 @@
 
 
 .gamer-top {
-
-    position: relative;
-    /* background: rgb(27,32,52);
-background: -moz-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
-background: -webkit-linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
-background: linear-gradient(90deg, rgba(27,32,52,1) 36%, rgba(27,32,52,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endColorstr="#1b2034",GradientType=1); */
     background: rgb(255, 159, 21);
     background: -moz-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
     background: -webkit-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
@@ -25,14 +18,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endCo
     padding: 10px;
     border-radius: 20px 0 0 0;
     overflow: hidden;
+
+    img{
+        width: 100px;
+    }
 }
 
 
 
-.gamer-top>img {
-    position: absolute;
-    width: 120px;
-}
 
 .gamer-title {
     display: flex;
@@ -40,20 +33,23 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endCo
     align-items: center;
     position: absolute;
 
+    img {
+        width: 28px;
+        margin-right: 5px;
+    }
+
+    h4 {
+        margin: 0 auto 0 0;
+        font-weight: 600;
+       }
+
+
 }
 
 
-.gamer-title>img {
-    width: 28px;
-    margin-right: 10px;
-}
 
-.gamer-title>h4 {
-    margin: 0;
-    font-style: italic;
-    font-weight: 600;
-    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.6);
-}
+
+
 
 
 .gamer-desc {
@@ -63,11 +59,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2034",endCo
     color: #220a3d;
     padding: 10px;
     padding-left: 15px;
-    font-size: 20px;
-    font-weight: 700;
-    font-style: italic;
+    font-size: 18px;
     line-height: 1;
 
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+
+      }
 
     img {
         padding: 10px;

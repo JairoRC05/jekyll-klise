@@ -7,3 +7,4 @@ klise-*.gem
 Gemfile.lock
 assets/backgrounds/Fightcade-win32-latest.exe
 assets/backgrounds/SteamSetup.exe
+_layouts/home.html

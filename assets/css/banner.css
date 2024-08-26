@@ -133,3 +133,103 @@
   background: rgb(255, 255, 255);
 }
 
+
+
+
+.main-banner {
+    width: 100%;
+    border-radius: 15px;
+    height: 500px;
+    background: red;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.side-banner {
+  width: 100%;
+  border-radius: 15px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .card-banner{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    &:hover{
+      background: rgb(14, 4, 100);
+    }
+
+    img{
+      margin: 5px;
+      width: 70px;
+    }
+
+    .card-banner--info{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+
+      h1{
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        font-weight: 500;
+      }
+
+      p{
+        padding: 0;
+        margin: 0;
+        color: yellow;
+      }
+    }
+
+  }
+}
+
+
+
+.main-license {
+  width: 100%;
+  border-radius: 15px;
+  height: 250px;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+
+.card-license{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 15px;
+
+  width: 200px;
+  height: 100%;
+
+  &:hover{
+    background: rgb(14, 4, 100);
+  }
+
+  img{
+    margin: 5px;
+    width: 70px;
+  }
+
+}
