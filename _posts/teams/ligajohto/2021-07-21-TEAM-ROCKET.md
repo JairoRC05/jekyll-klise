@@ -16,8 +16,8 @@ background: '#F16C38'
 
 team: TEAM ROCKET
 ID: TR
-puntos: 2
-pj: 4
+puntos: 4
+pj: 5
 
 team1: partido1
 team8: partido3
@@ -48,10 +48,10 @@ pj4: 0
 maincover5: /assets/logos/DFS.png
 j5: RONDA 5
 p5: TR
+r5: 2
+rr5: 0
 pp5: PEARL
 bg5: fire 
-r5: 0
-rr5: 0
 pt5: 0
 pj5: 0
 #PARTIDO 6

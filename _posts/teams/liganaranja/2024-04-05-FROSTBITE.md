@@ -17,8 +17,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 6
-pj: 3
+puntos: 8
+pj: 4
 #PARTIDO 1
 maincover1: /assets/logos/DFS.png
 j1: RONDA 1
@@ -46,9 +46,9 @@ j5: RONDA 5
 maincover5: /assets/logos/EVL.png
 bg5: rock 
 p5: FTB
-r5: 0
-pp5: EVL
+r5: 2
 rr5: 0
+pp5: EVL
 pt5: 0
 pj5: 0
 #PARTIDO 6

@@ -28,8 +28,8 @@ team8: ILR8
 team9: partido1
 
 
-puntos: 2
-pj: 4
+puntos: 4
+pj: 5
 #PARTIDO 1
 j1: RONDA 1
 maincover1: /assets/logos/TSR.png
@@ -57,9 +57,9 @@ j5: RONDA 5
 bg5: rock 
 maincover5: /assets/logos/TAE.png
 p5: IL
-r5: 0
-pp5: TAE
+r5: 2
 rr5: 0
+pp5: TAE
 pt5: 0
 pj5: 0
 #PARTIDO 6

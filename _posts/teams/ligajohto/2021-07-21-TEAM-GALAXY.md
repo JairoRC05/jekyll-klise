@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 7
-pj: 4
+puntos: 9
+pj: 5
 
 
 team1: TG1
@@ -70,10 +70,10 @@ pj4: 0
 maincover5: /assets/logos/TSA.png
 j5: RONDA 5
 p5: TG
+r5: 2
+rr5: 0
 pp5: TSA
 bg5: rock 
-r5: 0
-rr5: 0
 pt5: 0
 pj5: 0
 #PARTIDO 6
