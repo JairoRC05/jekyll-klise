@@ -123,8 +123,14 @@
 
 
 .bg-indigo{
-  background: rgb(18, 4, 139);
+  background: rgb(18, 4, 139) !important;
   color: #fff;
 
+}
+
+
+.bgIndigoTop{
+  background: rgb(18,4,139) !important;
+  background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
 }
 
