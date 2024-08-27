@@ -36,11 +36,23 @@
     img {
         width: 28px;
         margin-right: 5px;
+
+        @media screen and (max-width: 768px) {
+            width: 20;
+    
+          }
     }
 
     h4 {
         margin: 0 auto 0 0;
         font-weight: 600;
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+    
+          }
+
+
        }
 
 
