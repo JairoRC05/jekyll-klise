@@ -109,7 +109,7 @@
 
 }
 
-.row:last-child{
+.team--last:last-child{
     margin-bottom: 60px;
 }
 
