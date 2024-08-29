@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: MAPACHES HG
 ID: MCH
-puntos: 8
-pj: 4
+puntos: 10
+pj: 5
 liga: LIGA NARANJA
 
 pt1: 0
@@ -65,19 +65,19 @@ j6: RONDA 6
 bg6: rock 
 maincover6: /assets/logos/LIGA-JOHTO.png
 p6: MCH
-r6: 0
-pp6: CD
+r6: 2
 rr6: 0
+pp6: CD
 pt6: 0
 pj6: 0
 #PARTIDO 7
 j7: RONDA 7
 maincover7: /assets/logos/FTB.png
 p7: MCH
-pp7: FTB
-bg7: rock 
 r7: 0
 rr7: 0
+pp7: FTB
+bg7: rock 
 pt7: 0
 pj7: 0
 #PARTIDO 8

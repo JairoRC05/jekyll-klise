@@ -18,7 +18,7 @@ team: DFS DIAMOND
 
 ID: DFS DMD
 puntos: 6
-pj: 5
+pj: 6
 
 
 team1: partido5
@@ -58,8 +58,8 @@ j6: RONDA 6
 maincover6: /assets/logos/TSR.png
 p6:  DMD
 r6: 0
+rr6: 2 
 pp6: TSR
-rr6: 0 
 bg6: rock 
 pt6: 0
 pj6: 0

@@ -17,7 +17,7 @@ team: TEAM SATISFACTION
 route: /liga-naranja
 ID: TSA
 puntos: 2
-pj: 5
+pj: 6
 
 
 ---

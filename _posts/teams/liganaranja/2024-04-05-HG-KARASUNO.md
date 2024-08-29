@@ -17,7 +17,7 @@ grupo: sur
 background: "#F16C38"
 cover: /assets/backCard.png
 puntos: 6
-pj: 4
+pj: 5
 
 #PARTIDO 4
 j4: RONDA 4

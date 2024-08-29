@@ -17,8 +17,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 8
-pj: 4
+puntos: 10
+pj: 5
 #PARTIDO 1
 maincover1: /assets/logos/DFS.png
 j1: RONDA 1
@@ -53,12 +53,12 @@ pt5: 0
 pj5: 0
 #PARTIDO 6
 j6: RONDA 6
-p6: FTB
-pp6: HG
 maincover6: /assets/logos/KARASUNO.png
-bg6: rock 
-r6: 0
+p6: FTB
+r6: 2
 rr6: 0
+pp6: HG
+bg6: rock 
 pt6: 0
 pj6: 0
 

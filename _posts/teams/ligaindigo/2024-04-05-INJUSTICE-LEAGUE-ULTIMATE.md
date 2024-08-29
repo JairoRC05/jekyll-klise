@@ -28,8 +28,8 @@ team8: ILR8
 team9: partido1
 
 
-puntos: 4
-pj: 5
+puntos: 6
+pj: 6
 #PARTIDO 1
 j1: RONDA 1
 maincover1: /assets/logos/TSR.png
@@ -66,10 +66,10 @@ pj5: 0
 j6: RONDA 6
 maincover6: /assets/logos/DFS.png
 p6: IL
+r6: 2
+rr6: 0
 pp6: SAP
 bg6: rock 
-r6: 0
-rr6: 0
 pt6: 0
 pj6: 0
 

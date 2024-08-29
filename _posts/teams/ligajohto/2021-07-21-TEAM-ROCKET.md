@@ -16,8 +16,8 @@ background: '#F16C38'
 
 team: TEAM ROCKET
 ID: TR
-puntos: 4
-pj: 5
+puntos: 6
+pj: 6
 
 team1: partido1
 team8: partido3
@@ -59,9 +59,9 @@ maincover6: /assets/logos/TSA.png
 j6: RONDA 6
 bg6: ofire 
 p6: TR
-r6: 0
-pp6: TSA
+r6: 2
 rr6: 0 
+pp6: TSA
 pt6: 0
 pj6: 0
 
