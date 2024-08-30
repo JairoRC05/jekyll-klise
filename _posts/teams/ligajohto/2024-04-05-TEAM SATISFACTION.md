@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 team
+categories: LJ06 team CXF
 liga: LIGA JOHTO
 maincover: /assets/logos/TSA.png
 puntosLJMAYO24: 16

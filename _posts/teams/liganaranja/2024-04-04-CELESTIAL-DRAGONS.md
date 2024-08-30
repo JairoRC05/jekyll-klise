@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team
+categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team CXF
 liga: LIGA NARANJA
 maincover: /assets/logos/CD.png
 puntosLJMAYO24: 8

@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6 SSI7 team
+categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6 SSI7 team CXF
 liga: LIGA INDIGO
 maincover: /assets/logos/DFS.png
 puntosLJMAYO24: 17

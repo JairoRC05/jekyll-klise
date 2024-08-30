@@ -5,6 +5,12 @@ categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: COPA XFORCE
 cxf: COPA XFORCE
+image: /assets/img/CXF.jpg
+maincover: /assets/logos/COPA XFORCE.png
+
+
+
+
 # 4TOS DE FINAL
 #LLAVE1
 cxff1: 6 DE AGOSTO

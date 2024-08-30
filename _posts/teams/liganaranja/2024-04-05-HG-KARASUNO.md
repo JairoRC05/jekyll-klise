@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N4 team
+categories: LA2024JN N4 team CXF
 liga: LIGA NARANJA
 maincover: /assets/logos/KARASUNO.png
 puntosLJMAYO24: 19
