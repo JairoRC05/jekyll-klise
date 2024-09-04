@@ -15,8 +15,8 @@ background: '#F16C38'
 liga: LIGA NARANJA
 team: SUMMUS IGNUS
 ID: SIG
-puntos: 4
-pj: 5
+puntos: 6
+pj: 7
 
 #PARTIDO 1
 j1: RONDA 1
@@ -62,13 +62,12 @@ pt6: 0
 pj6: 0
 
 #PARTIDO 8
-
 j8: RONDA 8
+maincover8: /assets/logos/FTB.png
 p8: SIG
 r8: 0
 pp8: FTB
-maincover8: /assets/logos/FTB.png
-rr8: 0
+rr8: 2
 bg8: ofire 
 pt8: 0
 pj8: 0
