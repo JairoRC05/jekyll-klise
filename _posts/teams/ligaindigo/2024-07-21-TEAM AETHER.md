@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 8
-pj: 6
+puntos: 12
+pj: 8
 
 
 team1: TAE1
@@ -55,10 +55,10 @@ pj3: 0
 j7: RONDA 7
 maincover7: /assets/logos/DFS.png
 p7: TAE
+r7: 2
+rr7: 0
 pp7: SAP
 bg7: rock rock
-r7: 0
-rr7: 0
 pt7: 0
 pj7: 0
 
