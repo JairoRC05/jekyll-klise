@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
 puntos: 6
-pj: 6
+pj: 7
 
 
 team1: MEW1
@@ -55,10 +55,10 @@ pj3: 0
 j7: RONDA 7
 maincover7: /assets/logos/TA.png
 p7: MEW
+r7: 0
+rr7: 2
 pp7: TA
 bg7: rock rock
-r7: 0
-rr7: 0
 pt7: 0
 pj7: 0
 

@@ -16,8 +16,8 @@ cover: /assets/backCard.png
 team: TEAM SATISFACTION
 route: /liga-naranja
 ID: TSA
-puntos: 2
-pj: 6
+puntos: 4
+pj: 7
 
 
 ---

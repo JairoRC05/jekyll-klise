@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
 puntos: 11
-pj: 6
+pj: 7
 
 
 team1: TG1
@@ -90,10 +90,10 @@ pj6: 0
 maincover7: /assets/logos/ILEAGUE.png
 j7: RONDA 7
 p7: TG
+r7: 0
+rr7: 2
 pp7: IL
 bg7: rock 
-r7: 0
-rr7: 0
 pt7: 0
 pj7: 0
 #PARTIDO 8
