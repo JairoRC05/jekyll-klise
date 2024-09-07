@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: LEGION MEW
 ID: LGNM
 puntos: 6
-pj: 7
+pj: 9
 
 
 team1: MEW1
