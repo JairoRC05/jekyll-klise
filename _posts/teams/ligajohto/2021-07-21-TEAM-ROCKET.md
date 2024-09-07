@@ -16,8 +16,8 @@ background: '#F16C38'
 
 team: TEAM ROCKET
 ID: TR
-puntos: 8
-pj: 7
+puntos: 10
+pj: 9
 
 team1: partido1
 team8: partido3
@@ -70,8 +70,8 @@ maincover8: /assets/logos/ILEAGUE.png
 j8: RONDA 8
 p8: TR
 r8: 0
+rr8: 2
 pp8: IL
-rr8: 0
 bg8: ofire 
 pt8: 0
 pj8: 0
@@ -79,10 +79,10 @@ pj8: 0
 maincover9: /assets/logos/LGN.png
 j9: RONDA 9
 p9: TR
+r9: 2
+rr9: 0 
 pp9: MEW
 bg9: fire
-r9: 0
-rr9: 0 
 pt9: 0
 pj9: 0
 dia: 31
