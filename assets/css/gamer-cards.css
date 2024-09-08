@@ -32,6 +32,7 @@
     justify-content: start;
     align-items: center;
     position: absolute;
+    text-transform: capitalize;
 
     img {
         width: 28px;

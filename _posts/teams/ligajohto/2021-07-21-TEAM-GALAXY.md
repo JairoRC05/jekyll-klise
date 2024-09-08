@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9 team CXF CXF
+categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9 team CXF CXF SEP
 liga: LIGA JOHTO
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17

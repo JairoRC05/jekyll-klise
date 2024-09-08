@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9 ILR8 TA1 MEW9 team CXF
+categories: LJ06 LIJ1  LIJ4 LIJ5 LIJ6 LIJ8 LIJ9 ILR8 TA1 MEW9 team CXF SEP
 liga: LIGA JOHTO
 maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
