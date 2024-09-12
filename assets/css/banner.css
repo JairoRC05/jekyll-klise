@@ -126,16 +126,25 @@
     }
   }
 
-}
+  .teams-title--green {
+    background: rgb(0,0,0) !important;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 11%, rgba(4,101,70,1) 15%, rgba(4,101,70,1) 85%, rgba(4,101,70,0) 90%) !important;
+    font-style: italic;
+    padding-bottom: 5px;
+    color: rgb(255, 255, 255);
 
 
-.solid{
-  background: rgb(18, 4, 139);
+    @media screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
 }
 
-.white{
-  background: rgb(255, 255, 255);
-}
 
 
 

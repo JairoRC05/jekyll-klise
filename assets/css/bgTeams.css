@@ -138,3 +138,22 @@
   background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
 }
 
+.grGreen{
+  background: rgb(0,0,0) !important;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(4,101,70,1) 95%) !important;
+}
+
+.green{
+  background: rgba(4,101,70,1) !important;
+}
+
+
+
+
+.solid{
+  background: rgb(18, 4, 139) !important;
+}
+
+.white{
+  background: rgb(255, 255, 255);
+}
