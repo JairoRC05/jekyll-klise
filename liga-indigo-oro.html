@@ -13,7 +13,7 @@ permalink: /liga-indigo-oro.html
   {% include nav-indigo.html %}
 
 
-  <div class="container-fluid banner grGreen sticky-top">
+  <div class="container-fluid banner grGreen" >
     <div class="container bannerPromo d-flex justify-content-start align-items-center ">
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
@@ -26,9 +26,17 @@ permalink: /liga-indigo-oro.html
   </div>
 
 
-  <div class="container teams-table d-none d-md-block">
-    <h1 class="teams-title--green">CAMPEONATO</h1>
+  <div class="container teams-table d-none d-md-block"  id="home">
+    <h1 class="teams-title--green mt-5" >CAMPEONATO</h1>
     {% include cards-teams-icon.html %}
+    
+    <h1 class="teams-title--green m-10" id="rondas">RONDAS</h1>
+    {% include rondas-mobile.html %}
+   
+   
+    <h1 class="teams-title--green m-10" id="rondas">PATROCINADORES</h1>
+    {% include sponsors.html %}
+
   </div>
 
 
