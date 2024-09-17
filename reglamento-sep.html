@@ -51,7 +51,7 @@ permalink: /reglamento-sep.html
           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">REGLAMENTO</button>
           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">EQUIPOS INSCRITOS</button>
             </div>
-      </nav>
+    </nav>
       <div class="tab-content mt-4" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
             {% include reglas-temp.html %}
@@ -78,11 +78,43 @@ permalink: /reglamento-sep.html
         </div>
        
       </div>
+
+     
    </div>
 
+  
 
-    
+   <div class="d-none d-md-block">
+
     {% include footer-new.html %}
+  </div> 
+  
+  <div class="d-block d-md-none ">
+    <nav class="navbar solid fixed-bottom navbar-light">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="item-bar">
+            <a href="/liga-indigo-oro" >
+              <i class="fa-solid fa-trophy"></i>
+            <span>ORO.</span>
+            </a>
+          </div>
+          <div class="item-bar">
+            <a href="/liga-indigo-plata" >
+              <i class="fa-solid fa-trophy"></i>
+            <span>PLATA</span>
+            </a>
+          </div>
+          <div class="item-bar">
+            <a href="/reglamento-sep.html" >
+              <i class="fa-solid fa-bookmark"></i>
+            <span>REGLAS</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+  </div>
+    
+  
 
 
 
