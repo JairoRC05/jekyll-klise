@@ -3,7 +3,7 @@ layout: teamCard
 permalink: /team/:title.html
 categories: SEP LIP
 team: IMPERIO MEXA
-maincover: /assets/logos/BDLF.png
+maincover: /assets/logos/MEXA.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: IMPERIO MEXA
@@ -15,7 +15,7 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: IMPERIO MEXA
-puntos: 0
+puntos: 2
 pj: 1
 
 #PARTIDO 1
