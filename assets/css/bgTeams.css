@@ -157,3 +157,12 @@
 .white{
   background: rgb(255, 255, 255);
 }
+
+.red{
+  background: rgb(152,0,0);background: linear-gradient(0deg, rgba(152,0,0,1) 10%, rgba(0,0,0,1) 100%);
+}
+
+
+.text-smoke{
+  color: #b8b8b8;
+}
