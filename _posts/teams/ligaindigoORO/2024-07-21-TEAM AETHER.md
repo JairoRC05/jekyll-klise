@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
 puntos: 1
-pj: 2
+pj: 3
 
 
 team1: TAE1

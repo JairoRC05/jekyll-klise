@@ -16,8 +16,8 @@ background: '#F16C38'
 
 team: TEAM ROCKET
 ID: TR
-puntos: 4
-pj: 2
+puntos: 5
+pj: 3
 
 team1: partido1
 team8: partido3

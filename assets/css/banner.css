@@ -249,3 +249,86 @@
 .m-10{
   margin-top: 150px;
 }
+
+
+
+
+
+.carousel-banner{
+    width: 100%;
+ 
+    /* @media screen and (max-width: 768px) {
+      height: 150px;
+    } */
+  
+    .bannerPromo {
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+  
+    
+        img {
+          width: 250px;
+  
+          @media screen and (max-width: 768px) {
+            width: 100px;
+  
+          }
+        }
+
+  
+      .bannerText {
+        text-align: start;
+        margin-left: 10px;
+  
+        h1 {
+        font-size: 90px;
+          margin: 0;
+  
+          @media screen and (max-width: 991px) {
+            font-size: 60px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+  
+        span{
+          color: #fff;
+          font-weight: 800;
+        }
+  
+      }
+  
+  
+  
+      h3 {
+        font-size: 50px;
+        margin: 0;
+  
+          @media screen and (max-width: 991px) {
+            font-size: 30px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+  
+  
+        }
+      }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .slide{
+    height: 30% !important;
+  }
+}
+
+

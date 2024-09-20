@@ -10,21 +10,91 @@ home: true
 
 <body>
 
-  <div class="container roundTeams">
-    <div class="roundTeam">
-      <img src="{{post.maincover1}}" alt="" class="img-fluid">
-      <p >{{post.p1 | truncate: 8}}</p>
+  <nav class="navbar top sticky-top bg-black">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+      <div class="d-none d-lg-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white">INICIO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#rondas" class="text-white">RONDAS</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-sep" class="text-white">REGLAMENTO</a></span>
+      </div>
     </div>
-    <div class="roundScore">
-      <p>{{post.r1}} - {{post.rr1}}</p>
-   
-    </div>
-    <div class="roundTeam">
-      <img src="{{post.maincover11}}" alt="">
-      <p >{{post.pp1 |truncate: 8}}</p>
-    </div>
-  </div>
+  </nav>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+$(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 30 ) { 
+              $('.top').addClass('white');
+          } else {
+              $('.top').removeClass('white');
+          }
+        });
+});
+</script>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- {% include banner.html %} -->
+        {% assign norte = site.categories.PROMOLIO %}
+        {%- for post in norte-%}
+
+        <div class="container-fluid  {{post.bg1}}">
+          <div class="container carousel-match">
+            <div class="roundTeam">
+              <img src="{{post.maincover1}}" alt="" class="img-fluid">
+              <p>{{post.p1}}</p>
+            </div>
+            <div class="roundScore">
+              <h1 class="indigo">{{post.liga}}</h1>
+              <h2>{{post.vs}}</h2>
+              <h3 class="indigo">{{post.fecha1}}</h3>
+              <a href="{{post.link}}" target="_blank" class="btn btn-outline-warning">VER</a>
+              
+            </div>
+            <div class="roundTeam">
+              <img src="{{post.maincover11}}" alt="">
+              <p >{{post.pp1}}</p>
+            </div>
+          </div>
+        </div>
+        {%- endfor -%}
+        
+      </div>
+      <!-- <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div> -->
+    </div>
+    <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   
   <div id="stars1"></div>
   <div id="stars2"></div>
