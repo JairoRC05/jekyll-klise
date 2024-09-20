@@ -16,7 +16,7 @@ permalink: /resultados.html
         <span class="text-white indigo">LIGA INDIGO</span>
       </a>
       <div class="d-none d-lg-block">
-        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA 2</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA 3</a></span>
  
       </div>
     </div>  
@@ -26,28 +26,28 @@ permalink: /resultados.html
   <div class="container">
     <div class="row mt-5">
       <div class="col-4">
-        <img src="/assets/img/diseño.png" alt="" height="480">
+        <img src="/assets/img/diseño.png" alt="" height="490" width="350" class="shadows">
       </div>
       <div class="col-8">
         <div class="row mb-3 mb-5 text-white">
           <div>
             <h4  class="indigo">DIVISION ORO</h4>
           </div>
-          {% assign norte = site.categories.R2 %}
+          {% assign norte = site.categories.R3 %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}
           <div class="mt-2 ">
             <h4  class="indigo">DIVISION PLATA</h4>
           </div>
-          {% assign norte = site.categories.RP2 %}
+          {% assign norte = site.categories.RP3 %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}
 
           <div class="row">
             <div class="col-8">
-              <p class="text-smoke">Resultados del día 18 de septiembre.</p>
+              <p class="text-smoke">Resultados del día 19 de septiembre. (PP) Partidos pendientes</p>
             </div>
          
             <div class="col-4">

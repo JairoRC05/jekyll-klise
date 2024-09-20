@@ -332,3 +332,14 @@
 }
 
 
+
+
+
+.rotate{
+  transform: scaleX(-1);
+}
+
+
+.shadows{
+  filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
