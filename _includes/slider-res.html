@@ -1,0 +1,119 @@
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-0 splide__slide p-1">
+    <div class="container roundRes  {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover1}}" alt="" class="img-fluid">
+        <p >{{post.p1 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r1}} - {{post.rr1}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover11}}" alt="">
+        <p >{{post.pp1 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+    <div class="container roundRes {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover2}}" alt="" class="img-fluid">
+        <p >{{post.p2 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r2}} - {{post.rr2}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover22}}" alt="">
+        <p>{{post.pp2 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+    <div class="container roundRes {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover3}}" alt="" class="img-fluid">
+        <p >{{post.p3 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r3}} - {{post.rr3}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover33}}" alt="">
+        <p>{{post.pp3 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+    <div class="container roundRes {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover4}}" alt="" class="img-fluid">
+        <p >{{post.p4 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r4}} - {{post.rr4}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover44}}" alt="">
+        <p>{{post.pp4 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+    <div class="container roundRes {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover5}}" alt="" class="img-fluid">
+        <p >{{post.p5 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r5}} - {{post.rr5}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover55}}" alt="">
+        <p>{{post.pp5 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+{% if post.pp6 == "DES" %}
+<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+  <div class="container roundRes {{post.bg}}">
+    <div class="roundTeam text-white">
+      <img src="{{post.maincover6}}" alt="" class="img-fluid">
+      <p class="text-left">{{post.p6 | truncate: 8}}</p>
+    </div>
+    <div class="roundScore text-white">
+      <p>DESCANSO</p>
+   
+    </div>
+   
+  </div>
+</div>
+{% else %} 
+
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
+    <div class="container roundRes {{post.bg}}">
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover6}}" alt="" class="img-fluid">
+        <p >{{post.p6 | truncate: 8}}</p>
+      </div>
+      <div class="roundScore text-white">
+        <p>{{post.r6}} - {{post.rr6}}</p>
+     
+      </div>
+      <div class="roundTeam text-white">
+        <img src="{{post.maincover66}}" alt="">
+        <p>{{post.pp6 |truncate: 8}}</p>
+      </div>
+    </div>
+</div>
+
+{% endif %}

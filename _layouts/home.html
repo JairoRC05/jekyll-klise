@@ -98,51 +98,25 @@ $(document).ready(function() {
   </div>
 
 
-  <div class="container">
-    <div class="row">
+  <div class="container mt-5">
+    <h3><b>ULTIMOS RESULTADOS</b></h3>
+    <div class="row ">
         <div class="splide">
             <div class="splide__track">
                 <div class="splide__list">
-                    <div class="col-sm-4 splide__slide m-2">
-                        <div class="card bg-dark text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Crad Slider 1 </h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 splide__slide m-2">
-                        <div class="card bg-dark text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Crad Slider 2</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 splide__slide m-2">
-                        <div class="card bg-dark text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Crad Slider 3</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 splide__slide m-2">
-                        <div class="card bg-dark text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Crad Slider 4</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                  {% assign norte = site.categories.R4 %}
+                  {%- for post in norte-%}
+               
+                      {% include slider-res.html %}
+                 
+                      {%- endfor -%}
+                  {% assign norte = site.categories.RP4 %}
+                  {%- for post in norte-%}
+               
+                      {% include slider-res.html %}
+                 
+                      {%- endfor -%}
+             
                 </div>
             </div>
         </div>
@@ -153,9 +127,7 @@ $(document).ready(function() {
 
 
 
-  <div class="container mt-5">
-    <h3>ULTIMOS RESULTADOS</h3>
-  </div>
+
   
   <div id="stars1"></div>
   <div id="stars2"></div>
@@ -169,7 +141,7 @@ $(document).ready(function() {
   <script>
       var splide = new Splide('.splide', {
           type: 'loop',
-          perPage: 3,
+          perPage: 4,
           rewind: true,
           breakpoints: {
               640: {
@@ -177,10 +149,15 @@ $(document).ready(function() {
                   gap: '.7rem',
                   height: '12rem',
               },
-              480: {
+              576: {
                   perPage: 1,
                   gap: '.7rem',
                   height: '12rem',
+              },
+              480: {
+                  perPage: 1,
+                  gap: '.7rem',
+                  height: '5rem',
               },
           },
       });
