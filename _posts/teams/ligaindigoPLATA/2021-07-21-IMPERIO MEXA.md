@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: IMPERIO MEXA
-puntos: 2
-pj: 2
+puntos: 4
+pj: 3
 
 #PARTIDO 1
 j1: RONDA 1

@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 4
-pj: 2
+puntos: 6
+pj: 3
 
 
 team1: TG1

@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: DFSPL
 team: DFS PLATINUM
 ID: DFS PLATINUM
-puntos: 4
-pj: 2
+puntos: 5
+pj: 3
 
 #PARTIDO 1
 j1: RONDA 1
