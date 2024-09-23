@@ -144,10 +144,16 @@ $(document).ready(function() {
           autoplay: true,
           interval: '7000',
           perPage: 4,
+          pagination: false,
           arrows: false,
           rewind: true,
           breakpoints: {
-              640: {
+              992: {
+                  perPage: 3,
+                  gap: '.7rem',
+                  height: '12rem',
+              },
+              768: {
                   perPage: 2,
                   gap: '.7rem',
                   height: '12rem',
