@@ -16,7 +16,7 @@ permalink: /resultados.html
         <span class="text-white indigo">LIGA INDIGO</span>
       </a>
       <div class="d-none d-lg-block">
-        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA 4</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA 5</a></span>
  
       </div>
     </div>  
@@ -33,14 +33,14 @@ permalink: /resultados.html
           <div>
             <h4  class="indigo">DIVISION ORO</h4>
           </div>
-          {% assign norte = site.categories.R4 %}
+          {% assign norte = site.categories.act1 %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}
           <div class="mt-2 ">
             <h4  class="indigo">DIVISION PLATA</h4>
           </div>
-          {% assign norte = site.categories.RP4 %}
+          {% assign norte = site.categories.act2 %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}

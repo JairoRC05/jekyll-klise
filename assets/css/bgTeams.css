@@ -160,7 +160,8 @@
 
 .red{
   /* background: rgb(77,52,191);background: linear-gradient(0deg, rgba(77,52,191,1) 0%, rgba(0,0,0,1) 100%); */
-  background: rgb(50,22,68);background: linear-gradient(0deg, rgba(50,22,68,1) 0%, rgba(0,0,0,1) 100%);
+  /* background: rgb(50,22,68);background: linear-gradient(0deg, rgba(50,22,68,1) 0%, rgba(0,0,0,1) 100%); */
+  background: rgb(140,57,57);background: linear-gradient(0deg, rgba(140,57,57,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 

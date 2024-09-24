@@ -17,7 +17,7 @@ cover: DFSPL
 team: DFS PLATINUM
 ID: DFS PLATINUM
 puntos: 5
-pj: 3
+pj: 4
 
 #PARTIDO 1
 j1: RONDA 1
