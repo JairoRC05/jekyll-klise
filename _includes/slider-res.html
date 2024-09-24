@@ -1,24 +1,25 @@
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 mt-0 splide__slide p-1">
-    <div class="container roundRes  {{post.bg}}">
+    <div class="container carousel-score  {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover1}}" alt="" class="img-fluid">
-        <p >{{post.p1 | truncate: 8}}</p>
+        <img src="{{post.maincover1}}" alt="" class="img-fluid"">
+        <p>{{post.p1 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
-        <p>{{post.r1}} - {{post.rr1}}</p>
-     
+          <h3>{{post.liga}}</h3>
+          <h2>{{post.r1}} - {{post.rr1}}</h2>
+          <h3>{{post.ronda}}</h3> 
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover11}}" alt="">
-        <p >{{post.pp1 |truncate: 8}}</p>
+        <img src="{{post.maincover11}}" alt="" class="img-fluid">
+        <p>{{post.pp1 |truncate: 8}}</p>
       </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-    <div class="container roundRes {{post.bg}}">
+    <div class="container carousel-score {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover2}}" alt="" class="img-fluid">
+        <img src="{{post.maincover2}}" alt="" class="img-fluid"">
         <p >{{post.p2 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
@@ -26,16 +27,16 @@
      
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover22}}" alt="">
+        <img src="{{post.maincover22}}" alt="" class="img-fluid">
         <p>{{post.pp2 |truncate: 8}}</p>
       </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-    <div class="container roundRes {{post.bg}}">
+    <div class="container carousel-score {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover3}}" alt="" class="img-fluid">
+        <img src="{{post.maincover3}}" alt="" class="img-fluid"">
         <p >{{post.p3 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
@@ -43,16 +44,16 @@
      
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover33}}" alt="">
+        <img src="{{post.maincover33}}" alt="" class="img-fluid">
         <p>{{post.pp3 |truncate: 8}}</p>
       </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-    <div class="container roundRes {{post.bg}}">
+    <div class="container carousel-score {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover4}}" alt="" class="img-fluid">
+        <img src="{{post.maincover4}}" alt="" class="img-fluid"">
         <p >{{post.p4 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
@@ -60,16 +61,16 @@
      
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover44}}" alt="">
+        <img src="{{post.maincover44}}" alt="" class="img-fluid">
         <p>{{post.pp4 |truncate: 8}}</p>
       </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-    <div class="container roundRes {{post.bg}}">
+    <div class="container carousel-score {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover5}}" alt="" class="img-fluid">
+        <img src="{{post.maincover5}}" alt="" class="img-fluid"">
         <p >{{post.p5 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
@@ -77,7 +78,7 @@
      
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover55}}" alt="">
+        <img src="{{post.maincover55}}" alt="" class="img-fluid">
         <p>{{post.pp5 |truncate: 8}}</p>
       </div>
     </div>
@@ -85,9 +86,9 @@
 
 {% if post.pp6 == "DES" %}
 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-  <div class="container roundRes {{post.bg}}">
+  <div class="container carousel-score {{post.bg}}">
     <div class="roundTeam text-white">
-      <img src="{{post.maincover6}}" alt="" class="img-fluid">
+      <img src="{{post.maincover6}}" alt="" class="img-fluid"">
       <p class="text-left">{{post.p6 | truncate: 8}}</p>
     </div>
     <div class="roundScore text-white">
@@ -100,9 +101,9 @@
 {% else %} 
 
 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-0 splide__slide p-1">
-    <div class="container roundRes {{post.bg}}">
+    <div class="container carousel-score {{post.bg}}">
       <div class="roundTeam text-white">
-        <img src="{{post.maincover6}}" alt="" class="img-fluid">
+        <img src="{{post.maincover6}}" alt="" class="img-fluid"">
         <p >{{post.p6 | truncate: 8}}</p>
       </div>
       <div class="roundScore text-white">
@@ -110,7 +111,7 @@
      
       </div>
       <div class="roundTeam text-white">
-        <img src="{{post.maincover66}}" alt="">
+        <img src="{{post.maincover66}}" alt="" class="img-fluid">
         <p>{{post.pp6 |truncate: 8}}</p>
       </div>
     </div>
