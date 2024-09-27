@@ -283,16 +283,25 @@
   @media screen and (max-width: 1200px) {
     height: 400px;
   }
+  
   @media screen and (max-width: 992px) {
     height: 300px;
   }
-
+ 
+  @media screen and (max-width: 576px) {
+    height: 300px;
+  }
 
   .season-text {
     position: absolute;
     right: 0;
     top: 40px;
     width: 100%;
+
+    @media screen and (max-width: 576px) {
+      top: 0;
+    }
+
 
 
     h1 {
@@ -310,6 +319,10 @@
         font-size: 35px;
         top: 25px;
       }
+      @media screen and (max-width: 576px) {
+        font-size: 28px;
+        top: 25px;
+      }
       
     }
   
@@ -322,6 +335,8 @@
     }
     @media screen and (max-width: 992px) {
       font-size: 20px;
+    }
+    @media screen and (max-width: 576px) {
     }
   }
  
@@ -370,6 +385,12 @@
       font-size: 25px;
       width: 350px;
       bottom: 75px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 28px;
+      width: 350px;
+      bottom: 100px;
+      margin: 0;
     }
 
     &:hover{
