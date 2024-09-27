@@ -203,7 +203,8 @@
   flex-direction: row;
   border-radius: 10px;
 
- 
+  @media screen and (max-width: 992px) {
+    height: 70%;
 }
 
 

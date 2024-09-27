@@ -87,6 +87,122 @@
   
 }
 
+.gamer-top-price {
+    background: rgb(255, 159, 21);
+    background: -moz-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    background: -webkit-linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    background: linear-gradient(100deg, rgba(255, 159, 21, 1) 10%, rgba(255, 159, 21, 1) 68%, rgba(255, 159, 21, 0) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9f15", endColorstr="#ff9f15", GradientType=1);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px 0 0 0;
+    overflow: hidden;
+
+    img{
+        width: 100px;
+    }
+}
+
+.gamer-title-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-transform: capitalize;
+
+    img {
+        width: 28px;
+        margin-right: 5px;
+
+        @media screen and (max-width: 768px) {
+            width: 20;
+    
+          }
+    }
+
+    h4 {
+        
+        font-weight: 600;
+        margin-bottom: 0;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+    
+          }
+
+
+       }
+
+
+}
+
+
+
+
+
+.gamer-price {
+    background: #fff;
+    height: 350px;
+    clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
+    color: #220a3d;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.1;
+
+
+
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+
+      }
+
+
+
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 40px;
+   
+    }
+
+    p{
+        text-align: center;
+        margin: 0;
+    }
+    span{
+        font-size: 12px;
+        color: rgb(171, 171, 171);
+    }
+
+    img {
+        padding: 10px;
+    }
+
+
+    .btn-sub{
+        background: rgb(18,4,139) !important;
+  background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
+        margin: 10px;
+        color: white;
+        border-radius: 20px;
+        width: 50%;
+        padding: 15px 10px;
+        text-align: center;
+
+    }
+
+  
+}
+
 
 .gamer-form {
     background: #fff;
