@@ -408,6 +408,9 @@
       @media screen and (max-width: 992px) {
         font-size: 23px;
       }
+      @media screen and (max-width: 575px) {
+        font-size: 10px;
+      }
     }
   }
 
@@ -428,14 +431,6 @@
     }
   }
 
-  .season-patterns {
-    position: absolute;
-    width: 100%;
-    background-color: #ffffff;
-    opacity: 0.1;
-    background-image: repeating-linear-gradient(45deg, #737373 25%, transparent 25%, transparent 75%, #737373 75%, #737373), repeating-linear-gradient(45deg, #737373 25%, #ffffff 25%, #ffffff 75%, #737373 75%, #737373);
-    background-position: 0 0, 40px 40px;
-    background-size: 80px 80px;
-  }
+ 
 
 }
