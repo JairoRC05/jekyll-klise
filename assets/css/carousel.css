@@ -203,6 +203,10 @@
   flex-direction: row;
   border-radius: 10px;
 
+  @media screen and (max-width: 992px) {
+    height: 70%;
+}
+
 
   .roundTeam {
       display: flex;
@@ -219,7 +223,7 @@
           margin-bottom: 0;
 
           @media screen and (max-width: 992px) {
-              width: 200px;
+              width: 50px;
           }
           @media screen and (max-width: 768px) {
               width: 150px;
@@ -272,7 +276,7 @@
           font-weight: bold;
 
           @media screen and (max-width: 992px) {
-              font-size: 50px;
+              font-size: 16px;
               margin: 0;
           }
           @media screen and (max-width: 576px) {
@@ -329,4 +333,9 @@
   .slide{
     height: 30% !important;
   }
+}
+
+
+.p-10{
+ padding: 120px  0 120px 0
 }
