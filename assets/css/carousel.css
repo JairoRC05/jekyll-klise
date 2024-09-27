@@ -225,7 +225,7 @@
               width: 150px;
           }
           @media screen and (max-width: 576px) {
-              width: 100px;
+              width: 50px;
           }
       }
 
@@ -276,7 +276,7 @@
               margin: 0;
           }
           @media screen and (max-width: 576px) {
-              font-size: 40px;
+              font-size: 12px;
               margin: 0;
           }
           

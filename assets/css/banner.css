@@ -1,7 +1,7 @@
 .banner {
   width: 100%;
   height: 500px;
- 
+
 
 
   @media screen and (max-width: 768px) {
@@ -31,7 +31,7 @@
       margin-left: 10px;
 
       h1 {
-      font-size: 90px;
+        font-size: 90px;
         margin: 0;
 
         @media screen and (max-width: 991px) {
@@ -43,7 +43,7 @@
         }
       }
 
-      span{
+      span {
         color: #fff;
         font-weight: 800;
       }
@@ -56,18 +56,18 @@
       font-size: 50px;
       margin: 0;
 
-        @media screen and (max-width: 991px) {
-          font-size: 30px;
-        }
-
-        @media screen and (max-width: 768px) {
-          font-size: 12px;
-        }
-
-
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
       }
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+
+
     }
   }
+}
 
 
 .indigo {
@@ -109,10 +109,10 @@
     }
   }
 
-  
+
   .teams-title--orange {
-    background: rgb(255,190,0);
-    background: linear-gradient(100deg, rgba(255,190,0,0) 10%, rgba(255,190,0,1) 20%, rgba(255,190,0,1) 80%, rgba(255,190,0,0) 90%);
+    background: rgb(255, 190, 0);
+    background: linear-gradient(100deg, rgba(255, 190, 0, 0) 10%, rgba(255, 190, 0, 1) 20%, rgba(255, 190, 0, 1) 80%, rgba(255, 190, 0, 0) 90%);
     font-style: italic;
     padding-bottom: 5px;
     color: rgb(255, 255, 255);
@@ -128,8 +128,8 @@
   }
 
   .teams-title--green {
-    background: rgb(0,0,0) !important;
-    background: linear-gradient(270deg, rgba(0,0,0,0) 11%, rgba(4,101,70,1) 15%, rgba(4,101,70,1) 85%, rgba(4,101,70,0) 90%) !important;
+    background: rgb(0, 0, 0) !important;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 11%, rgba(4, 101, 70, 1) 15%, rgba(4, 101, 70, 1) 85%, rgba(4, 101, 70, 0) 90%) !important;
     font-style: italic;
     padding-bottom: 5px;
     color: rgb(255, 255, 255);
@@ -151,13 +151,13 @@
 
 
 .main-banner {
-    width: 100%;
-    border-radius: 15px;
-    height: 500px;
-    background: red;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  width: 100%;
+  border-radius: 15px;
+  height: 500px;
+  background: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
@@ -169,30 +169,30 @@
   background-position: center;
   background-size: cover;
 
-  .card-banner{
+  .card-banner {
     display: flex;
     justify-content: start;
     align-items: center;
     border-radius: 15px;
     margin-bottom: 20px;
 
-    &:hover{
+    &:hover {
       background: rgb(14, 4, 100);
     }
 
-    img{
+    img {
       margin: 5px;
       width: 70px;
     }
 
-    .card-banner--info{
+    .card-banner--info {
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
 
 
-      h1{
+      h1 {
         font-size: 24px;
         padding: 0;
         margin: 0;
@@ -200,7 +200,7 @@
         font-weight: 500;
       }
 
-      p{
+      p {
         padding: 0;
         margin: 0;
         color: yellow;
@@ -216,18 +216,18 @@
   width: 100%;
   border-radius: 15px;
   height: 250px;
-  
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
 
-.card-license{
+.card-license {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -237,17 +237,18 @@
   width: 200px;
   height: 100%;
 
-  &:hover{
+  &:hover {
     background: rgb(14, 4, 100);
   }
 
-  img{
+  img {
     margin: 5px;
     width: 70px;
   }
 
 }
-.m-10{
+
+.m-10 {
   margin-top: 150px;
 }
 
@@ -261,11 +262,149 @@
 
 
 
-.rotate{
+.rotate {
   transform: scaleX(-1);
 }
 
 
-.shadows{
+.shadows {
   filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
+
+
+
+
+.season-banner {
+  width: 100%;
+  height: 500px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1516981792717087) 20%, rgba(0, 0, 0, 0.15449929971988796) 90%, rgba(0, 0, 0, 0) 97%);
+  position: relative;
+  @media screen and (max-width: 1200px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 992px) {
+    height: 300px;
+  }
+
+
+  .season-text {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 100%;
+
+
+    h1 {
+      font-size: 70px;
+      font-style: italic;
+      top: 35px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      @media screen and (max-width: 1200px) {
+        font-size: 50px;
+        top: 25px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 35px;
+        top: 25px;
+      }
+      
+    }
+  
+  h2 {
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    @media screen and (max-width: 1200px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 20px;
+    }
+  }
+ 
+  }
+
+  .pick1 {
+    width: 40%;
+    position: absolute;
+    left: 0;
+    @media screen and (max-width: 1200px) {
+      width: 45%;
+    }
+
+  }
+
+  .pick2 {
+    position: absolute;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    @media screen and (max-width: 992px) {
+      width: 80px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .btn-pokemon {
+    position: absolute;
+    background: orange;
+    font-style: italic;
+    font-size: 50px;
+    margin: 20px;
+    font-weight: bolder;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    color: white;
+    right: 0;
+    bottom: 150px;
+    width: 700px;
+    @media screen and (max-width: 1200px) {
+      font-size: 35px;
+      width: 550px;
+      bottom: 100px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 25px;
+      width: 350px;
+      bottom: 75px;
+    }
+
+    &:hover{
+      background: white;
+      color: orange;
+      font-size: 48px;
+      @media screen and (max-width: 1200px) {
+        font-size: 33px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 23px;
+      }
+    }
+  }
+
+  h3 {
+    position: absolute;
+    font-size: 40px;
+    bottom: 10px;
+    right: 100px;
+    @media screen and (max-width: 992px) {
+      font-size: 20px;
+      bottom: 10px;
+      right: 80px;
+    }
+  }
+
+  .season-patterns {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.1;
+    background-image: repeating-linear-gradient(45deg, #737373 25%, transparent 25%, transparent 75%, #737373 75%, #737373), repeating-linear-gradient(45deg, #737373 25%, #ffffff 25%, #ffffff 75%, #737373 75%, #737373);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+  }
+
 }

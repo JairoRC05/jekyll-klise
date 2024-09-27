@@ -60,7 +60,7 @@ $(document).ready(function() {
               <h1 class="indigo">{{post.liga}}</h1>
               <h2>{{post.vs}}</h2>
               <h3 class="indigo">{{post.fecha1}}</h3>
-              <a href="{{post.link}}" target="_blank" class="btn btn-outline-warning">VER</a>
+              <a href="{{post.link}}" target="_blank" class="btn btn-outline-warning">TWITCH</a>
               
             </div>
             <div class="roundTeam">
@@ -105,13 +105,13 @@ $(document).ready(function() {
         <div class="splide">
             <div class="splide__track">
                 <div class="splide__list">
-                  {% assign norte = site.categories.R4 %}
+                  {% assign norte = site.categories.act1 %}
                   {%- for post in norte-%}
                
                       {% include slider-res.html %}
                  
                       {%- endfor -%}
-                  {% assign norte = site.categories.RP4 %}
+                  {% assign norte = site.categories.act2 %}
                   {%- for post in norte-%}
                
                       {% include slider-res.html %}
