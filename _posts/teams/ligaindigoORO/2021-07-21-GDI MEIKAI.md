@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: GDI MEIKAI
-puntos: 5
-pj: 5
+puntos: 7
+pj: 7
 
 #PARTIDO 1
 j1: RONDA 1
