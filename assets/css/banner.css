@@ -414,6 +414,51 @@
     }
   }
 
+  .btn-pokemon--red {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    font-style: italic;
+    font-size: 50px;
+    margin: 20px;
+    font-weight: bolder;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    color: rgb(255, 255, 255);
+    right: 0;
+    bottom: 150px;
+    width: 700px;
+    @media screen and (max-width: 1200px) {
+      font-size: 35px;
+      width: 550px;
+      bottom: 100px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 25px;
+      width: 350px;
+      bottom: 75px;
+    }
+    @media screen and (max-width: 575px) {
+      font-size: 12px;
+      width: 250px;
+      bottom: 50px;
+      margin: 0;
+    }
+
+    &:hover{
+      background: white;
+      color: orange;
+      font-size: 48px;
+      @media screen and (max-width: 1200px) {
+        font-size: 33px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 23px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 10px;
+      }
+    }
+  }
+
   h3 {
     position: absolute;
     font-size: 40px;
