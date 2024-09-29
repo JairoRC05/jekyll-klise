@@ -14,10 +14,10 @@ home: true
   <nav class="navbar top sticky-top bg-black">
     <div class="container d-flex justify-content-between align-items-center">
       <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
-      <div class="d-none d-xxl-none">
+      <div class="d-none d-md-block">
         <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white">INICIO</a></span>
-        <span class="navbar-brand mb-0 h1 text-white"><a href="#rondas" class="text-white">RONDAS</a></span>
-        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-sep" class="text-white">REGLAMENTO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-oro" class="text-white">LI ORO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-plata" class="text-white">LI PLATA</a></span>
       </div>
     </div>
   </nav>
@@ -161,10 +161,36 @@ home: true
 
 
 
+  <nav class="navbar fixed-bottom navbar-light d-block d-md-none"></nav>
+    <div class="container d-flex justify-content-center align-items-center">
+      
+      <div class="item-bar">
+        <a href="/liga-indigo-oro" >
+          <i class="fa-solid fa-trophy"></i>
+        <span>LI ORO</span>
+        </a>
+      </div>
+
+
+      <div class="item-bar">
+        <a href="/liga-indigo-plata.html" >
+          <i class="fa-solid fa-trophy"></i>
+        <span>LI PLATA</span>
+        </a>
+      </div>
+    
+   
+
+    </div>
+  </nav>
+
+
+
+
   <footer>
 
        <!-- Copyright - Bootstrap Brain Component -->
-       <div class="py-5 py-xl-8 py-xxl-9 bg-black">
+       <div class="py-5 py-xl-8 py-xxl-9 bg-black d-none d-md-block">
         <div class="container overflow-hidden">
           <div class="row gy-5 gy-md-0 align-items-md-center">
             <div class="col-xs-12 col-md-7 order-1 order-md-0">
@@ -207,31 +233,6 @@ home: true
         </div>
       </div>
     
-
-
-
-
-
-
-    {%- if site.google_analytics -%}
-    <!-- Google tag (gtag.js) -->
-    <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-  
-      gtag("config", "{{ site.google_analytics }}");
-    </script>
-  {%- endif -%}
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
