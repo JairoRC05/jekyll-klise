@@ -1,0 +1,135 @@
+---
+layout:
+permalink: /dragonfliesgaming.html
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-white">
+
+  <nav class="navbar top sticky-top bg-black">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+      <div class="d-none d-lg-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/" class="text-white">INICIO</a></span>
+  
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid banner red-x slice" >
+    <div class="container bannerPromo">
+      <a href="/assets/logos/DFS.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/DFS.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+        <h1 class=" paladins">TOURNAMENT</h1>
+        <span class=" paladins">1er ANIVERSARIO</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-3 ">
+        <h4><b>8VOS FINAL</b></h4>
+        {% assign norte = site.categories.V8 | sort: "seed"  %}
+        {%- for post in norte  -%}
+ 
+        <div class="container cardTournament">
+          <div class="roundTeam">
+            <img src="{{post.maincover1}}" alt="" >
+            <p >{{post.p1 | truncate: 8}}</p>
+          </div>
+          <div class="roundScore">
+          {% if post.r1 == 0 and post.rr1 == 0 %}
+            <p>VS</p>
+            {% else %}
+            <p>{{post.r1}} - {{post.rr1}}</p>
+          {% endif %}
+         
+          </div>
+          <div class="roundTeam">
+            <img src="{{post.maincover11}}" alt="">
+            <p>{{post.pp1 |truncate: 8}}</p>
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+<!-- 
+      <div class="col-12 col-xl-3 d-flex flex-column justify-content-around align-items-center">
+
+          <h4><b>4TOS DE FINAL</b></h4>
+          {% assign norte = site.categories.SEM | sort: "seed"  %}
+          {%- for post in norte  -%}
+   
+          <div class="container cardTournament">
+            <div class="roundTeam">
+              <img src="{{post.maincover1}}" alt="" >
+              <p >{{post.p1 | truncate: 8}}</p>
+            </div>
+            <div class="roundScore">
+            {% if post.r1 == 0 and post.rr1 == 0 %}
+              <p>VS</p>
+              {% else %}
+              <p>{{post.r1}} - {{post.rr1}}</p>
+            {% endif %}
+           
+            </div>
+            <div class="roundTeam">
+              <img src="{{post.maincover11}}" alt="">
+              <p>{{post.pp1 |truncate: 8}}</p>
+            </div>
+          </div>
+          {%- endfor -%}
+ 
+      </div> -->
+      <div class="col"></div>
+    </div>
+    
+     <h3 class="mt-5"> 
+      Reglas</h3>
+        <p>
+-Las partidas se jugarán en sala de torneo con draft a Bo3. <br>
+-Los first pick rotan por partida, el primero se determina por quién está en el bracket superior. <br>
+-Se dejará el servidor en automático a menos de que ambos equipos lleguen a un acuerdo de cuál usar. <br>
+-Todas las licencias se podrán usar. <br>
+-Las partidas en stream deben esperar a que se les asigne sala. <br>
+-Las partidas off-stream se pondrán de acuerdo y reportaran resultados en el chat (sin necesidad de capturas) <br>
+-Una vez se tengan resultados de la ronda se podrá iniciar con la siguiente ronda. <br>
+-Solo se permite remake de partida en caso de desconexión del juego antes del inicio del mismo, para los de stream se notifica al streamer para pausar, para off-stream se tira surrendery se mantienen picks hasta donde fue la desconexión. <br>
+      </p>
+
+  </div>
+
+ 
+
+
+
+
+
+
+  <div class="d-none d-md-block">
+
+</div> 
+
+<div class="d-block d-md-none ">
+ 
+  </div>
+
+ 
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

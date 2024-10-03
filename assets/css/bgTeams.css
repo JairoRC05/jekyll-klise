@@ -162,8 +162,9 @@
   /* background: rgb(77,52,191);background: linear-gradient(0deg, rgba(77,52,191,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(50,22,68);background: linear-gradient(0deg, rgba(50,22,68,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(140,57,57);background: linear-gradient(0deg, rgba(140,57,57,1) 0%, rgba(0,0,0,1) 100%); */
+  /* background: rgb(0,0,0); background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,207,155,1) 100%); */
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,207,155,1) 100%);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(112,113,120,1) 100%);
 }
 
 
