@@ -3,7 +3,7 @@ layout:
 permalink: 
 categories: V8
 liga: LIGA INDIGO
-seed: 3
+seed: 4
 #PARTIDO 1
 maincover1: /assets/logos/EKWHITE.png
 maincover11: /assets/logos/GDI.png
@@ -13,6 +13,5 @@ p1: EKW
 r1: 0
 rr1: 0
 pp1: GDI
-pt1: 0
-pj1: 0
+
 ---

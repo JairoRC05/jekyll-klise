@@ -5,6 +5,8 @@ categories: V8
 liga: LIGA INDIGO
 seed: 2
 #PARTIDO 1
+stream: SI
+link: https://www.twitch.tv/x_force05
 maincover1: /assets/logos/TSR.png
 maincover11: /assets/logos/FTB.png
 j1: RONDA 1
