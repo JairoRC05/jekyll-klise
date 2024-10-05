@@ -1,6 +1,10 @@
 ---
 layout:
 permalink: /resultados.html
+ronda: 9
+dia: 2
+mes: octubre
+pp: (PP Partidos pendientes)
 ---
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -16,7 +20,7 @@ permalink: /resultados.html
         <span class="text-white indigo">LIGA INDIGO</span>
       </a>
       <div class="d-none d-lg-block">
-        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA 5</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white indigo">RESULTADOS RONDA {{page.ronda}}</a></span>
  
       </div>
     </div>  
@@ -33,21 +37,21 @@ permalink: /resultados.html
           <div>
             <h4  class="indigo">DIVISION ORO</h4>
           </div>
-          {% assign norte = site.categories.act1 %}
+          {% assign norte = site.categories.oro %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}
           <div class="mt-2 ">
             <h4  class="indigo">DIVISION PLATA</h4>
           </div>
-          {% assign norte = site.categories.act2 %}
+          {% assign norte = site.categories.plata %}
           {%- for post in norte-%}
           {% include resultados1.html %}
           {%- endfor -%}
 
           <div class="row">
             <div class="col-8">
-              <p class="text-smoke">Resultados del día 19 de septiembre. (PP) Partidos pendientes</p>
+              <p class="text-smoke">Resultados del día {{page.dia}} de {{page.mes}}. {{page.pp}}</p>
             </div>
          
             <div class="col-4">
