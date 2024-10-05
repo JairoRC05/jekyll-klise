@@ -3,16 +3,16 @@ layout:
 permalink: 
 categories: V8
 liga: LIGA INDIGO
-seed: 3
+seed: 7
 #PARTIDO 1
-maincover1: /assets/logos/TSR.png
-maincover11: /assets/logos/FTB.png
+maincover1: /assets/logos/EVL.png
+maincover11: /assets/logos/DFS.png
 j1: RONDA 1
 bg1: rock
-p1: TSR
+p1: EVL
 r1: 0
 rr1: 0
-pp1: FTB
+pp1: PEARL
 pt1: 0
 pj1: 0
 ---

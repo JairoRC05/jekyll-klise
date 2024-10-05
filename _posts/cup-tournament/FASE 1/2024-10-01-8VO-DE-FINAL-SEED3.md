@@ -3,16 +3,16 @@ layout:
 permalink: 
 categories: V8
 liga: LIGA INDIGO
-seed: 2
+seed: 3
 #PARTIDO 1
-maincover1: /assets/logos/EKR.png
+maincover1: /assets/logos/EKV.png
 maincover11: /assets/logos/DFS.png
 j1: RONDA 1
 bg1: rock
-p1: RED
+p1: EKV
 r1: 0
 rr1: 0
-pp1: PLAT
+pp1: DMD
 pt1: 0
 pj1: 0
 ---
