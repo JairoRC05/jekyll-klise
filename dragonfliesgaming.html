@@ -33,11 +33,11 @@ permalink: /dragonfliesgaming.html
 
 
   <div class="container">
-    <div class="row">
+    <div class="row text-center">
+      <h4><b>8VOS FINAL</b></h4>
+      {% assign norte = site.categories.V8 | sort: "seed"  %}
+      {%- for post in norte  -%}
       <div class="col-12 col-xl-3 ">
-        <h4><b>8VOS FINAL</b></h4>
-        {% assign norte = site.categories.V8 | sort: "seed"  %}
-        {%- for post in norte  -%}
  
         <div class="container cardTournament">
           <div class="roundTeam">
@@ -57,38 +57,91 @@ permalink: /dragonfliesgaming.html
             <p>{{post.pp1 |truncate: 8}}</p>
           </div>
         </div>
-        {%- endfor -%}
       </div>
-<!-- 
-      <div class="col-12 col-xl-3 d-flex flex-column justify-content-around align-items-center">
-
-          <h4><b>4TOS DE FINAL</b></h4>
-          {% assign norte = site.categories.SEM | sort: "seed"  %}
-          {%- for post in norte  -%}
-   
-          <div class="container cardTournament">
-            <div class="roundTeam">
-              <img src="{{post.maincover1}}" alt="" >
-              <p >{{post.p1 | truncate: 8}}</p>
-            </div>
-            <div class="roundScore">
-            {% if post.r1 == 0 and post.rr1 == 0 %}
-              <p>VS</p>
-              {% else %}
-              <p>{{post.r1}} - {{post.rr1}}</p>
-            {% endif %}
-           
-            </div>
-            <div class="roundTeam">
-              <img src="{{post.maincover11}}" alt="">
-              <p>{{post.pp1 |truncate: 8}}</p>
-            </div>
-          </div>
-          {%- endfor -%}
- 
-      </div> -->
-      <div class="col"></div>
+        {%- endfor -%}
     </div>
+    <div class="row text-center">
+      <h4><b>4TOS DE FINAL</b></h4>
+      {% assign norte = site.categories.SEM | sort: "seed"  %}
+      {%- for post in norte  -%}
+      <div class="col-12 col-xl-3 ">
+ 
+        <div class="container cardTournament">
+          <div class="roundTeam">
+            <img src="{{post.maincover1}}" alt="" >
+            <p >{{post.p1 | truncate: 8}}</p>
+          </div>
+          <div class="roundScore">
+          {% if post.r1 == 0 and post.rr1 == 0 %}
+            <p>VS</p>
+            {% else %}
+            <p>{{post.r1}} - {{post.rr1}}</p>
+          {% endif %}
+         
+          </div>
+          <div class="roundTeam">
+            <img src="{{post.maincover11}}" alt="">
+            <p>{{post.pp1 |truncate: 8}}</p>
+          </div>
+        </div>
+      </div>
+        {%- endfor -%}
+    </div>
+    <div class="row text-center">
+      <h4><b>SEMIFINAL</b></h4>
+      {% assign norte = site.categories.SF | sort: "seed"  %}
+      {%- for post in norte  -%}
+      <div class="{{post.offset}} col-12 col-xl-3 ">
+ 
+        <div class="container cardTournament">
+          <div class="roundTeam">
+            <img src="{{post.maincover1}}" alt="" >
+            <p >{{post.p1 | truncate: 8}}</p>
+          </div>
+          <div class="roundScore">
+          {% if post.r1 == 0 and post.rr1 == 0 %}
+            <p>VS</p>
+            {% else %}
+            <p>{{post.r1}} - {{post.rr1}}</p>
+          {% endif %}
+         
+          </div>
+          <div class="roundTeam">
+            <img src="{{post.maincover11}}" alt="">
+            <p>{{post.pp1 |truncate: 8}}</p>
+          </div>
+        </div>
+      </div>
+        {%- endfor -%}
+    </div>
+    <div class="row text-center">
+      <h4><b>GRAN FINAL</b></h4>
+      {% assign norte = site.categories.GF | sort: "seed"  %}
+      {%- for post in norte  -%}
+      <div class="{{post.offset}} col-12 col-xl-4 ">
+ 
+        <div class="container cardTournament">
+          <div class="roundTeam">
+            <img src="{{post.maincover1}}" alt="" >
+            <p >{{post.p1 | truncate: 8}}</p>
+          </div>
+          <div class="roundScore">
+          {% if post.r1 == 0 and post.rr1 == 0 %}
+            <p>VS</p>
+            {% else %}
+            <p>{{post.r1}} - {{post.rr1}}</p>
+          {% endif %}
+         
+          </div>
+          <div class="roundTeam">
+            <img src="{{post.maincover11}}" alt="">
+            <p>{{post.pp1 |truncate: 8}}</p>
+          </div>
+        </div>
+      </div>
+        {%- endfor -%}
+    </div>
+
     
      <h3 class="mt-5"> 
       Reglas</h3>
