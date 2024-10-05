@@ -7,6 +7,7 @@ seed: 1
 #PARTIDO 1
 stream: SI
 link: https://www.twitch.tv/charmanbeth
+red: twitch
 maincover1: /assets/logos/DFS.png
 maincover11: /assets/logos/KARASUNO.png
 j1: RONDA 1

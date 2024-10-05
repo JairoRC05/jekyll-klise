@@ -7,6 +7,7 @@ seed: 3
 #PARTIDO 1
 stream: SI
 link: https://www.tiktok.com/@chc.chipis
+red: tiktok
 maincover1: /assets/logos/EKV.png
 maincover11: /assets/logos/DFS.png
 j1: RONDA 1

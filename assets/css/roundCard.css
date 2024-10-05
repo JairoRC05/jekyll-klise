@@ -334,7 +334,8 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background: #0000005b;
+    background: #ffffff;
+    border: 1px solid #f63e5e;
 
 
     .roundTeam {
@@ -397,3 +398,15 @@
       
     }
 }
+
+
+
+.fa-twitch{
+    color: #a96fff
+}
+
+.fa-tiktok{
+    color: #f63e5e
+}
+
+
