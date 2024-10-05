@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: CELESTIAL DRAGONS
 ID: CD
 puntos: 3
-pj: 8
+pj: 9
 #PARTIDO 1
 j1: RONDA 1
 p1: CD

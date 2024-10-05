@@ -16,7 +16,7 @@ background: '#F16C38'
 cover: DFSPL
 ID: GDI MEIKAI
 puntos: 8
-pj: 8
+pj: 9
 
 #PARTIDO 1
 j1: RONDA 1
