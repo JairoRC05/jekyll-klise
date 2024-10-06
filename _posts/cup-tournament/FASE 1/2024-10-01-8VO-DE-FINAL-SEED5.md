@@ -11,7 +11,7 @@ j1: RONDA 1
 bg1: rock
 p1: RED
 r1: 0
-rr1: 0
+rr1: 2
 pp1: PLAT
 pt1: 0
 pj1: 0
