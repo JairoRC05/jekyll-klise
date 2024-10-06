@@ -13,8 +13,8 @@ maincover11: /assets/logos/DFS.png
 j1: RONDA 1
 bg1: rock
 p1: EKV
-r1: 0
-rr1: 0
+r1: 1
+rr1: 2
 pp1: DMD
 pt1: 0
 pj1: 0
