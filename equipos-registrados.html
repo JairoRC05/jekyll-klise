@@ -1,0 +1,142 @@
+---
+layout:
+permalink: /equipos-registrados.html
+---
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bgDuos">
+
+
+  <nav class="navbar bg-indigo">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+      <div class="d-none d-lg-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-oro" class="text-white">ORO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-plata" class="text-white">PLATA</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-oct.html" class="text-white">REGLAMENTO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/planes-liga" class="text-white">PLANES</a></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="clip-wrapper">
+    <div class="container-fluid banner bg-indigo slice">
+      <div class="container bannerPromo d-flex justify-content-start align-items-center">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+              </a>
+              <div class=" bannerText">
+          <h1 class="indigo text-white">LIGA INDIGO</h1>
+          <span>REGISTRO</span>
+      </div>
+    </div>
+
+
+    <div class="d-none d-lg-block">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+<div class="container d-none d-md-block">
+ <div class="row">
+  {% assign LIGA = site.categories.ROCT | sort: "team"
+   %}
+  {%- for post in LIGA  -%}
+  <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+    <section>
+      <div class="card__section" style="--color: hsl(240, 100%, 99%);">
+        <div class="card__border"></div>
+        <div class="card__border-line"></div>
+        <div class="card__inner">
+          <div class="card__img">
+            <div class="img__team">
+              <!-- <p class="number" style="--color: hsl(0, 0%, 100%);"></p> -->
+            </div>
+            <div class="img__athlete">
+             <img src="{{post.maincover}}" alt="{{post.title}}">
+             
+            </div>
+          </div>
+          <div class="card__text">
+            <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">LI</div>
+            <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.team | truncate: 11}}</h1>
+            <p class="points" style="--color: hsl(0, 0%, 100%);"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  {%- endfor -%}
+
+ </div>
+
+</div>
+
+<div class="container d-block d-md-none">
+  <div class="row text-white team--last">
+    <div class="col-12">
+        {% assign norte = site.categories.ROCT | sort: "team" %}
+        {%- for post in norte  -%}
+            <div class="container  roundCard bg-op">
+                <a href="{{post.url}}">
+                    <img src="{{post.maincover}}" alt="" class="img-fluid">
+                </a>
+            <div class="round">
+                <div class="roundInfo">
+               
+                <h2>{{post.team | truncate: 21}}</h2>
+                </div>
+                <p>LI</p>
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+</div>
+</div>
+
+
+
+
+  <div class="d-none d-md-block">
+
+    {% include footer-new.html %}
+  </div>
+
+  <div class="d-block d-md-none ">
+    <nav class="navbar solid fixed-bottom navbar-light">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="item-bar"><a href="/"><i class="fa-solid fa-home"></i><span>INICIO</span> </a>  </div>
+        <div class="item-bar"><a href="/liga-indigo-oro.html"><i class="fa-solid fa-trophy"></i><span>LI ORO</span> </a>  </div>
+        <div class="item-bar"><a href="/liga-indigo-plata.html"><i class="fa-solid fa-trophy"></i><span>LI PLATA</span> </a>  </div>
+        <div class="item-bar"><a href="/reglamento-oct"><i class="fa-solid fa-bookmark"></i><span>REG</span> </a>  </div>
+        <div class="item-bar"><a href="/planes-liga"><i class="fa-solid fa-calendar-days"></i><span>PLANES</span> </a> </div>
+         
+      
+
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
