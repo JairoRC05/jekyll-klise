@@ -1,8 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: SEP LIO
-team: GDI MEIKAI ROCT
+categories: SEP LIO ROCT
+team: GDI MEIKAI
 maincover: /assets/logos/GDI.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
