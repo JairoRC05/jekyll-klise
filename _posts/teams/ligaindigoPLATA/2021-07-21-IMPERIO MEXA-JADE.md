@@ -2,7 +2,7 @@
 layout: teamCard
 permalink: /team/:title.html
 categories: SEP LIP ROCT
-team: IMPERIO MEXA
+team: IMPERIO MEXA JADE
 maincover: /assets/logos/MEXA.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
@@ -14,7 +14,7 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: DFSPL
-ID: OBS
+ID: JADE
 puntos: 13
 pj: 10
 

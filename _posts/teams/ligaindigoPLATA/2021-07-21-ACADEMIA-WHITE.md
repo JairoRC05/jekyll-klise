@@ -1,21 +1,22 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT
-team: IMPERIO MEXA
-maincover: /assets/logos/MEXA.png
+categories: ROCT
+team: ACADEMIA WHITE
+maincover: /assets/logos/WHITE.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: IMPERIO MEXA
+title: ACADEMIA WHITE
 route: /liga-indigo
 tag: johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
+abr: AOS
 background: '#F16C38'
-cover: DFSPL
-ID: OBS
-puntos: 13
+cover: AD
+ID: WHITE
+puntos: 11
 pj: 10
 
 #PARTIDO 1
