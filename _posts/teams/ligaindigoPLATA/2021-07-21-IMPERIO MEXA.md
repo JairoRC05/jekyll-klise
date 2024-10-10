@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: SEP LIP
+categories: SEP LIP ROCT
 team: IMPERIO MEXA
 maincover: /assets/logos/MEXA.png
 puntosLJMAYO24: 6

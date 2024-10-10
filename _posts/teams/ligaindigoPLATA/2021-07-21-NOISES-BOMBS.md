@@ -3,7 +3,7 @@ layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT
 team: NOISES BOMBS
-maincover: /assets/logos/ITS.png
+maincover: /assets/logos/NB.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: NOISES BOMBS

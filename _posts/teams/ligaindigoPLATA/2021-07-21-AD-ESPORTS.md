@@ -3,7 +3,7 @@ layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT
 team: AD-ESPORTS
-maincover: /assets/logos/ITS.png
+maincover: /assets/logos/AD.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: AD-ESPORTS
