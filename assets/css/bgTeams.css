@@ -195,7 +195,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(8,0,255,1) 100%);
 
 
 .red{
-  background: #8b0808
+  background: #8b0808 !important
 }
 .grRed{
   background: rgb(0,0,0);
