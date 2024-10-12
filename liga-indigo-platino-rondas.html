@@ -8,7 +8,7 @@ permalink: /liga-indigo-platino-rondas.html
 
 <body class="red">
 
-  <nav class="navbar top sticky-top bg-black">
+  <nav class="navbar top fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
       <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
       <div class="d-none d-lg-block">
@@ -20,7 +20,7 @@ permalink: /liga-indigo-platino-rondas.html
   </nav>
   
 
-  <div class="container-fluid banner grRed ">
+  <div class="container-fluid banner grRed">
     <div class="container bannerPromo d-flex justify-content-start align-items-center">
       
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
@@ -28,7 +28,7 @@ permalink: /liga-indigo-platino-rondas.html
       </a>
       <div class="bannerText">
         <h1 class="indigo">RONDAS</h1>
-        <span class="indigo">DIVISION ORO</span>
+        <span class="indigo">DIVISION PLATINO</span>
       </div>
     </div>
 
@@ -64,9 +64,9 @@ $(document).ready(function() {
         $(window).scroll(function() {
           // checks if window is scrolled more than 500px, adds/removes solid class
           if($(this).scrollTop() > 30 ) { 
-              $('.top').addClass('solid');
+              $('.top').addClass('red');
           } else {
-              $('.top').removeClass('solid');
+              $('.top').removeClass('red');
           }
         });
 });
