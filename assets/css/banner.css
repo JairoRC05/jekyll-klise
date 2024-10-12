@@ -27,7 +27,7 @@
     }
 
     .bannerText {
-      text-align: start;
+      text-align: start !important;
       margin-left: 10px;
 
       h1 {
