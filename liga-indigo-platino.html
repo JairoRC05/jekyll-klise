@@ -1,0 +1,86 @@
+---
+layout:
+permalink: /liga-indigo-platino.html
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="red">
+
+
+  {% include nav-indigo.html %}
+
+
+  <div class="container-fluid banner grRed" >
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">DIVISION ORO</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container teams-table d-none d-md-block"  id="home">
+    <h1 class="teams-title--green mt-5 " >CAMPEONATO</h1>
+    {% include cards-teams-icon.html %}
+
+   <!-- <div class="p-10">
+    {% include temporada.html %}
+   </div> -->
+    
+    <h1 class="teams-title--green m-10" id="rondas">RONDAS</h1>
+    {% include rondas-mobile.html %}
+   
+
+
+   
+    <h1 class="teams-title--green m-10">PATROCINADORES</h1>
+    {% include sponsors.html %}
+
+  </div>
+
+
+
+
+  <div class="container text-white d-block d-md-none">
+    {% include list-mobile.html %} 
+
+  </div>
+
+
+
+
+
+
+  <div id="stars1"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <div class="d-none d-md-block">
+
+  {% include footer-indigo.html %}
+</div> 
+
+<div class="d-block d-md-none ">
+  {% include nav-mobile-indigo.html %}
+  </div>
+
+ 
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
