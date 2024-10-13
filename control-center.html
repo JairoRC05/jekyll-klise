@@ -24,8 +24,9 @@ permalink: /control-center.html
 
 
 
-<div class="container">
-    <section class="splide" aria-label="Basic Structure Example">
+<div class="container teams-table">
+    <h1 class="teams-title m-md-5" >TORNEO ACTIVOS</h1>
+    <section class="splide" >
         <div class="splide__track">
           <ul class="splide__list">
               {% assign norte = site.categories.ligas | sort: "rango" %}
@@ -44,7 +45,18 @@ permalink: /control-center.html
           </ul>
         </div>
       </section>
+
+
+      
 </div>
+
+
+<div class="container teams-table" >
+
+   
+    <h1 class="teams-title  m-md-5" >PATROCINADORES</h1>
+    {% include sponsors.html %}
+  </div>
 
   
   <div id="stars1"></div>
@@ -56,7 +68,7 @@ permalink: /control-center.html
   </div> 
   
   <div class="d-block d-md-none">
-    <nav class="navbar red fixed-bottom navbar-light">
+    <nav class="navbar  fixed-bottom navbar-light">
       <div class="container d-flex justify-content-center align-items-center">
         <div class="item-bar">
           <a href="/" >
@@ -131,7 +143,7 @@ $(document).ready(function() {
       },
       992: {
         perPage: 3,
-        gap: '.7rem',
+        gap: '.2rem',
         height: '22rem',
       },
       768: {
@@ -147,7 +159,7 @@ $(document).ready(function() {
       480: {
         perPage: 1,
         gap: '.7rem',
-        height: '40rem',
+        height: '20rem',
       },
     },
   });
