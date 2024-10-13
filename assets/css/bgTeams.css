@@ -195,6 +195,11 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(8,0,255,1) 100%);
 background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
 }
 
+.purple{
+  background: rgba(87,35,100,1) 
+}
+
+
 .grPurple{
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);

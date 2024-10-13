@@ -1,7 +1,7 @@
 ---
-layout: liga-indigo
-permalink: /liga-indigo-platino
-categories: logos ligas
+layout: indigo-rondas
+permalink: /rondas-platino
+categories: logos 
 date: 2020-08-29 10:29:20 +0700
 title: PLATINO
 color: black
@@ -12,7 +12,7 @@ rango: 1
 gradiente: grRed
 background: red
 division: PLATINO
-link: /rondas-platino
+link: /liga-indigo-platino
 
 
 ---

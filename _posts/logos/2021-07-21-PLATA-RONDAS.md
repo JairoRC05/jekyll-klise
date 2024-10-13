@@ -1,7 +1,7 @@
 ---
-layout: liga-indigo
-permalink: /liga-indigo-plata
-categories: logos ligas
+layout: indigo-rondas
+permalink: /rondas-plata
+categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: LIPL
 tag: 
@@ -13,5 +13,5 @@ rango: 3
 gradiente: grBlue
 background: blue
 division: PLATA
-link: /rondas-plata
+link: /liga-indigo-plata
 ---

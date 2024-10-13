@@ -1,7 +1,7 @@
 ---
-layout: liga-indigo
-permalink: /liga-indigo-oro
-categories: logos ligas
+layout: indigo-rondas
+permalink: /rondas-oro
+categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: LIO
 tag: 
@@ -13,5 +13,5 @@ rango: 2
 gradiente: grGreen
 background: green
 division: ORO
-link: /rondas-oro
+link: /liga-indigo-oro
 ---

@@ -1,7 +1,7 @@
 ---
-layout: liga-indigo
-permalink: /liga-indigo-bronce
-categories: logos ligas
+layout: indigo-rondas
+permalink: /rondas-bronce
+categories: logos 
 date: 2020-08-29 10:29:20 +0700
 title: BRONCE
 tag: 
@@ -13,5 +13,5 @@ rango: 4
 gradiente: grPurple
 background: purple
 division: BRONCE
-link: /rondas-bronce
+link: /liga-indigo-bronce
 ---
