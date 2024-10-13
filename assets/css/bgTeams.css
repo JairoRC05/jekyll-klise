@@ -196,7 +196,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
 }
 
 .purple{
-  background: rgba(87,35,100,1) 
+  background: rgba(87,35,100,1) !important
 }
 
 
@@ -212,6 +212,10 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
 
 .green{
   background: rgba(4,101,70,1) !important;
+}
+
+.blue{
+  background-color: rgb(4, 4, 87) !important;
 }
 
   .grBlue{
