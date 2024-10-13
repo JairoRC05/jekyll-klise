@@ -138,14 +138,7 @@
   background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
 }
 
-.grGreen{
-  background: rgb(0,0,0) !important;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(4,101,70,1) 95%) !important;
-}
 
-.green{
-  background: rgba(4,101,70,1) !important;
-}
 
 
 
@@ -207,7 +200,14 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
 }
 
+.grGreen{
+  background: rgb(0,0,0) !important;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(4,101,70,1) 100%) !important;
+}
 
+.green{
+  background: rgba(4,101,70,1) !important;
+}
 
   .grBlue{
     background: rgb(0,0,0);

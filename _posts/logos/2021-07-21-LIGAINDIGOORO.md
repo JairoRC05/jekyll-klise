@@ -11,4 +11,5 @@ maincover: /assets/logos/LIGA-INDIGO.png
 nivel: ORO
 rango: 2
 color: grGreen
+link: /liga-indigo-oro
 ---

@@ -10,6 +10,7 @@ maincover: /assets/logos/LIGA-INDIGO.png
 nivel: PLATINO
 rango: 1
 color: grRed
+link: /liga-indigo-platino
 
 
 ---

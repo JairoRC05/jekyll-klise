@@ -11,4 +11,5 @@ maincover: /assets/logos/LIGA-INDIGO.png
 nivel: BRONCE
 rango: 4
 color: grPurple
+link: /liga-indigo-bronce
 ---

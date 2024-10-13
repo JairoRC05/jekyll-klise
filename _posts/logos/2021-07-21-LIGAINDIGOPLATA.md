@@ -11,4 +11,5 @@ maincover: /assets/logos/LIGA-INDIGO.png
 nivel: PLATA
 rango: 3
 color: grBlue
+link: /liga-indigo-plata
 ---

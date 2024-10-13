@@ -222,4 +222,58 @@ img {
         height: 250px;
         width: 250px;
     }
+
+
+    .card__league--btn{
+        background: #00000047;
+        padding: 5px 15px;
+        width: 80%;
+        border-radius: 10px;
+
+        p{
+            margin: 0px;
+        }
+
+        &:hover{
+            background: #0000009c;
+            width: 81%;
+            padding: 0;
+        }
+    }
+}
+
+
+.shine {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		background: linear-gradient(
+			to right,
+			fade_out(#fff, 1) 0%,
+			fade_out(#fff, 0.7) 100%
+		);
+		content: "";
+		display: block;
+		height: 100%;
+		left: -75%;
+		position: absolute;
+		top: 0;
+		transform: skewX(-25deg);
+		width: 50%;
+		z-index: 2;
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			animation: shine 0.85s;
+		}
+	}
+
+	@keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
 }

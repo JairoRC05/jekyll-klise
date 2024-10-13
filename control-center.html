@@ -33,9 +33,11 @@ permalink: /control-center.html
               {%- for post in norte-%}
               <li class="splide__slide">
                
-                <div class="card__league {{post.color}}">
+                <div class="card__league {{post.color}} shine">
                     <img src="{{post.maincover}}" alt="" >
-                    <p class="indigo">{{post.nivel}}</p>
+                    <a href="{{post.link}}" class="card__league--btn">
+                        <p class="indigo">{{post.nivel}}</p>
+                    </a>
                 </div>
             
             </li>
