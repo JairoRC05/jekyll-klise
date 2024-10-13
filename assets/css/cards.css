@@ -219,6 +219,7 @@ img {
     padding: 20px 0;
     
     img{
-        height: auto;
+        height: 250px;
+        width: 250px;
     }
 }

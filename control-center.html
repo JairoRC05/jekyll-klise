@@ -124,15 +124,20 @@ $(document).ready(function() {
     arrows: false,
     rewind: true,
     breakpoints: {
+      1200: {
+        perPage: 4,
+        gap: '.7rem',
+        height: '18rem',
+      },
       992: {
-        perPage: 2,
+        perPage: 3,
         gap: '.7rem',
         height: '22rem',
       },
       768: {
         perPage: 2,
         gap: '.7rem',
-        height: '20rem',
+        height: '24rem',
       },
       576: {
         perPage: 1,
@@ -142,7 +147,7 @@ $(document).ready(function() {
       480: {
         perPage: 1,
         gap: '.7rem',
-        height: '30rem',
+        height: '40rem',
       },
     },
   });
