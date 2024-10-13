@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: SEP LIP ROCT
+categories: SEP LIP ROCT ORO
 team: IMPERIO MEXA
 maincover: /assets/logos/MEXA.png
 puntosLJMAYO24: 6
@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: OBS
-puntos: 13
-pj: 10
+puntos: 0
+pj: 0
 
 #PARTIDO 1
 j1: RONDA 1

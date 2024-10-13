@@ -53,7 +53,16 @@ layout:
   </div>
 
   <div class="container text-white d-block d-md-none">
+    {% if page.division == "PLATINO" %}
     {% include list-mobile-platino.html %} 
+    {% elsif page.division == "ORO" %}
+    {% include list-mobile-oro.html %} 
+    {% elsif page.division == "PLATA" %}
+    {% include list-mobile-plata.html %} 
+    {% else %}
+    {% include list-mobile-bronce.html %} 
+    {% endif %}
+    
   </div>
 
 

@@ -1,7 +1,7 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team CXF SEP LIO ROCT
+categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team CXF SEP LIO ROCT ORO
 liga: LIGA NARANJA
 maincover: /assets/logos/CD.png
 puntosLJMAYO24: 8
@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: CELESTIAL DRAGONS
 ID: CD
-puntos: 6
-pj: 11
+puntos: 0
+pj: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: CD

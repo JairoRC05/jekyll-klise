@@ -1,9 +1,9 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: SEP LIP ROCT
+categories: SEP LIP ROCT ORO
 team: DFS PLATINUM
-maincover: /assets/logos/DFS.png
+maincover: /assets/logos/PLAT.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: DFS PLATINUM
@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: DFSPL
 team: DFS PLATINUM
 ID: DFS PLATINUM
-puntos: 17
-pj: 10
+puntos: 0
+pj: 0
 
 #PARTIDO 1
 j1: RONDA 1
