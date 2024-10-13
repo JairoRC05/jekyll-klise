@@ -1,12 +1,12 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories:  ROCT
+categories:  ROCT BRONCE
 team: IMPERIO MEXA JADE
 maincover: /assets/logos/MEXA.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: IMPERIO MEXA
+title: IMPERIO MEXA JADE
 route: /liga-indigo
 tag: johto042024
 color: black
@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: JADE
-puntos: 13
-pj: 10
+puntos: 0
+pj: 0
 
 #PARTIDO 1
 j1: RONDA 1

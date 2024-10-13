@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT
+categories: ROCT BRONCE
 team: ACADEMIA WHITE
 maincover: /assets/logos/WHITE.png
 puntosLJMAYO24: 6
@@ -16,8 +16,8 @@ abr: AOS
 background: '#F16C38'
 cover: AD
 ID: WHITE
-puntos: 11
-pj: 10
+puntos: 0
+pj: 0
 
 #PARTIDO 1
 j1: RONDA 1

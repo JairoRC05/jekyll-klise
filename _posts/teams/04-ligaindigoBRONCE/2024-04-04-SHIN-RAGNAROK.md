@@ -1,8 +1,8 @@
 ---
 layout: teamCard
 permalink: /team/:title.html
-categories: ROCT
-maincover: /assets/logos/AEP.png
+categories: ROCT BRONCE
+maincover: /assets/logos/SHIN.png
 puntosLJMAYO24: 13
 date: 2020-08-29 10:29:20 +0700
 title: SHIN RAGNAROK
@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SHIN RAGNAROK
 ID: SHIN
-puntos: 7
-pj: 10
+puntos: 0
+pj: 0
 #PARTIDO 1
 j1: RONDA 1
 p1: AEP
