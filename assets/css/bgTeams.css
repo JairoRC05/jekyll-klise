@@ -201,3 +201,22 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(8,0,255,1) 100%);
   background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
 }
+
+.grPurple{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
+}
+
+
+
+  .grBlue{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(3,4,86,1) 100%);
+  }
+
+  .grDark{
+    background: rgb(4,4,87);
+    background: linear-gradient(0deg, rgba(4, 4, 87, 0) 0%, rgba(2,2,43,1) 80%);
+  }
+
+
