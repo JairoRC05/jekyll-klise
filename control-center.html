@@ -21,32 +21,30 @@ permalink: /control-center.html
   
 
 
-  <div class="container-fluid ">
-    <div class="container mt-5">
-        <h3 class="text-white">TORNEOS ACTIVOS</h3>
-        <div class="splide mt-5">
-          <div class="splide__track">
-            <div class="splide__list">
-                {% assign norte = site.categories.ligas | sort: "rango" %}
-                {%- for post in norte-%}
-                <div class="splide__slide">
+
+
+
+<div class="container">
+    <section class="splide" aria-label="Basic Structure Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+              {% assign norte = site.categories.ligas | sort: "rango" %}
+              {%- for post in norte-%}
+              <li class="splide__slide">
+               
                 <div class="card__league {{post.color}}">
                     <img src="{{post.maincover}}" alt="" >
                     <p class="indigo">{{post.nivel}}</p>
                 </div>
-            </div>
-
+            
+            </li>
+    
               {%- endfor -%}
-
-            </div>
-          </div>
+            
+          </ul>
         </div>
-      
-    </div>
-  </div>
-
-
-
+      </section>
+</div>
 
   
   <div id="stars1"></div>
@@ -108,9 +106,9 @@ $(document).ready(function() {
         $(window).scroll(function() {
           // checks if window is scrolled more than 500px, adds/removes solid class
           if($(this).scrollTop() > 30 ) { 
-              $('.top').addClass('red');
+              $('.top').addClass('bg-black');
           } else {
-              $('.top').removeClass('red');
+              $('.top').removeClass('bg-black');
           }
         });
 });
@@ -125,27 +123,26 @@ $(document).ready(function() {
     pagination: false,
     arrows: false,
     rewind: true,
-    height: '10rem',
     breakpoints: {
       992: {
         perPage: 2,
         gap: '.7rem',
-        height: '10rem',
+        height: '22rem',
       },
       768: {
         perPage: 2,
         gap: '.7rem',
-        height: '12rem',
+        height: '20rem',
       },
       576: {
         perPage: 1,
         gap: '.7rem',
-        height: '12rem',
+        height: '30rem',
       },
       480: {
         perPage: 1,
         gap: '.7rem',
-        height: '7rem',
+        height: '30rem',
       },
     },
   });
