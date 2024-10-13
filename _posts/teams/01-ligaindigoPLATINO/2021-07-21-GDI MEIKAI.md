@@ -1,21 +1,22 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT
-team: WAZZAP
-maincover: /assets/logos/WZP.png
+categories: SEP LIO ROCT PLATINO
+team: GDI MEIKAI
+maincover: /assets/logos/GDI.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: WAZZAP
+title: GDI MEIKAI
 route: /liga-indigo
 tag: johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
-ID: WAZZAP
-puntos: 19
-pj: 10
+cover: DFSPL
+ID: GDI MEIKAI
+puntos: 0
+pj: 0
 
 #PARTIDO 1
 j1: RONDA 1

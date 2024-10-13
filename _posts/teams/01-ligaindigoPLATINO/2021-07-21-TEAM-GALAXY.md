@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LJ06 LIJ2 LIJ3 LIJ4 LIJ5 LIJ6 LIJ7 LIJ8 LIJ9 ILR7 TXG6 MEW8 TA9 team CXF CXF SEP LIO ROCT
+categories: PLATINO SEP LIO ROCT
 liga: LIGA JOHTO
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17
@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 15
-pj: 11
+puntos: 0
+pj: 0
 
 
 team1: TG1

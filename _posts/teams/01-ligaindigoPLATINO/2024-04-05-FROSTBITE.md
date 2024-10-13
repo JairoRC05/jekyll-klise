@@ -1,7 +1,7 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LA2024JN N1 N2 N5 N6 N9 team CXF SEP LIO ROCT
+categories:  SEP LIO ROCT PLATINO
 liga: LIGA NARANJA
 maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
@@ -17,8 +17,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 17
-pj: 11
+puntos: 0
+pj: 0
 #PARTIDO 1
 maincover1: /assets/logos/DFS.png
 j1: RONDA 1

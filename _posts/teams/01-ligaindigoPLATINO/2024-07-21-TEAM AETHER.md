@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT
+categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT PLATINO
 liga: LIGA INDIGO
 maincover: /assets/logos/TAE.png
 puntosLJMAYO24:
@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 11
-pj: 11
+puntos: 0
+pj: 0
 
 
 team1: TAE1
