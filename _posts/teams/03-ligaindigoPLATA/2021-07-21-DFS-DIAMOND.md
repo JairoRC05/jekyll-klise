@@ -1,9 +1,9 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6 SSI7 team CXF ROCT
+categories: LI LI1 LI2 LI6 LI7 SSI7 TAE1 SAP2 TSR6 SSI7 team CXF ROCT PLATA
 liga: LIGA INDIGO
-maincover: /assets/logos/DFS.png
+maincover: /assets/logos/DMD.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
 title: DFS DMD
@@ -17,8 +17,8 @@ cover: /assets/backCard.png
 team: DFS DIAMOND
 
 ID: DFS DMD
-puntos: 2
-pj: 9
+puntos: 0
+pj: 0
 
 
 team1: partido5
