@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo
 permalink: /liga-indigo-oro
-categories: logos ligas
+categories: logos ligas LO
 date: 2020-08-29 10:29:20 +0700
 title: LIO
 tag: 

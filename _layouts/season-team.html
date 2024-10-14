@@ -34,8 +34,10 @@ permalink:
   
   
   
-  <div class="container mb-3 mb-5">
-    <div class="row text-white">
+
+    <div class="container teams-table --">
+        <h1 class="teams-title mt-5 ">CALENDARIO</h1>
+    <div class="row text-white team--last">
         {% assign norte = site.categories.ENIGMA1 | sort: "match" %}
         {% include LOCAL.html %}
         {% assign norte = site.categories.ENIGMA2 | sort: "match" %}
@@ -73,6 +75,12 @@ permalink:
 <div class="d-block d-md-none ">
   <nav class="navbar fixed-bottom navbar-light {{page.solid}}">
       <div class="container d-flex justify-content-center align-items-center">
+        <div class="item-bar">
+          <a href="{{page.link}}" >
+            <i class="fa-solid fa-house"></i>
+          <span>ATRÁS</span>
+          </a>
+        </div>
         <div class="item-bar">
           <a href="/" >
             <i class="fa-solid fa-house"></i>
