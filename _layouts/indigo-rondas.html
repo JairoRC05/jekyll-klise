@@ -34,19 +34,16 @@ layout:
   </div>
 
 
-
-    {% if page.division == "PLATINO" %}
-    {% include rondas-mobile.html %}
-    {% elsif page.division == "ORO" %}
-    {% include rondas-mobile.html %}
-    
-    {% elsif page.division == "PLATA" %}
-    {% include rondas-mobile.html %}
-    
-    {% else %}
-    {% include rondas-mobile.html %}
-   
-    {% endif %}
+  {% if page.division == "PLATINO" %}
+  {% include rondas-platino.html %}
+  {% elsif page.division == "ORO" %}
+  {% include rondas-platino.html %}
+  {% elsif page.division == "PLATA" %}
+  {% include rondas-platino.html %}
+  {% else %}
+  {% include rondas-platino.html %}
+  {% endif %}
+ 
   
   
 

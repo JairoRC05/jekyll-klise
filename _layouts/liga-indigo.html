@@ -48,7 +48,16 @@ layout:
     {% endif %}
   
     <h1 class="teams-title m-10" id="rondas">RONDAS</h1>
-    {% include rondas-mobile.html %}
+
+    {% if page.division == "PLATINO" %}
+    {% include rondas-platino.html %}
+    {% elsif page.division == "ORO" %}
+    {% include rondas-platino.html %}
+    {% elsif page.division == "PLATA" %}
+    {% include rondas-platino.html %}
+    {% else %}
+    {% include rondas-platino.html %}
+    {% endif %}
    
   </div>
 
