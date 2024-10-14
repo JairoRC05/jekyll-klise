@@ -246,3 +246,8 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(15,15,15,1) 100%);
   background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
 }
+
+
+.erosa{
+  background: #e13772;
+}
