@@ -1,0 +1,105 @@
+<div class="d-flex justify-content-evenly align-items-center">
+    <a href="/liga-indigo-platino">
+       <section class="mx-5">
+                  
+           {% assign LIGA = site.categories.PLATINO | sort: "puntos"
+           | reverse %}
+           {%- for post in LIGA limit:1 -%}
+     <div class="card__section" style="--color: hsl(268, 84%, 32%);">
+       <div class="card__border"></div>
+       <div class="card__border-line"></div>
+       <div class="card__inner">
+         <div class="card__img">
+           <div class="img__team">
+             <p class="number" style="--color: hsl(0, 0%, 100%);">01</p>
+           </div>
+           
+        
+           <div class="img__athlete">
+               <img src="{{post.maincover}}" alt="{{post.title}}">
+           
+      
+   
+           </div>
+         </div>
+         <div class="card__text">
+           <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">PLATINO</div>
+           <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.title | truncate: 12}}</h1>
+           <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
+         </div>
+       </div>
+   </div>
+   {% endfor %}
+       </section>
+    </a>
+
+      <a href="/liga-indigo-oro">
+       <section class="mx-5">
+                  
+           {% assign LIGA = site.categories.ORO | sort: "puntos"
+           | reverse %}
+           {%- for post in LIGA limit:1 -%}
+     <div class="card__section" style="--color: hsl(268, 84%, 32%);">
+       <div class="card__border"></div>
+       <div class="card__border-line"></div>
+       <div class="card__inner">
+         <div class="card__img">
+           <div class="img__team">
+             <p class="number" style="--color: hsl(0, 0%, 100%);">01</p>
+           </div>
+           
+        
+           <div class="img__athlete">
+               <img src="{{post.maincover}}" alt="{{post.title}}">
+           
+      
+   
+           </div>
+         </div>
+         <div class="card__text">
+           <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">ORO</div>
+           <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.title | truncate: 12}}</h1>
+           <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
+         </div>
+       </div>
+   </div>
+   {% endfor %}
+       </section>
+      </a>
+
+       <a href="/liga-indigo-plata">
+           <section class="m-5">
+                  
+               {% assign LIGA = site.categories.PLATA | sort: "puntos"
+               | reverse %}
+               {%- for post in LIGA limit:1 -%}
+         <div class="card__section" style="--color: hsl(268, 84%, 32%);">
+           <div class="card__border"></div>
+           <div class="card__border-line"></div>
+           <div class="card__inner">
+             <div class="card__img">
+               <div class="img__team">
+                 <p class="number" style="--color: hsl(0, 0%, 100%);">01</p>
+               </div>
+               
+            
+               <div class="img__athlete">
+                   <img src="{{post.maincover}}" alt="{{post.title}}">
+               
+          
+       
+               </div>
+             </div>
+             <div class="card__text">
+               <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">PLATA</div>
+               <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.title | truncate: 12}}</h1>
+               <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
+             </div>
+           </div>
+       </div>
+       {% endfor %}
+           </section>
+       </a>
+   
+   
+   </div>

@@ -36,7 +36,8 @@ layout:
 
 
   <div class="container teams-table d-none d-md-block"  id="home">
-    <h1 class="teams-title mt-5 " >CAMPEONATO</h1>
+
+    <h1 class="teams-title" >CAMPEONATO</h1>
     {% if page.division == "PLATINO" %}
     {% include cards-teams-icon-platino.html %}
     {% elsif page.division == "ORO" %}
@@ -47,8 +48,8 @@ layout:
     {% include cards-teams-icon-bronce.html %}
     {% endif %}
   
-    <h1 class="teams-title m-10" id="rondas">RONDAS</h1>
-
+    <h1 class="teams-title mt-5 mb-5" id="rondas">RONDAS</h1>
+    
     {% if page.division == "PLATINO" %}
     {% include rondas-platino.html %}
     {% elsif page.division == "ORO" %}
@@ -58,7 +59,21 @@ layout:
     {% else %}
     {% include rondas-bronce.html %}
     {% endif %}
-   
+    
+    
+    <h1 class="teams-title mt-5 mb-5" id="rondas">DIVISIONES</h1>
+    {% if page.division == "PLATINO" %}
+    {% include division-platino.html %}
+    {% elsif page.division == "ORO" %}
+    {% include division-oro.html %}
+    {% elsif page.division == "PLATA" %}
+    {% include division-plata.html %}
+    {% else %}
+    {% include division-bronce.html %}
+    {% endif %}
+  
+
+
   </div>
 
   <div class="container text-white d-block d-md-none">
@@ -80,7 +95,7 @@ layout:
    </div> -->   
 
   <div class="container teams-table d-none d-md-block"  id="home">  
-      <h1 class="teams-title m-10">PATROCINADORES</h1>
+      <h1 class="teams-title mt-5 mb-5">PATROCINADORES</h1>
       {% include sponsors.html %}
     </div>
 
