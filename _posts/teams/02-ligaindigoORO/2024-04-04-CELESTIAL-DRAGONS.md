@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team CXF SEP LIO ROCT ORO
 liga: LIGA NARANJA

@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT BRONCE
 maincover: /assets/logos/SHIN.png

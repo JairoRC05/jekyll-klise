@@ -1,9 +1,9 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: SEP LIP ROCT ORO
 team: IMPERIO MEXA
-maincover: /assets/logos/MEXA.png
+maincover: /assets/logos/OBS.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: IMPERIO MEXA

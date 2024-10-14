@@ -1,9 +1,9 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories:  ROCT BRONCE
 team: IMPERIO MEXA JADE
-maincover: /assets/logos/MEXA.png
+maincover: /assets/logos/JADE.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: IMPERIO MEXA JADE

@@ -1,5 +1,5 @@
 ---
-layout: teamCard
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: SEP LIP ROCT ORO
 team: DFS PLATINUM
