@@ -7,7 +7,7 @@ permalink:
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="blue">
+<body class="{{page.background}}">
 
   <nav class="navbar top sticky-top bg-black">
     <div class="container d-flex  justify-content-between align-items-center">
@@ -20,16 +20,15 @@ permalink:
  
   
   
-  <div class="container-fluid banner grBlue">
-    <div class="container bannerPromo d-flex flex-cloumn justify-content-start align-items-center">
-      
+  <div class="container-fluid banner {{page.gradiente}}" >
+    <div class="container bannerPromo">
       <a href="{{page.maincover}}" role="button" download="{{ page.title | escape }}.png">
         <img src="{{page.maincover}}" class="drop img-fluid" alt="" ">
       </a>
       <div class="bannerText">
         <h1 class="indigo">{{page.team}}</h1>
+        <span class="indigo">DIVISION {{page.division}}</span>
       </div>
-      
     </div>
   </div>
   
@@ -37,7 +36,26 @@ permalink:
   
   <div class="container mb-3 mb-5">
     <div class="row text-white">
-        </div>
+        {% assign norte = site.categories.ENIGMA1 | sort: "match" %}
+        {% include LOCAL.html %}
+        {% assign norte = site.categories.ENIGMA2 | sort: "match" %}
+        {% include OUT.html %}
+        {% assign norte = site.categories.ENIGMA3 | sort: "match" %}
+        {% include LOCAL2.html %}
+        {% assign norte = site.categories.ENIGMA4 | sort: "match" %}
+        {% include OUT2.html %}
+        {% assign norte = site.categories.ENIGMA5 | sort: "match" %}
+        {% include LOCAL3.html %}
+        {% assign norte = site.categories.ENIGMA6 | sort: "match" %}
+        {% include OUT3.html %}
+        {% assign norte = site.categories.ENIGMA7 | sort: "match" %}
+        {% include LOCAL4.html %}
+        {% assign norte = site.categories.ENIGMA8 | sort: "match" %}
+        {% include OUT4.html %}
+        {% assign norte = site.categories.ENIGMA9 | sort: "match" %}
+        {% include LOCAL5.html %}
+     
+    </div>
   </div>
 
 
