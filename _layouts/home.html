@@ -54,10 +54,9 @@ home: true
       <div class="carousel-item active">
       
        
-        {% assign norte = site.categories.LO %}
-        {%- for post in norte-%}
+     
         <div class="container-fluid  {{post.gradiente}}">
-          {%- endfor -%}
+      
           <div class="container carousel-match">
             <div class="roundTeam">
               <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
@@ -93,32 +92,7 @@ home: true
   </div>
 
 
-  <div class="container-fluid bg-black py-2 py-md-5">
-    <div class="container score-start">
-      <h3 class="text-white"><b>ÚLTIMOS RESULTADOS</b></h3>
-      <div class="row ">
-        <div class="splide">
-          <div class="splide__track">
-            <div class="splide__list">
-              {% assign norte = site.categories.oro %}
-              {%- for post in norte-%}
 
-              {% include slider-res.html %}
-
-              {%- endfor -%}
-              {% assign norte = site.categories.plata %}
-              {%- for post in norte-%}
-
-              {% include slider-res.html %}
-
-              {%- endfor -%}
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -126,9 +100,9 @@ home: true
     {% include temporada.html %}
   </div> -->
 
-  <div class="container-fluid blue p-10">
-    <div class="container text-white text-center">
-      <h3>Sigue a nuestros patrocinadores</h3>
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title">SIGUE A NUESTROS SPONSORS</h1>
       {% include sponsors.html %}
     </div>
   </div>
