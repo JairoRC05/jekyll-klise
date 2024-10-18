@@ -359,3 +359,15 @@
     padding: 30px  0 30px 0;
 }
 }
+
+
+
+
+
+
+.carousel-item.active,
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  z-index: 0 !important;
+  opacity: 1;
+}
