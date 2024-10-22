@@ -17,7 +17,7 @@ background: '#F16C38'
 cover: AD
 ID: AD-ESPORTS
 puntos: 0
-pj: 0
+pj: 2
 
 #PARTIDO 1
 j1: RONDA 1

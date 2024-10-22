@@ -16,7 +16,7 @@ background: '#F16C38'
 cover: DFSPL
 ID: JADE
 puntos: 0
-pj: 0
+pj: 2
 
 #PARTIDO 1
 j1: RONDA 1
