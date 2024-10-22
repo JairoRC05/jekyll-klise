@@ -16,8 +16,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: CELESTIAL DRAGONS
 ID: CD
-puntos: 0
-pj: 0
+puntos: 1
+pj: 1
 #PARTIDO 1
 j1: RONDA 1
 p1: CD
