@@ -17,8 +17,8 @@ cover: /assets/backCard.png
 team: DFS DIAMOND
 
 ID: DFS DMD
-puntos: 0
-pj: 0
+puntos: 1
+pj: 2
 
 
 team1: partido5
