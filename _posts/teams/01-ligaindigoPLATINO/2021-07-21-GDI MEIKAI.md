@@ -14,7 +14,7 @@ puntosLJ202404: 12
 grupo: sur
 background: '#F16C38'
 cover: DFSPL
-ID: GDI MEIKAI
+ID: MEI
 puntos: 1
 pj: 2
 

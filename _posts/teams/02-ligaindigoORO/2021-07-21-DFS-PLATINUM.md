@@ -15,7 +15,7 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 team: DFS PLATINUM
-ID: DFS PLATINUM
+ID: PLAT
 puntos: 4
 pj: 2
 

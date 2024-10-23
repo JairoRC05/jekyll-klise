@@ -15,7 +15,7 @@ grupo: sur
 abr: AOS
 background: '#F16C38'
 cover: DFSPL
-ID: AMATERASU
+ID: ASU
 puntos: 2
 pj: 1
 

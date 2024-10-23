@@ -16,7 +16,7 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: DFS DIAMOND
 
-ID: DFS DMD
+ID: DMD
 puntos: 1
 pj: 2
 

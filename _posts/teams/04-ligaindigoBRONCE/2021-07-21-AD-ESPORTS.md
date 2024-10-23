@@ -15,7 +15,7 @@ grupo: sur
 abr: AOS
 background: '#F16C38'
 cover: AD
-ID: AD-ESPORTS
+ID: AD
 puntos: 0
 pj: 2
 

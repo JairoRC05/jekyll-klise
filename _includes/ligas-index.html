@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="leagues">
+      <div class="leagues--title">
+        <h1>EQUIPOS LIGA INDIGO</h1>
+      </div>
+ 
+      <div class="leagues--list">
+        <h1 class="leagues--title">PLATINO</h1>
+        {% assign norte = site.categories.PLATINO %}
+        {%- for post in norte-%}
+        <img src="/assets/logos/{{post.ID}}.png" alt="" class="leagues--img">
+        {%- endfor -%}
+      </div>
+      <div class="leagues--list">
+        <h1 class="leagues--title">ORO</h1>
+        {% assign norte = site.categories.ORO %}
+        {%- for post in norte-%}
+        <img src="/assets/logos/{{post.ID}}.png" alt="" class="leagues--img">
+        {%- endfor -%}
+      </div>
+      <div class="leagues--list">
+        <h1 class="leagues--title">PLATA</h1>
+        {% assign norte = site.categories.PLATA %}
+        {%- for post in norte-%}
+        <img src="/assets/logos/{{post.ID}}.png" alt="" class="leagues--img">
+        {%- endfor -%}
+      </div>
+      <div class="leagues--list">
+        <h1 class="leagues--title">BRONCE</h1>
+        {% assign norte = site.categories.BRONCE %}
+        {%- for post in norte-%}
+        <img src="/assets/logos/{{post.ID}}.png" alt="" class="leagues--img">
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  

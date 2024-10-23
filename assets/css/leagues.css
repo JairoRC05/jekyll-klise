@@ -1,0 +1,36 @@
+.leagues{
+    margin-top: 20px;
+
+
+    .leagues--title{
+        color: white;
+        margin-right: 50px;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .leagues--sub{
+        color: white;
+        margin-right: 50px;
+        font-size: 12px !important;
+        font-style: italic;
+    }
+
+    .leagues--list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .leagues--title{
+            color: white;
+            margin-right: 50px;
+            font-size: 18px;
+        }
+        .leagues--img{
+            width: 80px;
+        }
+    }
+
+
+
+}
