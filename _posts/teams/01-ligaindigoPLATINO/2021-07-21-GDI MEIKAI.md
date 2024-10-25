@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: MEI
-puntos: 1
-pj: 2
+puntos: 2
+pj: 4
 
 #PARTIDO 1
 j1: RONDA 1
