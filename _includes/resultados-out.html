@@ -1,0 +1,21 @@
+{%- for post in norte -%}
+{% if post.out == "DES" %}
+
+{% else %} 
+
+  <div class="container resultadosCard text-white">
+    <div class="roundTeam">
+      <img src="/assets/logos/{{post.out}}.png" alt="">
+      <p>{{post.out | truncate: 8}}</p>
+    </div>
+    <div class="roundScore"> 
+      <p>{{post.r2}}-{{post.r1}}</p>
+    </div>
+    <div class="roundTeam">
+      <img src="/assets/logos/{{post.local}}.png" alt="">
+      <p>{{post.local |truncate: 8}}</p>
+    </div>
+  </div>
+
+{% endif %}
+{%- endfor -%}
