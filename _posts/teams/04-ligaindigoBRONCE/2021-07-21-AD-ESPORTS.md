@@ -16,8 +16,8 @@ abr: AOS
 background: '#F16C38'
 cover: AD
 ID: AD
-puntos: 4
-pj: 4
+puntos: 7
+pj: 6
 
 #PARTIDO 1
 j1: RONDA 1

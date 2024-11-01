@@ -18,7 +18,7 @@ team: DFS DIAMOND
 
 ID: DMD
 puntos: 3
-pj: 4
+pj: 6
 
 
 team1: partido5

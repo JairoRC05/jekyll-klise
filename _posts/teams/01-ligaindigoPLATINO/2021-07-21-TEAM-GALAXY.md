@@ -17,7 +17,7 @@ cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
 puntos: 2
-pj: 2
+pj: 3
 
 
 team1: TG1

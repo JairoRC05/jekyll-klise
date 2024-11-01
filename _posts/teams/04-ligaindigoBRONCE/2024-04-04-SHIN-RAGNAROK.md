@@ -15,8 +15,8 @@ background: '#F16C38'
 cover: /assets/backCard.png
 team: SHIN RAGNAROK
 ID: SHIN
-puntos: 4
-pj: 3
+puntos: 6
+pj: 5
 #PARTIDO 1
 j1: RONDA 1
 p1: AEP

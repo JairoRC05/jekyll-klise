@@ -8,8 +8,8 @@ puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: ACADEMIA BLUE
 ID: BLUE
-puntos: 0
-pj: 3
+puntos: 1
+pj: 5
 
 
 

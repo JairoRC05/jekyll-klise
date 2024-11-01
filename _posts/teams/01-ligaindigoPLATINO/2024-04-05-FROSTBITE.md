@@ -17,8 +17,8 @@ grupo: sur
 background: '#F16C38'
 cover: /assets/backCard.png
 
-puntos: 4
-pj: 3
+puntos: 6
+pj: 5
 
 #PARTIDO 1
 maincover1: /assets/logos/DFS.png

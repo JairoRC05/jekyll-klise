@@ -16,8 +16,8 @@ abr: AOS
 background: '#F16C38'
 cover: DFSPL
 ID: NB
-puntos: 5
-pj: 3
+puntos: 7
+pj: 5
 
 #PARTIDO 1
 j1: RONDA 1

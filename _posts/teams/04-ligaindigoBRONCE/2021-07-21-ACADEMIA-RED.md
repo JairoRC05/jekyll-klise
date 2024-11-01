@@ -8,8 +8,8 @@ puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
 title: ACADEMIA RED
 ID: RED
-puntos: 1
-pj: 3
+puntos: 3
+pj: 5
 
 
 
