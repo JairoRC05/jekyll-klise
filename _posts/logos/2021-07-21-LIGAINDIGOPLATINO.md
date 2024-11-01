@@ -12,7 +12,8 @@ rango: 1
 gradiente: grRed
 background: red
 division: PLATINO
-link: /rondas-platino
+ligas: /liga-indigo-platino
+rondas: /rondas-platino
 
 
 ---

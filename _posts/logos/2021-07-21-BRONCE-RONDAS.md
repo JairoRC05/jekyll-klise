@@ -13,5 +13,6 @@ rango: 4
 gradiente: grPurple
 background: purple
 division: BRONCE
-link: /liga-indigo-bronce
+ligas: /liga-indigo-bronce
+rondas: /rondas-bronce
 ---

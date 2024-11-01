@@ -1,3 +1,39 @@
+
+.roundCard1 {
+    padding: 20px;
+    margin-bottom: 5px; 
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .roundCard {
     padding: 20px;
     margin-bottom: 5px; 
@@ -5,12 +41,15 @@
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, .1);
-    /* box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, .5);
     border-right: 2px solid rgba(255, 255, 255, .2);
-    filter: blur(10px) !important; */
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    filter: blur(10px);
 
 
     @media screen and (max-width: 767.98px) {

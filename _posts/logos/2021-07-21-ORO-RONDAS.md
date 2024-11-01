@@ -13,5 +13,6 @@ rango: 2
 gradiente: grGreen
 background: green
 division: ORO
-link: /liga-indigo-oro
+ligas: /liga-indigo-oro
+rondas: /rondas-oro
 ---

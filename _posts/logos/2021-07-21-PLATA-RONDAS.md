@@ -13,5 +13,6 @@ rango: 3
 gradiente: grBlue
 background: blue
 division: PLATA
-link: /liga-indigo-plata
+ligas: /liga-indigo-plata
+rondas: /rondas-plata
 ---
