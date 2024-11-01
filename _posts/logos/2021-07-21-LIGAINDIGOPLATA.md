@@ -15,4 +15,5 @@ background: blue
 division: PLATA
 ligas: /liga-indigo-plata
 rondas: /rondas-plata
+pag: LIGA
 ---

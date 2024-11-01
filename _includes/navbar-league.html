@@ -1,6 +1,7 @@
 <div class="d-block d-md-none ">
     <nav class="navbar fixed-bottom navbar-light {{page.background}}">
         <div class="container d-flex justify-content-center align-items-center">
+          {% if page.pag == "LIGA" or page.pag == "RONDAS" %}
           {% assign norte = site.categories.ICONS | sort: "level"  %}
           {%- for post in norte  -%}
           <div class="item-bar">
@@ -15,13 +16,34 @@
           {% elsif post.type == "REGLAS" %}
           <a href="/reglamento-oct" >
             {% else %}
-
             {% endif %}
               <i class="fa-solid {{post.icon}}"></i>
             <span>{{post.name}}</span>
             </a>
           </div>
           {%- endfor -%}
+          
+          {% elsif page.pag == "REGLAS" %}
+          {% assign norte = site.categories.REGLAS | sort: "level"  %}
+          {%- for post in norte  -%}
+          <div class="item-bar">
+          <a href="/reglamento-oct" >
+              <i class="fa-solid {{post.icon}}"></i>
+            <span>{{post.name}}</span>
+            </a>
+          </div>
+          {%- endfor -%}
+          {% else %}
+          {% assign norte = site.categories.HOME | sort: "level"  %}
+          {%- for post in norte  -%}
+          <div class="item-bar">
+          <a href="/control-center" >
+              <i class="fa-solid {{post.icon}}"></i>
+            <span>{{post.name}}</span>
+            </a>
+          </div>
+          {%- endfor -%}
+          {% endif %}
         </div>
     </nav>
 </div>

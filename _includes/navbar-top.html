@@ -1,0 +1,18 @@
+<nav class="navbar top sticky-top bg-black">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="/"><span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span></a>
+      <div class="d-none d-md-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white">INICIO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#rondas" class="text-white">RONDAS</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-oct" class="text-white">REGLAMENTO</a></span>
+      </div>
+      <div class="d-block d-md-none">
+        {% assign norte = site.categories.TOP | sort: "level"  %}
+        {%- for post in norte | limit:1  -%}
+        <a href="/" class="text-white"><i class="fa-solid {{post.icon}}"></i> </a>
+        {%- endfor -%}
+        
+      
+      </div>
+    </div>
+  </nav>

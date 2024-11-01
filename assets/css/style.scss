@@ -71,6 +71,17 @@
 }
   
 
+
+.fondocss {
+position: fixed;
+top:0;
+left: 0;
+min-width: 100%;
+min-height: 100%;
+z-index: -1000;
+opacity: 0.1;
+}
+
 // OWN
 .title, .more {
     padding: 10px 15px;

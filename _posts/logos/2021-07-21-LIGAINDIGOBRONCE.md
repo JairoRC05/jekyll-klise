@@ -15,4 +15,5 @@ background: purple
 division: BRONCE
 ligas: /liga-indigo-bronce
 rondas: /rondas-bronce
+pag: LIGA
 ---

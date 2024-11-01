@@ -15,4 +15,5 @@ background: green
 division: ORO
 ligas: /liga-indigo-oro
 rondas: /rondas-oro
+pag: LIGA
 ---

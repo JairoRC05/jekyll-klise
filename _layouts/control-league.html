@@ -1,6 +1,5 @@
 ---
-layout:
-permalink: /control-center.html
+layout: compress
 ---
 
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
@@ -70,22 +69,7 @@ permalink: /control-center.html
     {% include footer-indigo.html %}
   </div> 
   
-  <div class="d-block d-md-none">
-    <nav class="navbar  fixed-bottom navbar-light">
-      <div class="container d-flex justify-content-center align-items-center">
-   
-  
-        <div class="item-bar">
-          <a href="/reglamento-oct" >
-            <i class="fa-solid fa-bookmark"></i>
-          <span>REGLAS</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-  
-    
-    </div>
+  {% include navbar-league.html %}
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

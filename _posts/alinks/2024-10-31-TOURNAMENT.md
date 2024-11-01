@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink:
-categories: ICONS
+categories: ICONS HOME 
 date: 2024-09-10 10:29:20 +0700
 name: LIGAS
 icon: fa-hat-wizard #fa-trophy
