@@ -1,0 +1,22 @@
+.my-10{
+    margin: 100px 0 ;
+
+    
+    @media screen and (max-width: 992px) {
+        margin:  0 ;
+    } 
+    @media screen and (max-width: 768px) {
+        margin:  0 ;
+    } 
+    @media screen and (max-width: 576px) {
+        margin:  0 ;
+    } 
+    @media screen and (max-width: 472px) {
+        margin:  0 ;
+    } 
+    @media screen and (max-width: 352px) {
+        margin:  0 ;
+    } 
+
+
+}

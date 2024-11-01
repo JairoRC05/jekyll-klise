@@ -47,9 +47,9 @@
     border: 2px solid rgba(255, 255, 255, .5);
     border-right: 2px solid rgba(255, 255, 255, .2);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    filter: blur(10px);
+    filter: blur(10px); */
 
 
     @media screen and (max-width: 767.98px) {

@@ -1,36 +1,27 @@
 <div class="d-block d-md-none ">
     <nav class="navbar fixed-bottom navbar-light {{page.background}}">
         <div class="container d-flex justify-content-center align-items-center">
+          {% assign norte = site.categories.ICONS | sort: "level"  %}
+          {%- for post in norte  -%}
           <div class="item-bar">
-            <a href="{{page.ligas}}" >
-              <i class="fa-solid fa-ranking-star"></i>
-            <span>CLASIF.</span>
+            {% if post.type == "LIGA" %}
+         <a href="{{page.ligas}}">
+          {% elsif post.type == "MVP" %}
+          <a href="{{page.mvps}}" >
+          {% elsif post.type == "RONDAS" %}
+          <a href="{{page.rondas}}" >
+          {% elsif post.type == "TOURNAMENT" %}
+          <a href="/control-center" >
+          {% elsif post.type == "REGLAS" %}
+          <a href="/reglamento-oct" >
+            {% else %}
+
+            {% endif %}
+              <i class="fa-solid {{post.icon}}"></i>
+            <span>{{post.name}}</span>
             </a>
           </div>
-          <div class="item-bar">
-            <a href="{{page.mvps}}" >
-              <i class="fa-solid fa-crown"></i>
-            <span>MVPS</span>
-            </a>
-          </div>
-          <div class="item-bar">
-            <a href="{{page.rondas}}" >
-              <i class="fa-solid fa-list-ul"></i>
-            <span>RONDAS</span>
-            </a>
-          </div>
-          <div class="item-bar">
-            <a href="/control-center" >
-              <i class="fa-solid fa-trophy"></i>
-            <span>LIGAS</span>
-            </a>
-          </div>
-          <div class="item-bar">
-            <a href="/reglamento-oct" >
-              <i class="fa-solid fa-bookmark"></i>
-            <span>REGLAS</span>
-            </a>
-          </div>
+          {%- endfor -%}
         </div>
     </nav>
 </div>
