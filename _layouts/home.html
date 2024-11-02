@@ -11,6 +11,8 @@ home: true
 
 <body class="bg-black">
 
+  
+
   <nav class="navbar top sticky-top bg-black">
     <div class="container d-flex justify-content-between align-items-center">
       <a href="/"><span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span></a>
@@ -40,6 +42,8 @@ home: true
   </script>
 
 
+
+
 <section class="splide" aria-label="Splide Basic HTML Example">
   <div class="splide__track">
 		<ul class="splide__list">
@@ -47,14 +51,24 @@ home: true
       {%- for post in norte-%}
       
 			<li class="splide__slide">
-         <div class="container-fluid  {{post.gradiente}}" style="border-radius: 0 0 10px 10px;">
-            <div class="container carousel-match">
+        {% if post.liga == "PLATINO" %}
+         <div class="container-fluid red" style="border-radius: 10px;">
+           {% elsif post.liga == "ORO" %}
+           <div class="container-fluid grGreen" style="border-radius: 10px;">
+           {% elsif post.liga == "PLATA" %}
+           <div class="container-fluid blue" style="border-radius: 10px;">
+           {% elsif post.liga == "BRONCE" %}
+           <div class="container-fluid blue" style="border-radius: 10px;">
+           {% else  %}
+           <div class="container-fluid bg-black" style="border-radius: 10px;">
+            {% endif %}
+           <div class="container carousel-match">
               <div class="roundTeam">
                 <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
                 <p>{{post.local}}</p>
               </div>
               <div class="roundScore">
-                <h1 class="indigo">{{post.liga}}</h1>
+                <h1 class="indigo">LIGA INDIGO {{post.liga}}</h1>
                 <h3 class="indigo">RONDA {{post.ronda}}</h3>
                 <h3 class="indigo">{{post.fecha}}</h3>
                 <h2>VS</h2>
@@ -77,6 +91,9 @@ home: true
 
  
 
+<div id="stars1"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 
 
   {% include ligas-index.html %}
@@ -119,9 +136,7 @@ home: true
 
 
 
-  <div id="stars1"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+ 
 
 
 

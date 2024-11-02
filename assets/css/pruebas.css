@@ -1,0 +1,126 @@
+.card-round{
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media screen and (max-width: 472px) {
+        padding: 5px 0;
+        margin-bottom: 5px;
+        justify-content: space-around;
+    } 
+
+    .card-back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(255, 255, 255, .1);
+        /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-right: 2px solid rgba(255, 255, 255, .2);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        filter: blur(1px); 
+        z-index: -1000;
+        overflow: hidden;
+    }
+
+    .card-color-left{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+     
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: -60;
+        left: -60;
+        border-bottom: 13px solid rgba(0, 0, 0, 0.347);
+        z-index: -900;
+        transform: rotate(315deg);
+    }
+    .card-color-right{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: -60;
+        right: -60;
+        border-bottom: 13px solid rgba(0, 0, 0, 0.347);
+        z-index: -900;
+        transform: rotate(45deg);
+    }
+    .card-color-center{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-bottom: 13px solid rgba(0, 0, 0, 0.347);
+        z-index: -900;
+        
+    }
+
+
+    .lite{
+        position: absolute;
+        top: 10px;
+        font-size: 50px;
+        font-weight: bolder;
+        color: #0000005b;
+        z-index: -700;
+        font-style: italic;
+    }
+
+    .card-team{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        p{
+            margin: 0;
+            font-weight: bold;
+
+            @media screen and (max-width: 472px) {
+                font-size: 10px;
+            } 
+        }
+
+        img{
+            width: 70px;
+
+            @media screen and (max-width: 472px) {
+                width: 45px;
+            } 
+        }
+    }
+    .card-score{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        p{
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            @media screen and (max-width: 472px) {
+                font-size: 20px;
+            } 
+        }
+        span{
+            margin: 0;
+            color: #ffff00;
+            @media screen and (max-width: 472px) {
+                font-size: 10px;
+            } 
+        }
+    }
+}
