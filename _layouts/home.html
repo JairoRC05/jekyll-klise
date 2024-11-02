@@ -39,57 +39,44 @@ home: true
     });
   </script>
 
-  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
+
+<section class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide__track">
+		<ul class="splide__list">
       {% assign norte = site.categories.PROMO %}
       {%- for post in norte-%}
-      <div class="carousel-item active">
       
-       
-     
-        <div class="container-fluid  {{post.gradiente}}">
-      
-          <div class="container carousel-match">
-            <div class="roundTeam">
-              <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
-              <p>{{post.local}}</p>
-            </div>
-            <div class="roundScore">
-              <h1 class="indigo">{{post.liga}}</h1>
-              <h3 class="indigo">RONDA {{post.ronda}}</h3>
-              <h3 class="indigo">{{post.fecha}}</h3>
-              <h2>VS</h2>
-              <h3 class="indigo">{{post.hora}}</h3>
-              <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
-            </div>
-            <div class="roundTeam">
-              <img src="/assets/logos/{{post.out}}.png" alt="" class="img-fluid">
-              <p>{{post.out}}</p>
+			<li class="splide__slide">
+         <div class="container-fluid  {{post.gradiente}}">
+            <div class="container carousel-match">
+              <div class="roundTeam">
+                <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+                <p>{{post.local}}</p>
+              </div>
+              <div class="roundScore">
+                <h1 class="indigo">{{post.liga}}</h1>
+                <h3 class="indigo">RONDA {{post.ronda}}</h3>
+                <h3 class="indigo">{{post.fecha}}</h3>
+                <h2>VS</h2>
+                <h3 class="indigo">{{post.hora}}</h3>
+                <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+              </div>
+              <div class="roundTeam">
+                <img src="/assets/logos/{{post.out}}.png" alt="" class="img-fluid">
+                <p>{{post.out}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      {%- endfor -%}
-    </div>
-    <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    
+        </li>
+        {%- endfor -%}
+
+		</ul>
   </div>
+</section>
+
+ 
+
 
 
   {% include ligas-index.html %}
@@ -153,18 +140,19 @@ home: true
         type: 'loop',
         autoplay: true,
         interval: '7000',
-        perPage: 4,
+        perPage: 1,
         pagination: false,
         arrows: false,
         rewind: true,
+        height: '50rem',
         breakpoints: {
           992: {
-            perPage: 2,
+            perPage: 1,
             gap: '.7rem',
             height: '10rem',
           },
           768: {
-            perPage: 2,
+            perPage: 1,
             gap: '.7rem',
             height: '12rem',
           },
@@ -176,7 +164,8 @@ home: true
           480: {
             perPage: 1,
             gap: '.7rem',
-            height: '7rem',
+            trimSpace: false,
+            height: '10rem',
           },
         },
       });
