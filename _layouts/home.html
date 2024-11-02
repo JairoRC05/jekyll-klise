@@ -47,7 +47,7 @@ home: true
       {%- for post in norte-%}
       
 			<li class="splide__slide">
-         <div class="container-fluid  {{post.gradiente}}">
+         <div class="container-fluid  {{post.gradiente}}" style="border-radius: 0 0 10px 10px;">
             <div class="container carousel-match">
               <div class="roundTeam">
                 <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
@@ -146,15 +146,20 @@ home: true
         rewind: true,
         height: '50rem',
         breakpoints: {
+          1200: {
+            perPage: 1,
+            gap: '.7rem',
+            height: '35rem',
+          },
           992: {
             perPage: 1,
             gap: '.7rem',
-            height: '10rem',
+            height: '25rem',
           },
           768: {
             perPage: 1,
             gap: '.7rem',
-            height: '12rem',
+            height: '20rem',
           },
           576: {
             perPage: 1,
@@ -163,7 +168,7 @@ home: true
           },
           480: {
             perPage: 1,
-            gap: '.7rem',
+            gap: '.1em',
             trimSpace: false,
             height: '10rem',
           },
