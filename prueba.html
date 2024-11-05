@@ -9,32 +9,33 @@ permalink: /prueba.html
 <body class="grGreen">
 
 
-    <nav class="navbar bg-indigo">
-        <div class="container d-flex justify-content-between align-items-center">
-            <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
-            <div class="d-none d-lg-block">
-                <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-oro" class="text-white">ORO</a></span>
-                <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-plata" class="text-white">PLATA</a></span>
-                <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-oct" class="text-white">REGLAMENTO</a></span>
-                <span class="navbar-brand mb-0 h1 text-white"><a href="/equipos-registrados" class="text-white">REGISTRO</a></span>
-              </div>
-        </div>
-    </nav>
-
-    <div class="container-fluid banner">
-        <div class="container bannerPromo">
-          <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
-            <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
-          </a>
-          <div class="bannerText">
-            <h1 class="indigo">LIGA INDIGO</h1>
-            <span class="indigo">DIVISION {{page.division}}</span>
-          </div>
-        </div>
+  <nav class="navbar bg-indigo">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span>
+      <div class="d-none d-lg-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-oro" class="text-white">ORO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-plata" class="text-white">PLATA</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-oct" class="text-white">REGLAMENTO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/equipos-registrados"
+            class="text-white">REGISTRO</a></span>
       </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid banner">
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+          </a>
+          <div class=" bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">DIVISION {{page.division}}</span>
+    </div>
+  </div>
+  </div>
 
 
-<div class="container">
+  <!-- <div class="container">
     <div class="row">
         {% assign norte = site.categories.LD1 | sort: "match" %}
         {%- for post in norte -%}
@@ -44,7 +45,7 @@ permalink: /prueba.html
             <div class="card-back"> 
                 <div class="card-color-center {{post.local}}"> </div>
             </div>
-            <span class="lite">DESCANSO</span>
+            <span class="card-lite">DESCANSO</span>
               <div class="card-team">
                   <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
                   <p>{{post.local | truncate: 8}}</p> 
@@ -89,33 +90,70 @@ permalink: /prueba.html
       {% endif %}
          {%- endfor -%}
     </div>
-</div>
+</div> -->
 
+  <div class="container">
+    <div class="row">
+      {% assign LIGA = site.categories.MVPB | sort: "MVPS"
+      | reverse %}
+      {%- for post in LIGA limit:6 -%}
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card-round-mvp">
+       
+          <div class="card-mvp">
+            <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}">
+            <div class="card-mvp-title">
+              <p class="mvp-title">{{post.title | truncate: 12}}</p>
+              <p>{{post.team}}</p>
+            </div>
+          </div>
+          <div class="card-mvp-number">
+            <p class="mvp-number">{{post.MVPS}}</p>
+            <p>MVPS</p>
+          </div>
+         
+         
+          <div class="card-back">
+            <div class="card-mvp-team">
+              <img src="/assets/logos/{{post.team}}.png" alt="MVPS Team: {{post.team}}">
+            </div>
+            <div class="card-color-left {{post.team}}"> </div>  
+          </div>
+
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
 
   <div class="d-block d-md-none ">
     <nav class="navbar solid fixed-bottom navbar-light">
 
-          <div class="container d-flex justify-content-center align-items-center">
-            <div class="item-bar"><a href="/"><i class="fa-solid fa-home"></i><span>INICIO</span> </a>  </div>
-            <div class="item-bar"><a href="/liga-indigo-oro.html"><i class="fa-solid fa-trophy"></i><span>LI ORO</span> </a>  </div>
-            <div class="item-bar"><a href="/liga-indigo-plata"><i class="fa-solid fa-trophy"></i><span>LI PLATA</span> </a>  </div>
-            <div class="item-bar"><a href="/reglamento-oct.html"><i class="fa-solid fa-bookmark"></i><span>REGLAS</span> </a>  </div>
-            <div class="item-bar"><a href="/equipos-registrados"><i class="fa-solid fa-shield"></i><span>REGISTRO</span> </a> </div>    
-          </div>
-         
-       
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="item-bar"><a href="/"><i class="fa-solid fa-home"></i><span>INICIO</span> </a> </div>
+        <div class="item-bar"><a href="/liga-indigo-oro.html"><i class="fa-solid fa-trophy"></i><span>LI ORO</span> </a>
         </div>
-      </nav>
+        <div class="item-bar"><a href="/liga-indigo-plata"><i class="fa-solid fa-trophy"></i><span>LI PLATA</span> </a>
+        </div>
+        <div class="item-bar"><a href="/reglamento-oct.html"><i class="fa-solid fa-bookmark"></i><span>REGLAS</span>
+          </a> </div>
+        <div class="item-bar"><a href="/equipos-registrados"><i class="fa-solid fa-shield"></i><span>REGISTRO</span>
+          </a> </div>
+      </div>
+
+
   </div>
-    
-  
+  </nav>
+  </div>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </body>
 

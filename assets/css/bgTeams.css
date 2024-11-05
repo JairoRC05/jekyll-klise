@@ -563,4 +563,12 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 .FTB{
   background: #00c8ff;
 }
+.SHA{
+  background: #000;
+  border-bottom: 13px solid #daa35c ;
+}
+.SM{
+  background: #99110c;
+  border-bottom: 13px solid #daa35cab ;
+}
 
