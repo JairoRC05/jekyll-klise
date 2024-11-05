@@ -198,6 +198,10 @@
             top: -45;
            
         }
+        @media screen and (max-width: 378px) {
+            top: -35;
+           
+        }
     }
 
 
