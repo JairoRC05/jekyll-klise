@@ -15,5 +15,6 @@ background: green
 division: ORO
 ligas: /liga-indigo-oro
 rondas: /rondas-oro
+mvps: /mvps-oro
 pag: LIGA
 ---
