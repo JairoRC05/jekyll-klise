@@ -1,0 +1,100 @@
+---
+layout: 
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="{{page.background}}">
+
+  <video class="fondocss" autoplay muted loop >
+    <source src="/assets/img/terror.mp4" type="video/mp4">
+    </video>
+
+  {% include navbar-top.html %}
+    
+    
+ 
+
+  <div class="container-fluid banner" >
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">RONDAS {{page.division}}</span>
+      </div>
+    </div>
+  </div>
+
+ 
+  
+  {% if page.division == "PLATINO" %}
+  {% include mvps-platino.html %}
+  {% elsif page.division == "ORO" %}
+  {% include mvps-oro.html %}
+  {% elsif page.division == "PLATA" %}
+  {% include mvps-plata.html %}
+  {% else %}
+  {% include mvps-bronce.html %}
+  {% endif %}
+
+
+
+
+
+   <!-- <div class="p-10">
+    {% include temporada.html %}
+   </div> -->   
+
+  <div class="container teams-table d-none d-md-block"  id="home">  
+      <h1 class="teams-title m-10">PATROCINADORES</h1>
+      {% include sponsors.html %}
+    </div>
+
+
+
+ 
+
+
+
+
+
+
+  <div id="stars1"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <div class="d-none d-md-block">
+    {% include footer-transparent.html %}
+</div> 
+
+{% include navbar-league.html %}
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+  $(document).ready(function() {
+          // Transition effect for navbar 
+          $(window).scroll(function() {
+            // checks if window is scrolled more than 500px, adds/removes solid class
+            if($(this).scrollTop() > 30 ) { 
+                $('.top').addClass('{{page.background}}');
+            } else {
+                $('.top').removeClass('{{page.background}}');
+            }
+          });
+  });
+  </script>
+
+{% include g-analytics.html %}
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+      {% assign LIGA = site.categories.MVPD1024 | sort: "MVPS"
+      | reverse %}
+      {%- for post in LIGA limit:3 -%}
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card-round-mvp">
+       
+          <div class="card-mvp">
+            <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}">
+            <div class="card-mvp-title">
+              <p class="mvp-title">{{post.title | truncate: 12}}</p>
+              <p>{{post.team}}</p>
+            </div>
+          </div>
+          <div class="card-mvp-number">
+            <p class="mvp-number">{{post.MVPS}}</p>
+            <p>MVPS</p>
+          </div>
+         
+         
+          <div class="card-back">
+            <div class="card-mvp-team">
+              <img src="/assets/logos/{{post.team}}.png" alt="MVPS Team: {{post.team}}">
+            </div>
+            <div class="card-color-left {{post.team}}"> </div>  
+          </div>
+
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>

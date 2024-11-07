@@ -19,7 +19,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: rgba(255, 255, 255, .1);
+        background: rgba(0, 0, 0, 0.1);
         /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
         border-radius: 10px;
         border: 2px solid rgba(255, 255, 255, .5);
@@ -156,12 +156,12 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: rgba(255, 255, 255, .1);
+        background: rgba(0, 0, 0, 0.462);
         /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
         border-radius: 10px;
-        border: 2px solid rgba(255, 255, 255, .5);
-        border-right: 2px solid rgba(255, 255, 255, .2);
-        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        border: 2px solid rgba(61, 61, 61, 0.236);
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(10px);
 
@@ -175,31 +175,31 @@
         position: absolute;
         width: 60%;
         height: 60%;
-        top: -60;
-        left: -60;
+        top: -60px;
+        left: -60px;
         z-index: -800;
         transform: rotate(315deg);
 
         @media screen and (max-width: 1200px) {
-            top: -30;
+            top: -30px;
      
         }
 
         @media screen and (max-width: 768px) {
-            top: -30;
+            top: -30px;
            
         }
 
         @media screen and (max-width: 767px) {
-            top: -80;
+            top: -80px;
         
         }
         @media screen and (max-width: 472px) {
-            top: -45;
+            top: -45px;
            
         }
         @media screen and (max-width: 378px) {
-            top: -35;
+            top: -35px;
            
         }
     }
@@ -294,7 +294,7 @@
 
     .card-mvp-team {
         position: absolute;
-        right: -5;
+        right: -5px;
         top: -60%;
         filter: blur(5px);
         overflow: hidden;
