@@ -15,8 +15,8 @@ grupo: sur
 background: '#F16C38'
 cover: DFSPL
 ID: OBS
-puntos: 3
-pj: 5
+puntos: 5
+pj: 6
 
 #PARTIDO 1
 j1: RONDA 1
