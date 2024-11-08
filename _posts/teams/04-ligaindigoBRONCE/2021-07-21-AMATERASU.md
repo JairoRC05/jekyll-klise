@@ -16,8 +16,8 @@ abr: AOS
 background: '#F16C38'
 cover: DFSPL
 ID: ASU
-puntos: 8
-pj: 5
+puntos: 12
+pj: 7
 
 #PARTIDO 1
 j1: RONDA 1

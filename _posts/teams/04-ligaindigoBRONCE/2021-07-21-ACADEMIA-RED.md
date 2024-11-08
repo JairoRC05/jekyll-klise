@@ -9,7 +9,7 @@ date: 2020-08-29 10:29:20 +0700
 title: ACADEMIA RED
 ID: RED
 puntos: 3
-pj: 5
+pj: 7
 
 
 
