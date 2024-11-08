@@ -15,5 +15,6 @@ background: blue
 division: PLATA
 ligas: /liga-indigo-plata
 rondas: /rondas-plata
+mvps: /mvps-plata
 pag: LIGA
 ---

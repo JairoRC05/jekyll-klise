@@ -1,6 +1,6 @@
 ---
-layout: indigo-rondas
-permalink: /rondas-plata
+layout: mvps-indigo
+permalink: /mvps-plata
 categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: LIPL
@@ -15,5 +15,6 @@ background: blue
 division: PLATA
 ligas: /liga-indigo-plata
 rondas: /rondas-plata
+mvps: /mvps-plata
 pag: RONDAS
 ---

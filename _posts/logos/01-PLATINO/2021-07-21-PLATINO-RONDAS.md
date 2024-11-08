@@ -12,7 +12,6 @@ rango: 1
 gradiente: grRed
 background: red
 division: PLATINO
-
 ligas: /liga-indigo-platino
 rondas: /rondas-platino
 mvps: /mvps-platino

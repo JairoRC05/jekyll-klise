@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "1e88e0c835e08205",
+    "type": "split",
+    "children": [
+      {
+        "id": "f91477cc6b83bcfc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f117908ccc5c4247",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MVP/PLATA/2024-11-08-ZEILAZ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-11-08-ZEILAZ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6ca039392f8512aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "a32448e8eb7638b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f57040bc95983a3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "7938ca62c6e84ec1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "46e1541cf667b81d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "97d3351bc71b06ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a1586eff5953311",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cfee2eb1eb4b442",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "4eb3931d9a33db32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "928959e7483bf456",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "022f57de71927e54",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "f117908ccc5c4247",
+  "lastOpenFiles": [
+    "MVP/PLATA/2024-11-08-DARKRAI.md",
+    "MVP/PLATA/2024-11-08-ZEILAZ.md",
+    "MVP/PLATA/2024-11-08-.md",
+    "logos/03-PLATA/2021-07-21-MVPS-PLATA.md",
+    "logos/03-PLATA/2021-07-21-PLATA-RONDAS copy.md",
+    "logos/03-PLATA/2021-07-21-MVPS-ORO.md",
+    "logos/04. BRONCE/2021-07-21-BRONCE-RONDAS.md",
+    "logos/04. BRONCE/2021-07-21-LIGAINDIGOBRONCE.md",
+    "logos/04. BRONCE",
+    "logos/03-PLATA/2021-07-21-PLATA-RONDAS.md",
+    "logos/03-PLATA/2021-07-21-LIGAINDIGOPLATA.md",
+    "logos/03-PLATA",
+    "logos/02-ORO/2021-07-21-ORO-RONDAS.md",
+    "logos/02-ORO/2021-07-21-MVPS-ORO.md",
+    "logos/02-ORO/2021-07-21-LIGAINDIGOORO.md",
+    "logos/02-ORO",
+    "logos/01-PLATINO/2021-07-21-PLATINO-RONDAS.md",
+    "logos/01-PLATINO/2021-07-21-MVPS-PLATINO.md",
+    "logos/01-PLATINO/2021-07-21-LIGAINDIGOPLATINO.md",
+    "logos/01-PLATINO",
+    "logos/01-",
+    "Sin título.canvas",
+    "TEMPLATES/MVPS_PLATA.md",
+    "MVP/PLATA/2024-11-08-HALDIR.md",
+    "MVP/PLATA/2024-11-08-PABLO247.md",
+    "MVP/PLATA/2024-11-08-INGAC.md",
+    "MVP/PLATA/2024-11-08-XEDCI.md",
+    "MVP/PLATA/2024-11-08-U-1146.md",
+    "MVP/PLATA/2024-11-08-PECAS.md",
+    "Sin título 6.canvas",
+    "Sin título 5.canvas",
+    "Sin título 4.canvas",
+    "Sin título 3.canvas",
+    "Sin título 2.canvas",
+    "teams/03-ligaindigoPLATA/2021-07-21-HG-SALARIO-MINIMO.md",
+    "Sin título 1.canvas",
+    "MVP/2021-07-21-JIMMY.md",
+    "teams/03-ligaindigoPLATA/2024-04-04-AEP.md",
+    "TEMPLATES"
+  ]
+}
