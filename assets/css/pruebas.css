@@ -360,7 +360,8 @@
         }
 
         h2{
-            margin: 0 0 0 5px;
+            margin: 0 0 0 7px;
+            font-size: 16px;
 
         }
     }
@@ -417,10 +418,10 @@
         position: absolute;
         width: 60%;
         height: 70%;
-        top: -60px;
-        left: -100px;
+        top: -35px;
+        left: -45px;
         z-index: -800;
-        transform: rotate(90deg);
+        transform: rotate(135deg);
 
       
     }
