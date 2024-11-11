@@ -11,6 +11,7 @@ nivel: PLATINO
 rango: 1
 gradiente: grRed
 background: red
+background-h: red
 division: PLATINO
 ligas: /liga-indigo-platino
 rondas: /rondas-platino

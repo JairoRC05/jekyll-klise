@@ -4,7 +4,8 @@ permalink:
 categories: ICONS HOME 
 date: 2024-09-10 10:29:20 +0700
 name: LIGAS
-icon: fa-hat-wizard #fa-trophy
+icon: fa-trophy #fa-hat-wizard
+icon-h: fa-hat-wizard
 level: 4
 type: TOURNAMENT
 ---
