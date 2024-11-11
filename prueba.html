@@ -92,7 +92,7 @@ permalink: /prueba.html
     </div>
 </div> -->
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       {% assign LIGA = site.categories.MVPP1024 | sort: "MVPS"
       | reverse %}
@@ -124,7 +124,45 @@ permalink: /prueba.html
       </div>
       {%- endfor -%}
     </div>
+  </div> -->
+
+
+  <div class="container">
+    <div class="row">
+      {% assign norte = site.categories.PLATINO | sort: "puntos" | reverse %}
+      {%- for post in norte  -%}
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card-round-list">
+         
+          <div class="card-round-num">
+            <h6>#1</h6>
+          </div>
+
+          <div class="card-round-team">
+            <a href="{{post.url}}">
+              <img src="{{post.maincover}}" alt="" class="img-fluid">
+            </a>
+             
+             <h2>{{post.team | truncate: 21}}</h2>
+
+          </div>
+            
+          <div class="card-round-pts">
+            <h6>{{post.puntos}} pts</h6>
+          </div>
+        
+            <div class="card-back">
+              <div class="card-color-left {{post.ID}}"> </div>  
+            </div>
+
+        </div>
+      </div>
+      {%- endfor -%}
+      </div>
+    </div>
   </div>
+
+
 
   <div class="d-block d-md-none ">
     <nav class="navbar solid fixed-bottom navbar-light">

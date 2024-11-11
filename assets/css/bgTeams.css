@@ -254,31 +254,9 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 
 
 
-.TSR{
-  background: #f00a87;
-}
 
-.ZN{
-  background: #051f27;
-}
-.DUAT{
-  background: #982f34;
-}
-.WZP{
-  background: #1ba452;
-}
-.MEI{
-  background: #172936;
-}
-.TG{
-  background: #fcc944;
-}
-.TA{
-  background: #5eebff;
-}
-.TAE{
-  background: #9e8b50;
-}
+
+
 .DFSPL{
     background-image: url(/assets/backgrounds/platino.png);
     background-color: rgb(2, 2, 43);
@@ -537,7 +515,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 
 .TSR{
   background: #f00a87;
-  border-bottom: 13px solid #b2bf3c ;
+  border-bottom: 5px solid #b2bf3c ;
 }
 
 .ZN{
@@ -545,11 +523,11 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 }
 .DUAT{
   background: #982f34;
-  border-bottom: 13px solid #6e2226 ;
+  border-bottom: 5px solid #6e2226 ;
 }
 .WZP{
   background: #1ba452;
-  border-bottom: 13px solid #ffffff ;
+  border-bottom: 5px solid #ffffff ;
 }
 .MEI{
   background: #172936;
@@ -568,10 +546,10 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 }
 .SHA{
   background: #000;
-  border-bottom: 13px solid #daa35c ;
+  border-bottom: 5px solid #daa35c ;
 }
 .SM{
   background: #99110c;
-  border-bottom: 13px solid #daa35cab ;
+  border-bottom: 5px solid #daa35cab ;
 }
 
