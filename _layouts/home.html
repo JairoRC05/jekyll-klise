@@ -52,13 +52,13 @@ home: true
       
 			<li class="splide__slide">
         {% if post.liga == "PLATINO" %}
-         <div class="container-fluid red" style="border-radius: 10px;">
+         <div class="container-fluid grRed" style="border-radius: 10px;">
            {% elsif post.liga == "ORO" %}
            <div class="container-fluid grGreen" style="border-radius: 10px;">
            {% elsif post.liga == "PLATA" %}
-           <div class="container-fluid blue" style="border-radius: 10px;">
+           <div class="container-fluid grBlue" style="border-radius: 10px;">
            {% elsif post.liga == "BRONCE" %}
-           <div class="container-fluid blue" style="border-radius: 10px;">
+           <div class="container-fluid grPurple" style="border-radius: 10px;">
            {% else  %}
            <div class="container-fluid bg-black" style="border-radius: 10px;">
             {% endif %}

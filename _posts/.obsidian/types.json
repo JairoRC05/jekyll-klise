@@ -5,6 +5,7 @@
     "tags": "tags",
     "date": "text",
     "mvps": "text",
-    "rango": "number"
+    "rango": "number",
+    "hora": "text"
   }
 }
