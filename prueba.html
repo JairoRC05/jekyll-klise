@@ -92,9 +92,9 @@ permalink: /prueba.html
     </div>
 </div> -->
 
-  <!-- <div class="container">
+  <div class="container">
     <div class="row">
-      {% assign LIGA = site.categories.MVPP1024 | sort: "MVPS"
+      {% assign LIGA = site.categories.POINTS | sort: "MVPS"
       | reverse %}
       {%- for post in LIGA limit:6 -%}
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
@@ -108,8 +108,8 @@ permalink: /prueba.html
             </div>
           </div>
           <div class="card-mvp-number">
-            <p class="mvp-number">{{post.MVPS}}</p>
-            <p>MVPS</p>
+            <p class="mvp-number">{{post.POINTS}}</p>
+            <p>PUNTOS</p>
           </div>
          
          
@@ -124,12 +124,12 @@ permalink: /prueba.html
       </div>
       {%- endfor -%}
     </div>
-  </div> -->
+  </div> 
 
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
-      {% assign norte = site.categories.PLATINO | sort: "puntos" | reverse %}
+      {% assign norte = site.categories.POINTS | sort: "puntos" | reverse %}
       {%- for post in norte  -%}
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card-round-list">
@@ -160,7 +160,7 @@ permalink: /prueba.html
       {%- endfor -%}
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
