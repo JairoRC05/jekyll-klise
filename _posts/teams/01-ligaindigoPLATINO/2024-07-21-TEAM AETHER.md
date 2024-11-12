@@ -4,22 +4,21 @@ permalink: /team/:title.html
 categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT PLATINO
 liga: LIGA INDIGO
 maincover: /assets/logos/TAE.png
-puntosLJMAYO24:
+puntosLJMAYO24: 
 date: 2024-05-02 10:29:20 +0700
 title: TEAM AETHER
 route: /liga-indigo
-tag: johto042024
+tags:
+  - johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
-background: '#F16C38'
+background: "#F16C38"
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 13
-pj: 7
-
-
+puntos: 14
+pj: 8
 team1: TAE1
 team2: partido1
 team3: partido1
@@ -29,8 +28,6 @@ team6: TAE6
 team7: partido1
 team8: TAE8
 team9: TAE9
-
-#PARTIDO 2
 j2: RONDA 2
 maincover2: /assets/logos/TSR.png
 p2: TAE
@@ -40,7 +37,6 @@ pp2: TSR
 bg2: rock rock
 pt2: 0
 pj2: 0
-#PARTIDO 3
 j3: RONDA 3
 maincover3: /assets/logos/SSI.png
 p3: TAE
@@ -50,8 +46,6 @@ pp3: SSI
 bg3: rock rock
 pt3: 0
 pj3: 0
-
-#PARTIDO 7
 j7: RONDA 7
 maincover7: /assets/logos/DFS.png
 p7: TAE
@@ -61,5 +55,4 @@ pp7: SAP
 bg7: rock rock
 pt7: 0
 pj7: 0
-
 ---

@@ -11,45 +11,14 @@
             "id": "f117908ccc5c4247",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
-            }
-          },
-          {
-            "id": "f3255433315784e2",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "alinks/2024-10-31-CLASIF.md",
+                "file": "teams/02-ligaindigoORO/2024-07-21-RNT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-10-31-CLASIF"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "8a302eae32ef873e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3529556fdc61fce2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-01-MATCH1"
+              "title": "2024-07-21-RNT"
             }
           }
         ]
@@ -189,35 +158,35 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f3255433315784e2",
+  "active": "f117908ccc5c4247",
   "lastOpenFiles": [
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH3.md",
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH2.md",
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH3.md",
+    "teams/02-ligaindigoORO/2024-04-05-EK WHITE.md",
+    "teams/02-ligaindigoORO/2024-04-05-DFS-PEARL.md",
+    "teams/02-ligaindigoORO/2024-04-04-CELESTIAL-DRAGONS.md",
+    "teams/02-ligaindigoORO/2021-07-21-IMPERIO MEXA.md",
+    "teams/02-ligaindigoORO/2021-07-21-DFS-RUBY.md",
+    "teams/02-ligaindigoORO/2021-07-21-DFS-PLATINUM.md",
+    "teams/02-ligaindigoORO/2021-07-21-BNT.md",
+    "teams/02-ligaindigoORO/2021-07-21-AOS.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH4.md",
+    "teams/01-ligaindigoPLATINO/2024-07-21-TEAM AETHER.md",
     "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH1.md",
-    "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH4.md",
+    "teams/01-ligaindigoPLATINO/2024-04-05-ZERONOTE.md",
+    "teams/01-ligaindigoPLATINO/2024-04-05-TSR.md",
+    "teams/01-ligaindigoPLATINO/2024-04-05-FROSTBITE.md",
+    "teams/01-ligaindigoPLATINO/2021-07-21-WAZZAP.md",
+    "teams/01-ligaindigoPLATINO/2021-07-21-TEAM-GALAXY.md",
+    "teams/01-ligaindigoPLATINO/2021-07-21-TEAM-AQUA.md",
+    "teams/01-ligaindigoPLATINO/2021-07-21-GDI MEIKAI.md",
+    "teams/01-ligaindigoPLATINO/2021-07-21-GDI DUAT.md",
     "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH5.md",
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH1.md",
-    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH1.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH3.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH2.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH1.md",
-    "DRAGONFLIES GAMING.md",
+    "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH2.md",
     "Sin título.canvas",
-    "MVP/ORO/2021-07-21-ALEXT.md",
-    "MVP/ORO/2021-07-21-PROMDFK.md",
-    "MVP/ORO/2021-07-21-3MG.md",
-    "MVP/ORO/2021-07-21-QUIQUE.md",
-    "MVP/ORO/2021-07-21-BANJO.md",
-    "MVP/ORO/2021-07-21-FORTI.md",
-    "MVP/ORO/2021-07-21-ZULO.md",
-    "MVP/PLATINO/2021-07-21-SULFURO.md",
-    "MVP/PLATINO/2021-07-21-ZZZRAY.md",
-    "MVP/PLATINO/2021-07-21-TUGFAMON.md",
-    "MVP/PLATINO/2021-07-21-WILLYHR.md",
     "logos/04. BRONCE",
     "logos/03-PLATA",
     "logos/02-ORO",
