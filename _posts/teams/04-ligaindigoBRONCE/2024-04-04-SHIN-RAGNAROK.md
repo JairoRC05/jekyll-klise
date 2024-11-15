@@ -7,17 +7,17 @@ puntosLJMAYO24: 13
 date: 2020-08-29 10:29:20 +0700
 title: SHIN RAGNAROK
 route: /liga-johto
-tag: johto042024
+tags:
+  - johto042024
 color: black
 puntosLJ202404: 10
 grupo: norte
-background: '#F16C38'
+background: "#F16C38"
 cover: /assets/backCard.png
 team: SHIN RAGNAROK
 ID: SHIN
-puntos: 10
+puntos: 11
 pj: 7
-#PARTIDO 1
 j1: RONDA 1
 p1: AEP
 pp1: ZN
@@ -26,7 +26,6 @@ r1: 1
 rr1: 2
 pt1: 1
 pj1: 1
-#PARTIDO 2
 j2: RONDA 2
 p2: DFS DMD
 pp2: AEP
@@ -35,16 +34,14 @@ r2:
 rr2: 
 pt2: 0
 pj2: 0
-#PARTIDO 3
 j3: RONDA 3
 p3: AEP
 pp3: LB
 bg3: rock rock
 r3: 
-rr3:
+rr3: 
 pt3: 0
 pj3: 0
-#PARTIDO 4
 j4: RONDA 4
 p4: AEP
 pp4: KOD
@@ -53,7 +50,6 @@ r4: 3
 rr4: 0
 pt4: 3
 pj4: 1
-#PARTIDO 5
 j5: RONDA 5
 p5: AEP
 pp5: SPC
@@ -61,8 +57,7 @@ bg5: rock rock
 r5: 1
 rr5: 2
 pt5: 1
-pj5: 1 
-#PARTIDO 6
+pj5: 1
 j6: RONDA 6
 p6: AEP
 pp6: TB
@@ -71,54 +66,49 @@ r6:
 rr6: 
 pt6: 0
 pj6: 0
-#PARTIDO 7
 j7: RONDA 7
-p7:  DFS RUBY
+p7: DFS RUBY
 pp7: AEP
 bg7: rock rock
 r7: 
-rr7:  
+rr7: 
 pt7: 0
 pj7: 0
-#PARTIDO 8
 j8: RONDA 8
-p8:  AEP
+p8: AEP
 pp8: HG REGIOS
 bg8: rock rock
 rr8: 
 r8: 
 pt8: 0
 pj8: 0
-#PARTIDO 9
 j9: RONDA 9
-p9:  AEP
+p9: AEP
 pp9: DFS SAP
 bg9: rock rock
 r9: 0
 rr9: 3
 pt9: 0
 pj9: 1
-#PARTIDO 10
 j10: RONDA 10
 p10: AEP
 pp10: SV
 bg10: rock rock
 r10: 
-rr10:
+rr10: 
 pt10: 0
 pj10: 0
-#PARTIDO 11
 j11: RONDA 11
 p11: AEP
 pp11: STAR
 bg11: rock rock
 r11: 
-rr11:
+rr11: 
 pt11: 0
 pj11: 0
 stream: <i class="fa-brands fa-twitch text-white"></i>
 dia: 24
-hora: '22:10'
+hora: 22:10
 ---
 # t1: HG REGIOS
 # r1: 3-0

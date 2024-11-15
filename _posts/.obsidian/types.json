@@ -4,7 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "date": "text",
-    "mvps": "text",
+    "mvps": "number",
     "rango": "number",
     "hora": "text"
   }
