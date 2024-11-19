@@ -9,6 +9,7 @@ color: black
 background: '#5dI2A6'
 maincover: /assets/logos/LIGA-INDIGO.png
 nivel: ORO
+grupo: SUR
 rango: 2
 gradiente: grGreen
 background: green
