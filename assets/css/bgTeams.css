@@ -510,8 +510,16 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 }
 
 
+.bg-players{
+  background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(37,117,252,1) 96%);
+}
 
 
+.chl{
+  background: rgb(0,0,54);
+background: linear-gradient(180deg, rgba(0,0,54,1) 14%, rgba(0,0,168,1) 96%);
+}
 
 .TSR{
   background: #f00a87;

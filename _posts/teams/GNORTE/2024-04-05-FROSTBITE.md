@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIO ROCT PLATINO
+categories: SEP LIO ROCT PLATINO WHEEL A GNORTE
 liga: LIGA NARANJA
 maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
@@ -17,7 +17,7 @@ puntosLJ202404: 20
 grupo: sur
 background: "#F16C38"
 cover: /assets/backCard.png
-puntos: 10
+puntos: 0
 pj: 7
 maincover1: /assets/logos/DFS.png
 j1: RONDA 1

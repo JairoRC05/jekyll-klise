@@ -296,7 +296,7 @@
         position: absolute;
         right: -5px;
         top: -60%;
-        filter: blur(5px);
+        filter: blur(10px);
         overflow: hidden;
         z-index: -1000;
 

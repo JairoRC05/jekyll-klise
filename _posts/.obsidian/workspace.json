@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVP/BRONCE/2024-11-08-SANTANA.md",
+                "file": "teams/WHEEL/2021-07-21-AMATERASU.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-08-SANTANA"
+              "title": "2021-07-21-AMATERASU"
+            }
+          },
+          {
+            "id": "45cd3b8b1b5174ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-07-01-MATCH3"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -75,7 +89,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Buscar"
             }
           },
           {
@@ -173,34 +187,38 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5e999be4314cc14f",
+  "active": "45cd3b8b1b5174ae",
   "lastOpenFiles": [
-    "MVP/BRONCE/2024-11-08-FRANCK.md",
-    "MVP/BRONCE/2024-11-08-ANTUAN.md",
-    "MVP/BRONCE/2024-11-08-GUNDHAM.md",
-    "MVP/BRONCE/2024-11-08-MARQUEZ.md",
-    "MVP/BRONCE/2024-11-08-SANTANA.md",
-    "MVP/BRONCE/2024-11-08-SOYYASU.md",
-    "TEMPLATES/MVPS_BRONCE.md",
-    "CALENDARIOS/04-calendario-bronce/R9/2024-07-01-MATCH1.md",
-    "CALENDARIOS/04-calendario-bronce/R9/2024-07-01-MATCH2.md",
-    "CALENDARIOS/04-calendario-bronce/R9/2024-07-01-MATCH3.md",
-    "CALENDARIOS/04-calendario-bronce/R9/2024-07-01-MATCH4.md",
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH5.md",
-    "teams/04-ligaindigoBRONCE/2024-04-04-SHIN-RAGNAROK.md",
-    "teams/04-ligaindigoBRONCE/2021-07-21-RAPTORS.md",
-    "teams/04-ligaindigoBRONCE/2021-07-21-AD-ESPORTS.md",
-    "teams/04-ligaindigoBRONCE/2021-07-21-ACADEMIA-WHITE.md",
-    "CALENDARIOS/03-calendario-plata/R3/2024-07-01-MATCH5.md",
-    "CALENDARIOS/03-calendario-plata/LIGA INDIGO PLATA.md",
-    "CALENDARIOS/03-calendario-plata/R4/RONDA 4.md",
-    "CALENDARIOS/03-calendario-plata/R4/2024-07-01-MATCH5.md",
-    "CALENDARIOS/03-calendario-plata/R3/RONDA 3.md",
-    "CALENDARIOS/03-calendario-plata/R3/2024-07-01-MATCH1.md",
-    "CALENDARIOS/03-calendario-plata/R2/RONDA 2.md",
-    "CALENDARIOS/03-calendario-plata/R1/RONDA 1.md",
-    "CALENDARIOS/03-calendario-plata/R1/2024-07-01-MATCH1.md",
-    "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R5/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R5/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R5/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R5/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R5/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R3/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R3/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R9/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R8/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R8/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R8/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R8/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R8/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R7/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R7/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R7/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R7/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R7/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH2.md",
+    "teams/WHEEL",
+    "teams/GNORTE/WHEEL",
+    "teams/GSUR",
+    "teams/GNORTE",
     "Sin título.canvas",
     "logos/04. BRONCE",
     "logos/03-PLATA",

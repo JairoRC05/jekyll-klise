@@ -1,12 +1,12 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT ORO
-team: IMPERIO MEXA
-maincover: /assets/logos/OBS.png
+categories: SEP LIP ROCT ORO A GNORTE
+team: DFS PLATINUM
+maincover: /assets/logos/PLAT.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: IMPERIO MEXA
+title: DFS PLATINUM
 route: /liga-indigo
 tags:
   - johto042024
@@ -15,9 +15,9 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 cover: DFSPL
-ID: OBS
-puntos: 4
-pj: 7
+ID: PLAT
+puntos: 0
+pj: 8
 j1: RONDA 1
 vs1: FLYZ EZ
 IMG1: /assets/logos/FZ.png

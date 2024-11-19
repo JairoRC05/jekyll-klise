@@ -1,6 +1,6 @@
 ---
 layout: mvps-indigo
-permalink: /mvps-platino
+permalink: /mvps-norte
 categories: logos 
 date: 2020-08-29 10:29:20 +0700
 title: PLATINO
@@ -12,8 +12,8 @@ rango: 1
 gradiente: grRed
 background: red
 division: PLATINO
-ligas: /liga-indigo-platino
-rondas: /rondas-platino
-mvps: /mvps-platino
+ligas: /liga-indigo-norte
+rondas: /rondas-norte
+mvps: /mvps-norte
 pag: MVP
 ---

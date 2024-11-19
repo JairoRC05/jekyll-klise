@@ -1,23 +1,24 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT ORO
-team: DFS PLATINUM
-maincover: /assets/logos/PLAT.png
+categories: ROCT BRONCE A GNORTE
+team: AMATERASU
+maincover: /assets/logos/ASU.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: DFS PLATINUM
+title: AMATERASU
 route: /liga-indigo
 tags:
   - johto042024
 color: black
 puntosLJ202404: 12
 grupo: sur
+abr: AOS
 background: "#F16C38"
 cover: DFSPL
-ID: PLAT
-puntos: 13
-pj: 8
+ID: ASU
+puntos: 0
+pj: 7
 j1: RONDA 1
 vs1: FLYZ EZ
 IMG1: /assets/logos/FZ.png

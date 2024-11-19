@@ -1,11 +1,11 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT PLATA
-maincover: /assets/logos/AEP.png
+categories: ROCT BRONCE A GNORTE
+maincover: /assets/logos/SHIN.png
 puntosLJMAYO24: 13
 date: 2020-08-29 10:29:20 +0700
-title: ALEPH RAGNAROK
+title: SHIN RAGNAROK
 route: /liga-johto
 tags:
   - johto042024
@@ -14,10 +14,10 @@ puntosLJ202404: 10
 grupo: norte
 background: "#F16C38"
 cover: /assets/backCard.png
-team: ALEPH RAGNAROK
-ID: AEP
-puntos: 5
-pj: 8
+team: SHIN RAGNAROK
+ID: SHIN
+puntos: 0
+pj: 7
 j1: RONDA 1
 p1: AEP
 pp1: ZN

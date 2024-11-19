@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT PLATA
+categories: ROCT PLATA B GSUR
 team: HG SALARIO MINIMO
 maincover: /assets/logos/SM.png
 puntosLJMAYO24: 6
@@ -17,7 +17,7 @@ abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: SM
-puntos: 14
+puntos: 0
 pj: 8
 j1: RONDA 1
 vs1: FLYZ EZ

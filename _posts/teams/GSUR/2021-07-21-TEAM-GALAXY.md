@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: PLATINO SEP LIO ROCT
+categories: PLATINO SEP LIO ROCT B GSUR
 liga: LIGA JOHTO
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17
@@ -17,7 +17,7 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: TEAM GALAXY
 ID: TG
-puntos: 9
+puntos: 0
 pj: 6
 team1: TG1
 team2: partido4

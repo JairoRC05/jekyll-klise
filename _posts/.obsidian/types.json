@@ -6,6 +6,7 @@
     "date": "text",
     "mvps": "number",
     "rango": "number",
-    "hora": "text"
+    "hora": "text",
+    "POINTS": "number"
   }
 }

@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo
-permalink: /liga-indigo-oro
+permalink: /liga-indigo-sur
 categories: logos ligas LO
 date: 2020-08-29 10:29:20 +0700
 title: LIO
@@ -13,8 +13,8 @@ rango: 2
 gradiente: grGreen
 background: green
 division: ORO
-ligas: /liga-indigo-oro
-rondas: /rondas-oro
-mvps: /mvps-oro
+ligas: /liga-indigo-sur
+rondas: /rondas-sur
+mvps: /mvps-sur
 pag: LIGA
 ---
