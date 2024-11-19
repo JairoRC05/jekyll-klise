@@ -1,5 +1,5 @@
 ---
-layout: 
+layout:
 ---
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -8,14 +8,14 @@ layout:
 
 <body class="{{page.background}}">
 
-  <video class="fondocss" autoplay muted loop >
+  <!-- <video class="fondocss" autoplay muted loop >
     <source src="/assets/img/terror.mp4" type="video/mp4">
-    </video>
+    </video> -->
 
   {% include navbar-top.html %}
-    
-    
- 
+
+
+
 
   <div class="container-fluid banner" >
     <div class="container bannerPromo">
@@ -29,8 +29,8 @@ layout:
     </div>
   </div>
 
- 
-  
+
+
   {% if page.division == "PLATINO" %}
   {% include mvps-platino.html %}
   {% elsif page.division == "ORO" %}
@@ -47,16 +47,16 @@ layout:
 
    <!-- <div class="p-10">
     {% include temporada.html %}
-   </div> -->   
+   </div> -->
 
-  <div class="container teams-table d-none d-md-block"  id="home">  
+  <div class="container teams-table d-none d-md-block"  id="home">
       <h1 class="teams-title m-10">PATROCINADORES</h1>
       {% include sponsors.html %}
     </div>
 
 
 
- 
+
 
 
 
@@ -69,7 +69,7 @@ layout:
 
   <div class="d-none d-md-block">
     {% include footer-transparent.html %}
-</div> 
+</div>
 
 {% include navbar-league.html %}
 
@@ -82,10 +82,10 @@ layout:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
   $(document).ready(function() {
-          // Transition effect for navbar 
+          // Transition effect for navbar
           $(window).scroll(function() {
             // checks if window is scrolled more than 500px, adds/removes solid class
-            if($(this).scrollTop() > 30 ) { 
+            if($(this).scrollTop() > 30 ) {
                 $('.top').addClass('{{page.background}}');
             } else {
                 $('.top').removeClass('{{page.background}}');
