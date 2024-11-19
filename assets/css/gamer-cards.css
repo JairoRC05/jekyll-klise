@@ -68,7 +68,7 @@
 .gamer-desc {
     background: #fff;
     height: auto;
-    clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%);
+    /* clip-path: polygon(0 87%, 4% 100%, 100% 99%, 100% 1%, 0% 0%); */
     color: #220a3d;
     padding: 10px;
     padding-left: 15px;

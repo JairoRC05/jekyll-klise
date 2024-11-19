@@ -14,7 +14,7 @@
           {% elsif post.type == "TOURNAMENT" %}
           <a href="/control-center" >
           {% elsif post.type == "REGLAS" %}
-          <a href="/reglamento-oct" >
+          <a href="/reglamento-nov" >
             {% else %}
             {% endif %}
               <i class="fa-solid {{post.icon}}"></i>
@@ -27,7 +27,7 @@
           {% assign norte = site.categories.REGLAS | sort: "level"  %}
           {%- for post in norte  -%}
           <div class="item-bar">
-          <a href="/reglamento-oct" >
+          <a href="/reglamento-nov" >
               <i class="fa-solid {{post.icon}}"></i>
             <span>{{post.name}}</span>
             </a>
