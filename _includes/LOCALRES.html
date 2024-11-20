@@ -1,0 +1,45 @@
+{%- for post in norte -%}
+{% if post.out == "DES" %}
+<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+  <div class="container roundTeams text-white">
+    <div class="roundTeam">
+      <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+      <p>{{post.local | truncate: 8}}</p>
+    </div>
+    <div class="roundScore">
+      {% assign FECHAS = site.categories.FECHA %}
+      {%- for post in FECHAS-%}
+      <span>{{post.j1}}</span>
+      {%- endfor -%}
+      <p>DESCANSO</p>
+      {% assign FECHAS = site.categories.FECHA %}
+      {%- for post in FECHAS-%}
+      <span>{{post.f1}}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% else %} 
+ <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+  <div class="container roundTeams text-white">
+    <div class="roundTeam">
+      <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+      <p>{{post.local | truncate: 8}}</p>
+    </div>
+    <div class="roundScore">
+  
+      {% if post.r1 == 0 and post.r2 == 0 %}
+      <p>VS</p>
+      {% else %}
+      <p>{{post.r1}}-{{post.r2}}</p>
+    {% endif %}
+   
+    </div>
+    <div class="roundTeam">
+      <img src="/assets/logos/{{post.out}}.png" alt="">
+      <p>{{post.out |truncate: 8}}</p>
+    </div>
+  </div>
+</div>
+{% endif %}
+{%- endfor -%}
