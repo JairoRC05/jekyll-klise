@@ -9,11 +9,9 @@ permalink: /promos.html
 <body class="CHL">
 
 
-  <div class="container-fluid banner">
+  <div class="container-fluid banner-v">
     <div class="container bannerPromo">
-      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
-          </a>
+     
           <div class=" bannerText">
         <h1 class="indigo">LIGA INDIGO</h1>
         <span class="indigo"></span>
@@ -41,16 +39,16 @@ permalink: /promos.html
              <div class="container-fluid" style="border-radius: 10px;">
               {% endif %}
              <div class="container carousel-match-v">
-              <div class=" teams-table ">
+              <div class="roundScore teams-table mb-3">
                 <h3 class="teams-title">RONDA {{post.ronda}} | {{post.fecha}} | {{post.hora}}</h3>
-                        </div>
+              </div>
                 <div class="roundTeam">
-                  <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+                  <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid mb-3">
                
                 </div>
                 <div class="roundScore">
               
-                  <h2>VS</h2>
+                 <img src="/assets/logos/LIGA-INDIGO.png" alt="">
                 </div>
                 <div class="roundTeam">
                   <img src="/assets/logos/{{post.out}}.png" alt="" class="img-fluid">
@@ -58,7 +56,7 @@ permalink: /promos.html
                 </div>
                 <div class="roundScore">
    
-                  <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+                  <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"> <span>X_FORCE05</span></i></a>
                 </div>
               </div>
             </div>
@@ -128,7 +126,7 @@ permalink: /promos.html
             perPage: 1,
             gap: '.1em',
             trimSpace: false,
-            height: '25rem',
+            height: '30rem',
           },
         },
       });

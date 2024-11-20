@@ -517,8 +517,8 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(37,117,252,1) 96%);
 
 
 .chl{
-  background: rgb(0,0,54);
-background: linear-gradient(180deg, rgba(0,0,54,1) 14%, rgba(0,0,168,1) 96%);
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(5,4,54,1) 50%, rgba(0,0,185,1) 75%, rgba(13,74,238,1) 100%);
 }
 
 .TSR{

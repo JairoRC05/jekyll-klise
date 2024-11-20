@@ -276,6 +276,12 @@
         color: white;
        
 
+        img{
+    
+            @media screen and (max-width: 392px) {
+               width: 70px;
+            } 
+        }
         h1{
             font-size: 28px;
             margin: 0;
@@ -333,33 +339,25 @@
             i{
                 font-size: 32px;
                 margin-top: 5px;
+            
                 @media screen and (max-width: 576px) {
                     font-size: 18px;
                 } 
+
+                span{
+                    font-style: italic;
+                    font-weight: 700;
+                }
             }
 
-            @media screen and (max-width: 576px) {
-                font-size: 10px;
-            } 
+         
+
+        
         }
 
-        span{
-            color: yellow;
-            margin: 0;
-            font-size: 18px;
-            @media screen and (max-width: 576px) {
-                font-size: 12px;
-            }
-        }
+      
 
-        .small{
-            color: yellow;
-            margin: 0;
-            font-size: 12px;
-            @media screen and (max-width: 576px) {
-                font-size: 10px;
-            }
-        }
+   
     }
 }
 
