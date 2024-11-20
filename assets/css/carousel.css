@@ -217,6 +217,152 @@
 }
 
 
+
+
+
+.carousel-match-v {
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+
+    .roundTeam {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+
+        img {
+            width: 300px;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 992px) {
+                width: 200px;
+            }
+            @media screen and (max-width: 768px) {
+                width: 150px;
+            }
+            @media screen and (max-width: 576px) {
+                width: 170px;
+            }
+         
+            @media screen and (max-width: 392px) {
+                width: 250px;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-weight: bold;
+
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+
+    .roundScore {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+       
+
+        h1{
+            font-size: 28px;
+            margin: 0;
+        
+            @media screen and (max-width: 992px) {
+                font-size: 26px;
+            } 
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            } 
+            @media screen and (max-width: 576px) {
+                font-size: 12px;
+            } 
+            @media screen and (max-width: 575px) {
+                font-size: 10px;
+            } 
+            @media screen and (max-width: 392px) {
+                font-size: 7px;
+            } 
+        }
+
+
+
+        h2 {
+            font-size: 130px;
+            margin: 0 0 25px;
+            font-weight: bold;
+
+            @media screen and (max-width: 992px) {
+                font-size: 50px;
+                margin: 0;
+            }
+            @media screen and (max-width: 576px) {
+                font-size: 40px;
+                margin: 0;
+            }
+            
+        }
+
+
+        h3{
+            margin: 0;
+            @media screen and (max-width: 576px) {
+                font-size: 12px;
+            } 
+
+            @media screen and (max-width: 392px) {
+                font-size: 10px;
+            } 
+        }
+
+        a{
+
+            i{
+                font-size: 32px;
+                margin-top: 5px;
+                @media screen and (max-width: 576px) {
+                    font-size: 18px;
+                } 
+            }
+
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            } 
+        }
+
+        span{
+            color: yellow;
+            margin: 0;
+            font-size: 18px;
+            @media screen and (max-width: 576px) {
+                font-size: 12px;
+            }
+        }
+
+        .small{
+            color: yellow;
+            margin: 0;
+            font-size: 12px;
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+
+
 .carousel-score {
   width: 100%;
   height: 100%;
