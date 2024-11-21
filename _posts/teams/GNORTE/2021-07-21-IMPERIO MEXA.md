@@ -14,6 +14,6 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 ID: OBS
-puntos: 0
+puntos: 1
 pj: 7
 ---
