@@ -6,13 +6,17 @@
           {%- for post in norte  -%}
           <div class="item-bar">
             {% if post.type == "LIGA" %}
-         <a href="{{page.ligas}}">
+          <a href="{{page.ligas}}">
           {% elsif post.type == "MVP" %}
           <a href="{{page.mvps}}" >
           {% elsif post.type == "RONDAS" %}
           <a href="{{page.rondas}}" >
           {% elsif post.type == "TOURNAMENT" %}
-          <a href="/control-center" >
+            {% if page.grupo == "NORTE" %}
+            <a href="/liga-indigo-sur" >
+            {% else %}
+            <a href="/liga-indigo-norte" >
+            {% endif %}
           {% elsif post.type == "REGLAS" %}
           <a href="/reglamento-nov" >
             {% else %}
