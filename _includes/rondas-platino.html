@@ -1,12 +1,12 @@
 
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">
+      <div class="tab-pane fade " id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">
         <div class="row mt-4 team--last">
           {% assign norte = site.categories.LD1 | sort: "match" %}
           {% include LOCAL.html%}
         </div>
       </div>
-      <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
+      <div class="tab-pane fade show active" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
         <div class="row mt-4 team--last">
            {% assign norte = site.categories.LD2 | sort: "match" %}
           {% include OUT.html%} 
