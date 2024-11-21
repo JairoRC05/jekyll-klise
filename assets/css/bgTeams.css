@@ -532,6 +532,12 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0
   background: #00000070 !important;
 }
 
+
+.bg-cham-botttom{
+  background: #0d4aee;
+}
+
+
 .TSR{
   background: #f00a87;
   border-bottom: 5px solid #b2bf3c ;

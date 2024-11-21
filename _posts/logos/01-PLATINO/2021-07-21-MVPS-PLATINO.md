@@ -1,19 +1,21 @@
 ---
 layout: mvps-indigo
 permalink: /mvps-norte
-categories: logos 
+categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: PLATINO
 color: black
-background: '#5dI2A6'
+background: bg-cham
 maincover: /assets/logos/LIGA-INDIGO.png
 nivel: PLATINO
 rango: 1
 gradiente: grRed
-background: red
 division: PLATINO
 ligas: /liga-indigo-norte
 rondas: /rondas-norte
 mvps: /mvps-norte
 pag: MVP
+grupo: NORTE
+nav-bottom: bg-cham-botttom
+background-nav: bg-transparent
 ---

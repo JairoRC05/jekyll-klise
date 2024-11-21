@@ -17,4 +17,7 @@ ligas: /liga-indigo-sur
 rondas: /rondas-sur
 mvps: /mvps-sur
 pag: RONDAS
+background: bg-cham
+background-nav: bg-transparent
+nav-bottom: bg-cham-botttom
 ---

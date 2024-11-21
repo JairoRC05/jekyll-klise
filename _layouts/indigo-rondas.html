@@ -24,7 +24,7 @@ layout:
       </a>
       <div class="bannerText">
         <h1 class="indigo">LIGA INDIGO</h1>
-        <span class="indigo">RONDAS {{page.division}}</span>
+        <span class="indigo">GALAXIA {{page.grupo}}</span>
       </div>
     </div>
   </div>
@@ -129,9 +129,9 @@ layout:
           $(window).scroll(function() {
             // checks if window is scrolled more than 500px, adds/removes solid class
             if($(this).scrollTop() > 30 ) { 
-                $('.top').addClass('{{page.background}}');
+                $('.top').addClass('{{page.background-nav}}');
             } else {
-                $('.top').removeClass('{{page.background}}');
+                $('.top').removeClass('{{page.background-nav}}');
             }
           });
   });
