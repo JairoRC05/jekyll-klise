@@ -1,12 +1,12 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT BRONCE WHEEL B GSUR
-liga: LIGA INDIGO
-maincover: /assets/logos/RAP.png
-puntosLJMAYO24: 
+categories: SEP LIP ROCT PLATINO B GSUR
+team: SLEEPYHEADS
+maincover: /assets/logos/SPH.png
+puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700
-title: RAPTORS
+title: SLEEPYHEADS
 route: /liga-indigo
 tags:
   - johto042024
@@ -14,11 +14,8 @@ color: black
 puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
-cover: DFSRU
-team: RAPTORS
-ID: RAP
-abr: AMBER
-puntos: 0
-pj: 6
+ID: SPH
+puntos: 2
+pj: 7
 
 ---
