@@ -1,0 +1,14 @@
+---
+title: MRFUNHESMAN
+description: ""
+date: 2020-08-29 10:29:20 +0700
+preview: ""
+tags: 
+categories: MVPP1024 MVPSUR
+layout: 
+permalink: /entrenador/:title.html
+sex: male1
+tickets: 
+team: PDC
+MVPS: 1
+---
