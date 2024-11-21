@@ -17,7 +17,7 @@ abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: SM
-puntos: 0
+puntos: 2
 pj: 8
 j1: RONDA 1
 vs1: FLYZ EZ

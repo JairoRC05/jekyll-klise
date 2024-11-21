@@ -5,18 +5,17 @@ categories: logos ligas
 date: 2020-08-29 10:29:20 +0700
 title: PLATINO
 color: black
-background: '#5dI2A6'
+background: bg-cham
 maincover: /assets/logos/LIGA-INDIGO.png
 nivel: PLATINO
 grupo: NORTE
 rango: 1
-gradiente: grRed
-background: red
-background-h: red
+gradiente: 
+background-h: bg-cham
 division: PLATINO
 ligas: /liga-indigo-norte
 rondas: /rondas-norte
 mvps: /mvps-norte
 pag: LIGA
-
+background-nav: bg-transparent
 ---

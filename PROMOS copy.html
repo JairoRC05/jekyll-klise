@@ -1,0 +1,142 @@
+---
+layout:
+permalink: /STREAM.html
+---
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="CHL">
+
+
+  <div class="container-fluid banner-v">
+    <div class="container bannerPromo">
+     
+          <div class=" bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo"></span>
+    </div>
+  </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+    {% assign stream = site.categories.PROMO | sort: "fecha" %}
+    {%- for post in stream -%}
+    {% if post.out == "DES" %}
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+      <div class="container roundTeams text-white">
+        <div class="roundTeam">
+          <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+          <p>{{post.local | truncate: 8}}</p>
+        </div>
+        <div class="roundScore">
+          {% assign FECHAS = site.categories.FECHA %}
+          {%- for post in FECHAS-%}
+          <span>{{post.j1}}</span>
+          {%- endfor -%}
+          <p>DESCANSO</p>
+          {% assign FECHAS = site.categories.FECHA %}
+          {%- for post in FECHAS-%}
+          <span>{{post.f1}}</span>
+          {%- endfor -%}
+          <span>{{post.match}}</span>
+        </div>
+      </div>
+    </div>
+    {% else %} 
+     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <div class="container roundTeams text-white">
+        <div class="roundTeam">
+          <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+          <p>{{post.local | truncate: 8}}</p>
+        </div>
+        <div class="roundScore">
+          
+        <span>RONDA {{post.ronda}}</span>
+        <span>{{post.fecha}}</span>
+        <span>{{post.hora}}</span>
+        <span>{{post.match}}</span>
+        </div>
+        <div class="roundTeam">
+          <img src="/assets/logos/{{post.out}}.png" alt="">
+          <p>{{post.out |truncate: 8}}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {%- endfor -%}
+       
+  </div>
+
+</div>
+
+
+
+ <div class="container teams-table "  id="home">  
+  <h1 class="teams-title">PATROCINADORES</h1>
+  {% include sponsors.html %}
+</div>
+
+  </nav>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+    <script>
+      var splide = new Splide('.splide', {
+        type: 'loop',
+        autoplay: true,
+        interval: '7000',
+        perPage: 1,
+        pagination: false,
+        arrows: false,
+        rewind: true,
+        height: '50rem',
+        breakpoints: {
+          1200: {
+            perPage: 1,
+            gap: '.7rem',
+            height: '35rem',
+          },
+          992: {
+            perPage: 1,
+            gap: '.7rem',
+            height: '25rem',
+          },
+          768: {
+            perPage: 1,
+            gap: '.7rem',
+            height: '20rem',
+          },
+          576: {
+            perPage: 1,
+            gap: '.7rem',
+            height: '50rem',
+          },
+          480: {
+            perPage: 1,
+            gap: '.1em',
+            trimSpace: false,
+            height: '30rem',
+          },
+        },
+      });
+      splide.mount();
+    </script>
+
+
+
+</body>
+
+</html>
