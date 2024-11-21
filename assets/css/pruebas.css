@@ -163,8 +163,9 @@
         border-right: 2px solid rgba(0, 0, 0, 0.2);
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(10px);
-
+        -webkit-backdrop-filter: blur(2px);
+        filter: blur(1px);
+      
         z-index: -900;
         overflow: hidden;
     }
@@ -296,7 +297,8 @@
         position: absolute;
         right: -5px;
         top: -60%;
-        filter: blur(10px);
+        filter: blur(5px); 
+
         overflow: hidden;
         z-index: -1000;
 

@@ -1,7 +1,7 @@
-<!-- {% if page.pag == "LIGA" %}
+{% if page.pag == "LIGA" %}
 <div class="container">
   <div class="row">
-    {% assign LIGA = site.categories.MVPO1024 | sort: "MVPS"
+    {% assign LIGA = site.categories.MVPSUR| sort: "MVPS"
     | reverse %}    
     {%- for post in LIGA limit:3 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
@@ -36,7 +36,7 @@
 {% else %}
 <div class="container">
   <div class="row team--last">
-    {% assign LIGA = site.categories.MVPO1024 | sort: "MVPS"
+    {% assign LIGA = site.categories.MVPSUR | sort: "MVPS"
     | reverse %}
     {%- for post in LIGA limit:7 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
@@ -67,4 +67,4 @@
    {%- endfor -%}
    </div>
 </div>
-{% endif %} -->
+{% endif %} 
