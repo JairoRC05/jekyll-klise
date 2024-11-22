@@ -1,8 +1,7 @@
  {% if page.pag == "LIGA" %}
 <div class="container">
   <div class="row">
-    {% assign LIGA = site.categories.MVPNORTE | sort: "MVPS"
-    %}    
+    {% assign LIGA = site.categories.MVPNORTE | sort: "MVPS" | reverse %}    
     {%- for post in LIGA limit:3 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
@@ -36,8 +35,7 @@
 {% else %}
 <div class="container">
   <div class="row team--last">
-    {% assign LIGA = site.categories.MVPNORTE sort: "MVPS"
-    %}
+    {% assign LIGA = site.categories.MVPNORTE sort: "MVPS" | reverse %}
     {%- for post in LIGA limit:7 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
