@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: /entrenador/:title.html
-categories: MVPB1024 MVPNORTE
+categories: MVPB1024 MVPNORTE MVPS
 sex: male1
 tickets: 
 date: 2020-08-29 10:29:20 +0700

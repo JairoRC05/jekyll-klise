@@ -559,6 +559,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0
 }
 .TG{
   background: #fcc944;
+  border-bottom: 5px solid #f7be2e;
 }
 .TA{
   background: #5eebff;
@@ -568,6 +569,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0
 }
 .FTB{
   background: #00c8ff;
+  border-bottom: 5px solid #1d5c7b ;
 }
 .SHA{
   background: #000;
@@ -576,5 +578,59 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0
 .SM{
   background: #99110c;
   border-bottom: 5px solid #daa35cab ;
+}
+
+.EA{
+  background: #1a436f;
+  border-bottom: 5px solid #ffffffab ;
+}
+.POA{
+  background: #000000;
+  border-bottom: 5px solid #fd0101 ;
+}
+.SHIN{
+  background: #B3282D;
+  border-bottom: 5px solid #0E59A0 ;
+}
+
+.EKW{
+  background: #6077e6;
+  border-bottom: 5px solid #ffffff ;
+}
+
+.ASU{
+  background: #000000;
+  border-bottom: 5px solid #ffffff ;
+}
+
+.OBS{
+  background: rgb(0,104,71);
+background: linear-gradient(180deg, rgba(0,104,71,1) 10%, rgba(255,255,255,1) 18%, rgba(229,20,0,1) 36%);
+}
+
+.VOLT{
+  background: #ffe49e;
+  border-bottom: 5px solid #ffcb49 ;
+}
+.DARK{
+  background: #0c2aa2;
+  border-bottom: 5px solid #000000 ;
+}
+.PLAT{
+  background:#810100;
+  border-bottom: 5px solid #5b0505 ;
+}
+.E{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
+}
+
+.PDC{
+  background: #ecbb09;
+  border-bottom: 5px solid #c4342c ;
+}
+.SPH{
+  background: #27241d;
+  border-bottom: 5px solid #eae4d8 ;
 }
 

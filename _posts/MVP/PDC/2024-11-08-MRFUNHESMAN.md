@@ -4,7 +4,7 @@ description: ""
 date: 2020-08-29 10:29:20 +0700
 preview: ""
 tags: 
-categories: MVPP1024 MVPSUR
+categories: MVPP1024 MVPSUR MVPS
 layout: 
 permalink: /entrenador/:title.html
 sex: male1
