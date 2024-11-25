@@ -15,7 +15,7 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 ID: SPH
-puntos: 2
+puntos: 4
 pj: 7
 
 ---

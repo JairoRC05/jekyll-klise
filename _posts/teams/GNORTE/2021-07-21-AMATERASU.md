@@ -17,7 +17,7 @@ abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: ASU
-puntos: 1
+puntos: 3
 pj: 7
 
 ---

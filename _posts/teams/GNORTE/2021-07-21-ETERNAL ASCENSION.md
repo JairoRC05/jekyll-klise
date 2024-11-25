@@ -17,6 +17,6 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: ETERNAL ASCENSION
 ID: EA
-puntos: 2
+puntos: 4
 pj: 8
 ---

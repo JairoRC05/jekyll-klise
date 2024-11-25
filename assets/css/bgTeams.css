@@ -620,6 +620,10 @@ background: linear-gradient(180deg, rgba(0,104,71,1) 10%, rgba(255,255,255,1) 18
   background:#810100;
   border-bottom: 5px solid #5b0505 ;
 }
+.DMD{
+  background:#810100;
+  border-bottom: 5px solid #5b0505 ;
+}
 .E{
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
@@ -632,5 +636,14 @@ background: linear-gradient(180deg, rgba(0,104,71,1) 10%, rgba(255,255,255,1) 18
 .SPH{
   background: #27241d;
   border-bottom: 5px solid #eae4d8 ;
+}
+
+.RAP{
+  background: #F41413;
+  border-bottom: 5px solid #c90404 ;
+}
+.AEP{
+  background: rgb(56,35,4);
+  background: linear-gradient(180deg, rgba(56,35,4,1) 10%, rgba(183,131,21,1) 100%);
 }
 

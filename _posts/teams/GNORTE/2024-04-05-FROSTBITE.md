@@ -17,7 +17,7 @@ puntosLJ202404: 20
 grupo: sur
 background: "#F16C38"
 cover: /assets/backCard.png
-puntos: 2
+puntos: 4
 pj: 7
 
 ---
