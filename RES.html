@@ -22,22 +22,22 @@ permalink: /res-chl.html
 
  <div class="container teams-table">
  
-    <h1 class="teams-title">RESULTADOS RONDA 1</h1>
+    <h1 class="teams-title mb-5">RESULTADOS RONDA 2</h1>
 
-  <div class="row mt-4">
-    {% assign norte = site.categories.RES1 | sort: "match" %}
+  <div class="row">
+    {% assign norte = site.categories.RES2 | sort: "match" %}
     {% include LOCALRES.html%}
    
   </div>
  </div>
    
 
-<div class="img-div">
+<div class="img-div d-none">
   <img src="/assets/logos/LIGA-INDIGO.png" alt="">
 </div>
 
  <div class="container teams-table "  id="home">  
-  <h1 class="teams-title">PATROCINADORES</h1>
+  <h1 class="teams-title mt-5">PATROCINADORES</h1>
   {% include sponsors.html %}
 </div>
 

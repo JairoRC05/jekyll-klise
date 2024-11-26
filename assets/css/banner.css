@@ -570,7 +570,7 @@
       margin-left: 10px;
 
       h1 {
-        font-size: 90px;
+        font-size: 150px;
         margin: 0;
 
         @media screen and (max-width: 991px) {
