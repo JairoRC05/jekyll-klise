@@ -16,7 +16,6 @@ grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 0
+puntos: 2
 pj: 8
-
 ---
