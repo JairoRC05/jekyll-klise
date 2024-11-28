@@ -22,7 +22,7 @@ pj: 8
 rec1: one
 rec2: win
 rec3: win
-rec4: 
+rec4: loss
 rec5: 
 rec6: 
 rec7: 
