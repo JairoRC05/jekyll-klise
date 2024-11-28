@@ -647,3 +647,7 @@ background: linear-gradient(180deg, rgba(0,104,71,1) 10%, rgba(255,255,255,1) 18
   background: linear-gradient(180deg, rgba(56,35,4,1) 10%, rgba(183,131,21,1) 100%);
 }
 
+.ETERNAL{
+  background: rgb(26,67,111);
+background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
+}
