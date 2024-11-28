@@ -3,7 +3,7 @@
   <div class="row">
     {% assign LIGA = site.categories.MVPNORTE | sort: "MVPS"
     | reverse %}    
-    {%- for post in LIGA limit:3 -%}
+    {%- for post in LIGA limit:12 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
      
@@ -38,7 +38,7 @@
   <div class="row team--last">
     {% assign LIGA = site.categories.MVPNORTE | sort: "MVPS"
     | reverse %}
-    {%- for post in LIGA limit:7 -%}
+    {%- for post in LIGA -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
          <div class="card-mvp">

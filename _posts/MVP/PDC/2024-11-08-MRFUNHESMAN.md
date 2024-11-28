@@ -10,5 +10,5 @@ permalink: /entrenador/:title.html
 sex: male1
 tickets: 
 team: PDC
-MVPS: 1
+MVPS: 2
 ---

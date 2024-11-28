@@ -7,5 +7,5 @@ tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: WINTERFELL
 team: SM
-MVPS: 1
+MVPS: 2
 ---
