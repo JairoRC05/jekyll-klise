@@ -19,7 +19,7 @@ ID: SHIN
 puntos: 2
 pj: 7
 rec1: win
-rec2: 
+rec2: rea
 rec3: loss
 rec4: 
 rec5: 
