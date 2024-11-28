@@ -16,4 +16,13 @@ background: "#F16C38"
 ID: OBS
 puntos: 1
 pj: 7
+rec1: one
+rec2: loss
+rec3: loss
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---

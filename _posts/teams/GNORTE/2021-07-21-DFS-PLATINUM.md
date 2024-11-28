@@ -18,4 +18,13 @@ cover: DFSPL
 ID: PLAT
 puntos: 2
 pj: 8
+rec1: loss
+rec2: loss
+rec3: win
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---

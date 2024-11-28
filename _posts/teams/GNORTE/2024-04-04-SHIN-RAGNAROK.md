@@ -18,4 +18,13 @@ team: SHIN RAGNAROK
 ID: SHIN
 puntos: 2
 pj: 7
+rec1: win
+rec2: 
+rec3: loss
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---

@@ -19,4 +19,13 @@ team: POLLITOS DE COLORES
 ID: PDC
 puntos: 4
 pj: 8
+rec1: win
+rec2: des
+rec3: win
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---

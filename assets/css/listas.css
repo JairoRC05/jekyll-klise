@@ -359,7 +359,34 @@
             }
         }
 
-     
+        .card-round-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 0 0 0 7px;
+        
+            h2{
+               margin: 0;
+                font-size: 16px;
+    
+            }
+    
+          .card-round-record{
+           display: flex;
+           flex-direction: row;
+           justify-content: start;
+           align-items: start;
+            
+           .record{
+                margin-right: 2px;
+                background: #ffffff5e;
+                width: 7px !important; 
+                height: 7px !important;
+                border-radius: 50%;
+            }
+          }
+        }
     }
 
     .card-round-num{
@@ -421,4 +448,23 @@
 
       
     }
+}
+
+
+.win{
+background: green !important;
+}
+.loss{
+background: red !important;
+}
+.one{
+background:yellow !important;
+}
+
+.des{
+background:rgb(255, 0, 200) !important;
+}
+
+.rea{
+    background:rgb(122, 122, 122) !important;  
 }

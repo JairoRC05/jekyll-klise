@@ -19,4 +19,13 @@ cover: DFSPL
 ID: SM
 puntos: 5
 pj: 8
+rec1: one
+rec2: win
+rec3: win
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---

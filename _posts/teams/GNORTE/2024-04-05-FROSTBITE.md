@@ -19,6 +19,15 @@ background: "#F16C38"
 cover: /assets/backCard.png
 puntos: 5
 pj: 7
+rec1: win
+rec2: win
+rec3: loss
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---
 
 

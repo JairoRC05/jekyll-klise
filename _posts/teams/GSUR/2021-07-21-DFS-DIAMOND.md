@@ -20,5 +20,13 @@ team: DFS DIAMOND
 ID: DMD
 puntos: 0
 pj: 8
-
+rec1: rea
+rec2: loss
+rec3: loss
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
+rec9:
 ---
