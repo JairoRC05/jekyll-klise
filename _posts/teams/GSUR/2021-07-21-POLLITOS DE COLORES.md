@@ -3,7 +3,7 @@ layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT PLATA B GSUR
 liga: LIGA INDIGO
-maincover: /assets/logos/POA.png
+maincover: /assets/logos/PDC.png
 puntosLJMAYO24: 17
 date: 2020-08-29 10:29:20 +0700
 title: POLLITOS DE COLORES

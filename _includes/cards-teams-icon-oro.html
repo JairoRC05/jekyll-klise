@@ -1,5 +1,5 @@
 <div class="row">
-    {% assign LIGA = site.categories.GSUR sort: "puntos"
+    {% assign LIGA = site.categories.GSUR | sort: "puntos"
     | reverse %}
     {%- for post in LIGA limit:1 -%}
     <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2   mt-5">
