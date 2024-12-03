@@ -22,7 +22,7 @@ rec1: win
 rec2: rea
 rec3: loss
 rec4: win
-rec5: 
+rec5: loss
 rec6: 
 rec7: 
 rec8: 

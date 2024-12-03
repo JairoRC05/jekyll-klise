@@ -14,13 +14,13 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 ID: OBS
-puntos: 3
+puntos: 5
 pj: 7
 rec1: one
 rec2: loss
 rec3: loss
 rec4: win
-rec5: 
+rec5: win
 rec6: 
 rec7: 
 rec8: 
