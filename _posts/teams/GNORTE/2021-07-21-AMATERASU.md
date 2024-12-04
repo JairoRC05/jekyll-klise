@@ -17,14 +17,14 @@ abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: ASU
-puntos: 5
+puntos: 6
 pj: 7
 rec1: one
 rec2: win
 rec3: win
 rec4: loss
 rec5: one
-rec6: 
+rec6: loss
 rec7: 
 rec8: 
 rec9:

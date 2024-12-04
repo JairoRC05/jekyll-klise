@@ -17,14 +17,14 @@ background: ETERNAL
 cover: /assets/backCard.png
 team: ETERNAL ASCENSION
 ID: EA
-puntos: 5
+puntos: 6
 pj: 8
 rec1: win
 rec2: win
 rec3: one
 rec4: loss
 rec5: loss
-rec6: 
+rec6: win
 rec7: 
 rec8: 
 rec9: 
