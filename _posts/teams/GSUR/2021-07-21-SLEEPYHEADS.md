@@ -15,14 +15,14 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 ID: SPH
-puntos: 8
+puntos: 10
 pj: 7
 rec1: win
 rec2: win
 rec3: win
 rec4: win
 rec5: des
-rec6: 
+rec6: win
 rec7: 
 rec8: 
 rec9:

@@ -8,106 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f117908ccc5c4247",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CALENDARIOS/03-calendario-plata/R9/2024-07-01-MATCH2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-01-MATCH2"
-            }
-          },
-          {
             "id": "5e999be4314cc14f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teams/WHEEL/2021-07-21-AMATERASU.md",
+                "file": "teams/GSUR/2024-07-21-RNT-2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-AMATERASU"
-            }
-          },
-          {
-            "id": "45cd3b8b1b5174ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-01-MATCH3"
-            }
-          },
-          {
-            "id": "737baa125671f52c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP/DFS/DMD/2024-11-08-ZEILAZ.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2024-11-08-ZEILAZ"
-            }
-          },
-          {
-            "id": "f99322bbc18ae54c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CALENDARIOS/01-calendario-platino/R9/2024-07-01-MATCH4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-01-MATCH4"
-            }
-          },
-          {
-            "id": "66d4d2e93c6eed30",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-01-MATCH2"
-            }
-          },
-          {
-            "id": "1912619595c8f4da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "teams/GSUR/2021-07-21-ENIGMA.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2021-07-21-ENIGMA"
+              "title": "2024-07-21-RNT-2"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -244,34 +158,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "66d4d2e93c6eed30",
+  "active": "5e999be4314cc14f",
   "lastOpenFiles": [
-    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH3.md",
+    "teams/GSUR/2024-04-04-AEP.md",
+    "teams/GSUR/2021-07-21-TEAM-GALAXY.md",
+    "teams/GSUR/2021-07-21-SLEEPYHEADS.md",
+    "teams/GSUR/2021-07-21-RAPTORS.md",
+    "teams/GSUR/2021-07-21-POLLITOS DE COLORES.md",
+    "teams/GSUR/2021-07-21-HG-SALARIO-MINIMO.md",
+    "teams/GSUR/2021-07-21-ENIGMA.md",
+    "teams/GSUR/2021-07-21-DFS-DIAMOND.md",
     "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH1.md",
+    "MVP/ARCHIVO/2021-07-21-BERNY10.md",
+    "teams/GNORTE/2021-07-21-GDI DUAT.md",
+    "CALENDARIOS/01-calendario-platino/R4/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-platino/R2/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-platino/R7/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-platino/R7/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-platino/R7/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-platino/R7/2024-07-01-MATCH1.md",
     "CALENDARIOS/02-calendario-oro/R6/2024-07-01-MATCH5.md",
     "CALENDARIOS/01-calendario-platino/R6/2024-07-01-MATCH3.md",
     "CALENDARIOS/01-calendario-platino/R6/2024-07-01-MATCH5.md",
     "CALENDARIOS/01-calendario-platino/R6/2024-07-01-MATCH4.md",
     "CALENDARIOS/01-calendario-platino/R6/2024-07-01-MATCH2.md",
     "CALENDARIOS/01-calendario-platino/R6/2024-07-01-MATCH1.md",
-    "MVP/DFS/PLAT/2021-07-21-CHARMANBETH.md",
-    "MVP/DFS/PLAT/2021-07-21-ALEXT.md",
-    "MVP/DFS/PLAT/2021-07-21-CYPIX.md",
-    "MVP/RNT/VOLT/2024-11-08-LATIOS.md",
-    "MVP/RNT/VOLT/2024-11-08-ACE.md",
-    "MVP/RNT/VOLT/2024-11-08-CLAZO.md",
-    "MVP/RNT/VOLT/2024-11-08-XAPU.md",
-    "MVP/MEXA/2021-07-21-QUIQUE.md",
-    "MVP/MEXA/2021-07-21-ISMAEL.md",
-    "MVP/MEXA/2021-07-21-SOURIS.md",
-    "MVP/MEXA/2021-07-21-SALFIE.md",
-    "MVP/DUAT/2021-07-21-ORZIIE.md",
-    "MVP/DUAT/2021-07-21-MIRACLE.md",
-    "MVP/DUAT/2021-07-21-IBU.md",
-    "MVP/ASU/2024-11-08-PROF.SERNA.md",
-    "MVP/FTB/2021-07-21-DUBSITO.md",
-    "MVP/FTB/2021-07-21-MERGAS.md",
-    "MVP/FTB/2021-07-21-TUGFAMON.md",
     "MVP/ARCHIVO",
     "MVP/NORTE",
     "MVP/Nueva carpeta",

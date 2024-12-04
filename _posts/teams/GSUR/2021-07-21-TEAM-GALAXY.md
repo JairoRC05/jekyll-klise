@@ -24,7 +24,7 @@ rec2: win
 rec3: rea
 rec4: rea
 rec5: rea
-rec6: 
+rec6: rea
 rec7: 
 rec8: 
 rec9:
