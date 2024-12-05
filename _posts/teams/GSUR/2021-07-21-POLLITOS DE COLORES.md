@@ -17,7 +17,7 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: POLLITOS DE COLORES
 ID: PDC
-puntos: 4
+puntos: 5
 pj: 8
 rec1: win
 rec2: des
