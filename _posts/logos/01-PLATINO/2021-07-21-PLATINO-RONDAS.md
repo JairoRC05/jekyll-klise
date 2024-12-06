@@ -1,5 +1,5 @@
 ---
-layout: indigo-rondas
+layout: indigo-rondas-nieve
 permalink: /rondas-norte
 categories: logos
 date: 2020-08-29 10:29:20 +0700
@@ -16,6 +16,6 @@ rondas: /rondas-norte
 mvps: /mvps-norte
 pag: RONDAS
 grupo: NORTE
-nav-bottom: bg-cham-botttom
+nav-bottom: bg-cham-botttom-ice
 background-nav: bg-transparent
 ---

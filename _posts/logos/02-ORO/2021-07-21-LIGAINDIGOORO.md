@@ -19,5 +19,5 @@ mvps: /mvps-sur
 pag: LIGA
 background: bg-cham
 background-nav: bg-transparent
-nav-bottom: bg-cham-botttom
+nav-bottom: bg-cham-botttom-ice
 ---

@@ -9,7 +9,7 @@
       <div class="d-block d-md-none">
         {% assign norte = site.categories.TOP | sort: "level"  %}
         {%- for post in norte | limit:1  -%}
-        <a href="/" class="text-white"><i class="fa-solid {{post.icon}}"></i> </a>
+        <a href="/" class="text-white"><i class="ti {{post.icon-n}}"></i> </a>
         {%- endfor -%}
         
       

@@ -1,5 +1,5 @@
 ---
-layout: mvps-indigo
+layout: mvps-indigo-nieve
 permalink: /mvps-norte
 categories: logos
 date: 2020-08-29 10:29:20 +0700
@@ -16,6 +16,6 @@ rondas: /rondas-norte
 mvps: /mvps-norte
 pag: MVP
 grupo: NORTE
-nav-bottom: bg-cham-botttom
+nav-bottom: bg-cham-botttom-ice
 background-nav: bg-transparent
 ---

@@ -1,5 +1,5 @@
 ---
-layout: indigo-rondas
+layout: indigo-rondas-nieve
 permalink: /rondas-sur
 categories: logos
 date: 2020-08-29 10:29:20 +0700
@@ -17,6 +17,6 @@ rondas: /rondas-sur
 mvps: /mvps-sur
 pag: RONDAS
 background-nav: bg-transparent
-nav-bottom: bg-cham-botttom
+nav-bottom: bg-cham-botttom-ice
 grupo: SUR
 ---
