@@ -97,12 +97,15 @@
 
 
   .teams-title {
-    background: rgb(0, 0, 0);
+    /* background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(18, 4, 139, 0) 10%, rgb(0, 0, 0, 0.40) 20%, rgba(0, 0, 0, 0.40) 80%, rgba(18, 4, 139, 0) 90%);
-    font-style: italic;
+   */ font-style: italic; 
+   background: rgb(255,255,255);
+   background: linear-gradient(90deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 90%);
     font-weight: 700;
     padding-bottom: 5px;
-    color: rgb(255, 255, 255);
+    color: #004E8F;
+
 
 
     @media screen and (max-width: 991px) {

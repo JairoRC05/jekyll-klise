@@ -1,0 +1,39 @@
+#zonaNieve{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .copo{
+    position: absolute;
+    background: white;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    animation: nevar 10s infinite linear;
+  }
+  
+  @keyframes nevar{
+    0%{
+      opacity: 0;
+    }
+    
+    25%{
+      opacity: 1;
+    }
+    
+    100%{
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  
+
+
+
+  .ice-league{
+    background: rgb(114,198,239);
+background: linear-gradient(0deg, rgba(114,198,239,1) 10%, rgba(0,78,143,1) 100%);
+  }
