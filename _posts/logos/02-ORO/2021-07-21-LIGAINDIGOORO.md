@@ -1,5 +1,5 @@
 ---
-layout: liga-indigo
+layout: liga-indigo-nieve
 permalink: /liga-indigo-sur
 categories: logos ligas LO
 date: 2020-08-29 10:29:20 +0700
