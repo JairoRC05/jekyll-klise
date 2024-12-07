@@ -24,7 +24,7 @@ rec3: loss
 rec4: win
 rec5: loss
 rec6: win
-rec7: 
+rec7: loss
 rec8: 
 rec9:
 ---

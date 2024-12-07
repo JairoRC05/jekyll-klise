@@ -16,7 +16,7 @@ grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 6
+puntos: 8
 pj: 8
 rec1: loss
 rec2: loss
@@ -24,7 +24,7 @@ rec3: win
 rec4: loss
 rec5: win
 rec6: win
-rec7: 
+rec7: win
 rec8: 
 rec9:
 ---
