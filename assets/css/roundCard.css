@@ -174,7 +174,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background: #0000005b;
+    /* background: #0000005b; */
+    background: url(/assets/mis/ice-mask.png);
+    background-size: cover;
 
 
     .roundTeam {
