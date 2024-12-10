@@ -18,15 +18,15 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: DFS DIAMOND
 ID: DMD
-puntos: 2
+puntos: 5
 pj: 8
 rec1: rea
 rec2: loss
 rec3: loss
 rec4: des
 rec5: rea
-rec6: rea
-rec7: rea
-rec8: 
+rec6: win
+rec7: one
+rec8: win
 rec9:
 ---

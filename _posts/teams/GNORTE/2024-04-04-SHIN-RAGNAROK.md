@@ -10,7 +10,7 @@ route: /liga-johto
 tags:
   - johto042024
 color: black
-puntosLJ202404: 10
+puntosLJ202404: 9
 grupo: norte
 background: "#F16C38"
 cover: /assets/backCard.png
@@ -25,6 +25,6 @@ rec4: win
 rec5: loss
 rec6: win
 rec7: loss
-rec8: 
+rec8: win
 rec9:
 ---

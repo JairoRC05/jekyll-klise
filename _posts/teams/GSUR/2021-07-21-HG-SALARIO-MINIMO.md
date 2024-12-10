@@ -17,15 +17,15 @@ abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: SM
-puntos: 5
+puntos: 9
 pj: 8
 rec1: one
 rec2: win
 rec3: win
 rec4: loss
-rec5: rea
+rec5: win
 rec6: loss
 rec7: win
-rec8: 
+rec8: des
 rec9:
 ---
