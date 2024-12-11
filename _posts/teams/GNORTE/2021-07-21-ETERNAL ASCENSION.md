@@ -27,6 +27,6 @@ rec5: loss
 rec6: win
 rec7: loss
 rec8: loss
-rec9: 
+rec9: loss
 team2: ETERNAL ASCENSION
 ---

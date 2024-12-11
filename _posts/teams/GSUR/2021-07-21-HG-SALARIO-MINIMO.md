@@ -11,13 +11,13 @@ route: /liga-indigo
 tags:
   - johto042024
 color: black
-puntosLJ202404: 12
+puntosLJ202404: 11
 grupo: sur
 abr: AOS
 background: "#F16C38"
 cover: DFSPL
 ID: SM
-puntos: 9
+puntos: 11
 pj: 8
 rec1: one
 rec2: win
@@ -27,5 +27,5 @@ rec5: win
 rec6: loss
 rec7: win
 rec8: des
-rec9:
+rec9: win
 ---
