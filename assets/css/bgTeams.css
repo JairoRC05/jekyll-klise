@@ -654,3 +654,25 @@ background: linear-gradient(180deg, rgba(0,104,71,1) 10%, rgba(255,255,255,1) 18
   background: rgb(26,67,111);
 background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
 }
+
+
+.hielo{
+  background-image: url(/assets/backgrounds/hielo-back.png);
+  background-color: rgb(2, 2, 43);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.exo-style{
+
+  color: #ffffff; 
+  background-image: linear-gradient(180deg, #ffffff 48%, #D7D1EB 60%, #ffffff 84%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-style: italic;
+  font-weight: 900 !important;
+ 
+}
