@@ -226,11 +226,13 @@
             color: rgb(51, 0, 255);
             margin: 0;
             font-weight: 800;
-            font-size: 18px;
+            font-size: 14px;
             @media screen and (max-width: 576px) {
-                font-size: 10px;
+                font-size: 8px;
             }
-        }
+        } 
+     
+    
 
         .small{
             color: yellow;
