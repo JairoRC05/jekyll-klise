@@ -68,66 +68,60 @@
         {%- endfor -%}
     </div>
     <div class="row text-center mt-5">
-      <h4><b>SEMIFINAL</b></h4>
+      <h4 class="text-white"><b>SEMIFINAL</b></h4>
       {% assign norte = site.categories.SF | sort: "seed"  %}
       {%- for post in norte  -%}
-      <div class="{{post.offset}} col-12 col-xl-3 ">
- 
-        <div class="container cardTournament">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 {{post.offset}}">
+        <div class="container roundTeams text-white">
           <div class="roundTeam">
-            <img src="{{post.maincover1}}" alt="" >
-            <p >{{post.p1 | truncate: 8}}</p>
+            <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+            <p>{{post.local | truncate: 8}}</p>
           </div>
           <div class="roundScore">
-            <span>LLAVE {{post.raiz}}</span>
-          {% if post.r1 == 0 and post.rr1 == 0 %}
-            <p>VS</p>
-            {% else %}
-            <p>{{post.r1}} - {{post.rr1}}</p>
-          {% endif %}
-          {% if post.stream == "SI" and post.red == "twitch" %}
-          <a href="{{post.link}}" target="_blank" class="btn-tournament"><i class="fa-brands fa-twitch"></i></a>
-          {% elsif post.stream == "SI" and post.red == "tiktok"  %}      
-          <a href="{{post.link}}" target="_blank" class="btn-tournament"><i class="fa-brands fa-tiktok"></i></a>
-          {% else %}
-        {% endif %}
+           
+            <span>{{post.j1}}</span>
+         
+            {% if post.r1 == 0 and post.r2 == 0 %}
+               <p>VS</p>
+               {% else %}
+               <p>{{post.r1}}-{{post.r2}}</p>
+            {% endif %}
+            <span class="hours">{{post.fecha}} | {{post.hora}}</span>
+        
           </div>
           <div class="roundTeam">
-            <img src="{{post.maincover11}}" alt="">
-            <p>{{post.pp1 |truncate: 8}}</p>
+            <img src="/assets/logos/{{post.out}}.png" alt="">
+            <p>{{post.out |truncate: 8}}</p>
           </div>
         </div>
       </div>
         {%- endfor -%}
     </div>
-    <div class="row text-center mt-5">
-      <h4><b>GRAN FINAL</b></h4>
+    <div class="row text-center mt-5 team--last">
+      <h4 class="text-white"><b>GRAN FINAL</b></h4>
       {% assign norte = site.categories.GF | sort: "seed"  %}
       {%- for post in norte  -%}
-      <div class="{{post.offset}} col-12 col-xl-4 ">
- 
-        <div class="container cardTournament">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 {{post.offset}}">
+        <div class="container roundTeams text-white">
           <div class="roundTeam">
-            <img src="{{post.maincover1}}" alt="" >
-            <p >{{post.p1 | truncate: 8}}</p>
+            <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+            <p>{{post.local | truncate: 8}}</p>
           </div>
           <div class="roundScore">
-            <span>LLAVE {{post.raiz}}</span>
-          {% if post.r1 == 0 and post.rr1 == 0 %}
-            <p>VS</p>
-            {% else %}
-            <p>{{post.r1}} - {{post.rr1}}</p>
-          {% endif %}
-          {% if post.stream == "SI" and post.red == "twitch" %}
-          <a href="{{post.link}}" target="_blank" class="btn-tournament"><i class="fa-brands fa-twitch"></i></a>
-          {% elsif post.stream == "SI" and post.red == "tiktok"  %}      
-          <a href="{{post.link}}" target="_blank" class="btn-tournament"><i class="fa-brands fa-tiktok"></i></a>
-          {% else %}
-        {% endif %}
+           
+            <span>{{post.j1}}</span>
+         
+            {% if post.r1 == 0 and post.r2 == 0 %}
+               <p>VS</p>
+               {% else %}
+               <p>{{post.r1}}-{{post.r2}}</p>
+            {% endif %}
+            <span class="hours">{{post.fecha}} | {{post.hora}}</span>
+        
           </div>
           <div class="roundTeam">
-            <img src="{{post.maincover11}}" alt="">
-            <p>{{post.pp1 |truncate: 8}}</p>
+            <img src="/assets/logos/{{post.out}}.png" alt="">
+            <p>{{post.out |truncate: 8}}</p>
           </div>
         </div>
       </div>
