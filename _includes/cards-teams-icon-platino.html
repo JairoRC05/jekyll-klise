@@ -320,6 +320,71 @@
     </div>
     {%- endfor -%}
 
+    {% assign LIGA = site.categories.GNORTE | sort: "puntos"
+    | reverse %}
+    {%- for post in LIGA limit:1 offset:10-%}
+    <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2  mt-5">
+      <section>
+        <div class="card__section" style="--color: hsl(44.71deg 100% 50% / 64%)">
+          <div class="card__border"></div>
+          <div class="card__border-line"></div>
+          <div class="card__inner">
+            <div class="card__img">
+              <div class="img__team">
+                <p class="number" style="--color: hsl(0, 0%, 100%);">11</p>
+              </div>
+              <div class="img__athlete">
+                <a href="{{post.url}}">
+                  <img src="/assets/logos/{{post.ID}}.png" alt="{{post.title}}">
+                 </a>
+               
+              </div>
+            </div>
+            <div class="card__text">
+              <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">{{post.ID}}</div>
+              <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.title | truncate: 12}}</h1>
+              <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    {%- endfor -%}
+
+
+    {% assign LIGA = site.categories.GNORTE | sort: "puntos"
+    | reverse %}
+    {%- for post in LIGA limit:1 offset:11-%}
+    <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2  mt-5">
+      <section>
+        <div class="card__section" style="--color: hsl(44.71deg 100% 50% / 64%)">
+          <div class="card__border"></div>
+          <div class="card__border-line"></div>
+          <div class="card__inner">
+            <div class="card__img">
+              <div class="img__team">
+                <p class="number" style="--color: hsl(0, 0%, 100%);">12</p>
+              </div>
+              <div class="img__athlete">
+                <a href="{{post.url}}">
+                  <img src="/assets/logos/{{post.ID}}.png" alt="{{post.title}}">
+                 </a>
+               
+              </div>
+            </div>
+            <div class="card__text">
+              <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">{{post.ID}}</div>
+              <h1 class="name" style="--color: hsl(0, 0%, 100%);">{{post.title | truncate: 12}}</h1>
+              <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    {%- endfor -%}
+
   
 
 
