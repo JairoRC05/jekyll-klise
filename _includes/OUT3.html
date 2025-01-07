@@ -40,6 +40,9 @@
     {%- for post in FECHAS-%}
     <span>{{post.f6}}</span>
     {%- endfor -%}
+    {% if post.stream == "SI" %}
+    <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+  {% endif %}
     </div>
     <div class="roundTeam">
       <img src="/assets/logos/{{post.local}}.png" alt="">

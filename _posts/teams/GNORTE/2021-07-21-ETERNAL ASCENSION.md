@@ -1,5 +1,5 @@
 ---
-layout: season-team-e
+layout: 
 permalink: /team/:title.html
 categories: ROCT PLATA A GNORTE
 liga: LIGA INDIGO

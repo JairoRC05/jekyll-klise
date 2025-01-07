@@ -15,7 +15,7 @@ grupo: sur
 background: "#F16C38"
 cover: /assets/backCard.png
 team: RNT DIAMANTE
-ID: DIAMANTE
+ID: DMD
 puntos: 0
 pj: 7
 rec1: one
