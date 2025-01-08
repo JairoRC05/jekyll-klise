@@ -174,8 +174,8 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    /* background: #0000005b; */
-    background: url(/assets/mis/ice-mask.png);
+     background: #0000005b;
+    /* background: url(/assets/mis/ice-mask.png); */
     background-size: cover;
 
 
@@ -224,6 +224,7 @@
 
         span{
             color: rgb(51, 0, 255);
+            color: yellow;
             margin: 0;
             font-weight: 800;
             font-size: 14px;

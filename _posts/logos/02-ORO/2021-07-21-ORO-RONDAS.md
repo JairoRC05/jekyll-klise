@@ -1,5 +1,5 @@
 ---
-layout: indigo-rondas-nieve
+layout: indigo-rondas
 permalink: /rondas-sur
 categories: logos
 date: 2020-08-29 10:29:20 +0700

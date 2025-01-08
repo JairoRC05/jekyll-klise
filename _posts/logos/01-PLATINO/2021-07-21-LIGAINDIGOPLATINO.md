@@ -1,5 +1,5 @@
 ---
-layout: liga-indigo-nieve
+layout: liga-indigo
 permalink: /liga-indigo-norte
 categories: logos ligas
 date: 2020-08-29 10:29:20 +0700

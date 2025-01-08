@@ -1,6 +1,5 @@
 ---
-layout: indigo-rondas-nieve
-permalink: /rondas-norte
+layout: indigo-rondas
 categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: LIGA INDIGO | RONDAS NORTE
