@@ -13,7 +13,7 @@ rango: 2
 gradiente: grGreen
 division: ORO
 ligas: /liga-indigo-sur
-rondas: /rondas-sur
+rondas: /liga-indigo-mvps
 mvps: /mvps-sur
 pag: RONDAS
 background-nav: bg-transparent

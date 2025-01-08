@@ -1,6 +1,6 @@
 ---
-layout: mvps-indigo-nieve
-permalink: /mvps-norte
+layout: mvps-indigo
+permalink: /liga-indigo-mvps
 categories: logos
 date: 2020-08-29 10:29:20 +0700
 title: LIGA INDIGO | MVPS NORTE
@@ -13,7 +13,7 @@ gradiente: grRed
 division: PLATINO
 ligas: /liga-indigo-norte
 rondas: /rondas-norte
-mvps: /mvps-norte
+mvps: /liga-indigo-mvps
 pag: MVP
 grupo: NORTE
 nav-bottom: bg-league-in

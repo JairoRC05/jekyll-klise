@@ -13,7 +13,7 @@ gradiente: grRed
 division: PLATINO
 ligas: /liga-indigo-norte
 rondas: /rondas-norte
-mvps: /mvps-norte
+mvps: liga-indigo-mvps
 pag: RONDAS
 grupo: NORTE
 nav-bottom: bg-league-in

@@ -14,7 +14,7 @@ background-h: bg-cham
 division: PLATINO
 ligas: /liga-indigo-norte
 rondas: /rondas-norte
-mvps: /mvps-norte
+mvps: /liga-indigo-mvps
 pag: LIGA
 background: bg-cham
 background-nav: bg-transparent
