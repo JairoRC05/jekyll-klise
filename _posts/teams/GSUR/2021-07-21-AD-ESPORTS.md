@@ -17,7 +17,7 @@ abr: AOS
 background: "#F16C38"
 cover: AD
 ID: AD
-puntos: 0
+puntos: 1
 pj: 8
 j1: RONDA 1
 vs1: FLYZ EZ

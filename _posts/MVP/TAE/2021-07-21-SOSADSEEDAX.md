@@ -1,14 +1,12 @@
 ---
 layout: 
 permalink: /team/:title.html
-categories: MVPLI MVPD1024 POINTS MVPNORTE MVPS
+categories: MVPLI MVPD1024 MVPSONLY
 maincover: /assets/avatars/male1.webp
 tickets: 2
 date: 2020-08-29 10:29:20 +0700
-title: ORZIE
-team: DUAT
-MVPS: 7
+title: SOSADSEEDAX
+team: TAE
+MVPS: 1
 sex: male1
-POINTS: "90"
 ---
-GDI 2LUGAR - 80
