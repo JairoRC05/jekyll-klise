@@ -17,6 +17,6 @@ rondas: /rondas-sur
 mvps: /mvps-sur
 pag: RONDAS
 background-nav: bg-transparent
-nav-bottom: bg-cham-botttom-ice
+nav-bottom: bg-league-in
 grupo: SUR
 ---

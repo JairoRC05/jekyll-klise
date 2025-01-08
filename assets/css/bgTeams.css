@@ -676,3 +676,7 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
   font-weight: 900 !important;
  
 }
+
+.bg-league-in{
+  background: #0d48ec !important;
+}

@@ -156,8 +156,8 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: rgba(0, 0, 0, 0.462); 
-        box-shadow: 0 25px 45px rgba(0, 0, 0, .5); 
+        background: rgba(0, 0, 0, 0.462);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
         /* background: url(/assets/mis/ice-mask-team.png); */
         background-size: cover;
         border-radius: 10px;
@@ -167,7 +167,7 @@
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
         filter: blur(1px);
-      
+
         z-index: -900;
         overflow: hidden;
     }
@@ -185,25 +185,25 @@
 
         @media screen and (max-width: 1200px) {
             top: -30px;
-     
+
         }
 
         @media screen and (max-width: 768px) {
             top: -30px;
-           
+
         }
 
         @media screen and (max-width: 767px) {
             top: -80px;
-        
+
         }
         @media screen and (max-width: 472px) {
             top: -45px;
-           
+
         }
         @media screen and (max-width: 378px) {
             top: -35px;
-           
+
         }
     }
 
@@ -234,7 +234,7 @@
                 font-size: 24px;
                 font-weight: bold;
 
-                
+
                 @media screen and (max-width: 1200px) {
                     font-size: 20px;
                 }
@@ -299,18 +299,18 @@
         position: absolute;
         right: 1%;
         top: 0;
-        filter: blur(10px) contrast(200%) ; 
+        filter: blur(10px) contrast(200%) ;
 
         overflow: hidden;
         z-index: -1000;
 
-     
-        
+
+
         @media screen and (max-width: 472px) {
           right: 2%;
           top: -10px;
         }
-      
+
 
 
         img {
@@ -353,11 +353,11 @@
         a{
             img {
                 width: 60px;
-    
+
                 @media screen and (max-width: 472px) {
                     width: 40px;
                 }
-    
+
             }
         }
 
@@ -367,23 +367,23 @@
         justify-content: start;
         align-items: start;
         margin: 0 0 0 7px;
-        
+
             h2{
                margin: 0;
                 font-size: 16px;
-    
+
             }
-    
+
           .card-round-record{
            display: flex;
            flex-direction: row;
            justify-content: start;
            align-items: start;
-            
+
            .record{
                 margin-right: 2px;
                 background: #ffffff5e;
-                width: 7px !important; 
+                width: 7px !important;
                 height: 7px !important;
                 border-radius: 50%;
             }
@@ -424,9 +424,9 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        /* background: rgba(0, 0, 0, 0.462); */
-        background: url(/assets/mis/ice-mask-team.png);
-        background-size: cover;
+        background: rgba(0, 0, 0, 0.462);
+        /* background: url(/assets/mis/ice-mask-team.png); */
+        /* background-size: cover; */
         /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
         border-radius: 10px;
         border: 2px solid rgba(61, 61, 61, 0.236);
@@ -440,7 +440,7 @@
 
 
     .card-color-left {
-    
+
 
         position: absolute;
         width: 60%;
@@ -450,7 +450,7 @@
         z-index: -800;
         transform: rotate(135deg);
 
-      
+
     }
 }
 
@@ -470,5 +470,5 @@ background:rgb(255, 255, 255) !important;
 }
 
 .rea{
-    background:rgb(70, 70, 70) !important;  
+    background:rgb(70, 70, 70) !important;
 }

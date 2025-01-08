@@ -16,6 +16,6 @@ rondas: /rondas-norte
 mvps: /mvps-norte
 pag: RONDAS
 grupo: NORTE
-nav-bottom: bg-cham-botttom-ice
+nav-bottom: bg-league-in
 background-nav: bg-transparent
 ---
