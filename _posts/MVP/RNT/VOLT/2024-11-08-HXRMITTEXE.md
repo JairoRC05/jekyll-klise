@@ -5,7 +5,7 @@ categories: MVPB1024 MVPNORTE MVPS
 sex: male1
 tickets: 
 date: 2020-08-29 10:29:20 +0700
-title: PROF.SERNA
-team: ASU
-MVPS: 9
+title: HXRMITTEXE99%
+team: DARK #ASU
+MVPS: 1
 ---
