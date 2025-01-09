@@ -17,42 +17,15 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: TEAM ROCKET
 ID: TR
-puntos: 0
+puntos: 2
 pj: 8
-team1: TAE1
-team2: partido1
-team3: partido1
-team4: TAE4
-team5: TAE5
-team6: TAE6
-team7: partido1
-team8: TAE8
-team9: TAE9
-j2: RONDA 2
-maincover2: /assets/logos/TSR.png
-p2: TAE
-r2: 2
-rr2: 1
-pp2: TSR
-bg2: rock rock
-pt2: 0
-pj2: 0
-j3: RONDA 3
-maincover3: /assets/logos/SSI.png
-p3: TAE
-r3: 2
-rr3: 1
-pp3: SSI
-bg3: rock rock
-pt3: 0
-pj3: 0
-j7: RONDA 7
-maincover7: /assets/logos/DFS.png
-p7: TAE
-r7: 2
-rr7: 0
-pp7: SAP
-bg7: rock rock
-pt7: 0
-pj7: 0
+rec1: win
+rec2:
+rec3: 
+rec4:
+rec5:
+rec6:
+rec7:
+rec8:
+rec9:
 ---

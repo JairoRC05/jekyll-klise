@@ -19,14 +19,14 @@ team: ETERNAL ASCENSION
 ID: EA
 puntos: 0
 pj: 8
-rec1: win
-rec2: win
-rec3: one
-rec4: loss
-rec5: loss
-rec6: win
-rec7: loss
-rec8: loss
-rec9: loss
+rec1: loss
+rec2:
+rec3:
+rec4: 
+rec5: 
+rec6:
+rec7: 
+rec8: 
+rec9: 
 team2: ETERNAL ASCENSION
 ---

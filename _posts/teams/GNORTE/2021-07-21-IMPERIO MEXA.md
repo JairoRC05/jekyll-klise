@@ -16,13 +16,13 @@ background: "#F16C38"
 ID: OBS
 puntos: 0
 pj: 7
-rec1: one
-rec2: loss
-rec3: loss
-rec4: win
-rec5: win
-rec6: one
-rec7: loss
-rec8: win
-rec9: loss
+rec1: loss
+rec2:
+rec3: 
+rec4:
+rec5:
+rec6:
+rec7:
+rec8:
+rec9:
 ---

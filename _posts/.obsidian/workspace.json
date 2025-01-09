@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cup-tournament/FASE 4/2024-10-01-FINAL1.md",
-                "mode": "preview",
+                "file": "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH6.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2024-10-01-FINAL1"
+              "title": "2024-07-01-MATCH6"
             }
           }
         ]
@@ -180,16 +180,20 @@
   },
   "active": "5e999be4314cc14f",
   "lastOpenFiles": [
-    "cup-tournament/FASE 3/2024-10-01-SEMIFINAL2.md",
-    "cup-tournament/FASE 3/2024-10-01-SEMIFINAL1.md",
-    "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL4.md",
-    "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL3.md",
-    "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL2.md",
-    "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL1.md",
-    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH1.md",
-    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH3.md",
     "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-oro/R1/2024-07-01-MATCH1.md",
+    "CALENDARIOS/01-calendario-platino/R2/2024-07-01-MATCH1.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH6.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH5.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-platino/R1/2024-07-01-MATCH1.md",
     "teams/GSUR/2024-07-21-TEAM EVE.md",
+    "teams/GSUR/2024-07-21-RNT-VOLT.md",
     "teams/GSUR/2024-07-21-RNT-DARK.md",
     "teams/GSUR/2024-07-21-POA M.md",
     "teams/GSUR/2024-04-05-ZTG.md",
@@ -202,10 +206,6 @@
     "teams/GSUR/2021-07-21-AD-ESPORTS.md",
     "teams/GNORTE/2024-07-21-TUT.md",
     "teams/GNORTE/2024-07-21-TEAM ROCKET.md",
-    "teams/GNORTE/2024-07-21-TEAM AETHER.md",
-    "teams/GNORTE/2024-07-21-RNT-FENIX.md",
-    "teams/GNORTE/2024-01-04-AEP.md",
-    "teams/GNORTE/2021-07-21-IMPERIO MEXA.md",
     "MVP/RNT/DMD",
     "MVP/RNT/FNX",
     "MVP/TUT",

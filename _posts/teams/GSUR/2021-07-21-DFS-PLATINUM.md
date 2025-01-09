@@ -19,12 +19,12 @@ ID: PLAT
 puntos: 0
 pj: 8
 rec1: loss
-rec2: loss
-rec3: win
-rec4: loss
-rec5: win
-rec6: win
-rec7: win
-rec8: one
-rec9: win
+rec2:
+rec3: 
+rec4:
+rec5:
+rec6:
+rec7:
+rec8:
+rec9:
 ---
