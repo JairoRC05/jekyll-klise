@@ -7,6 +7,9 @@
     "mvps": "number",
     "rango": "number",
     "hora": "text",
-    "POINTS": "number"
+    "POINTS": "number",
+    "match": "number",
+    "no1": "number",
+    "tickets": "number"
   }
 }

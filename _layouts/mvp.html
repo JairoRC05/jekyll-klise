@@ -1,0 +1,114 @@
+---
+layout: 
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-cham">
+  
+
+  
+  {% include navbar-top.html %}
+    
+    
+ 
+
+  <div class="container-fluid banner {{page.gradiente}}">
+    <div class="container bannerPromo">
+      <a href="" role="button" >
+        <img src="/assets/avatars/{{page.sex}}.webp" class="drop img-fluid" alt="{{post.title}}">
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">{{page.title}}</h1>
+        <span class="indigo">{{page.team}}</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container teams-table d-none d-md-block"  id="home">
+
+    <h1 class="teams-title">CAMPEONATO</h1>
+      <div class="row">
+        {% if page.play1 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j1}}</span>
+              {%- endfor -%}
+              <p>{{page.no1}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f1}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match1}}.png" alt="" class="img-fluid">
+              <p>{{post.local | truncate: 8}}</p>
+            </div>
+            {% else %}
+            NADA
+            {% endif %} 
+          </div>
+        </div>
+      
+
+    
+        
+      </div>
+  </div>
+
+
+
+
+    <!-- {% include temporada.html %} -->
+
+
+  <div class="container teams-table d-none d-md-block"  id="home">  
+      <h1 class="teams-title mt-5 mb-5">PATROCINADORES</h1>
+      {% include sponsors.html %}
+    </div>
+
+
+  <div id="stars1"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <div class="d-none d-md-block">
+    {% include footer-transparent.html %}
+</div> 
+
+{% include navbar-league.html %}
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+  $(document).ready(function() {
+          // Transition effect for navbar 
+          $(window).scroll(function() {
+            // checks if window is scrolled more than 500px, adds/removes solid class
+            if($(this).scrollTop() > 30 ) { 
+                $('.top').addClass('{{page.background-nav}}');
+            } else {
+                $('.top').removeClass('{{page.background-nav}}');
+            }
+          });
+  });
+  </script>
+  {% include g-analytics.html %}
+
+
+</body>
+
+</html>

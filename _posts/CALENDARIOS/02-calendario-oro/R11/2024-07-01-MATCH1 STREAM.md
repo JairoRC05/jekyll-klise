@@ -7,9 +7,9 @@ ronda:
 fecha: 
 hora: 
 match: 1
-local: nnn
+local: STMN
 r1: 0
 r2: 0
-out: nnn
-stream:
+out: SPH
+stream: SI
 ---
