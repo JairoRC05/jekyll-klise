@@ -22,7 +22,16 @@ layout:
       </a>
       <div class="bannerText">
         <h1 class="indigo">{{page.title}}</h1>
-        <span class="indigo">{{page.team}}</span>
+      
+          {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
+          <span class="indigo">DFS {{page.team}} ● LIGA INDIGO</span>
+          {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
+          <span class="indigo">RNT {{page.team}} ● LIGA INDIGO</span>
+          {% elsif page.team == "E" %}
+          <span class="indigo">AD ENIGMA ● LIGA INDIGO</span>
+          {% else %}
+          <span class="indigo">{{page.team}} ● LIGA INDIGO</span>
+          {% endif %}
       </div>
     </div>
   </div>
@@ -361,7 +370,32 @@ layout:
     {% include footer-transparent.html %}
 </div> 
 
-{% include navbar-league.html %}
+<div class="d-block d-md-none ">
+  <nav class="navbar fixed-bottom navbar-light {{page.nav-bottom}}">
+      <div class="container d-flex justify-content-center align-items-center">
+   
+        <div class="item-bar">
+        <a href="/liga-indigo-norte">
+            <i class="ti ti-sword"></i>
+          <span>NORTE</span>
+          </a>
+        </div>
+        <div class="item-bar">
+        <a href="/liga-indigo-mvps">
+            <i class="ti ti-pokeball"></i>
+          <span>MVPS</span>
+          </a>
+        </div>
+        <div class="item-bar">
+        <a href="/liga-indigo-sur">
+            <i class="ti ti-shield-filled"></i>
+          <span>SUR</span>
+          </a>
+        </div>
+
+      </div>
+  </nav>
+</div>
 
 
 
