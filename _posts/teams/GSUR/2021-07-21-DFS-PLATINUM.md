@@ -16,15 +16,15 @@ grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 0
+puntos: 2
 pj: 8
-rec1: loss
-rec2:
+rec1: des
+rec2: win
 rec3: 
-rec4:
-rec5:
-rec6:
-rec7:
-rec8:
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
 rec9:
 ---

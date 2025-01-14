@@ -17,12 +17,12 @@ ID: OBS
 puntos: 0
 pj: 7
 rec1: loss
-rec2:
+rec2: loss
 rec3: 
-rec4:
-rec5:
-rec6:
-rec7:
-rec8:
+rec4: 
+rec5: 
+rec6: 
+rec7: 
+rec8: 
 rec9:
 ---
