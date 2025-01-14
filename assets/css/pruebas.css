@@ -297,7 +297,7 @@
         position: absolute;
         right: 1%;
         top: 0;
-        filter: blur(10px) contrast(200%) ; 
+        /* filter: blur(10px) contrast(200%) ;  */
 
         overflow: hidden;
         z-index: -1000;

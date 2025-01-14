@@ -10,6 +10,16 @@
     "POINTS": "number",
     "match": "number",
     "no1": "number",
-    "tickets": "number"
+    "tickets": "number",
+    "no2": "number",
+    "no3": "number",
+    "no4": "number",
+    "no5": "number",
+    "no6": "number",
+    "no7": "number",
+    "no8": "number",
+    "no9": "number",
+    "no10": "number",
+    "no11": "number"
   }
 }

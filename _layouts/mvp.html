@@ -51,17 +51,297 @@ layout:
             </div>
             <div class="roundTeam">
               <img src="/assets/logos/{{page.match1}}.png" alt="" class="img-fluid">
-              <p>{{post.local | truncate: 8}}</p>
+              <p>{{page.match1 | truncate: 8}}</p>
             </div>
-            {% else %}
-            NADA
-            {% endif %} 
+            
           </div>
         </div>
-      
+        {% else %}
+        {% endif %} 
 
-    
+
         
+        {% if page.play2 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j2}}</span>
+              {%- endfor -%}
+              <p>{{page.no2}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f2}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match2}}.png" alt="" class="img-fluid">
+              <p>{{page.match2 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play3 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j3}}</span>
+              {%- endfor -%}
+              <p>{{page.no3}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f3}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match3}}.png" alt="" class="img-fluid">
+              <p>{{page.match3 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play4 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j4}}</span>
+              {%- endfor -%}
+              <p>{{page.no4}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f4}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match4}}.png" alt="" class="img-fluid">
+              <p>{{page.match4 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+
+          
+        {% if page.play5 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j5}}</span>
+              {%- endfor -%}
+              <p>{{page.no5}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f5}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match5}}.png" alt="" class="img-fluid">
+              <p>{{page.match5 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+    
+          
+        {% if page.play6 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j6}}</span>
+              {%- endfor -%}
+              <p>{{page.no6}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f6}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match6}}.png" alt="" class="img-fluid">
+              <p>{{page.match6 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play7 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j7}}</span>
+              {%- endfor -%}
+              <p>{{page.no7}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f7}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match7}}.png" alt="" class="img-fluid">
+              <p>{{page.match7 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play8 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j8}}</span>
+              {%- endfor -%}
+              <p>{{page.no8}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f8}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match8}}.png" alt="" class="img-fluid">
+              <p>{{page.match8 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play9 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j9}}</span>
+              {%- endfor -%}
+              <p>{{page.no9}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f9}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match9}}.png" alt="" class="img-fluid">
+              <p>{{page.match9 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play10 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j10}}</span>
+              {%- endfor -%}
+              <p>{{page.no10}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f10}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match10}}.png" alt="" class="img-fluid">
+              <p>{{page.match10 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+          
+        {% if page.play11 == "SI" %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+          <div class="container roundTeams text-white">
+            <div class="roundScore">
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.j11}}</span>
+              {%- endfor -%}
+              <p>{{page.no11}} MVPS</p>
+              {% assign FECHAS = site.categories.FECHA %}
+              {%- for post in FECHAS-%}
+              <span>{{post.f11}}</span>
+              {%- endfor -%}
+            </div>
+            <div class="roundScore">
+              <p>VS</p>
+            </div>
+            <div class="roundTeam">
+              <img src="/assets/logos/{{page.match11}}.png" alt="" class="img-fluid">
+              <p>{{page.match11 | truncate: 8}}</p>
+            </div>
+         
+          </div>
+        </div>
+        {% else %}
+        {% endif %} 
+
+
       </div>
   </div>
 
@@ -76,10 +356,6 @@ layout:
       {% include sponsors.html %}
     </div>
 
-
-  <div id="stars1"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
 
   <div class="d-none d-md-block">
     {% include footer-transparent.html %}
