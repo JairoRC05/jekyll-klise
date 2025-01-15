@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LD8
+categories: LD8 PROMO
 liga: LIGA INDIGO
 match: 6
 local: EA
@@ -9,6 +9,7 @@ r1: 0
 r2: 0
 out: OBS
 stream: SI
-hora: 
-fecha:
+hora: '"22:30"'
+fecha: 21.01.25
+ronda: "8"
 ---

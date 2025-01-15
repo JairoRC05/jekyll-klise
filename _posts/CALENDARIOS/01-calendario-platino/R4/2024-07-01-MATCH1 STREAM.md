@@ -1,15 +1,15 @@
 ---
 layout: 
 permalink: 
-categories: LD4
+categories: LD4 PROMO
 liga: LIGA INDIGO
 match: 1
 local: RUBY
 r1: 0
 r2: 0
 out: AEP
-hora: '"22:00"'
-fecha: 27.11.24
+hora: '"21:30"'
+fecha: 15.01.25
 ronda: "4"
 stream:
 ---

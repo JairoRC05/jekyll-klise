@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: SEP LIP ROCT ORO A GNORTE
+categories: SEP LIP ROCT ORO A
 maincover: /assets/logos/VOLT.png
 puntosLJMAYO24: 
 date: 2024-05-02 10:29:20 +0700

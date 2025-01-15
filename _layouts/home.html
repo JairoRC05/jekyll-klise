@@ -62,7 +62,7 @@ home: true
  <section class="splide" aria-label="">
   <div class="splide__track">
 		<ul class="splide__list">
-      {% assign norte = site.categories.PROMO %}
+      {% assign norte = site.categories.PROMO | sort: "ronda" %}
       {%- for post in norte-%}
       
 			<li class="splide__slide">

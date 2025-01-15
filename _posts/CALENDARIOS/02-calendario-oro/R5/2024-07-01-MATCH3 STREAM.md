@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LO5
+categories: LO5 PROMO
 liga: LIGA INDIGO
 match: 3
 local: ZTG
@@ -9,6 +9,7 @@ r1: 0
 r2: 0
 out: PLAT
 stream: SI
-hora: 
-fecha:
+hora: '"22:30"'
+fecha: 16.01.25
+ronda: "5"
 ---

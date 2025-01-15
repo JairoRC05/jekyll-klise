@@ -3,10 +3,10 @@ layout: liga-indigo-team
 permalink: /team/:title.html
 categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT PLATINO GNORTE
 liga: LIGA INDIGO
-maincover: /assets/logos/TAE.png
+maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
 date: 2024-05-02 10:29:20 +0700
-title: TEAM AETHER
+title: TEAM ROCKET
 route: /liga-indigo
 tags:
   - johto042024
@@ -20,8 +20,8 @@ ID: TR
 puntos: 3
 pj: 8
 rec1: win
-rec2: loss
-rec3: 
+rec2: one
+rec3: loss
 rec4: 
 rec5: 
 rec6: 

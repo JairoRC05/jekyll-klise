@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT PLATA A GNORTE
 liga: LIGA INDIGO
@@ -17,11 +17,11 @@ background: ETERNAL
 cover: /assets/backCard.png
 team: ETERNAL ASCENSION
 ID: EA
-puntos: 1
+puntos: 2
 pj: 8
 rec1: loss
 rec2: one
-rec3: 
+rec3: one
 rec4: 
 rec5: 
 rec6: 

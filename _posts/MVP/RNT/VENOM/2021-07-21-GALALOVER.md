@@ -5,18 +5,18 @@ categories: MVPSONLY
 maincover: /assets/avatars/male1.webp
 tickets: 2
 date: 2020-08-29 10:29:20 +0700
-title: KIYOKA
-team: FNX
-MVPS: 3
+title: ABNEY!
+team: VNM
+MVPS: 1
 sex: male1
 play1: 
 match1: 
 no1: 
-play2: SI
-match2: VNM
-no2: 2
+play2: 
+match2: 
+no2: 
 play3: SI
-match3: TR
+match3: TAE
 no3: 1
 play4: 
 match4: 
