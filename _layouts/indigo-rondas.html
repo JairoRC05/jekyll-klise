@@ -33,15 +33,9 @@ layout:
    
     {% include tabs-rondas.html %}
 
-  {% if page.division == "PLATINO" %}
-  {% include rondas-platino.html %}
-  {% elsif page.division == "ORO" %}
-  {% include rondas-oro.html %}
-  {% elsif page.division == "PLATA" %}
-  {% include rondas-plata.html %}
-  {% else %}
-  {% include rondas-bronce.html %}
-  {% endif %}
+
+  {% include rondas-league.html %}
+  
   </div>
  
   
