@@ -17,12 +17,11 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: TEAM ROCKET
 ID: TR
-puntos: 3
-pj: 8
+puntos: 5
 rec1: win
 rec2: one
 rec3: loss
-rec4: 
+rec4: one
 rec5: 
 rec6: 
 rec7: 
