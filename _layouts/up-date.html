@@ -1,0 +1,253 @@
+---
+layout: 
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-updates">
+  
+
+  
+  {% include navbar-top.html %}
+    
+    
+ 
+
+  <div class="container-fluid banner">
+    <div class="container bannerPromo">
+      <a href="" role="button" >
+        <img src="/assets/logos/updates.gif" class="drop img-fluid" alt="{{post.title}}">
+      </a>
+      <div class="bannerText">
+        <h1 class="exo-style">{{page.release}}</h1>
+        <span>{{page.version}}</span>
+      
+      
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container teams-table"  id="home">
+
+    <h1 class="teams-title">ROSTER</h1>
+
+      
+  </div>
+
+  {% assign UPDATE = site.categories.ENE26 | sort: "title" %}
+  {%- for post in UPDATE -%}
+
+  <div class="container-fluid banner-patch">
+    <div class="container banner-update">
+      <a href="" role="button" >
+        <img src="/assets/picks/{{post.title}}.png" class="drop img-fluid" alt="{{post.title}}">
+      </a>
+      <div class="bannerText">
+        <h1 class="exo-style">{{post.title}}</h1>
+        <span>{{post.rol}}</span>
+
+        {% if post.ENE261.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.PASIVA}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.PASIVA}}</h4>
+          <p>	{{post.ENE261}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if post.ENE262.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.BASICO}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.BASICO}}</h4>
+          <p>	{{post.ENE262}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+    
+        {% if post.ENE263.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.BASICO}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET1_MAIN}}</h4>
+          <p>	{{post.ENE263}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+      
+        {% if post.ENE264.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.SET1_ATAQUE1}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET1_ATAQUE1}}</h4>
+          <p>	{{post.ENE264}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+       
+        {% if post.ENE265.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.SET1_ATAQUE2}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET1_ATAQUE2}}</h4>
+          <p>	{{post.ENE265}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if post.ENE266.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.BASICO}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET2_MAIN}}</h4>
+          <p>	{{post.ENE266}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+      
+        {% if post.ENE267.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.SET2_ATAQUE1}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET2_ATAQUE1}}</h4>
+          <p>	{{post.ENE267}}</p>
+          </div>
+        </div>
+        {% else %}
+        {% endif %}
+       
+        {% if post.ENE268.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.SET2_ATAQUE2}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.SET2_ATAQUE2}}</h4>
+          <p>	{{post.ENE268}}</p>
+          </div>
+        </div>
+        {% else %}  
+        {% endif %}
+     
+        {% if post.ENE269.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.MOV_UNITE}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.MOV_UNITE}}</h4>
+          <p>	{{post.ENE269}}</p>
+          </div>
+        </div>
+        {% else %}  
+        {% endif %}
+     
+        {% if post.ENE2610.size > 1 %}
+        <div class="banner-special">
+         <div class="img_mov">
+          <img src="/assets/habilidades/{{post.EVOLUCION}}.webp" loading="lazy" decoding="async" class="drop img-fluid habilidad" alt="{{post.PASIVA}}">
+         </div>
+          <div class="descripcion">
+            <h4 class="exo-style">{{post.EVOLUCION}}</h4>
+          <p>	{{post.ENE2610}}</p>
+          </div>
+        </div>
+        {% else %}  
+        {% endif %}
+
+        
+     
+      </div>
+    
+    </div>
+  </div>
+
+  {%- endfor -%}
+
+
+    <!-- {% include temporada.html %} -->
+
+
+
+
+
+  <div class="d-none d-md-block">
+    {% include footer-transparent.html %}
+</div> 
+
+<div class="d-block d-md-none ">
+  <nav class="navbar fixed-bottom navbar-light {{page.nav-bottom}}">
+      <div class="container d-flex justify-content-center align-items-center">
+   
+        <div class="item-bar">
+        <a href="/liga-indigo-norte">
+            <i class="ti ti-sword"></i>
+          <span>NORTE</span>
+          </a>
+        </div>
+        <div class="item-bar">
+        <a href="/liga-indigo-mvps">
+            <i class="ti ti-pokeball"></i>
+          <span>MVPS</span>
+          </a>
+        </div>
+        <div class="item-bar">
+        <a href="/liga-indigo-sur">
+            <i class="ti ti-shield-filled"></i>
+          <span>SUR</span>
+          </a>
+        </div>
+
+      </div>
+  </nav>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+  $(document).ready(function() {
+          // Transition effect for navbar 
+          $(window).scroll(function() {
+            // checks if window is scrolled more than 500px, adds/removes solid class
+            if($(this).scrollTop() > 30 ) { 
+                $('.top').addClass('{{page.background-nav}}');
+            } else {
+                $('.top').removeClass('{{page.background-nav}}');
+            }
+          });
+  });
+  </script>
+  {% include g-analytics.html %}
+
+
+</body>
+
+</html>

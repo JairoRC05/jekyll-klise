@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5e999be4314cc14f",
+            "id": "72ee4d19aaf607ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MVP/DFS/PLAT/2021-07-21-RALEK.md",
+                "file": "LICENCIAS/2021-07-21-AEGISLASH.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-RALEK"
+              "title": "2021-07-21-AEGISLASH"
             }
           }
         ]
@@ -158,11 +158,26 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5e999be4314cc14f",
+  "active": "72ee4d19aaf607ca",
   "lastOpenFiles": [
+    "LICENCIAS/2021-07-21-GARDEVOIR.md",
+    "LICENCIAS/2021-07-21-AEGISLASH.md",
+    "updates/TRADUCCIONES.md",
+    "LICENCIAS/2021-07-21-GOODRA.md",
+    "LICENCIAS/2021-07-21-GREEDENT.md",
+    "LICENCIAS/2021-07-21-NINETALES.md",
+    "LICENCIAS/2021-07-21-PSYDUCK.md",
+    "LICENCIAS/2021-07-21-SYLVEON.md",
+    "LICENCIAS/2021-07-21-UMBREON.md",
+    "updates/2024-01-15-enero.md",
+    "LICENCIAS/2021-07-21-URSHIFU.md",
+    "teams/GSUR/2021-07-21-AD-ESPORTS.md",
+    "LICENCIAS",
+    "teams/GNORTE/2021-07-21-DFS-RUBY.md",
+    "alinks/2024-10-31-RONDAS.md",
+    "MVP/DFS/PLAT/2021-07-21-RALEK.md",
     "MVP/DFS/PLAT/2021-07-21-FORTI.md",
     "MVP/RNT/VOLT/2024-11-08-CLAZO.md",
-    "MVP/DFS/PLAT/2021-07-21-RALEK.md",
     "MVP/DFS/PLAT/2021-07-21-CHARMANBETH.md",
     "MVP/TSR/2021-07-21-FLOPPA.md",
     "MVP/AD ESPORTS/2021-07-21-3MG.md",
@@ -172,20 +187,6 @@
     "teams/GSUR/2024-04-05-STAMINA.md",
     "teams/GSUR/2024-04-05-ZTG.md",
     "teams/GSUR/2024-04-05-DFS-PEARL.md",
-    "teams/GSUR/2024-04-05-TAD.md",
-    "teams/GSUR/2024-07-21-RNT-DARK.md",
-    "teams/GSUR/2024-07-21-TEAM EVE.md",
-    "teams/GSUR/2024-07-21-RNT-VOLT.md",
-    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "teams/GSUR/2024-04-05-TSR.md",
-    "teams/GSUR/2021-07-21-AD-ESPORTS.md",
-    "teams/GNORTE/2024-07-21-RNT-FENIX.md",
-    "teams/GNORTE/2024-07-21-RNT-DIAMANTE.md",
-    "teams/GNORTE/2021-07-21-IMPERIO MEXA.md",
-    "teams/GNORTE/2024-07-21-RNT-VENOM.md",
-    "teams/GNORTE/2024-07-21-TEAM ROCKET.md",
-    "teams/GNORTE/2024-07-21-TUT.md",
-    "teams/GNORTE/2021-07-21-ENIGMA.md",
     "MVP/TEAM ROCKET",
     "MVP/DFS/RUBY",
     "MVP/RNT/VENOM",
@@ -195,7 +196,6 @@
     "MVP/TUT",
     "MVP/TAE",
     "MVP/AD ESPORTS",
-    "MVP/STMN",
     "Sin título 1.canvas",
     "Sin título.canvas",
     "Sin título 6.canvas",

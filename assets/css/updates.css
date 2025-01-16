@@ -1,0 +1,108 @@
+.banner-patch {
+    width: 100%;
+    height: auto;
+  
+  
+  
+    @media screen and (max-width: 768px) {
+      height: 150px;
+    }
+  
+    .banner-update {
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      line-height: 0.2;
+  
+      a {
+        img {
+          width: 550px;
+  
+          @media screen and (max-width: 768px) {
+            width: 100px;
+  
+          }
+        }
+      }
+  
+      .bannerText {
+        text-align: start !important;
+        margin-left: 10px;
+
+
+
+        .banner-special{
+            margin-top: 25px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            color: #fff;
+            line-height:normal;
+
+       .img_mov{
+        background-color: #ca6a1100;
+        border-radius: 100%;
+
+        .habilidad{
+            width: 100px;
+            padding: 5px;
+            border-radius: 100%;
+            border: 3px solid #fff;
+        }
+       }
+
+          .descripcion{
+       
+                margin-left: 15px;
+           
+          }
+
+            
+        }
+  
+        h1 {
+          font-size: 50px;
+          margin: 0;
+          text-align: start !important;
+  
+          @media screen and (max-width: 991px) {
+            font-size: 60px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+  
+        span {
+          color: #fff;
+          font-weight: 800;
+  
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+  
+      }
+  
+  
+  
+      h3 {
+        font-size: 50px;
+        margin: 0;
+  
+        @media screen and (max-width: 991px) {
+          font-size: 30px;
+        }
+  
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+  
+  
+      }
+    }
+  }
+  
