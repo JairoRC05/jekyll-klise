@@ -40,53 +40,51 @@ permalink:
   <div id="stars3"></div>
   
   
-  
-  <div class="container mb-3 mb-5">
-    <div class="row text-white">
-        </div>
-  </div>
 
 
 
 
+
+
+    <!-- {% include temporada.html %} -->
+
+
+  <div class="container teams-table"  id="home">  
+      <h1 class="teams-title mt-5 mb-5">PATROCINADORES</h1>
+      {% include sponsors.html %}
+    </div>
 
 
   <div class="d-none d-md-block">
-
-  {% include footer-indigo.html %}
+    {% include footer-transparent.html %}
 </div> 
 
 <div class="d-block d-md-none ">
-  <nav class="navbar fixed-bottom navbar-light {{page.background}}">
+  <nav class="navbar fixed-bottom navbar-light {{page.nav-bottom}}">
       <div class="container d-flex justify-content-center align-items-center">
+   
         <div class="item-bar">
-          <a href="/" >
-            <i class="fa-solid fa-house"></i>
-          <span>INICIO</span>
-          </a>
-        </div>
-       
-        
-        <div class="item-bar">
-          <a href="/control-center" >
-            <i class="fa-solid fa-trophy"></i>
-          <span>LIGAS</span>
+        <a href="/liga-indigo-norte">
+            <i class="ti ti-sword"></i>
+          <span>NORTE</span>
           </a>
         </div>
         <div class="item-bar">
-          <a href="/reglamento-oct" >
-            <i class="fa-solid fa-bookmark"></i>
-          <span>REGLAS</span>
+        <a href="/liga-indigo-mvps">
+            <i class="ti ti-pokeball"></i>
+          <span>MVPS</span>
           </a>
         </div>
-    
+        <div class="item-bar">
+        <a href="/liga-indigo-sur">
+            <i class="ti ti-shield-filled"></i>
+          <span>SUR</span>
+          </a>
+        </div>
+
       </div>
-    </nav>
-
+  </nav>
 </div>
-
- 
-
 
 
 
