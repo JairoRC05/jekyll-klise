@@ -14,7 +14,7 @@ gradiente: grGreen
 division: ORO
 ligas: /liga-indigo-sur
 rondas: /liga-indigo-mvps
-mvps: /mvps-sur
+mvps: /liga-indigo-mvps
 pag: RONDAS
 background-nav: bg-transparent
 nav-bottom: bg-league-in
