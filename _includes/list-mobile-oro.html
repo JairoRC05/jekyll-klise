@@ -266,6 +266,66 @@
         {%- endfor -%}
     </div>
 
+    <div class="col-12">
+      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+      {%- for post in norte limit:1 offset:9 -%}
+      <div class="card-round-list">
+       
+          <div class="card-round-num">
+            <h6>#10</h6>
+          </div>
+
+          <div class="card-round-team">
+            <a href="{{post.url}}">
+              <img src="/assets/logos/{{post.ID}}.png" alt="" class="img-fluid">
+            </a>
+             
+             {% include rounds.html %}
+
+          </div>
+            
+          <div class="card-round-pts">
+            <h6>{{post.puntos}} pts</h6>
+          </div>
+        
+            <div class="card-back">
+              <div class="card-color-left {{post.ID}}"> </div>  
+            </div>
+
+        </div>
+      {%- endfor -%}
+  </div>
+
+  <div class="col-12">
+    {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+    {%- for post in norte limit:1 offset:10 -%}
+    <div class="card-round-list">
+     
+        <div class="card-round-num">
+          <h6>#11</h6>
+        </div>
+
+        <div class="card-round-team">
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.png" alt="" class="img-fluid">
+          </a>
+           
+           {% include rounds.html %}
+
+        </div>
+          
+        <div class="card-round-pts">
+          <h6>{{post.puntos}} pts</h6>
+        </div>
+      
+          <div class="card-back">
+            <div class="card-color-left {{post.ID}}"> </div>  
+          </div>
+
+      </div>
+    {%- endfor -%}
+</div>
+
  
 
 </div>
