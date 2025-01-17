@@ -5,19 +5,19 @@ categories: MVPSONLY
 maincover: /assets/avatars/male1.webp
 tickets: 2
 date: 2020-08-29 10:29:20 +0700
-title: BURUMUN
+title: THAMYMIAMOR
 team: RUBY
-MVPS: 2
-sex: female1
+MVPS: 1
+sex: male1
 play1: 
 match1: 
 no1: 
 play2: 
 match2: 
 no2: 
-play3: SI
-match3: OBS
-no3: 1
+play3: 
+match3: 
+no3: 
 play4: 
 match4: 
 no4: 

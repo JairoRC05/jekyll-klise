@@ -17,12 +17,12 @@ abr: AOS
 background: "#F16C38"
 cover: AD
 ID: AD
-puntos: 4
+puntos: 8
 rec1: one
 rec2: one
 rec3: win
-rec4: 
-rec5: 
+rec4: win
+rec5: win
 rec6: 
 rec7: 
 rec8: 
