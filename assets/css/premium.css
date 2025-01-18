@@ -1,0 +1,622 @@
+.banner-container {
+    width: 100%;
+    height: 500px;
+  
+  
+  
+    @media screen and (max-width: 768px) {
+      height: 150px;
+    }
+  
+    .banner-premium {
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      line-height: 0.2;
+  
+      a {
+        img {
+          width: 250px;
+  
+          @media screen and (max-width: 768px) {
+            width: 100px;
+  
+          }
+        }
+      }
+  
+      .bannerText {
+        text-align: start !important;
+        margin-left: 10px;
+  
+  
+        
+  
+        h1 {
+          font-size: 90px;
+          margin: 0;
+          text-align: start !important;
+  
+          @media screen and (max-width: 991px) {
+            font-size: 60px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+  
+        span {
+          color: #fff;
+          font-weight: 800;
+          font-size: 44px;
+  
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+  
+      }
+  
+  
+  
+      h3 {
+        font-size: 50px;
+        margin: 0;
+  
+        @media screen and (max-width: 991px) {
+          font-size: 30px;
+        }
+  
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+  
+  
+      }
+    }
+  }
+  
+  
+  .indigo {
+    color: rgb(255, 255, 255);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 100;
+  }
+  
+  
+  .exo {
+    color: rgb(255, 255, 255);
+    font-family: "Exo 2", serif !important;
+    font-optical-sizing: auto;
+    font-weight: bold !important;
+  }
+  
+  
+  
+  
+  .teams-table {
+  
+  
+    .teams-title {
+      /* background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(18, 4, 139, 0) 10%, rgb(0, 0, 0, 0.40) 20%, rgba(0, 0, 0, 0.40) 80%, rgba(18, 4, 139, 0) 90%);
+     */ font-style: italic; 
+     background: rgb(255,255,255);
+     background: linear-gradient(90deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 90%);
+      font-weight: 700;
+      padding-bottom: 5px;
+      color: #004E8F;
+  
+  
+  
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  
+  
+    .teams-title--orange {
+      background: rgb(255, 190, 0);
+      background: linear-gradient(100deg, rgba(255, 190, 0, 0) 10%, rgba(255, 190, 0, 1) 20%, rgba(255, 190, 0, 1) 80%, rgba(255, 190, 0, 0) 90%);
+      font-style: italic;
+      padding-bottom: 5px;
+      color: rgb(255, 255, 255);
+  
+  
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  
+    .teams-title--green {
+      background: rgb(0, 0, 0) !important;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 11%, rgba(4, 101, 70, 1) 15%, rgba(4, 101, 70, 1) 85%, rgba(4, 101, 70, 0) 90%) !important;
+      font-style: italic;
+      padding-bottom: 5px;
+      color: rgb(255, 255, 255);
+  
+  
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  
+    .teams-title--rose {
+      background: rgb(0,0,0);
+      background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(185,53,75,1) 20%, rgba(185,53,75,1) 80%, rgba(0,0,0,0) 90%);
+      font-style: italic;
+      padding-bottom: 5px;
+      color: rgb(255, 255, 255);
+  
+  
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    .teams-title--black {
+      background: rgb(0,0,0);
+      background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 90%);
+      font-style: italic;
+      padding-bottom: 5px;
+      color: rgb(255, 255, 255);
+  
+  
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  
+  }
+  
+  
+  
+  
+  
+  .main-banner {
+    width: 100%;
+    border-radius: 15px;
+    height: 500px;
+    background: red;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  .side-banner {
+    width: 100%;
+    border-radius: 15px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    .card-banner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border-radius: 15px;
+      margin-bottom: 20px;
+  
+      &:hover {
+        background: rgb(14, 4, 100);
+      }
+  
+      img {
+        margin: 5px;
+        width: 70px;
+      }
+  
+      .card-banner--info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+  
+  
+        h1 {
+          font-size: 24px;
+          padding: 0;
+          margin: 0;
+          color: #fff;
+          font-weight: 500;
+        }
+  
+        p {
+          padding: 0;
+          margin: 0;
+          color: yellow;
+        }
+      }
+  
+    }
+  }
+  
+  
+  
+  .main-license {
+    width: 100%;
+    border-radius: 15px;
+    height: 250px;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .card-license {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+  
+    width: 200px;
+    height: 100%;
+  
+    &:hover {
+      background: rgb(14, 4, 100);
+    }
+  
+    img {
+      margin: 5px;
+      width: 70px;
+    }
+  
+  }
+  
+  .m-10 {
+    margin-top: 150px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .rotate {
+    transform: scaleX(-1);
+  }
+  
+  
+  .shadows {
+    filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+  }
+  
+  
+  
+  
+  .season-banner {
+    width: 100%;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1516981792717087) 20%, rgba(0, 0, 0, 0.15449929971988796) 90%, rgba(0, 0, 0, 0) 97%);
+    position: relative;
+    @media screen and (max-width: 1200px) {
+      height: 400px;
+    }
+    
+    @media screen and (max-width: 992px) {
+      height: 300px;
+    }
+   
+    @media screen and (max-width: 576px) {
+      height: 150px;
+    }
+  
+    .season-text {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      width: 100%;
+  
+      @media screen and (max-width: 576px) {
+        top: 0;
+      }
+  
+  
+  
+      h1 {
+        font-size: 70px;
+        font-style: italic;
+        top: 35px;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        @media screen and (max-width: 1200px) {
+          font-size: 50px;
+          top: 25px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 35px;
+          top: 25px;
+        }
+        @media screen and (max-width: 575px) {
+          font-size: 18px;
+          top: 25px;
+        }
+        
+      }
+    
+    h2 {
+      font-size: 40px;
+      position: absolute;
+      right: 0;
+      @media screen and (max-width: 1200px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 576px) {
+      }
+    }
+   
+    }
+  
+    .pick1 {
+      width: 40%;
+      position: absolute;
+      left: 0;
+      @media screen and (max-width: 1200px) {
+        width: 45%;
+      }
+  
+    }
+  
+    .pick2 {
+      position: absolute;
+      width: 100px;
+      right: 0;
+      bottom: 0;
+      @media screen and (max-width: 992px) {
+        width: 80px;
+        right: 0;
+        bottom: 0;
+      }
+      @media screen and (max-width: 575px) {
+        width: 40px;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  
+    .btn-pokemon {
+      position: absolute;
+      background: orange;
+      font-style: italic;
+      font-size: 50px;
+      margin: 20px;
+      font-weight: bolder;
+      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+      color: white;
+      right: 0;
+      bottom: 150px;
+      width: 700px;
+      @media screen and (max-width: 1200px) {
+        font-size: 35px;
+        width: 550px;
+        bottom: 100px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 25px;
+        width: 350px;
+        bottom: 75px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 12px;
+        width: 250px;
+        bottom: 50px;
+        margin: 0;
+      }
+  
+      &:hover{
+        background: white;
+        color: orange;
+        font-size: 48px;
+        @media screen and (max-width: 1200px) {
+          font-size: 33px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 23px;
+        }
+        @media screen and (max-width: 575px) {
+          font-size: 10px;
+        }
+      }
+    }
+  
+    .btn-pokemon--red {
+      position: absolute;
+      background: rgb(0, 0, 0);
+      font-style: italic;
+      font-size: 50px;
+      margin: 20px;
+      font-weight: bolder;
+      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+      color: rgb(255, 255, 255);
+      right: 0;
+      bottom: 150px;
+      width: 700px;
+      @media screen and (max-width: 1200px) {
+        font-size: 35px;
+        width: 550px;
+        bottom: 100px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 25px;
+        width: 350px;
+        bottom: 75px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 12px;
+        width: 250px;
+        bottom: 50px;
+        margin: 0;
+      }
+  
+      &:hover{
+        background: white;
+        color: orange;
+        font-size: 48px;
+        @media screen and (max-width: 1200px) {
+          font-size: 33px;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 23px;
+        }
+        @media screen and (max-width: 575px) {
+          font-size: 10px;
+        }
+      }
+    }
+  
+    h3 {
+      position: absolute;
+      font-size: 40px;
+      bottom: 10px;
+      right: 100px;
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+        bottom: 10px;
+        right: 80px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 10px;
+        bottom: 2px;
+        right: 40px;
+      }
+    }
+  
+   
+  
+  }
+  
+  
+  
+  .score-start{
+  
+    h3{
+      margin: 0 0 10px 0;
+  
+  
+  
+      @media screen and (max-width: 575px) {
+        font-size: 12px;
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+  
+  
+  
+  
+  .banner-v {
+    width: 100%;
+    height: 500px;
+  
+  
+  
+    @media screen and (max-width: 768px) {
+      height: 70px;
+    }
+  
+    .bannerPromo {
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      a {
+        img {
+          width: 250px;
+  
+          @media screen and (max-width: 768px) {
+            width: 100px;
+  
+          }
+        }
+      }
+  
+      .bannerText {
+        text-align: start !important;
+        margin-left: 10px;
+  
+        h1 {
+          font-size: 150px;
+          margin: 0;
+  
+          @media screen and (max-width: 991px) {
+            font-size: 60px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+  
+        span {
+          color: #fff;
+          font-weight: 800;
+  
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+  
+      }
+  
+  
+  
+      h3 {
+        font-size: 50px;
+        margin: 0;
+  
+        @media screen and (max-width: 991px) {
+          font-size: 30px;
+        }
+  
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+  
+  
+      }
+    }
+  }
