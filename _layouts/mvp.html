@@ -6,7 +6,7 @@ layout:
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="bg-cham">
+<body class="{{page.team}}">
   
 
   
@@ -15,7 +15,7 @@ layout:
     
  
 
-  <div class="container-fluid banner {{page.gradiente}}">
+  <!-- <div class="container-fluid banner {{page.gradiente}}">
     <div class="container bannerPromo">
       <a href="" role="button" >
         <img src="/assets/avatars/{{page.sex}}.webp" class="drop img-fluid" alt="{{post.title}}">
@@ -24,22 +24,59 @@ layout:
         <h1 class="exo-style">{{page.title}}</h1>
       
           {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
-          <span class="indigo">DFS {{page.team}} ● LIGA INDIGO</span>
+          <span>DFS {{page.team}} ● LIGA INDIGO</span>
           {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
-          <span class="indigo">RNT {{page.team}} ● LIGA INDIGO</span>
+          <span>RNT {{page.team}} ● LIGA INDIGO</span>
           {% elsif page.team == "E" %}
-          <span class="indigo">AD ENIGMA ● LIGA INDIGO</span>
+          <span>AD ENIGMA ● LIGA INDIGO</span>
           {% else %}
-          <span class="indigo">{{page.team}} ● LIGA INDIGO</span>
+          <span>{{page.team}} ● LIGA INDIGO</span>
           {% endif %}
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+ <div class="container-fluid ">
+   <div class="container ">
+ 
+        <div class="banner-card-round-mvp">
+          <div class="card-mvp">
+         <a href="{{page.url}}"> <img src="/assets/avatars/{{page.sex}}.webp" alt="{{page.title}}"></a>
+            <div class="card-mvp-title">
+              <p class="mvp-title exo-style">{{page.title | truncate: 12}}</p>
+              {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
+              <p>DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
+              {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
+              <p>RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
+              {% elsif page.team == "E" %}
+              <p>AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
+              {% else %}
+              <p>{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
+              {% endif %}
+              
+            </div>
+          </div>
+          <div class="card-mvp-number">
+           
+          </div>
+         
+         
+          <div class="card-back">
+            <div class="card-mvp-team">
+              <img src="/assets/logos/{{page.team}}.png" alt="MVPS Team: {{page.team}}">
+            </div>
+            <div class="card-color-left"> </div>  
+          </div>
+  
+        </div>
+  </div> 
+ </div>
 
 
   <div class="container teams-table"  id="home">
 
-    <h1 class="teams-title">CAMPEONATO</h1>
+    <h1 class="teams-title mb-5">CAMPEONATO</h1>
       <div class="row">
         {% if page.play1 == "SI" %}
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
