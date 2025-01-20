@@ -5,7 +5,7 @@ categories: LD6 PROMO
 liga: LIGA INDIGO
 match: 6
 local: E
-r1: 0
+r1: 2
 r2: 0
 out: TUT
 stream: SI
