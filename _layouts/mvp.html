@@ -385,7 +385,7 @@ layout:
     <!-- {% include temporada.html %} -->
 
 
-  <div class="container teams-table"  id="home">  
+  <div class="container teams-table mb-5"  id="home">  
       <h1 class="teams-title mt-md-5 mb-md-5">PATROCINADORES</h1>
       {% include sponsors.html %}
     </div>
@@ -396,7 +396,7 @@ layout:
 </div> 
 
 <div class="d-block d-md-none ">
-  <nav class="navbar fixed-bottom navbar-light bg-cham">
+  <nav class="navbar fixed-bottom navbar-light bg-cham mt-5">
       <div class="container d-flex justify-content-center align-items-center">
    
         <div class="item-bar">
@@ -434,9 +434,9 @@ layout:
           $(window).scroll(function() {
             // checks if window is scrolled more than 500px, adds/removes solid class
             if($(this).scrollTop() > 30 ) { 
-                $('.top').addClass('{{page.background-nav}}');
+                $('.top').addClass('bg-cham');
             } else {
-                $('.top').removeClass('{{page.background-nav}}');
+                $('.top').removeClass('bg-cham');
             }
           });
   });
