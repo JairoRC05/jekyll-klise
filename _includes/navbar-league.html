@@ -18,7 +18,7 @@
             <a href="/liga-indigo-norte" >
             {% endif %}
           {% elsif post.type == "REGLAS" %}
-          <a href="/reglamento-nov" >
+          <a href="/reglamento-enero" >
             {% else %}
             {% endif %}
               <i class="ti {{post.icon}}"></i>
@@ -31,7 +31,7 @@
           {% assign norte = site.categories.REGLAS | sort: "level"  %}
           {%- for post in norte  -%}
           <div class="item-bar">
-          <a href="/reglamento-nov" >
+          <a href="/reglamento-enero" >
               <i class="ti {{post.icon}}"></i>
             <span>{{post.name}}</span>
             </a>
