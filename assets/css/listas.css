@@ -494,7 +494,7 @@ background:rgb(255, 255, 255) !important;
         padding: 5px 0;
         margin-bottom: 5px;
         justify-content: space-around;
-        height: 50px;
+        height: 100px;
     }
 
 
@@ -575,7 +575,7 @@ background:rgb(255, 255, 255) !important;
                 font-size: 26px;
 
                 @media screen and (max-width: 472px) {
-                    font-size: 10px;
+                    font-size: 12px;
                 }
 
             }
@@ -589,7 +589,7 @@ background:rgb(255, 255, 255) !important;
                     font-size: 20px;
                 }
                 @media screen and (max-width: 472px) {
-                    font-size: 14px;
+                    font-size: 30px;
                 }
             }
         }
@@ -598,7 +598,7 @@ background:rgb(255, 255, 255) !important;
             width: 250px;
 
             @media screen and (max-width: 472px) {
-                width: 50px;
+                width: 70px;
             }
 
         }
@@ -665,6 +665,10 @@ background:rgb(255, 255, 255) !important;
 
         img {
             width: 170px;
+
+            @media screen and (max-width: 472px) {
+              width: 50px;
+              }
 
         }
     }
