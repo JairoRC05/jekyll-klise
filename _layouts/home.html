@@ -9,17 +9,16 @@ home: true
 {% include header.html %}
 
 
-<body class="bg-black">
+<body class="bg-home">
 
   
 
-  <nav class="navbar top sticky-top bg-black">
+  <nav class="navbar top sticky-top indigo-yellow">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="/"><span class="navbar-brand mb-0 h1 text-white">XFORCE UNITE</span></a>
-      <div class="d-none d-md-block">
+      <a href="/"><span class="navbar-brand mb-0 h1 text-white"><b>LA REPÚBLICA DEL UNITE</b></span></a>
+      <div class="d-none d-md-block text-white">
 
-        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-norte" class="text-white">LI NORTE</a></span>
-        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-sur" class="text-white">LI SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="#liga" class="text-white">LIGA INDIGO</a></span>
         <!-- <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-sur" class="text-white">LICENCIAS UNITE</a></span>
         <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-sur" class="text-white">CONFESIONES</a></span> -->
 
@@ -75,11 +74,11 @@ home: true
            {% elsif post.liga == "BRONCE" %}
            <div class="container-fluid grPurple" style="border-radius: 10px;">
            {% else  %}
-           <div class="container-fluid bg-black" style="border-radius: 10px;">
+           <div class="container-fluid  bg-promo">
             {% endif %}
-           <div class="container carousel-match">
+           <div class="container carousel-match ">
               <div class="roundTeam">
-                <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+                <img src="/assets/logos/{{post.local}}.webp" alt="" class="img-fluid">
                 <p>{{post.local}}</p>
               </div>
               <div class="roundScore">
@@ -91,7 +90,7 @@ home: true
                 <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
               </div>
               <div class="roundTeam">
-                <img src="/assets/logos/{{post.out}}.png" alt="" class="img-fluid">
+                <img src="/assets/logos/{{post.out}}.webp" alt="" class="img-fluid">
                 <p>{{post.out}}</p>
               </div>
             </div>
@@ -104,11 +103,53 @@ home: true
   </div>
 </section> 
 
- 
+<div class="container-fluid banner-home bg-cham" id="liga">
+  <div class="container banner ">
 
-<div id="stars1"></div>
-<div id="stars2"></div>
-<div id="stars3"></div>
+    <div class="banner-grupo">
+      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+      {%- for post in norte-%}
+    <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+
+    <div class="banner-logo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="d-flex justify-content-center align-items-center">
+       
+        <a href="/liga-indigo-norte" class="button-space d-block d-md-none">
+          <span class="main-text">VER MÁS
+            <span> 
+             <span>⫸</span> 
+            </span>
+          </span></a>
+        
+          <a href="/liga-indigo-dashboard" class="button-space d-none d-md-block">
+          <span class="main-text">VER MÁS
+            <span> 
+             <span>⫸</span> 
+            </span>
+          </span></a>
+      </div>
+
+    </div>
+
+    <div class="banner-grupo">
+      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+      {%- for post in norte-%}
+      <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+  </div>
+</div>
 
 
   {% include ligas-index.html %}
@@ -174,7 +215,7 @@ home: true
         pagination: false,
         arrows: false,
         rewind: true,
-        height: '50rem',
+        height: '30rem',
         breakpoints: {
           1200: {
             perPage: 1,

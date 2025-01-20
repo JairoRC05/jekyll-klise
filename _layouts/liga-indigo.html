@@ -9,8 +9,35 @@ layout:
 <body class="{{page.background}}">
   
 
+  <nav class="navbar  indigo-yellow d-none d-md-block">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+    </a>
+    </div>
+  </nav>
   
-  {% include navbar-top.html %}
+  <nav class="navbar top sticky-top ">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="/liga-indigo-dashboard"><span class="navbar-brand mb-0 h1 text-white">LIGA INDIGO</span></a>
+
+     
+      <div class="d-none d-md-block">
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#home" class="text-white">CAMPEONATO</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="#rondas" class="text-white">RONDAS</a></span>
+        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-enero" class="text-white">REGLAMENTO</a></span>
+      </div>
+      <div class="d-block d-md-none">
+        {% assign norte = site.categories.TOP | sort: "level"  %}
+        {%- for post in norte | limit:1  -%}
+        <a href="/" class="text-white"><i class="ti {{post.icon-n}}"></i> </a>
+        {%- endfor -%}
+        
+      
+      </div>
+    </div>
+  </nav>
     
     
  
@@ -30,7 +57,7 @@ layout:
 
   <div class="container teams-table d-none d-md-block"  id="home">
 
-    <h1 class="teams-title">CAMPEONATO</h1>
+    <h1 class="teams-title  mt-5 mb-5">CAMPEONATO</h1>
     {% if page.division == "PLATINO" %}
     {% include cards-teams-icon-platino.html %}
     {% elsif page.division == "ORO" %}
@@ -121,9 +148,9 @@ layout:
           $(window).scroll(function() {
             // checks if window is scrolled more than 500px, adds/removes solid class
             if($(this).scrollTop() > 30 ) { 
-                $('.top').addClass('{{page.background-nav}}');
+                $('.top').addClass('bg-league-in');
             } else {
-                $('.top').removeClass('{{page.background-nav}}');
+                $('.top').removeClass('bg-league-in');
             }
           });
   });
