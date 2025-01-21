@@ -336,9 +336,9 @@
 
     @media screen and (max-width: 472px) {
         padding: 5px 0;
-        margin-bottom: 5px;
         justify-content: space-around;
         height: 50px;
+        margin-bottom: 0;
     }
 
     .card-round-team {
@@ -440,13 +440,18 @@
         /* background-size: cover; */
         /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
         border-radius: 10px;
-        border: 2px solid rgb(228, 228, 228);
+        border: 1px solid rgb(228, 228, 228);
         /* border-right: 2px solid rgba(0, 0, 0, 0.2);
         border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
         /* backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(10px); */
         z-index: -900;
         overflow: hidden;
+
+        @media screen and (max-width: 472px) {
+          border-radius: 0;
+          border-bottom: 1px solid rgb(228, 228, 228);
+        }
     }
 
 
@@ -542,6 +547,9 @@ border: none !important;
         display: flex;
         justify-content: center;
         align-items: center;
+
+       
+
     }
 
     .card-color-left {
