@@ -711,3 +711,11 @@ border: none !important;
 .team--last:last-child{
     margin-bottom: 60px !important;
 }
+
+.last{
+
+    margin-bottom: 0;
+    @media screen and (max-width: 472px) {
+        margin-bottom: 60px !important;
+        }
+}
