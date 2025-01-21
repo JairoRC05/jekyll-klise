@@ -1,0 +1,88 @@
+<section class="container splide" aria-label="">
+    <div class="splide__track">
+          <ul class="splide__list">
+        {% assign norte = site.categories.PROMO | sort: "ronda" %}
+        {%- for post in norte-%}
+        
+              <li class="splide__slide">
+          <div class="container roundTeams text-white bg-cham">
+            <div class="roundTeam">
+              <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
+              <p>{{post.local | truncate: 8}}</p>
+            </div>
+           
+            {% if post.reagendado == "SI"%}
+            <div class="roundScore">
+            
+                <span>RONDA {{post.ronda}}</span>
+                
+                {% if post.r1 == 0 and post.r2 == 0 %}
+                <p>VS</p>
+                {% else %}
+                <p>{{post.r1}}-{{post.r2}}</p>
+                {% endif %}
+
+                <span>{{post.fecha}}</span>
+
+                {% if post.stream == "SI" %}
+                <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+              {% endif %}
+            </div>
+
+             {% else %}
+             <div class="roundScore">
+            
+                <span>RONDA {{post.ronda}}</span>
+                
+                {% if post.r1 == 0 and post.r2 == 0 %}
+                <p>VS</p>
+                {% else %}
+                <p>{{post.r1}}-{{post.r2}}</p>
+                {% endif %}
+                
+                {% if post.ronda == "8"  %}
+                    {% assign FECHAS = site.categories.FECHA %}
+                    {%- for post in FECHAS-%}
+                    <span>{{post.f8}}</span>
+                    {%- endfor -%}  
+    
+    
+                  {% elsif post.ronda == "9"  %}
+                    {% assign FECHAS = site.categories.FECHA %}
+                    {%- for post in FECHAS-%}
+                    <span>{{post.f9}}</span>
+                    {%- endfor -%} 
+                  
+                  {% elsif post.ronda == "10"  %}
+                    {% assign FECHAS = site.categories.FECHA %}
+                    {%- for post in FECHAS-%}
+                    <span>{{post.f10}}</span>
+                    {%- endfor -%} 
+                  
+                  {% elsif post.ronda == "11"  %}
+                    {% assign FECHAS = site.categories.FECHA %}
+                    {%- for post in FECHAS-%}
+                    <span>{{post.f11}}</span>
+                    {%- endfor -%} 
+               
+    
+                {% endif %}
+              
+        
+              {% if post.stream == "SI" %}
+              <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+            {% endif %}
+              </div>
+             {% endif %}
+
+            <div class="roundTeam">
+              <img src="/assets/logos/{{post.out}}.png" alt="">
+              <p>{{post.out |truncate: 8}}</p>
+            </div>
+          </div>
+        </li>
+          {%- endfor -%}
+  
+          </ul>
+    </div>
+  </section> 

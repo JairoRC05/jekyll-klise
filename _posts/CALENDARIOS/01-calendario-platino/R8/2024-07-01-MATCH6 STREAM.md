@@ -10,6 +10,6 @@ r2: 0
 out: OBS
 stream: SI
 hora: '"22:30"'
-fecha: 21.01.25
+fecha: 21 ENE
 ronda: "8"
 ---

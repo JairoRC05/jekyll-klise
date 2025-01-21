@@ -137,59 +137,7 @@ title: LA REPÚBLICA DEL UNITE
     <h1 class="teams-title">PRÓXIMOS STREAMS</h1>
   </div>
 </div>
-<section class="container splide" aria-label="">
-  <div class="splide__track">
-		<ul class="splide__list">
-      {% assign norte = site.categories.PROMO | sort: "ronda" %}
-      {%- for post in norte-%}
-      
-			<li class="splide__slide">
-        <div class="container roundTeams text-white bg-cham">
-          <div class="roundTeam">
-            <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
-            <p>{{post.local | truncate: 8}}</p>
-          </div>
-          <div class="roundScore">
-          
-            <span>RONDA {{post.ronda}}</span>
-            
-            {% if post.r1 == 0 and post.r2 == 0 %}
-            <p>VS</p>
-            {% else %}
-            <p>{{post.r1}}-{{post.r2}}</p>
-            {% endif %}
-            
-            {% if post.ronda == 1  %}
-            {% assign FECHAS = site.categories.FECHA %}
-            {%- for post in FECHAS-%}
-            <span>{{post.f1}}</span>
-            {%- endfor -%}
-
-            {% elsif post.ronda == 2  %}
-            {% assign FECHAS = site.categories.FECHA %}
-            {%- for post in FECHAS-%}
-            <span>{{post.f2}}</span>
-            {%- endfor -%}
-            {% else %}
-            nada
-            {% endif %}
-          
-    
-          {% if post.stream == "SI" %}
-          <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
-        {% endif %}
-          </div>
-          <div class="roundTeam">
-            <img src="/assets/logos/{{post.out}}.png" alt="">
-            <p>{{post.out |truncate: 8}}</p>
-          </div>
-        </div>
-      </li>
-        {%- endfor -%}
-
-		</ul>
-  </div>
-</section> 
+{% include promo-stream.html %}
 
 
 

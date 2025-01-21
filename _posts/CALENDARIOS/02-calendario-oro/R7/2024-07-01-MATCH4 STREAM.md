@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LO7 PROMO
+categories: LO7
 liga: LIGA INDIGO
 match: 4
 local: EVL

@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LD6 PROMO
+categories: LD6
 liga: LIGA INDIGO
 match: 6
 local: E

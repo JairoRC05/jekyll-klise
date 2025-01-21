@@ -1,14 +1,16 @@
 ---
 layout: 
 permalink: 
-categories: LO7 E7
+categories: LO7 E7  PROMO
 liga: LIGA INDIGO
 match: 6
 local: AD
 r1: 0
 r2: 0
 out: DARK
-stream: 
+stream: SI
 hora: 
-fecha:
+fecha: 22 ENE
+ronda: "7"
+reagendado: SI
 ---
