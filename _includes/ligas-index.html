@@ -14,3 +14,33 @@
   {%- for post in norte-%}
   <img src="/assets/logos/{{post.ID}}.png" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
   {%- endfor -%} -->
+
+  <div class="container-fluid grRed" style="border-radius: 10px;">
+    {% elsif post.liga == "ORO" %}
+    <div class="container-fluid grGreen" style="border-radius: 10px;">
+    {% elsif post.liga == "PLATA" %}
+    <div class="container-fluid grBlue" style="border-radius: 10px;">
+    {% elsif post.liga == "BRONCE" %}
+    <div class="container-fluid grPurple" style="border-radius: 10px;">
+    {% else  %}
+    <div class="container-fluid  ">
+     {% endif %}
+    <div class="container carousel-match bg-promo ">
+       <div class="roundTeam">
+         <img src="/assets/logos/{{post.local}}.webp" alt="" class="img-fluid">
+         <p>{{post.local}}</p>
+       </div>
+       <div class="roundScore">
+         <h1 class="indigo">{{post.liga}}</h1>
+         <h3 class="indigo">RONDA  {{post.ronda}}</h3>
+         <h3 class="indigo">{{post.fecha}}</h3>
+         <h2>VS</h2>
+         <h3 class="indigo">{{post.hora}}</h3>
+         <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch text-white"></i></a>
+       </div>
+       <div class="roundTeam">
+         <img src="/assets/logos/{{post.out}}.webp" alt="" class="img-fluid">
+         <p>{{post.out}}</p>
+       </div>
+     </div>
+   </div>

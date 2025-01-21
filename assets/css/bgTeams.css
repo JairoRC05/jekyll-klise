@@ -688,7 +688,7 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
 
 
 .bg-home{
-  background: #ffffff;
+  background:#f2f3f8
 }
 
 
@@ -702,5 +702,21 @@ background-blend-mode: multiply;
 
 
 .indigo-yellow{
-  background: #f8b119
+  background: #f8b119;
+
+}
+
+
+.poster{
+  background-image: url(/assets/backgrounds/pokemon-unite-.jpg);
+  background-color: #f8b119;
+
+  background-size: cover;
+
+}
+
+
+
+.clip{
+  border-radius:  50px 50px 0 0 !important;
 }
