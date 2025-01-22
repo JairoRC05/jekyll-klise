@@ -719,3 +719,10 @@ border: none !important;
         margin-bottom: 60px !important;
         }
 }
+.first{
+
+    margin-bottom: 0;
+    @media screen and (max-width: 472px) {
+        margin-top: 10px !important;
+        }
+}

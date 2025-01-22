@@ -17,3 +17,13 @@
         font-size: 10px;
     }
 }
+
+
+.navbar-brand{
+    img{
+
+        @media screen and (max-width: 472px) {
+           height: 30px;
+            }
+    }
+}
