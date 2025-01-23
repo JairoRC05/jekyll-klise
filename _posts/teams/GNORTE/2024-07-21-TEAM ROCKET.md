@@ -21,14 +21,14 @@ pais: mx
 region: LAN
 ligas: 
 cxf: "1"
-puntos: 5
+puntos: 6
 rec1: win
 rec2: one
 rec3: loss
 rec4: one
 rec5: loss
 rec6: one
-rec7: rea
+rec7: one
 rec8: des
 rec9: 
 rec10: 
