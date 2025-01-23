@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /team/:title.html
+permalink: /teams/:title.html
 categories: SEP LIP ROCT ORO WHEEL A GNORTE
 team: IM OBSIDIANA
 maincover: /assets/logos/OBS.png
@@ -21,8 +21,36 @@ rec2: loss
 rec3: win
 rec4: one
 rec5: one
-rec6: 
-rec7: 
-rec8: 
-rec9:
+rec6: loss
+rec7: rea
+rec8: loss
+rec9: rea
+region: LAN
+pais: mx
+ligas: 
+cxf: 
+rec10: des
+rec11: 
+E1: TR
+E2: E
+E3: RUBY
+E4: FTB
+E5: FNX
+E6: TAE
+E7: TUT
+E8: EA
+E9: AEP
+E10: 
+E11: VNM
+F1: 
+F2: 
+F3: 
+F4: 
+F5: 
+F6: 
+F7: 
+F8: 
+F9: 
+F10: 
+F11:
 ---

@@ -526,3 +526,244 @@
     }
   }
 }
+
+
+
+
+/* BANNER TEAM */
+.banner_bg_team {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
+
+  .banner_team {
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+    padding-top: 20%;
+    }
+    @media screen and (max-width: 472px) {
+    padding-top: 25%;
+    }
+
+    a {
+      img {
+        width: 250px;
+
+        @media screen and (max-width: 1200PX) {
+          width: 200px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 180px;
+        }
+        @media screen and (max-width: 576px) {
+          width: 150px;
+        }
+      }
+    }
+
+    .bannerText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin-left: 10px;
+      width: 100%;
+
+      h1 {
+        font-size: 50px;
+        margin: 0;
+        font-style: normal !important;
+        text-align: start !important;
+
+        @media screen and (max-width: 992px) {
+          font-size: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      span {
+        color: #fff;
+        font-weight: 800;
+        font-size: 26px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+
+ .record-line{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  .trofeos{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    img{
+      width: 40px;
+    }
+
+    span{
+      font-size: 18px;
+    }
+  }
+ }
+
+
+  .region{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (max-width: 576PX) {
+      display: none;
+    }
+
+  .localization{
+    img{
+      width: 40px;
+    }
+
+    span{
+      font-size: 18px;
+    }
+  }
+
+    .card-round-record{
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: start;
+
+      .record{
+           margin: 0 2px 0 0; 
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background: #94919117;
+           border: 1px solid rgb(215, 215, 215);
+           width: 25px !important;
+           height: 25px !important;
+           border-radius: 50%;
+           font-size: 12px;
+           text-align: center;
+       }
+     }
+
+  }
+
+
+
+
+    h3 {
+      font-size: 50px;
+      margin: 0;
+
+      @media screen and (max-width: 991px) {
+        font-size: 30px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+
+
+    }
+  }
+
+
+  
+}
+  .banner-info{
+    h1 {
+      font-size: 50px;
+      margin: 0;
+      font-style: normal !important;
+      text-align: start !important;
+
+      @media screen and (max-width: 991px) {
+        font-size: 60px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
+
+    .region{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      img{
+        width: 40px;
+      }
+  
+      span{
+        font-size: 18px;
+        color: white;
+      }
+    }
+
+
+  }
+
+}
+
+
+
+.bbt{
+  border-top: 0.5px solid #ffffff48 ;
+}
+
+.record-mobile{
+
+  padding: 10px;
+  margin-bottom: 25px;
+
+
+
+
+  .card-round-record{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    .record{
+         margin: 0 2px 0 0; 
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #94919117;
+         border: 1px solid rgb(215, 215, 215);
+         width: 25px !important;
+         height: 25px !important;
+         border-radius: 50%;
+         font-size: 12px;
+         text-align: center;
+     }
+   }
+}

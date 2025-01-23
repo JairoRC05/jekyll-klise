@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /team/:title.html
+permalink: /teams/:title.html
 categories: ROCT PLATA A GNORTE
 liga: LIGA INDIGO
 maincover: /assets/logos/EA.png
@@ -14,19 +14,46 @@ color: black
 puntosLJ202404: 10
 grupo: sur
 background: ETERNAL
+region: LAN
+pais: mx
+team2: ETERNAL ASCENSION
+ligas: 
+cxf: 
 cover: /assets/backCard.png
 team: ETERNAL ASCENSION
 ID: EA
-puntos: 2
-pj: 8
+puntos: 6
 rec1: loss
 rec2: one
 rec3: one
 rec4: des
 rec5: loss
-rec6: 
-rec7: 
-rec8: 
-rec9: 
-team2: ETERNAL ASCENSION
+rec6: win
+rec7: loss
+rec8: sup
+rec9: loss
+rec10: 
+rec11: 
+E1: TUT
+E2: RUBY
+E3: AEP
+E4: 
+E5: VNM
+E6: TR
+E7: E
+E8: OBS
+E9: FTB
+E10: FNX
+E11: TAE
+F1: 
+F2: 
+F3: 
+F4: 
+F5: 
+F6: 
+F7: 
+F8: 
+F9: 
+F10: 
+F11:
 ---

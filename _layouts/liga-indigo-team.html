@@ -7,47 +7,99 @@ permalink:
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="bg-cham">
+<body class="bg-home">
 
-  <nav class="navbar top sticky-top">
-    <div class="container d-flex  justify-content-between align-items-center">
-      <a href="/"><span class="navbar-brand mb-0 h1 text-white">LA REPÚBLICA DEL UNITE</span></a>
-      <div class="d-none d-lg-block">
-        <span class="navbar-brand mb-0 h1 text-white"><a href="/reglamento-oct" class="text-white">REGLAMENTO</a></span>
-      </div>
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
     </div>
   </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="#norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="#sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="#online" class="text-white">STREAMS</a></span>
+    
+      </div>
  
+    </div>
+  
+  </nav>
   
   
   
-  <div class="container-fluid banner">
-    <div class="container bannerPromo d-flex flex-cloumn justify-content-start align-items-center">
-      
-      <a href="{{page.maincover}}" role="button" download="{{ page.title | escape }}.png">
-        <img src="{{page.maincover}}" class="drop img-fluid" alt="" ">
+  <div class="container-fluid banner_bg_team bg-cham">
+    <div class="container banner_team">
+      <a href="/assets/logos/{{page.ID}}.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/{{page.ID}}.webp" class="drop img-fluid" alt="" ">
       </a>
       <div class="bannerText">
-        <h1 class="exo-style">{{page.team}}</h1>
-        <span class="exo">{{page.ID}} ● {{page.puntos}} puntos</span>
+      <div class="record-line">
+        {% if page.ligas.size == 1 %}
+        <div class="trofeos">
+          <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.ligas}}</span>
+        </div>
+        {% else %}
+        {% endif %}
+        {% if page.cxf.size == 1 %}
+        <div class="trofeos ms-2">
+          <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.cxf}}</span>
+        </div>
+        {% else %}
+        {% endif %}
+        {% if page.cham.size == 1 %}
+        <div class="trofeos ms-2">
+          <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.cham}}</span>
+        </div>
+        {% else %}
+        {% endif %}
       </div>
-      
+        <h1 class="exo-style d-none d-md-block">{{page.team}}</h1>
+        <span class="exo d-none d-md-block">{{page.ID}} ● {{page.puntos}} puntos</span>
+        <div class="region">
+          <div class="localization">
+            <img src="https://flagcdn.com/h20/{{page.pais}}.webp"  alt="REGION: {{page.region}}">
+          <span class="ms-2"> {{page.region}}</span>
+          </div>
+          {% include rounds-teams.html %}
+        </div>
+      </div>
+    </div>
+    <div class="container banner-info d-block d-sm-none p-0">
+      <h1 class="exo-style">{{page.team}}</h1>
+      <span class="exo">{{page.ID}} ● {{page.puntos}} puntos</span>
+      <div class="region">
+        <img src="https://flagcdn.com/h20/{{page.pais}}.webp"  alt="REGION: {{page.region}}">
+        <span class="ms-2"> {{page.region}}</span>
+      </div>
     </div>
   </div>
 
+  <div class="container-fluid bg-cham d-block d-md-none">
+    <div class="container record-mobile bbt">
+      {% include rounds-teams.html %}
+  </div>
+  </div>
   <div id="stars1"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
   
-  
 
 
-
-
-
-
-    <!-- {% include temporada.html %} -->
-
+  {% include match-teams.html %}
 
   <div class="container teams-table"  id="home">  
       <h1 class="teams-title mt-5 mb-5">PATROCINADORES</h1>

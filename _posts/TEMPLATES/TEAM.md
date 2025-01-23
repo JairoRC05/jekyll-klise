@@ -1,9 +1,7 @@
 ---
 layout: liga-indigo-team
-permalink: /team/:title.html
+permalink: /teams/:title.html
 categories: 
-maincover: 
-puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700
 title: 
 tags: 
@@ -11,38 +9,42 @@ grupo:
 background: 
 team: 
 ID: 
+region: LAN
+pais: mx
+ligas: 
+cxf: 
 puntos: 
 rec1: 
-E1: 
-F1: 
 rec2: 
-E2: 
-F2: 
 rec3: 
-E3: 
-F3: 
 rec4: 
-E4: 
-F4: 
 rec5: 
-E5: 
-F5: 
 rec6: 
-E6: 
-F6: 
-E7: 
 rec7: 
-F7: 
 rec8: 
-E8: 
-F8: 
 rec9: 
-E9: 
-F9: 
 rec10: 
-E10: 
-F10: 
 rec11: 
+E1: 
+E2: 
+E3: 
+E4: 
+E5: 
+E6: 
+E7: 
+E8: 
+E9: 
+E10: 
 E11: 
+F1: 
+F2: 
+F3: 
+F4: 
+F5: 
+F6: 
+F7: 
+F8: 
+F9: 
+F10: 
 F11:
 ---
