@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LD8 PROMO
+categories: LD8
 liga: LIGA INDIGO
 match: 6
 local: EA

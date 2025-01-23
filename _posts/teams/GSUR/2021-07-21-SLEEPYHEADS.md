@@ -18,7 +18,7 @@ ID: SPH
 region: LAN
 pais: mx
 ligas: "1"
-puntos: 8
+puntos: 11
 pj: 7
 rec1: sup
 rec2: sup
@@ -26,8 +26,8 @@ rec3: des
 rec4: sup
 rec5: sup
 rec6: 
-rec7: 
-rec8: 
+rec7: sup
+rec8: one
 rec9: 
 cxf: 
 rec10: 

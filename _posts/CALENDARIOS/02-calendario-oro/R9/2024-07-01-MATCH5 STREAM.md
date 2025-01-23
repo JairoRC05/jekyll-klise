@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LO9 PROMO
+categories: LO9
 liga: LIGA INDIGO
 match: 5
 local: DARK

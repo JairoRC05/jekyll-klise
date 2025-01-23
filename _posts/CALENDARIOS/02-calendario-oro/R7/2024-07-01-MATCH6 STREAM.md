@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LO7 E7  PROMO
+categories: LO7
 liga: LIGA INDIGO
 match: 6
 local: AD

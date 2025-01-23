@@ -14,20 +14,20 @@ grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 7
+puntos: 12
 tags: 
 region: LAN
 pais: mx
 ligas: 
 cxf: 
-rec1: 
-rec2: 
-rec3: 
-rec4: 
-rec5: 
-rec6: 
-rec7: 
-rec8: 
+rec1: des
+rec2: sup
+rec3: sup
+rec4: one
+rec5: sup
+rec6: sup
+rec7: one
+rec8: sup
 rec9: 
 rec10: 
 rec11: 
