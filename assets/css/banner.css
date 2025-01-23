@@ -716,8 +716,9 @@
       display: flex;
       justify-content: start;
       align-items: center;
-      img{
-        width: 40px;
+
+      .flag{
+        width: 30px;
       }
   
       span{
