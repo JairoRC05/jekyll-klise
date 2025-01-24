@@ -6,49 +6,121 @@ layout:
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
 {% include header.html %}
 
-<body class="bg-cham">
+<body class="bg-home">
   
+  <nav class="navbar top sticky-top indigo-yellow d-none d-lg-block">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      
+
+      <div class="d-none d-md-block text-white">
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
+
+        {% if page.grupo == "NORTE" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+
+        {% elsif page.grupo == "SUR" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        {% else %}
+        {% endif %}
+      </div>
+ 
+    </div>
+  </nav>
+
 
   
-  {% include navbar-top.html %}
-    
-    
- 
- <div class="container-fluid ">
-   <div class="container p-0">
- 
-        <div class="banner-card-round-mvp">
-          <div class="card-mvp">
-            <a href="{{page.url}}"> <img src="/assets/avatars/{{page.sex}}.webp" alt="{{page.title}}"></a>
-            <div class="card-mvp-title">
-              <p class="mvp-title exo-style">{{page.title | truncate: 12}}</p>
-              {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
-              <p>DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
-              {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
-              <p>RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
-              {% elsif page.team == "E" %}
-              <p>AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
-              {% else %}
-              <p>{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</p>
-              {% endif %}
-              
-            </div>
-          </div>
-          <div class="card-mvp-number">
-           
-          </div>
-         
-         
-          <div class="card-back">
-            <div class="card-mvp-team d-none d-md-block">
-              <img src="/assets/logos/{{page.team}}.png" alt="MVPS Team: {{page.team}}">
-            </div>
-            <div class="card-color-left"> </div>  
-          </div>
-  
+  <div class="container-fluid banner_bg_team bg-cham">
+    <div class="container banner_team">
+      <a href="{{page.url}}">
+        <img src="/assets/avatars/{{page.sex}}.webp" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+      <div class="record-line">
+        {% if page.ligas.size == 1 %}
+        <div class="trofeos">
+          <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.ligas}}</span>
         </div>
-  </div> 
- </div>
+        {% else %}
+        {% endif %}
+        {% if page.cxf.size == 1 %}
+        <div class="trofeos ms-2">
+          <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.cxf}}</span>
+        </div>
+        {% else %}
+        {% endif %}
+        {% if page.cham.size == 1 %}
+        <div class="trofeos ms-2">
+          <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
+          <span>{{page.cham}}</span>
+        </div>
+        {% else %}
+        {% endif %}
+      </div>
+        <h1 class="exo-style d-none d-md-block">{{page.title}}</h1>
+        {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
+        <span class="exo d-none d-md-block">DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
+        <span class="exo d-none d-md-block">RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        {% elsif page.team == "E" %}
+        <span class="exo d-none d-md-block">AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        {% else %}
+        <span class="exo d-none d-md-block">{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        {% endif %}
+        <div class="region">
+          {% if page.pais.size > 1 %}
+          <div class="localization">
+            <img src="https://flagcdn.com/h20/{{page.pais}}.webp"  alt="REGION: {{page.region}}">
+          <span class="ms-2"> {{page.region}}</span>
+          </div>
+          {% endif %}
+          {% include rounds-mvps.html %}
+        </div>
+      </div>
+    </div>
+    <div class="container banner-info d-block d-sm-none p-0">
+      <h1 class="exo-style">{{page.title}}</h1>
+      {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
+      <span class="exo ">DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
+      <span class="exo ">RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      {% elsif page.team == "E" %}
+      <span class="exo ">AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      {% else %}
+      <span class="exo ">{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      {% endif %}
+
+      {% if page.pais.size > 1 %}
+      <div class="region">
+        <img src="https://flagcdn.com/h20/{{page.pais}}.webp"  alt="REGION: {{page.region}}" class="flag">
+        <span class="ms-2"> {{page.region}}</span>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid bg-cham d-block d-md-none">
+    <div class="container record-mobile bbt">
+      {% include rounds-mvps.html %}
+  </div>
+  </div>
+
 
 
   <div class="container teams-table"  id="home">
@@ -381,10 +453,6 @@ layout:
 
 
 
-
-    <!-- {% include temporada.html %} -->
-
-
   <div class="container teams-table mb-5"  id="home">  
       <h1 class="teams-title mt-md-5 mb-md-5">PATROCINADORES</h1>
       {% include sponsors.html %}
@@ -428,19 +496,7 @@ layout:
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-  $(document).ready(function() {
-          // Transition effect for navbar 
-          $(window).scroll(function() {
-            // checks if window is scrolled more than 500px, adds/removes solid class
-            if($(this).scrollTop() > 30 ) { 
-                $('.top').addClass('bg-cham');
-            } else {
-                $('.top').removeClass('bg-cham');
-            }
-          });
-  });
-  </script>
+
   {% include g-analytics.html %}
 
 

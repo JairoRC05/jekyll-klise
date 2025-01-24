@@ -7,7 +7,7 @@ tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: ALLENDART
 team: TAD
-MVPS: 4
+MVPS: 7
 sex: male1
 play1: SI
 match1: TSR
@@ -33,12 +33,12 @@ no7:
 play8: 
 match8: 
 no8: 
-play9: 
-match9: 
-no9: 
-play10: 
-match10: 
-no10: 
+play9: SI
+match9: VOLT
+no9: 2
+play10: SI
+match10: AD
+no10: 1
 play11: 
 match11: 
 no11:

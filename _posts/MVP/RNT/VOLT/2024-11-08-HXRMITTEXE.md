@@ -6,8 +6,8 @@ sex: male1
 tickets: 
 date: 2020-08-29 10:29:20 +0700
 title: HXRMITTEXE99%
-team: DARK
-MVPS: 3
+team: VOLT
+MVPS: 4
 play1: SI
 match1: ZTG
 no1: 1
@@ -35,9 +35,9 @@ no8:
 play9: 
 match9: 
 no9: 
-play10: 
-match10: 
-no10: 
+play10: SI
+match10: STMN
+no10: 1
 play11: 
 match11: 
 no11:
