@@ -20,10 +20,11 @@
        
        
         <div class="card-back">
+          <div class="card-color-left {{post.team}}"> </div> 
           <div class="card-mvp-team">
-            <img src="/assets/logos/{{post.team}}.png" alt="MVPS Team: {{post.team}}">
+            <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
           </div>
-          <div class="card-color-left {{post.team}}"> </div>  
+       
         </div>
 
       </div>
@@ -37,7 +38,7 @@
   <div class="row team--last">
     {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
     | reverse %}
-    {%- for post in LIGA -%}
+    {%- for post in LIGA offset:1 -%}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
          <div class="card-mvp">
@@ -52,10 +53,11 @@
           <p>MVPS</p>
         </div>
         <div class="card-back">
-          <div class="card-mvp-team">
-            <img src="/assets/logos/{{post.team}}.png" alt="MVPS Team: {{post.team}}">
-          </div>
           <div class="card-color-left {{post.team}}"> </div>  
+          <div class="card-mvp-team">
+            <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
+          </div>
+          
         </div>
       </div>
     </div>

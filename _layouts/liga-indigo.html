@@ -24,11 +24,18 @@ layout:
         <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
       </a>
 
-      <div class="d-none d-md-block text-white">
+      
 
-        <span class="navbar-brand mb-0 h1"><a href="#norte" class="text-white">GALAXIA NORTE</a></span>
-        <span class="navbar-brand mb-0 h1"><a href="#sur" class="text-white">GALAXIA SUR</a></span>
-    
+      <div class="d-none d-md-block text-white">
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
+
+        {% if page.grupo == "NORTE" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+
+        {% elsif page.grupo == "SUR" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        {% else %}
+        {% endif %}
       </div>
  
     </div>

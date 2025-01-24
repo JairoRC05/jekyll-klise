@@ -32,7 +32,7 @@ rec6: win
 rec7: loss
 rec8: sup
 rec9: loss
-rec10: 
+rec10: loss
 rec11: 
 E1: TUT
 E2: RUBY

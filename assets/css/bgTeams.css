@@ -766,3 +766,48 @@ background-blend-mode: multiply;
 }
 
 
+.bg-play-match{
+  background: rgb(0,255,8) !important;
+background: radial-gradient(circle, rgba(0,255,8,1) 0%, rgba(0,112,45,1) 100%) !important;
+color: #ffffff !important;
+}
+
+.bg-noplay-match{
+  background: rgb(255,0,0) !important;
+background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(89,0,0,1) 100%) !important;
+color: #ffffff !important;
+}
+
+
+.sup{
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%) !important;
+color: #fff;
+
+  }
+  .win{
+  background: green !important;
+  color: white !important;
+  border: none !important;
+  }
+  .loss{
+  background: red !important;
+  color: white !important;
+  border: none !important;
+  }
+  .one{
+  background:yellow !important;
+  color: #000 !important;
+  border: none !important;
+  }
+  
+  .des{
+  background:rgb(255, 0, 195) !important;
+  color: #ffffff !important;
+  border: none !important;
+  }
+  
+  .rea{
+      background:rgb(0, 0, 0) !important;
+      color: white !important;
+      border: none !important;
+  }

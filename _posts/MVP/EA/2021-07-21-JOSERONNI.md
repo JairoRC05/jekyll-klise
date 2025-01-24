@@ -7,7 +7,7 @@ tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: JOSERONNI
 team: EA
-MVPS: 1
+MVPS: 2
 sex: male1
 play1: 
 match1: 
@@ -27,9 +27,9 @@ no5:
 play6: 
 match6: 
 no6: 
-play7: 
-match7: 
-no7: 
+play7: SI
+match7: E
+no7: 1
 play8: 
 match8: 
 no8: 

@@ -81,7 +81,7 @@ rr9: 0
 bg9: rock
 pt9: 0
 pj9: 0
-stream: <i class="fa-brands fa-twitch text-white"></i>
+stream: <i class="fa-brands fa-twitch"></i>
 dia: 30
 hora: 22:10
 ---

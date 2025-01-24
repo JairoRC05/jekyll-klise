@@ -202,6 +202,6 @@ r11:
 rr11: 
 pt11: 
 pj11: 
-stream: <i class="fa-brands fa-twitch text-white"></i>
+stream: <i class="fa-brands fa-twitch"></i>
 dia: 25
 hora: '21:10'

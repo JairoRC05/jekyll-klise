@@ -22,7 +22,7 @@ rec3: win
 rec4: one
 rec5: one
 rec6: loss
-rec7: rea
+rec7: sup
 rec8: loss
 rec9: rea
 region: LAN

@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LD10 PROMO
+categories: LD10
 liga: LIGA INDIGO
 match: 6
 local: AEP

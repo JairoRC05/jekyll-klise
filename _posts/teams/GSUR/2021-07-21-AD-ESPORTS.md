@@ -17,7 +17,7 @@ abr: AOS
 background: "#F16C38"
 cover: AD
 ID: AD
-puntos: 11
+puntos: 12
 region: LAN
 ligas: 
 pais: mx
@@ -26,12 +26,12 @@ rec2: one
 rec3: win
 rec4: win
 rec5: win
-rec6: 
+rec6: loss
 rec7: sup
 rec8: one
 rec9: des
 cxf: 
-rec10: 
+rec10: one
 rec11: 
 E1: STMN
 E2: ZTG

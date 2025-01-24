@@ -17,7 +17,7 @@ puntosLJ202404: 20
 grupo: sur
 background: "#F16C38"
 cover: /assets/backCard.png
-puntos: 16
+puntos: 19
 region: LAN
 pais: mx
 cxf: 
@@ -31,7 +31,7 @@ rec6: sup
 rec7: sup
 rec8: win
 rec9: sup
-rec10: 
+rec10: sup
 rec11: des
 E1: VNM
 E2: TR

@@ -1,14 +1,17 @@
 ---
 layout: 
 permalink: 
-categories: LD7
+categories: LD7 PROMO
 liga: LIGA INDIGO
 match: 4
 local: AEP
 r1: 0
 r2: 0
 out: TR
-stream: 
+stream: SI
 hora: 
-fecha:
+fecha: 25 ENE
+ronda: "7"
+reagendado: SI
 ---
+	
