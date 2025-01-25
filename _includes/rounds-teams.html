@@ -1,137 +1,420 @@
+{% if page.grupo == "NORTE" %}
+{% assign norte = site.categories.GNORTE | sort: "puntos" | reverse %}
+{%- for post in norte limit:1 -%}
 <div class="card-round-title">
     <div class="card-round-record">
-      {% if page.rec1 == "win" or page.rec1 == "sup" %}
-      <span class="record {{page.rec1}}">W</span>
-      {% elsif page.rec1 == "loss" or page.rec1 == "one" %}
-      <span class="record {{page.rec1}}">L</span>
-      {% elsif page.rec1 == "rea" %}
-      <span class="record {{page.rec1}}">R</span>
-      {% elsif page.rec1 == "des" %}
-      <span class="record {{page.rec1}}">D</span>
+      {% if post.rec1 == "win" or post.rec1 == "sup" %}
+      <span class="record {{post.rec1}}">W</span>
+      {% elsif post.rec1 == "loss" or post.rec1 == "one" %}
+      <span class="record {{post.rec1}}">L</span>
+      {% elsif post.rec1 == "rea" %}
+      <span class="record {{post.rec1}}">R</span>
+      {% elsif post.rec1 == "des" %}
+      <span class="record {{post.rec1}}">D</span>
       {% else %}
       <span class="record"></span>
       {% endif %}
 
-      {% if page.rec2 == "win" or page.rec2 == "sup" %}
-      <span class="record {{page.rec2}}">W</span>
-      {% elsif page.rec2 == "loss" or page.rec2 == "one" %}
-      <span class="record {{page.rec2}}">L</span>
-      {% elsif page.rec2 == "rea" %}
-      <span class="record {{page.rec2}}">R</span>
-      {% elsif page.rec2 == "des" %}
-      <span class="record {{page.rec2}}">D</span>
+      {% if post.rec2 == "win" or post.rec2 == "sup" %}
+      <span class="record {{post.rec2}}">W</span>
+      {% elsif post.rec2 == "loss" or post.rec2 == "one" %}
+      <span class="record {{post.rec2}}">L</span>
+      {% elsif post.rec2 == "rea" %}
+      <span class="record {{post.rec2}}">R</span>
+      {% elsif post.rec2 == "des" %}
+      <span class="record {{post.rec2}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec3 == "win" or page.rec3 == "sup" %}
-      <span class="record {{page.rec3}}">W</span>
-      {% elsif page.rec3 == "loss" or page.rec3 == "one" %}
-      <span class="record {{page.rec3}}">L</span>
-      {% elsif page.rec3 == "rea" %}
-      <span class="record {{page.rec3}}">R</span>
-      {% elsif page.rec3 == "des" %}
-      <span class="record {{page.rec3}}">D</span>
+      {% if post.rec3 == "win" or post.rec3 == "sup" %}
+      <span class="record {{post.rec3}}">W</span>
+      {% elsif post.rec3 == "loss" or post.rec3 == "one" %}
+      <span class="record {{post.rec3}}">L</span>
+      {% elsif post.rec3 == "rea" %}
+      <span class="record {{post.rec3}}">R</span>
+      {% elsif post.rec3 == "des" %}
+      <span class="record {{post.rec3}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec4 == "win" or page.rec4 == "sup" %}
-      <span class="record {{page.rec4}}">W</span>
-      {% elsif page.rec4 == "loss" or page.rec4 == "one" %}
-      <span class="record {{page.rec4}}">L</span>
-      {% elsif page.rec4 == "rea" %}
-      <span class="record {{page.rec4}}">R</span>
-      {% elsif page.rec4 == "des" %}
-      <span class="record {{page.rec1}}">D</span>
+      {% if post.rec4 == "win" or post.rec4 == "sup" %}
+      <span class="record {{post.rec4}}">W</span>
+      {% elsif post.rec4 == "loss" or post.rec4 == "one" %}
+      <span class="record {{post.rec4}}">L</span>
+      {% elsif post.rec4 == "rea" %}
+      <span class="record {{post.rec4}}">R</span>
+      {% elsif post.rec4 == "des" %}
+      <span class="record {{post.rec5}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec5 == "win" or page.rec5 == "sup" %}
-      <span class="record {{page.rec5}}">W</span>
-      {% elsif page.rec5 == "loss" or page.rec5 == "one" %}
-      <span class="record {{page.rec5}}">L</span>
-      {% elsif page.rec5 == "rea" %}
-      <span class="record {{page.rec5}}">R</span>
-      {% elsif page.rec5 == "des" %}
-      <span class="record {{page.rec1}}">D</span>
+      {% if post.rec5 == "win" or post.rec5 == "sup" %}
+      <span class="record {{post.rec5}}">W</span>
+      {% elsif post.rec5 == "loss" or post.rec5 == "one" %}
+      <span class="record {{post.rec5}}">L</span>
+      {% elsif post.rec5 == "rea" %}
+      <span class="record {{post.rec5}}">R</span>
+      {% elsif post.rec5 == "des" %}
+      <span class="record {{post.rec5}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec6 == "win" or page.rec6 == "sup" %}
-      <span class="record {{page.rec6}}">W</span>
-      {% elsif page.rec6 == "loss" or page.rec6 == "one" %}
-      <span class="record {{page.rec6}}">L</span>
-      {% elsif page.rec6 == "rea" %}
-      <span class="record {{page.rec6}}">R</span>
-      {% elsif page.rec6 == "des" %}
-      <span class="record {{page.rec6}}">D</span>
+      {% if post.rec6 == "win" or post.rec6 == "sup" %}
+      <span class="record {{post.rec6}}">W</span>
+      {% elsif post.rec6 == "loss" or post.rec6 == "one" %}
+      <span class="record {{post.rec6}}">L</span>
+      {% elsif post.rec6 == "rea" %}
+      <span class="record {{post.rec6}}">R</span>
+      {% elsif post.rec6 == "des" %}
+      <span class="record {{post.rec6}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec7 == "win" or page.rec7 == "sup" %}
-      <span class="record {{page.rec7}}">W</span>
-      {% elsif page.rec7 == "loss" or page.rec7 == "one" %}
-      <span class="record {{page.rec7}}">L</span>
-      {% elsif page.rec7 == "rea" %}
-      <span class="record {{page.rec7}}">R</span>
-      {% elsif page.rec7 == "des" %}
-      <span class="record {{page.rec7}}">D</span>
+      {% if post.rec7 == "win" or post.rec7 == "sup" %}
+      <span class="record {{post.rec7}}">W</span>
+      {% elsif post.rec7 == "loss" or post.rec7 == "one" %}
+      <span class="record {{post.rec7}}">L</span>
+      {% elsif post.rec7 == "rea" %}
+      <span class="record {{post.rec7}}">R</span>
+      {% elsif post.rec7 == "des" %}
+      <span class="record {{post.rec7}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec8 == "win" or page.rec8 == "sup" %}
-      <span class="record {{page.rec8}}">W</span>
-      {% elsif page.rec8 == "loss" or page.rec8 == "one" %}
-      <span class="record {{page.rec8}}">L</span>
-      {% elsif page.rec8 == "rea" %}
-      <span class="record {{page.rec8}}">R</span>
-      {% elsif page.rec8 == "des" %}
-      <span class="record {{page.rec8}}">D</span>
+      {% if post.rec8 == "win" or post.rec8 == "sup" %}
+      <span class="record {{post.rec8}}">W</span>
+      {% elsif post.rec8 == "loss" or post.rec8 == "one" %}
+      <span class="record {{post.rec8}}">L</span>
+      {% elsif post.rec8 == "rea" %}
+      <span class="record {{post.rec8}}">R</span>
+      {% elsif post.rec8 == "des" %}
+      <span class="record {{post.rec8}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec9 == "win" or page.rec9 == "sup" %}
-      <span class="record {{page.rec9}}">W</span>
-      {% elsif page.rec9 == "loss" or page.rec9 == "one" %}
-      <span class="record {{page.rec9}}">L</span>
-      {% elsif page.rec9 == "rea" %}
-      <span class="record {{page.rec9}}">R</span>
-      {% elsif page.rec9 == "des" %}
-      <span class="record {{page.rec9}}">D</span>
+      {% if post.rec9 == "win" or post.rec9 == "sup" %}
+      <span class="record {{post.rec9}}">W</span>
+      {% elsif post.rec9 == "loss" or post.rec9 == "one" %}
+      <span class="record {{post.rec9}}">L</span>
+      {% elsif post.rec9 == "rea" %}
+      <span class="record {{post.rec9}}">R</span>
+      {% elsif post.rec9 == "des" %}
+      <span class="record {{post.rec9}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec10 == "win" or page.rec10 == "sup" %}
-      <span class="record {{page.rec10}}">W</span>
-      {% elsif page.rec10 == "loss" or page.rec10 == "one" %}
-      <span class="record {{page.rec10}}">L</span>
-      {% elsif page.rec10 == "rea" %}
-      <span class="record {{page.rec10}}">R</span>
-      {% elsif page.rec10 == "des" %}
-      <span class="record {{page.rec10}}">D</span>
+      {% if post.rec10 == "win" or post.rec10 == "sup" %}
+      <span class="record {{post.rec10}}">W</span>
+      {% elsif post.rec10 == "loss" or post.rec10 == "one" %}
+      <span class="record {{post.rec10}}">L</span>
+      {% elsif post.rec10 == "rea" %}
+      <span class="record {{post.rec10}}">R</span>
+      {% elsif post.rec10 == "des" %}
+      <span class="record {{post.rec10}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
-      {% if page.rec11 == "win" or page.rec11 == "sup" %}
-      <span class="record {{page.rec11}}">W</span>
-      {% elsif page.rec11 == "loss" or page.rec11 == "one" %}
-      <span class="record {{page.rec11}}">L</span>
-      {% elsif page.rec11 == "rea" %}
-      <span class="record {{page.rec11}}">R</span>
-      {% elsif page.rec11 == "des" %}
-      <span class="record {{page.rec11}}">D</span>
+      {% if post.rec11 == "win" or post.rec11 == "sup" %}
+      <span class="record {{post.rec11}}">W</span>
+      {% elsif post.rec11 == "loss" or post.rec11 == "one" %}
+      <span class="record {{post.rec11}}">L</span>
+      {% elsif post.rec11 == "rea" %}
+      <span class="record {{post.rec11}}">R</span>
+      {% elsif post.rec11 == "des" %}
+      <span class="record {{post.rec11}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
 
     </div>
 </div>
+{%- endfor -%}
 
+{% elsif page.grupo == "SUR" %}
+{% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+{%- for post in norte limit:1 -%}
+<div class="card-round-title">
+    <div class="card-round-record">
+      {% if post.rec1 == "win" or post.rec1 == "sup" %}
+      <span class="record {{post.rec1}}">W</span>
+      {% elsif post.rec1 == "loss" or post.rec1 == "one" %}
+      <span class="record {{post.rec1}}">L</span>
+      {% elsif post.rec1 == "rea" %}
+      <span class="record {{post.rec1}}">R</span>
+      {% elsif post.rec1 == "des" %}
+      <span class="record {{post.rec1}}">D</span>
+      {% else %}
+      <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec2 == "win" or post.rec2 == "sup" %}
+      <span class="record {{post.rec2}}">W</span>
+      {% elsif post.rec2 == "loss" or post.rec2 == "one" %}
+      <span class="record {{post.rec2}}">L</span>
+      {% elsif post.rec2 == "rea" %}
+      <span class="record {{post.rec2}}">R</span>
+      {% elsif post.rec2 == "des" %}
+      <span class="record {{post.rec2}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec3 == "win" or post.rec3 == "sup" %}
+      <span class="record {{post.rec3}}">W</span>
+      {% elsif post.rec3 == "loss" or post.rec3 == "one" %}
+      <span class="record {{post.rec3}}">L</span>
+      {% elsif post.rec3 == "rea" %}
+      <span class="record {{post.rec3}}">R</span>
+      {% elsif post.rec3 == "des" %}
+      <span class="record {{post.rec3}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec4 == "win" or post.rec4 == "sup" %}
+      <span class="record {{post.rec4}}">W</span>
+      {% elsif post.rec4 == "loss" or post.rec4 == "one" %}
+      <span class="record {{post.rec4}}">L</span>
+      {% elsif post.rec4 == "rea" %}
+      <span class="record {{post.rec4}}">R</span>
+      {% elsif post.rec4 == "des" %}
+      <span class="record {{post.rec5}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec5 == "win" or post.rec5 == "sup" %}
+      <span class="record {{post.rec5}}">W</span>
+      {% elsif post.rec5 == "loss" or post.rec5 == "one" %}
+      <span class="record {{post.rec5}}">L</span>
+      {% elsif post.rec5 == "rea" %}
+      <span class="record {{post.rec5}}">R</span>
+      {% elsif post.rec5 == "des" %}
+      <span class="record {{post.rec5}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec6 == "win" or post.rec6 == "sup" %}
+      <span class="record {{post.rec6}}">W</span>
+      {% elsif post.rec6 == "loss" or post.rec6 == "one" %}
+      <span class="record {{post.rec6}}">L</span>
+      {% elsif post.rec6 == "rea" %}
+      <span class="record {{post.rec6}}">R</span>
+      {% elsif post.rec6 == "des" %}
+      <span class="record {{post.rec6}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec7 == "win" or post.rec7 == "sup" %}
+      <span class="record {{post.rec7}}">W</span>
+      {% elsif post.rec7 == "loss" or post.rec7 == "one" %}
+      <span class="record {{post.rec7}}">L</span>
+      {% elsif post.rec7 == "rea" %}
+      <span class="record {{post.rec7}}">R</span>
+      {% elsif post.rec7 == "des" %}
+      <span class="record {{post.rec7}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec8 == "win" or post.rec8 == "sup" %}
+      <span class="record {{post.rec8}}">W</span>
+      {% elsif post.rec8 == "loss" or post.rec8 == "one" %}
+      <span class="record {{post.rec8}}">L</span>
+      {% elsif post.rec8 == "rea" %}
+      <span class="record {{post.rec8}}">R</span>
+      {% elsif post.rec8 == "des" %}
+      <span class="record {{post.rec8}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec9 == "win" or post.rec9 == "sup" %}
+      <span class="record {{post.rec9}}">W</span>
+      {% elsif post.rec9 == "loss" or post.rec9 == "one" %}
+      <span class="record {{post.rec9}}">L</span>
+      {% elsif post.rec9 == "rea" %}
+      <span class="record {{post.rec9}}">R</span>
+      {% elsif post.rec9 == "des" %}
+      <span class="record {{post.rec9}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec10 == "win" or post.rec10 == "sup" %}
+      <span class="record {{post.rec10}}">W</span>
+      {% elsif post.rec10 == "loss" or post.rec10 == "one" %}
+      <span class="record {{post.rec10}}">L</span>
+      {% elsif post.rec10 == "rea" %}
+      <span class="record {{post.rec10}}">R</span>
+      {% elsif post.rec10 == "des" %}
+      <span class="record {{post.rec10}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+      {% if post.rec11 == "win" or post.rec11 == "sup" %}
+      <span class="record {{post.rec11}}">W</span>
+      {% elsif post.rec11 == "loss" or post.rec11 == "one" %}
+      <span class="record {{post.rec11}}">L</span>
+      {% elsif post.rec11 == "rea" %}
+      <span class="record {{post.rec11}}">R</span>
+      {% elsif post.rec11 == "des" %}
+      <span class="record {{post.rec11}}">D</span>
+      {% else %}
+            <span class="record"></span>
+      {% endif %}
+
+    </div>
+</div>
+{%- endfor -%}
+
+{% else %}
+<div class="card-round-title">
+      <div class="card-round-record">
+        {% if page.rec1 == "win" or page.rec1 == "sup" %}
+        <span class="record {{page.rec1}}">W</span>
+        {% elsif page.rec1 == "loss" or page.rec1 == "one" %}
+        <span class="record {{page.rec1}}">L</span>
+        {% elsif page.rec1 == "rea" %}
+        <span class="record {{page.rec1}}">R</span>
+        {% elsif page.rec1 == "des" %}
+        <span class="record {{page.rec1}}">D</span>
+        {% else %}
+        <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec2 == "win" or page.rec2 == "sup" %}
+        <span class="record {{page.rec2}}">W</span>
+        {% elsif page.rec2 == "loss" or page.rec2 == "one" %}
+        <span class="record {{page.rec2}}">L</span>
+        {% elsif page.rec2 == "rea" %}
+        <span class="record {{page.rec2}}">R</span>
+        {% elsif page.rec2 == "des" %}
+        <span class="record {{page.rec2}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec3 == "win" or page.rec3 == "sup" %}
+        <span class="record {{page.rec3}}">W</span>
+        {% elsif page.rec3 == "loss" or page.rec3 == "one" %}
+        <span class="record {{page.rec3}}">L</span>
+        {% elsif page.rec3 == "rea" %}
+        <span class="record {{page.rec3}}">R</span>
+        {% elsif page.rec3 == "des" %}
+        <span class="record {{page.rec3}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec4 == "win" or page.rec4 == "sup" %}
+        <span class="record {{page.rec4}}">W</span>
+        {% elsif page.rec4 == "loss" or page.rec4 == "one" %}
+        <span class="record {{page.rec4}}">L</span>
+        {% elsif page.rec4 == "rea" %}
+        <span class="record {{page.rec4}}">R</span>
+        {% elsif page.rec4 == "des" %}
+        <span class="record {{page.rec4}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec5 == "win" or page.rec5 == "sup" %}
+        <span class="record {{page.rec5}}">W</span>
+        {% elsif page.rec5 == "loss" or page.rec5 == "one" %}
+        <span class="record {{page.rec5}}">L</span>
+        {% elsif page.rec5 == "rea" %}
+        <span class="record {{page.rec5}}">R</span>
+        {% elsif page.rec5 == "des" %}
+        <span class="record {{page.rec5}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec6 == "win" or page.rec6 == "sup" %}
+        <span class="record {{page.rec6}}">W</span>
+        {% elsif page.rec6 == "loss" or page.rec6 == "one" %}
+        <span class="record {{page.rec6}}">L</span>
+        {% elsif page.rec6 == "rea" %}
+        <span class="record {{page.rec6}}">R</span>
+        {% elsif page.rec6 == "des" %}
+        <span class="record {{page.rec6}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec7 == "win" or page.rec7 == "sup" %}
+        <span class="record {{page.rec7}}">W</span>
+        {% elsif page.rec7 == "loss" or page.rec7 == "one" %}
+        <span class="record {{page.rec7}}">L</span>
+        {% elsif page.rec7 == "rea" %}
+        <span class="record {{page.rec7}}">R</span>
+        {% elsif page.rec7 == "des" %}
+        <span class="record {{page.rec7}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec8 == "win" or page.rec8 == "sup" %}
+        <span class="record {{page.rec8}}">W</span>
+        {% elsif page.rec8 == "loss" or page.rec8 == "one" %}
+        <span class="record {{page.rec8}}">L</span>
+        {% elsif page.rec8 == "rea" %}
+        <span class="record {{page.rec8}}">R</span>
+        {% elsif page.rec8 == "des" %}
+        <span class="record {{page.rec8}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec9 == "win" or page.rec9 == "sup" %}
+        <span class="record {{page.rec9}}">W</span>
+        {% elsif page.rec9 == "loss" or page.rec9 == "one" %}
+        <span class="record {{page.rec9}}">L</span>
+        {% elsif page.rec9 == "rea" %}
+        <span class="record {{page.rec9}}">R</span>
+        {% elsif page.rec9 == "des" %}
+        <span class="record {{page.rec9}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec10 == "win" or page.rec10 == "sup" %}
+        <span class="record {{page.rec10}}">W</span>
+        {% elsif page.rec10 == "loss" or page.rec10 == "one" %}
+        <span class="record {{page.rec10}}">L</span>
+        {% elsif page.rec10 == "rea" %}
+        <span class="record {{page.rec10}}">R</span>
+        {% elsif page.rec10 == "des" %}
+        <span class="record {{page.rec10}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+        {% if page.rec11 == "win" or page.rec11 == "sup" %}
+        <span class="record {{page.rec11}}">W</span>
+        {% elsif page.rec11 == "loss" or page.rec11 == "one" %}
+        <span class="record {{page.rec11}}">L</span>
+        {% elsif page.rec11 == "rea" %}
+        <span class="record {{page.rec11}}">R</span>
+        {% elsif page.rec11 == "des" %}
+        <span class="record {{page.rec11}}">D</span>
+        {% else %}
+              <span class="record"></span>
+        {% endif %}
+  
+      </div>
+  </div>
+{% endif %}

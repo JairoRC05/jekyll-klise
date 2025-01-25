@@ -337,7 +337,7 @@
         padding: 5px 0;
         justify-content: space-around;
         height: 50px;
-        margin-bottom: 0;
+        margin-bottom: 5px;
     }
 
     .card-round-team {
@@ -448,7 +448,6 @@
         overflow: hidden;
 
         @media screen and (max-width: 472px) {
-          border-radius: 0;
           border-bottom: 1px solid rgb(228, 228, 228);
         }
     }

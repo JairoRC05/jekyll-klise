@@ -3,30 +3,32 @@
     <div class="col-12 col-xl-4">
         {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
         {%- for post in norte limit:1 -%}
-        <div class="card-round-list first">
+       <div class="d-none d-md-block">
+        <div class="card-round-list">
          
-            <div class="card-round-num">
-              <h6>#1</h6>
-            </div>
-  
-            <div class="card-round-team">
-              <a href="{{post.url}}">
-                <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
-              </a>
-               
-               {% include rounds.html %}
-  
-            </div>
-              
-            <div class="card-round-pts">
-              <h6>{{post.puntos}} pts</h6>
-            </div>
-          
-              <div class="card-back">
-                <div class="card-color-left {{post.ID}}"> </div>  
-              </div>
-  
+          <div class="card-round-num">
+            <h6>#1</h6>
           </div>
+
+          <div class="card-round-team">
+            <a href="{{post.url}}">
+              <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
+            </a>
+             
+             {% include rounds.html %}
+
+          </div>
+            
+          <div class="card-round-pts">
+            <h6>{{post.puntos}} pts</h6>
+          </div>
+        
+            <div class="card-back">
+              <div class="card-color-left {{post.ID}}"> </div>  
+            </div>
+
+      </div>
+       </div>
         {%- endfor -%}
     </div>
 
