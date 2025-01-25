@@ -54,10 +54,10 @@ permalink: /liga-indigo-BRACKETS.html
 
               <div class="roundFinal text-white">
                 <div class="roundTeam">
-                  {% assign NORTE = site.categories.GNORTE %}
+                  {% assign NORTE = site.categories.GNORTE | sort: "puntos" | reverse %}
                   {%- for post in NORTE limit: 1-%}
                   <img src="/assets/logos/{{post.ID}}.png" alt="" class="img-fluid">
-                  <p>{{post.local | truncate: 8}}</p>
+                  <p>{{post.ID | truncate: 8}}</p>
                   {%- endfor -%}
                 </div>
                 <div class="roundScore">
@@ -79,8 +79,11 @@ permalink: /liga-indigo-BRACKETS.html
               {% endif %}
                 </div>
                 <div class="roundTeam">
-                  <img src="/assets/logos/{{post.out}}.png" alt="">
-                  <p>{{post.out |truncate: 8}}</p>
+                  {% assign SUR = site.categories.GSUR | sort: "puntos" | reverse %}
+                  {%- for post in SUR limit:1 offset:3 -%}
+                  <img src="/assets/logos/{{post.ID}}.png" alt="" class="img-fluid">
+                  <p>{{post.ID | truncate: 8}}</p>
+                  {%- endfor -%}
                 </div>
               </div>
             </div>
