@@ -63,9 +63,9 @@
     </div>
 
     <div class="col-12 col-xl-4">
-        {% assign norte = site.categories.GNORTE | sort: "puntos" | reverse %}
-        {%- for post in norte limit:1 offset:2 -%}
-          {% if post.place == "top" %}
+        {% assign norte = site.categories.GNORTE %}
+        {%- for post in norte  -%}
+        {% if post.place == "top" %}
          <div class="card-round-list">
          
           <div class="card-round-num">
@@ -90,11 +90,19 @@
             </div>
 
         </div>
-        {%else %}
-          <div class="card-round-list">
+        {% else %}
+        {% endif %}
+        {%- endfor -%}
+    </div>
+
+    <div class="col-12 col-xl-4">
+        {% assign norte = site.categories.GNORTE %}
+        {%- for post in norte  -%}
+        {% if post.place == "bot" %}
+        <div class="card-round-list">
          
             <div class="card-round-num">
-              <h6>#3</h6>
+              <h6>#4</h6>
             </div>
   
             <div class="card-round-team">
@@ -115,67 +123,11 @@
               </div>
   
           </div>
+          {% else %}
         {% endif %}
-
         {%- endfor -%}
     </div>
-    <div class="col-12 col-xl-4">
-        {% assign norte = site.categories.GNORTE | sort: "puntos" | reverse %}
-        {%- for post in norte limit:1 offset:3 -%}
-        {% if post.place == "bot" %}
-        <div class="card-round-list">
-        
-         <div class="card-round-num">
-           <h6>#4</h6>
-         </div>
 
-         <div class="card-round-team">
-           <a href="{{post.url}}">
-             <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
-           </a>
-            
-            {% include rounds.html %}
-
-         </div>
-           
-         <div class="card-round-pts">
-           <h6>{{post.puntos}} pts</h6>
-         </div>
-       
-           <div class="card-back">
-             <div class="card-color-left {{post.ID}}"> </div>  
-           </div>
-
-       </div>
-       {%else %}
-         <div class="card-round-list">
-        
-           <div class="card-round-num">
-             <h6>#4</h6>
-           </div>
- 
-           <div class="card-round-team">
-             <a href="{{post.url}}">
-               <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
-             </a>
-              
-              {% include rounds.html %}
- 
-           </div>
-             
-           <div class="card-round-pts">
-             <h6>{{post.puntos}} pts</h6>
-           </div>
-         
-             <div class="card-back">
-               <div class="card-color-left {{post.ID}}"> </div>  
-             </div>
- 
-         </div>
-       {% endif %}
-
-        {%- endfor -%}
-    </div>
     <div class="col-12 col-xl-4">
         {% assign norte = site.categories.GNORTE | sort: "puntos" | reverse %}
         {%- for post in norte limit:1 offset:4 -%}
