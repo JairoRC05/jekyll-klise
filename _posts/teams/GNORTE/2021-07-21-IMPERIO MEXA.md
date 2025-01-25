@@ -14,7 +14,7 @@ puntosLJ202404: 12
 grupo: sur
 background: "#F16C38"
 ID: OBS
-puntos: 4
+puntos: 6
 pj: 7
 rec1: loss
 rec2: loss
@@ -30,7 +30,7 @@ pais: mx
 ligas: 
 cxf: 
 rec10: des
-rec11: 
+rec11: win
 E1: TR
 E2: E
 E3: RUBY

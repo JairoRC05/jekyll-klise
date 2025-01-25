@@ -21,7 +21,7 @@ pais: mx
 region: LAN
 ligas: 
 cxf: "1"
-puntos: 8
+puntos: 10
 rec1: win
 rec2: one
 rec3: loss
@@ -31,8 +31,8 @@ rec6: one
 rec7: one
 rec8: des
 rec9: win
-rec10: 
-rec11: 
+rec10: win
+rec11: loss
 E1: OBS
 E2: FTB
 E3: FNX

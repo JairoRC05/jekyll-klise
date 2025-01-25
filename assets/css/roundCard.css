@@ -458,3 +458,83 @@
 } */
 
 
+
+
+.roundFinal {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+     background: #ffffff;
+    /* background: url(/assets/mis/ice-mask.png); */
+    background-size: cover;
+
+
+    .roundTeam {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        img {
+            width: 70px;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 576px) {
+                width: 40px;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-weight: bold;
+            color: #100153;
+
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+
+    .roundScore {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 1.1;
+       
+
+
+        p {
+            font-size: 20px;
+            margin: 0;
+            font-weight: bold;
+            color: #100153;
+            
+        }
+
+        span{
+            color: rgb(51, 0, 255);
+            margin: 0;
+            font-weight: 800;
+            font-size: 14px;
+            @media screen and (max-width: 576px) {
+                font-size: 8px;
+            }
+        } 
+     
+    
+
+        .small{
+            color: yellow;
+            margin: 0;
+            font-size: 12px;
+            @media screen and (max-width: 576px) {
+                font-size: 10px;
+            }
+        }
+    }
+}
