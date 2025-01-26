@@ -1,7 +1,7 @@
 ---
 layout: 
 permalink: 
-categories: LO11 PROMO
+categories: LO11
 liga: LIGA INDIGO
 ronda: "11"
 fecha: 24.01.25

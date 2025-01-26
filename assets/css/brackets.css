@@ -422,7 +422,9 @@
   }
   
 
-
+.bracket-container{
+  width: 300px;
+}
   
 .bracket-round-list {
     height: 70px;
@@ -437,7 +439,6 @@
         padding: 5px 0;
         justify-content: space-around;
         height: 70px;
-        margin-bottom: 5px;
     }
   
     .bracket-round-team {
@@ -541,12 +542,12 @@
         /* background: url(/assets/mis/ice-mask-team.png); */
         /* background-size: cover; */
         /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
-        border-radius: 10px;
         border: 1px solid rgb(228, 228, 228);
         /* border-right: 2px solid rgba(0, 0, 0, 0.2);
         border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
         /* backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(10px); */
+        border-radius:10px ;
         z-index: -900;
         overflow: hidden;
   
@@ -641,3 +642,36 @@
   
   }
   
+
+  .bracket-stream{
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    span{
+    background: #000;
+    width: 70px;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    font-size: 10px;
+    }
+
+  }
+
+
+  .bracket-key{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+      span{
+      background: #000;
+      width: 70px;
+      clip-path: polygon(5% 0, 95% 0, 100% 99%, 0 100%);
+      font-size: 10px;
+      }
+  
+    }

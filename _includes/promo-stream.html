@@ -3,83 +3,38 @@
           <ul class="splide__list">
         {% assign norte = site.categories.PROMO | sort: "ronda" %}
         {%- for post in norte-%}
-        
-              <li class="splide__slide">
-          <div class="container roundTeams text-white ">
-            <div class="roundTeam">
-              <img src="/assets/logos/{{post.local}}.png" alt="" class="img-fluid">
-              <p>{{post.local | truncate: 8}}</p>
-            </div>
-           
-            {% if post.reagendado == "SI"%}
-            <div class="roundScore">
-            
-                <span>RONDA {{post.ronda}}</span>
-                
-                {% if post.r1 == 0 and post.r2 == 0 %}
-                <p>VS</p>
-                {% else %}
-                <p>{{post.r1}}-{{post.r2}}</p>
-                {% endif %}
-
-                <span>{{post.fecha}}</span>
-
-                {% if post.stream == "SI" %}
-                <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch"></i></a>
-              {% endif %}
-            </div>
-
-             {% else %}
-             <div class="roundScore">
-            
-                <span>RONDA {{post.ronda}}</span>
-                
-                {% if post.r1 == 0 and post.r2 == 0 %}
-                <p>VS</p>
-                {% else %}
-                <p>{{post.r1}}-{{post.r2}}</p>
-                {% endif %}
-                
-                {% if post.ronda == "8"  %}
-                    {% assign FECHAS = site.categories.FECHA %}
-                    {%- for post in FECHAS-%}
-                    <span>{{post.f8}}</span>
-                    {%- endfor -%}  
-    
-    
-                  {% elsif post.ronda == "9"  %}
-                    {% assign FECHAS = site.categories.FECHA %}
-                    {%- for post in FECHAS-%}
-                    <span>{{post.f9}}</span>
-                    {%- endfor -%} 
-                  
-                  {% elsif post.ronda == "10"  %}
-                    {% assign FECHAS = site.categories.FECHA %}
-                    {%- for post in FECHAS-%}
-                    <span>{{post.f10}}</span>
-                    {%- endfor -%} 
-                  
-                  {% elsif post.ronda == "11"  %}
-                    {% assign FECHAS = site.categories.FECHA %}
-                    {%- for post in FECHAS-%}
-                    <span>{{post.f11}}</span>
-                    {%- endfor -%} 
-               
-    
-                {% endif %}
-              
-        
-              {% if post.stream == "SI" %}
-              <a href="https://www.twitch.tv/x_force05" target="_blank"><i class="fa-brands fa-twitch"></i></a>
-            {% endif %}
+        <li class="splide__slide">
+          <div class="bracket-container">
+            <div class="bracket-round-list">
+              <div class="bracket-round-team">
+                <a href="/teams/{{post.local}}">
+                  <img src="/assets/logos/{{post.tagL}}.webp" alt="" class="img-fluid">
+                </a>
               </div>
-             {% endif %}
-
-            <div class="roundTeam">
-              <img src="/assets/logos/{{post.out}}.png" alt="">
-              <p>{{post.out |truncate: 8}}</p>
-            </div>
-          </div>
+              <div class="card-round-promo">
+                <span>{{post.fecha}}</span>
+                {% if post.tagL == "LIGA-INDIGO" %}
+                <h6>VS</h6>
+                {% else %}
+                <h6>{{post.tagL}} VS {{post.tagO}}</h6>
+                {% endif %}
+                <span>{{post.hora}}</span>
+              </div>
+  
+              <div class="bracket-round-team-right">
+                <a href="/teams/{{post.out}}">
+                  <img src="/assets/logos/{{post.tagO}}.webp" alt="" class="img-fluid">
+                </a>
+              </div>
+         
+            
+                <div class="card-back">
+                  <div class="card-color-left {{post.tagL}}"> </div>  
+                  <div class="card-color-right {{post.tagO}}"> </div>  
+                </div>
+    
+            </div> 
+          </div>     
         </li>
           {%- endfor -%}
   
