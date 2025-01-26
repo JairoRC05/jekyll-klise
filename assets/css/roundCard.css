@@ -479,7 +479,7 @@
 
 
         img {
-            width: 70px;
+            width: 50px;
             margin-bottom: 0;
 
             @media screen and (max-width: 576px) {
@@ -506,6 +506,9 @@
         flex-direction: column;
         line-height: 1.1;
        
+        h1{
+            color: #000;
+        }
 
 
         p {

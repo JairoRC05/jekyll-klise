@@ -811,3 +811,8 @@ color: #fff;
       color: white !important;
       border: none !important;
   }
+
+  .LIGA-INDIGO{
+    background: rgb(68,76,247);
+background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
+  }

@@ -20,6 +20,7 @@
     "no8": "number",
     "no9": "number",
     "no10": "number",
-    "no11": "number"
+    "no11": "number",
+    "h1": "text"
   }
 }
