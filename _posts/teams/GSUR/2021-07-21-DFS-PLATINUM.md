@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: SEP LIP ROCT ORO A GSUR
+categories: SEP LIP ROCT ORO A GSUR ENERO
 team: DFS PLATINUM
 maincover: /assets/logos/PLAT.png
 puntosLJMAYO24: 6

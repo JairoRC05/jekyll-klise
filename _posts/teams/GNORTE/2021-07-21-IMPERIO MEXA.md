@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: SEP LIP ROCT ORO WHEEL A GNORTE
+categories: SEP LIP ROCT ORO WHEEL A GNORTE ENERO
 team: IM OBSIDIANA
 maincover: /assets/logos/OBS.png
 puntosLJMAYO24: 6

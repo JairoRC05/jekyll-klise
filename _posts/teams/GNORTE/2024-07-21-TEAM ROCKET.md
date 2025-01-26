@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT PLATINO GNORTE
+categories: LI LI2 LI3 LI7 TSR2 SSI3 SAP7 team CXF SEP LIO ROCT PLATINO GNORTE ENERO
 liga: LIGA INDIGO
 maincover: /assets/logos/TR.png
 puntosLJMAYO24: 

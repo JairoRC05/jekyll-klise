@@ -43,7 +43,8 @@ permalink: /liga-indigo-fase-final.html
   <div class="container">
 
     <div class="teams-table " id="norte">
-      <h1 class="teams-title">FASE FINAL</h1>
+    <h1 class="teams-title">FASE FINAL</h1>
+   </div>
 
     <div class="tournament-bracket tournament-bracket--rounded ">                                                     
       <div class="tournament-bracket__round tournament-bracket__round--quarterfinals">
@@ -53,6 +54,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.F1 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -77,6 +81,9 @@ permalink: /liga-indigo-fase-final.html
                     <div class="card-color-right {{post.tagO}}"> </div>  
                   </div>
       
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
               </div>
               {%- endfor -%}
             </div>
@@ -86,6 +93,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.F2 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -111,6 +121,9 @@ permalink: /liga-indigo-fase-final.html
                   </div>
       
               </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
+              </div>
               {%- endfor -%}
             </div>
           </li>
@@ -118,6 +131,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.F3 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -142,6 +158,9 @@ permalink: /liga-indigo-fase-final.html
                     <div class="card-color-right {{post.tagO}}"> </div>  
                   </div>
       
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
               </div>
               {%- endfor -%}
             </div>
@@ -151,6 +170,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.F4 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -175,6 +197,9 @@ permalink: /liga-indigo-fase-final.html
                     <div class="card-color-right {{post.tagO}}"> </div>  
                   </div>
       
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
               </div>
               {%- endfor -%}
             </div>
@@ -188,6 +213,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.SM1 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -218,6 +246,9 @@ permalink: /liga-indigo-fase-final.html
                   </div>
       
               </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
+              </div>
               {%- endfor -%}
             </div>
           </li>
@@ -226,6 +257,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.SM2 | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -254,6 +288,9 @@ permalink: /liga-indigo-fase-final.html
                     <div class="card-color-right {{post.tagO}}"> </div>  
                   </div>
       
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
               </div>
               {%- endfor -%}
             </div>
@@ -267,6 +304,9 @@ permalink: /liga-indigo-fase-final.html
             <div class="tournament-bracket__match" tabindex="0">
               {% assign NORTE = site.categories.FN | sort: "puntos" | reverse %}
               {%- for post in NORTE limit: 1-%}
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
               <div class="bracket-round-list">
                 <div class="bracket-round-team">
                   <a href="/teams/{{post.local}}">
@@ -295,6 +335,9 @@ permalink: /liga-indigo-fase-final.html
                     <div class="card-color-right {{post.tagO}}"> </div>  
                   </div>
       
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
               </div>
               {%- endfor -%}
             </div>
@@ -312,9 +355,44 @@ permalink: /liga-indigo-fase-final.html
         </ul>
       </div>
     </div>
+ 
   </div>
  
-
+  <div class="container">
+    <div class="teams-table">
+      <h1 class="teams-title">TABLA DE POSCIONES</h1>
+    <div class="row">
+      {% assign norte = site.categories.ENERO | sort: "puntos" | reverse %}
+      {%- for post in norte -%}
+      <div class="col-12 col-xl-3">
+        <div class="card-round-list">
+         
+            <div class="card-round-num">
+              <h6></h6>
+            </div>
+  
+            <div class="card-round-team">
+              <a href="{{post.url}}">
+                <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
+              </a>
+               
+              {% include rounds.html %}
+  
+            </div>
+              
+            <div class="card-round-pts">
+              <h6>{{post.puntos}} pts</h6>
+            </div>
+          
+              <div class="card-back">
+                <div class="card-color-left {{post.ID}}"> </div>  
+              </div>
+  
+          </div>
+        </div>
+        {%- endfor -%}
+    </div>
+  </div>
 
 
 

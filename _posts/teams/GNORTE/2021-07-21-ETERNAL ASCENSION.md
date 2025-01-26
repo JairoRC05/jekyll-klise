@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: ROCT PLATA A GNORTE
+categories: ROCT PLATA A GNORTE ENERO
 liga: LIGA INDIGO
 maincover: /assets/logos/EA.png
 puntosLJMAYO24: 17

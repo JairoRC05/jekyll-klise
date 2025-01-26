@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: SEP LIO ROCT PLATINO WHEEL A GNORTE
+categories: SEP LIO ROCT PLATINO WHEEL A GNORTE ENERO
 liga: LIGA NARANJA
 maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
