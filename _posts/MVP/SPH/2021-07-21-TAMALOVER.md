@@ -7,23 +7,23 @@ tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: TAMALOVER
 team: SPH
-MVPS: 12
+MVPS: 15
 sex: male1
 play1: SI
 match1: DARK
 no1: 2
 play2: 
 match2: 
-no2: 
+no2: 0
 play3: 
 match3: 
-no3: 
+no3: 0
 play4: SI
 match4: TAD
 no4: 1
 play5: 
 match5: 
-no5: 
+no5: 0
 play6: SI
 match6: AD
 no6: 2
@@ -39,7 +39,7 @@ no9: 2
 play10: SI
 match10: PEARL
 no10: 2
-play11: 
-match11: 
-no11:
+play11: SI
+match11: STMN
+no11: 3
 ---

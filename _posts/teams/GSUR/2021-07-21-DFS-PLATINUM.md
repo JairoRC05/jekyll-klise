@@ -9,12 +9,12 @@ date: 2020-08-29 10:29:20 +0700
 title: DFS PLATINUM
 route: /liga-indigo
 color: black
-puntosLJ202404: 12
+puntosLJ202404: 11
 grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 14
+puntos: 16
 tags: 
 region: LAN
 pais: mx
@@ -30,7 +30,7 @@ rec7: one
 rec8: sup
 rec9: loss
 rec10: sup
-rec11: 
+rec11: sup
 E1: 
 E2: TAD
 E3: VOLT

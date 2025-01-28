@@ -71,16 +71,18 @@ layout:
         {% else %}
         {% endif %}
       </div>
-        <h1 class="exo-style d-none d-md-block">{{page.title}}</h1>
+      <h1 class="exo-style d-none d-md-block">{{page.title}}</h1>
+      <span class="exo  d-none d-md-block">
         {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
-        <span class="exo d-none d-md-block">DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        DFS {{page.team}} 
         {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
-        <span class="exo d-none d-md-block">RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        RNT {{page.team}} 
         {% elsif page.team == "E" %}
-        <span class="exo d-none d-md-block">AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        AD ENIGMA 
         {% else %}
-        <span class="exo d-none d-md-block">{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+        {{page.team}} 
         {% endif %}
+        ● LIGA INDIGO ● <span id="mvps"></span> MVPS</span>
         <div class="region">
           {% if page.pais.size > 1 %}
           <div class="localization">
@@ -94,15 +96,17 @@ layout:
     </div>
     <div class="container banner-info d-block d-sm-none p-0">
       <h1 class="exo-style">{{page.title}}</h1>
+      <span class="exo ">
       {% if page.team == "RUBY" or page.team == "PLAT" or page.team == "PEARL" %}
-      <span class="exo ">DFS {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      DFS {{page.team}} 
       {% elsif page.team == "DARK" or page.team == "FNX" or page.team == "VNM" or page.team == "VOLT"  %}
-      <span class="exo ">RNT {{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      RNT {{page.team}} 
       {% elsif page.team == "E" %}
-      <span class="exo ">AD ENIGMA ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      AD ENIGMA 
       {% else %}
-      <span class="exo ">{{page.team}} ● LIGA INDIGO ● {{page.MVPS}} MVPS</span>
+      {{page.team}} 
       {% endif %}
+      ● LIGA INDIGO ● <span id="mvpsMobile"></span> MVPS</span>
 
       {% if page.pais.size > 1 %}
       <div class="region">
@@ -496,6 +500,22 @@ layout:
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+      var num1 = {{page.no1}};
+      var num2 = {{page.no2}};
+       var num3 = {{page.no3}};
+       var num4 = {{page.no4}};
+       var num5 = {{page.no5}};
+       var num6 = {{page.no6}};
+       var num7 = {{page.no7}};
+       var num8 = {{page.no8}};
+       var num9 = {{page.no9}};
+       var num10 =  {{page.no10}};
+       var num11 =  {{page.no11}};
+      var suma = num1+num2+num3+num4+num5+num6+num7+num8+num9+num10+num11;
+      document.getElementById('mvps').innerHTML=suma;
+      document.getElementById('mvpsMobile').innerHTML=suma;
+    </script>
 
   {% include g-analytics.html %}
 
