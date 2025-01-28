@@ -4,20 +4,6 @@
     margin: 20px auto;
   }
 
-  h1,
-  h2 {
-    text-align: center;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-  }
-  h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 2em;
-  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -31,6 +17,7 @@
   .tournament-bracket {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   @media (min-width: 38em) {
     .tournament-bracket {
@@ -440,6 +427,16 @@
         justify-content: space-around;
         height: 70px;
     }
+
+
+    .round-block{
+      display: block;
+
+      p{
+        margin: 0;
+        color: #fff;
+      }
+    }
   
     .bracket-round-team {
         display: flex;
@@ -516,22 +513,37 @@
             margin: 0;
         }
     }
-    .card-round-promo{
+  
+    .round-titles{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left{
+        width: 50px;
+        text-align: right !important;
+      }
+      .right{
+        width: 50px;
+        text-align: left !important;
+      }
+
+      .card-round-promo{
         display: block;
         text-align: center;
         justify-content: center;
         align-items: center;
-        position: absolute;
   
         span{
             color: #012c50 !important;
             font-size: 14px;
-        }
-  
-        h6{
-            margin: 0;
             font-weight: bold;
         }
+
+        h6{
+          margin: 0;
+        }
+    }
     }
   
     .card-back {

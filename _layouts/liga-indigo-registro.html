@@ -1,0 +1,454 @@
+---
+layout:
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-home">  
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="#norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="#sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="#online" class="text-white">STREAMS</a></span>
+    
+      </div>
+ 
+    </div>
+  
+  </nav>
+
+
+  <div class="container-fluid banner bg-cham">
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.webp" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">{{page.temporada}}</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="teams-table " id="norte">
+    <h1 class="teams-title">FASE FINAL</h1>
+   </div>
+
+    <div class="tournament-bracket tournament-bracket--rounded ">                                                     
+      <div class="tournament-bracket__round tournament-bracket__round--quarterfinals">
+        <h3 class="tournament-bracket__round-title">4TOS DE FINAL</h3>
+        <ul class="tournament-bracket__list">
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+              <div class="bracket-key">
+                <span>LLAVE 1</span>
+              </div>
+              <div class="bracket-round-list">
+                <div class="bracket-round-team">
+                  <a href="/teams/{{page.F41LOCAL}}">
+                    <img src="/assets/logos/{{page.F41LOCAL}}.webp" alt="" class="img-fluid">
+                  </a>
+                
+                </div>
+
+            <div class="round-titles">
+                <div class="card-round-promo left">
+                    <h6>{{page.F41LOCAL}}</h6>
+                </div>
+                <div class="card-round-promo">
+                  <span>{{page.F1}}</span>
+                  <h6>VS</h6>
+                  <span>{{page.H1}}</span>
+                </div>
+                <div class="card-round-promo right">
+                    <h6>{{page.F41OUT}}</h6>
+                </div>
+            </div>
+
+
+                <div class="bracket-round-team-right">
+                 
+                  <a href="/teams/{{page.F41OUT}}">
+                    <img src="/assets/logos/{{page.F41OUT}}.webp" alt="" class="img-fluid">
+                  </a>
+                </div>
+           
+              
+                  <div class="card-back">
+                    <div class="card-color-left {{page.F41LOCAL}}"> </div>  
+                    <div class="card-color-right {{page.F41OUT}}"> </div>  
+                  </div>
+      
+              </div>
+              <div class="bracket-stream">
+                <span>STREAM</span>
+              </div>
+            </div>
+          </li>
+  
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                <div class="bracket-key">
+                    <span>LLAVE 2</span>
+                  </div>
+                  <div class="bracket-round-list">
+                    <div class="bracket-round-team">
+                      <a href="/teams/{{page.F42LOCAL}}">
+                        <img src="/assets/logos/{{page.F42LOCAL}}.webp" alt="" class="img-fluid">
+                      </a>
+                    
+                    </div>
+    
+                <div class="round-titles">
+                    <div class="card-round-promo left">
+                        <h6>{{page.F42LOCAL}}</h6>
+                    </div>
+                    <div class="card-round-promo">
+                      <span>{{page.F1}}</span>
+                      <h6>VS</h6>
+                      <span>AT LLAVE 1</span>
+                    </div>
+                    <div class="card-round-promo right">
+                        <h6>{{page.F42OUT}}</h6>
+                    </div>
+                </div>
+    
+                    <div class="bracket-round-team-right">
+                      <a href="/teams/{{page.F42OUT}}">
+                        <img src="/assets/logos/{{page.F42OUT}}.webp" alt="" class="img-fluid">
+                      </a>
+                    </div>
+                                 
+                      <div class="card-back">
+                        <div class="card-color-left {{page.F42LOCAL}}"> </div>  
+                        <div class="card-color-right {{page.F42OUT}}"> </div>  
+                      </div>
+                  </div>
+                  <div class="bracket-stream">
+                    <span>STREAM</span>
+                  </div>
+            </div>
+          </li>
+
+          <li class="tournament-bracket__item">
+             <div class="tournament-bracket__match" tabindex="0">
+                <div class="bracket-key">
+                    <span>LLAVE 3</span>
+                  </div>
+                  <div class="bracket-round-list">
+                    <div class="bracket-round-team">
+                      <a href="/teams/{{page.F43LOCAL}}">
+                        <img src="/assets/logos/{{page.F43LOCAL}}.webp" alt="" class="img-fluid">
+                      </a>
+                    
+                    </div>
+    
+                <div class="round-titles">
+                    <div class="card-round-promo left">
+                        <h6>{{page.F43LOCAL}}</h6>
+                    </div>
+                    <div class="card-round-promo">
+                      <span>{{page.F2}}</span>
+                      <h6>VS</h6>
+                      <span>{{page.H1}}</span>
+                    </div>
+                    <div class="card-round-promo right">
+                        <h6>{{page.F43OUT}}</h6>
+                    </div>
+                </div>
+    
+                    <div class="bracket-round-team-right">
+                      <a href="/teams/{{page.F43OUT}}">
+                        <img src="/assets/logos/{{page.F43OUT}}.webp" alt="" class="img-fluid">
+                      </a>
+                    </div>
+                                 
+                      <div class="card-back">
+                        <div class="card-color-left {{page.F43LOCAL}}"> </div>  
+                        <div class="card-color-right {{page.F43OUT}}"> </div>  
+                      </div>
+                  </div>
+                  <div class="bracket-stream">
+                    <span>STREAM</span>
+                  </div>
+            </div>
+          </li>
+  
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                <div class="bracket-key">
+                    <span>LLAVE 4</span>
+                  </div>
+                  <div class="bracket-round-list">
+                    <div class="bracket-round-team">
+                      <a href="/teams/{{page.F44LOCAL}}">
+                        <img src="/assets/logos/{{page.F44LOCAL}}.webp" alt="" class="img-fluid">
+                      </a>
+                    
+                    </div>
+    
+                <div class="round-titles">
+                    <div class="card-round-promo left">
+                        <h6>{{page.F44LOCAL}}</h6>
+                    </div>
+                    <div class="card-round-promo">
+                      <span>{{page.F2}}</span>
+                      <h6>VS</h6>
+                      <span>AT LLAVE 3</span>
+                    </div>
+                    <div class="card-round-promo right">
+                        <h6>{{page.F44OUT}}</h6>
+                    </div>
+                </div>
+    
+                    <div class="bracket-round-team-right">
+                      <a href="/teams/{{page.F44OUT}}">
+                        <img src="/assets/logos/{{page.F44OUT}}.webp" alt="" class="img-fluid">
+                      </a>
+                    </div>
+                                 
+                      <div class="card-back">
+                        <div class="card-color-left {{page.F44LOCAL}}"> </div>  
+                        <div class="card-color-right {{page.F44OUT}}"> </div>  
+                      </div>
+                  </div>
+                  <div class="bracket-stream">
+                    <span>STREAM</span>
+                  </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tournament-bracket__round tournament-bracket__round--semifinals">
+        <h3 class="tournament-bracket__round-title">SEMIFINALES</h3>
+        <ul class="tournament-bracket__list">
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                <div class="tournament-bracket__match" tabindex="0">
+                    <div class="bracket-key">
+                        <span>LLAVE 5</span>
+                    </div>
+                      <div class="card-round-list mb-0">
+
+                        <div class="card-round-team">
+                            <a href="/liga-indigo-dashboard">
+                              <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
+                            </a>
+                            <div class="card-round-title">
+                                <p>LLAVE 1</h2>
+                                <p>LLAVE 2</p>
+                              </div>
+                        </div>
+
+                         
+
+                        <div class="card-round-place">
+                          <p>{{page.F3}}</p>
+                          <p>21:00</p>
+                        </div>
+                      
+                          <div class="card-back bg-cham">
+                            <div class="card-color-left {{post.ID}}"> </div>  
+                          </div>
+              
+                      </div>
+                      <div class="bracket-stream">
+                        <span>STREAM</span>
+                      </div>
+                </div>
+        
+            </div>
+          </li>
+  
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                <div class="tournament-bracket__match" tabindex="0">
+                    <div class="bracket-key">
+                        <span>LLAVE 6</span>
+                    </div>
+                      <div class="card-round-list mb-0">
+
+                        <div class="card-round-team">
+                            <a href="/liga-indigo-dashboard">
+                              <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
+                            </a>
+                            <div class="card-round-title">
+                                <p>LLAVE 3</h2>
+                                <p>LLAVE 4</p>
+                              </div>
+                        </div>
+
+                         
+
+                        <div class="card-round-place">
+                          <p>{{page.F3}}</p>
+                          <p>AT LLAVE 5</p>
+                        </div>
+                      
+                          <div class="card-back bg-cham">
+                            <div class="card-color-left {{post.ID}}"> </div>  
+                          </div>
+              
+                      </div>
+                      <div class="bracket-stream">
+                        <span>STREAM</span>
+                      </div>
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tournament-bracket__round tournament-bracket__round--bronze">
+        <h3 class="tournament-bracket__round-title">FINAL</h3>
+        <ul class="tournament-bracket__list">
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                <div class="bracket-key">
+                    <span>LLAVE 7</span>
+                </div>
+                  <div class="card-round-list mb-0">
+
+                    <div class="card-round-team">
+                        <a href="/liga-indigo-dashboard">
+                          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
+                        </a>
+                        <div class="card-round-title">
+                            <p>LLAVE 5</h2>
+                            <p>LLAVE 6</p>
+                          </div>
+                    </div>
+
+                     
+
+                    <div class="card-round-place">
+                      <p>{{page.F3}}</p>
+                      <p>AT LLAVE 6</p>
+                    </div>
+                  
+                      <div class="card-back bg-cham">
+                        <div class="card-color-left {{post.ID}}"> </div>  
+                      </div>
+          
+                  </div>
+                  <div class="bracket-stream">
+                    <span>STREAM</span>
+                  </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tournament-bracket__round tournament-bracket__round--gold">
+        <h3 class="tournament-bracket__round-title">CAMPEON</h3>
+        <ul class="tournament-bracket__list">
+          <li class="tournament-bracket__item">
+            <div class="tournament-bracket__match" tabindex="0">
+                
+                  <div class="card-round-list mb-0">
+
+                    <div class="card-round-team">
+                        <a href="/liga-indigo-dashboard">
+                          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
+                        </a>
+                        <div class="card-round-title">
+                            <p>CAMPEÓN</h2>
+                            <p>?</p>
+                          </div>
+                    </div>
+
+                     
+
+                    <div class="card-round-place">
+             
+                    </div>
+                  
+                      <div class="card-back bg-cham">
+                        <div class="card-color-left {{post.ID}}"> </div>  
+                      </div>
+          
+                  </div>
+                
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <div class="container">
+    <div class="teams-table">
+      <h1 class="teams-title">TABLA DE POSCIONES</h1>
+    <div class="row">
+      {% assign norte = site.categories.ENERO | sort: "puntos" | reverse %}
+      {%- for post in norte -%}
+      <div class="col-12 col-xl-3">
+        <div class="card-round-list">
+         
+            <div class="card-round-num">
+              <h6></h6>
+            </div>
+  
+            <div class="card-round-team">
+              <a href="{{post.url}}">
+                <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
+              </a>
+               
+              {% include rounds.html %}
+  
+            </div>
+              
+            <div class="card-round-pts">
+              <h6>{{post.puntos}} pts</h6>
+            </div>
+          
+              <div class="card-back">
+                <div class="card-color-left {{post.ID}}"> </div>  
+              </div>
+  
+          </div>
+        </div>
+        {%- endfor -%}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+   
+
+
+
+
+
+</body>
+
+</html>

@@ -13,12 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teams/GNORTE/2024-07-21-RNT-DIAMANTE.md",
+                "file": "LIGAS INDIGO/2025-01-25-ENERO.md",
                 "mode": "preview",
+                "backlinks": false,
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2024-07-21-RNT-DIAMANTE"
+              "title": "2025-01-25-ENERO"
+            }
+          }
+        ]
+      },
+      {
+        "id": "e193d9292c504d68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75c7b456500323ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "teams/GSUR/2021-07-21-AD-ESPORTS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2021-07-21-AD-ESPORTS"
             }
           }
         ]
@@ -160,6 +181,9 @@
   },
   "active": "f35098457dfc3fe0",
   "lastOpenFiles": [
+    "teams/GSUR/2021-07-21-AD-ESPORTS.md",
+    "LIGAS INDIGO/2025-01-25-ENERO.md",
+    "teams/GNORTE/2024-07-21-RNT-DIAMANTE.md",
     "teams/GSUR/2024-07-21-POA M.md",
     "teams/GSUR/2024-07-21-TEAM EVE.md",
     "teams/GSUR/2024-07-21-RNT-VOLT.md",
@@ -171,11 +195,9 @@
     "teams/GSUR/2024-04-05-DFS-PEARL.md",
     "teams/GSUR/2021-07-21-SLEEPYHEADS.md",
     "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "teams/GSUR/2021-07-21-AD-ESPORTS.md",
     "teams/GNORTE/2024-07-21-TEAM ROCKET.md",
     "teams/GNORTE/2024-07-21-TEAM AETHER.md",
     "teams/GNORTE/2024-07-21-RNT-VENOM.md",
-    "teams/GNORTE/2024-07-21-RNT-DIAMANTE.md",
     "teams/GNORTE/2024-04-05-FROSTBITE.md",
     "teams/GNORTE/2024-01-04-AEP.md",
     "teams/GNORTE/2023-07-21-TUT.md",
@@ -186,7 +208,6 @@
     "teams/GNORTE/2021-07-21-DFS-RUBY.md",
     "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL4.md",
     "LIGAS INDIGO",
-    "cup-tournament/FASE 2/2024-10-01-4TO-DE-FINAL3.md",
     "Sin título 1.canvas",
     "Sin título.canvas",
     "premium",
