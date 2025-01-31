@@ -249,30 +249,7 @@ layout:
                     <div class="bracket-key">
                         <span>LLAVE 5</span>
                     </div>
-                      <div class="card-round-list mb-0">
-
-                        <div class="card-round-team">
-                            <a href="/liga-indigo-dashboard">
-                              <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
-                            </a>
-                            <div class="card-round-title">
-                                <p>LLAVE 1</h2>
-                                <p>LLAVE 2</p>
-                              </div>
-                        </div>
-
-                         
-
-                        <div class="card-round-place">
-                          <p>{{page.F3}}</p>
-                          <p>21:00</p>
-                        </div>
-                      
-                          <div class="card-back bg-cham">
-                            <div class="card-color-left {{post.ID}}"> </div>  
-                          </div>
-              
-                      </div>
+                      {% include SEMIFINAL1.html %}
                       <div class="bracket-stream">
                         <span>STREAM</span>
                       </div>
@@ -327,30 +304,7 @@ layout:
                 <div class="bracket-key">
                     <span>LLAVE 7</span>
                 </div>
-                  <div class="card-round-list mb-0">
-
-                    <div class="card-round-team">
-                        <a href="/liga-indigo-dashboard">
-                          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
-                        </a>
-                        <div class="card-round-title">
-                            <p>LLAVE 5</h2>
-                            <p>LLAVE 6</p>
-                          </div>
-                    </div>
-
-                     
-
-                    <div class="card-round-place">
-                      <p>{{page.F3}}</p>
-                      <p>AT LLAVE 6</p>
-                    </div>
-                  
-                      <div class="card-back bg-cham">
-                        <div class="card-color-left {{post.ID}}"> </div>  
-                      </div>
-          
-                  </div>
+                {% include gran-final.html %}
                   <div class="bracket-stream">
                     <span>STREAM</span>
                   </div>
@@ -363,31 +317,9 @@ layout:
         <ul class="tournament-bracket__list">
           <li class="tournament-bracket__item">
             <div class="tournament-bracket__match" tabindex="0">
-                
-                  <div class="card-round-list mb-0">
-
-                    <div class="card-round-team">
-                        <a href="/liga-indigo-dashboard">
-                          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
-                        </a>
-                        <div class="card-round-title">
-                            <p>CAMPEÓN</h2>
-                            <p>?</p>
-                          </div>
-                    </div>
-
-                     
-
-                    <div class="card-round-place">
-             
-                    </div>
-                  
-                      <div class="card-back bg-cham">
-                        <div class="card-color-left {{post.ID}}"> </div>  
-                      </div>
-          
-                  </div>
-                
+      
+              {% include campeon.html %}
+            
             </div>
           </li>
         </ul>

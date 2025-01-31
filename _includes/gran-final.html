@@ -1,0 +1,58 @@
+{% if page.estadoGF == "SI" %}
+<div class="bracket-round-list">
+    <div class="bracket-round-team">
+      <a href="/teams/{{page.GFLOCAL}}">
+        <img src="/assets/logos/{{page.GFLOCAL}}.webp" alt="" class="img-fluid">
+      </a>
+    </div>
+
+<div class="round-titles">
+    <div class="card-round-promo left">
+        <h6>{{page.GFLOCAL}}</h6>
+    </div>
+    <div class="card-round-promo">
+      <span>{{page.F3}}</span>
+      <h6>VS</h6>
+      <span>AT LLAVE 6</span>
+    </div>
+    <div class="card-round-promo right">
+        <h6>{{page.GFOUT}}</h6>
+    </div>
+</div>
+
+
+    <div class="bracket-round-team-right">
+      <a href="/teams/{{page.GFOUT}}">
+        <img src="/assets/logos/{{page.GFOUT}}.webp" alt="" class="img-fluid">
+      </a>
+    </div>
+
+  
+      <div class="card-back">
+        <div class="card-color-left {{page.GFLOCAL}}"> </div>  
+        <div class="card-color-right {{page.GFOUT}}"> </div>  
+      </div>
+
+  </div>
+{% else %}
+<div class="card-round-list mb-0">
+    <div class="card-round-team">
+        <a href="/liga-indigo-dashboard">
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="img-fluid">
+        </a>
+        <div class="card-round-title">
+            <p>LLAVE 5</h2>
+            <p>LLAVE 6</p>
+          </div>
+    </div>
+
+    <div class="card-round-place">
+      <p>{{page.F3}}</p>
+      <p>AT LLAVE 6</p>
+    </div>
+  
+      <div class="card-back bg-cham">
+        <div class="card-color-left {{post.ID}}"> </div>  
+      </div>
+  </div>
+{% endif %}
