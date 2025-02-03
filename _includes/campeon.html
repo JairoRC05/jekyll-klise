@@ -1,11 +1,5 @@
 
-
-
-
-
-
-
-{% if page.campeon.size > 1 %}
+{% if page.campeon.size > 1  %}
 <!-- CAMPEON -->
 <div class="card-round-list mb-0">
     <div class="card-round-team">
@@ -22,7 +16,23 @@
       <div class="card-back bg-cham">
       </div>
 </div>
-{%else %}
+{% elsif page.campeon == "E" %}
+<div class="card-round-list mb-0">
+  <div class="card-round-team">
+      <a href="/liga-indigo-dashboard">
+        <img src="/assets/logos/{{page.campeon}}.webp" alt="" class="img-fluid">
+      </a>
+      <div class="card-round-title">
+          <p>CAMPEÓN</h2>
+          <p>{{page.campeon}}</p>
+        </div>
+  </div>
+  <div class="card-round-place">
+  </div>
+    <div class="card-back bg-cham">
+    </div>
+</div>
+{% else %}
 <div class="card-round-list mb-0">
     <div class="card-round-team">
         <a href="/liga-indigo-dashboard">
