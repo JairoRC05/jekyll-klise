@@ -1,8 +1,7 @@
 <div class="row">
-    {% assign LIGA = site.categories.temporada | sort: "puntos"
-    | reverse %}
-    {%- for post in LIGA limit:1 -%}
-    <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3   ">
+    {% assign LIGA = site.categories.temporada %}
+    {%- for post in LIGA -%}
+    <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
       <section>
         <div class="card__section" style="--color: hsl(44.71deg 100% 50% / 64%)">
           <div class="card__border"></div>
@@ -10,21 +9,18 @@
           <div class="card__inner">
             <div class="card__img">
               <div class="img__team">
-                <img src="/assets/logos/LIGA-INDIGO.webp" alt="{{post.title}}">
+                <img src="/assets/logos/LIGA-INDIGO-ALT.webp" alt="{{post.title}}">
               </div>
               <div class="img__athlete">
                <a href="{{post.url}}">
-                {% if post.estado == "EP"%}
-                <img src="/assets/logos/LIGA-INDIGO-ALT.webp" alt="{{post.campeon}}">
-                {% else %}
-                <img src="/assets/logos/{{post.campeon}}.webp" alt="{{post.campeon}}">
-                {% endif %}
+                <img src="/assets/logos/{{post.campeon}}.webp" alt="{{post.title}}">
                </a>
+               
               </div>
             </div>
             <div class="card__text">
-              <div class="card__type" style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">{{post.estado}}</div>
-              <h1 class="name text-center" style="--color: hsl(0, 0%, 100%);">{{post.}}</h1>
+              <div class="card__type " style="--bg-color: hsl(40, 9%, 7%); --color: hsl(0, 0%, 100%);">{{post.temporada}}</div>
+              <h1 class="name text-center" style="--color: hsl(0, 0%, 100%);">{{post.org | truncate: 12}}</h1>
               <p class="points" style="--color: hsl(0, 0%, 100%);">{{post.puntos}} PTS</p>
             </div>
           </div>
@@ -32,5 +28,4 @@
       </section>
     </div>
     {%- endfor -%}
-
 </div>

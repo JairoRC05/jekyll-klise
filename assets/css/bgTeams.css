@@ -783,10 +783,6 @@ background-blend-mode: multiply;
 
 
 
-.clip{
-  border-radius:  50px 50px 0 0 !important;
-}
-
 
 .bg-play-match{
   background: rgb(0,255,8) !important;

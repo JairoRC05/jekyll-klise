@@ -115,8 +115,8 @@ img {
 }
 
 .card__type {
-    width: 100%;
-    width: min-content;
+    width: 70%;
+    /* width: min-content; */
     margin: auto;
     padding: 0 10%;
     border-radius: 5px;
