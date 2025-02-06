@@ -749,6 +749,10 @@
         padding: 15px;
         color: #fff !important;
 
+        @media screen and (max-width: 472px) {
+            padding: 5px;
+        }
+
             h2{
                margin: 0;
                font-size: 18px;
@@ -758,13 +762,16 @@
                     font-size: 16px;
                 }
                   @media screen and (max-width: 472px) {
-                    font-size: 8px;
+                    font-size: 6px;
                 }
             }
 
             span{
                     margin: 0;
                     font-size: 8px;
+                    @media screen and (max-width: 472px) {
+                        font-size: 6px;
+                    }
             }
             p{
                margin: 0 !important;

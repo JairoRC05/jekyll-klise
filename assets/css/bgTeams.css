@@ -841,16 +841,32 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
 
 
 
-  .LG{
-    
-   border: 5px solid rgb(68,76,247); 
+  .LG{  
+   border: 5px solid rgb(68,76,247);
+   @media screen and (max-width: 472px) {
+    border: 3px solid rgb(68,76,247);
+   } 
+
   }
   .CXF{
    border: 5px solid orange; 
+   
+   @media screen and (max-width: 472px) {
+    border: 3px solid orange; 
+   }
   }
+
   .CS{
     border-top: 5px solid #fa450e;
     border-left: 5px solid #fa450e;
     border-right: 5px solid #8846ab;
     border-bottom: 5px solid #8846ab;
+
+
+    @media screen and (max-width: 472px) {
+      border-top: 3px solid #fa450e;
+      border-left: 3px solid #fa450e;
+      border-right: 3px solid #8846ab;
+      border-bottom: 3px solid #8846ab;
+   }
   }
