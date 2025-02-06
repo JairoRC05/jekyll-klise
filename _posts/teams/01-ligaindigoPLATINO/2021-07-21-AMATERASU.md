@@ -2,7 +2,7 @@
 layout: liga-indigo-team
 permalink: /team/:title.html
 categories: ROCT BRONCE A
-team: AMATERASU
+team: TEAM
 maincover: /assets/logos/ASU.png
 puntosLJMAYO24: 6
 date: 2020-08-29 10:29:20 +0700

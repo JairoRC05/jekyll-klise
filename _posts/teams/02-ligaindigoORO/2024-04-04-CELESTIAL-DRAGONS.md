@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: LA2024JN N1 N3 N4 N5 N7 N8 N9 team CXF SEP LIO ROCT ORO
+categories: TEAM
 liga: LIGA NARANJA
 maincover: /assets/logos/CD.png
 puntosLJMAYO24: 8
@@ -84,6 +84,7 @@ pj9: 0
 stream: <i class="fa-brands fa-twitch"></i>
 dia: 30
 hora: 22:10
+rango: ACERO
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT PLATA B
+categories: ROCT PLATA B TEAM
 team: HG SALARIO MINIMO
 maincover: /assets/logos/SM.png
 puntosLJMAYO24: 6
@@ -28,4 +28,6 @@ rec6: loss
 rec7: win
 rec8: des
 rec9: win
+temporada: SI
+rango: PLATA
 ---

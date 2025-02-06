@@ -529,6 +529,11 @@ background: rgb(68,76,247) !important;
 background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) !important;
 }
 
+.bg-S11{
+  background: rgb(255,0,0) !important;
+  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(89,0,0,1) 100%) !important;
+}
+
 
 .bg-transparent{
   background: #00000070 !important;
@@ -566,8 +571,13 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
   background: #fcc944;
   border-bottom: 5px solid #f7be2e;
 }
+.CD{
+  background: rgb(94,235,255);
+  background: radial-gradient(circle, rgba(94,235,255,1) 0%, rgba(0,104,255,1) 100%);
+}
 .TA{
-  background: #5eebff;
+  background: rgb(94,235,255);
+  background: radial-gradient(circle, rgba(94,235,255,1) 0%, rgba(0,104,255,1) 100%);
 }
 .TAE{
   background: #9e8b50;
@@ -612,6 +622,10 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
   background: rgb(77,79,77);
   background: radial-gradient(circle, rgba(77,79,77,1) 0%, rgba(0,0,0,1) 94%);
 }
+.AOS{
+  background: rgb(77,79,77);
+  background: radial-gradient(circle, rgba(77,79,77,1) 0%, rgba(0,0,0,1) 94%);
+}
 
 .VOLT{
   background: #0c2aa2;
@@ -634,28 +648,36 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
   border-bottom: 5px solid #000000 ;
 }
 .PLAT{
-  background:#810100;
-  border-bottom: 5px solid #5b0505 ;
+  background: rgb(209,0,0);
+background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .PEARL{
-  background:#810100;
-  border-bottom: 5px solid #5b0505 ;
+  background: rgb(209,0,0);
+  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .RUBY{
-  background:#810100;
-  border-bottom: 5px solid #5b0505 ;
+  background: rgb(209,0,0);
+  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .DMD{
-  background:#810100;
-  border-bottom: 5px solid #5b0505 ;
+  background: rgb(209,0,0);
+background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+}
+.AMBER{
+  background: rgb(209,0,0);
+background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .E{
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
 }
 .TR{
-  background: rgb(252,6,95);
-background: radial-gradient(circle, rgba(252,6,95,1) 10%, rgba(248,248,82,1) 78%, rgba(81,254,48,1) 90%, rgba(54,194,213,1) 94%);
+  background: rgb(209,0,0);
+  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+}
+.BNT{
+  background: rgb(209,0,0);
+  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .AD{
 
@@ -815,4 +837,20 @@ color: #fff;
   .LIGA-INDIGO{
     background: rgb(68,76,247);
 background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
+  }
+
+
+
+  .LG{
+    
+   border: 5px solid rgb(68,76,247); 
+  }
+  .CXF{
+   border: 5px solid orange; 
+  }
+  .CS{
+    border-top: 5px solid #fa450e;
+    border-left: 5px solid #fa450e;
+    border-right: 5px solid #8846ab;
+    border-bottom: 5px solid #8846ab;
   }

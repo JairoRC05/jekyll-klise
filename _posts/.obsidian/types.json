@@ -5,7 +5,7 @@
     "tags": "tags",
     "date": "text",
     "mvps": "number",
-    "rango": "number",
+    "rango": "text",
     "hora": "text",
     "POINTS": "number",
     "match": "number",

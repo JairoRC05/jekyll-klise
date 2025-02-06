@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT BRONCE
+categories: 
 team: ACADEMIA RED
 maincover: /assets/logos/RED.png
 puntosLJMAYO24: 6

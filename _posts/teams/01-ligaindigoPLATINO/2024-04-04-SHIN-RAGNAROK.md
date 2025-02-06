@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT BRONCE A
+categories: 
 maincover: /assets/logos/SHIN.png
 puntosLJMAYO24: 13
 date: 2020-08-29 10:29:20 +0700

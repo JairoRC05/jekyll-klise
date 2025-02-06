@@ -18,9 +18,8 @@ title: LA REPÚBLICA DEL UNITE
       <div class="d-none d-md-block text-white">
 
         <span class="navbar-brand mb-0 h1"><a href="#liga" class="text-white">LIGA INDIGO</a></span>
-        <!-- <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-sur" class="text-white">LICENCIAS UNITE</a></span>
-        <span class="navbar-brand mb-0 h1 text-white"><a href="/liga-indigo-sur" class="text-white">CONFESIONES</a></span> -->
-
+        <span class="navbar-brand mb-0 h1"><a href="#equipos" class="text-white">EQUIPOS</a></span>
+      
       </div>
     </div>
   </nav>
@@ -50,12 +49,8 @@ title: LA REPÚBLICA DEL UNITE
             <div class=" bannerText">
         <h3 class="exo-style text-white">LA REPÚBLICA DEL UNITE</h3>
         <span>TORNEOS, BLUIDS Y MÁS</span>
-
     </div>
   </div>
-
-
-
 </div>
 
 
@@ -83,7 +78,6 @@ title: LA REPÚBLICA DEL UNITE
   </div>
 </div>
 <div class="container-fluid banner-home"  >
-
   <div class="container banner bg-cham"">
     <div class="banner-grupo">
       {% assign norte = site.categories.GNORTE | sort: "puntos" %}
@@ -130,27 +124,67 @@ title: LA REPÚBLICA DEL UNITE
   </div>
 </div>
 
-<div class="container-fluid mt-5">
+
+<div class="container-fluid mt-5" id="liga">
+  <div class="container teams-table">
+    <h1 class="teams-title">EQUIPOS DEL SECTOR11</h1>
+  </div>
+</div>
+<div class="container-fluid banner-home"  >
+  <div class="container banner bg-S11"">
+    <div class="banner-grupo">
+      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+      {%- for post in norte-%}
+    <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+
+    <div class="banner-logo">
+      <a href="/assets/logos/S11.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/S11.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="d-flex justify-content-center align-items-center">
+       
+        <a href="/equipos-del-sector11" class="button-space d-block d-md-none">
+          <span class="main-text">VER MÁS
+            <span> 
+             <span>⫸</span> 
+            </span>
+          </span></a>
+        
+          <a href="/equipos-del-sector11" class="button-space d-none d-md-block">
+          <span class="main-text">VER MÁS
+            <span> 
+             <span>⫸</span> 
+            </span>
+          </span></a>
+      </div>
+
+    </div>
+
+    <div class="banner-grupo">
+      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+      {%- for post in norte-%}
+      <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="container-fluid mt-5">
   <div class="container teams-table">
     <h1 class="teams-title">PRÓXIMOS STREAMS</h1>
   </div>
 </div>
 {% include promo-stream.html %}
 
-
-
-
-  
- 
-
-  <div class="container-fluid my-5">
-    <div class="container teams-table">
-      <h1 class="teams-title">SIGUE A NUESTROS SPONSORS</h1>
-      {% include sponsors.html %}
-    </div>
-  </div>
-
-
+ -->
 
   <!-- <div class="container-fluid red-x p-10 mb-5">
     <div class="container">
@@ -171,12 +205,6 @@ title: LA REPÚBLICA DEL UNITE
   </div> -->
 
 
-
-
-
-
-
- 
 
 
 

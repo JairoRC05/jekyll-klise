@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: SEP LIP ROCT PLATINO B GSUR ENERO
+categories: SEP LIP ROCT PLATINO B GSUR ENERO TEAM
 team: SLEEPYHEADS
 maincover: /assets/logos/SPH.png
 puntosLJMAYO24: 6
@@ -55,4 +55,6 @@ F9:
 F10: 
 F11: 
 cham: "1"
+rango: DIAMANTE
+sector: CS
 ---

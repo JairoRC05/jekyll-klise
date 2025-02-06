@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: PLATINO SEP LIO ROCT B
+categories: 4TOSDF F1 PROMO
 liga: LIGA JOHTO
 maincover: /assets/logos/TG.png
 puntosLJMAYO24: 17

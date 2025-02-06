@@ -28,16 +28,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LIGAS INDIGO/2025-01-25-ENERO.md",
+                "file": "teams/01-ligaindigoPLATINO/2021-07-21-GDI DUAT.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2025-01-25-ENERO"
+              "title": "2021-07-21-GDI DUAT"
+            }
+          },
+          {
+            "id": "ae7e627a987e0600",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "teams/GNORTE/2024-07-21-TEAM AETHER.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-07-21-TEAM AETHER"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -175,34 +189,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "2f8083efcae5d75f",
+  "active": "ae7e627a987e0600",
   "lastOpenFiles": [
     "teams/GSUR/2024-07-21-TEAM EVE.md",
-    "teams/GSUR/2024-04-05-DFS-PEARL.md",
+    "teams/GSUR/2024-04-05-TSR.md",
+    "teams/GSUR/2024-04-05-STAMINA.md",
+    "teams/GSUR/2021-07-21-SLEEPYHEADS.md",
+    "teams/GNORTE/2024-07-21-TEAM ROCKET.md",
+    "teams/GNORTE/2024-04-05-FROSTBITE.md",
+    "teams/GNORTE/2023-07-21-TUT.md",
+    "teams/GSUR/2024-07-21-RNT-VOLT.md",
+    "teams/04-ligaindigoBRONCE/2021-07-21-ACADEMIA-BLUE.md",
+    "teams/02-ligaindigoORO/2024-04-04-CELESTIAL-DRAGONS.md",
+    "teams/03-ligaindigoPLATA/2021-07-21-DFS-AMBER.md",
+    "teams/02-ligaindigoORO/2021-07-21-AOS.md",
+    "teams/01-ligaindigoPLATINO/2024-04-05-EK WHITE.md",
+    "teams/GSUR/2024-07-25-HG-SALARIO-MINIMO.md",
+    "teams/GNORTE/2021-07-21-DFS-RUBY.md",
+    "teams/GNORTE/2021-07-21-ENIGMA.md",
+    "teams/GNORTE/2021-07-21-ETERNAL ASCENSION.md",
+    "teams/GNORTE/2021-07-21-IMPERIO MEXA.md",
+    "teams/GNORTE/2023-07-21-RNT-FENIX.md",
+    "teams/GNORTE/2024-01-04-AEP.md",
+    "teams/GNORTE/2024-07-21-RNT-DIAMANTE.md",
+    "teams/GNORTE/2024-07-21-RNT-VENOM.md",
+    "teams/GNORTE/2024-07-21-TEAM AETHER.md",
     "teams/GSUR/2024-07-21-RNT-DARK.md",
-    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "MVP/RNT/FNX/2021-07-21-PASTE.md",
-    "MVP/RNT/FNX/2021-07-21-KIYOKA.md",
-    "MVP/FTB/2021-07-21-MERGAS.md",
-    "MVP/TUT/2021-07-21-LUIS205.md",
-    "MVP/RAGNAROK/AEP/2024-11-08-BALAGOS.md",
-    "MVP/RAGNAROK/AEP/2021-07-21-JOHANFR38.md",
-    "MVP/SPH/2021-07-21-TAMALOVER.md",
-    "MVP/TUT/2021-07-21-CLIX.md",
-    "MVP/TUT/2021-07-21-TRONCIO.md",
-    "MVP/TUT/2021-07-21-JINX.md",
-    "MVP/TEAM ROCKET/2021-07-21-SUWAWAVT.md",
-    "MVP/TEAM ROCKET/2021-07-21-DOMDAE.md",
-    "MVP/E/2024-11-08-BLANCO.md",
-    "MVP/RNT/VENOM/2021-07-21-SUPERGOKYD.md",
-    "MVP/RNT/VENOM/2021-07-21-WILLYHR.md",
-    "MVP/MEXA/2021-07-21-DUODELPHANPY.md",
-    "MVP/MEXA/2021-07-21-RAPHANPY.md",
-    "MVP/MEXA/2021-07-21-SOURIS.md",
-    "MVP/EA/2021-07-21-JOSERONNI.md",
-    "MVP/EA/2021-07-21-DECER.md",
-    "MVP/TAE/2021-07-21-ALEXUS.md",
-    "MVP/TAE/2021-07-21-MATI.md",
+    "teams/GSUR/2021-07-21-AD-ESPORTS.md",
+    "teams/GSUR/2024-04-05-DFS-PEARL.md",
     "LIGAS INDIGO",
     "Sin título 1.canvas",
     "Sin título.canvas",

@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT PLATA B
+categories: 
 liga: LIGA INDIGO
 maincover: /assets/logos/PDC.png
 puntosLJMAYO24: 17

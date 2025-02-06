@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /team/:title.html
-categories: ROCT BRONCE
+categories: TEAM
 team: ACADEMIA BLUE
 maincover: /assets/logos/BLUE.png
 puntosLJMAYO24: 6
@@ -10,4 +10,5 @@ title: ACADEMIA BLUE
 ID: BLUE
 puntos: 2
 pj: 6
+rango: ACERO
 ---

@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: ROCT BRONCE GSUR ENERO
+categories: ROCT BRONCE GSUR ENERO TEAM
 team: AD-ESPORTS
 maincover: /assets/logos/AD.png
 puntosLJMAYO24: 6
@@ -54,5 +54,7 @@ F7:
 F8: 
 F9: 
 F10: 
-F11:
+F11: 
+temporada: SI
+rango: BRONCE
 ---

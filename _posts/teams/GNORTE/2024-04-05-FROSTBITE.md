@@ -1,12 +1,12 @@
 ---
 layout: liga-indigo-team
 permalink: /teams/:title.html
-categories: SEP LIO ROCT PLATINO WHEEL A GNORTE ENERO
+categories: TEAM SEP LIO ROCT PLATINO WHEEL A GNORTE ENERO
 liga: LIGA NARANJA
 maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
-title: FROSTBITE
+title: AD ROSTBITE
 team: FROSTBITE
 route: /liga-johto
 ID: FTB
@@ -54,7 +54,10 @@ F7:
 F8: 
 F9: 
 F10: 
-F11:
+F11: 
+temporada: SI
+rango: ORO
+sector: LG
 ---
 
 
