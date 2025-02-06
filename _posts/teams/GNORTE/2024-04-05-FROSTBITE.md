@@ -6,7 +6,7 @@ liga: LIGA NARANJA
 maincover: /assets/logos/FTB.png
 puntosLJMAYO24: 0
 date: 2020-08-29 10:29:20 +0700
-title: AD ROSTBITE
+title: AD FROSTBITE
 team: FROSTBITE
 route: /liga-johto
 ID: FTB
