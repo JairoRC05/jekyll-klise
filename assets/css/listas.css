@@ -836,7 +836,6 @@
         /* backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(10px); */
         border-radius: 10px;
-        z-index: -900;
         overflow: hidden;
 
     }
@@ -861,7 +860,7 @@
         height: 60%;
         top: -90;
         right: -70;
-        z-index: -1000;
+        z-index: 900;
         transform: rotate(45deg);
 
 
@@ -887,7 +886,7 @@
         width: 35px;
         top: 5px;
         right: 5px;
-        z-index: -900;
+        z-index: 1000;
 
         @media screen and (max-width: 472px) {
             top: 2px;
