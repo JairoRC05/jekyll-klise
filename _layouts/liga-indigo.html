@@ -101,18 +101,6 @@ layout:
    </div>
     
     {% endif %}
-
-
-    <!-- <h1 class="teams-title mt-5 mb-5">DIVISIONES</h1>
-    {% if page.division == "PLATINO" %}
-    {% include division-platino.html %}
-    {% elsif page.division == "ORO" %}
-    {% include division-oro.html %}
-    {% elsif page.division == "PLATA" %}
-    {% include division-plata.html %}
-    {% else %}
-    {% include division-bronce.html %}
-    {% endif %} -->
   </div>
 
 
@@ -141,19 +129,7 @@ layout:
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-  $(document).ready(function() {
-          // Transition effect for navbar 
-          $(window).scroll(function() {
-            // checks if window is scrolled more than 500px, adds/removes solid class
-            if($(this).scrollTop() > 30 ) { 
-                $('.top').addClass('bg-cham');
-            } else {
-                $('.top').removeClass('bg');
-            }
-          });
-  });
-  </script>
+
   {% include g-analytics.html %}
 
 

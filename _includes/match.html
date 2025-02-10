@@ -1,0 +1,154 @@
+<div class="col-12 col-md-6 col-lg-4 mb-3">
+    {%if post.out == "DES" %}
+    <div class="card-round-list">
+         
+       
+
+        <div class="card-round-team">
+          <a href="{{post.local}}">
+            <img src="/assets/logos/{{post.local}}.webp" alt="" class="img-fluid">
+          </a>
+          <div class="card-round-title">
+            <h2>{{post.local | truncate: 21}}</h2>
+            <span>RONDA {{post.ronda}}</span>
+          </div>
+        </div>
+          
+        <div class="card-round-pts">
+          <h6>DESCANSO</h6>
+        </div>
+      
+          <div class="card-back">
+            {% if post.ID == "7Z" %}
+            <div class="card-color-left S7Z"> </div>  
+            {% else %}
+            <div class="card-color-left {{post.local}}"> </div> 
+            {% endif %} 
+          </div>
+
+      </div>
+    {%else %}
+    <div class="bracket-round-list">
+      <div class="bracket-round-team">
+        <a href="/teams/{{post.local}}">
+          <img src="/assets/logos/{{post.local}}.webp" alt="" class="img-fluid">
+        </a>
+      
+      </div>
+
+  <div class="round-titles">
+      <div class="card-round-promo left">
+          <h6>{{post.local}}</h6>
+      </div>
+      <div class="card-round-promo">
+        <span>RONDA {{post.ronda}}</span>
+        <h6>VS</h6>
+        {%if post.ronda == "1" %}
+        {% assign DATE = site.categories.FECHA  %}
+        {%- for post in DATE -%}
+        <span>{{post.f1}}</span>
+        {%-endfor-%}
+        {% endif %}
+        
+        {%if post.ronda == "2" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f2}}</span>
+        {%-endfor-%}
+        {% endif %}
+        
+        {%if post.ronda == "3" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f3}}</span>
+        {%-endfor-%}
+        {% endif %}
+        
+        {%if post.ronda == "4" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f4}}</span>
+        {%-endfor-%}
+        {% endif %}
+        
+        {%if post.ronda == "5" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f5}}</span>
+        {%-endfor-%}
+        {% endif %}
+
+        {%if post.ronda == "6" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f6}}</span>
+        {%-endfor-%}
+        {% endif %}
+
+        {%if post.ronda == "7" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f7}}</span>
+        {%-endfor-%}
+        {% endif %}
+       
+        {%if post.ronda == "8" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f8}}</span>
+        {%-endfor-%}
+        {% endif %}
+       
+        {%if post.ronda == "9" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f9}}</span>
+        {%-endfor-%}
+        {% endif %}
+
+        {%if post.ronda == "10" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f10}}</span>
+        {%-endfor-%}
+        {% endif %}
+     
+        {%if post.ronda == "11" %}
+        {% assign DATE = site.categories.FECHA   %}
+        {%- for post in DATE -%}
+        <span>{{post.f11}}</span>
+        {%-endfor-%}
+        {% endif %}
+      </div>
+      <div class="card-round-promo right">
+          <h6>{{post.out}}</h6>
+      </div>
+  </div>
+
+
+      <div class="bracket-round-team-right">
+       
+        <a href="/teams/{{post.out}}">
+          <img src="/assets/logos/{{post.out}}.webp" alt="" class="img-fluid">
+        </a>
+      </div>
+ 
+    
+        <div class="card-back">
+            {% if post.local == "7Z" %}
+            <div class="card-color-left S7Z"> </div>  
+            {% else %}
+            <div class="card-color-left {{post.local}}"> </div> 
+            {% endif %} 
+
+            {% if post.out == "7Z" %}
+            <div class="card-color-right S7Z"> </div>  
+            {% else %}
+            <div class="card-color-right {{post.out}}"> </div>  
+            {% endif %} 
+
+        </div>
+
+    </div>
+    {% endif %}
+  </div>

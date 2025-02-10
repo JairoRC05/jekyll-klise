@@ -21,6 +21,7 @@
     "no9": "number",
     "no10": "number",
     "no11": "number",
-    "h1": "text"
+    "h1": "text",
+    "fecha": "multitext"
   }
 }

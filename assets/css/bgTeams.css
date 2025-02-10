@@ -627,26 +627,11 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
   background: radial-gradient(circle, rgba(77,79,77,1) 0%, rgba(0,0,0,1) 94%);
 }
 
-.VOLT{
-  background: #0c2aa2;
-  border-bottom: 5px solid #000000 ;
-}
 .STMN{
   background: rgb(0,127,88);
   background: radial-gradient(circle, rgba(0,127,88,1) 0%, rgba(47,149,187,1) 50%, rgba(7,69,71,1) 100%);
 }
-.FNX{
-  background: #0c2aa2;
-  border-bottom: 5px solid #000000 ;
-}
-.VNM{
-  background: rgb(0,73,235);
-  background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
-}
-.DARK{
-  background: #0c2aa2;
-  border-bottom: 5px solid #000000 ;
-}
+
 .PLAT{
   background: rgb(209,0,0);
 background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
@@ -679,10 +664,27 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
   background: rgb(209,0,0);
   background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
+/* DORADO */
 .AD{
-
   background: rgb(241,210,128);
-  background: radial-gradient(circle, rgba(241,210,128,1) 0%, rgba(200,145,16,1) 100%);}
+  background: radial-gradient(circle, rgba(241,210,128,1) 0%, rgba(200,145,16,1) 100%);
+}
+.GGG{
+  background: rgb(241,210,128);
+  background: radial-gradient(circle, rgba(241,210,128,1) 0%, rgba(200,145,16,1) 100%);
+}
+
+/* AMARILLO */
+.PSY{
+  background: rgb(255,196,0);
+  background: radial-gradient(circle, rgba(255,196,0,1) 0%, rgba(230,243,63,1) 100%);
+}
+
+/* ROSA */
+.S7Z{
+  background: rgb(254,56,144);
+background: radial-gradient(circle, rgba(254,56,144,1) 0%, rgba(210,0,94,1) 100%);
+}
 
 .PDC{
   background: #ecbb09;
@@ -718,11 +720,43 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
   background: rgb(26,67,111);
 background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
 }
+
+/* NARANJA */
+.TF{
+  background: rgb(255,167,55); 
+  background: radial-gradient(circle, rgba(255,167,55,1) 0%, rgba(255,143,0,1) 100%);
+}
+
+/* AZUL */
 .TUT{
   background: rgb(2,126,222);
   background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
 }
+.FNX{
+  background: #0c2aa2;
+  border-bottom: 5px solid #000000 ;
+}
+.VNM{
+  background: rgb(0,73,235);
+  background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
+}
+.DARK{
+  background: rgb(12,12,134);
+  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
+}
+.GX{
+  background: rgb(12,12,134);
+  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
+}
 
+.NEO{
+  background: rgb(12,12,134);
+  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
+}
+.VOLT{
+  background: #0c2aa2;
+  border-bottom: 5px solid #000000 ;
+}
 
 .hielo{
   background-image: url(/assets/backgrounds/hielo-back.png);
@@ -865,4 +899,11 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
       border-right: 3px solid #8846ab;
       border-bottom: 3px solid #8846ab;
    }
+  }
+
+
+
+
+  .drop-white{
+    filter: drop-shadow(0px 0px 6px #ffffff);
   }
