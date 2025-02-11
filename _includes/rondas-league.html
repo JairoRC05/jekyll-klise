@@ -102,13 +102,17 @@
         <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0">
       {% endif %}
       <div class="row mt-4 team--last">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD6 | sort: "match" %}
-          {% include OUT3.html%} 
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO6 | sort: "match" %}
-          {% include OUT3.html%} 
-          {% endif %}
+        {% if page.division == "PLATINO" %}
+        {% assign norte = site.categories.LD6 | sort: "match" %}
+        {%- for post in norte -%}
+        {% include match.html%}
+        {% endfor %}
+        {% elsif page.division == "ORO" %}
+        {% assign sur = site.categories.LO6 | sort: "match" %}
+        {%- for post in sur -%}
+        {% include match.html%}
+        {% endfor %}
+        {% endif %}
         </div>
       </div>
       {% if post.active7 == "active" %}
@@ -117,13 +121,17 @@
         <div class="tab-pane fade" id="pills-7" role="tabpanel" aria-labelledby="pills-7-tab" tabindex="0">
       {% endif %}
       <div class="row mt-4 team--last">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD7 | sort: "match" %}
-          {% include LOCAL4.html%} 
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO7 | sort: "match" %}
-          {% include LOCAL4.html%} 
-          {% endif %}
+        {% if page.division == "PLATINO" %}
+        {% assign norte = site.categories.LD7 | sort: "match" %}
+        {%- for post in norte -%}
+        {% include match.html%}
+        {% endfor %}
+        {% elsif page.division == "ORO" %}
+        {% assign sur = site.categories.LO7 | sort: "match" %}
+        {%- for post in sur -%}
+        {% include match.html%}
+        {% endfor %}
+        {% endif %}
         </div>
       </div>
       {% if post.active8 == "active" %}
@@ -132,13 +140,17 @@
         <div class="tab-pane fade" id="pills-8" role="tabpanel" aria-labelledby="pills-8-tab" tabindex="0">
       {% endif %}
       <div class="row mt-4 team--last">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD8 | sort: "match" %}
-          {% include OUT4.html%}
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO8 | sort: "match" %}
-          {% include OUT4.html%}
-          {% endif %}
+        {% if page.division == "PLATINO" %}
+        {% assign norte = site.categories.LD8 | sort: "match" %}
+        {%- for post in norte -%}
+        {% include match.html%}
+        {% endfor %}
+        {% elsif page.division == "ORO" %}
+        {% assign sur = site.categories.LO8 | sort: "match" %}
+        {%- for post in sur -%}
+        {% include match.html%}
+        {% endfor %}
+        {% endif %}
         </div>
       </div>
       {% if post.active9 == "active" %}
@@ -147,13 +159,17 @@
         <div class="tab-pane fade" id="pills-9" role="tabpanel" aria-labelledby="pills-9-tab" tabindex="0">
       {% endif %}  
     <div class="row mt-4 ">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD9 | sort: "match" %}
-          {% include LOCAL5.html%} 
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO9 | sort: "match" %}
-          {% include LOCAL5.html%} 
-          {% endif %}
+      {% if page.division == "PLATINO" %}
+      {% assign norte = site.categories.LD9 | sort: "match" %}
+      {%- for post in norte -%}
+      {% include match.html%}
+      {% endfor %}
+      {% elsif page.division == "ORO" %}
+      {% assign sur = site.categories.LO9 | sort: "match" %}
+      {%- for post in sur -%}
+      {% include match.html%}
+      {% endfor %}
+      {% endif %}
         </div>
       </div>
       {% if post.active10 == "active" %}
@@ -162,13 +178,17 @@
         <div class="tab-pane fade" id="pills-10" role="tabpanel" aria-labelledby="pills-10-tab" tabindex="0">
       {% endif %}
       <div class="row mt-4">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD10 | sort: "match" %}
-          {% include OUT5.html%} 
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO10 | sort: "match" %}
-          {% include OUT5.html%} 
-          {% endif %}
+        {% if page.division == "PLATINO" %}
+        {% assign norte = site.categories.LD10 | sort: "match" %}
+        {%- for post in norte -%}
+        {% include match.html%}
+        {% endfor %}
+        {% elsif page.division == "ORO" %}
+        {% assign sur = site.categories.LO10 | sort: "match" %}
+        {%- for post in sur -%}
+        {% include match.html%}
+        {% endfor %}
+        {% endif %}
          
         </div>
       </div>
@@ -178,13 +198,17 @@
         <div class="tab-pane fade" id="pills-11" role="tabpanel" aria-labelledby="pills-11-tab" tabindex="0">
       {% endif %}
       <div class="row mt-4 team--last">
-          {% if page.division == "PLATINO" %}
-          {% assign norte = site.categories.LD11 | sort: "match" %}
-          {% include LOCAL6.html%} 
-          {% elsif page.division == "ORO" %}
-          {% assign norte = site.categories.LO11 | sort: "match" %}
-          {% include LOCAL6.html%} 
-          {% endif %}
+        {% if page.division == "PLATINO" %}
+        {% assign norte = site.categories.LD11 | sort: "match" %}
+        {%- for post in norte -%}
+        {% include match.html%}
+        {% endfor %}
+        {% elsif page.division == "ORO" %}
+        {% assign sur = site.categories.LO11 | sort: "match" %}
+        {%- for post in sur -%}
+        {% include match.html%}
+        {% endfor %}
+        {% endif %}
         </div>
       </div>
 </div>
