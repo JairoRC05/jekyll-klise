@@ -1,0 +1,654 @@
+<div class="container teams-table"  id="home">
+    <h1 class="teams-title">CAMPEONATO</h1>
+      <div class="row">
+     
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j1}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec1 == "win" or page.rec1 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec1 == "loss" or page.rec1 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec1 == "des"  %}
+                <p>DESCANSO</p>
+                {% else page.rec1 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% endif %} 
+          
+                {% if page.rec1 == "sup" or page.rec1 == "win" or page.rec1 == "one" or page.rec1 == "loss" or page.rec1 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f1}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F1}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec1 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec1 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec1 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec1 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec1 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec1 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec1 == "win" or page.rec1 == "sup" or page.rec1 == "one" or page.rec1 == "loss" or page.rec1 == "rea" %}
+                <img src="/assets/logos/{{page.E1}}.png" alt="" class="img-fluid">
+                <p>{{page.E1 | truncate: 8}}</p>
+                {% else %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j2}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec2 == "win" or page.rec2 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec2 == "loss" or page.rec2 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec2 == "des"  %}
+                <p>DESCANSO</p>
+                {% else page.rec2 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% endif %} 
+          
+                {% if page.rec2 == "sup" or page.rec2 == "win" or page.rec2 == "one" or page.rec2 == "loss" or page.rec2 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f2}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F2}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec2 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec2 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec2 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec2 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec2 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec2 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec2 == "win" or page.rec2 == "sup" or page.rec2 == "one" or page.rec2 == "loss" or page.rec2 == "rea" %}
+                <img src="/assets/logos/{{page.E2}}.png" alt="" class="img-fluid">
+                <p>{{page.E2 | truncate: 8}}</p>
+                {% else %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j3}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec3 == "win" or page.rec3 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec3 == "loss" or page.rec3 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec3 == "des"  %}
+                <p>DESCANSO</p>
+                {% else page.rec3 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% endif %} 
+          
+                {% if page.rec3 == "sup" or page.rec3 == "win" or page.rec3 == "one" or page.rec3 == "loss" or page.rec3 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f3}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F1}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec3 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec3 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec3 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec3 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec3 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec3 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec3 == "win" or page.rec3 == "sup" or page.rec3 == "one" or page.rec3 == "loss" or page.rec3 == "rea" %}
+                <img src="/assets/logos/{{page.E3}}.png" alt="" class="img-fluid">
+                <p>{{page.E3 | truncate: 8}}</p>
+                {% else %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j4}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec4 == "win" or page.rec4 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec4 == "loss" or page.rec4 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec4 == "des"  %}
+                <p>DESCANSO</p>
+                {% else page.rec4 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% endif %} 
+          
+                {% if page.rec4 == "sup" or page.rec4 == "win" or page.rec4 == "one" or page.rec4 == "loss" or page.rec4 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f4}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F4}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec4 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec4 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec4 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec4 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec4 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec4 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec4 == "win" or page.rec4 == "sup" or page.rec4 == "one" or page.rec4 == "loss" or page.rec4 == "rea" %}
+                <img src="/assets/logos/{{page.E4}}.png" alt="" class="img-fluid">
+                <p>{{page.E4 | truncate: 8}}</p>
+                {% else %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j5}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec5 == "win" or page.rec5 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec5 == "loss" or page.rec5 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec5 == "des"  %}
+                <p>DESCANSO</p>
+                {% else page.rec5 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% endif %} 
+          
+                {% if page.rec5 == "sup" or page.rec5 == "win" or page.rec5 == "one" or page.rec5 == "loss" or page.rec5 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f5}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F5}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec5 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec5 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec5 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec5 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec5 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec5 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec5 == "win" or page.rec5 == "sup" or page.rec5 == "one" or page.rec5 == "loss" or page.rec5 == "rea" %}
+                <img src="/assets/logos/{{page.E5}}.png" alt="" class="img-fluid">
+                <p>{{page.E5 | truncate: 8}}</p>
+                {% else %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j6}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec6 == "win" or page.rec6 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec6 == "loss" or page.rec6 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec6 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec6 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec6 == "sup" or page.rec6 == "win" or page.rec6 == "one" or page.rec6 == "loss" or page.rec6 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f6}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F6}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec6 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec6 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec6 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec6 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec6 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec6 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec6 == "win" or page.rec6 == "sup" or page.rec6 == "one" or page.rec6 == "loss" or page.rec6 == "rea" %}
+                <img src="/assets/logos/{{page.E6}}.png" alt="" class="img-fluid">
+                <p>{{page.E6 | truncate: 8}}</p>
+                {% elsif page.rec6 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E6}}.png" alt="" class="img-fluid">
+                <p>{{page.E6 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j7}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec7 == "win" or page.rec7 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec7 == "loss" or page.rec7 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec7 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec7 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec7 == "sup" or page.rec7 == "win" or page.rec7 == "one" or page.rec7 == "loss" or page.rec7 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f7}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F7}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec7 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec7 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec7 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec7 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec7 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec7 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec7 == "win" or page.rec7 == "sup" or page.rec7 == "one" or page.rec7 == "loss" or page.rec7 == "rea" %}
+                <img src="/assets/logos/{{page.E7}}.png" alt="" class="img-fluid">
+                <p>{{page.E7 | truncate: 8}}</p>
+                {% elsif page.rec7 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E7}}.png" alt="" class="img-fluid">
+                <p>{{page.E7 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j8}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec8 == "win" or page.rec8 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec8 == "loss" or page.rec8 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec8 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec8 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec8 == "sup" or page.rec8 == "win" or page.rec8 == "one" or page.rec8 == "loss" or page.rec8 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f8}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F8}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec8 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec8 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec8 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec8 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec8 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec8 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec8 == "win" or page.rec8 == "sup" or page.rec8 == "one" or page.rec8 == "loss" or page.rec8 == "rea" %}
+                <img src="/assets/logos/{{page.E8}}.png" alt="" class="img-fluid">
+                <p>{{page.E8 | truncate: 8}}</p>
+                {% elsif page.rec8 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E8}}.png" alt="" class="img-fluid">
+                <p>{{page.E8 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j9}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec9 == "win" or page.rec9 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec9 == "loss" or page.rec9 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec9 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec9 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec9 == "sup" or page.rec9 == "win" or page.rec9 == "one" or page.rec9 == "loss" or page.rec9 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f9}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F9}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec9 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec9 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec9 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec9 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec9 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec9 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec9 == "win" or page.rec9 == "sup" or page.rec9 == "one" or page.rec9 == "loss" or page.rec9 == "rea" %}
+                <img src="/assets/logos/{{page.E9}}.png" alt="" class="img-fluid">
+                <p>{{page.E9 | truncate: 8}}</p>
+                {% elsif page.rec9 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E9}}.png" alt="" class="img-fluid">
+                <p>{{page.E9 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j10}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec10 == "win" or page.rec10 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec10 == "loss" or page.rec10 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec10 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec10 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec10 == "sup" or page.rec10 == "win" or page.rec10 == "one" or page.rec10 == "loss" or page.rec10 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f10}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F10}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec10 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec10 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec10 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec10 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec10 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec10 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec10 == "win" or page.rec10 == "sup" or page.rec10 == "one" or page.rec10 == "loss" or page.rec10 == "rea" %}
+                <img src="/assets/logos/{{page.E10}}.png" alt="" class="img-fluid">
+                <p>{{page.E10 | truncate: 8}}</p>
+                {% elsif page.rec10 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E10}}.png" alt="" class="img-fluid">
+                <p>{{page.E10 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+            <div class="container roundTeams text-white">
+              <div class="roundScore">
+                {% assign FECHAS = site.categories.FECHA %}
+                {%- for post in FECHAS-%}
+                <span>{{post.j11}}</span>
+                {%- endfor -%}
+          
+                {% if page.rec11 == "win" or page.rec11 == "sup" %}
+                <p>VICTORIA</p>
+                {% elsif page.rec11 == "loss" or page.rec11 == "one" %}
+                <p>DERROTA</p>
+                {% elsif page.rec11 == "des"  %}
+                <p>DESCANSO</p>
+                {% elsif page.rec11 == "rea"  %}
+                <p>REAGENDADO</p>
+                {% else %}
+                <p>POR JUGAR</p>
+                {% endif %} 
+          
+                {% if page.rec11 == "sup" or page.rec11 == "win" or page.rec11 == "one" or page.rec11 == "loss" or page.rec11 == "des" %}
+                   {% assign FECHAS = site.categories.FECHA %}
+                   {%- for post in FECHAS-%}
+                   <span>{{post.f11}}</span>
+                   {%- endfor -%}
+                {% else %}
+                   <span>{{page.F11}}</span>
+                {% endif %} 
+              </div>
+              <div class="roundScore">
+                {% if page.rec11 == "sup" %}
+                <p>2-0</p>
+                {% elsif page.rec11 == "win"  %}
+                <p>2-1</p>
+                {% elsif page.rec11 == "loss"  %}
+                <p>0-2</p>
+                {% elsif page.rec11 == "one"  %}
+                <p>1-2</p>
+                {% elsif page.rec11 == "rea"  %}
+                <p>VS</p>
+                {% elsif page.rec11 == "des"  %}
+           
+                {% else %}
+                <p>VS</p>
+                {% endif %} 
+              </div>
+          
+              <div class="roundTeam">
+                {% if page.rec11 == "win" or page.rec11 == "sup" or page.rec11 == "one" or page.rec11 == "loss" or page.rec11 == "rea" %}
+                <img src="/assets/logos/{{page.E11}}.png" alt="" class="img-fluid">
+                <p>{{page.E11 | truncate: 8}}</p>
+                {% elsif page.rec11 == "des" %}
+                <img src="/assets/logos/DESCANSO.png" alt="" class="img-fluid">
+                {% else %}
+                <img src="/assets/logos/{{page.E11}}.png" alt="" class="img-fluid">
+                <p>{{page.E11 | truncate: 8}}</p>
+                {% endif %} 
+              </div>
+              
+            </div>
+          </div>
+   
+
+      </div>
+  </div>

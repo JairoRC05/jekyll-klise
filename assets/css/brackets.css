@@ -446,6 +446,11 @@
         position: absolute;
         left: 5%;
         color: #fff;
+
+
+        @media screen and (max-width: 768px) {
+          left: 2%;
+      }
   
         a{
             img {
@@ -539,11 +544,19 @@
             font-size: 14px;
             font-weight: bold;
         }
+        .record{
+            color: #012c50 !important;
+            font-size: 26px;
+            font-weight: bold;
+        }
 
         h6{
           margin: 0;
           color: #000;
-          font-weight: bold;
+          font-weight: bold ;
+
+
+          
         }
     }
     }
@@ -579,6 +592,8 @@
         left: -45px;
         z-index: -1000;
         transform: rotate(135deg);
+
+    
   
     }
     .card-color-right {
@@ -601,6 +616,11 @@
         position: absolute;
         right: 5%;
         color: #fff;
+
+
+        @media screen and (max-width: 768px) {
+          right: 2%;
+      }
   
         a{
             img {
@@ -689,3 +709,329 @@
       }
   
     }
+
+
+
+    .bracket-round-list-zzz {
+      height: 70px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    
+      @media screen and (max-width: 472px) {
+          padding: 5px 0;
+          justify-content: space-around;
+          height: 70px;
+      }
+  
+  
+      .round-block{
+        display: block;
+  
+        p{
+          margin: 0;
+          color: #fff;
+        }
+      }
+    
+      .bracket-round-team {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          position: absolute;
+          color: #fff;
+  
+  
+          @media screen and (max-width: 768px) {
+            left: 2%;
+        }
+    
+          a{
+              img {
+                  width: 60px;
+    
+                  @media screen and (max-width: 472px) {
+                      width: 60px;
+                  }
+    
+              }
+          }
+    
+          .card-round-title{
+          display: flex;
+          color: #000;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          margin: 0 0 0 7px;
+    
+              h2{
+                 margin: 0;
+                  font-size: 20px;
+    
+                    @media screen and (max-width: 472px) {
+                      font-size: 14px;
+                  }
+    
+              }
+    
+            .card-round-record{
+             display: flex;
+             flex-direction: row;
+             justify-content: start;
+             align-items: start;
+    
+             .record{
+                  margin: 0 2px 0 0; 
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: #94919117;
+                  border: 1px solid rgb(215, 215, 215);
+                  width: 12px !important;
+                  height: 12px !important;
+                  border-radius: 50%;
+                  font-size: 8px;
+                  text-align: center;
+              }
+            }
+          }
+      }
+    
+      .card-round-num{
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          position: absolute;
+          left: 3%;
+          color: #fff;
+    
+    
+          h6{
+              margin: 0;
+          }
+      }
+
+      .card-round-promo{
+        position: absolute;
+        color: #ffffff4e;
+        
+          h3{
+            font-size: 48px !important;
+            font-style: italic;
+            font-weight: bold;
+            margin: 0;
+          }
+      }
+
+      .card-round-promo-left{
+         position: absolute;
+         top: 2%;
+         left: 2%;
+    
+        span{
+            color: #ffffff !important;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .record{
+            color: #012c50 !important;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        h6{
+          margin: 0;
+          color: #000;
+          font-weight: bold ;
+
+
+          
+        }
+    }
+      .card-round-promo-right{
+         position: absolute;
+         right: 2%;
+         bottom: 2%;
+    
+        span{
+            color: #ffffff !important;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .record{
+            color: #012c50 !important;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        h6{
+          margin: 0;
+          color: #000;
+          font-weight: bold ;
+
+
+          
+        }
+    }
+
+
+
+    
+      .round-titles{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        right: 2%;
+        bottom: 2%;
+  
+        .left{
+          width: 50px;
+          text-align: right !important;
+        }
+        .right{
+          width: 50px;
+          text-align: left !important;
+        }
+  
+        .card-round-promo{
+         
+    
+          span{
+              color: #012c50 !important;
+              font-size: 14px;
+              font-weight: bold;
+          }
+          .record{
+              color: #012c50 !important;
+              font-size: 26px;
+              font-weight: bold;
+          }
+  
+          h6{
+            margin: 0;
+            color: #000;
+            font-weight: bold ;
+  
+  
+            
+          }
+      }
+      }
+    
+      .card-back {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: rgb(255, 255, 255);
+          /* background: url(/assets/mis/ice-mask-team.png); */
+          /* background-size: cover; */
+          /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
+          border: 1px solid rgb(228, 228, 228);
+          /* border-right: 2px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
+          /* backdrop-filter: blur(2px);
+          -webkit-backdrop-filter: blur(10px); */
+          border-radius:10px ;
+          z-index: -900;
+          overflow: hidden;
+    
+          @media screen and (max-width: 472px) {
+            border-bottom: 1px solid rgb(228, 228, 228);
+          }
+      }
+    
+    
+      .card-color-left {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1000;
+      }
+
+      .card-color-right {
+          position: absolute;
+          width: 60%;
+          height: 70%;
+          top: -35px;
+          right: -45px;
+          z-index: -1000;
+          transform: rotate(45deg);
+    
+      }
+  
+  
+      .bracket-round-team-right {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          position: absolute;
+          right: 5%;
+          color: #fff;
+  
+  
+          @media screen and (max-width: 768px) {
+            right: 2%;
+        }
+    
+          a{
+              img {
+                  width: 60px;
+    
+                  @media screen and (max-width: 472px) {
+                      width: 60px;
+                  }
+    
+              }
+          }
+    
+          .card-round-title{
+          display: flex;
+          color: #000;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          margin: 0 0 0 7px;
+    
+              h2{
+                 margin: 0;
+                  font-size: 20px;
+    
+                    @media screen and (max-width: 472px) {
+                      font-size: 14px;
+                  }
+    
+              }
+    
+            .card-round-record{
+             display: flex;
+             flex-direction: row;
+             justify-content: start;
+             align-items: start;
+    
+             .record{
+                  margin: 0 2px 0 0; 
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: #94919117;
+                  border: 1px solid rgb(215, 215, 215);
+                  width: 12px !important;
+                  height: 12px !important;
+                  border-radius: 50%;
+                  font-size: 8px;
+                  text-align: center;
+              }
+            }
+          }
+      }
+    
+    }
+    
