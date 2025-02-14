@@ -88,8 +88,42 @@ permalink:
     <h1 class="teams-title">INFO DEL PARTIDO</h1>
 
     <div class="row">
-        <div class="col-12">
-            <iframe src="https://player.twitch.tv/?video=2378963061&parent=xforceunite.site" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+        <div class="col-8">
+            <iframe src="https://player.twitch.tv/?video=2378963061&parent=xforceunite.site" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
+        </div>
+        <div class="col-4">
+            BANS PARA ESTE PARTIDO:
+            RAPIDASH DE GALAR
+            FORMATO: MODO TORNEO (NO PERSONALIZADAS)
+            ENCUENTRO: BO3
+        
+            <h3>MVPS</h3>
+            {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
+            | reverse %}
+            {%- for post in LIGA offset:5 limit:3  -%}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+              <div class="card-round-mvp">
+                 <div class="card-mvp">
+                  <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
+                  <div class="card-mvp-title">
+                    <p class="mvp-title">{{post.title | truncate: 12}}</p>
+                    <p>{{post.team}}</p>
+                  </div>
+                </div>
+                <div class="card-mvp-number">
+                  <p class="mvp-number">{{post.MVPS}}</p>
+                  <p>MVPS</p>
+                </div>
+                <div class="card-back">
+                  <div class="card-color-left {{post.team}}"> </div>  
+                  <div class="card-mvp-team">
+                    <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            {%- endfor -%}
         </div>
     </div>
 
@@ -158,33 +192,7 @@ permalink:
         </div>
  
         <div class="col-4">
-            <h3>MVPS</h3>
-            {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
-            | reverse %}
-            {%- for post in LIGA offset:5 limit:3  -%}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-12">
-              <div class="card-round-mvp">
-                 <div class="card-mvp">
-                  <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
-                  <div class="card-mvp-title">
-                    <p class="mvp-title">{{post.title | truncate: 12}}</p>
-                    <p>{{post.team}}</p>
-                  </div>
-                </div>
-                <div class="card-mvp-number">
-                  <p class="mvp-number">{{post.MVPS}}</p>
-                  <p>MVPS</p>
-                </div>
-                <div class="card-back">
-                  <div class="card-color-left {{post.team}}"> </div>  
-                  <div class="card-mvp-team">
-                    <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            {%- endfor -%}
+       
         </div>
        
     </div>
