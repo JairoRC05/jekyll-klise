@@ -129,86 +129,17 @@
           <h6>{{post.local}}</h6>
       </div>
    
+     <a href="{{post.url}}">
       <div class="card-round-promo">
         <span>RONDA {{post.ronda}}</span>
         <h6>VS</h6>
-        {%if post.ronda == "1" %}
-        {% assign DATE = site.categories.FECHA  %}
-        {%- for post in DATE -%}
-        <span>{{post.f1}}</span>
-        {%-endfor-%}
-        {% endif %}
-        
-        {%if post.ronda == "2" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f2}}</span>
-        {%-endfor-%}
-        {% endif %}
-        
-        {%if post.ronda == "3" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f3}}</span>
-        {%-endfor-%}
-        {% endif %}
-        
-        {%if post.ronda == "4" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f4}}</span>
-        {%-endfor-%}
-        {% endif %}
-        
-        {%if post.ronda == "5" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f5}}</span>
-        {%-endfor-%}
-        {% endif %}
-
-        {%if post.ronda == "6" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f6}}</span>
-        {%-endfor-%}
-        {% endif %}
-
-        {%if post.ronda == "7" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f7}}</span>
-        {%-endfor-%}
-        {% endif %}
-       
-        {%if post.ronda == "8" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f8}}</span>
-        {%-endfor-%}
-        {% endif %}
-       
-        {%if post.ronda == "9" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f9}}</span>
-        {%-endfor-%}
-        {% endif %}
-
-        {%if post.ronda == "10" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f10}}</span>
-        {%-endfor-%}
-        {% endif %}
-     
-        {%if post.ronda == "11" %}
-        {% assign DATE = site.categories.FECHA   %}
-        {%- for post in DATE -%}
-        <span>{{post.f11}}</span>
-        {%-endfor-%}
-        {% endif %}
+        {% include FECHAS.html %}
       </div>
+     </a>
+
+
+
+
       <div class="card-round-promo right">
         <h6>{{post.out}}</h6>
       </div>
