@@ -548,10 +548,7 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
 }
 
 
-.TSR{
-  background: #f00a87;
-  border-bottom: 5px solid #b2bf3c ;
-}
+
 
 .ZN{
   background: #051f27;
@@ -582,23 +579,12 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
 .TAE{
   background: #9e8b50;
 }
-.FTB{
-  background:#02161f;
-  border-bottom: 5px solid #1d5c7b ;
-}
+
 .SHA{
   background: #000;
   border-bottom: 5px solid #daa35c ;
 }
-.SM{
-  background: #99110c;
-  border-bottom: 5px solid #daa35cab ;
-}
 
-.EA{
-  background: #1a436f;
-  border-bottom: 5px solid #ffffffab ;
-}
 .POA{
   background: #000000;
   border-bottom: 5px solid #fd0101 ;
@@ -657,8 +643,8 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
 }
 .TR{
-  background: rgb(209,0,0);
-  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
 .BNT{
   background: rgb(209,0,0);
@@ -685,6 +671,12 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
   background: rgb(254,56,144);
 background: radial-gradient(circle, rgba(254,56,144,1) 0%, rgba(210,0,94,1) 100%);
 }
+
+.TSR{
+  background: rgb(240,10,136);
+  background: radial-gradient(circle, rgba(240,10,136,1) 0%, rgba(255,63,168,1) 100%);
+}
+
 
 .PDC{
   background: #ecbb09;
@@ -753,10 +745,29 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
   background: rgb(12,12,134);
   background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
 }
+
+.FTB{
+  background: rgb(11,73,96);
+  background: radial-gradient(circle, rgba(11,73,96,1) 0%, rgba(16,105,138,1) 100%);
+}
+
+
+.EA{
+  background: rgb(11,73,96);
+  background: radial-gradient(circle, rgba(11,73,96,1) 0%, rgba(16,105,138,1) 100%);
+}
+
 .VOLT{
   background: #0c2aa2;
   border-bottom: 5px solid #000000 ;
 }
+
+/* ROJO */
+.SM{
+  background: rgb(150,17,13);
+  background: radial-gradient(circle, rgba(150,17,13,1) 0%, rgba(175,26,21,1) 100%);
+}
+
 
 .hielo{
   background-image: url(/assets/backgrounds/hielo-back.png);
