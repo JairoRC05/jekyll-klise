@@ -1,0 +1,216 @@
+<div class="card-preview-roster">
+  <div class="card-mvp">
+   <a href="{{page.url}}"> <img src="/assets/logos/{{page.out}}.webp" alt="{{post.title}}"></a>
+   <div class="card-mvp-title">
+     <p class="mvp-title">{{page.out | truncate: 12}}</p>
+   </div>
+ </div>
+ <div class="card-mvp-number">
+   <p class="mvp-number"></p>
+ </div>
+ <div class="card-back">
+   <div class="card-color-left {{page.out}}"> </div>     
+ </div>
+</div>
+
+
+{% if page.out == "E" %}
+    {% assign MATCH = site.categories.EP | sort: "rol"  %}
+    {%- for post in MATCH -%}
+    {% include card-mvp.html %}
+    {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "TAD" %}
+
+  {% assign MATCH = site.categories.TADP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "STMN" %}
+
+  {% assign MATCH = site.categories.STMNP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "PSY" %}
+
+  {% assign MATCH = site.categories.PSYP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "EVL" %}
+
+  {% assign MATCH = site.categories.EVLP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "7Z" %}
+
+  {% assign MATCH = site.categories.7ZP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "GX" %}
+
+  {% assign MATCH = site.categories.GXP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "GGG" %}
+
+  {% assign MATCH = site.categories.GGGP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+  {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "NEO" %}
+
+  {% assign MATCH = site.categories.NEOP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "SM" %}
+
+  {% assign MATCH = site.categories.SMP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "FTB" %}
+
+  {% assign MATCH = site.categories.FTBP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "AD" %}
+
+  {% assign MATCH = site.categories.ADP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+
+{% if page.out == "RUBY" %}
+
+  {% assign MATCH = site.categories.RUBYP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "EA" %}
+
+  {% assign MATCH = site.categories.EAP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+
+{% if page.out == "TF" %}
+
+  {% assign MATCH = site.categories.TFP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "PLAT" %}
+
+  {% assign MATCH = site.categories.PLATP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "AEP" %}
+
+  {% assign MATCH = site.categories.AEPP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "TSR" %}
+
+  {% assign MATCH = site.categories.TSRP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+
+{% if page.out == "TR" %}
+
+  {% assign MATCH = site.categories.TRP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "TAE" %}
+
+  {% assign MATCH = site.categories.TAEP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+
+{% if page.out == "TUT" %}
+
+  {% assign MATCH = site.categories.TUTP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %}
+
+{% if page.out == "AMBER" %}
+
+  {% assign MATCH = site.categories.AMBERP | sort: "rol"  %}
+  {%- for post in MATCH -%}
+   {% include card-mvp.html %}
+  {%- endfor -%}
+
+{% endif %} 

@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teams/01-ligaindigoPLATINO/2021-07-21-GDI DUAT.md",
+                "file": "MVP/7Z/2024-11-08-TOKITO.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-GDI DUAT"
+              "title": "2024-11-08-TOKITO"
             }
           },
           {
@@ -42,16 +42,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CALENDARIOS/01-calendario-NORTE/R1/2024-07-01-MATCH2.md",
+                "file": "MVP/THE PSYDUCKS/2024-11-08-MRKAWAII.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2024-11-08-MRKAWAII"
+            }
+          },
+          {
+            "id": "b2e2fb3e227a20f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MVP/TUT/2021-07-21-LINBLAKE.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2024-07-01-MATCH2"
+              "title": "2021-07-21-LINBLAKE"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -189,46 +203,46 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "ae7e627a987e0600",
+  "active": "b2e2fb3e227a20f9",
   "lastOpenFiles": [
-    "CALENDARIOS/01-calendario-NORTE/R1/2024-07-01-MATCH1.md",
-    "CALENDARIOS/01-calendario-NORTE/R1/2024-07-01-MATCH2.md",
-    "teams/GSUR/2024-07-21-TEAM ROCKET.md",
-    "teams/ARCHIVO/2021-07-21-TEAM-AQUA.md",
-    "alinks/2021-07-21-fechas.md",
-    "alinks/2021-07-21-RONDA.md",
-    "CALENDARIOS/02-calendario-SUR/R6/2024-07-01-MATCH6.md",
-    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH6.md",
-    "CALENDARIOS/01-calendario-NORTE/R6/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH6.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH6.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH3.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH1.md",
-    "CALENDARIOS/01-calendario-NORTE/R11/2024-07-01-MATCH2.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH2.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH3.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH1.md",
-    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH2.md",
-    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH3.md",
-    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH6.md",
+    "MVP/TSR/2021-07-21-CLAZO.md",
+    "MVP/TAE/2021-07-21-LEWXEN.md",
+    "MVP/TAE/2021-07-21-TACHYON.md",
+    "MVP/TEAM ROCKET/2021-08-21-ANTUAN.md",
+    "MVP/TUT/2021-07-21-LINBLAKE.md",
+    "MVP/TUT/2021-07-21-TRONCIO.md",
+    "MVP/TSR/2021-07-21-DANIVAL.md",
+    "MVP/TSR/2021-07-21-FLOPPA.md",
+    "MVP/AD ESPORTS/2021-07-21-LAW.md",
+    "MVP/DFS/AMBER/2021-07-21-SHINOBU.md",
+    "MVP/DFS/AMBER/2021-07-21-ROUSEOLOL.md",
+    "MVP/DFS/AMBER/2021-07-21-NADIR.md",
+    "MVP/DFS/AMBER/2021-07-21-FELURIANN.md",
+    "MVP/DFS/AMBER/2021-07-21-ELITA.md",
+    "MVP/DFS/RUBY/2021-07-21-COEUR.md",
+    "MVP/FNX/2021-07-21-LOVECRAFT.md",
+    "MVP/FNX/2021-07-21-PASTE.md",
+    "MVP/FNX/2021-07-21-MIYO.md",
+    "MVP/FNX/2021-07-21-KIYOKA.md",
+    "MVP/FNX/2021-07-21-FRODIGY.md",
+    "MVP/TAE/2021-07-21-ALEXUS.md",
+    "MVP/TAE/2021-07-21-DARKYRIA.md",
+    "MVP/TAE/2021-07-21-MATI.md",
+    "MVP/TAE/2021-07-21-ORZIIE.md",
+    "MVP/TEAM ROCKET/2021-07-21-WILLYHR.md",
+    "MVP/TEAM ROCKET/2021-07-21-HAKARI.md",
+    "MVP/DFS/AMBER",
+    "MVP/HG SALARIO MINIMO",
+    "MVP/RNT NEO",
+    "MVP/GGP",
+    "MVP/RNT GX",
+    "MVP/THE PSYDUCKS",
+    "MVP/7Z",
     "teams/ARCHIVO/plantilla.txt",
     "teams/ARCHIVO",
     "teams/Nueva carpeta",
     "Sin título.canvas",
     "Sin título 1.canvas",
-    "LIGAS INDIGO",
-    "premium",
-    "LICENCIAS",
-    "MVP/TEAM ROCKET",
-    "MVP/DFS/RUBY",
-    "MVP/RNT/VENOM",
-    "MVP/ZTG",
     "Sin título 6.canvas",
     "Sin título 5.canvas",
     "Sin título 4.canvas",

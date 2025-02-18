@@ -26,8 +26,8 @@ permalink:
 
       <div class="d-none d-md-block text-white">
 
-        <span class="navbar-brand mb-0 h1"><a href="#norte" class="text-white">GALAXIA NORTE</a></span>
-        <span class="navbar-brand mb-0 h1"><a href="#sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
         <span class="navbar-brand mb-0 h1"><a href="#online" class="text-white">STREAMS</a></span>
     
       </div>
@@ -38,47 +38,39 @@ permalink:
   
   
   
-  <div class="container-fluid banner_bg_team bg-cham">
+  <div class="container-fluid banner_bg_team_preview bg-cham">
     <div class="container banner_team_match">
       <a href="/assets/logos/{{page.local}}.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/{{page.local}}.webp" class="drop" alt="" ">
       </a>
-      <div class="bannerText"> 
-        <h1 class="exo-style d-none d-md-block">{{page.local}}</h1>
+      <div class="bannerText  d-none d-md-block"> 
+        <h1 class="exo-style">{{page.local}}</h1>
       </div>
-      <div class="bannerText"> 
-        <h1 class="exo-style d-none d-md-block">{{page.r1}}</h1>
+      <div class="bannerText d-none d-md-block"> 
+        <h1 class="exo-style ">{{page.r1}}</h1>
       </div>
       <div class="bannerText">  
           <span class="exo-style d-none d-md-block">RONDA {{page.ronda}}</span>
-          <h1 class="exo-style d-none d-md-block">VS</h1>
-          {% include FECHAS.html %}
+          <h1 class="exo-style">VS</h1>
+         <div class="d-none d-md-block"> {% include FECHAS.html %}</div>
       </div>
-      <div class="bannerText"> 
-        <h1 class="exo-style d-none d-md-block">{{page.r2}}</h1>
+      <div class="bannerText d-none d-md-block"> 
+        <h1 class="exo-style ">{{page.r2}}</h1>
       </div>
-      <div class="bannerText"> 
-        <h1 class="exo-style d-none d-md-block">{{page.out}}</h1>
+      <div class="bannerText d-none d-md-block"> 
+        <h1 class="exo-style ">{{page.out}}</h1>
       </div>
       <a href="/assets/logos/{{page.out}}.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/{{page.out}}.webp" class="drop" alt="" ">
       </a>
     </div>
     <div class="container banner-info d-block d-sm-none p-0">
-      <h1 class="exo-style">{{page.team}}</h1>
-      <span class="exo">{{page.ID}} ● {{page.puntos}} puntos</span>
-      <div class="region">
-        <img src="https://flagcdn.com/h20/{{page.pais}}.webp"  alt="REGION: {{page.region}}" class="flag">
-        <span class="ms-2"> {{page.region}}</span>
-      </div>
+      <h1 class="exo-style">{{page.local}} {{page.r1}} - {{page.r2}} {{page.out}}</h1>
+      <span>RONDA {{page.ronda}} | {% include FECHAS.html %}</span>
     </div>
   </div>
 
-  <div class="container-fluid bg-cham d-block d-md-none">
-    <div class="container record-mobile bbt">
-      {% include rounds-teams.html %}
-  </div>
-  </div>
+
   <div id="stars1"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
@@ -88,114 +80,77 @@ permalink:
     <h1 class="teams-title">INFO DEL PARTIDO</h1>
 
     <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
+          {% if page.stream.size > 1 %}
             <iframe src="https://player.twitch.tv/?video=2378963061&parent=xforceunite.site" frameborder="0" allowfullscreen="true" scrolling="no" height="480px" width="100%"></iframe>
-        </div>
-        <div class="col-4">
-            <img src="/assets/backgrounds/PREVIA.png" alt="">
-            BANS PARA ESTE PARTIDO:
-            RAPIDASH DE GALAR
-            FORMATO: MODO TORNEO (NO PERSONALIZADAS)
-            ENCUENTRO: BO3
-        
-            <h3>MVPS</h3>
-            {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
-            | reverse %}
-            {%- for post in LIGA offset:5 limit:3  -%}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-12">
-              <div class="card-round-mvp">
-                 <div class="card-mvp">
-                  <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
-                  <div class="card-mvp-title">
-                    <p class="mvp-title">{{post.title | truncate: 12}}</p>
-                    <p>{{post.team}}</p>
-                  </div>
-                </div>
-                <div class="card-mvp-number">
-                  <p class="mvp-number">{{post.MVPS}}</p>
-                  <p>MVPS</p>
-                </div>
-                <div class="card-back">
-                  <div class="card-color-left {{post.team}}"> </div>  
-                  <div class="card-mvp-team">
-                    <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
-                  </div>
-                  
+          {% else %}
+            <img src="/assets/backgrounds/uniteforzestadium.webp" alt="img-fluid">
+          {% endif %}
+       
+          </div>
+        <div class="col-12 col-lg-4">
+            <div class="preview-match">
+              <h4>PREVIA DEL PARTIDO</h4>
+            <div class="preview-match-img">
+              <div class="preview-img">
+                <img src="/assets/logos/{{page.local}}.webp" alt="">
+                <span>{{page.local}}</span>
+              </div>
+                <span class="purple-one" data-bs-toggle="tooltip" data-bs-placement="top" title="Equipo que empieza el encuentro como 1st PICK en el DRAFT es {{page.local}}">1st PICK</span>
+                <div class="preview-img">
+                  <img src="/assets/logos/{{page.out}}.webp" alt="">
+                  <span class="orange-one">{{page.out}}</span>
                 </div>
               </div>
+
+              
+              <div class="progress">
+                {% include power-bar.html %}
+              </div>
+              <div class="info-match">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" title="El porcentaje de victoria se calcula por las participaciones en torneos oficiales y no oficiales"><i class="ti ti-info-circle-filled"></i> % de victoria</span>
+              </div>
             </div>
-            {%- endfor -%}
+        
+            <div class="preview-match ">
+              <h4>FORMATO</h4>
+              <button class="btn btn-outline-primary rounded-pill mb-3" data-bs-toggle="modal" data-bs-target="#bo3"><i class="ti ti-swords"></i> Bo3</button>
+              <button class="btn btn-outline-primary rounded-pill mb-3" data-bs-toggle="modal" data-bs-target="#roster"><i class="ti ti-spy"></i> Roster libre</button>
+              <button class="btn btn-outline-primary rounded-pill mb-3" data-bs-toggle="modal" data-bs-target="#torneo"><i class="ti ti-trophy-filled"></i> Modo torneo</button>
+            </div>
+
+            <div class="preview-match ">
+              <h4>BANS</h4>
+              {% assign teams = site.categories.BANS | sort: "title" %}
+              {%- for post in teams -%}
+              {%- include bans.html -%}
+            {%-endfor-%}
+            </div>
+
+        
+            {% include modals.html %}
+
         </div>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col-8">
 
-            <h3>ROSTERS</h3>
-            <div class="row">
-                <div class="col-6">
-                    {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
-                    | reverse %}
-                    {%- for post in LIGA offset:5 limit:5  -%}
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
-                      <div class="card-round-mvp">
-                         <div class="card-mvp">
-                          <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
-                          <div class="card-mvp-title">
-                            <p class="mvp-title">{{post.title | truncate: 12}}</p>
-                            <p>{{post.team}}</p>
-                          </div>
-                        </div>
-                        <div class="card-mvp-number">
-                          <p class="mvp-number">{{post.MVPS}}</p>
-                          <p>MVPS</p>
-                        </div>
-                        <div class="card-back">
-                          <div class="card-color-left {{post.team}}"> </div>  
-                          <div class="card-mvp-team">
-                            <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
-                          </div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    {%- endfor -%}
-                </div>
-                <div class="col-6">
-                    {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS"
-                    | reverse %}
-                    {%- for post in LIGA offset:5 limit:5  -%}
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
-                      <div class="card-round-mvp">
-                         <div class="card-mvp">
-                          <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
-                          <div class="card-mvp-title">
-                            <p class="mvp-title">{{post.title | truncate: 12}}</p>
-                            <p>{{post.team}}</p>
-                          </div>
-                        </div>
-                        <div class="card-mvp-number">
-                          <p class="mvp-number">{{post.MVPS}}</p>
-                          <p>MVPS</p>
-                        </div>
-                        <div class="card-back">
-                          <div class="card-color-left {{post.team}}"> </div>  
-                          <div class="card-mvp-team">
-                            <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
-                          </div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    {%- endfor -%}
-                </div>
-            </div>
+  <div class="container">
+    <h4>ROSTER/COMPOSICIÓN</h4>
+    <div class="match-roster">
+      <div class="roster d-none d-lg-block">
+        {% include roster-local.html %}
+      </div>
+      <div class="stadium">
+        <div class="map-stadium">
+          <img src="/assets/backgrounds/ruinas-celestes.webp" alt="" >
         </div>
- 
-        <div class="col-4">
-       
-        </div>
-       
+        {% include map-roles.html%}
+        {% include map-roles-out.html%}
+      </div>
+      <div class="roster d-none d-lg-block">
+        {% include roster-out.html %}
+      </div>
     </div>
   </div>
 
@@ -239,7 +194,7 @@ permalink:
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

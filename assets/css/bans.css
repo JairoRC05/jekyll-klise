@@ -1,0 +1,205 @@
+.card-round-bans-square {
+    height: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    overflow: hidden;
+
+    @media screen and (max-width: 472px) {
+        padding: 5px 0;
+        justify-content: space-around;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+
+
+  
+
+
+    .card-round-team {
+        left: -3%;
+        top: -25%;
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+
+        @media screen and (max-width: 472px) {
+         top: -10%;
+            
+        }
+
+        a{
+            img {
+                width: 150px;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: 472px) {
+                    width: 120px;
+                    
+                }
+            }
+        }
+    }
+
+
+    .card-round-title{
+        position: absolute;
+        z-index: 1;
+        bottom: 30%;
+        left: 30%;
+        width: 100%;
+        line-height: 2px;
+        color: #fff !important;
+
+        @media screen and (max-width: 472px) {
+            padding: 5px;
+        }
+
+            h2{
+               margin: 0;
+               font-size: 18px;
+              
+
+                  @media screen and (max-width: 576px) {
+                    font-size: 16px;
+                }
+              
+            }
+
+            span{
+                    margin: 0;
+                    font-size: 12px;
+               
+            }
+            p{
+               margin: 0 !important;
+               color: #fff;
+               font-size: 14px;
+
+                  @media screen and (max-width: 472px) {
+                    font-size: 14px;
+                }
+
+            }
+
+          .card-round-record{
+           display: flex;
+           flex-direction: row;
+           justify-content: start;
+           align-items: start;
+
+           .record{
+                margin: 0 2px 0 0; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #94919117;
+                border: 1px solid rgb(215, 215, 215);
+                width: 12px !important;
+                height: 12px !important;
+                border-radius: 50%;
+                font-size: 8px;
+                text-align: center;
+            }
+          }
+        }
+
+    .card-round-num{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        left: 3%;
+        color: #fff;
+
+
+        h6{
+            margin: 0;
+        }
+    }
+  
+
+    
+
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+  
+
+    
+ 
+
+
+    .card-color-left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1000;
+    }
+
+    .card-color-right {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: -90;
+        right: -70;
+        z-index: 900;
+        transform: rotate(45deg);
+
+
+        @media screen and (max-width: 576px) {
+            width: 65%;
+            height: 65%;
+            top: -100;
+            right: -75;
+        }
+
+        @media screen and (max-width: 472px) {
+            width: 60%;
+            height: 60%;
+            top: -35;
+            right: -30;
+        }
+    }
+    
+    .card-color-logo {
+
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 35px;
+        top: 5px;
+        right: 5px;
+        z-index: 1000;
+
+        @media screen and (max-width: 472px) {
+            top: 2px;
+            right: 2px;
+            width: 15px;  
+        }
+
+    }
+}
+
+.card-round-bans-square::before{
+    content: "";
+    background-image: url(/assets/mis/square-pattern-30.webp), linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: 140px, auto;  
+    background-position: center, left top;  
+    overflow: hidden;
+    border-radius: 10px;
+}

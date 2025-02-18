@@ -1,0 +1,17 @@
+{%- for post in MATCH -%}
+{%if post.rol == "JUNGLE"%}
+<span class="jungle-out">{{post.title}}</span>
+{%endif%}
+{%if post.rol == "ADC"%}
+<span class="adc-out">{{post.title}}</span>
+{%endif%}
+{%if post.rol == "TOP"%}
+<span class="top-out">{{post.title}}</span>
+{%endif%}
+{%if post.rol == "TANK"%}
+<span class="tank-out">{{post.title}}</span>
+{%endif%}
+{%if post.rol == "AUX"%}
+<span class="aux-out">{{post.title}}</span>
+{%endif%}
+{%- endfor -%}

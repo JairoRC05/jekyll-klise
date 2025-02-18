@@ -1,0 +1,599 @@
+.banner_bg_team_preview {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+  
+    .banner_team_match {
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+  
+      @media screen and (max-width: 576px) {
+      padding-top: 20%;
+      }
+      @media screen and (max-width: 472px) {
+      padding-top: 25%;
+      }
+  
+      a {
+        img {
+          width: 250px;
+  
+          @media screen and (max-width: 1200PX) {
+            width: 200px;
+        }
+        @media screen and (max-width: 992px) {
+          width: 150px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 150px;
+        }
+          @media screen and (max-width: 576px) {
+            width: 120px;
+          }
+        }
+      }
+  
+      .bannerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+
+        @media screen and (max-width: 576px) {
+            width: 60px;
+          }
+
+  
+        h1 {
+          font-size: 50px;
+          margin: 0;
+          font-style: normal !important;
+  
+          @media screen and (max-width: 1200px) {
+            font-size: 45px;
+          }
+
+          @media screen and (max-width: 992px) {
+            font-size: 38px;
+          }
+  
+          @media screen and (max-width: 768px) {
+            font-size: 26px;
+          }
+        }
+  
+        span {
+          color: #fff;
+          font-style: normal !important;
+          font-weight: 800;
+          font-size: 26px;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+          }
+          
+          @media screen and (max-width: 992px) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+  
+   .record-line{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  
+    .trofeos{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      img{
+        width: 40px;
+      }
+  
+      span{
+        font-size: 18px;
+      }
+    }
+   }
+  
+  
+    .region{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      width: 100%;
+  
+      @media screen and (max-width: 576PX) {
+        display: none;
+      }
+  
+    .localization{
+      img{
+        width: 40px;
+      }
+  
+      span{
+        font-size: 18px;
+      }
+    }
+  
+      .card-round-record{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+  
+        .record{
+             margin: 0 2px 0 0; 
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background: #94919117;
+             border: 1px solid rgb(215, 215, 215);
+             width: 25px !important;
+             height: 25px !important;
+             border-radius: 50%;
+             font-size: 12px;
+             text-align: center;
+         }
+       }
+  
+    }
+  
+  
+  
+  
+      h3 {
+        font-size: 50px;
+        margin: 0;
+  
+        @media screen and (max-width: 991px) {
+          font-size: 30px;
+        }
+  
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+  
+  
+      }
+    }
+  
+  
+    
+  }
+    .banner-info{
+      h1 {
+        font-size: 50px;
+        margin: 0;
+        font-style: normal !important;
+        text-align: start !important;
+  
+        @media screen and (max-width: 991px) {
+          font-size: 60px;
+        }
+  
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      span{
+        color: white;
+        font-weight: bold;
+      }
+  
+      .region{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+  
+        .flag{
+          width: 30px;
+        }
+    
+        span{
+          font-size: 18px;
+          color: white;
+        }
+      }
+  
+  
+    }
+  
+  }
+  
+
+
+
+
+.preview-match{
+    background: #fff;
+    font-weight: bold ;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .info-match{
+        margin: 10px 0 0 0;
+
+        span{
+            font-weight: 300;
+        }
+    }
+
+
+    .preview-match-img{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+       .preview-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 900;
+        color: white; 
+        margin-bottom: 10px;
+
+
+
+        img{
+            width: 100px;
+
+            @media screen and (max-width: 1200px) {
+                width: 80px;
+            }
+          
+            @media screen and (max-width: 768px) {
+                width: 100px;
+            }
+            
+        }
+
+        .purple-one{
+            background: #5271ff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .orange-one{
+            background: #ff7900;
+            padding: 0 5px;
+            border-radius: 5px;
+            
+        }
+       }
+
+       span{
+        font-size: 18px;
+        color: white;
+        background: #5271ff;
+        padding: 0 5px;
+        border-radius: 5px;
+       }
+    }
+
+
+    .progress{
+        margin: 5px 0 0 0;
+    }
+}
+
+
+.progress, .progress-stacked{
+    background: #ff7900;
+}
+
+
+.match-roster{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .roster{
+        width: 20%;
+    }
+
+    .stadium{
+        width: 100%;
+        position: relative;
+        height: 450px;
+
+
+        @media screen and (max-width: 1200px) {
+            height: 350px;
+        }
+
+        .jungle{
+            position: absolute;
+            top: 49%;
+            left: 30%;
+            z-index: 1;
+            background: #5272ffc0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .adc{
+            position: absolute;
+            bottom: 25%;
+            left: 40%;
+            z-index: 1;
+            background: #5272ffc0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .tank{
+            position: absolute;
+            bottom: 30%;
+            left: 30%;
+            z-index: 1;
+            background: #5272ffc0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .aux{
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            z-index: 1;
+            background: #5272ffc0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .top{
+            position: absolute;
+            top: 25%;
+            left: 40%;
+            z-index: 1;
+            background: #5272ffc0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+
+
+        
+        .jungle-out{
+            position: absolute;
+            top: 49%;
+            right: 30%;
+            z-index: 1;
+            background: #ff7900c0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .adc-out{
+            position: absolute;
+            bottom: 25%;
+            right: 40%;
+            z-index: 1;
+            background: #ff7900c0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .tank-out{
+            position: absolute;
+            bottom: 30%;
+            right: 30%;
+            z-index: 1;
+            background: #ff7900c0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .aux-out{
+            position: absolute;
+            top: 30%;
+            right: 30%;
+            z-index: 1;
+            background: #ff7900c0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+        .top-out{
+            position: absolute;
+            top: 25%;
+            right: 40%;
+            z-index: 1;
+            background: #ff7900c0;
+            color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+
+
+        
+      .map-stadium{
+        display: flex;
+        justify-content: center;
+
+        img{
+            position: absolute;
+            width: 95%;
+            border-radius: 10px;
+        }
+      
+      }
+    }
+}
+
+
+
+
+
+.card-preview-roster {
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media screen and (max-width: 472px) {
+        padding: 5px 0;
+        margin-bottom: 5px;
+        justify-content: space-around;
+        height: 50px;
+    }
+
+
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        background-size: cover;
+        border-radius: 10px;
+        border: 1px solid rgba(228, 228, 228);
+        z-index: -900;
+        overflow: hidden;
+    }
+
+    .card-color-left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+       
+    }
+
+
+    .card-mvp {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        left: 5%;
+
+
+        @media screen and (max-width: 472px) {
+            left: 8%;
+        }
+
+
+        .card-mvp-title {
+            display: block;
+            color: #ffffff;
+            line-height: 15px;
+    
+
+            .mvp-title {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0;
+
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 472px) {
+                    font-size: 14px;
+                }
+            }
+
+            span{
+                font-size: 12px;
+            }
+        }
+
+        img {
+            width: 50px;
+            @media screen and (max-width: 472px) {
+                width: 50px;
+            }
+
+        }
+    }
+
+
+    .card-mvp-number {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color: #000b7e;
+        text-align: center;
+        position: absolute;
+        right: 5%;
+
+
+        @media screen and (max-width: 768px) {
+            right: 7.5%;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1;
+            font-weight: bold;
+            /* -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(74, 74, 74); */
+
+            @media screen and (max-width: 472px) {
+                font-size: 10px;
+            }
+
+        }
+
+        .mvp-number {
+            font-size: 24px;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 472px) {
+                font-size: 14px;
+            }
+
+        }
+    }
+
+
+    .card-mvp-team {
+        position: absolute;
+        left: 1%;
+        top: 0;
+        /* filter: blur(1px) ;  */
+        overflow: hidden;
+        z-index: -800;
+
+
+
+        @media screen and (max-width: 472px) {
+          left: 1%;
+          top: 0px;
+        }
+
+        img {
+            width: 35px;
+        }
+    }
+}
