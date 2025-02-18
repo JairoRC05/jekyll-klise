@@ -18,8 +18,8 @@ pais: mx
 ligas: 
 puntos: 0
 cxf: 
-rec1: ---
-rec2: ---
+rec1: loss
+rec2: loss
 rec3: ---
 rec4: ---
 rec5: ---

@@ -16,10 +16,10 @@ ID: PSY
 region: LAN
 pais: mx
 ligas: 
-puntos: 0
+puntos: 1
 cxf: 
-rec1: ---
-rec2: ---
+rec1: one
+rec2: loss
 rec3: ---
 rec4: ---
 rec5: ---

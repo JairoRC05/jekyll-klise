@@ -22,9 +22,9 @@ cxf:
 cover: /assets/backCard.png
 team: RNT ETERNAL ASCENSION
 ID: EA
-puntos: 0
-rec1: ---
-rec2: ---
+puntos: 2
+rec1: sup
+rec2: loss
 rec3: ---
 rec4: ---
 rec5: ---

@@ -17,12 +17,12 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: TEAM AETHER
 ID: TAE
-puntos: 0
+puntos: 2
 ligas: "1"
 cxf: 
 region: LAN
 pais: mx
-rec1: ---
+rec1: sup
 rec2: ---
 rec3: ---
 rec4: ---

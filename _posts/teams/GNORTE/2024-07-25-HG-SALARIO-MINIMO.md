@@ -7,7 +7,7 @@ maincover: /assets/logos/SM.png
 date: 2020-08-29 10:29:20 +0700
 title: HG SALARIO MINIMO
 ID: SM
-puntos: 0
+puntos: 3
 temporada: SI
 rango: PLATA
 tags: 
@@ -17,8 +17,8 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-rec1: ---
-rec2: ---
+rec1: one
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---

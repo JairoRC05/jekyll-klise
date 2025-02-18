@@ -21,9 +21,9 @@ pais: mx
 region: LAN
 ligas: 
 cxf: "1"
-puntos: 0
-rec1: ---
-rec2: ---
+puntos: 2
+rec1: loss
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---

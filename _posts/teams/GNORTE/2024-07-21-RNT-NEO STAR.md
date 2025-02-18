@@ -12,10 +12,10 @@ puntosLJ202404: 12
 grupo: sur
 team: RNT NEO STAR
 ID: NEO
-puntos: 0
+puntos: 2
 pj: 7
-rec1: ---
-rec2: ---
+rec1: win
+rec2: rea
 rec3: ---
 rec4: ---
 rec5: ---
