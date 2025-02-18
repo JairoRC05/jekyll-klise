@@ -323,6 +323,19 @@
         @media screen and (max-width: 1200px) {
             height: 350px;
         }
+     
+        @media screen and (max-width: 576px) {
+            height: 160px;
+        }
+    
+        span{
+
+            font-size: 12px;
+
+            @media screen and (max-width: 576px) {
+                font-size: 8px;
+            }
+        }
 
         .jungle{
             position: absolute;
