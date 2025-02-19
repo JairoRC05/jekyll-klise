@@ -41,7 +41,7 @@ layout:
   </nav>
 
 
-  <div class="container-fluid banner bg-cham d-none d-lg-block">
+  <div class="container-fluid banner bg-cham d-none d-md-block">
     <div class="container bannerPromo">
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
@@ -54,13 +54,19 @@ layout:
   </div>
 
   <div class="container">
+
+
+
+    <div class="d-none d-md-block mt-2">
+      {% include tabs-rondas.html %}
+    </div>
     {% include rondas-league.html %}
   </div>
 
-  <nav class="container fixed-bottom bg-cham">
-                          {% assign rondas = site.categories.rondas %}
-                          {%- for post in rondas -%}
-                          <ul class="nav nav-pills nav-justified my-1" id="pills-tab" role="tablist">
+  <nav class="container fixed-bottom bg-cham d-block d-md-none">
+  {% assign rondas = site.categories.rondas %}
+  {%- for post in rondas -%}
+  <ul class="nav nav-pills nav-justified my-1" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                               <button class="nav-link {{post.active1}}" id="pills-1-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
@@ -116,11 +122,11 @@ layout:
                                 data-bs-target="#pills-11" type="button" role="tab" aria-controls="pills-11"
                                 aria-selected="false">11</button>
                             </li>
-                          </ul>
-                          {%- endfor -%}
+  </ul>
+  {%- endfor -%}
 
 
-                          <div class="d-flex justify-content-center my-1 align-items-center">
+  <div class="d-flex justify-content-center my-1 align-items-center">
                             {% if page.pag == "LIGA" or page.pag == "MVP" or page.pag == "RONDAS" %}
                             {% assign norte = site.categories.ICONS | sort: "level"  %}
                             {%- for post in norte  -%}
@@ -168,7 +174,7 @@ layout:
                             </div>
                             {%- endfor -%}
                             {% endif %}
-                          </div>
+  </div>
 
   </nav>
 
