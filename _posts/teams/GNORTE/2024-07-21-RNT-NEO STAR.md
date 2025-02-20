@@ -15,7 +15,7 @@ ID: NEO
 puntos: 2
 pj: 7
 rec1: win
-rec2: rea
+rec2: loss
 rec3: des
 rec4: loss
 rec5: ---
