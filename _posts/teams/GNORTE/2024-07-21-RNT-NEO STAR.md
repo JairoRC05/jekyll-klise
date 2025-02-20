@@ -16,8 +16,8 @@ puntos: 2
 pj: 7
 rec1: win
 rec2: rea
-rec3: ---
-rec4: ---
+rec3: des
+rec4: loss
 rec5: ---
 rec6: ---
 rec7: ---

@@ -11,11 +11,11 @@ tags:
 color: black
 puntosLJ202404: 12
 grupo: sur
-puntos: 2
+puntos: 5
 rec1: sup
 rec2: loss
-rec3: ---
-rec4: ---
+rec3: one
+rec4: win
 rec5: ---
 rec6: ---
 rec7: ---

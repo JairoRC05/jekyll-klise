@@ -6,15 +6,15 @@ team: AD DORADAS
 date: 2020-08-29 10:29:20 +0700
 title: AD DORADAS
 ID: AD
-puntos: 2
+puntos: 4
 region: LAN
 ligas: 
 cxf: 
 pais: mx
 rec1: sup
 rec2: loss
-rec3: ---
-rec4: ---
+rec3: loss
+rec4: sup
 rec5: ---
 rec6: ---
 rec7: ---

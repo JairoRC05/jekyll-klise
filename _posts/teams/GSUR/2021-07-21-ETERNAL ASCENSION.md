@@ -25,8 +25,8 @@ ID: EA
 puntos: 2
 rec1: sup
 rec2: loss
-rec3: ---
-rec4: ---
+rec3: loss
+rec4: loss
 rec5: ---
 rec6: ---
 rec7: ---
