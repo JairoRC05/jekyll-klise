@@ -6,7 +6,7 @@ date: 2020-08-29 10:29:20 +0700
 title: AD FROSTBITE
 team: AD FROSTBITE
 ID: FTB
-puntos: 6
+puntos: 8
 region: LAN
 pais: mx
 cxf: 
@@ -15,7 +15,7 @@ rec1: des
 rec2: sup
 rec3: sup
 rec4: sup
-rec5: ---
+rec5: sup
 rec6: ---
 rec7: ---
 rec8: ---
@@ -48,7 +48,8 @@ temporada: SI
 rango: ORO
 sector: LG
 tags: 
-grupo:
+grupo: 
+diff: 17
 ---
 
 

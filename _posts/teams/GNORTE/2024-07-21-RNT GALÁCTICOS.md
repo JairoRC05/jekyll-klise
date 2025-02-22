@@ -16,7 +16,7 @@ rec1: sup
 rec2: loss
 rec3: one
 rec4: win
-rec5: ---
+rec5: loss
 rec6: ---
 rec7: ---
 rec8: ---
@@ -49,4 +49,5 @@ F8: ---
 F9: ---
 F10: ---
 F11: ---
+diff: 2
 ---

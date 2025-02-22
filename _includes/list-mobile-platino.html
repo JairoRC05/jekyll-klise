@@ -1,13 +1,10 @@
 <div class="row last">
 
-  {% assign NORTE = site.categories.GNORTE | sort: "puntos" | reverse %}
+  {% assign NORTE = site.categories.GNORTE | sort: "diff" | reverse %}
   {%- for post in NORTE  -%}
   <div class="col-12 col-md-6 col-lg-4">
 
         <div class="card-round-list">
-         
-       
-
           <div class="card-round-team">
             <a href="{{post.url}}">
               <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">

@@ -22,6 +22,7 @@
     "no10": "number",
     "no11": "number",
     "h1": "text",
-    "fecha": "multitext"
+    "fecha": "multitext",
+    "diff": "number"
   }
 }

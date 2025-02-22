@@ -7,7 +7,7 @@ date: 2020-08-29 10:29:20 +0700
 title: TEAM FLARE
 team: TEAM FLARE
 ID: TF
-puntos: 5
+puntos: 7
 region: LAN
 pais: mx
 ligas: 
@@ -16,7 +16,7 @@ rec1: des
 rec2: sup
 rec3: win
 rec4: one
-rec5: ---
+rec5: sup
 rec6: ---
 rec7: ---
 rec8: ---
@@ -47,6 +47,7 @@ F10: ---
 F11: ---
 rango: ORO
 sector: CXF
+diff: 9
 ---
 
 

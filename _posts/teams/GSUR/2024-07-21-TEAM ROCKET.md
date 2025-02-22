@@ -21,12 +21,12 @@ pais: mx
 region: LAN
 ligas: 
 cxf: "1"
-puntos: 4
+puntos: 5
 rec1: loss
 rec2: sup
 rec3: des
 rec4: win
-rec5: ---
+rec5: one
 rec6: ---
 rec7: ---
 rec8: ---
@@ -57,4 +57,5 @@ F10: ---
 F11: ---
 rango: ORO
 sector: CXF
+diff: 4
 ---

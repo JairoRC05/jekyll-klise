@@ -27,7 +27,7 @@ rec1: sup
 rec2: loss
 rec3: loss
 rec4: loss
-rec5: ---
+rec5: loss
 rec6: ---
 rec7: ---
 rec8: ---
@@ -58,4 +58,5 @@ F10: ---
 F11: ---
 temporada: SI
 rango: BRONCE
+diff: -5
 ---

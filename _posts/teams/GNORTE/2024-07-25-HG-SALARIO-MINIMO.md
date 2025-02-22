@@ -13,12 +13,12 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 5
+puntos: 6
 rec1: one
 rec2: sup
 rec3: sup
 rec4: loss
-rec5: ---
+rec5: one
 rec6: ---
 rec7: ---
 rec8: ---
@@ -47,4 +47,5 @@ F8: ---
 F9: ---
 F10: ---
 F11: ---
+diff: 6
 ---

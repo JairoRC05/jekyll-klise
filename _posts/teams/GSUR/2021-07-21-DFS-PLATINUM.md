@@ -14,7 +14,7 @@ grupo: sur
 background: "#F16C38"
 cover: DFSPL
 ID: PLAT
-puntos: 8
+puntos: 10
 tags: 
 region: LAN
 pais: mx
@@ -24,7 +24,7 @@ rec1: sup
 rec2: sup
 rec3: sup
 rec4: sup
-rec5: ---
+rec5: win
 rec6: ---
 rec7: ---
 rec8: ---
@@ -55,4 +55,5 @@ F10: ---
 F11: ---
 temporada: SI
 rango: PLATA
+diff: 14
 ---

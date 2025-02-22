@@ -6,7 +6,7 @@ team: AD DORADAS
 date: 2020-08-29 10:29:20 +0700
 title: AD DORADAS
 ID: AD
-puntos: 4
+puntos: 6
 region: LAN
 ligas: 
 cxf: 
@@ -15,7 +15,7 @@ rec1: sup
 rec2: loss
 rec3: loss
 rec4: sup
-rec5: ---
+rec5: sup
 rec6: ---
 rec7: ---
 rec8: ---
@@ -48,5 +48,6 @@ temporada: SI
 rango: BRONCE
 tags: 
 grupo: 
-background:
+background: 
+diff: 5
 ---

@@ -16,13 +16,13 @@ ID: PSY
 region: LAN
 pais: mx
 ligas: 
-puntos: 2
+puntos: 4
 cxf: 
 rec1: one
 rec2: loss
 rec3: loss
 rec4: one
-rec5: ---
+rec5: win
 rec6: ---
 rec7: ---
 rec8: ---
@@ -53,4 +53,5 @@ F10: ---
 F11: ---
 temporada: SI
 rango: ACERO
+diff: 0
 ---

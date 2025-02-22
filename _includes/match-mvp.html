@@ -1,0 +1,206 @@
+<div class="container teams-table"  id="home">
+    <h1 class="teams-title">CAMPEONATO</h1>
+    {% if page.team == "E"  %}
+      <div class="row">
+        {% assign MATCH = site.categories.ES | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+ 
+      {% if page.team == "TAD" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TADS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "STMN" %}
+      <div class="row">
+        {% assign MATCH = site.categories.STMNS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "PSY" %}
+      <div class="row">
+        {% assign MATCH = site.categories.PSYS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "EVL" %}
+      <div class="row">
+        {% assign MATCH = site.categories.EVLS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "7Z" %}
+      <div class="row">
+        {% assign MATCH = site.categories.7ZS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+     
+      {% if page.team == "GX" %}
+      <div class="row">
+        {% assign MATCH = site.categories.GXS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "GGG" %}
+      <div class="row">
+        {% assign MATCH = site.categories.GGGS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "NEO" %}
+      <div class="row">
+        {% assign MATCH = site.categories.NEOS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "SM" %}
+      <div class="row">
+        {% assign MATCH = site.categories.SMS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+   
+      {% if page.team == "FTB" %}
+      <div class="row">
+        {% assign MATCH = site.categories.FTBS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "AD" %}
+      <div class="row">
+        {% assign MATCH = site.categories.ADS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+
+      {% if page.team == "RUBY" %}
+      <div class="row">
+        {% assign MATCH = site.categories.RUBYS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "EA" %}
+      <div class="row">
+        {% assign MATCH = site.categories.EAS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+
+      {% if page.team == "TF" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TFS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "PLAT" %}
+      <div class="row">
+        {% assign MATCH = site.categories.PLATS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "AEP" %}
+      <div class="row">
+        {% assign MATCH = site.categories.AEPS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "TSR" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TSRS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+
+      {% if page.team == "TR" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TRS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "TAE" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TAES | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+
+      {% if page.team == "TUT" %}
+      <div class="row">
+        {% assign MATCH = site.categories.TUTS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+      {% if page.team == "AMBER" %}
+      <div class="row">
+        {% assign MATCH = site.categories.AMBERS | sort: "ronda"  %}
+        {%- for post in MATCH -%}
+        {% include match-number.html %}
+        {%- endfor -%}
+      </div>
+      {% endif %}
+
+
+  </div>
