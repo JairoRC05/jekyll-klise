@@ -21,7 +21,11 @@ pais: mx
 region: LAN
 ligas: 
 cxf: "1"
+rango: ORO
+sector: CXF
+temporada: SI
 puntos: 5
+diff: 4
 rec1: loss
 rec2: sup
 rec3: des
@@ -33,29 +37,4 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-E1: ---
-E2: ---
-E3: ---
-E4: ---
-E5: ---
-E6: ---
-E7: ---
-E8: ---
-E9: ---
-E10: ---
-E11: ---
-F1: ---
-F2: ---
-F3: ---
-F4: ---
-F5: ---
-F6: ---
-F7: ---
-F8: ---
-F9: ---
-F10: ---
-F11: ---
-rango: ORO
-sector: CXF
-diff: 4
 ---
