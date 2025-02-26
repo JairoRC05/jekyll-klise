@@ -7,14 +7,6 @@ maincover: /assets/logos/TR.png
 puntosLJMAYO24: 
 date: 2020-08-29 10:29:20 +0700
 title: TEAM ROCKET
-route: /liga-indigo
-tags:
-  - johto042024
-color: black
-puntosLJ202404: 12
-grupo: sur
-background: "#F16C38"
-cover: /assets/backCard.png
 team: TEAM ROCKET
 ID: TR
 pais: mx
@@ -24,15 +16,15 @@ cxf: "1"
 rango: ORO
 sector: CXF
 temporada: SI
-puntos: 5
+puntos: 7
 diff: 4
 rec1: loss
 rec2: sup
 rec3: des
 rec4: win
 rec5: one
-rec6: ---
-rec7: ---
+rec6: win
+rec7: rea
 rec8: ---
 rec9: ---
 rec10: ---
