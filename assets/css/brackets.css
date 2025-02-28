@@ -421,6 +421,7 @@
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
+    margin-bottom: 5px;
   
     @media screen and (max-width: 472px) {
         padding: 5px 0;
@@ -722,6 +723,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      margin-bottom: 5px;
     
       @media screen and (max-width: 472px) {
           padding: 5px 0;
