@@ -11,7 +11,7 @@ ligas:
 cxf: 
 rango: BRONCE
 temporada: SI
-puntos: 7
+puntos: 10
 diff: 5
 pais: mx
 rec1: sup
@@ -21,8 +21,8 @@ rec4: sup
 rec5: sup
 rec6: one
 rec7: loss
-rec8: ---
-rec9: ---
+rec8: one
+rec9: win
 rec10: ---
 rec11: ---
 ---

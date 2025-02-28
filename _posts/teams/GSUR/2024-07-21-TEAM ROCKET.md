@@ -16,7 +16,7 @@ cxf: "1"
 rango: ORO
 sector: CXF
 temporada: SI
-puntos: 7
+puntos: 9
 diff: 4
 rec1: loss
 rec2: sup
@@ -25,8 +25,8 @@ rec4: win
 rec5: one
 rec6: win
 rec7: rea
-rec8: ---
-rec9: ---
+rec8: loss
+rec9: win
 rec10: ---
 rec11: ---
 ---

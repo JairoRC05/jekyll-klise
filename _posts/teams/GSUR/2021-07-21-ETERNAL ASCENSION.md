@@ -13,7 +13,7 @@ cxf:
 ligas: 
 ID: EA
 temporada: SI
-puntos: 2
+puntos: 5
 diff: -5
 rec1: sup
 rec2: loss
@@ -22,8 +22,8 @@ rec4: loss
 rec5: loss
 rec6: des
 rec7: loss
-rec8: ---
-rec9: ---
+rec8: sup
+rec9: one
 rec10: ---
 rec11: ---
 ---

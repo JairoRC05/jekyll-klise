@@ -425,7 +425,8 @@
     @media screen and (max-width: 472px) {
         padding: 5px 0;
         justify-content: space-around;
-        height: 70px;
+        height: 50px;
+        margin-bottom: 5px;
     }
 
 
@@ -457,7 +458,7 @@
                 width: 60px;
   
                 @media screen and (max-width: 472px) {
-                    width: 60px;
+                    width: 40px;
                 }
   
             }
@@ -504,6 +505,72 @@
         }
     }
   
+    .bracket-round-team-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      position: absolute;
+      right: 5%;
+      color: #fff;
+
+
+      @media screen and (max-width: 768px) {
+        right: 2%;
+    }
+
+      a{
+          img {
+              width: 60px;
+
+              @media screen and (max-width: 472px) {
+                  width: 40px;
+              }
+
+          }
+      }
+
+      .card-round-title{
+      display: flex;
+      color: #000;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin: 0 0 0 7px;
+
+          h2{
+             margin: 0;
+              font-size: 20px;
+
+                @media screen and (max-width: 472px) {
+                  font-size: 14px;
+              }
+
+          }
+
+        .card-round-record{
+         display: flex;
+         flex-direction: row;
+         justify-content: start;
+         align-items: start;
+
+         .record{
+              margin: 0 2px 0 0; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #94919117;
+              border: 1px solid rgb(215, 215, 215);
+              width: 12px !important;
+              height: 12px !important;
+              border-radius: 50%;
+              font-size: 8px;
+              text-align: center;
+          }
+        }
+      }
+  }
+
     .card-round-num{
         display: flex;
         flex-direction: row;
@@ -534,14 +601,14 @@
       }
 
       .card-round-promo{
-        display: block;
+        display: grid;
         text-align: center;
         justify-content: center;
         align-items: center;
   
         span{
             color: #012c50 !important;
-            font-size: 14px;
+            font-size: 10px;
             font-weight: bold;
         }
         .record{
@@ -607,72 +674,7 @@
   
     }
 
-
-    .bracket-round-team-right {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        position: absolute;
-        right: 5%;
-        color: #fff;
-
-
-        @media screen and (max-width: 768px) {
-          right: 2%;
-      }
   
-        a{
-            img {
-                width: 60px;
-  
-                @media screen and (max-width: 472px) {
-                    width: 60px;
-                }
-  
-            }
-        }
-  
-        .card-round-title{
-        display: flex;
-        color: #000;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        margin: 0 0 0 7px;
-  
-            h2{
-               margin: 0;
-                font-size: 20px;
-  
-                  @media screen and (max-width: 472px) {
-                    font-size: 14px;
-                }
-  
-            }
-  
-          .card-round-record{
-           display: flex;
-           flex-direction: row;
-           justify-content: start;
-           align-items: start;
-  
-           .record{
-                margin: 0 2px 0 0; 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #94919117;
-                border: 1px solid rgb(215, 215, 215);
-                width: 12px !important;
-                height: 12px !important;
-                border-radius: 50%;
-                font-size: 8px;
-                text-align: center;
-            }
-          }
-        }
-    }
   
   }
   
@@ -724,7 +726,7 @@
       @media screen and (max-width: 472px) {
           padding: 5px 0;
           justify-content: space-around;
-          height: 70px;
+          height: 50px;
       }
   
   
