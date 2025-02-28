@@ -727,6 +727,7 @@
           padding: 5px 0;
           justify-content: space-around;
           height: 50px;
+          margin-bottom: 5px;
       }
   
   
@@ -754,7 +755,7 @@
                   width: 60px;
     
                   @media screen and (max-width: 472px) {
-                      width: 60px;
+                      width: 40px;
                   }
     
               }
