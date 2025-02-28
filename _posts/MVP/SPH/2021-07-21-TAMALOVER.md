@@ -7,7 +7,7 @@ tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: TAMALOVER
 team: SPH
-MVPS: 15
+MVPS: 0
 sex: male1
 play1: SI
 match1: DARK

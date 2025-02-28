@@ -1,13 +1,13 @@
 ---
 layout: mvp
 permalink: /entrenador/:title.html
-categories: MVPSFEB TADP
+categories: MVPSFEB TADP MVPSFEB
 maincover: /assets/avatars/male1.webp
 tickets: 2
 date: 2020-08-29 10:29:20 +0700
 title: ALLENDART
 team: TAD
-MVPS: 2
+MVPS: 7
 sex: male1
 play1: SI
 match1: E

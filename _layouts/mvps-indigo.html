@@ -80,19 +80,19 @@ layout:
         {% endif %}
       </div>
         <h1 class="exo-style d-none d-md-block">{{post.title}}</h1>
-        <span class="exo d-none d-md-block">{{post.org}} ● <span id="mvps"></span> MVPS</span>
+        <span class="exo d-none d-md-block">{{post.org}} ● {{post.MVPS}} MVPS</span>
         <div class="region">
           <div class="localization">
             <img src="https://flagcdn.com/h20/{{post.pais}}.webp"  alt="REGION: {{post.region}}">
           <span class="ms-2"> {{post.region}}</span>
           </div>
-          {% include rounds-mvps.html %}
+    
         </div>
       </div>
     </div>
     <div class="container banner-info d-block d-sm-none p-0">
       <h1 class="exo-style">{{post.title}}</h1>
-      <span class="exo">{{post.org}} ● <span id="mvpsMobile"></span> MVPS</span>
+      <span class="exo">{{post.org}} ● {{post.MVPS}} MVPS</span>
       <div class="region">
         <img src="https://flagcdn.com/h20/{{post.pais}}.webp"  alt="REGION: {{post.region}}" class="flag">
         <span class="ms-2"> {{post.region}}</span>
@@ -104,7 +104,7 @@ layout:
 
   <div class="container-fluid bg-cham d-block d-md-none">
     <div class="container record-mobile bbt">
-      {% include rounds-mvps.html %}
+     
       {%- endfor -%}
   </div>
   </div>
@@ -158,25 +158,7 @@ layout:
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    {% assign LIGA = site.categories.MVPSONLY | sort: "MVPS" | reverse %}
-    {%- for post in LIGA limit:1 -%}
-    <script>
-       var num1 = {{post.no1}};
-       var num2 = {{post.no2}};
-       var num3 = {{post.no3}};
-       var num4 = {{post.no4}};
-       var num5 = {{post.no5}};
-       var num6 = {{post.no6}};
-       var num7 = {{post.no7}};
-       var num8 = {{post.no8}};
-       var num9 = {{post.no9}};
-       var num10 =  {{post.no10}};
-       var num11 =  {{post.no11}};
-      var suma = num1+num2+num3+num4+num5+num6+num7+num8+num9+num10+num11;
-      document.getElementById('mvps').innerHTML=suma;
-      document.getElementById('mvpsMobile').innerHTML=suma;
-      </script>
-      {% endfor %}
+   
 
 {% include g-analytics.html %}
 </body>
