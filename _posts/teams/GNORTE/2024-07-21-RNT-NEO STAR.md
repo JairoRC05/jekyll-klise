@@ -10,7 +10,7 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 6
+puntos: 12
 diff: 2
 rec1: win
 rec2: loss
@@ -18,9 +18,9 @@ rec3: des
 rec4: loss
 rec5: win
 rec6: win
-rec7: rea
-rec8: rea
+rec7: sup
+rec8: loss
 rec9: win
-rec10: ---
+rec10: sup
 rec11: ---
 ---

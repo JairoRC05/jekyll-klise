@@ -4,82 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "fa4b7a5767bf348f",
+        "id": "a522a476d7f3c51d",
         "type": "tabs",
         "children": [
           {
-            "id": "f35098457dfc3fe0",
+            "id": "ad1be23964aaa551",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LIGAS INDIGO/2025-01-25-ENERO.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-01-25-ENERO"
-            }
-          },
-          {
-            "id": "2f8083efcae5d75f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP/7Z/2024-11-08-TOKITO.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2024-11-08-TOKITO"
-            }
-          },
-          {
-            "id": "ae7e627a987e0600",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP/THE PSYDUCKS/2024-11-08-MRKAWAII.md",
+                "file": "teams/GNORTE/2024-04-05-STAMINA.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-08-MRKAWAII"
-            }
-          },
-          {
-            "id": "b2e2fb3e227a20f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "teams/GSUR/2024-07-21-TEAM ROCKET.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2024-07-21-TEAM ROCKET"
-            }
-          },
-          {
-            "id": "7a89726c05657aa5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP/TAE/2021-07-21-ORZIIE.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2021-07-21-ORZIIE"
+              "title": "2024-04-05-STAMINA"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,34 +159,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "7a89726c05657aa5",
+  "active": "ad1be23964aaa551",
   "lastOpenFiles": [
-    "MVP/TSR/2021-07-21-CLAZO.md",
-    "UPDATES.md",
-    "MVP/TAE/2021-07-21-ORZIIE.md",
-    "MVP/TF/2021-07-21-KIYOKA.md",
-    "MVP/TSR/2021-07-21-FLOPPA.md",
-    "MVP/TUT/2021-07-21-LUIS205.md",
-    "MVP/SPH/2021-07-21-TAMALOVER.md",
-    "MVP/RAGNAROK/AEP/2021-07-21-XTORMER.md",
-    "MVP/AD ESPORTS/2021-07-21-JUMPER98.md",
-    "MVP/TAD/2021-07-21-ALLENDART.md",
-    "MVP/THE PSYDUCKS/2024-11-08-SHURA.md",
-    "MVP/HG SALARIO MINIMO/2024-11-08-PERRON.md",
-    "MVP/FTB/2021-07-21-MERGAS.md",
-    "MVP/DFS/PLAT/2021-07-21-WINTER.md",
-    "MVP/EA/2021-07-21-VYLERL.md",
-    "MVP/RNT NEO/2024-11-08-TVPABLO.md",
-    "MVP/TEAM ROCKET/2021-07-21-WILLYHR.md",
-    "MVP/AD ESPORTS/2021-07-21-3MG.md",
-    "MVP/7Z/2024-11-08-RHZ04.md",
-    "MVP/7Z/2024-11-08-TOKITO.md",
-    "teams/GSUR/2024-04-05-TEAM FLARE.md",
-    "teams/GSUR/2024-04-05-TSR.md",
-    "teams/GSUR/2024-01-04-AEP.md",
-    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "teams/GSUR/2021-07-21-DFS-RUBY.md",
-    "teams/GSUR/2021-07-21-AD-DORADAS.md",
+    "teams/GNORTE/2024-07-25-HG-SALARIO-MINIMO.md",
+    "teams/GNORTE/2021-07-21-GOOD AS GOLD GHOST.md",
+    "teams/GNORTE/2021-07-21-ENIGMA.md",
+    "teams/GNORTE/2024-07-21-RNT GALÁCTICOS.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH5.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH1.md",
+    "teams/GNORTE/2024-04-05-7Z E-SPORTS.md",
+    "teams/GNORTE/2024-07-21-RNT-NEO STAR.md",
+    "CALENDARIOS/01-calendario-NORTE/R7/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-NORTE/R7/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-NORTE/R7/2024-07-01-MATCH5.md",
+    "CALENDARIOS/01-calendario-NORTE/R7/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-NORTE/R8/2024-07-01-MATCH3.md",
+    "CALENDARIOS/01-calendario-NORTE/R8/2024-07-01-MATCH2.md",
+    "teams/GNORTE/2024-04-05-STAMINA.md",
+    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH2.md",
+    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH1.md",
+    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH5.md",
+    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH4.md",
+    "CALENDARIOS/01-calendario-NORTE/R9/2024-07-01-MATCH3.md",
+    "teams/GNORTE/2024-04-05-FROSTBITE.md",
+    "teams/GNORTE/2024-07-21-TEAM EVE.md",
+    "teams/GNORTE/2024-04-05-TAD.md",
     "Sin título.canvas",
     "MVP/DFS/AMBER",
     "MVP/HG SALARIO MINIMO",

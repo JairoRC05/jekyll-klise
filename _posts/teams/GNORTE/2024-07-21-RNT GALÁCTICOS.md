@@ -20,9 +20,9 @@ rec3: one
 rec4: win
 rec5: loss
 rec6: sup
-rec7: rea
+rec7: loss
 rec8: des
-rec9: ---
-rec10: ---
+rec9: loss
+rec10: rea
 rec11: ---
 ---

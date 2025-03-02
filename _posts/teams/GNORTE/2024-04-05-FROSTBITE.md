@@ -15,7 +15,7 @@ rango: ORO
 sector: LG
 tags: 
 grupo: 
-puntos: 10
+puntos: 14
 diff: 12
 wins: 8
 loss: 0
@@ -27,8 +27,8 @@ rec5: sup
 rec6: rea
 rec7: loss
 rec8: win
-rec9: ---
-rec10: ---
+rec9: sup
+rec10: sup
 rec11: ---
 ---
 
