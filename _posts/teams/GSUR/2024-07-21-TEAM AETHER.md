@@ -27,6 +27,6 @@ rec6: one
 rec7: sup
 rec8: win
 rec9: des
-rec10: ---
+rec10: rea
 rec11: ---
 ---

@@ -24,8 +24,8 @@ rec5: sup
 rec6: win
 rec7: sup
 rec8: one
-rec9: rea
-rec10: ---
+rec9: loss
+rec10: rea
 rec11: ---
 ---
 
