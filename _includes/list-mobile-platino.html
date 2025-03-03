@@ -1,6 +1,6 @@
 <div class="row last">
 
-  {% assign NORTE = site.categories.GNORTE | sort: "puntos" | reverse %}
+  {% assign NORTE = site.categories.GNORTE | sort: "order" %}
   {%- for post in NORTE  -%}
   <div class="col-12 col-md-6 col-lg-4">
 
@@ -16,6 +16,10 @@
             
           <div class="card-round-pts">
             <h6>{{post.puntos}} pts</h6>
+          </div>
+
+          <div class="card-round-place">
+            <span>{{post.order}}</span>
           </div>
         
             <div class="card-back">

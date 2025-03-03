@@ -1,5 +1,5 @@
 <div class="row last">
-  {% assign SUR = site.categories.GSUR | sort: "puntos" | reverse %}
+  {% assign SUR = site.categories.GSUR | sort: "order" %}
   {%- for post in SUR -%}
   
   <div class="col-12 col-md-6 col-lg-4">
@@ -18,6 +18,10 @@
             
           <div class="card-round-pts">
             <h6>{{post.puntos}} pts</h6>
+          </div>
+
+          <div class="card-round-place">
+            <span>{{post.order}}</span>
           </div>
         
             <div class="card-back">

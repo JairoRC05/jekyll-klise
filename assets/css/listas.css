@@ -346,7 +346,7 @@
         justify-content: start;
         align-items: center;
         position: absolute;
-        left: 5%;
+        left: 3%;
         color: #fff;
 
         a{
@@ -442,12 +442,14 @@
     .card-round-place{
         display: block;
         position: absolute;
-        right: 10%;
-        color: #ffffff;
+        right: 2%;
+        color: #90909051;
+        z-index: -1;
 
 
-        p{
-            font-size: 12px;
+        span{
+            font-size: 45px;
+            font-weight: 600;
             margin: 0;
         }
     }
