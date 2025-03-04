@@ -12,7 +12,7 @@ rango: PLATA
 pais: mx
 ligas: 
 cxf: 
-puntos: 18
+puntos: 20
 diff: 14
 rec1: sup
 rec2: sup
@@ -24,6 +24,7 @@ rec7: des
 rec8: win
 rec9: win
 rec10: sup
-rec11: ---
+rec11: sup
 order: "01"
+line: volt
 ---

@@ -102,21 +102,16 @@ permalink: /reglamento-liga-indigo.html
             </div>
           </div>
           <div class="gamer-desc">
-            <p>Liciencias Unites <b>nuevas</b> durante el torneo quedan automáticamente prohibidas.</p>
-            <ul class="list-group list-group-flush">
-              <!-- <li class="list-group-item">Ho-Oh</li>
-              <li class="list-group-item">Mewtwo X</li>
-              <li class="list-group-item">Mewtwo Y</li>
-              <li class="list-group-item">Miraidon</li>
-              <li class="list-group-item">Zacian</li>
-              <li class="list-group-item">Armorougue</li> -->
-              <!-- <li class="list-group-item">TINKATON</li> 
-              <li class="list-group-item">HOOPA</li>  -->
-              <li class="list-group-item">SUICUNE</li> 
-            </ul>
+            {% assign teams = site.categories.BANS | sort: "title" %}
+            {%- for post in teams -%}
+            {%- include bans.html -%}
+            {%-endfor-%}
+            <p class="mt-3">Liciencias Unites <b>nuevas</b> durante el torneo quedan automáticamente prohibidas.</p>
+
 
           </div>
         </div>
+
         <div class="gamer-card">
           <div class="gamer-top bgIndigoTop">
             <img src="/assets/mis/circle-indigo.png" alt="">
@@ -172,7 +167,7 @@ permalink: /reglamento-liga-indigo.html
             <p>LI PLATA -> LI BRONCE</p>
           </div>
         </div> -->
-      </div>
+        </div>
 
 
       <div class="gamer-card">

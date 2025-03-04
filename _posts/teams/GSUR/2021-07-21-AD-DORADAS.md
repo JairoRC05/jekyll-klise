@@ -24,6 +24,6 @@ rec7: loss
 rec8: one
 rec9: win
 rec10: des
-rec11: ---
+rec11: rea
 order: "06"
 ---

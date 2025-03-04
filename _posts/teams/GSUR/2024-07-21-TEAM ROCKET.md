@@ -28,6 +28,6 @@ rec7: rea
 rec8: loss
 rec9: win
 rec10: loss
-rec11: ---
+rec11: loss
 order: "07"
 ---

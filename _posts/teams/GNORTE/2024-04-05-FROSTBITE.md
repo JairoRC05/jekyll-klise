@@ -24,13 +24,14 @@ rec2: sup
 rec3: sup
 rec4: sup
 rec5: sup
-rec6: rea
+rec6: loss
 rec7: loss
 rec8: win
 rec9: sup
 rec10: sup
-rec11: ---
+rec11: loss
 order: "04"
+line: mid
 ---
 
 

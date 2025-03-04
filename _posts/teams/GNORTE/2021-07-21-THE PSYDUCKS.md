@@ -13,10 +13,7 @@ pais: mx
 ligas: 
 temporada: SI
 rango: ACERO
-puntos: 7
-diff: 1
-wins: 4
-loss: 3
+puntos: 9
 cxf: 
 rec1: one
 rec2: loss
@@ -28,6 +25,7 @@ rec7: des
 rec8: one
 rec9: win
 rec10: loss
-rec11: ---
-order: "08"
+rec11: sup
+order: "07"
+line: top
 ---

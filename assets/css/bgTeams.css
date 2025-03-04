@@ -813,7 +813,7 @@ background-blend-mode: multiply;
 
 
 .indigo-yellow{
-  background: #f8b119;
+  background: #ffbe00;
 
 }
 
@@ -921,4 +921,7 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
 
   .AGIL{
     background: #29a5e3;
+  }
+  .EQUILIBRADO{
+    background: #ce5fd3;
   }

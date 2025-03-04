@@ -15,7 +15,7 @@ region: LAN
 rango: ORO
 sector: LG
 temporada: SI
-puntos: 12
+puntos: 15
 diff: 8
 pais: mx
 rec1: sup
@@ -27,7 +27,8 @@ rec6: one
 rec7: sup
 rec8: win
 rec9: des
-rec10: rea
-rec11: ---
-order: "05"
+rec10: one
+rec11: win
+order: "03"
+line: fire
 ---
