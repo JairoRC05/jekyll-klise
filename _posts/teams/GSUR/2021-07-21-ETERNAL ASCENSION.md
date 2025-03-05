@@ -14,7 +14,6 @@ ligas:
 ID: EA
 temporada: SI
 puntos: 6
-diff: -5
 rec1: sup
 rec2: loss
 rec3: loss
@@ -26,5 +25,6 @@ rec8: sup
 rec9: one
 rec10: loss
 rec11: one
-order: "08"
+order: "09"
+line: down
 ---

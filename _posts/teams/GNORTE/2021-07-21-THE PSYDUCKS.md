@@ -26,6 +26,6 @@ rec8: one
 rec9: win
 rec10: loss
 rec11: sup
-order: "07"
-line: top
+order: "08"
+line: down
 ---
