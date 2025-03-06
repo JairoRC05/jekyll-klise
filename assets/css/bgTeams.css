@@ -614,8 +614,8 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
 }
 
 .STMN{
-  background: rgb(0,127,88);
-  background: radial-gradient(circle, rgba(0,127,88,1) 0%, rgba(47,149,187,1) 50%, rgba(7,69,71,1) 100%);
+  background: rgb(24,93,111);
+background: radial-gradient(circle, rgba(24,93,111,1) 0%, rgba(52,115,131,1) 100%);
 }
 
 .PLAT{
@@ -919,9 +919,24 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
     filter: drop-shadow(0px 0px 6px #ffffff);
   }
 
+
+
   .AGIL{
     background: #29a5e3;
   }
   .EQUILIBRADO{
     background: #ce5fd3;
+  }
+
+
+
+
+  .black-dark{
+    background: #000 !important;
+    color: white !important;
+  }
+
+  .yellow-dark{
+    background: #fedc08 !important;
+    color: white !important;
   }

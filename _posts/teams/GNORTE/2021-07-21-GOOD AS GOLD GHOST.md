@@ -13,19 +13,19 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 0
+puntos: 2
 diff: -5
 rec1: loss
 rec2: loss
 rec3: loss
 rec4: des
 rec5: loss
-rec6: rea
+rec6: sup
 rec7: loss
 rec8: loss
 rec9: loss
 rec10: loss
 rec11: loss
 order: "11"
-line: eye
+line:
 ---

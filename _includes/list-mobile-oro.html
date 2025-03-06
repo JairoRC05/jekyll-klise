@@ -1,35 +1,50 @@
-<div class="row last">
-  {% assign SUR = site.categories.GSUR | sort: "order" %}
-  {%- for post in SUR -%}
-  
-  <div class="col-12 col-md-6 col-lg-4">
-        <div class="card-round-list">
-         
-       
+<div class="row">
+  <div class="col-lg-12">
+    {% assign NORTE = site.categories.GSUR | sort: "order" %}
+      {%- for post in NORTE limit:1 -%}
+      {% include banner-list.html %}
+    {%- endfor -%}
+  </div>
 
-          <div class="card-round-team">
-            <a href="{{post.url}}">
-              <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
-            </a>
-             
+  <div class="col-lg-12">
+    <div class="row last">
+
+      {% assign NORTE = site.categories.GSUR | sort: "order" %}
+      {%- for post in NORTE offset:1 -%}
+      <div class="col-12 col-md-6 col-lg-4">
+    
+            <div class="card-round-list">
+              <div class="card-round-team">
+                <a href="{{post.url}}">
+                  <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
+                </a>
+                 
              {% include rounds.html %}
-
-          </div>
+    
+              </div>
+                
+              <div class="card-round-pts">
+                <h6>{{post.puntos}} pts</h6>
+              </div>
+    
+              <div class="card-round-place">
+                <span>{{post.order}}</span>
+              </div>
             
-          <div class="card-round-pts">
-            <h6>{{post.puntos}} pts</h6>
-          </div>
-
-          <div class="card-round-place">
-            <span>{{post.order}}</span>
-          </div>
-        
-            <div class="card-back">
-              <div class="card-color-left {{post.ID}}"> </div>  
+                <div class="card-back">
+                  {% if post.ID == "7Z" %}
+                  <div class="card-color-left S7Z"> </div>  
+                  {% else %}
+                  <div class="card-color-left {{post.ID}}"> </div> 
+                  {% endif %} 
+                </div>
+    
             </div>
-
-        </div>
-      
+         
       </div>
-        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+
+
+  </div>
 </div>

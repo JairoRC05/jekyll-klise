@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH5.md",
+                "file": "teams/GNORTE/2021-07-21-ENIGMA.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2024-07-01-MATCH5"
+              "title": "2021-07-21-ENIGMA"
+            }
+          },
+          {
+            "id": "1104a5ffd8d75df1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LIGAS INDIGO/2025-01-06-MARZO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-01-06-MARZO"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -159,34 +174,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "ad1be23964aaa551",
+  "active": "1104a5ffd8d75df1",
   "lastOpenFiles": [
+    "LIGAS INDIGO/2025-01-25-ENERO.md",
+    "LIGAS INDIGO/2025-01-06-MARZO.md",
+    "teams/GNORTE/2024-04-05-STAMINA.md",
+    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
+    "teams/GSUR/2024-04-05-TEAM FLARE.md",
+    "teams/GNORTE/2021-07-21-ENIGMA.md",
+    "teams/GNORTE/2024-07-21-TEAM EVE.md",
+    "teams/GNORTE/2021-07-21-GOOD AS GOLD GHOST.md",
+    "TEMPLATES/TEAM.md",
+    "logos/01-PLATINO/2021-07-21-LIGAINDIGOPLATINO.md",
+    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH5.md",
     "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH4.md",
     "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH3.md",
     "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH1.md",
-    "teams/GNORTE/2024-07-21-TEAM EVE.md",
     "teams/GNORTE/2024-07-21-RNT GALÁCTICOS.md",
     "teams/GNORTE/2024-07-21-RNT-NEO STAR.md",
     "teams/GNORTE/2024-04-05-FROSTBITE.md",
     "teams/GNORTE/2024-04-05-7Z E-SPORTS.md",
     "teams/GNORTE/2021-07-21-THE PSYDUCKS.md",
-    "teams/GNORTE/2021-07-21-GOOD AS GOLD GHOST.md",
-    "teams/GNORTE/2021-07-21-ENIGMA.md",
     "teams/GSUR/2024-07-21-TEAM ROCKET.md",
     "teams/GSUR/2024-07-21-TEAM AETHER.md",
     "teams/GSUR/2024-04-05-TSR.md",
-    "teams/GSUR/2024-04-05-TEAM FLARE.md",
     "teams/GSUR/2021-07-21-ETERNAL ASCENSION.md",
     "teams/GSUR/2024-01-04-AEP.md",
     "teams/GSUR/2023-07-21-TUT.md",
     "teams/GSUR/2021-07-21-DFS-AMBER.md",
-    "teams/GSUR/2021-07-21-DFS-RUBY.md",
-    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "teams/GSUR/2021-07-21-AD-DORADAS.md",
-    "CALENDARIOS/02-calendario-SUR/R7/2024-07-01-MATCH4.md",
-    "CALENDARIOS/02-calendario-SUR/R7/2024-07-01-MATCH2.md",
-    "CALENDARIOS/02-calendario-SUR/R10/2024-07-01-MATCH1.md",
-    "CALENDARIOS/02-calendario-SUR/R10/2024-07-01-MATCH2.md",
     "Sin título.canvas",
     "MVP/DFS/AMBER",
     "MVP/HG SALARIO MINIMO",

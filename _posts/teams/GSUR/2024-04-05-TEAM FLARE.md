@@ -13,8 +13,7 @@ sector: CXF
 region: LAN
 cxf: "3"
 temporada: SI
-puntos: 14
-diff: 9
+puntos: 16
 ligas: 
 rec1: des
 rec2: sup
@@ -27,7 +26,7 @@ rec8: one
 rec9: loss
 rec10: win
 rec11: sup
-order: "04"
+order: "03"
 line: top
 ---
 

@@ -27,4 +27,5 @@ rec10: sup
 rec11: sup
 order: "01"
 line: volt
+secondcolor: black-dark
 ---

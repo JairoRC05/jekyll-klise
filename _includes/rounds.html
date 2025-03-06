@@ -1,6 +1,5 @@
 <div class="card-round-title">
     <h2>{{post.team | truncate: 21}} 
-      
       {% if post.line == "top" %}
       <i class="ti ti-caret-up-filled text-success"></i>
       {% elsif post.line == "down" %}
@@ -16,8 +15,8 @@
       {% else  %}
       <i class="ti ti-equal text-info"></i>     
       {% endif %}
-
     </h2>
+
     <div class="card-round-record">
       
       {% if post.rec1 == "win" or post.rec1 == "sup" %}
@@ -51,7 +50,7 @@
       {% elsif post.rec3 == "rea" %}
       <span class="record {{post.rec3}}">R</span>
       {% elsif post.rec3 == "des" %}
-      <span class="record {{post.rec1}}">D</span>
+      <span class="record {{post.rec3}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
@@ -63,7 +62,7 @@
       {% elsif post.rec4 == "rea" %}
       <span class="record {{post.rec4}}">R</span>
       {% elsif post.rec4 == "des" %}
-      <span class="record {{post.rec1}}">D</span>
+      <span class="record {{post.rec4}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
@@ -75,7 +74,7 @@
       {% elsif post.rec5 == "rea" %}
       <span class="record {{post.rec5}}">R</span>
       {% elsif post.rec5 == "des" %}
-      <span class="record {{post.rec1}}">D</span>
+      <span class="record {{post.rec5}}">D</span>
       {% else %}
             <span class="record"></span>
       {% endif %}
