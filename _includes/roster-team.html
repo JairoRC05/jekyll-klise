@@ -1,0 +1,10 @@
+{% if page.ID == "STMN" %}
+{% assign MATCH = site.categories.STMNP | sort: "rol"  %}
+
+{%- for post in MATCH -%}
+{% include card-roster.html %}
+
+{%- endfor -%}    
+
+{% endif %}
+

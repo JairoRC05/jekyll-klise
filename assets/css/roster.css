@@ -1,0 +1,193 @@
+.card-round-roster {
+    height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        height: 70px;
+    }
+   
+    @media screen and (max-width: 576px) {
+        height: 50px;
+    }
+
+
+  
+
+
+    .card-round-team {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+        }
+
+        a{
+            img {
+                width: 150px;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 0;
+                    width: 70px;
+                }
+
+                @media screen and (max-width: 576px) {
+                    width: 50px;
+                }
+
+            }
+        }
+
+    
+    }
+
+
+    .card-round-title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background: rgba(4, 0, 0, 0.691);
+        background: linear-gradient(0deg, rgba(4,0,0,1) 0%, rgba(2,0,0,1) 43%, rgba(0,0,0,0.804359243697479) 64%, rgba(0,0,0,0.31416316526610644) 84%, rgba(0,0,0,0) 100%);
+        padding: 15px;
+        color: #fff !important;
+
+        @media screen and (max-width: 768px) {
+            padding: 5px;
+            background: none;
+            bottom: 20%;
+            left: 25%;
+            line-height: 1px;
+        }
+
+        @media screen and (max-width: 576px) {
+        
+            bottom: 20%;
+            left: 18%;
+        }
+
+            h2{
+               margin: 0;
+               font-size: 18px;
+              
+
+                  @media screen and (max-width: 576px) {
+                    font-size: 16px;
+                }
+             
+            }
+
+            span{
+                    margin: 0;
+                    font-size: 12px;
+
+                    @media screen and (max-width: 576px) {
+                        font-size: 10px;
+                    }
+                   
+            }
+
+           
+
+          
+        }
+
+
+
+    
+
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 10px;
+        overflow: hidden;
+
+
+    }
+
+  
+
+    
+ 
+
+
+    .card-color-left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1000;
+    }
+
+    .card-color-right {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: -90px;
+        right: -70px;
+        z-index: 900;
+        transform: rotate(45deg);
+
+
+        @media screen and (max-width: 768px) {
+            width: 65%;
+            height: 65%;
+            top: -10px;
+            right: -75px;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 50%;
+            height: 100%;
+            top: -35px;
+            right: -30px;
+        }
+    }
+    
+    .card-color-logo {
+
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 35px;
+        top: 5px;
+        right: 5px;
+        z-index: 1000;
+
+        @media screen and (max-width: 576px) {
+            right: 5%;
+        }
+
+        img{
+            width: 40px;
+        }
+
+    }
+}
+
+.card-round-roster::before{
+    content: "";
+    background-image: url(/assets/mis/square-pattern-30.webp), linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 38%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -800;
+    background-size: 140px, auto;  
+    background-position: center, left top;  
+    overflow: hidden;
+    border-radius: 10px;
+}
