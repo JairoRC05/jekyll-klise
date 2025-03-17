@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /teams/:title.html
+permalink: /equipos/:title.html
 categories: TEAM GNORTE
 date: 2020-08-29 10:29:20 +0700
 title: RNT NEO STAR
@@ -10,19 +10,21 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 14
-diff: 2
-rec1: win
-rec2: loss
-rec3: des
-rec4: loss
-rec5: win
-rec6: win
-rec7: sup
-rec8: loss
-rec9: win
-rec10: sup
-rec11: sup
-order: "05"
-line:
+puntos: 0
+rec1: ---
+rec2: ---
+rec3: ---
+rec4: ---
+rec5: ---
+rec6: ---
+rec7: ---
+rec8: ---
+rec9: ---
+rec10: ---
+rec11: ---
+order: "00"
+line: 
+org: 
+secondcolor: 
+cham:
 ---

@@ -2,23 +2,23 @@
     <div class="card-round-roster">
         <div class="card-round-team">
             <a href="{{post.url}}">
-              <img src="/assets/avatars/{{post.sex}}.webp" alt="" class="img-fluid">
+              <img src="/assets/avatars/{{jugador.avatar}}.webp" alt="" class="img-fluid">
             </a>
         </div>
        
           <div class="card-round-title">
-            <h2>{{post.nickname | truncate: 15}}</h2>
-            <span>{{post.ID}}</span>
+            <h2>{{jugador.nickname | truncate: 15}}</h2>
+            <span>{{jugador.ID}}</span>
           </div>
 
   
 
           <div class="card-back">
             
-            {% if post.team == "7Z" %}
+            {% if page.ID == "7Z" %}
             <div class="card-color-left S7Z"> </div>
             {% else %}
-            <div class="card-color-left {{post.team}}"> </div>
+            <div class="card-color-left {{page.ID}}"> </div>
             {% endif %}
 
       

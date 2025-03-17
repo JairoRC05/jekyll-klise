@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a522a476d7f3c51d",
+        "id": "81b737db97ecab58",
         "type": "tabs",
         "children": [
           {
-            "id": "ad1be23964aaa551",
+            "id": "c0853a933423ddad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teams/GNORTE/2021-07-21-ENIGMA.md",
+                "file": "teams/GSUR/2024-07-25-HG-SALARIO-MINIMO.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-ENIGMA"
-            }
-          },
-          {
-            "id": "1104a5ffd8d75df1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP/STMN/2021-07-21-HOLMES.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2021-07-21-HOLMES"
+              "title": "2024-07-25-HG-SALARIO-MINIMO"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,34 +159,35 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1104a5ffd8d75df1",
+  "active": "c0853a933423ddad",
   "lastOpenFiles": [
-    "MVP/STMN/2021-07-21-REGI.md",
-    "MVP/STMN/2021-07-21-JONAM96.md",
-    "MVP/STMN/2021-07-21-FRANK.md",
-    "MVP/STMN/2021-07-21-PACHY.md",
-    "MVP/STMN/2021-07-21-RANMA.md",
-    "MVP/STMN/2021-07-21-AURIMAKI.md",
-    "teams/GNORTE/2024-04-05-STAMINA.md",
-    "teams/GNORTE/2021-07-21-ENIGMA.md",
-    "teams/GNORTE/2024-04-05-7Z E-SPORTS.md",
-    "teams/GNORTE/2021-07-21-THE PSYDUCKS.md",
-    "teams/GNORTE/2021-07-21-GOOD AS GOLD GHOST.md",
-    "premium/2024-01-15-TEXAS.md",
-    "LIGAS INDIGO/2025-01-06-MARZO.md",
-    "LIGAS INDIGO/2025-01-25-ENERO.md",
-    "teams/GSUR/2021-07-21-DFS-PLATINUM.md",
-    "teams/GSUR/2024-04-05-TEAM FLARE.md",
-    "teams/GNORTE/2024-07-21-TEAM EVE.md",
-    "TEMPLATES/TEAM.md",
-    "logos/01-PLATINO/2021-07-21-LIGAINDIGOPLATINO.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH5.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH4.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH3.md",
-    "CALENDARIOS/01-calendario-NORTE/R10/2024-07-01-MATCH1.md",
-    "teams/GNORTE/2024-07-21-RNT GALÁCTICOS.md",
-    "teams/GNORTE/2024-07-21-RNT-NEO STAR.md",
-    "teams/GNORTE/2024-04-05-FROSTBITE.md",
+    "teams/GSUR/2021-07-21-ENIGMA.md",
+    "teams/GSUR/2024-04-05-7Z E-SPORTS.md",
+    "teams/GSUR/2021-07-21-SEVEN SHADOWS.md",
+    "teams/GSUR/2021-07-21-AD-GAMING.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH6.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-SUR/R3/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH6.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH5.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH4.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-SUR/R2/2024-07-01-MATCH1.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH6.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH3.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH2.md",
+    "CALENDARIOS/02-calendario-SUR/R1/2024-07-01-MATCH1.md",
+    "teams/GSUR/2024-04-05-STAMINA.md",
+    "teams/GSUR/2024-04-21-DFS-DIAMOND.md",
+    "teams/GSUR/2024-07-25-HG-SALARIO-MINIMO.md",
+    "teams/GSUR/2024-07-21-TEAM EVE.md",
+    "MVP/L4O",
     "Sin título.canvas",
     "MVP/DFS/AMBER",
     "MVP/HG SALARIO MINIMO",
@@ -212,7 +198,6 @@
     "MVP/7Z",
     "teams/ARCHIVO/plantilla.txt",
     "teams/ARCHIVO",
-    "teams/Nueva carpeta",
     "Sin título 1.canvas",
     "Sin título 6.canvas",
     "Sin título 5.canvas",

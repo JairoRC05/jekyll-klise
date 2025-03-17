@@ -639,10 +639,26 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
 .E{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
+  background: rgb(61,38,154);
+background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
+}
+.RNT{
+  background: rgb(61,38,154);
+background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
 }
 .TR{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.L4O{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.MEXA{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.HOENN{
   background: rgb(64,64,64);
   background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
@@ -762,8 +778,17 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
   border-bottom: 5px solid #000000 ;
 }
 
+.COL{
+  background: rgb(71,17,121);
+background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
+}
+
 /* ROJO */
 .SM{
+  background: rgb(150,17,13);
+  background: radial-gradient(circle, rgba(150,17,13,1) 0%, rgba(175,26,21,1) 100%);
+}
+.OVG{
   background: rgb(150,17,13);
   background: radial-gradient(circle, rgba(150,17,13,1) 0%, rgba(175,26,21,1) 100%);
 }
