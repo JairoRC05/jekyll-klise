@@ -4,7 +4,7 @@
     {%- for post in norte limit:1 -%}
     <div class="container-fluid banner_bg_team bg-cham">
       <div class="container banner_team">
-        <a href="/assets/logos/{{post.ID}}.png" role="button" download="{{ post.title | escape }}.png">
+        <a href="{{post.url}}" role="button">
           <img src="/assets/logos/{{post.ID}}.webp" class="drop img-fluid" alt="" ">
         </a>
         <div class="bannerText">
@@ -62,7 +62,7 @@
     {%- for post in norte limit:1 -%}
     <div class="container-fluid banner_bg_team bg-cham">
       <div class="container banner_team">
-        <a href="/assets/logos/{{post.ID}}.png" role="button" download="{{ post.title | escape }}.png">
+        <a href="{{post.url}}" role="button" >
           <img src="/assets/logos/{{post.ID}}.webp" class="drop img-fluid" alt="" ">
         </a>
         <div class="bannerText">

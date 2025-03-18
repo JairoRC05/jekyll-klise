@@ -11,7 +11,7 @@
     <div class="row last">
 
       {% assign NORTE = site.categories.GNORTE | sort: "order" %}
-      {%- for post in NORTE offset:1 -%}
+      {%- for post in NORTE -%}
       <div class="col-12 col-md-6 col-lg-4">
     
             <div class="card-round-list">
