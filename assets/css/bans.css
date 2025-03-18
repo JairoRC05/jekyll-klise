@@ -28,8 +28,8 @@
         z-index: 1;
         scale: 2.2;
 
-        @media screen and (max-width: 472px) {
-         top: -10%;
+        @media screen and (max-width: 576px) {
+         top: 15%;
             
         }
 
