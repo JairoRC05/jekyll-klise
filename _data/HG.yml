@@ -1,17 +1,22 @@
-equipo: 
+tag: SM
+team: HG SALARIO MINIMO
+org: HOUSE OF GHOST 
 jugadores: 
   - nickname: $M • Perron
-
     ID: 74HHH8H
     avatar: male1
-  - nickname: $M・Finn
 
+  - nickname: $M・Finn
     ID: GF9L4M8
     avatar: male1
-  - nickname: $M・Krosty
+    mvp: true
+    numero: 4
 
+  - nickname: $M・Krosty
     ID: KE5NP22
     avatar: male1
+    mvp: 
+
   - nickname: $M・Stimpy
     ID: HEQCNTP
     avatar: male1

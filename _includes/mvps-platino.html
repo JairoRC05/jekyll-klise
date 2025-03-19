@@ -1,37 +1,44 @@
 {% if page.pag == "LIGA" %}
 <div class="container">
-  <div class="row">
-    {% assign LIGA = site.categories.MVPSFEB | sort: "MVPS" | reverse %}    
-    {%- for post in LIGA limit:12 -%}
-    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-      <div class="card-round-mvp">
-     
-        <div class="card-mvp">
-       <a href="{{post.url}}"> <img src="/assets/avatars/{{post.sex}}.webp" alt="{{post.title}}"></a>
-          <div class="card-mvp-title">
-            <p class="mvp-title">{{post.title | truncate: 12}}</p>
-            <p>{{post.team}}</p>
+  <div class="row team--last">
+
+
+    {% for equipo in site.data %}
+      {% assign tag = equipo[1].tag %}
+      {% assign team = equipo[1].team %}
+      {% for jugador in equipo[1].jugadores %}
+        {% if jugador.mvp %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+          <div class="card-round-mvp">
+             <div class="card-mvp">
+              <a href="{{post.url}}"> <img src="/assets/avatars/{{jugador.avatar}}.webp" alt="{{post.title}}"></a>
+              <div class="card-mvp-title">
+                <p class="mvp-title">{{jugador.nickname | truncate: 12}}</p>
+                <p>{{team}}</p>
+              </div>
+            </div>
+            <div class="card-mvp-number">
+              <p class="mvp-number">{{jugador.numero}}</p>
+              <p>MVPS</p>
+            </div>
+            <div class="card-back">
+              <div class="card-color-left {{tag}}"> </div>  
+              <div class="card-mvp-team">
+                <img src="/assets/logos/{{tag}}.webp" alt="MVPS Team: {{post.team}}">
+              </div>
+              
+            </div>
           </div>
-        </div>
-        <div class="card-mvp-number">
-          <p class="mvp-number">{{post.MVPS}}</p>
-          <p>MVPS</p>
-        </div>
-       
-       
-        <div class="card-back">
-          <div class="card-color-left {{post.team}}"> </div> 
-          <div class="card-mvp-team">
-            <img src="/assets/logos/{{post.team}}.webp" alt="MVPS Team: {{post.team}}">
-          </div>
-       
         </div>
 
-      </div>
-    </div>
-   {%- endfor -%}
-   </div>
-</div> 
+
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+  
+
+
 
 {% else %}
 <div class="container">

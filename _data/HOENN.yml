@@ -1,8 +1,11 @@
-equipo: 
+tag: HOENN
+team: HOENN PLAGA VILLANOS
+org: PLAGA/VILLANOS E-SPORTS
 jugadores: 
   - nickname: Texaspurguis
     ID: A0829K4
     avatar: male1
+    mvp: 
   - nickname: Fersaw
     ID: 916CTAR
     avatar: male1

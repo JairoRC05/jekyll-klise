@@ -130,3 +130,9 @@
 {% include card-roster.html %}
 {%- endfor -%}
 {% endif %}
+
+{% if page.ID == "ZTG" %}
+{%- for jugador in site.data.ZTG.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
