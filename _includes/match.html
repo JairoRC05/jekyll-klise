@@ -1,4 +1,5 @@
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+
     {%if post.out == "DES" %}
     <div class="bracket-round-list-zzz">
       <div class="card-round-promo">
@@ -14,6 +15,8 @@
       </div>
 
       <div class="card-round-promo-right">
+        
+
         {%if post.ronda == "1" %}
         {% assign DATE = site.categories.FECHA  %}
         {%- for post in DATE -%}
@@ -107,7 +110,9 @@
         </div>
 
     </div>
+
     {%else %}
+
     <div class="bracket-round-list">
       <div class="bracket-round-team">
         <a href="/teams/{{post.local}}">
@@ -168,5 +173,7 @@
         </div>
 
     </div>
+
     {% endif %}
+
   </div>
