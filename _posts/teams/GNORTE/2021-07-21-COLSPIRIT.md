@@ -8,7 +8,7 @@ title: COLSPIRIT
 team: COLSPIRIT
 ID: COL
 region: LAN
-pais: col
+pais: co
 ligas: 
 cxf: 
 sector: 
