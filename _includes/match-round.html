@@ -1,4 +1,5 @@
 {%if partido.equipo2 == "DES" %}
+
 <div class="bracket-round-list-zzz">
     <div class="card-round-promo">
       <h3>DESCANSO</h3>
@@ -7,14 +8,6 @@
       <a href="/teams/{{partido.equipo1}}">
         <img src="/assets/logos/{{partido.equipo1}}.webp" alt="" class="img-fluid">
       </a>
-    </div>
-
-    <div class="card-round-promo-left">
-      <span>{{ronda.ronda}}</span>
-    </div>
-
-    <div class="card-round-promo-right">
-      <span>{{ronda.fecha}}</span>
     </div>
 
      <div class="card-back">
@@ -30,6 +23,7 @@
           <div class="card-color-right {{partido.equipo2}}"> </div>  
           {% endif %} 
       </div>
+
 </div>  
 
 {% else %}
@@ -48,11 +42,7 @@
  
  
     <div class="card-round-promo mx-2">
-      
-      <span>{{ronda.ronda}}</span>
       <h6>{{partido.resultado}}</h6>
-      <span>{{ronda.fecha}}</span>
-      
     </div>
 
 

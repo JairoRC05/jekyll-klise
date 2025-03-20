@@ -1,0 +1,309 @@
+rondas:
+# RONDA 1
+  - ronda: RONDA 1
+    fecha: 17-19 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: HOENN
+      equipo2: COL
+      resultado: VS
+
+    - equipo1: GX
+      equipo2: NEO
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: L4O
+      equipo2: OVG
+      resultado: VS
+
+    - equipo1: PLAT
+      equipo2: MEXA
+      resultado: VS
+    
+    - equipo1: TUT
+      equipo2: DES
+
+# RONDA 2
+  - ronda: RONDA 2
+    fecha: 20-21 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: TUT
+      equipo2: HOENN
+      resultado: VS
+
+    - equipo1: COL
+      equipo2: NEO
+      resultado: VS
+
+    - equipo1: GX
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: RUBY
+      equipo2: PLAT
+      resultado: VS
+
+    - equipo1: MEXA
+      equipo2: OVG
+      resultado: VS
+    
+    - equipo1: TAD
+      equipo2: DES
+
+# RONDA 3
+  - ronda: RONDA 3
+    fecha: 24 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: HOENN
+      equipo2: NEO
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: TUT
+      resultado: VS
+
+    - equipo1: COL
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: MEXA
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: RUBY
+      equipo2: OVG
+      resultado: VS
+    
+    - equipo1: PLAT
+      equipo2: DES
+
+# RONDA 4
+  - ronda: RONDA 4
+    fecha: 25 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: TAD
+      equipo2: HOENN
+      resultado: VS
+
+    - equipo1: COL
+      equipo2: MEXA
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: TUT
+      equipo2: PLAT
+      resultado: VS
+
+    - equipo1: RUBY
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: OVG
+      equipo2: DES
+
+# RONDA 5
+  - ronda: RONDA 5
+    fecha: 26 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: HOENN
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: PLAT
+      equipo2: TAD
+      resultado: VS
+
+    - equipo1: RUBY
+      equipo2: COL
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: MEXA
+      resultado: VS
+
+    - equipo1: OVG
+      equipo2: TUT
+      resultado: VS
+    
+    - equipo1: GX
+      equipo2: DES
+
+# RONDA 6
+  - ronda: RONDA 6
+    fecha: 27 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: PLAT
+      equipo2: HOENN
+      resultado: VS
+
+    - equipo1: MEXA
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: OVG
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: TUT
+      equipo2: GX
+      resultado: VS
+    
+    - equipo1: COL
+      equipo2: DES
+
+# RONDA 7
+  - ronda: RONDA 7
+    fecha: 28 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: HOENN
+      equipo2: MEXA
+      resultado: VS
+
+    - equipo1: PLAT
+      equipo2: OVG
+      resultado: VS
+
+    - equipo1: L4O
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: COL
+      equipo2: TUT
+      resultado: VS
+    
+    - equipo1: NEO
+      equipo2: DES
+
+# RONDA 8
+  - ronda: RONDA 8
+    fecha: 31 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: OVG
+      equipo2: HOENN
+      resultado: VS
+
+    - equipo1: MEXA
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: PLAT
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: COL
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: TUT
+      resultado: VS
+    
+    - equipo1: L4O
+      equipo2: DES
+
+# RONDA 9
+  - ronda: RONDA 9
+    fecha: 1 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: HOENN
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: OVG
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: COL
+      equipo2: PLAT
+      resultado: VS
+
+    - equipo1: TUT
+      equipo2: L4O
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: TAD
+      resultado: VS
+    
+    - equipo1: MEXA
+      equipo2: DES
+
+# RONDA 10
+  - ronda: RONDA 10
+    fecha: 2-3 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: GX
+      equipo2: HOENN
+      resultado: VS
+
+    - equipo1: OVG
+      equipo2: COL
+      resultado: VS
+
+    - equipo1: TUT
+      equipo2: MEXA
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: PLAT
+      resultado: VS
+
+    - equipo1: L4O
+      equipo2: TAD
+      resultado: VS
+    
+    - equipo1: RUBY
+      equipo2: DES
+
+# RONDA 11
+  - ronda: RONDA 11
+    fecha: 4 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: COL
+      equipo2: GX
+      resultado: VS
+
+    - equipo1: TUT
+      equipo2: RUBY
+      resultado: VS
+
+    - equipo1: NEO
+      equipo2: OVG
+      resultado: VS
+
+    - equipo1: TAD
+      equipo2: MEXA
+      resultado: VS
+
+    - equipo1: L4O
+      equipo2: PLAT
+      resultado: VS
+    
+    - equipo1: HOENN
+      equipo2: DES
+

@@ -1,206 +1,276 @@
-<div class="container teams-table"  id="home">
-    <h1 class="teams-title">CAMPEONATO</h1>
-    {% if page.ID == "E" %}
-      <div class="row">
-          {% assign MATCH = site.categories.ES | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
- 
-      {% if page.ID == "TAD" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TADS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "L4O" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "L4O" or partido.equipo2 == "L4O" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "STMN" %}
-      <div class="row">
-        {% assign MATCH = site.categories.STMNS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "GX" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "GX" or partido.equipo2 == "GX" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "PSY" %}
-      <div class="row">
-        {% assign MATCH = site.categories.PSYS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "TAD" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "TAD" or partido.equipo2 == "TAD" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "EVL" %}
-      <div class="row">
-        {% assign MATCH = site.categories.EVLS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "TUT" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "TUT" or partido.equipo2 == "TUT" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "7Z" %}
-      <div class="row">
-        {% assign MATCH = site.categories.7ZS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
-     
-      {% if page.ID == "GX" %}
-      <div class="row">
-        {% assign MATCH = site.categories.GXS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "OVG" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "OVG" or partido.equipo2 == "OVG" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "GGG" %}
-      <div class="row">
-        {% assign MATCH = site.categories.GGGS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "NEO" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "NEO" or partido.equipo2 == "NEO" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "NEO" %}
-      <div class="row">
-        {% assign MATCH = site.categories.NEOS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "MEXA" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "MEXA" or partido.equipo2 == "MEXA" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "SM" %}
-      <div class="row">
-        {% assign MATCH = site.categories.SMS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
-   
-      {% if page.ID == "FTB" %}
-      <div class="row">
-        {% assign MATCH = site.categories.FTBS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "HOENN" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "HOENN" or partido.equipo2 == "HOENN" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "AD" %}
-      <div class="row">
-        {% assign MATCH = site.categories.ADS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "RUBY" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "RUBY" or partido.equipo2 == "RUBY" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
+{% if page.ID == "PLAT" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "PLAT" or partido.equipo2 == "PLAT" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "RUBY" %}
-      <div class="row">
-        {% assign MATCH = site.categories.RUBYS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "COL" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "COL" or partido.equipo2 == "COL" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "EA" %}
-      <div class="row">
-        {% assign MATCH = site.categories.EAS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+<!-- gruposur -->
+{% if page.ID == "SM" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "SM" or partido.equipo2 == "SM" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
+{% if page.ID == "EVL" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "EVL" or partido.equipo2 == "EVL" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "TF" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TFS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "POA" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "POA" or partido.equipo2 == "POA" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "PLAT" %}
-      <div class="row">
-        {% assign MATCH = site.categories.PLATS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "DMD" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "DMD" or partido.equipo2 == "DMD" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "AEP" %}
-      <div class="row">
-        {% assign MATCH = site.categories.AEPS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "DMD" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "DMD" or partido.equipo2 == "DMD" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "TSR" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TSRS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "ZTG" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "ZTG" or partido.equipo2 == "ZTG" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
+{% if page.ID == "TSR" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "TSR" or partido.equipo2 == "TSR" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "TR" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TRS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "STMN" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "STMN" or partido.equipo2 == "STMN" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "TAE" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TAES | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "PEARL" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "PEARL" or partido.equipo2 == "PEARL" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
+{% if page.ID == "7Z" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "7Z" or partido.equipo2 == "7Z" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "TUT" %}
-      <div class="row">
-        {% assign MATCH = site.categories.TUTS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
+{% if page.ID == "AD" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "AD" or partido.equipo2 == "AD" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
 
-      {% if page.ID == "AMBER" %}
-      <div class="row">
-        {% assign MATCH = site.categories.AMBERS | sort: "ronda"  %}
-        {%- for post in MATCH -%}
-        {% include match.html %}
-        {%- endfor -%}
-      </div>
-      {% endif %}
-
-
-  </div>
+{% if page.ID == "E" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.equipo1 == "E" or partido.equipo2 == "E" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}

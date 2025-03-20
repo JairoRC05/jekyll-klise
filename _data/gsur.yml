@@ -1,0 +1,309 @@
+rondas:
+# RONDA 1
+  - ronda: RONDA 1
+    fecha: 17-19 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: STMN
+      equipo2: PEARL
+      resultado: VS
+
+    - equipo1: EVL
+      equipo2: POA
+      resultado: VS
+
+    - equipo1: E
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: 7Z
+      equipo2: ZTG
+      resultado: VS
+
+    - equipo1: TSR
+      equipo2: DMD
+      resultado: VS
+    
+    - equipo1: AD
+      equipo2: DES
+
+# RONDA 2
+  - ronda: RONDA 2
+    fecha: 20-21 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: AD
+      equipo2: STMN
+      resultado: VS
+
+    - equipo1: PEARL
+      equipo2: POA
+      resultado: VS
+
+    - equipo1: EVL
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: SM
+      equipo2: TSR
+      resultado: VS
+
+    - equipo1: DMD
+      equipo2: ZTG
+      resultado: VS
+    
+    - equipo1: E
+      equipo2: DES
+
+# RONDA 3
+  - ronda: RONDA 3
+    fecha: 24 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: STMN
+      equipo2: POA
+      resultado: VS
+
+    - equipo1: E
+      equipo2: AD
+      resultado: VS
+
+    - equipo1: PEARL
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: DMD
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: SM
+      equipo2: ZTG
+      resultado: VS
+    
+    - equipo1: TSR
+      equipo2: DES
+
+# RONDA 4
+  - ronda: RONDA 4
+    fecha: 25 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: E
+      equipo2: STMN
+      resultado: VS
+
+    - equipo1: PEARL
+      equipo2: DMD
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: AD
+      equipo2: TSR
+      resultado: VS
+
+    - equipo1: SM
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: ZTG
+      equipo2: DES
+
+# RONDA 5
+  - ronda: RONDA 5
+    fecha: 26 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: STMN
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: TSR
+      equipo2: E
+      resultado: VS
+
+    - equipo1: SM
+      equipo2: PEARL
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: DMD
+      resultado: VS
+
+    - equipo1: ZTG
+      equipo2: AD
+      resultado: VS
+    
+    - equipo1: EVL
+      equipo2: DES
+
+# RONDA 6
+  - ronda: RONDA 6
+    fecha: 27 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: TSR
+      equipo2: STMN
+      resultado: VS
+
+    - equipo1: DMD
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: E
+      equipo2: ZTG
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: AD
+      equipo2: EVL
+      resultado: VS
+    
+    - equipo1: PEARL
+      equipo2: DES
+
+# RONDA 7
+  - ronda: RONDA 7
+    fecha: 28 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: STMN
+      equipo2: DMD
+      resultado: VS
+
+    - equipo1: TSR
+      equipo2: ZTG
+      resultado: VS
+
+    - equipo1: 7Z
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: E
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: PEARL
+      equipo2: AD
+      resultado: VS
+    
+    - equipo1: POA
+      equipo2: DES
+
+# RONDA 8
+  - ronda: RONDA 8
+    fecha: 31 MAR
+    hora: "19:00"
+    partidos:
+    - equipo1: ZTG
+      equipo2: STMN
+      resultado: VS
+
+    - equipo1: DMD
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: TSR
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: E
+      equipo2: PEARL
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: AD
+      resultado: VS
+    
+    - equipo1: 7Z
+      equipo2: DES
+
+# RONDA 9
+  - ronda: RONDA 9
+    fecha: 1 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: STMN
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: ZTG
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: PEARL
+      equipo2: TSR
+      resultado: VS
+
+    - equipo1: AD
+      equipo2: 7Z
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: E
+      resultado: VS
+    
+    - equipo1: DMD
+      equipo2: DES
+
+# RONDA 10
+  - ronda: RONDA 10
+    fecha: 2-3 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: EVL
+      equipo2: STMN
+      resultado: VS
+
+    - equipo1: ZTG
+      equipo2: PEARL
+      resultado: VS
+
+    - equipo1: AD
+      equipo2: DMD
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: TSR
+      resultado: VS
+
+    - equipo1: 7Z
+      equipo2: E
+      resultado: VS
+    
+    - equipo1: SM
+      equipo2: DES
+
+# RONDA 11
+  - ronda: RONDA 11
+    fecha: 4 ABR
+    hora: "19:00"
+    partidos:
+    - equipo1: PEARL
+      equipo2: EVL
+      resultado: VS
+
+    - equipo1: AD
+      equipo2: SM
+      resultado: VS
+
+    - equipo1: POA
+      equipo2: ZTG
+      resultado: VS
+
+    - equipo1: E
+      equipo2: DMD
+      resultado: VS
+
+    - equipo1: 7Z
+      equipo2: TSR
+      resultado: VS
+    
+    - equipo1: STMN
+      equipo2: DES
+
