@@ -20,7 +20,7 @@ team: DFS DIAMOND
 ID: DMD
 puntos: 0
 pj: 8
-rec1: ---
+rec1: loss
 rec2: ---
 rec3: ---
 rec4: ---
@@ -37,7 +37,7 @@ ligas:
 cxf: 
 cham: 
 line: 
-order: "00"
+order: "04"
 rec10: ---
 rec11: ---
 ---

@@ -10,19 +10,19 @@ rondas:
 
     - equipo1: GX
       equipo2: NEO
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: TAD
       equipo2: RUBY
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: L4O
       equipo2: OVG
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: PLAT
       equipo2: MEXA
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: TUT
       equipo2: DES

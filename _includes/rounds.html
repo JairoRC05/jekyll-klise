@@ -10,8 +10,12 @@
       <i class="ti ti-star-filled text-warning"></i>
       {% elsif post.line == "volt" %}
       <i class="ti ti-progress-bolt text-warning"></i>
+      {% elsif post.line == "cash" %}
+      <i class="ti ti-brand-cashapp text-success"></i> 
       {% elsif post.line == "eye" %}
       <i class="ti ti-eye-cancel text-dark"></i>
+      {% elsif post.line == "zzz" %}
+      <i class="ti ti-zzz text-info "></i>
       {% else  %}
       <i class="ti ti-equal text-info"></i>     
       {% endif %}

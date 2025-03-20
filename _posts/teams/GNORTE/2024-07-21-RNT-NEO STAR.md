@@ -10,8 +10,8 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 0
-rec1: ---
+puntos: 2
+rec1: win
 rec2: ---
 rec3: ---
 rec4: ---
@@ -22,8 +22,8 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "00"
-line: 
+order: "02"
+line: top
 org: 
 secondcolor: 
 cham:
