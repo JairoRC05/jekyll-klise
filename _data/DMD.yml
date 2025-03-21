@@ -8,15 +8,24 @@ jugadores:
   - nickname: ・Sísifo・
     ID: 4AY0P1E
     avatar: male1
+    
   - nickname: AÐ・Jumperメ
     ID: HGQ3G2K
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: TSR
+
   - nickname: NB・Charly
     ID: P1MM782
-    avatar: female1
+    avatar: male1
+    mvp: true
+    numero: 1
+    VS1: TSR
+
   - nickname: ・Allie・
     ID: M7KRKE3
-    avatar: male1
+    avatar: female1
   - nickname: NB・DoPa
     ID: HHX3CAP
     avatar: male1

@@ -1,5 +1,5 @@
 tag: EVL
-team: EEVEELUTIONS
+team: EEVEELUTION
 org: VILLANOS E-SPORTS
 jugadores: 
   - nickname: EVL.Bowleth 
@@ -17,9 +17,17 @@ jugadores:
   - nickname: 天竜•Banjo 
     ID: HT14T4F
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: POA
+
   - nickname: EVL•Doph 
     ID: LQ0R79Q
     avatar: male1
+
   - nickname: King Attacus
     ID: 81HK4NM
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: POA

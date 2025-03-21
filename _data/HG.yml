@@ -10,12 +10,16 @@ jugadores:
     ID: GF9L4M8
     avatar: male1
     mvp: true
-    numero: 4
+    numero: 1
+    VS1: E
+    
 
   - nickname: $M・Krosty
     ID: KE5NP22
     avatar: male1
-    mvp: 
+    mvp: true
+    numero: 1
+    VS1: E
 
   - nickname: $M・Stimpy
     ID: HEQCNTP

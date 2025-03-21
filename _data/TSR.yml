@@ -4,10 +4,18 @@ org: VILLANOS E-SPORTS
 jugadores: 
   - nickname: T星・DaniVal
     ID: CT23992
-    avatar: male1
+    avatar: female1
+    mvp: true
+    numero: 1
+    VS1: DMD
+
   - nickname: T星・TonyVal
     ID: RMEPEEA
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: DMD
+    
   - nickname: COMEMANGO
     ID: F6KNR2G
     avatar: male1

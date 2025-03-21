@@ -5,9 +5,17 @@ jugadores:
   - nickname: SPC・Rodman
     ID: A6YE7LQ
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: HG
+
   - nickname: SPC・Lolfe教
     ID: F942677
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: HG
+
   - nickname: SPC・Frice
     ID: HR3X0NP
     avatar: male1

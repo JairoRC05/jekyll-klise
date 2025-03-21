@@ -5,6 +5,9 @@ jugadores:
   - nickname: AD • Doni
     ID: 8GYY47G
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: EVL
 
   - nickname: AÐ・Kev
     ID: G80T3A2
@@ -16,6 +19,9 @@ jugadores:
   - nickname: AÐ・Caleb
     ID: TFGXQQ2
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: EVL
 
   - nickname: AÐ・Okarun
     ID: MMFYQ33

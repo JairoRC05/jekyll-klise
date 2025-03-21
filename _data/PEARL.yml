@@ -5,6 +5,10 @@ jugadores:
   - nickname: DFs・Pr0MDFK
     ID: TFRMHFM
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: STMN
+
   - nickname: TSF・Shemi
     ID: P6GQ1E4
     avatar: male1
@@ -17,6 +21,10 @@ jugadores:
   - nickname: DFs・Fer
     ID: EAL4PH3
     avatar: male1
+    mvp: true
+    numero: 1
+    VS1: STMN
+
   - nickname: La_Lujuria
     ID: G7YF5FG
     avatar: male1

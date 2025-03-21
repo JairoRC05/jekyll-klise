@@ -3,10 +3,10 @@
   <div class="row team--last">
 
 
-    {% for equipo in site.data %}
+    {% for equipo in site.data  %}
     {% assign tag = equipo[1].tag %}
     {% assign team = equipo[1].team %}
-    {% for jugador in equipo[1].jugadores %}
+    {% for jugador in equipo[1].jugadores  %}
     {% if jugador.mvp %}
     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div class="card-round-mvp">
