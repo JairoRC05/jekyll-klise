@@ -14,10 +14,10 @@ cxf:
 sector: 
 temporada: SI
 rango: ACERO
-puntos: 0
-order: "05"
-line: 
-rec1: ---
+puntos: 1
+order: "03"
+line: top
+rec1: one
 rec2: ---
 rec3: ---
 rec4: ---

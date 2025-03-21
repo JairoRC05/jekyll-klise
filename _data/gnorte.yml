@@ -6,7 +6,7 @@ rondas:
     partidos:
     - equipo1: HOENN
       equipo2: COL
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: GX
       equipo2: NEO
