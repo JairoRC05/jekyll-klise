@@ -1,6 +1,7 @@
 tag: TUT
 team: THE UNOWN TEAM
 org: THE UNOWN TEAM
+activo: true
 jugadores: 
   - nickname: TuT•Brenlml
     ID: 2XX1PF0
@@ -11,10 +12,18 @@ jugadores:
   - nickname: TuT狼Berny10
     ID: RH49KXK
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1
+
   - nickname: 7IBU
     ID: 21QE8M2
     avatar: male1
+
   - nickname: Orziie
     ID: FYF3MC8
     avatar: male1
+    mvp: true
+    numero: 2
+    m2: 2
  

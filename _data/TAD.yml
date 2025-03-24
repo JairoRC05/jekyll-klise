@@ -1,22 +1,25 @@
 tag: TAD
 team: TAQUITOS A LA DIABLA 
 org: TAQUITOS A LA DIABLA 
+activo: true
 jugadores: 
   - nickname: タTaquito
     ID: RQ6HFMP
-    avatar: male1
+    avatar: female1
   - nickname: ムlixendカモ
     ID: 5F9X6LC
     avatar: male1
   - nickname: AllenDartツ
     ID: KHC7LTT
     avatar: male1
+    mvp: true
+    numero: 2
   - nickname: Kaldnese氷
     ID: F425CK
-    avatar: male1
+    avatar: female1
   - nickname: CarlaConC
     ID: 4C5771N
-    avatar: male1
+    avatar: female1
   - nickname: Mothra
     ID: 27FPA5G
     avatar: male1

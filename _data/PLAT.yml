@@ -1,10 +1,16 @@
 tag: PLAT
 team: DFS PLATINUM
 org: DRAGONFLIES GAMING
+activo: true
 jugadores: 
   - nickname: DFs・AlexT
     ID: 3FX577Q
     avatar: male1
+    mvp: true
+    numero: 2
+    m1: 1
+    m2: 1
+
   - nickname: DFs・Forti
     ID: FKH2R49
     avatar: male1
@@ -14,6 +20,11 @@ jugadores:
   - nickname: DFs・Winter
     ID: KT2ARX2
     avatar: male1
+    mvp: true
+    numero: 2
+    m1: 1
+    m2: 1
+
   - nickname: TÆ・Mati
     ID: TYLMP54
     avatar: male1

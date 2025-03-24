@@ -586,8 +586,8 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) 
 }
 
 .POA{
-  background: #000000;
-  border-bottom: 5px solid #fd0101 ;
+  background: rgb(51,51,51);
+  background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
 }
 .SHIN{
   background: #B3282D;

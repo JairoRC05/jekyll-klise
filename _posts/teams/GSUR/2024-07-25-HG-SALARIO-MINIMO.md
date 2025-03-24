@@ -16,7 +16,7 @@ cxf:
 puntos: 0
 diff: 6
 rec1: loss
-rec2: ---
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---
@@ -26,9 +26,9 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "04"
+order: "03"
 org: 
 secondcolor: 
 cham: 
-line:
+line: top
 ---

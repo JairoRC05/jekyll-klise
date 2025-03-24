@@ -1,6 +1,7 @@
 tag: DMD
 team: DFS DIAMOND
-org: DRAGONFLIES GAMING 
+org: DRAGONFLIES GAMING
+activo: true
 jugadores: 
   - nickname: NB・Croswai
     ID: 7TE1K80

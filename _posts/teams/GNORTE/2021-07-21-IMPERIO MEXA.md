@@ -14,11 +14,11 @@ cxf:
 sector: 
 temporada: SI
 rango: PLATA
-puntos: 0
-order: "05"
-line: 
+puntos: 1
+order: "07"
+line: down
 rec1: loss
-rec2: ---
+rec2: one
 rec3: ---
 rec4: ---
 rec5: ---

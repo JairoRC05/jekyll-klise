@@ -1,6 +1,7 @@
 tag: TSR
 team: TEAM STAR
 org: VILLANOS E-SPORTS
+activo: true
 jugadores: 
   - nickname: T星・DaniVal
     ID: CT23992
@@ -13,8 +14,9 @@ jugadores:
     ID: RMEPEEA
     avatar: male1
     mvp: true
-    numero: 1
-    VS1: DMD
+    numero: 2
+    m1: 1
+    m2: 1
     
   - nickname: COMEMANGO
     ID: F6KNR2G
@@ -31,3 +33,6 @@ jugadores:
   - nickname: T星・CLazo
     ID: A6RASMX
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1

@@ -1,6 +1,7 @@
 tag: E
 team: SPC ENIGMA
-org: SPC E-SPORTS  
+org: SPC E-SPORTS
+activo: true 
 jugadores: 
   - nickname: SPC・Rodman
     ID: A6YE7LQ

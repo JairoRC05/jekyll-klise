@@ -1,6 +1,7 @@
 tag: RNT
 team: RNT SEVEN SHADOWS
 org: RANKED TEAM
+activo: false
 jugadores: 
   - nickname: RNT・tvVyler
     ID: M53P4YX

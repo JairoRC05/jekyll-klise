@@ -1,6 +1,7 @@
 tag: AD
 team: AD GAMING
 org: AD GAMING
+activo: true
 jugadores: 
   - nickname: AÐ・Efesto
     ID: 7QT4YAA
@@ -9,7 +10,9 @@ jugadores:
   - nickname: AÐ・MerGas
     ID: C3EG7EF
     avatar: male1
-
+    mvp: true
+    numero: 2
+    m2: 2
   - nickname: AÐ・Icer
     ID: Y39HPAF
     avatar: male1

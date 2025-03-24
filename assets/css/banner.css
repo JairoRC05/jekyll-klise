@@ -634,7 +634,7 @@
     align-items: center;
     width: 100%;
 
-    @media screen and (max-width: 576PX) {
+    @media screen and (max-width: 576px) {
       display: none;
     }
 
@@ -714,9 +714,13 @@
       justify-content: start;
       align-items: center;
 
-      .flag{
-        width: 30px;
+     
+      .localization{
+        img{
+          width: 40px;
+        }
       }
+
   
       span{
         font-size: 18px;

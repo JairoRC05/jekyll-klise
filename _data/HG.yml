@@ -1,6 +1,7 @@
 tag: SM
 team: HG SALARIO MINIMO
-org: HOUSE OF GHOST 
+org: HOUSE OF GHOST
+activo: true
 jugadores: 
   - nickname: $M • Perron
     ID: 74HHH8H
@@ -18,8 +19,9 @@ jugadores:
     ID: KE5NP22
     avatar: male1
     mvp: true
-    numero: 1
-    VS1: E
+    numero: 2
+    m1: 1
+    m2: 1
 
   - nickname: $M・Stimpy
     ID: HEQCNTP
@@ -28,6 +30,9 @@ jugadores:
   - nickname: $M・Alndingo
     ID: GCLK510
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1
  
   - nickname: P£・么quario
     ID: 8XTYF12

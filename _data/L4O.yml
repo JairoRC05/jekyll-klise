@@ -1,6 +1,7 @@
 tag: L4O
 team: LOOKING 4 ORG
 org: LOOKING 4 ORG
+activo: true
 jugadores: 
   - nickname: SoldeAbney
     ID: CLN0GPX
@@ -11,15 +12,27 @@ jugadores:
   - nickname: alizee!
     ID: 58EAE21
     avatar: male1
+    mvp: true
+    numero: 1
   - nickname: AÐ・El_Vampi
     ID: FP6REFM
     avatar: male1
   - nickname: нореи'т
     ID: LNTHXGT
     avatar: male1
+
   - nickname: AbsolDeRose
     ID: 4CNKGAX
     avatar: male1
+    mvp: true
+    numero: 2
+    m1: 1
+    m2: 1
+
   - nickname: ㅋKARMA4EVA
     ID: KE4PTR9
     avatar: male1
+    mvp: true
+    numero: 2
+    m1: 1
+    m2: 1

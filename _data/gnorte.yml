@@ -34,23 +34,23 @@ rondas:
     partidos:
     - equipo1: TUT
       equipo2: HOENN
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: COL
       equipo2: NEO
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: GX
       equipo2: L4O
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: RUBY
       equipo2: PLAT
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: MEXA
       equipo2: OVG
-      resultado: VS
+      resultado: 1-2
     
     - equipo1: TAD
       equipo2: DES

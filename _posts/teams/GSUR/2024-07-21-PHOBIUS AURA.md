@@ -6,9 +6,9 @@ date: 2020-08-29 10:29:20 +0700
 title: PHOBIUS AURA
 team: PHOBIUS AURA
 ID: POA
-puntos: 3
+puntos: 6
 rec1: sup
-rec2: ---
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---

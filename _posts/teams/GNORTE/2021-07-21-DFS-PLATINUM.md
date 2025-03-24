@@ -12,9 +12,9 @@ rango: PLATA
 pais: mx
 ligas: 
 cxf: 
-puntos: 3
+puntos: 6
 rec1: sup
-rec2: ---
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---

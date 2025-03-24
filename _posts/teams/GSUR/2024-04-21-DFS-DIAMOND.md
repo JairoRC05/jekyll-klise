@@ -18,10 +18,10 @@ background: "#F16C38"
 cover: /assets/backCard.png
 team: DFS DIAMOND
 ID: DMD
-puntos: 0
+puntos: 3
 pj: 8
 rec1: loss
-rec2: ---
+rec2: sup
 rec3: ---
 rec4: ---
 rec5: ---
@@ -36,8 +36,8 @@ pais: mx
 ligas: 
 cxf: 
 cham: 
-line: 
-order: "04"
+line: top
+order: "03"
 rec10: ---
 rec11: ---
 ---

@@ -1,6 +1,7 @@
 tag: STMN
 team: STAMINA E-SPORTS
 org: STAMINA E-SPORTS
+activo: true
 jugadores: 
   - nickname: STMN・Ranma
     ID: A38905X
@@ -9,8 +10,9 @@ jugadores:
     ID: E9ENLYE
     avatar: male1
     mvp: true
-    numero: 1
-    VS1: PEARL
+    numero: 2
+    m1: 1
+    m2: 1
 
   - nickname: STMN・Holmes
     ID: L1G1GF2
@@ -23,6 +25,7 @@ jugadores:
     ID: 6990CYH
     avatar: male1
     mvp: true
-    numero: 1
-    VS1: PEARL
+    numero: 2
+    m1: 1
+    m2: 1
  

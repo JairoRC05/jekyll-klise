@@ -1,20 +1,28 @@
 tag: GX
 team: RNT GALÁCTICOS
 org: RANKED TEAM
+activo: true
 jugadores: 
   - nickname: RNT・DrFix銀
     ID: EFE5E97
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1
   - nickname: RNT・Zulo銀
     ID: 7759CK5
     avatar: male1
   - nickname: RNT・ČryptoX
     ID: A2AG7X1
     avatar: male1
+    mvp: true
+    numero: 4
+    m1: 3
+    m2: 1
   - nickname: RNT・Shoyo銀
     ID: 2CFC54X
     avatar: male1
-  - nickname: PikitoA
+  - nickname: RNT・Pikito
     ID: 2NKE093
     avatar: male1
   - nickname: RNT・PikaBro

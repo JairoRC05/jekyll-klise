@@ -1,6 +1,7 @@
 tag: COL
 team: COLSPIRIT
 org: COLSPIRIT
+activo: true
 jugadores: 
   - nickname: COL • Roshek
     ID: FNE77F
@@ -8,15 +9,24 @@ jugadores:
   - nickname: COL•Puyol
     ID: 8EGA6GQ
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1
   - nickname: COL・Saphiro
     ID: P2M7CYG
     avatar: male1
   - nickname: COL•Toreto
     ID: QRGQ1GG
     avatar: male1
+    mvp: true
+    numero: 3
   - nickname: COL • Bogo
     ID: K7G2A63
     avatar: male1
+    mvp: true
+    numero: 1
+    m2: 1
+
   - nickname: COL・Russそ
     ID: QE1TECY
     avatar: male1
