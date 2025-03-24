@@ -13,7 +13,7 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 0
+puntos: 3
 diff: 6
 rec1: loss
 rec2: sup
