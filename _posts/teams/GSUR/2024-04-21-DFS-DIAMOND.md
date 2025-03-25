@@ -27,7 +27,7 @@ cxf:
 cham: 
 puntos: 6
 line: top
-order: "03"
+order: "02"
 rec1: loss
 rec2: sup
 rec3: sup
