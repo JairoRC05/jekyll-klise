@@ -5,19 +5,25 @@ activo: true
 jugadores: 
   - nickname: SoldeAbney
     ID: CLN0GPX
-    avatar: male1
+    avatar: female1
 
   - nickname: alizee!
     ID: 58EAE21
-    avatar: male1
+    avatar: female1
     mvp: true
     numero: 1
+    n1: 1 
+
   - nickname: AÐ・El_Vampi
     ID: FP6REFM
     avatar: male1
+
   - nickname: нореи'т
     ID: LNTHXGT
     avatar: male1
+    mvp: true
+    numero: 2
+    m3: 2
 
   - nickname: AbsolDeRose
     ID: 4CNKGAX

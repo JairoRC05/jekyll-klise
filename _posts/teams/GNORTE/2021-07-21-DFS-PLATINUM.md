@@ -15,7 +15,7 @@ cxf:
 puntos: 6
 rec1: sup
 rec2: sup
-rec3: ---
+rec3: des
 rec4: ---
 rec5: ---
 rec6: ---
@@ -24,7 +24,7 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "01"
+order: "02"
 line: cash
 secondcolor: black-dark
 org: 

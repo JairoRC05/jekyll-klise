@@ -13,11 +13,12 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 3
-diff: 6
+puntos: 6
+order: "02"
+line: top
 rec1: loss
 rec2: sup
-rec3: ---
+rec3: sup
 rec4: ---
 rec5: ---
 rec6: ---
@@ -26,9 +27,7 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "03"
 org: 
 secondcolor: 
-cham: 
-line: top
+cham:
 ---

@@ -23,15 +23,18 @@ jugadores:
     ID: MAL0Q6H
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 2
+    n1: 1
+    n3: 1
 
   - nickname: BLK-luis205
     ID: GM9M2YN
     avatar: male1
     mvp: true
-    numero: 2
+    numero: 3
     m1: 1
     m2: 1
+    m3: 1
 
   - nickname: TTVXileKira
     ID: H7YC4XP

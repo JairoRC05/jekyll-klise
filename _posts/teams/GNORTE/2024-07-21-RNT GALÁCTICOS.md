@@ -11,6 +11,8 @@ pais: mx
 ligas: 
 cxf: 
 puntos: 4
+order: "03"
+line: clock
 diff: 2
 wins: 4
 loss: 2
@@ -25,8 +27,6 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "03"
-line: 
 org: 
 secondcolor: 
 cham:

@@ -62,15 +62,15 @@ rondas:
     partidos:
     - equipo1: HOENN
       equipo2: NEO
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: TAD
       equipo2: TUT
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: COL
       equipo2: L4O
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: MEXA
       equipo2: GX
@@ -78,7 +78,7 @@ rondas:
 
     - equipo1: RUBY
       equipo2: OVG
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: PLAT
       equipo2: DES

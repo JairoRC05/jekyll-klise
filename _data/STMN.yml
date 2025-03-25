@@ -10,9 +10,10 @@ jugadores:
     ID: E9ENLYE
     avatar: male1
     mvp: true
-    numero: 2
-    m1: 1
-    m2: 1
+    numero: 4
+    n1: 1
+    n2: 1
+    n3: 2
 
   - nickname: STMN・Holmes
     ID: L1G1GF2

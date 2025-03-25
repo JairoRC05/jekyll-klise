@@ -62,7 +62,7 @@ rondas:
     partidos:
     - equipo1: STMN
       equipo2: POA
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: E
       equipo2: AD
@@ -70,15 +70,15 @@ rondas:
 
     - equipo1: PEARL
       equipo2: 7Z
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: DMD
       equipo2: EVL
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: SM
       equipo2: ZTG
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: TSR
       equipo2: DES

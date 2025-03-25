@@ -15,11 +15,11 @@ sector:
 temporada: SI
 rango: ACERO
 puntos: 1
-order: "07"
-line: down
+order: "06"
+line: top
 rec1: one
 rec2: loss
-rec3: ---
+rec3: loss
 rec4: ---
 rec5: ---
 rec6: ---

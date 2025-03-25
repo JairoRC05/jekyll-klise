@@ -7,8 +7,9 @@ jugadores:
     ID: TFRMHFM
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 2
     m1: 1
+    m3: 1
 
   - nickname: TSF・Shemi
     ID: P6GQ1E4
@@ -23,6 +24,9 @@ jugadores:
   - nickname: DarknessWill
     ID: TKXG8AN
     avatar: male1
+    mvp: true
+    numero: 1
+    m3: 1
   - nickname: DFs・Fer
     ID: EAL4PH3
     avatar: male1

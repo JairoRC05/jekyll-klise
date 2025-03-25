@@ -16,10 +16,10 @@ temporada: SI
 rango: PLATA
 puntos: 1
 order: "07"
-line: down
+line: clock
 rec1: loss
 rec2: one
-rec3: ---
+rec3: 
 rec4: ---
 rec5: ---
 rec6: ---
