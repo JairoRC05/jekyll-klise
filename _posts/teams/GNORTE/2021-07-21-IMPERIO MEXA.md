@@ -19,7 +19,7 @@ order: "06"
 line: 
 rec1: loss
 rec2: one
-rec3: 
+rec3: loss
 rec4: ---
 rec5: ---
 rec6: ---
