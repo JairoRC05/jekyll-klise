@@ -655,8 +655,8 @@ background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%)
   background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
 .MEXA{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+  background: rgb(0,104,71);
+  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
 }
 .HOENN{
   background: rgb(64,64,64);
