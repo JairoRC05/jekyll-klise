@@ -15,8 +15,8 @@ sector:
 temporada: SI
 rango: PLATA
 puntos: 1
-order: "07"
-line: clock
+order: "06"
+line: 
 rec1: loss
 rec2: one
 rec3: 
