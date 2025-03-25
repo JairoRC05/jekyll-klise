@@ -27,9 +27,9 @@ jugadores:
     numero: 1
     m2: 1
 
-  - nickname: COL・Russそ
-    ID: QE1TECY
-    avatar: male1
+  # - nickname: COL・Russそ
+  #   ID: QE1TECY
+  #   avatar: male1
 
   - nickname: SoJ・Zabu
     ID: RK72YYK
@@ -37,5 +37,9 @@ jugadores:
  
   - nickname: COL・Juaɴ0x
     ID: 1L454E7
+    avatar: male1
+
+  - nickname: GW7 • Goom
+    ID: NFN0FN
     avatar: male1
 
