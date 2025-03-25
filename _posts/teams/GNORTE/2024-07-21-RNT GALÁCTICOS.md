@@ -10,15 +10,15 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 4
-order: "03"
-line: clock
+puntos: 7
+order: "07"
+line: top
 diff: 2
 wins: 4
 loss: 2
 rec1: one
 rec2: sup
-rec3: ---
+rec3: sup
 rec4: ---
 rec5: ---
 rec6: ---
