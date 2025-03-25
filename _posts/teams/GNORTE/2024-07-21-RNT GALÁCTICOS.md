@@ -11,7 +11,7 @@ pais: mx
 ligas: 
 cxf: 
 puntos: 7
-order: "07"
+order: "01"
 line: top
 diff: 2
 wins: 4
