@@ -6,13 +6,18 @@ jugadores:
   - nickname: 7z・Tokito
     ID: 820R14M
     avatar: male1
+    mvp: true
+    numero: 2
+    m4: 2
+
+
   - nickname: 7z・Hades
     ID: C5C89CK
     avatar: male1
     mvp: true
-    numero: 4
+    numero: 2
     m3: 2
-    m4: 2
+ 
   
   - nickname: 7z・Mystic
     ID: 3XG9P67

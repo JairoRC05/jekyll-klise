@@ -63,6 +63,8 @@ layout:
 
     {% include rondas-league.html %}
 
+    {% include hora.html %}
+    
 
   <nav class="container fixed-bottom bg-cham d-block d-md-none">
   {% assign rondas = site.categories.rondas %}
@@ -70,6 +72,7 @@ layout:
     {% include tabs-rondas.html %}
   {%- endfor -%}
 
+ 
 
   <div class="d-flex justify-content-center my-1 align-items-center">
                             {% if page.pag == "LIGA" or page.pag == "MVP" or page.pag == "RONDAS" %}
