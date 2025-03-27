@@ -1,5 +1,6 @@
 ---
 layout: 
+date: 
 ---
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -72,6 +73,12 @@ layout:
     {% include list-mobile-oro.html %} 
  
     {% endif %}
+
+  <div class="d-flex align-items-center justify-content-center">
+  <p>  Ultima actualización:  {{ site.time | date: "%d %b a las %I:%M %p" }}
+  </p>
+
+  </div>
   
    <div class="d-none d-lg-block">
     <div class="teams-table" id="rondas">
