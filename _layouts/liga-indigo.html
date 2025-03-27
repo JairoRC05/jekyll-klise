@@ -73,8 +73,8 @@ date:
     {% include list-mobile-oro.html %} 
     {% endif %}
 
-    <div class="d-flex align-items-center justify-content-center mb-5">
-      <p>  ÚLTIMA ACTUALIZACIÓN  {{ site.time | date: "%d %b a las %I:%M %p" }}
+    <div class="alert-desc">
+      <p>  ÚLTIMA ACTUALIZACIÓN  {{ site.time | date: "%d %b A LAS %I:%M %p" | upcase }}
       </p>
     </div>
    
