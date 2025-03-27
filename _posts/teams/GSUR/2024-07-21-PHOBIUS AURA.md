@@ -13,13 +13,13 @@ pais: mx
 ligas: 
 cxf: "1"
 cham: 
-puntos: 6
+puntos: 7
 order: "04"
 line: down
 rec1: sup
 rec2: sup
 rec3: loss
-rec4: rea
+rec4: one
 rec5: ---
 rec6: ---
 rec7: ---

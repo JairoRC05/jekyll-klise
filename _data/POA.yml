@@ -22,20 +22,23 @@ jugadores:
   - nickname: AÐ・Pïngü
     ID: NXYEMPX
     avatar: male1
+    numero: 1
+    m1: 1
 
   - nickname: AÐ・Caleb
     ID: TFGXQQ2
     avatar: male1
     mvp: true
     numero: 1
-    VS1: EVL
+    m1: 1
 
   - nickname: AÐ・Okarun
     ID: MMFYQ33
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 3
     m2: 1
+    m4: 2
 
   - nickname: Setsuna
     ID: CARGCC8

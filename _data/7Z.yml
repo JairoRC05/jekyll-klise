@@ -10,18 +10,24 @@ jugadores:
     ID: C5C89CK
     avatar: male1
     mvp: true
-    numero: 2
+    numero: 4
     m3: 2
+    m4: 2
   
   - nickname: 7z・Mystic
     ID: 3XG9P67
     avatar: male1
+  
   - nickname: 7z・Nishino
     ID: 6MH6P69
     avatar: male1
+
   - nickname:  7z・Rhz04
     ID: MT42FC1
     avatar: male1
+    mvp: true
+    numero: 2
+    m1: 1
 
   - nickname: Raydemort
     ID: H8Y27LQ
