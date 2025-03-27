@@ -66,19 +66,20 @@ date:
     <div class="teams-table">
       <h1 class="teams-title">CAMPEONATO</h1>
     </div>
-   
+  
     {% if page.division == "PLATINO" %}
     {% include list-mobile-platino.html %} 
     {% else page.division == "ORO" %}
     {% include list-mobile-oro.html %} 
- 
     {% endif %}
 
-  <div class="d-flex align-items-center justify-content-center">
-  <p>  Ultima actualización:  {{ site.time | date: "%d %b a las %I:%M %p" }}
-  </p>
+    <div class="d-flex align-items-center justify-content-center mb-5">
+      <p>  Ultima actualización:  {{ site.time | date: "%d %b a las %I:%M %p" }}
+      </p>
+    </div>
+   
 
-  </div>
+
   
    <div class="d-none d-lg-block">
     <div class="teams-table" id="rondas">
