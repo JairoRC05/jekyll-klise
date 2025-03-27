@@ -26,7 +26,7 @@ ligas:
 cxf: 
 cham: 
 puntos: 8
-line: down
+line: fire
 order: "03"
 rec1: loss
 rec2: sup
