@@ -16,7 +16,7 @@ line:
 rec1: win
 rec2: sup
 rec3: loss
-rec4: ---
+rec4: sup
 rec5: ---
 rec6: ---
 rec7: ---
