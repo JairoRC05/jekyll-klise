@@ -13,13 +13,13 @@ region: LAN
 pais: mx
 ligas: 
 cxf: 
-puntos: 6
+puntos: 9
 order: "02"
-line: top
+line: fire
 rec1: loss
 rec2: sup
 rec3: sup
-rec4: ---
+rec4: sup
 rec5: ---
 rec6: ---
 rec7: ---

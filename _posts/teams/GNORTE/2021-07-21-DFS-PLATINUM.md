@@ -12,11 +12,11 @@ rango: PLATA
 pais: mx
 ligas: 
 cxf: 
-puntos: 6
+puntos: 7
 rec1: sup
 rec2: sup
 rec3: des
-rec4: ---
+rec4: one
 rec5: ---
 rec6: ---
 rec7: ---
@@ -24,8 +24,8 @@ rec8: ---
 rec9: ---
 rec10: ---
 rec11: ---
-order: "02"
-line: cash
+order: "04"
+line: down
 secondcolor: black-dark
 org: 
 cham:

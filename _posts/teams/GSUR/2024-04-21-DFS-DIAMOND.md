@@ -25,13 +25,13 @@ pais: mx
 ligas: 
 cxf: 
 cham: 
-puntos: 6
-line: top
-order: "02"
+puntos: 8
+line: down
+order: "03"
 rec1: loss
 rec2: sup
 rec3: sup
-rec4: ---
+rec4: win
 rec5: ---
 rec6: ---
 rec7: ---

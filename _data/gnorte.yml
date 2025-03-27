@@ -16,7 +16,7 @@ rondas:
       equipo2: RUBY
       resultado: 2-0
 
-    - equipo1: L4O
+    - equipo1: ЯK
       equipo2: OVG
       resultado: 1-2
 
@@ -41,7 +41,7 @@ rondas:
       resultado: 0-2
 
     - equipo1: GX
-      equipo2: L4O
+      equipo2: ЯK
       resultado: 2-0
 
     - equipo1: RUBY
@@ -69,7 +69,7 @@ rondas:
       resultado: 2-0
 
     - equipo1: COL
-      equipo2: L4O
+      equipo2: ЯK
       resultado: 0-2
 
     - equipo1: MEXA
@@ -90,23 +90,23 @@ rondas:
     partidos:
     - equipo1: TAD
       equipo2: HOENN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: COL
       equipo2: MEXA
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: NEO
-      equipo2: L4O
-      resultado: VS
+      equipo2: ЯK
+      resultado: 2-0
 
     - equipo1: TUT
       equipo2: PLAT
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: RUBY
       equipo2: GX
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: OVG
       equipo2: DES
@@ -117,7 +117,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: HOENN
-      equipo2: L4O
+      equipo2: ЯK
       resultado: VS
 
     - equipo1: PLAT
@@ -149,7 +149,7 @@ rondas:
       resultado: VS
 
     - equipo1: MEXA
-      equipo2: L4O
+      equipo2: ЯK
       resultado: VS
 
     - equipo1: TAD
@@ -180,7 +180,7 @@ rondas:
       equipo2: OVG
       resultado: VS
 
-    - equipo1: L4O
+    - equipo1: ЯK
       equipo2: RUBY
       resultado: VS
 
@@ -220,7 +220,7 @@ rondas:
       equipo2: TUT
       resultado: VS
     
-    - equipo1: L4O
+    - equipo1: ЯK
       equipo2: DES
 
 # RONDA 9
@@ -241,7 +241,7 @@ rondas:
       resultado: VS
 
     - equipo1: TUT
-      equipo2: L4O
+      equipo2: ЯK
       resultado: VS
 
     - equipo1: NEO
@@ -272,7 +272,7 @@ rondas:
       equipo2: PLAT
       resultado: VS
 
-    - equipo1: L4O
+    - equipo1: ЯK
       equipo2: TAD
       resultado: VS
     
@@ -300,7 +300,7 @@ rondas:
       equipo2: MEXA
       resultado: VS
 
-    - equipo1: L4O
+    - equipo1: ЯK
       equipo2: PLAT
       resultado: VS
     

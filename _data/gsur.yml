@@ -90,23 +90,23 @@ rondas:
     partidos:
     - equipo1: E
       equipo2: STMN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: PEARL
       equipo2: DMD
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: POA
       equipo2: 7Z
-      resultado: VS
+      resultado: PEN
 
     - equipo1: AD
       equipo2: TSR
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: SM
       equipo2: EVL
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: ZTG
       equipo2: DES
