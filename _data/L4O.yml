@@ -1,5 +1,5 @@
 tag: ЯK
-team: ЯK YMIR
+team: ЯAGNAROK YMIR
 org: CLUB RAGNAROK
 activo: true
 jugadores: 
@@ -11,8 +11,9 @@ jugadores:
     ID: 58EAE21
     avatar: female1
     mvp: true
-    numero: 1
+    numero: 2
     n1: 1 
+    n4: 1 
 
   - nickname: AÐ・El_Vampi
     ID: FP6REFM
@@ -37,6 +38,7 @@ jugadores:
     ID: KE4PTR9
     avatar: male1
     mvp: true
-    numero: 2
+    numero: 3
     m1: 1
     m2: 1
+    m3: 1

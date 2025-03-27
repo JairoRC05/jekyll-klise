@@ -7,8 +7,9 @@ jugadores:
     ID: EFE5E97
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 2
     m2: 1
+    m4: 1
   - nickname: RNT・Zulo銀
     ID: 7759CK5
     avatar: male1
@@ -16,15 +17,21 @@ jugadores:
     ID: A2AG7X1
     avatar: male1
     mvp: true
-    numero: 4
+    numero: 6
     m1: 3
     m2: 1
+    m3: 1
+    m4: 1
+
   - nickname: RNT・Shoyo銀
     ID: 2CFC54X
     avatar: male1
   - nickname: RNT・Pikito
     ID: 2NKE093
     avatar: male1
+    mvp: true
+    numero: 1
+    m3: 1
   - nickname: RNT・PikaBro
     ID: 668H1XE
     avatar: male1

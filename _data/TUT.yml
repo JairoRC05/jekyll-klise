@@ -9,6 +9,10 @@ jugadores:
   - nickname: troncioNara
     ID: 9RP17PY
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 2
+
   - nickname: TuT狼Berny10
     ID: RH49KXK
     avatar: male1
@@ -19,6 +23,9 @@ jugadores:
   - nickname: 7IBU
     ID: 21QE8M2
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
 
   - nickname: Orziie
     ID: FYF3MC8

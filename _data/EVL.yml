@@ -9,6 +9,10 @@ jugadores:
   - nickname: 天竜•Trenin 
     ID: NX7T7A5
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
+    
   - nickname: EVL•Bonsly 
     ID: CALY8C1
     avatar: male1
@@ -19,9 +23,10 @@ jugadores:
     ID: HT14T4F
     avatar: male1
     mvp: true
-    numero: 3
+    numero: 4
     m1: 1
     m3: 2
+    m4: 1
 
   - nickname: EVL•Doph 
     ID: LQ0R79Q

@@ -29,17 +29,19 @@ jugadores:
     numero: 1
     m2: 1
 
-
-
-
- 
   - nickname: COL・Juaɴ0x
     ID: 1L454E7
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
 
   - nickname: COL • Zabu 
     ID: 17HP6A0
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
 
   - nickname: GW7 • Goom
     ID: NFN0FN

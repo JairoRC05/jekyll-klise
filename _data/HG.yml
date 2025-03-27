@@ -6,6 +6,9 @@ jugadores:
   - nickname: $M • Perron
     ID: 74HHH8H
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
 
   - nickname: $M・Finn
     ID: GF9L4M8
@@ -20,10 +23,11 @@ jugadores:
     ID: KE5NP22
     avatar: male1
     mvp: true
-    numero: 3
+    numero: 4
     m1: 1
     m2: 1
     m3: 1
+    m4: 1
 
   - nickname: $M・Stimpy
     ID: HEQCNTP

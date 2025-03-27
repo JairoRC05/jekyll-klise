@@ -36,8 +36,9 @@ jugadores:
     ID: XYGHX92
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 3
     m3: 1
+    m4: 2
 
   - nickname: .グレムリン.
     ID: 7TN9RY2

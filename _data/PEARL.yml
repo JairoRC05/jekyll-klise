@@ -7,9 +7,10 @@ jugadores:
     ID: TFRMHFM
     avatar: male1
     mvp: true
-    numero: 2
+    numero: 3
     m1: 1
     m3: 1
+    m4: 1
 
   - nickname: TSF・Shemi
     ID: P6GQ1E4
@@ -38,8 +39,9 @@ jugadores:
     ID: G7YF5FG
     avatar: male1
     mvp: true
-    numero: 1
+    numero: 2
     m2: 1
+    m4: 1
 
   - nickname: DFs・Naraku
     ID: ML18Y6M

@@ -17,13 +17,17 @@ jugadores:
   - nickname: DFs・Яalek
     ID: PFG5F6H
     avatar: male1
+    mvp: true
+    numero: 1
+    m4: 1
   - nickname: DFs・Winter
     ID: KT2ARX2
     avatar: male1
     mvp: true
-    numero: 2
+    numero: 4
     m1: 1
     m2: 1
+    m4: 2
 
   - nickname: TÆ・Mati
     ID: TYLMP54
