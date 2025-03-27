@@ -14,7 +14,7 @@ ligas:
 cxf: "1"
 cham: 
 puntos: 7
-order: "04"
+order: "05"
 line: down
 rec1: sup
 rec2: sup

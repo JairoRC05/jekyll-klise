@@ -14,7 +14,7 @@ pais: mx
 ligas: 
 cxf: 
 puntos: 9
-order: "02"
+order: "03"
 line: fire
 rec1: loss
 rec2: sup
