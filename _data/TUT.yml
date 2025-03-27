@@ -26,4 +26,13 @@ jugadores:
     mvp: true
     numero: 2
     m2: 2
+
+  - nickname: Clix
+    ID: CY3EX1G
+    avatar: male1
+
+  - nickname: zapNara
+    ID: 9859XH8
+    avatar: male1
+
  
