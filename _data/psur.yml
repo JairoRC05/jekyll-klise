@@ -1,0 +1,201 @@
+sur:
+  - equipo: STAMINA E-SPORTS
+    ID: STMN
+    link: 
+    order: 01
+    line: cash
+    pts:
+    M1: 3
+    M2: 3
+    M3: 3
+    M4: 3
+    M5: 3
+    M6: 
+    M7:
+    M8:
+    M9:
+    M10:
+    M11: z
+
+  - equipo: 7Z E-SPORTS
+    ID: 7Z
+    link: 
+    order: 02
+    line: top
+    pts:
+    M1: 3
+    M2: 3
+    M3: 3
+    M4: 2
+    M5: 0
+    M6: 3
+    M7:
+    M8:
+    M9:
+    M10:
+    M11: 
+
+  - equipo: HG SALARIO MINIMO
+    ID: SM
+    link: 
+    order: 03
+    line: down
+    pts:
+    M1: 0
+    M2: 3
+    M3: 3
+    M4: 3
+    M5: 3
+    M6: R
+    M7: 
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: PHOBIUS AURA
+    ID: POA
+    link: 
+    order: 04
+    line: 
+    pts:
+    M1: 3
+    M2: 3
+    M3: 0
+    M4: 1
+    M5: 3
+    M6: R
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: SPC ENIGMA
+    ID: E
+    link: 
+    order: 05
+    line: 
+    pts:
+    M1: 3
+    M2: Z
+    M3: 3
+    M4: 0
+    M5: 2
+    M6: 
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: DFS DIAMOND
+    ID: DMD
+    link: 
+    order: 05
+    line:
+    pts:
+    M1: 0
+    M2: 3
+    M3: 3
+    M4: 2
+    M5: 0
+    M6: 0
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: AD GAMING
+    ID: AD
+    link: 
+    order: 05
+    line: top
+    pts:
+    M1: Z
+    M2: 0
+    M3: 0
+    M4: 2
+    M5: 3
+    M6: 3
+    M7:
+    M8: 
+    M9:
+    M10:
+    M11:
+
+  - equipo: TEAM STAR
+    ID: TSR
+    link: 
+    order: 6
+    line:
+    pts:
+    M1: 3
+    M2: 0
+    M3: Z
+    M4: 1
+    M5: 1
+    M6: 
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: DFS PEARL
+    ID: PEARL
+    link: 
+    order: 07
+    line:
+    pts:
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 1
+    M5: 0
+    M6: Z
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: EEVEEVOLUTION
+    ID: EVL
+    link: 
+    order: 08
+    line: eye
+    pts:
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: Z
+    M6: 0
+    M7:
+    M8:
+    M9: 
+    M10:
+    M11:
+
+  - equipo: MISFIT TOYS
+    ID: MT
+    link: 
+    order: 08
+    line: eye
+    pts:
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: Z
+    M5: 0
+    M6: 
+    M7:
+    M8:
+    M9:
+    M10: 
+    M11:
+
+
+

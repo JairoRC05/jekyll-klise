@@ -1,57 +1,48 @@
-
 <div class="row">
   <div class="col-lg-12">
-    {% assign NORTE = site.categories.GNORTE | sort: "order" %}
-      {%- for post in NORTE limit:1 -%}
-      {% include banner-list.html %}
+    {% assign ordenado = site.data.pnorte.norte | sort: "order"  %}
+    {% for team in ordenado | limit: 1 %}
+    {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
+    {% include banner-list.html %}
     {%- endfor -%}
-  </div>
-
-  <div class="col-lg-12">
-    <div class="row last">
-
-      {% assign NORTE = site.categories.GNORTE | sort: "order" %}
-      {%- for post in NORTE -%}
-      <div class="col-12 col-md-6 col-lg-4">
-    
-            <div class="card-round-list">
-              <div class="card-round-team">
-                <a href="{{post.url}}">
-                  <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
-                </a>
-                 
-             {% include rounds.html %}
-    
-              </div>
-                
-              <div class="card-round-pts">
-                <h6>{{post.puntos}} pts</h6>
-              </div>
-    
-              <div class="card-round-place">
-                <span>{{post.order}}</span>
-              </div>
-            
-                <div class="card-back">
-                  {% if post.ID == "7Z" %}
-                  <div class="card-color-left S7Z"> </div>  
-                  {% else %}
-                  <div class="card-color-left {{post.ID}}"> </div> 
-                  {% endif %} 
-                </div>
-    
-            </div>
-         
-      </div>
-      {%- endfor -%}
-    </div>
-
-
   </div>
 </div>
 
 
 
+<div class="row last">
+  {% assign ordenado = site.data.pnorte.norte | sort: "order"  %}
+  {% for team in ordenado  %}
+  {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
 
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card-round-list">
+      <div class="card-round-team">
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{team.ID}}.webp" alt="" class="img-fluid">
+        </a>
+        {% include rounds.html %}
+      </div>
+      <div class="card-round-pts">
+        <h6>{{ suma }} pts</h6>
+      </div>
+      <div class="card-round-place">
+       
+        <span>{{team.order}}</span>
+  
 
+      </div>  
+      <div class="card-back">
+        {% if team.ID == "7Z" %}
+        <div class="card-color-left S7Z">
+        </div>
+        {% else %}     
+        <div class="card-color-left {{team.ID}}">
+        </div>
+        {% endif %}     
 
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

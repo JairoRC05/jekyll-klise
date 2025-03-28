@@ -706,6 +706,11 @@ background: radial-gradient(circle, rgba(254,56,144,1) 0%, rgba(210,0,94,1) 100%
   background: rgb(240,241,128);
   background: radial-gradient(circle, rgba(240,241,128,1) 0%, rgba(238,240,128,1) 1%, rgba(0,170,142,1) 100%);
 }
+
+.MT{
+  background: rgb(240,241,128);
+  background: radial-gradient(circle, rgba(240,241,128,1) 0%, rgba(238,240,128,1) 1%, rgba(0,170,142,1) 100%);
+}
 .SPH{
   background: #27241d;
   border-bottom: 5px solid #eae4d8 ;
@@ -748,7 +753,7 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
   background: rgb(0,73,235);
   background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
 }
-.ЯK   {
+.ЯK{
   background: rgb(0,73,235);
   background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
 }

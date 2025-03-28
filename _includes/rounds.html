@@ -1,22 +1,22 @@
 <div class="card-round-title">
-    <h2>{{post.team | truncate: 21}} 
-      {% if post.line == "top" %}
+    <h2>{{team.equipo | truncate: 21}} 
+      {% if team.line == "top" %}
       <i class="ti ti-caret-up-filled text-success"></i>
-      {% elsif post.line == "down" %}
+      {% elsif team.line == "down" %}
       <i class="ti ti-caret-down-filled text-danger"></i>
-      {% elsif post.line == "fire" %}
+      {% elsif team.line == "fire" %}
       <i class="ti ti-flame-filled text-warning"></i>
-      {% elsif post.line == "star" %}
+      {% elsif team.line == "star" %}
       <i class="ti ti-star-filled text-warning"></i>
-      {% elsif post.line == "volt" %}
+      {% elsif team.line == "volt" %}
       <i class="ti ti-progress-bolt text-warning"></i>
-      {% elsif post.line == "cash" %}
+      {% elsif team.line == "cash" %}
       <i class="ti ti-brand-cashapp text-success"></i> 
-      {% elsif post.line == "eye" %}
+      {% elsif team.line == "eye" %}
       <i class="ti ti-eye-cancel text-dark"></i>
-      {% elsif post.line == "zzz" %}
+      {% elsif team.line == "zzz" %}
       <i class="ti ti-zzz text-info "></i>
-      {% elsif post.line == "clock" %}
+      {% elsif team.line == "clock" %}
       <i class="ti ti-clock-12 text-danger"></i>
       {% else  %}
       <i class="ti ti-equal text-info"></i>     
@@ -25,136 +25,180 @@
 
     <div class="card-round-record">
       
-      {% if post.rec1 == "win" or post.rec1 == "sup" %}
-      <span class="record {{post.rec1}}">W</span>
-      {% elsif post.rec1 == "loss" or post.rec1 == "one" %}
-      <span class="record {{post.rec1}}">L</span>
-      {% elsif post.rec1 == "rea" %}
-      <span class="record {{post.rec1}}">R</span>
-      {% elsif post.rec1 == "des" %}
-      <span class="record {{post.rec1}}">D</span>
+      {% if team.M1 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M1 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M1 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M1 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M1 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M1 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec2 == "win" or post.rec2 == "sup" %}
-      <span class="record {{post.rec2}}">W</span>
-      {% elsif post.rec2 == "loss" or post.rec2 == "one" %}
-      <span class="record {{post.rec2}}">L</span>
-      {% elsif post.rec2 == "rea" %}
-      <span class="record {{post.rec2}}">R</span>
-      {% elsif post.rec2 == "des" %}
-      <span class="record {{post.rec2}}">D</span>
+      {% if team.M2 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M2 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M2 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M2 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M2 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M2 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec3 == "win" or post.rec3 == "sup" %}
-      <span class="record {{post.rec3}}">W</span>
-      {% elsif post.rec3 == "loss" or post.rec3 == "one" %}
-      <span class="record {{post.rec3}}">L</span>
-      {% elsif post.rec3 == "rea" %}
-      <span class="record {{post.rec3}}">R</span>
-      {% elsif post.rec3 == "des" %}
-      <span class="record {{post.rec3}}">D</span>
+      {% if team.M3 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M3 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M3 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M3 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M3 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M3 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec4 == "win" or post.rec4 == "sup" %}
-      <span class="record {{post.rec4}}">W</span>
-      {% elsif post.rec4 == "loss" or post.rec4 == "one" %}
-      <span class="record {{post.rec4}}">L</span>
-      {% elsif post.rec4 == "rea" %}
-      <span class="record {{post.rec4}}">R</span>
-      {% elsif post.rec4 == "des" %}
-      <span class="record {{post.rec4}}">D</span>
+      {% if team.M4 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M4 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M4 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M4 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M4 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M4 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec5 == "win" or post.rec5 == "sup" %}
-      <span class="record {{post.rec5}}">W</span>
-      {% elsif post.rec5 == "loss" or post.rec5 == "one" %}
-      <span class="record {{post.rec5}}">L</span>
-      {% elsif post.rec5 == "rea" %}
-      <span class="record {{post.rec5}}">R</span>
-      {% elsif post.rec5 == "des" %}
-      <span class="record {{post.rec5}}">D</span>
+      {% if team.M5 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M5 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M5 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M5 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M5 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M5 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec6 == "win" or post.rec6 == "sup" %}
-      <span class="record {{post.rec6}}">W</span>
-      {% elsif post.rec6 == "loss" or post.rec6 == "one" %}
-      <span class="record {{post.rec6}}">L</span>
-      {% elsif post.rec6 == "rea" %}
-      <span class="record {{post.rec6}}">R</span>
-      {% elsif post.rec6 == "des" %}
-      <span class="record {{post.rec6}}">D</span>
+      {% if team.M6 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M6 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M6 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M6 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M6 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M6 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec7 == "win" or post.rec7 == "sup" %}
-      <span class="record {{post.rec7}}">W</span>
-      {% elsif post.rec7 == "loss" or post.rec7 == "one" %}
-      <span class="record {{post.rec7}}">L</span>
-      {% elsif post.rec7 == "rea" %}
-      <span class="record {{post.rec7}}">R</span>
-      {% elsif post.rec7 == "des" %}
-      <span class="record {{post.rec7}}">D</span>
+      {% if team.M7 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M7 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M7 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M7 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M7 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M7 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec8 == "win" or post.rec8 == "sup" %}
-      <span class="record {{post.rec8}}">W</span>
-      {% elsif post.rec8 == "loss" or post.rec8 == "one" %}
-      <span class="record {{post.rec8}}">L</span>
-      {% elsif post.rec8 == "rea" %}
-      <span class="record {{post.rec8}}">R</span>
-      {% elsif post.rec8 == "des" %}
-      <span class="record {{post.rec8}}">D</span>
+      {% if team.M8 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M8 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M8 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M8 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M8 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M8 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec9 == "win" or post.rec9 == "sup" %}
-      <span class="record {{post.rec9}}">W</span>
-      {% elsif post.rec9 == "loss" or post.rec9 == "one" %}
-      <span class="record {{post.rec9}}">L</span>
-      {% elsif post.rec9 == "rea" %}
-      <span class="record {{post.rec9}}">R</span>
-      {% elsif post.rec9 == "des" %}
-      <span class="record {{post.rec9}}">D</span>
+      {% if team.M9 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M9 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M9 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M9 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M9 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M9 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec10 == "win" or post.rec10 == "sup" %}
-      <span class="record {{post.rec10}}">W</span>
-      {% elsif post.rec10 == "loss" or post.rec10 == "one" %}
-      <span class="record {{post.rec10}}">L</span>
-      {% elsif post.rec10 == "rea" %}
-      <span class="record {{post.rec10}}">R</span>
-      {% elsif post.rec10 == "des" %}
-      <span class="record {{post.rec10}}">D</span>
+      {% if team.M10 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M10 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M10 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M10 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M10 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M10 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
-      {% if post.rec11 == "win" or post.rec11 == "sup" %}
-      <span class="record {{post.rec11}}">W</span>
-      {% elsif post.rec11 == "loss" or post.rec11 == "one" %}
-      <span class="record {{post.rec11}}">L</span>
-      {% elsif post.rec11 == "rea" %}
-      <span class="record {{post.rec11}}">R</span>
-      {% elsif post.rec11 == "des" %}
-      <span class="record {{post.rec11}}">D</span>
+      {% if team.M11 == 3 %}
+      <span class="record sup">V</span>
+      {% elsif team.M11 == 2 %}
+      <span class="record win">V</span>
+      {% elsif team.M11 == 1 %}
+      <span class="record one">V</span>
+      {% elsif team.M11 == "R" %}
+      <span class="record rea">R</span>
+      {% elsif team.M11 == "Z" %}
+      <span class="record des">Z</span>
+      {% elsif team.M11 == 0 %}
+      <span class="record loss">D</span>
       {% else %}
-            <span class="record"></span>
+      <span class="record"></span>
       {% endif %}
 
     </div>

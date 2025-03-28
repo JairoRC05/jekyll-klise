@@ -191,10 +191,10 @@
 {% endfor %}
 {% endif %}
 
-{% if page.ID == "ZTG" %}
+{% if page.ID == "MT" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "ZTG" or partido.equipo2 == "ZTG" %}
+{% if partido.equipo1 == "MT" or partido.equipo2 == "MT" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>

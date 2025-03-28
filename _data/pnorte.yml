@@ -1,0 +1,199 @@
+norte:
+  - equipo: RNT GALÁCTICOS
+    ID: GX
+    link: 
+    order: 03
+    line: down
+    pts:
+    M1: 1
+    M2: 3
+    M3: 3
+    M4: 3
+    M5: Z
+    M6: 1
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+  - equipo: HOENN PLAGA VILLANOS
+    ID: HOENN
+    link: 
+    order: 02
+    line: down
+    pts:
+    M1: 2
+    M2: 1
+    M3: 3
+    M4: 3
+    M5: 3
+    M6: R
+    M7:
+    M8:
+    M9:
+    M10:
+    M11: Z
+
+  - equipo: RNT NEO STARS
+    ID: NEO
+    link: 
+    order: 01
+    line: fire
+    pts:
+    M1: 2
+    M2: 3
+    M3: 0
+    M4: 3
+    M5: 3
+    M6: 3
+    M7: Z
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: OVERHEAT
+    ID: OVG
+    link: 
+    order: 06
+    line: down
+    pts:
+    M1: 2
+    M2: 2
+    M3: 3
+    M4: Z
+    M5: 0
+    M6: 1
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: DFS PLATINUM
+    ID: PLAT
+    link: 
+    order: 06
+    line: down
+    pts:
+    M1: 3
+    M2: 3
+    M3: Z
+    M4: 1
+    M5: 1
+    M6: R
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: TAQUITOS A LA DIABLA
+    ID: TAD
+    link: 
+    order: 04
+    line:
+    pts:
+    M1: 3
+    M2: Z
+    M3: 3
+    M4: 0
+    M5: 2
+    M6: 2
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+  - equipo: ЯAGNAROK YMIR
+    ID: ЯK
+    link: 
+    order: 08
+    line: down
+    pts:
+    M1: 1
+    M2: 0
+    M3: 3
+    M4: 0
+    M5: 0
+    M6: 1
+    M7:
+    M8: Z
+    M9:
+    M10:
+    M11:
+
+  - equipo: THE UNOWN TEAM
+    ID: TUT
+    link: 
+    order: 05
+    line:
+    pts:
+    M1: Z
+    M2: 2
+    M3: 0
+    M4: 2
+    M5: 3
+    M6: 2
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: COLSPIRIT
+    ID: COL
+    link: 
+    order: 07
+    line:
+    pts:
+    M1: 1
+    M2: 0
+    M3: 0
+    M4: 3
+    M5: 2
+    M6: Z
+    M7:
+    M8:
+    M9:
+    M10:
+    M11:
+
+  - equipo: IMPERIO MEXA OBS
+    ID: MEXA
+    link: 
+    order: 09
+    line: down
+    pts:
+    M1: 0
+    M2: 1
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 2
+    M7:
+    M8:
+    M9: Z
+    M10:
+    M11:
+
+  - equipo: DFS RUBY
+    ID: RUBY
+    link: 
+    order: 10
+    line: eye
+    pts:
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7:
+    M8:
+    M9:
+    M10: Z
+    M11:
+
+
+

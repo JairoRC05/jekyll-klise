@@ -1,28 +1,28 @@
 <div class="d-none d-md-block">
   <div class="card-round-banner">
     <div class="card-round-team">
-      <a href="{{post.url}}">
-        <img src="/assets/logos/{{post.ID}}.webp" alt="" class="img-fluid">
+      <a href="{{team.url}}">
+        <img src="/assets/logos/{{team.ID}}.webp" alt="" class="img-fluid">
       </a>
     </div>
 
     {% include rounds.html %}
 
     <div class="card-round-lider">
-      <h3>{{post.order}} • {{post.puntos}} PTS • {{post.ID}}</h3>
+      <h3>{{team.order}} • {{suma}} PTS • {{team.ID}}</h3>
     </div>
     
 
     <div class="card-back">
-        {% if post.ID == "7Z" %}
+        {% if team.ID == "7Z" %}
         <div class="card-color-left S7Z"> </div>  
         {% else %}
-        <div class="card-color-left {{post.ID}}"> </div> 
+        <div class="card-color-left {{team.ID}}"> </div> 
         {% endif %} 
     </div>
 
-    <div class="banner-left {{post.secondcolor}}"></div>
-    <div class="banner-right {{post.secondcolor}}"></div>
+    <div class="banner-left {{team.secondcolor}}"></div>
+    <div class="banner-right {{team.secondcolor}}"></div>
     
   </div>
 </div>
