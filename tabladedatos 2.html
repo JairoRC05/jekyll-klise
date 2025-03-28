@@ -1,0 +1,264 @@
+---
+layout:
+permalink: /liga-indigo-registro-2.html
+title: IDS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container teams-table">
+
+    <h1 class="teams-title text-center">LIGA INDIGO</h1>
+
+
+    <table id="myTable" class="table table-striped nowrap" style="width:100%">
+      <thead>
+        <tr>
+          <th>TAG</th>
+          <th>NICKNAME</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for equipo in site.data %}
+        {% assign tag = equipo[1].tag %}
+        {% assign team = equipo[1].team %}
+        {% assign org = equipo[1].org %}
+        {% for jugador in equipo[1].jugadores %}
+        <tr>
+          <td>{{tag}}</td>
+          <td>{{jugador.nickname}}</td>
+
+        </tr>
+        {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").DataTable({
+        caption: 'REGISTRO LIGA INDIGO',
+        layout: {
+        topStart: {
+           
+            search: {
+                placeholder: 'Buscar: ID, TAG, TEAM, ORG'
+            }
+        },
+        topEnd: {
+          pageLength: {
+                menu: [ 10, 25, 50, 100, 150 ]
+            }
+        },
+        bottomEnd: {
+            paging: {
+                numbers: 3
+            }
+        }
+    },
+        responsive: true,
+        paging: true,
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay información",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+          "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ Entradas",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "",
+          "zeroRecords": "Sin resultados encontrados",
+          "paginate": {
+            "first": "<",
+            "last": ">",
+            "next": ">>",
+            "previous": "<<"
+          }
+        }
+      });
+
+    });
+  </script>
+  <script>
+    var splide = new Splide('.splide', {
+      type: 'loop',
+      autoplay: true,
+      interval: '7000',
+      perPage: 4,
+      pagination: false,
+      arrows: false,
+      gap: '.7rem',
+      rewind: true,
+      height: '10rem',
+      breakpoints: {
+        1200: {
+          perPage: 1,
+          gap: '.7rem',
+          height: '35rem',
+        },
+        992: {
+          perPage: 1,
+          gap: '.7rem',
+          height: '25rem',
+        },
+        768: {
+          perPage: 1,
+          gap: '.7rem',
+          height: '20rem',
+        },
+        576: {
+          perPage: 1,
+          gap: '.7rem',
+          height: '12rem',
+        },
+        480: {
+          perPage: 1,
+          gap: '.1em',
+          trimSpace: false,
+          height: '10rem',
+        },
+      },
+    });
+    splide.mount();
+  </script>
+  {% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>
