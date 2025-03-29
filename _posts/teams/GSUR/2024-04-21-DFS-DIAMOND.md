@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /equipos/:title.html
+permalink: /equipos/dragonfliesgaming--diamond
 categories: TEAM GSUR
 number: 1
 liga: LIGA INDIGO

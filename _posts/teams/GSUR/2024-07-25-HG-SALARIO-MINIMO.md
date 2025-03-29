@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /equipos/:title.html
+permalink: /equipos/house-of-ghost--salario-minimo
 categories: TEAM GSUR
 team: HG SALARIO MINIMO
 maincover: /assets/logos/SM.png

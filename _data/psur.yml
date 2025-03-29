@@ -1,25 +1,26 @@
 sur:
-  - equipo: STAMINA E-SPORTS
+  - equipo: STMN
+    nombre: STAMINA E-SPORTS
     ID: STMN
-    link: 
+    link: /equipos/stamina-e-sports
     order: 01
     line: cash
-    pts:
     M1: 3
     M2: 3
     M3: 3
     M4: 3
     M5: 3
-    M6: 
+    M6: 3 
     M7:
     M8:
     M9:
     M10:
     M11: z
 
-  - equipo: 7Z E-SPORTS
+  - equipo: 7Z
+    nombre: 7Z E-SPORTS
     ID: 7Z
-    link: 
+    link: /equipos/7z-e-sports
     order: 02
     line: top
     pts:
@@ -35,9 +36,10 @@ sur:
     M10:
     M11: 
 
-  - equipo: HG SALARIO MINIMO
+  - equipo: SM
+    nombre: HG SALARIO MINIMO
     ID: SM
-    link: 
+    link: /equipos/house-of-ghost--salario-minimo
     order: 03
     line: down
     pts:
@@ -53,10 +55,11 @@ sur:
     M10:
     M11:
 
-  - equipo: PHOBIUS AURA
+  - equipo: POA
+    nombre: PHOBIUS AURA
     ID: POA
-    link: 
-    order: 04
+    link: /equipos/phobius-aura
+    order: 05
     line: 
     pts:
     M1: 3
@@ -71,30 +74,30 @@ sur:
     M10:
     M11:
 
-  - equipo: SPC ENIGMA
+  - equipo: E
+    nombre: SPC ENIGMA
     ID: E
-    link: 
-    order: 05
+    link: /equipos/spc-e-sports--enigma
+    order: 04
     line: 
-    pts:
     M1: 3
     M2: Z
     M3: 3
     M4: 0
     M5: 2
-    M6: 
+    M6: 3
     M7:
     M8:
     M9:
     M10:
     M11:
 
-  - equipo: DFS DIAMOND
+  - equipo: DMD
+    nombre: DFS DIAMOND
     ID: DMD
-    link: 
-    order: 05
+    link: /equipos/dragonfliesgaming--diamond
+    order: 06
     line:
-    pts:
     M1: 0
     M2: 3
     M3: 3
@@ -107,10 +110,11 @@ sur:
     M10:
     M11:
 
-  - equipo: AD GAMING
+  - equipo: AD
+    nombre: AD GAMING
     ID: AD
-    link: 
-    order: 05
+    link: /equipos/ad-gaming
+    order: 07
     line: top
     pts:
     M1: Z
@@ -125,10 +129,11 @@ sur:
     M10:
     M11:
 
-  - equipo: TEAM STAR
+  - equipo: TSR
+    nombre: TEAM STAR
     ID: TSR
-    link: 
-    order: 6
+    link: /equipos/villanos-e-sports--team-star
+    order: 7
     line:
     pts:
     M1: 3
@@ -136,17 +141,18 @@ sur:
     M3: Z
     M4: 1
     M5: 1
-    M6: 
+    M6: 0
     M7:
     M8:
     M9:
     M10:
     M11:
 
-  - equipo: DFS PEARL
+  - equipo: PEARL
+    nombre: DFS PEARL
     ID: PEARL
-    link: 
-    order: 07
+    link: /equipos/dragonfliesgaming--pearl
+    order: 8
     line:
     pts:
     M1: 0
@@ -161,10 +167,11 @@ sur:
     M10:
     M11:
 
-  - equipo: EEVEEVOLUTION
+  - equipo: EVL
+    nombre: EEVEEVOLUTION
     ID: EVL
-    link: 
-    order: 08
+    link: /equipos/villanos-e-sports--eeveelution
+    order: 9
     line: eye
     pts:
     M1: 0
@@ -179,10 +186,11 @@ sur:
     M10:
     M11:
 
-  - equipo: MISFIT TOYS
+  - equipo: MT
+    nombre: MISFIT TOYS
     ID: MT
-    link: 
-    order: 08
+    link: /equipos/misfit-toys
+    order: 9
     line: eye
     pts:
     M1: 0
@@ -190,7 +198,7 @@ sur:
     M3: 0
     M4: Z
     M5: 0
-    M6: 
+    M6: 0
     M7:
     M8:
     M9:
