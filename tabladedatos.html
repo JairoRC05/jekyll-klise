@@ -134,6 +134,8 @@ title: IDS | LIGA INDIGO
 
 
 
+ 
+
 
 
   <div class="container-fluid my-5">
@@ -214,49 +216,13 @@ title: IDS | LIGA INDIGO
 
     });
   </script>
-  <script>
-    var splide = new Splide('.splide', {
-      type: 'loop',
-      autoplay: true,
-      interval: '7000',
-      perPage: 4,
-      pagination: false,
-      arrows: false,
-      gap: '.7rem',
-      rewind: true,
-      height: '10rem',
-      breakpoints: {
-        1200: {
-          perPage: 1,
-          gap: '.7rem',
-          height: '35rem',
-        },
-        992: {
-          perPage: 1,
-          gap: '.7rem',
-          height: '25rem',
-        },
-        768: {
-          perPage: 1,
-          gap: '.7rem',
-          height: '20rem',
-        },
-        576: {
-          perPage: 1,
-          gap: '.7rem',
-          height: '12rem',
-        },
-        480: {
-          perPage: 1,
-          gap: '.1em',
-          trimSpace: false,
-          height: '10rem',
-        },
-      },
-    });
-    splide.mount();
-  </script>
-  {% include g-analytics.html %}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+
+{% include g-analytics.html %}
 
 
 

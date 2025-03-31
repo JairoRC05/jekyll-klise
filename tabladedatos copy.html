@@ -1,0 +1,569 @@
+---
+layout:
+permalink: /liga-indigo-registro.html
+title: IDS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container teams-table">
+
+    <h1 class="teams-title text-center">LIGA INDIGO</h1>
+
+
+    <table id="myTable" class="table table-striped nowrap" style="width:100%">
+      <thead>
+        <tr>
+          <th>TAG</th>
+          <th>NICKNAME</th>
+          <th>ID</th>
+          <th>EQUIPO</th>
+          <th>ORG/COMUNIDAD</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for equipo in site.data %}
+        {% assign tag = equipo[1].tag %}
+        {% assign team = equipo[1].team %}
+        {% assign org = equipo[1].org %}
+        {% for jugador in equipo[1].jugadores %}
+        <tr>
+          <td>{{tag}}</td>
+          <td>{{jugador.nickname}}</td>
+          <td>{{jugador.ID}}</td>
+          <td>{{team}}</td>
+          <td>{{org}}</td>
+        </tr>
+        {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="container">
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+  
+    <div id="mensaje-error" style="color: red;"></div>
+  
+    <div id="info-equipo" style="display: none;">
+      <h2>Equipo: <span id="nombre-equipo"></span></h2>
+  
+      <div id="jugadores">
+      </div>
+  
+      <button type="button" id="alta-jugador">ALTA</button> <form id="alta-jugador-form" style="display: none;">
+        <input type="text" id="nickname-alta" placeholder="Nickname">
+        <input type="text" id="id-alta" placeholder="ID">
+        <select id="avatar-alta">
+          <option value="male1">Hombre</option>
+          <option value="female1">Mujer</option>
+        </select>
+        <button type="submit">Agregar Jugador</button>
+        <button type="button" id="cancelar-alta">Cancelar</button>
+      </form>
+      <button type="button" id="enviar-correo">Enviar</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").DataTable({
+        caption: 'REGISTRO LIGA INDIGO',
+        layout: {
+        topStart: {
+           
+            search: {
+                placeholder: 'Buscar: ID, TAG, TEAM, ORG'
+            }
+        },
+        topEnd: {
+          pageLength: {
+                menu: [ 10, 25, 50, 100, 150 ]
+            }
+        },
+        bottomEnd: {
+            paging: {
+                numbers: 3
+            }
+        }
+    },
+        responsive: true,
+        paging: true,
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay información",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+          "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ Entradas",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "",
+          "zeroRecords": "Sin resultados encontrados",
+          "paginate": {
+            "first": "<",
+            "last": ">",
+            "next": ">>",
+            "previous": "<<"
+          }
+        }
+      });
+
+    });
+  </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script>
+  
+  const usuarios = {{ site.data.usuarios | jsonify }};
+  // Datos de los equipos almacenados en el cliente
+  const equipos = {
+  RK: {
+    team: "ЯAGNAROK YMIR",
+    org: "CLUB RAGNAROK",
+    activo: true,
+    tag: "RK",
+    jugadores: [
+      { nickname: "ЯK・Sol", ID: "CLN0GPX", avatar: "female1" },
+      { nickname: "ЯK・Belz돈", ID: "58EAE21", avatar: "male1", mvp: true, numero: 2, n1: 1, n4: 1 },
+      { nickname: "AÐ・El_Vampi", ID: "FP6REFM", avatar: "male1" },
+      { nickname: "нореи'т", ID: "LNTHXGT", avatar: "male1", mvp: true, numero: 2, m3: 2 },
+      { nickname: "ЯK・Sunnyあ", ID: "4CNKGAX", avatar: "male1", mvp: true, numero: 2, m1: 1, m2: 1 },
+      { nickname: "ЯK・ㅋKarma", ID: "KE4PTR9", avatar: "male1", mvp: true, numero: 3, m1: 1, m2: 1, m3: 1 },
+    ],
+  },
+  // Agrega aquí los datos de los demás equipos
+};
+
+document.getElementById('login-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  console.log('Usuario ingresado:', username);
+  console.log('Contraseña ingresada:', password);
+  console.log('Datos de usuarios:', usuarios);
+
+  if (usuarios.usuarios[username] && usuarios.usuarios[username].contrasena === password) {
+    console.log('Contraseña almacenada:', usuarios.usuarios[username].contrasena);
+
+    if (validarHorario()) {
+      document.getElementById('info-equipo').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none';
+      cargarInfoEquipo(usuarios.usuarios[username].equipo);
+    } else {
+      document.getElementById('mensaje-error').textContent = 'El registro solo está disponible de 2 PM a 5 AM (Ciudad de México).';
+    }
+  } else {
+    document.getElementById('mensaje-error').textContent = 'Usuario o contraseña incorrectos.';
+  }
+});
+
+function validarHorario() {
+  const ahora = new Date();
+  const zonaHorariaCDMX = 'America/Mexico_City';
+  const opciones = {
+    timeZone: zonaHorariaCDMX,
+    hour: 'numeric',
+    minute: 'numeric',
+  };
+  const horaCDMX = new Intl.DateTimeFormat('es-MX', opciones).format(ahora);
+  const [hora, minutos] = horaCDMX.split(':').map(Number);
+
+  return (hora >= 14 && hora <= 23) || (hora >= 0 && hora < 7);
+}
+
+function cargarInfoEquipo(nombreEquipo) {
+  const equipo = equipos[nombreEquipo];
+  document.getElementById('nombre-equipo').textContent = `${equipo.team} ● ${equipo.tag}`;
+
+  const jugadoresDiv = document.getElementById('jugadores');
+  jugadoresDiv.innerHTML = '';
+
+  // Crear filas una sola vez al cargar la página
+  for (let i = 0; i < equipo.jugadores.length; i += 6) {
+    const rowDiv = document.createElement('div');
+    rowDiv.classList.add('row');
+    jugadoresDiv.appendChild(rowDiv);
+  }
+
+  // Agregar tarjetas de jugador a las filas existentes
+  equipo.jugadores.forEach((jugador, index) => {
+    const jugadorDiv = document.createElement('div');
+    jugadorDiv.classList.add('col-md-6', 'col-lg-4', 'col-xl-2');
+
+    jugadorDiv.innerHTML = `
+      <div class="card-round-roster jugador-card" data-index="${index}">
+        <div class="card-round-team">
+          <a href="#">
+            <img src="/assets/avatars/${jugador.avatar}.webp" alt="" class="img-fluid">
+          </a>
+        </div>
+        
+        <div class="card-round-title">
+          <h2>${jugador.nickname.substring(0, 15)}</h2>
+          <span>${jugador.ID}</span>
+        </div>
+
+        <div class="card-back">
+          <div class="card-color-left ${nombreEquipo}"> </div> 
+          <div class="card-color-right bg-cham"></div>
+          <div class="card-color-logo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="">
+          </div>
+        </div>
+      `;
+
+    // Agregar tarjeta a la fila correspondiente
+    const rowIndex = Math.floor(index / 6);
+    document.getElementById('jugadores').children[rowIndex].appendChild(jugadorDiv);
+  });
+
+  // Agregar event listener a las tarjetas de jugador
+  document.querySelectorAll('.jugador-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const index = card.dataset.index;
+      mostrarOpcionesJugador(index, nombreEquipo);
+    });
+  });
+}
+
+function mostrarOpcionesJugador(index, nombreEquipo) {
+  const jugador = equipos[nombreEquipo].jugadores[index];
+  let updateDiv = document.getElementById('update');
+
+  // Crear el div update si no existe
+  if (!updateDiv) {
+    updateDiv = document.createElement('div');
+    updateDiv.id = 'update';
+    document.getElementById('jugadores').parentNode.appendChild(updateDiv);
+  }
+
+  updateDiv.innerHTML = `
+    <p>¿Qué acción deseas realizar?</p>
+    <button class="editar-jugador">Editar</button>
+    <button class="baja-jugador">Baja</button>
+  `;
+
+  updateDiv.querySelector('.editar-jugador').addEventListener('click', () => {
+    updateDiv.innerHTML = `
+      <input type="text" id="nickname-editar" value="${jugador.nickname}">
+      <input type="text" id="id-editar" value="${jugador.ID}">
+      <input type="text" value="modificación" readonly>
+      <button class="guardar-cambios">Guardar Cambios</button>
+      <button class="eliminar-accion">Eliminar Acción</button>
+    `;
+
+    updateDiv.querySelector('.guardar-cambios').addEventListener('click', () => {
+      const nuevoNickname = document.getElementById('nickname-editar').value;
+      const nuevoId = document.getElementById('id-editar').value;
+
+        // Validación de nickname
+        if (nuevoNickname.length > 12) {
+        alert('El nickname no debe tener más de 12 caracteres.');
+        return;
+      }
+
+      // Validación de ID
+      const idRegex = /^[a-zA-Z0-9]{1,7}$/;
+      if (!idRegex.test(nuevoId)) {
+        alert('El ID debe tener hasta 7 caracteres y solo puede contener letras y números.');
+        return;
+      }
+
+      // Validación de jugador único (excluyendo el jugador actual)
+      if (equipos[nombreEquipo].jugadores.some((jugadorEnEquipo, i) => (i !== index) && (jugadorEnEquipo.nickname === nuevoNickname || jugadorEnEquipo.ID === nuevoId))) {
+        alert('Ya existe un jugador con el mismo nickname o ID en el equipo.');
+        return;
+      }
+
+
+
+      equipos[nombreEquipo].jugadores[index].nickname = nuevoNickname;
+      equipos[nombreEquipo].jugadores[index].ID = nuevoId;
+
+      // Actualizar la tarjeta existente
+      const tarjetaExistente = document.querySelector(`.jugador-card[data-index="${index}"]`);
+      tarjetaExistente.querySelector('h2').textContent = nuevoNickname.substring(0, 15);
+      tarjetaExistente.querySelector('span').textContent = nuevoId;
+
+      updateDiv.innerHTML = '';
+    });
+
+    updateDiv.querySelector('.eliminar-accion').addEventListener('click', () => {
+      updateDiv.innerHTML = '';
+    });
+  });
+
+  updateDiv.querySelector('.baja-jugador').addEventListener('click', () => {
+    // Verificar si el equipo tiene más de 5 jugadores
+    if (equipos[nombreEquipo].jugadores.length > 5) {
+      equipos[nombreEquipo].jugadores.splice(index, 1);
+      cargarInfoEquipo(nombreEquipo);
+      updateDiv.innerHTML = '';
+    } else {
+      alert('El equipo debe tener al menos 5 jugadores.');
+    }
+  });
+
+  updateDiv.querySelector('.eliminar-accion').addEventListener('click', () => {
+    updateDiv.innerHTML = '';
+  });
+}
+
+document.getElementById('alta-jugador').addEventListener('click', () => {
+  document.getElementById('alta-jugador-form').style.display = 'block';
+});
+
+document.getElementById('alta-jugador-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const nuevoNickname = document.getElementById('nickname-alta').value;
+  const nuevoId = document.getElementById('id-alta').value;
+  const nuevoAvatar = document.getElementById('avatar-alta').value;
+  const nombreEquipo = document.getElementById('nombre-equipo').textContent.split(' ● ')[1];
+
+
+   // Validación de nickname
+   if (nuevoNickname.length > 12) {
+    alert('El nickname no debe tener más de 12 caracteres.');
+    return;
+  }
+
+  // Validación de ID
+  const idRegex = /^[a-zA-Z0-9]{1,7}$/;
+  if (!idRegex.test(nuevoId)) {
+    alert('El ID debe tener hasta 7 caracteres y solo puede contener letras y números.');
+    return;
+  }
+
+  // Validación de jugador único
+  if (equipos[nombreEquipo].jugadores.some(jugador => jugador.nickname === nuevoNickname || jugador.ID === nuevoId)) {
+    alert('Ya existe un jugador con el mismo nickname o ID en el equipo.');
+    return;
+  }
+
+  // Verificar si el equipo existe en el objeto equipos
+  if (equipos[nombreEquipo] && equipos[nombreEquipo].jugadores) {
+    // Verificar si el equipo tiene menos de 8 jugadores
+    if (equipos[nombreEquipo].jugadores.length < 8) {
+      // Agregar el nuevo jugador al array de jugadores del equipo actual
+      equipos[nombreEquipo].jugadores.push({
+        nickname: nuevoNickname,
+        ID: nuevoId,
+        avatar: nuevoAvatar,
+      });
+
+      // Crear la tarjeta del nuevo jugador
+      const nuevoJugadorDiv = document.createElement('div');
+      nuevoJugadorDiv.classList.add('col-md-6', 'col-lg-4', 'col-xl-2');
+
+      nuevoJugadorDiv.innerHTML = `
+        <div class="card-round-roster jugador-card" data-index="${equipos[nombreEquipo].jugadores.length - 1}">
+          <div class="card-round-team">
+            <a href="#">
+              <img src="/assets/avatars/${nuevoAvatar}.webp" alt="" class="img-fluid">
+            </a>
+          </div>
+
+          <div class="card-round-title">
+            <h2>${nuevoNickname.substring(0, 15)}</h2>
+            <span>${nuevoId}</span>
+          </div>
+
+          <div class="card-back">
+            <div class="card-color-left ${nombreEquipo}"> </div>
+            <div class="card-color-right bg-cham"></div>
+            <div class="card-color-logo">
+              <img src="/assets/logos/LIGA-INDIGO.webp" alt="">
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Crear el div "altas" si no existe
+      let altasDiv = document.getElementById('altas');
+      if (!altasDiv) {
+        altasDiv = document.createElement('div');
+        altasDiv.id = 'altas';
+        document.getElementById('info-equipo').parentNode.appendChild(altasDiv);
+      }
+
+      // Crear un nuevo row si no existe o si el último row está lleno
+      let rowDiv = altasDiv.lastElementChild;
+      if (!rowDiv || rowDiv.classList.contains('row') && rowDiv.children.length >= 6) {
+        rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
+        altasDiv.appendChild(rowDiv);
+      }
+
+      // Agregar la tarjeta al row actual
+      rowDiv.appendChild(nuevoJugadorDiv);
+
+      // Agregar event listener a la nueva tarjeta
+      nuevoJugadorDiv.querySelector('.jugador-card').addEventListener('click', () => {
+        const index = equipos[nombreEquipo].jugadores.length - 1;
+        mostrarOpcionesJugador(index, nombreEquipo);
+      });
+
+      document.getElementById('alta-jugador-form').style.display = 'none';
+    } else {
+      alert('El equipo ya tiene el número máximo de jugadores (8).');
+    }
+  } else {
+    console.error('Equipo no encontrado o no tiene jugadores:', nombreEquipo);
+    alert('Error: Equipo no encontrado o no tiene jugadores.');
+  }
+});
+
+
+
+</script>
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>
