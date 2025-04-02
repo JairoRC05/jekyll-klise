@@ -1,0 +1,434 @@
+[
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Zacian.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.41,
+    "sc-71f8e1a4-1": "52.76 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Suicune.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.33,
+    "sc-71f8e1a4-1": "52.39 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Meowscara.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.22,
+    "sc-71f8e1a4-1": "52.27 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Tsareena.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.25,
+    "sc-71f8e1a4-1": "52.12 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Absol.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.29,
+    "sc-71f8e1a4-1": "52.12 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Zeraora.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.38,
+    "sc-71f8e1a4-1": "51.78 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Hoopa.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.48,
+    "sc-71f8e1a4-1": "51.55 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Psyduck.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.04,
+    "sc-71f8e1a4-1": "51.51 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Gyarados.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.41,
+    "sc-71f8e1a4-1": "51.51 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Falinks.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.53,
+    "sc-71f8e1a4-1": "51.47 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_HoOh.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.06,
+    "sc-71f8e1a4-1": "51.46 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Cinderace.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.12,
+    "sc-71f8e1a4-1": "51.36 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Blissey.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.4,
+    "sc-71f8e1a4-1": "51.22 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Urshifu_Single.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 1.22,
+    "sc-71f8e1a4-1": "51.22 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Garchomp.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.63,
+    "sc-71f8e1a4-1": "51.22 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Talonflame.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.75,
+    "sc-71f8e1a4-1": "51.07 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_MewtwoY.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.49,
+    "sc-71f8e1a4-1": "51.04 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Tinkaton.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.7,
+    "sc-71f8e1a4-1": "50.83 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Trevenant.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.32,
+    "sc-71f8e1a4-1": "50.74 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Dodrio.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.49,
+    "sc-71f8e1a4-1": "50.72 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Gengar.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.07,
+    "sc-71f8e1a4-1": "50.7 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Greninja.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.11,
+    "sc-71f8e1a4-1": "50.6 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Eldegoss.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.16,
+    "sc-71f8e1a4-1": "50.53 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_MewtwoX.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.33,
+    "sc-71f8e1a4-1": "50.43 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Wigglytuff.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.8,
+    "sc-71f8e1a4-1": "50.4 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Tyranitar.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.33,
+    "sc-71f8e1a4-1": "50.31 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Snorlax.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.23,
+    "sc-71f8e1a4-1": "50.06 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Armarouge.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.24,
+    "sc-71f8e1a4-1": "50.05 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Pikachu.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.09,
+    "sc-71f8e1a4-1": "50.02 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Greedent.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.85,
+    "sc-71f8e1a4-1": "49.92 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Inteleon.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.67,
+    "sc-71f8e1a4-1": "49.89 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Lapras.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.21,
+    "sc-71f8e1a4-1": "49.84 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Slowbro.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.23,
+    "sc-71f8e1a4-1": "49.76 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Machamp.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.17,
+    "sc-71f8e1a4-1": "49.75 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Gardevoir.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.96,
+    "sc-71f8e1a4-1": "49.74 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Duraludon.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 1.83,
+    "sc-71f8e1a4-1": "49.64 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Metagross.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.04,
+    "sc-71f8e1a4-1": "49.54 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Leafeon.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.04,
+    "sc-71f8e1a4-1": "49.52 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Chandelure.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.65,
+    "sc-71f8e1a4-1": "49.47 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Umbreon.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.39,
+    "sc-71f8e1a4-1": "49.42 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_MrMime.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.17,
+    "sc-71f8e1a4-1": "49.29 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Blaziken.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.04,
+    "sc-71f8e1a4-1": "49.26 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Blastoise.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.26,
+    "sc-71f8e1a4-1": "49.23 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Mamoswine.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.58,
+    "sc-71f8e1a4-1": "49.04 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Clefable.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.5,
+    "sc-71f8e1a4-1": "49.02 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Decidueye.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.46,
+    "sc-71f8e1a4-1": "48.97 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Comfey.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.58,
+    "sc-71f8e1a4-1": "48.96 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Aegislash.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.72,
+    "sc-71f8e1a4-1": "48.95 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Miraidon.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.2,
+    "sc-71f8e1a4-1": "48.91 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Goodra.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.76,
+    "sc-71f8e1a4-1": "48.86 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Darkrai.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.28,
+    "sc-71f8e1a4-1": "48.78 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Lucario.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.03,
+    "sc-71f8e1a4-1": "48.52 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Delphox.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.66,
+    "sc-71f8e1a4-1": "48.52 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Ninetales.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.71,
+    "sc-71f8e1a4-1": "48.51 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Ceruledge.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.91,
+    "sc-71f8e1a4-1": "48.49 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Crustle.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.1,
+    "sc-71f8e1a4-1": "48.42 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Dragonite.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.03,
+    "sc-71f8e1a4-1": "48.36 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Scizor.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.1,
+    "sc-71f8e1a4-1": "48.3 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Azumarill.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.42,
+    "sc-71f8e1a4-1": "48.29 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Dragapult.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.12,
+    "sc-71f8e1a4-1": "48.09 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Zoroark.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.05,
+    "sc-71f8e1a4-1": "47.95 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Espeon.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.03,
+    "sc-71f8e1a4-1": "47.9 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Mimikyu.png&w=64&q=75",
+    "m_91fdda9b": "+",
+    "m_5add502a": 0.27,
+    "sc-71f8e1a4-1": "47.78 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Cramorant.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.81,
+    "sc-71f8e1a4-1": "47.55 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Charizard.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.04,
+    "sc-71f8e1a4-1": "47.54 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Glaceon.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.91,
+    "sc-71f8e1a4-1": "47.43 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Sylveon.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.16,
+    "sc-71f8e1a4-1": "47.38 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Buzzwole.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.2,
+    "sc-71f8e1a4-1": "47.28 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Mew.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.6,
+    "sc-71f8e1a4-1": "47.26 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Venusaur.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 0.17,
+    "sc-71f8e1a4-1": "46.5 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Sableye.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.46,
+    "sc-71f8e1a4-1": "46.31 %"
+  },
+  {
+    "m_4081bf90 src": "https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Square_Rapidash.png&w=64&q=75",
+    "m_91fdda9b": "-",
+    "m_5add502a": 1.7,
+    "sc-71f8e1a4-1": "43.71 %"
+  }
+]
