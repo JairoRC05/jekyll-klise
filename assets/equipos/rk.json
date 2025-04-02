@@ -1,0 +1,42 @@
+{
+    "nombre": "RAGNAROK YMIR",
+    "tag": "RK",
+    "mvps": [
+        {
+            "jugador": "ЯK・Sunnyあ",
+            "avatar": "male1",
+            "tag": "RK",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        },
+        {
+            "jugador": "ЯK・ㅋKarma",
+            "avatar": "male1",
+            "tag": "RK",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        },
+        {
+            "jugador": "ЯK・Belz돈",
+            "avatar": "male1",
+            "tag": "RK",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        }
+    ]
+}

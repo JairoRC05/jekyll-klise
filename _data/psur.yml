@@ -3,8 +3,8 @@ sur:
     nombre: STAMINA E-SPORTS
     ID: STMN
     link: /equipos/stamina-e-sports
-    order: 01
-    line: cash
+    order: 1
+    line: 1
     M1: 3
     M2: 3
     M3: 3
@@ -21,8 +21,8 @@ sur:
     nombre: 7Z E-SPORTS
     ID: 7Z
     link: /equipos/7z-e-sports
-    order: 02
-    line: top
+    order: 2
+    line: 2
     pts:
     M1: 3
     M2: 3
@@ -40,8 +40,8 @@ sur:
     nombre: HG SALARIO MINIMO
     ID: SM
     link: /equipos/house-of-ghost--salario-minimo
-    order: 03
-    line: down
+    order: 3
+    line: 3
     pts:
     M1: 0
     M2: 3
@@ -59,8 +59,8 @@ sur:
     nombre: PHOBIUS AURA
     ID: POA
     link: /equipos/phobius-aura
-    order: 05
-    line: 
+    order: 5
+    line: 5
     pts:
     M1: 3
     M2: 3
@@ -78,8 +78,8 @@ sur:
     nombre: SPC ENIGMA
     ID: E
     link: /equipos/spc-e-sports--enigma
-    order: 04
-    line: 
+    order: 4
+    line: 4
     M1: 3
     M2: Z
     M3: 3
@@ -96,8 +96,8 @@ sur:
     nombre: DFS DIAMOND
     ID: DMD
     link: /equipos/dragonfliesgaming--diamond
-    order: 06
-    line:
+    order: 6
+    line: 6
     M1: 0
     M2: 3
     M3: 3
@@ -114,8 +114,8 @@ sur:
     nombre: AD GAMING
     ID: AD
     link: /equipos/ad-gaming
-    order: 04
-    line: top
+    order: 4
+    line: 6
     pts:
     M1: Z
     M2: 0
@@ -134,7 +134,7 @@ sur:
     ID: TSR
     link: /equipos/villanos-e-sports--team-star
     order: 7
-    line:
+    line: 7
     pts:
     M1: 3
     M2: 0
@@ -153,7 +153,7 @@ sur:
     ID: PEARL
     link: /equipos/dragonfliesgaming--pearl
     order: 8
-    line:
+    line: 8
     pts:
     M1: 0
     M2: 0
@@ -172,7 +172,7 @@ sur:
     ID: EVL
     link: /equipos/villanos-e-sports--eeveelution
     order: 9
-    line: eye
+    line: 9
     pts:
     M1: 0
     M2: 0
@@ -191,7 +191,7 @@ sur:
     ID: MT
     link: /equipos/misfit-toys
     order: 9
-    line: eye
+    line: 9
     pts:
     M1: 0
     M2: 0

@@ -1,0 +1,30 @@
+{
+    "nombre": "DFS RUBY",
+    "tag": "RUBY",
+    "mvps": [
+        {
+            "jugador": "ItsTheBaez",
+            "avatar": "male1",
+            "tag": "RUBY",
+            "partidos": [ 
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        },
+        {
+            "jugador": "DFs神Marツ",
+            "avatar": "female1",
+            "tag": "RUBY",
+            "partidos": [ 
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        }
+    ]
+}

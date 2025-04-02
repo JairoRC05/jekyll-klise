@@ -1,0 +1,80 @@
+{
+  "nombre": "THE UNOWN TEAM",
+  "tag": "TUT",
+  "mvps": [
+    {
+      "jugador": "troncioNara",
+      "avatar": "male1",
+      "tag": "TUT",
+      "partidos": [
+        {
+          "ronda": 4,
+          "acumulado": 1,
+          "contra": "PLAT"
+        },
+        {
+          "ronda": 7,
+          "acumulado": 1,
+          "contra": "COL"
+        }
+      ]
+    },
+    {
+      "jugador": "TuT狼Berny10",
+      "avatar": "male1",
+      "tag": "TUT",
+      "partidos": [
+      {
+        "ronda": 1,
+        "acumulado": 1,
+        "contra": "HOENN"
+      }
+    ]
+    }
+    ,
+    {
+      "jugador": "7IBU",
+      "avatar": "male1",
+      "tag": "TUT",
+      "partidos": [
+        {
+          "ronda": 4,
+          "acumulado": 1,
+          "contra": "PLAT"
+        },
+        {
+          "ronda": 6,
+          "acumulado": 1,
+          "contra": "GX"
+        }
+      ]
+    },
+    {
+      "jugador": "Orziie",
+      "avatar": "male1",
+      "tag": "TUT",
+      "partidos": [
+        {
+          "ronda": 1,
+          "acumulado": 2,
+          "contra": "HOENN"
+        },
+        {
+          "ronda": 5,
+          "acumulado": 2,
+          "contra": "OVG"
+        },
+        {
+          "ronda": 6,
+          "acumulado": 2,
+          "contra": "GX"
+        },
+        {
+          "ronda": 7,
+          "acumulado": 1,
+          "contra": "COL"
+        }
+      ]
+    }
+  ]
+}

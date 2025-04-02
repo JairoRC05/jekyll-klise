@@ -112,10 +112,28 @@ layout:
  </div>
 
 
-  {% include mvps-platino.html %}
+  <!-- {% include mvps-platino.html %} -->
 
 
+  <div class="container">
+    <div class="row"></div>
+</div>
 
+<div class="modal fade" id="jugadorModal" tabindex="-1" aria-labelledby="jugadorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header  bg-cham">
+                <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+                <h5 class="modal-title ms-2" id="jugadorModalLabel">DETALLES DEL JUGADOR</h5>
+          
+            </div>
+            <div class="modal-body">
+                <div id="jugadorModalContent">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <div class="container teams-table d-none d-md-block"  id="home">
       <h1 class="teams-title m-10">PATROCINADORES</h1>
@@ -144,15 +162,140 @@ layout:
 {% include navbar-league.html %}
 
 
+</body>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script>
+  const equipos = [
+    'hoenn',
+    'tut',
+    'tad',
+    'gx',
+    'ovg',
+    'rk',
+    'mexa',
+    'ruby',
+];
+
+const mvpContainer = document.querySelector('.row');
+const allEquiposData = [];
+
+async function cargarEquipo(nombreArchivo) {
+    const response = await fetch(`/assets/equipos/${nombreArchivo}.json`);
+    const data = await response.json();
+    allEquiposData.push(data);
+}
+
+async function cargarTodosLosEquipos() {
+    await Promise.all(equipos.map(cargarEquipo));
+    mostrarMVPsOrdenados();
+}
+
+function mostrarMVPsOrdenados() {
+  let todosLosJugadores = [];
+
+// Recopilar todos los jugadores en un solo array
+allEquiposData.forEach(equipo => {
+    equipo.mvps.forEach(jugador => {
+        jugador.equipoNombre = equipo.nombre; // Agregar el nombre del equipo al objeto jugador
+        todosLosJugadores.push(jugador);
+    });
+});
+
+// Calcular MVPs totales y ordenar jugadores
+const jugadoresOrdenados = todosLosJugadores.map(jugador => {
+    const totalMvps = Array.isArray(jugador.partidos) ? jugador.partidos.reduce((total, partido) => total + partido.acumulado, 0) : 0;
+    return { ...jugador, totalMvps };
+}).sort((a, b) => b.totalMvps - a.totalMvps);
+
+// Mostrar jugadores ordenados
+jugadoresOrdenados.forEach(jugador => {
+    const jugadorNombre = jugador.jugador;
+    const avatarFileName = jugador.avatar;
+    const equipoNombre = jugador.equipoNombre; // Usar el nombre del equipo agregado anteriormente
+    const equipoTag = allEquiposData.find(equipo => equipo.nombre === equipoNombre).tag; // Obtener el tag del equipo
+
+    const equipoDiv = document.createElement('div');
+    equipoDiv.classList.add('col-12', 'col-sm-12', 'col-md-6', 'col-lg-4', 'col-xl-4', 'jugador-card');
+    equipoDiv.dataset.jugador = JSON.stringify(jugador);
+    equipoDiv.dataset.equipoNombre = equipoNombre;
+
+    equipoDiv.innerHTML = `
+        <div class="card-round-mvp mvpLiga">
+            <div class="card-mvp">
+                <a href="#">
+                    <img src="/assets/avatars/${avatarFileName}.webp" alt="${jugadorNombre} Avatar">
+                </a>
+                <div class="card-mvp-title">
+                    <p class="mvp-title">${jugadorNombre}</p>
+                    <p>${equipoNombre}</p>
+                </div>
+            </div>
+            <div class="card-mvp-number">
+                <p class="mvp-number">${jugador.totalMvps}</p>
+                <p>MVPS</p>
+            </div>
+            <div class="card-back">
+                <div class="card-color-left ${equipoTag}"></div>
+                <div class="card-mvp-team">
+                    <img src="/assets/logos/${equipoTag}.webp" alt="MVPS Team: ${equipoNombre}">
+                </div>
+            </div>
+        </div>
+    `;
+
+    mvpContainer.appendChild(equipoDiv);
+});
+
+    document.querySelectorAll('.jugador-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const jugadorData = JSON.parse(card.dataset.jugador);
+            const equipoNombre = card.dataset.equipoNombre; // Obtener equipoNombre del dataset
+            mostrarModalJugador(jugadorData, equipoNombre);
+        });
+    });
+}
+
+function mostrarModalJugador(jugador, equipoNombre) {
+    const modalContent = document.getElementById('jugadorModalContent');
+    modalContent.innerHTML = `
+        <div class="modal-jugador">
+            <div class="modal-jugador-header ${jugador.tag}">
+                <img src="/assets/avatars/${jugador.avatar}.webp" alt="${jugador.jugador} Avatar">
+                <div class="modal-jugador-info">
+                    <h2 class="modal-jugador-nombre">${jugador.jugador}</h2>
+                    <p class="modal-jugador-equipo">${equipoNombre}</p>
+                </div>
+            </div>
+            <div class="modal-jugador-partidos">
+                ${jugador.partidos.map(partido => `
+                    <div class="modal-jugador-partido">
+                        <div class="modal-jugador-partido-logo">
+                            <img src="/assets/logos/${partido.contra}.webp" alt="${partido.contra} Logo">
+                        </div>
+                        <div class="modal-jugador-partido-info">
+                            <p class="modal-jugador-partido-equipo">${partido.contra}</p> 
+                            <p class="modal-jugador-partido-ronda">Ronda ${partido.ronda}</p>
+                        </div>
+                        <p class="modal-jugador-partido-mvps">${partido.acumulado} MVPs</p>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    const jugadorModal = new bootstrap.Modal(document.getElementById('jugadorModal'));
+    jugadorModal.show();
+}
+
+cargarTodosLosEquipos();
+</script>
 
 {% include g-analytics.html %}
-</body>
 
 </html>

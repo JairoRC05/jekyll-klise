@@ -1,0 +1,79 @@
+{
+  "nombre": "TAQUITOS A LA DIABLA",
+  "tag": "TAD",
+  "mvps": [
+    {
+      "jugador": "タTaquito",
+      "avatar": "female1",
+      "tag": "TAD",
+      "partidos": [
+        {
+          "ronda": 4,
+          "acumulado": 1,
+          "contra": "HOENN"
+        },
+        {
+          "ronda": 7,
+          "acumulado": 1,
+          "contra": "GX"
+        },
+        {
+          "ronda": 8,
+          "acumulado": 1,
+          "contra": "COL"
+        }
+      ]
+    },
+    {
+      "jugador": "ムlixendカモ",
+      "avatar": "male1",
+      "tag": "TAD",
+      "partidos": [
+        {
+          "ronda": 7,
+          "acumulado": 1,
+          "contra": "GX"
+        }
+      ]
+    },
+    {
+      "jugador": "AllenDartツ",
+      "avatar": "male1",
+      "tag": "TAD",
+      "partidos": [
+        {
+          "ronda": 1,
+          "acumulado": 2,
+          "contra": "RUBY"
+        },
+        {
+          "ronda": 4,
+          "acumulado": 1,
+          "contra": "HOENN"
+        },
+        {
+          "ronda": 5,
+          "acumulado": 2,
+          "contra": "PLAT"
+        },
+        {
+          "ronda": 8,
+          "acumulado": 1,
+          "contra": "COL"
+        }
+      ]
+    },
+    {
+      "jugador": "Wanaba",
+      "avatar": "female1",
+      "tag": "TAD",
+      "partidos": [
+        {
+          "ronda": 6,
+          "acumulado": 3,
+          "contra": "OVG"
+        }
+      ]
+    }
+  ]
+}

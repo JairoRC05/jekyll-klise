@@ -1,0 +1,101 @@
+{
+    "nombre": "OVERHEAT",
+    "tag": "OVG",
+    "mvps": [
+        {
+            "jugador": "DemoliZM竜",
+            "avatar": "male1",
+            "tag": "OVG",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 2,
+                    "contra": "RK"
+                },
+                {
+                    "ronda": 2,
+                    "acumulado": 3,
+                    "contra": "MEXA"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "RUBY"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TUT"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "TAD"
+                }
+            ]
+        },
+        {
+            "jugador": "亗PѕуDÜÇҜ亗",
+            "avatar": "male1",
+            "tag": "OVG",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "RK"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "RUBY"
+                }
+            ]
+        },
+        {
+            "jugador": "ZTG・Broken",
+            "avatar": "male1",
+            "tag": "OVG",
+            "partidos": [ 
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TUT"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "TAD"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 1,
+                    "contra": "HOENN"
+                }
+            ]
+        },
+        {
+            "jugador": "i'm.McLovin",
+            "avatar": "male1",
+            "tag": "OVG",
+            "partidos": [ 
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "TAD"
+                }
+            ]
+        },
+        {
+            "jugador": "I'MCARROT",
+            "avatar": "male1",
+            "tag": "OVG",
+            "partidos": [ 
+                {
+                    "ronda": 8,
+                    "acumulado": 1,
+                    "contra": "HOENN"
+                }
+            ]
+        }
+    ]
+}

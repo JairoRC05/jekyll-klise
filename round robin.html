@@ -1,0 +1,238 @@
+---
+layout:
+permalink: /liga-indigo-calendario.html
+title: IDS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h1>Calendario Round Robin</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    </ul>
+    <div class="tab-content" id="myTabContent">
+    </div>
+</div>
+
+
+ 
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+      let equipos = ["Equipo A", "Equipo B", "Equipo C", "Equipo D"]; // Lista de equipos
+      let calendario = generarRoundRobin(equipos); // Generar el calendario
+      mostrarCalendario(calendario); // Mostrar el calendario
+  });
+
+  function generarRoundRobin(equipos) {
+      let n = equipos.length;
+      if (n % 2 === 1) {
+          equipos.push("Descanso");
+          n++;
+      }
+
+      let rondas = [];
+      for (let i = 0; i < n - 1; i++) {
+          let ronda = [];
+          for (let j = 0; j < n / 2; j++) {
+              ronda.push({
+                  equipo1: equipos[j],
+                  equipo2: equipos[n - 1 - j],
+                  resultado1: null,
+                  resultado2: null
+              });
+          }
+          rondas.push(ronda);
+          equipos.splice(1, 0, equipos.pop());
+      }
+      return rondas;
+  }
+
+  function mostrarCalendario(calendario) {
+      for (let i = 0; i < calendario.length; i++) {
+          let ronda = calendario[i];
+          let tabId = `ronda-${i + 1}`;
+          let tabTitle = `Ronda ${i + 1}`;
+
+          $("#myTab").append(`
+              <li class="nav-item">
+                  <a class="nav-link ${i === 0 ? 'active' : ''}" id="${tabId}-tab" data-toggle="tab" href="#${tabId}" role="tab" aria-controls="${tabId}" aria-selected="${i === 0}">
+                      ${tabTitle}
+                  </a>
+              </li>
+          `);
+
+          let partidos = ronda.map(partido => `
+              <div class="partido">
+                  <p>${partido.equipo1} vs ${partido.equipo2}</p>
+                  <input type="number" class="resultado" data-ronda="${i}" data-partido="${ronda.indexOf(partido)}" data-equipo="1" placeholder="Resultado ${partido.equipo1}" value="${partido.resultado1 !== null ? partido.resultado1 : ''}">
+                  <input type="number" class="resultado" data-ronda="${i}" data-partido="${ronda.indexOf(partido)}" data-equipo="2" placeholder="Resultado ${partido.equipo2}" value="${partido.resultado2 !== null ? partido.resultado2 : ''}">
+              </div>
+          `).join("");
+
+          $("#myTabContent").append(`
+              <div class="tab-pane fade ${i === 0 ? 'show active' : ''}" id="${tabId}" role="tabpanel" aria-labelledby="${tabId}-tab">
+                  ${partidos}
+              </div>
+          `);
+      }
+
+      // Agregar un evento para guardar los resultados cuando cambian los campos de entrada
+      $(".resultado").on("change", function() {
+          let ronda = parseInt($(this).data("ronda"));
+          let partido = parseInt($(this).data("partido"));
+          let equipo = parseInt($(this).data("equipo"));
+          let resultado = parseInt($(this).val());
+
+          if (equipo === 1) {
+              calendario[ronda][partido].resultado1 = resultado;
+          } else {
+              calendario[ronda][partido].resultado2 = resultado;
+          }
+
+          // Aquí puedes guardar el calendario actualizado en algún lugar (por ejemplo, en el almacenamiento local o en un servidor)
+          console.log("Calendario actualizado:", calendario);
+      });
+  }
+</script>
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

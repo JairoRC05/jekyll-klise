@@ -3,16 +3,26 @@ norte:
     nombre: RNT GALÁCTICOS
     ID: GX
     link: /equipos/ranked-team--galacticos
-    order: 03
-    line: down
-    pts:
+    order: 2
+    line: 3
+    P1: 3
+    P2: 3
+    P3: 1 
+    P4: 1 
+    P5: 3
+    P6: 3  
+    P7: 2
+    P8: 0
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 1
     M2: 3
     M3: 3
     M4: 3
     M5: Z
     M6: 1
-    M7:
+    M7: 3
     M8:
     M9:
     M10:
@@ -22,16 +32,26 @@ norte:
     nombre: HOENN PLAGA VILLANOS
     ID: HOENN
     link: /equipos/hoenn
-    order: 02
-    line: down
-    pts:
+    order: 1
+    line: 2
+    P1: 2
+    P2: 5
+    P3: 2 
+    P4: 2 
+    P5: 1
+    P6: 2  
+    P7: 1
+    P8: 0
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 2
     M2: 1
     M3: 3
     M4: 3
     M5: 3
     M6: R
-    M7:
+    M7: 3
     M8:
     M9:
     M10:
@@ -41,9 +61,20 @@ norte:
     nombre: RNT NEO STARS
     ID: NEO
     link: /equipos/ranked-team--neo-stars
-    order: 01
-    line: fire
+    order: 2
+    line: 1
     pts:
+    P1: 2
+    P2: 2
+    P3: 3 
+    P4: 3 
+    P5: 2
+    P6: 1  
+    P7: 2
+    P8: 0
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 2
     M2: 3
     M3: 0
@@ -60,16 +91,26 @@ norte:
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
-    order: 06
-    line: down
-    pts:
+    order: 5
+    line: 6
+    P1: 2
+    P2: 3
+    P3: 1 
+    P4: 4 
+    P5: 5
+    P6: 6  
+    P7: 5
+    P8: 0
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 2
     M2: 2
     M3: 3
     M4: Z
     M5: 0
     M6: 1
-    M7:
+    M7: R
     M8:
     M9:
     M10:
@@ -79,15 +120,26 @@ norte:
     nombre: DFS PLATINUM
     ID: PLAT
     link: /equipos/dragonfliesgaming--platinum
-    order: 06
-    line: down
+    order: 5
+    line: 6
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 3
     M2: 3
     M3: Z
     M4: 1
     M5: 1
     M6: R
-    M7:
+    M7: R
     M8:
     M9:
     M10:
@@ -99,14 +151,24 @@ norte:
     link: /equipos/taquitos-a-la-diabla
     order: 04
     line:
-    pts:
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 3
     M2: Z
     M3: 3
     M4: 0
     M5: 2
     M6: 2
-    M7:
+    M7: 0
     M8:
     M9:
     M10:
@@ -116,16 +178,27 @@ norte:
     nombre: ЯAGNAROK YMIR
     ID: ЯK
     link: /teams/club-ragnarok--ymir
-    order: 08
-    line: down
-    pts:
+    order: 5
+    line: 8
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
+
     M1: 1
     M2: 0
     M3: 3
     M4: 0
     M5: 0
     M6: 1
-    M7:
+    M7: 3
     M8: Z
     M9:
     M10:
@@ -135,16 +208,26 @@ norte:
     nombre: THE UNOWN TEAM
     ID: TUT
     link: /equipos/theunownteam
-    order: 05
-    line:
-    pts:
+    order: 3
+    line: 5
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
     M1: Z
     M2: 2
     M3: 0
     M4: 2
     M5: 3
     M6: 2
-    M7:
+    M7: 3
     M8:
     M9:
     M10:
@@ -154,16 +237,26 @@ norte:
     nombre: COLSPIRIT
     ID: COL
     link: /equipos/colspirit
-    order: 07
-    line:
-    pts:
+    order: 6
+    line: 7
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 1
     M2: 0
     M3: 0
     M4: 3
     M5: 3
     M6: Z
-    M7:
+    M7: 0
     M8:
     M9:
     M10:
@@ -173,16 +266,26 @@ norte:
     nombre: IMPERIO MEXA OBS
     ID: MEXA
     link: /imperio-mexa/--obsidiana
-    order: 09
-    line: down
-    pts:
+    order: 7
+    line: 9
+    P1: 1
+    P2: 1
+    P3: 2 
+    P4: 4 
+    P5: 4
+    P6: 6  
+    P7: 5
+    P8: 0 
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 0
     M2: 1
     M3: 0
     M4: 0
     M5: 0
     M6: 2
-    M7:
+    M7: 0
     M8:
     M9: Z
     M10:
@@ -192,16 +295,26 @@ norte:
     nombre: DFS RUBY
     ID: RUBY
     link: /equipos/dragonfliesgaming--ruby
-    order: 10
-    line: eye
-    pts:
+    order: 8
+    line: 10
+    P1: 5
+    P2: 8
+    P3: 7 
+    P4: 8 
+    P5: 9
+    P6: 10  
+    P7: 8
+    P8: 0
+    P9: 0
+    P10: 0
+    P11: 0
     M1: 0
     M2: 0
     M3: 0
     M4: 0
     M5: 0
     M6: 0
-    M7:
+    M7: 0
     M8:
     M9:
     M10: Z

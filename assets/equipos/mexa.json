@@ -1,0 +1,30 @@
+{
+    "nombre": "IMPERIO MEXA",
+    "tag": "MEXA",
+    "mvps": [
+        {
+            "jugador": "MeXa・Quique",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 2,
+                    "acumulado": 2,
+                    "contra": "OVG"
+                }
+            ]
+        },
+        {
+            "jugador": "MeXa・Tory",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "OVG"
+                }
+            ]
+        }
+    ]
+}

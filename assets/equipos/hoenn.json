@@ -1,0 +1,119 @@
+{
+  "nombre": "PLAGA VILLANOS",
+  "tag": "HOENN",
+  "mvps": [
+      {
+          "jugador": "BLK-luis205",
+          "avatar": "male1",
+          "tag": "HOENN",
+          "partidos": [
+              {
+                  "ronda": 1,
+                  "acumulado": 1,
+                  "contra": "COL"
+              },
+              {
+                  "ronda": 2,
+                  "acumulado": 2,
+                  "contra": "TUT"
+              },
+              {
+                  "ronda": 3,
+                  "acumulado": 1,
+                  "contra": "NEO"
+              },
+              {
+                  "ronda": 4,
+                  "acumulado": 1,
+                  "contra": "TAD"
+              },
+              {
+                  "ronda": 6,
+                  "acumulado": 1,
+                  "contra": "PLAT"
+              },
+              {
+                  "ronda": 7,
+                  "acumulado": 1,
+                  "contra": "MEXA"
+              }
+          ]
+      },
+      {
+          "jugador": "Texaspurguis",
+          "avatar": "male1",
+          "tag": "HOENN",
+          "partidos": [ 
+              {
+                  "ronda": 1,
+                  "acumulado": 1,
+                  "contra": "COL"
+              }
+          ]
+      },
+      {
+          "jugador": "DønLux",
+          "avatar": "male1",
+          "tag": "HOENN",
+          "partidos": [
+              {
+                  "ronda": 1,
+                  "acumulado": 1,
+                  "contra": "COL"
+              },
+              {
+                  "ronda": 3,
+                  "acumulado": 1,
+                  "contra": "NEO"
+              },
+              {
+                  "ronda": 5,
+                  "acumulado": 1,
+                  "contra": "RK"
+              },
+              {
+                  "ronda": 7,
+                  "acumulado": 1,
+                  "contra": "MEXA"
+              },
+              {
+                  "ronda": 8,
+                  "acumulado": 1,
+                  "contra": "OVG"
+              }
+          ]
+      },
+      {
+          "jugador": "7Froy",
+          "avatar": "male1",
+          "tag": "HOENN",
+          "partidos": [
+              {
+                  "ronda": 1,
+                  "acumulado": 1,
+                  "contra": "TUT"
+              },
+              {
+                  "ronda": 4,
+                  "acumulado": 1,
+                  "contra": "TAD"
+              },
+              {
+                  "ronda": 5,
+                  "acumulado": 1,
+                  "contra": "RK"
+              },
+              {
+                  "ronda": 6,
+                  "acumulado": 1,
+                  "contra": "PLAT"
+              },
+              {
+                  "ronda": 8,
+                  "acumulado": 1,
+                  "contra": "OVG"
+              }
+          ]
+      }
+  ]
+}
