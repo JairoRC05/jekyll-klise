@@ -202,23 +202,23 @@ rondas:
     partidos:
     - equipo1: MT
       equipo2: STMN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: DMD
       equipo2: SM
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: TSR
       equipo2: EVL
-      resultado: VS
+      resultado: PEN
 
     - equipo1: E
       equipo2: PEARL
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: POA
       equipo2: AD
-      resultado: VS
+      resultado: 0-2
     
     - equipo1: 7Z
       equipo2: DES
@@ -230,23 +230,23 @@ rondas:
     partidos:
     - equipo1: STMN
       equipo2: SM
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: MT
       equipo2: EVL
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: PEARL
       equipo2: TSR
-      resultado: VS
+      resultado: PEN
 
     - equipo1: AD
       equipo2: 7Z
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: POA
       equipo2: E
-      resultado: VS
+      resultado: 0-2
     
     - equipo1: DMD
       equipo2: DES

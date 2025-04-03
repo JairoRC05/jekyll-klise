@@ -3,7 +3,7 @@ norte:
     nombre: RNT GALÁCTICOS
     ID: GX
     link: /equipos/ranked-team--galacticos
-    order: 2
+    order: 3
     line: 3
     P1: 3
     P2: 3
@@ -23,8 +23,8 @@ norte:
     M5: Z
     M6: 1
     M7: 3
-    M8:
-    M9:
+    M8: 0
+    M9: 3
     M10:
     M11:
 
@@ -33,7 +33,7 @@ norte:
     ID: HOENN
     link: /equipos/hoenn
     order: 1
-    line: 2
+    line: 1
     P1: 2
     P2: 5
     P3: 2 
@@ -52,8 +52,8 @@ norte:
     M5: 3
     M6: R
     M7: 3
-    M8:
-    M9:
+    M8: 3
+    M9: 3
     M10:
     M11: Z
 
@@ -62,7 +62,7 @@ norte:
     ID: NEO
     link: /equipos/ranked-team--neo-stars
     order: 2
-    line: 1
+    line: 2
     pts:
     P1: 2
     P2: 2
@@ -82,8 +82,8 @@ norte:
     M5: 3
     M6: 3
     M7: Z
-    M8:
-    M9:
+    M8: 2 
+    M9: 2
     M10:
     M11:
 
@@ -91,7 +91,7 @@ norte:
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
-    order: 5
+    order: 8
     line: 6
     P1: 2
     P2: 3
@@ -111,17 +111,17 @@ norte:
     M5: 0
     M6: 1
     M7: R
-    M8:
-    M9:
+    M8: 0
+    M9: 0
     M10:
-    M11:
+    M11: 
 
   - equipo: PLAT
     nombre: DFS PLATINUM
     ID: PLAT
     link: /equipos/dragonfliesgaming--platinum
-    order: 5
-    line: 6
+    order: 3
+    line: 3
     P1: 1
     P2: 1
     P3: 2 
@@ -138,10 +138,10 @@ norte:
     M3: Z
     M4: 1
     M5: 1
-    M6: R
-    M7: R
-    M8:
-    M9:
+    M6: 0
+    M7: 3
+    M8: 3
+    M9: 3
     M10:
     M11:
 
@@ -149,8 +149,8 @@ norte:
     nombre: TAQUITOS A LA DIABLA
     ID: TAD
     link: /equipos/taquitos-a-la-diabla
-    order: 04
-    line:
+    order: 5
+    line: 5
     P1: 1
     P2: 1
     P3: 2 
@@ -169,8 +169,8 @@ norte:
     M5: 2
     M6: 2
     M7: 0
-    M8:
-    M9:
+    M8: 0
+    M9: 1
     M10:
     M11:
 
@@ -178,8 +178,8 @@ norte:
     nombre: ЯAGNAROK YMIR
     ID: ЯK
     link: /teams/club-ragnarok--ymir
-    order: 5
-    line: 8
+    order: 7
+    line: 6
     P1: 1
     P2: 1
     P3: 2 
@@ -200,7 +200,7 @@ norte:
     M6: 1
     M7: 3
     M8: Z
-    M9:
+    M9: 1
     M10:
     M11:
 
@@ -208,8 +208,8 @@ norte:
     nombre: THE UNOWN TEAM
     ID: TUT
     link: /equipos/theunownteam
-    order: 3
-    line: 5
+    order: 4
+    line: 4
     P1: 1
     P2: 1
     P3: 2 
@@ -228,8 +228,8 @@ norte:
     M5: 3
     M6: 2
     M7: 3
-    M8:
-    M9:
+    M8: 1
+    M9: 2
     M10:
     M11:
 
@@ -238,7 +238,7 @@ norte:
     ID: COL
     link: /equipos/colspirit
     order: 6
-    line: 7
+    line: 5
     P1: 1
     P2: 1
     P3: 2 
@@ -257,8 +257,8 @@ norte:
     M5: 3
     M6: Z
     M7: 0
-    M8:
-    M9:
+    M8: 3
+    M9: 0
     M10:
     M11:
 
@@ -266,8 +266,8 @@ norte:
     nombre: IMPERIO MEXA OBS
     ID: MEXA
     link: /imperio-mexa/--obsidiana
-    order: 7
-    line: 9
+    order: 9
+    line: 7
     P1: 1
     P2: 1
     P3: 2 
@@ -286,7 +286,7 @@ norte:
     M5: 0
     M6: 2
     M7: 0
-    M8:
+    M8: 3
     M9: Z
     M10:
     M11:
@@ -295,8 +295,8 @@ norte:
     nombre: DFS RUBY
     ID: RUBY
     link: /equipos/dragonfliesgaming--ruby
-    order: 8
-    line: 10
+    order: 10
+    line: 8
     P1: 5
     P2: 8
     P3: 7 
@@ -315,8 +315,8 @@ norte:
     M5: 0
     M6: 0
     M7: 0
-    M8:
-    M9:
+    M8: 0
+    M9: 0
     M10: Z
     M11:
 

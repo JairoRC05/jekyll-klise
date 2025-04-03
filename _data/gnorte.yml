@@ -202,23 +202,23 @@ rondas:
     partidos:
     - equipo1: OVG
       equipo2: HOENN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: MEXA
       equipo2: RUBY
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: PLAT
       equipo2: GX
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: TAD
       equipo2: COL
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: NEO
       equipo2: TUT
-      resultado: VS
+      resultado: 2-1
     
     - equipo1: ЯK
       equipo2: DES
@@ -230,23 +230,23 @@ rondas:
     partidos:
     - equipo1: HOENN
       equipo2: RUBY
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: OVG
       equipo2: GX
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: COL
       equipo2: PLAT
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: TUT
       equipo2: ЯK
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: NEO
       equipo2: TAD
-      resultado: VS
+      resultado: 2-1
     
     - equipo1: MEXA
       equipo2: DES
