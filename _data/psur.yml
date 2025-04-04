@@ -14,7 +14,7 @@ sur:
     M7: 3
     M8: 3
     M9: 3
-    M10:
+    M10: 3
     M11: Z
 
   - equipo: 7Z
@@ -31,9 +31,9 @@ sur:
     M5: 0
     M6: 3
     M7: 3
-    M8: D
+    M8: Z
     M9: 3
-    M10:
+    M10: 3
     M11: 
 
   - equipo: SM
@@ -48,11 +48,11 @@ sur:
     M3: 3
     M4: 3
     M5: 3
-    M6: R
+    M6: 2
     M7: 0
     M8: 3
     M9: 0
-    M10:
+    M10: Z
     M11:
 
   - equipo: POA
@@ -60,14 +60,14 @@ sur:
     ID: POA
     link: /equipos/phobius-aura
     order: 6
-    line: 5
+    line: 6
     pts:
     M1: 3
     M2: 3
     M3: 0
     M4: 1
     M5: 3
-    M6: R
+    M6: 1
     M7: Z
     M8: 0
     M9: 0
@@ -79,7 +79,7 @@ sur:
     ID: E
     link: /equipos/spc-e-sports--enigma
     order: 3
-    line: 4
+    line: 3
     M1: 3
     M2: Z
     M3: 3
@@ -89,15 +89,15 @@ sur:
     M7: R
     M8: 3 
     M9: 3
-    M10:
+    M10: 0
     M11:
 
   - equipo: DMD
     nombre: DFS DIAMOND
     ID: DMD
     link: /equipos/dragonfliesgaming--diamond
-    order: 7
-    line: 6
+    order: 6
+    line: 7
     M1: 0
     M2: 3
     M3: 3
@@ -107,7 +107,7 @@ sur:
     M7: 0
     M8: 0
     M9: D
-    M10:
+    M10: 3
     M11:
 
   - equipo: AD
@@ -115,7 +115,7 @@ sur:
     ID: AD
     link: /equipos/ad-gaming
     order: 5
-    line: 4
+    line: 5
     pts:
     M1: Z
     M2: 0
@@ -126,15 +126,15 @@ sur:
     M7: 3
     M8: 3
     M9: 0
-    M10:
+    M10: 0
     M11:
 
   - equipo: TSR
     nombre: TEAM STAR
     ID: TSR
     link: /equipos/villanos-e-sports--team-star
-    order: 8
-    line: 7
+    order: 6
+    line: 8
     pts:
     M1: 3
     M2: 0
@@ -142,18 +142,18 @@ sur:
     M4: 1
     M5: 1
     M6: 0
-    M7: R
-    M8: R
+    M7: 3
+    M8: 3
     M9: R
-    M10:
+    M10: 
     M11:
 
   - equipo: PEARL
     nombre: DFS PEARL
     ID: PEARL
     link: /equipos/dragonfliesgaming--pearl
-    order: 10
-    line: 8
+    order: 8
+    line: 10
     pts:
     M1: 0
     M2: 0
@@ -171,7 +171,7 @@ sur:
     nombre: EEVEEVOLUTION
     ID: EVL
     link: /equipos/villanos-e-sports--eeveelution
-    order: 9
+    order: 7
     line: 9
     pts:
     M1: 0
@@ -183,15 +183,15 @@ sur:
     M7: R
     M8: R
     M9: 2
-    M10:
+    M10: 0
     M11:
 
   - equipo: MT
     nombre: MISFIT TOYS
     ID: MT
     link: /equipos/misfit-toys
-    order: 10
-    line: 9
+    order: 8
+    line: 11
     pts:
     M1: 0
     M2: 0

@@ -5,17 +5,6 @@ norte:
     link: /equipos/ranked-team--galacticos
     order: 3
     line: 3
-    P1: 3
-    P2: 3
-    P3: 1 
-    P4: 1 
-    P5: 3
-    P6: 3  
-    P7: 2
-    P8: 0
-    P9: 0
-    P10: 0
-    P11: 0
     M1: 1
     M2: 3
     M3: 3
@@ -25,7 +14,7 @@ norte:
     M7: 3
     M8: 0
     M9: 3
-    M10:
+    M10: 1
     M11:
 
   - equipo: HOENN
@@ -34,27 +23,16 @@ norte:
     link: /equipos/hoenn
     order: 1
     line: 1
-    P1: 2
-    P2: 5
-    P3: 2 
-    P4: 2 
-    P5: 1
-    P6: 2  
-    P7: 1
-    P8: 0
-    P9: 0
-    P10: 0
-    P11: 0
     M1: 2
     M2: 1
     M3: 3
     M4: 3
     M5: 3
-    M6: R
+    M6: 3
     M7: 3
     M8: 3
     M9: 3
-    M10:
+    M10: 2
     M11: Z
 
   - equipo: NEO
@@ -63,18 +41,6 @@ norte:
     link: /equipos/ranked-team--neo-stars
     order: 2
     line: 2
-    pts:
-    P1: 2
-    P2: 2
-    P3: 3 
-    P4: 3 
-    P5: 2
-    P6: 1  
-    P7: 2
-    P8: 0
-    P9: 0
-    P10: 0
-    P11: 0
     M1: 2
     M2: 3
     M3: 0
@@ -84,26 +50,15 @@ norte:
     M7: Z
     M8: 2 
     M9: 2
-    M10:
+    M10: 3
     M11:
 
   - equipo: OVG
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
-    order: 8
-    line: 6
-    P1: 2
-    P2: 3
-    P3: 1 
-    P4: 4 
-    P5: 5
-    P6: 6  
-    P7: 5
-    P8: 0
-    P9: 0
-    P10: 0
-    P11: 0
+    order: 9
+    line: 8
     M1: 2
     M2: 2
     M3: 3
@@ -112,27 +67,16 @@ norte:
     M6: 1
     M7: R
     M8: 0
-    M9: 0
-    M10:
+    M9: 0 
+    M10: 0
     M11: 
 
   - equipo: PLAT
     nombre: DFS PLATINUM
     ID: PLAT
     link: /equipos/dragonfliesgaming--platinum
-    order: 3
+    order: 5
     line: 3
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
     M1: 3
     M2: 3
     M3: Z
@@ -142,26 +86,15 @@ norte:
     M7: 3
     M8: 3
     M9: 3
-    M10:
+    M10: 0
     M11:
 
   - equipo: TAD
     nombre: TAQUITOS A LA DIABLA
     ID: TAD
     link: /equipos/taquitos-a-la-diabla
-    order: 5
+    order: 7
     line: 5
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
     M1: 3
     M2: Z
     M3: 3
@@ -171,27 +104,15 @@ norte:
     M7: 0
     M8: 0
     M9: 1
-    M10:
+    M10: 1
     M11:
 
   - equipo: ЯK
     nombre: ЯAGNAROK YMIR
     ID: ЯK
     link: /teams/club-ragnarok--ymir
-    order: 7
-    line: 6
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
-
+    order: 8
+    line: 7
     M1: 1
     M2: 0
     M3: 3
@@ -201,7 +122,7 @@ norte:
     M7: 3
     M8: Z
     M9: 1
-    M10:
+    M10: 2
     M11:
 
   - equipo: TUT
@@ -210,17 +131,6 @@ norte:
     link: /equipos/theunownteam
     order: 4
     line: 4
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
     M1: Z
     M2: 2
     M3: 0
@@ -230,7 +140,7 @@ norte:
     M7: 3
     M8: 1
     M9: 2
-    M10:
+    M10: 2
     M11:
 
   - equipo: COL
@@ -238,18 +148,7 @@ norte:
     ID: COL
     link: /equipos/colspirit
     order: 6
-    line: 5
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
+    line: 6
     M1: 1
     M2: 0
     M3: 0
@@ -259,26 +158,15 @@ norte:
     M7: 0
     M8: 3
     M9: 0
-    M10:
+    M10: 3
     M11:
 
   - equipo: MEXA
     nombre: IMPERIO MEXA OBS
     ID: MEXA
     link: /imperio-mexa/--obsidiana
-    order: 9
-    line: 7
-    P1: 1
-    P2: 1
-    P3: 2 
-    P4: 4 
-    P5: 4
-    P6: 6  
-    P7: 5
-    P8: 0 
-    P9: 0
-    P10: 0
-    P11: 0
+    order: 10
+    line: 9
     M1: 0
     M2: 1
     M3: 0
@@ -288,26 +176,15 @@ norte:
     M7: 0
     M8: 3
     M9: Z
-    M10:
+    M10: 1
     M11:
 
   - equipo: RUBY
     nombre: DFS RUBY
     ID: RUBY
     link: /equipos/dragonfliesgaming--ruby
-    order: 10
-    line: 8
-    P1: 5
-    P2: 8
-    P3: 7 
-    P4: 8 
-    P5: 9
-    P6: 10  
-    P7: 8
-    P8: 0
-    P9: 0
-    P10: 0
-    P11: 0
+    order: 11
+    line: 10
     M1: 0
     M2: 0
     M3: 0

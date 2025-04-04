@@ -18,7 +18,7 @@ rondas:
 
     - equipo1: 7Z
       equipo2: MT
-      resultado: PEN
+      resultado: 2-0
 
     - equipo1: TSR
       equipo2: DMD
@@ -146,7 +146,7 @@ rondas:
     partidos:
     - equipo1: TSR
       equipo2: STMN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: DMD
       equipo2: 7Z
@@ -158,7 +158,7 @@ rondas:
 
     - equipo1: POA
       equipo2: SM
-      resultado: PEN
+      resultado: 1-2
 
     - equipo1: AD
       equipo2: EVL
@@ -178,7 +178,7 @@ rondas:
 
     - equipo1: TSR
       equipo2: MT
-      resultado: PEN
+      resultado: 2-0
 
     - equipo1: 7Z
       equipo2: SM
@@ -210,7 +210,7 @@ rondas:
 
     - equipo1: TSR
       equipo2: EVL
-      resultado: PEN
+      resultado: 2-0
 
     - equipo1: E
       equipo2: PEARL
@@ -258,7 +258,7 @@ rondas:
     partidos:
     - equipo1: EVL
       equipo2: STMN
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: MT
       equipo2: PEARL
@@ -266,7 +266,7 @@ rondas:
 
     - equipo1: AD
       equipo2: DMD
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: POA
       equipo2: TSR
@@ -274,7 +274,7 @@ rondas:
 
     - equipo1: 7Z
       equipo2: E
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: SM
       equipo2: DES
