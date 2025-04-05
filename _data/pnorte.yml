@@ -15,7 +15,7 @@ norte:
     M8: 0
     M9: 3
     M10: 1
-    M11:
+    M11: 3
 
   - equipo: HOENN
     nombre: HOENN PLAGA VILLANOS
@@ -51,14 +51,14 @@ norte:
     M8: 2 
     M9: 2
     M10: 3
-    M11:
+    M11: 3
 
   - equipo: OVG
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
     order: 9
-    line: 8
+    line: 9
     M1: 2
     M2: 2
     M3: 3
@@ -69,14 +69,14 @@ norte:
     M8: 0
     M9: 0 
     M10: 0
-    M11: 
+    M11: 0
 
   - equipo: PLAT
     nombre: DFS PLATINUM
     ID: PLAT
     link: /equipos/dragonfliesgaming--platinum
     order: 5
-    line: 3
+    line: 5
     M1: 3
     M2: 3
     M3: Z
@@ -87,14 +87,14 @@ norte:
     M8: 3
     M9: 3
     M10: 0
-    M11:
+    M11: 0
 
   - equipo: TAD
     nombre: TAQUITOS A LA DIABLA
     ID: TAD
     link: /equipos/taquitos-a-la-diabla
-    order: 7
-    line: 5
+    order: 6
+    line: 7
     M1: 3
     M2: Z
     M3: 3
@@ -105,14 +105,14 @@ norte:
     M8: 0
     M9: 1
     M10: 1
-    M11:
+    M11: 3
 
   - equipo: ЯK
     nombre: ЯAGNAROK YMIR
     ID: ЯK
     link: /teams/club-ragnarok--ymir
     order: 8
-    line: 7
+    line: 8
     M1: 1
     M2: 0
     M3: 3
@@ -123,7 +123,7 @@ norte:
     M8: Z
     M9: 1
     M10: 2
-    M11:
+    M11: 3
 
   - equipo: TUT
     nombre: THE UNOWN TEAM
@@ -141,13 +141,13 @@ norte:
     M8: 1
     M9: 2
     M10: 2
-    M11:
+    M11: 3
 
   - equipo: COL
     nombre: COLSPIRIT
     ID: COL
     link: /equipos/colspirit
-    order: 6
+    order: 7
     line: 6
     M1: 1
     M2: 0
@@ -159,14 +159,14 @@ norte:
     M8: 3
     M9: 0
     M10: 3
-    M11:
+    M11: 0
 
   - equipo: MEXA
     nombre: IMPERIO MEXA OBS
     ID: MEXA
     link: /imperio-mexa/--obsidiana
     order: 10
-    line: 9
+    line: 10
     M1: 0
     M2: 1
     M3: 0
@@ -177,14 +177,14 @@ norte:
     M8: 3
     M9: Z
     M10: 1
-    M11:
+    M11: 0
 
   - equipo: RUBY
     nombre: DFS RUBY
     ID: RUBY
     link: /equipos/dragonfliesgaming--ruby
     order: 11
-    line: 10
+    line: 11
     M1: 0
     M2: 0
     M3: 0
@@ -195,7 +195,7 @@ norte:
     M8: 0
     M9: 0
     M10: Z
-    M11:
+    M11: 0
 
 
 

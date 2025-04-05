@@ -34,13 +34,13 @@ sur:
     M8: Z
     M9: 3
     M10: 3
-    M11: 
+    M11: 3
 
   - equipo: SM
     nombre: HG SALARIO MINIMO
     ID: SM
     link: /equipos/house-of-ghost--salario-minimo
-    order: 4
+    order: 3
     line: 3
     pts:
     M1: 0
@@ -53,13 +53,13 @@ sur:
     M8: 3
     M9: 0
     M10: Z
-    M11:
+    M11: 2
 
   - equipo: POA
     nombre: PHOBIUS AURA
     ID: POA
     link: /equipos/phobius-aura
-    order: 6
+    order: 7
     line: 6
     pts:
     M1: 3
@@ -71,8 +71,8 @@ sur:
     M7: Z
     M8: 0
     M9: 0
-    M10:
-    M11:
+    M10: 0
+    M11: 0
 
   - equipo: E
     nombre: SPC ENIGMA
@@ -90,14 +90,14 @@ sur:
     M8: 3 
     M9: 3
     M10: 0
-    M11:
+    M11: 3
 
   - equipo: DMD
     nombre: DFS DIAMOND
     ID: DMD
     link: /equipos/dragonfliesgaming--diamond
-    order: 6
-    line: 7
+    order: 8
+    line: 6
     M1: 0
     M2: 3
     M3: 3
@@ -108,13 +108,13 @@ sur:
     M8: 0
     M9: D
     M10: 3
-    M11:
+    M11: 0
 
   - equipo: AD
     nombre: AD GAMING
     ID: AD
     link: /equipos/ad-gaming
-    order: 5
+    order: 6
     line: 5
     pts:
     M1: Z
@@ -127,14 +127,14 @@ sur:
     M8: 3
     M9: 0
     M10: 1
-    M11:
+    M11: 1
 
   - equipo: TSR
     nombre: TEAM STAR
     ID: TSR
     link: /equipos/villanos-e-sports--team-star
-    order: 6
-    line: 8
+    order: 5
+    line: 6
     pts:
     M1: 3
     M2: 0
@@ -144,9 +144,9 @@ sur:
     M6: 0
     M7: 3
     M8: 3
-    M9: R
-    M10: 
-    M11:
+    M9: 3
+    M10: 3
+    M11: 3
 
   - equipo: PEARL
     nombre: DFS PEARL
@@ -164,15 +164,15 @@ sur:
     M7: 0
     M8: 0
     M9: R
-    M10:
-    M11:
+    M10: 0
+    M11: 0
 
   - equipo: EVL
     nombre: EEVEEVOLUTION
     ID: EVL
     link: /equipos/villanos-e-sports--eeveelution
-    order: 7
-    line: 9
+    order: 9
+    line: 7
     pts:
     M1: 0
     M2: 0
@@ -184,14 +184,14 @@ sur:
     M8: R
     M9: 2
     M10: 0
-    M11:
+    M11: 0
 
   - equipo: MT
     nombre: MISFIT TOYS
     ID: MT
     link: /equipos/misfit-toys
     order: 8
-    line: 11
+    line: 10
     pts:
     M1: 0
     M2: 0
@@ -202,8 +202,8 @@ sur:
     M7: R
     M8: 0
     M9: 1
-    M10: 
-    M11:
+    M10: 0
+    M11: 0
 
 
 

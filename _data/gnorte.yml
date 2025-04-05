@@ -146,7 +146,7 @@ rondas:
     partidos:
     - equipo1: PLAT
       equipo2: HOENN
-      resultado: PEN
+      resultado: 0-2
 
     - equipo1: MEXA
       equipo2: ЯK
@@ -178,7 +178,7 @@ rondas:
 
     - equipo1: PLAT
       equipo2: OVG
-      resultado: PEN
+      resultado: 2-0
 
     - equipo1: ЯK
       equipo2: RUBY
@@ -286,23 +286,23 @@ rondas:
     partidos:
     - equipo1: COL
       equipo2: GX
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: TUT
       equipo2: RUBY
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: NEO
       equipo2: OVG
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: TAD
       equipo2: MEXA
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: ЯK
       equipo2: PLAT
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: HOENN
       equipo2: DES
