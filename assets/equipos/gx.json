@@ -53,6 +53,11 @@
                     "ronda": 4,
                     "acumulado": 1,
                     "contra": "RUBY"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 1,
+                    "contra": "HOENN"
                 }
             ]
         },
@@ -89,6 +94,23 @@
                     "ronda": 7,
                     "acumulado": 1,
                     "contra": "TAD"
+                }
+            ]
+        },
+        {
+            "jugador": "RNT・Zulo銀",
+            "avatar": "male1",
+            "tag": "GX",
+            "partidos": [ 
+                {
+                    "ronda": 8,
+                    "acumulado": 2,
+                    "contra": "PLAT"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 2,
+                    "contra": "HOENN"
                 }
             ]
         }

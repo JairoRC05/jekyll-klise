@@ -11,6 +11,55 @@
                     "ronda": 3,
                     "acumulado": 1,
                     "contra": "OVG"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 2,
+                    "contra": "GX"
+                }
+            ]
+        },
+        {
+            "jugador": "DFs・DRAG8Dz",
+            "avatar": "male1",
+            "tag": "RUBY",
+            "partidos": [ 
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "PLAT"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "RK"
+                }
+            ]
+        },
+        {
+            "jugador": "DFs神DLukeツ",
+            "avatar": "male1",
+            "tag": "RUBY",
+            "partidos": [ 
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "PLAT"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 2,
+                    "contra": "COL"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "NEO"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "RK"
                 }
             ]
         },
@@ -23,6 +72,11 @@
                     "ronda": 3,
                     "acumulado": 1,
                     "contra": "OVG"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "NEO"
                 }
             ]
         }

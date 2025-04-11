@@ -1,0 +1,30 @@
+{
+    "nombre": "DFS PEARL",
+    "tag": "PEARL",
+    "mvps": [
+        {
+            "jugador": "DFs・PR0MDFK",
+            "avatar": "male1",
+            "tag": "PEARL",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                }
+            ]
+        },
+        {
+            "jugador": "DFs・Fer",
+            "avatar": "male1",
+            "tag": "PEARL",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                }
+            ]
+        }
+    ]
+}

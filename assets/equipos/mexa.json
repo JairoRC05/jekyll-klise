@@ -11,6 +11,77 @@
                     "ronda": 2,
                     "acumulado": 2,
                     "contra": "OVG"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 2,
+                    "contra": "GX"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "COL"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "RK"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "HOENN"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "TAD"
+                }
+            ]
+        },
+        {
+            "jugador": "MeXa・Ismael",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "PLAT"
+                }
+            ]
+        },
+        {
+            "jugador": "MeXa・SoUris",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 6,
+                    "acumulado": 2,
+                    "contra": "RK"
+                }
+            ]
+        },
+        {
+            "jugador": "MeXa・Kory",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "PLAT"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "GX"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "TAD"
                 }
             ]
         },
@@ -23,6 +94,33 @@
                     "ronda": 2,
                     "acumulado": 1,
                     "contra": "OVG"
+                }
+            ]
+        },
+        {
+            "jugador": "MeXa・Wott",
+            "avatar": "male1",
+            "tag": "MEXA",
+            "partidos": [ 
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "COL"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "GX"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "HOENN"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 3,
+                    "contra": "TUT"
                 }
             ]
         }

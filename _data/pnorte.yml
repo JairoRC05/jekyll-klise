@@ -147,7 +147,7 @@ norte:
     nombre: COLSPIRIT
     ID: COL
     link: /equipos/colspirit
-    order: 8
+    order: 8  
     line: 6
     M1: 1
     M2: 0

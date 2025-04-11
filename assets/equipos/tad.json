@@ -21,7 +21,12 @@
           "ronda": 8,
           "acumulado": 1,
           "contra": "COL"
-        }
+        },
+        {
+          "ronda": 10,
+          "acumulado": 1,
+          "contra": "RK"
+      }
       ]
     },
     {
@@ -33,7 +38,17 @@
           "ronda": 7,
           "acumulado": 1,
           "contra": "GX"
-        }
+        },
+        {
+          "ronda": 11,
+          "acumulado": 1,
+          "contra": "MEXA"
+      },
+      {
+        "ronda": 10,
+        "acumulado": 2,
+        "contra": "RK"
+    }
       ]
     },
     {
@@ -60,7 +75,17 @@
           "ronda": 8,
           "acumulado": 1,
           "contra": "COL"
-        }
+        },
+        {
+          "ronda": 9,
+          "acumulado": 2,
+          "contra": "NEO"
+        },
+        {
+          "ronda": 11,
+          "acumulado": 1,
+          "contra": "MEXA"
+      }
       ]
     },
     {
@@ -72,6 +97,18 @@
           "ronda": 6,
           "acumulado": 3,
           "contra": "OVG"
+        }
+      ]
+    },
+    {
+      "jugador": "EL_CHEETO",
+      "avatar": "male1",
+      "tag": "TAD",
+      "partidos": [
+        {
+          "ronda": 9,
+          "acumulado": 1,
+          "contra": "NEO"
         }
       ]
     }

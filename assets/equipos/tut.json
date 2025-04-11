@@ -46,6 +46,11 @@
           "ronda": 6,
           "acumulado": 1,
           "contra": "GX"
+        },
+        {
+          "ronda": 10,
+          "acumulado": 1,
+          "contra": "MEXA"
         }
       ]
     },
@@ -73,6 +78,16 @@
           "ronda": 7,
           "acumulado": 1,
           "contra": "COL"
+        },
+        {
+          "ronda": 8,
+          "acumulado": 3,
+          "contra": "NEO"
+        },
+        {
+          "ronda": 10,
+          "acumulado": 2,
+          "contra": "MEXA"
         }
       ]
     }

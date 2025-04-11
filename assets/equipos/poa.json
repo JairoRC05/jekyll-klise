@@ -1,0 +1,133 @@
+{
+    "nombre": "PHOBIUS AURA",
+    "tag": "POA",
+    "mvps": [
+        {
+            "jugador": "AÐ • Doni",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "EVL"
+                },
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "PEARL"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 2,
+                    "contra": "AD"
+                },
+                {
+                    "ronda": 9,
+                    "acumulado": 2,
+                    "contra": "E"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 2,
+                    "contra": "MT"
+                }
+            ]
+        },
+        {
+            "jugador": "AÐ • Caleb",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "EVL"
+                }
+            ]
+        },
+        {
+            "jugador": "AÐ・Okarun",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "PEARL"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 2,
+                    "contra": "7Z"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                }
+            ]
+        },
+        {
+            "jugador": "AÐ・Kev",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "SM"
+                }
+            ]
+        },
+        {
+            "jugador": "AÐ・Pïngü",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                }
+            ]
+        },
+        {
+            "jugador": "AÐ・Caleb",
+            "avatar": "male1",
+            "tag": "POA",
+            "partidos": [
+                {
+                    "ronda": 6,
+                    "acumulado": 2,
+                    "contra": "SM"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                }
+            ]
+        }
+    ]
+}

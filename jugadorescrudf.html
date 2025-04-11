@@ -1,0 +1,328 @@
+---
+layout:
+permalink: /jugadores-crud.html
+title: IDS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container teams-table">
+
+    <h1 class="teams-title text-center">LIGA INDIGO</h1>
+
+    <h1>Gestión de Equipo</h1>
+
+    <div id="equipo-info">
+        <h2></h2>
+        <p><strong>Tag:</strong> <span></span></p>
+        <h3>MVPs:</h3>
+        <div id="lista-mvps">
+            </div>
+    </div>
+
+    <h2>Añadir Nuevo MVP</h2>
+    <div id="formulario-mvp">
+        <label for="jugador-nuevo">Jugador:</label>
+        <input type="text" id="jugador-nuevo"><br><br>
+        <label for="avatar-nuevo">Avatar:</label>
+        <input type="text" id="avatar-nuevo" value="male1"><br><br>
+        <button onclick="crearMVP()">Añadir MVP</button>
+    </div>
+
+    <h2>Añadir Partido a MVP Existente</h2>
+    <div id="formulario-partido">
+        <label for="jugador-partido">Jugador:</label>
+        <select id="jugador-partido">
+            </select><br><br>
+        <label for="ronda-partido">Ronda:</label>
+        <input type="number" id="ronda-partido"><br><br>
+        <label for="acumulado-partido">Acumulado:</label>
+        <input type="number" id="acumulado-partido"><br><br>
+        <label for="contra-partido">Contra:</label>
+        <select id="contra-partido">
+          <option value="EVL">EVL</option>
+          <option value="PEARL">PEARL</option>
+          <option value="STMN">STMN</option>
+          <option value="7Z">7Z</option>
+          <option value="DMD">DMD</option>
+          <option value="POA">POA</option>
+          <option value="SM">SM</option>
+          <option value="AD">AD</option>
+          <option value="E">E</option>
+          <option value="TSR">TSR</option>
+          <option value="MT">MT</option>
+      </select><br><br>
+        <button onclick="agregarPartido()">Añadir Partido</button>
+        <button onclick="descargarJSON()">Descargar JSON</button>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+ 
+  <script>
+    let equipoData = null; // Inicializamos como null
+
+    const equipoNombreElement = document.querySelector('#equipo-info h2');
+    const equipoTagElement = document.querySelector('#equipo-info p span');
+    const listaMVPsElement = document.getElementById('lista-mvps');
+    const jugadorPartidoSelect = document.getElementById('jugador-partido');
+
+    async function cargarEquipo() {
+        try {
+            const response = await fetch('/assets/equipos/base.json'); // Ruta al archivo
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            equipoData = await response.json();
+            mostrarEquipo();
+        } catch (error) {
+            console.error('Error al cargar el archivo JSON:', error);
+            alert('Error al cargar los datos del equipo.');
+        }
+    }
+
+    function mostrarEquipo() {
+        if (!equipoData) return; // No hacer nada si los datos no se han cargado
+
+        equipoNombreElement.textContent = equipoData.nombre;
+        equipoTagElement.textContent = equipoData.tag;
+        listaMVPsElement.innerHTML = '';
+
+        equipoData.mvps.forEach((mvp, index) => {
+            const mvpDiv = document.createElement('div');
+            mvpDiv.classList.add('mvp-item');
+            mvpDiv.innerHTML = `
+                <strong>Jugador:</strong> ${mvp.jugador} (${mvp.tag}) - Avatar: ${mvp.avatar}
+                <button onclick="eliminarMVP(${index})">Eliminar</button>
+                <div id="partidos-${index}"></div>
+            `;
+            listaMVPsElement.appendChild(mvpDiv);
+
+            const partidosDiv = document.getElementById(`partidos-${index}`);
+            mvp.partidos.forEach(partido => {
+                const partidoP = document.createElement('p');
+                partidoP.classList.add('partido-item');
+                partidoP.textContent = `Ronda: ${partido.ronda}, Acumulado: ${partido.acumulado}, Contra: ${partido.contra}`;
+                partidosDiv.appendChild(partidoP);
+            });
+        });
+
+        jugadorPartidoSelect.innerHTML = '<option value="">Seleccionar Jugador</option>';
+        equipoData.mvps.forEach(mvp => {
+            const option = document.createElement('option');
+            option.value = mvp.jugador;
+            option.textContent = mvp.jugador;
+            jugadorPartidoSelect.appendChild(option);
+        });
+    }
+
+    function crearMVP() {
+        // ... (misma lógica que antes, pero ahora usa equipoData) ...
+        const jugador = document.getElementById('jugador-nuevo').value;
+        const avatar = document.getElementById('avatar-nuevo').value;
+        const equipoTag = equipoData ? equipoData.tag : "BASE";
+
+        if (jugador && avatar) { // El tag ahora se toma del equipo
+        const nuevoMVP = { "jugador": jugador, "avatar": avatar, "tag": equipoTag, "partidos": [] };
+        equipoData.mvps.push(nuevoMVP);
+        mostrarEquipo();
+        document.getElementById('jugador-nuevo').value = '';
+        document.getElementById('avatar-nuevo').value = 'male1'; // Resetear el avatar al valor por defecto
+        // Ya no necesitamos limpiar el campo tag del MVP
+    } else {
+        alert('Por favor, completa los campos de jugador y avatar para el nuevo MVP.');
+    }
+    }
+
+    function eliminarMVP(index) {
+        // ... (misma lógica que antes, pero ahora usa equipoData) ...
+        if (equipoData && confirm(`¿Seguro que quieres eliminar a ${equipoData.mvps[index].jugador}?`)) {
+            equipoData.mvps.splice(index, 1);
+            mostrarEquipo();
+        }
+    }
+
+    function agregarPartido() {
+        // ... (misma lógica que antes, pero ahora usa equipoData) ...
+        const jugadorSeleccionado = document.getElementById('jugador-partido').value;
+        const ronda = parseInt(document.getElementById('ronda-partido').value);
+        const acumulado = parseInt(document.getElementById('acumulado-partido').value);
+        const contra = document.getElementById('contra-partido').value;
+
+        if (jugadorSeleccionado && !isNaN(ronda) && !isNaN(acumulado) && contra && equipoData) {
+            const mvp = equipoData.mvps.find(mvp => mvp.jugador === jugadorSeleccionado);
+            if (mvp) {
+                mvp.partidos.push({ "ronda": ronda, "acumulado": acumulado, "contra": contra });
+                mostrarEquipo();
+                document.getElementById('jugador-partido').value = '';
+                document.getElementById('ronda-partido').value = '';
+                document.getElementById('acumulado-partido').value = '';
+                document.getElementById('contra-partido').value = '';
+            } else {
+                alert('No se encontró el jugador seleccionado.');
+            }
+        } else {
+            alert('Por favor, completa todos los campos para el nuevo partido.');
+        }
+    }
+
+    function descargarJSON() {
+            if (equipoData) {
+                const jsonString = JSON.stringify(equipoData, null, 4); // Convertir a string con indentación
+                const blob = new Blob([jsonString], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'equipo_data.json'; // Nombre del archivo de descarga
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url); // Limpiar la URL creada
+            } else {
+                alert('No hay datos del equipo para descargar.');
+            }
+        }
+
+
+    // Cargar los datos del equipo al cargar la página
+    cargarEquipo();
+</script>
+  {% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

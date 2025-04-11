@@ -36,7 +36,12 @@
                   "ronda": 7,
                   "acumulado": 1,
                   "contra": "MEXA"
-              }
+              },
+              {
+                "ronda": 10,
+                "acumulado": 1,
+                "contra": "GX"
+            }
           ]
       },
       {
@@ -48,6 +53,18 @@
                   "ronda": 1,
                   "acumulado": 1,
                   "contra": "COL"
+              }
+          ]
+      },
+      {
+          "jugador": "TTVXileKira",
+          "avatar": "male1",
+          "tag": "HOENN",
+          "partidos": [ 
+              {
+                  "ronda": 10,
+                  "acumulado": 1,
+                  "contra": "GX"
               }
           ]
       },
@@ -80,6 +97,11 @@
                   "ronda": 8,
                   "acumulado": 1,
                   "contra": "OVG"
+              },
+              {
+                  "ronda": 10,
+                  "acumulado": 1,
+                  "contra": "GX"
               }
           ]
       },
@@ -113,6 +135,7 @@
                   "acumulado": 1,
                   "contra": "OVG"
               }
+            
           ]
       }
   ]

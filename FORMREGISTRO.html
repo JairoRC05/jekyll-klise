@@ -1,0 +1,293 @@
+---
+layout:
+permalink: /liga-indigo-form.html
+title: IDS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container teams-table">
+
+    <h1 class="teams-title text-center">LIGA INDIGO</h1>
+  
+  </div>
+
+  <div class="container mt-5">
+    <h1>Registro de Equipo</h1>
+    <form id="teamForm" action="https://formsubmit.co/your_email@example.com" method="POST">
+        <input type="hidden" name="_next" value="https://your-thank-you-page.com">
+        <input type="hidden" name="_subject" value="Nuevo registro de equipo">
+        <input type="hidden" name="_template" value="table">
+
+        <h2>Información del Equipo</h2>
+        <div class="form-group">
+            <label for="teamName">Nombre del Equipo:</label>
+            <input type="text" class="form-control" id="teamName" name="equipo[nombre]" required>
+        </div>
+        <div class="form-group">
+            <label for="teamTag">TAG del Equipo:</label>
+            <input type="text" class="form-control" id="teamTag" name="equipo[tag]" maxlength="10" required>
+            <small class="form-text text-muted">Máximo 10 caracteres.</small>
+        </div>
+
+        <h2>Información del Capitán</h2>
+        <div class="form-group">
+            <label for="captainName">Nombre del Capitán:</label>
+            <input type="text" class="form-control" id="captainName" name="capitan[nombre]" required>
+        </div>
+        <div class="form-group">
+            <label for="captainEmail">Email del Capitán:</label>
+            <input type="email" class="form-control" id="captainEmail" name="capitan[email]" required>
+        </div>
+        <div class="form-group">
+            <label for="captainWhatsapp">WhatsApp del Capitán:</label>
+            <input type="tel" class="form-control" id="captainWhatsapp" name="capitan[whatsapp]" pattern="[0-9]+" placeholder="Ej: 521XXXXXXXXXX" required>
+            <small class="form-text text-muted">Incluye el código de país (ej: 521 para México).</small>
+        </div>
+
+        <h2>Jugadores</h2>
+        <div id="playerFields">
+            </div>
+
+        <button type="button" class="btn btn-success" id="addPlayer">Agregar Jugador</button>
+        <p id="playerCount" class="mt-2">Jugadores registrados: 0 (Mínimo 5, Máximo 8)</p>
+
+        <button type="submit" class="btn btn-primary mt-3" id="submitButton" disabled>Registrar Equipo</button>
+    </form>
+    <div id="jsonOutput" class="mt-3">
+        </div>
+</div>
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    const playerFieldsContainer = document.getElementById('playerFields');
+    const addPlayerButton = document.getElementById('addPlayer');
+    const playerCountDisplay = document.getElementById('playerCount');
+    const submitButton = document.getElementById('submitButton');
+    const teamForm = document.getElementById('teamForm');
+    const jsonOutput = document.getElementById('jsonOutput'); // Para demostración
+
+    let playerCount = 0;
+
+    function addPlayerField(index) {
+        const playerDiv = document.createElement('div');
+        playerDiv.classList.add('player-fields');
+        playerDiv.innerHTML = `
+            <h4>Jugador ${index + 1}</h4>
+            <div class="form-group">
+                <label for="nickname${index}">Nickname:</label>
+                <input type="text" class="form-control" id="nickname${index}" name="jugadores[${index}][nickname]" required>
+            </div>
+            <div class="form-group">
+                <label for="playerId${index}">ID:</label>
+                <input type="text" class="form-control" id="playerId${index}" name="jugadores[${index}][id]" required>
+            </div>
+            <button type="button" class="btn btn-danger btn-sm remove-player">Eliminar</button>
+        `;
+        playerFieldsContainer.appendChild(playerDiv);
+
+        const removeButton = playerDiv.querySelector('.remove-player');
+        removeButton.addEventListener('click', () => {
+            playerFieldsContainer.removeChild(playerDiv);
+            playerCount--;
+            updatePlayerCount();
+        });
+    }
+
+    function updatePlayerCount() {
+        playerCountDisplay.textContent = `Jugadores registrados: ${playerCount} (Mínimo 5, Máximo 8)`;
+        submitButton.disabled = playerCount < 5 || playerCount > 8;
+    }
+
+    addPlayerButton.addEventListener('click', () => {
+        if (playerCount < 8) {
+            addPlayerField(playerCount);
+            playerCount++;
+            updatePlayerCount();
+        } else {
+            alert('Se ha alcanzado el máximo de 8 jugadores.');
+        }
+    });
+
+    // Agregar 5 jugadores iniciales
+    for (let i = 0; i < 5; i++) {
+        addPlayerField(i);
+        playerCount++;
+    }
+    updatePlayerCount();
+
+    // Interceptar el envío del formulario (solo para mostrar el JSON)
+    teamForm.addEventListener('submit', function(event) {
+        // event.preventDefault(); // Descomentar para evitar el envío real a FormSubmit durante la prueba
+
+        const formData = new FormData(teamForm);
+        const jsonData = {};
+        const jugadoresArray = [];
+
+        for (const [key, value] of formData.entries()) {
+            if (key.startsWith('equipo')) {
+                if (!jsonData.equipo) {
+                    jsonData.equipo = {};
+                }
+                const property = key.substring(key.indexOf('[') + 1, key.indexOf(']'));
+                jsonData.equipo[property] = value;
+            } else if (key.startsWith('capitan')) {
+                if (!jsonData.capitan) {
+                    jsonData.capitan = {};
+                }
+                const property = key.substring(key.indexOf('[') + 1, key.indexOf(']'));
+                jsonData.capitan[property] = value;
+            } else if (key.startsWith('jugadores')) {
+                const indexMatch = key.match(/\[(\d+)\]/);
+                const propertyMatch = key.match(/\[(\w+)\]$/);
+                if (indexMatch && propertyMatch) {
+                    const index = parseInt(indexMatch[1]);
+                    const property = propertyMatch[1];
+                    if (!jugadoresArray[index]) {
+                        jugadoresArray[index] = {};
+                    }
+                    jugadoresArray[index][property] = value;
+                }
+            }
+        }
+
+        jsonData.jugadores = jugadoresArray.filter(player => player !== undefined);
+
+        // Mostrar el JSON generado (solo para demostración)
+        jsonOutput.textContent = JSON.stringify(jsonData, null, 2);
+
+        // Si descomentas event.preventDefault(), debes eliminar la siguiente línea para que FormSubmit funcione
+        // return false; // Evita el envío real del formulario (para la demostración)
+    });
+</script>
+
+  {% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+{
+    "nombre": "STAMINA E-SPORTS",
+    "tag": "STMN",
+    "mvps": [
+        {
+            "jugador": "STMN • Frank",
+            "avatar": "male1",
+            "tag": "STMN",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "PEARL"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                },
+                {
+                    "ronda": 9,
+                    "acumulado": 1,
+                    "contra": "SM"
+                }
+            ]
+        },
+        {
+            "jugador": "STMN • Regi",
+            "avatar": "male1",
+            "tag": "STMN",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "PEARL"
+                },
+                {
+                    "ronda": 2,
+                    "acumulado": 2,
+                    "contra": "AD"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 2,
+                    "contra": "POA"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "E"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                },
+                {
+                    "ronda": 9,
+                    "acumulado": 1,
+                    "contra": "SM"
+                }
+            ]
+        },
+        {
+            "jugador": "STMN • Pachy",
+            "avatar": "male1",
+            "tag": "STMN",
+            "partidos": [
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "E"
+                }
+            ]
+        },
+        {
+            "jugador": "STMN • Holmes",
+            "avatar": "male1",
+            "tag": "STMN",
+            "partidos": [
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                }
+            ]
+        }
+    ]
+}

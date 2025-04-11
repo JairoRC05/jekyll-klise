@@ -1,0 +1,101 @@
+{
+    "nombre": "SPC ENIGMA",
+    "tag": "E",
+    "mvps": [
+        {
+            "jugador": "SPC・Rodman",
+            "avatar": "male1",
+            "tag": "E",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "SM"
+                }
+            ]
+        },
+        {
+            "jugador": "SPC・Lolfe教",
+            "avatar": "male1",
+            "tag": "E",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "SM"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 9,
+                    "acumulado": 1,
+                    "contra": "POA"
+                }
+            ]
+        },
+        {
+            "jugador": "SPC・Brick魔",
+            "avatar": "male1",
+            "tag": "E",
+            "partidos": [
+                {
+                    "ronda": 3,
+                    "acumulado": 2,
+                    "contra": "AD"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 2,
+                    "contra": "PEARL"
+                }
+            ]
+        },
+        {
+            "jugador": "SPC・Frice",
+            "avatar": "male1",
+            "tag": "E",
+            "partidos": [
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                }
+            ]
+        },
+        {
+            "jugador": "SPC・May",
+            "avatar": "female1",
+            "tag": "E",
+            "partidos": [
+                {
+                    "ronda": 9,
+                    "acumulado": 1,
+                    "contra": "POA"
+                },
+                {
+                    "ronda": 10,
+                    "acumulado": 2,
+                    "contra": "7Z"
+                }
+            ]
+        }
+    ]
+}
