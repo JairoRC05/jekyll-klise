@@ -25,7 +25,7 @@
       "tag": "TUT",
       "partidos": [
       {
-        "ronda": 1,
+        "ronda": 2,
         "acumulado": 1,
         "contra": "HOENN"
       }
@@ -60,7 +60,7 @@
       "tag": "TUT",
       "partidos": [
         {
-          "ronda": 1,
+          "ronda": 2,
           "acumulado": 2,
           "contra": "HOENN"
         },

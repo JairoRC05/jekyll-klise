@@ -5,26 +5,42 @@
         {
             "jugador": "DFs・PR0MDFK",
             "avatar": "male1",
-            "tag": "PEARL",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "STMN"
-                }
-            ]
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "ElSanaBabish",
+            "avatar": "male1",
+            "tag": "PEARL"
         },
         {
             "jugador": "DFs・Fer",
             "avatar": "male1",
-            "tag": "PEARL",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "STMN"
-                }
-            ]
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "DFs・Naraku",
+            "avatar": "male1",
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "La_Lujuria",
+            "avatar": "male1",
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "DarknessWill",
+            "avatar": "male1",
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "DFs・Kuro",
+            "avatar": "male1",
+            "tag": "PEARL"
+        },
+        {
+            "jugador": "TSF・Shemi",
+            "avatar": "male1",
+            "tag": "PEARL"
         }
     ]
 }

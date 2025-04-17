@@ -1,0 +1,295 @@
+{
+    "equipos": [
+        {
+            "nombre": "7Z ES",
+            "tag": "7Z",
+            "enero": "0",
+            "febrero": "2300",
+            "marzo": "2300",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "AD DORADAS",
+            "tag": "AD",
+            "enero": "0",
+            "febrero": "1500",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "AD GAMING",
+            "tag": "ADG",
+            "enero": "0",
+            "febrero": "2000",
+            "marzo": "1500",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "ALEPH RAGNAROK",
+            "tag": "AEP",
+            "enero": "0",
+            "febrero": "1200",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "DFS AMBER",
+            "tag": "AMB",
+            "enero": "0",
+            "febrero": "1000",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "DFS PLATINUM",
+            "tag": "PLAT",
+            "enero": "0",
+            "febrero": "2100",
+            "marzo": "1600",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "DFS RUBY",
+            "tag": "PLAT",
+            "enero": "0",
+            "febrero": "900",
+            "marzo": "600",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "EEVEEVOLUTION",
+            "tag": "EVL",
+            "enero": "0",
+            "febrero": "800",
+            "marzo": "800",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "GOOD AS GOLD",
+            "tag": "GG",
+            "enero": "0",
+            "febrero": "700",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre":"HG SALARIO MINIMO",
+            "tag": "SM",
+            "enero":"0",
+            "febrero":"1100",
+            "marzo":"1800",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre":"PLAGA VILLANOS",
+            "tag": "SM",
+            "enero":"0",
+            "febrero":"2100",
+            "marzo":"0",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre":"RNT ETERNAL ASCENSION",
+            "tag": "EA",
+            "enero":"0",
+            "febrero":"1100",
+            "marzo":"700",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre":"RNT GALACTICOS",
+            "tag": "GX",
+            "enero":"0",
+            "febrero":"1400",
+            "marzo":"1700",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre":"RNT NEO STARS",
+            "tag": "NEO",
+            "enero":"0",
+            "febrero":"1600",
+            "marzo":"2000",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+       
+        {
+            "nombre": "SPC ENIGMA",
+            "tag": "E",
+            "enero": "2400",
+            "febrero": "2200",
+            "marzo": "2200",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "STAMINA ES",
+            "tag": "STMN",
+            "enero": "2300",
+            "febrero": "2400",
+            "marzo": "2400",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre":"TAQUITOS A LA DIABLA",
+            "tag": "TAD",
+            "enero":"0",
+            "febrero":"1500",
+            "marzo":"1400",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre": "TEAM AETHER",
+            "tag": "TAE",
+            "enero": "0",
+            "febrero": "1800",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "TEAM FLARE",
+            "tag": "TF",
+            "enero": "0",
+            "febrero": "1700",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "TEAM ROCKET",
+            "tag": "TR",
+            "enero": "0",
+            "febrero": "1400",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "TEAM STAR",
+            "tag": "TSR",
+            "enero": "0",
+            "febrero": "1900",
+            "marzo": "0",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre":"OVERHEAT",
+            "tag": "OVG",
+            "enero":"0",
+            "febrero":"1300",
+            "marzo":"1000",
+            "abril":"0",
+            "mayo":"0",
+            "junio":"0"
+            },
+        {
+            "nombre": "THE UNOWN TEAM",
+            "tag": "TUT",
+            "enero": "0",
+            "febrero": "1600",
+            "marzo": "1900",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "RAGNAROK YMIR",
+            "tag": "RK",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "1300",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "PHOBIUS AURA",
+            "tag": "POA",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "1300",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "COLSPIRIT",
+            "tag": "COL",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "1200",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "DFS DIAMOND",
+            "tag": "DMD",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "1100",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "IMPERIO MEXA OBS",
+            "tag": "OBS",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "900",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        },
+        {
+            "nombre": "DFS PEARL",
+            "tag": "PEARL",
+            "enero": "0",
+            "febrero": "0",
+            "marzo": "700",
+            "abril": "0",
+            "mayo": "0",
+            "junio": "0"
+        }
+    ]
+}

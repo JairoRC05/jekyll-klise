@@ -1,0 +1,115 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "MEXA",
+      "equipoVisitante": "RUBY",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "TUT",
+      "mvpsLocal": [
+        "RNT・Kaine十",
+        "RNT・Luffy12",
+        "RNT・TVPablo"
+      ],
+      "mvpsVisitante": [
+        "Orziie",
+        "Orziie",
+        "Orziie"
+      ]
+    },
+    {
+      "equipoLocal": "PLAT",
+      "equipoVisitante": "GX",
+      "mvpsLocal": [
+        "DFs・AlexT",
+        "DFs・Forti"
+      ],
+      "mvpsVisitante": [
+        "RNT・Zulo銀",
+        "RNT・Zulo銀"
+      ]
+    },
+    {
+      "equipoLocal": "COL",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        "COL・Mongral",
+        "COL・Mongral"
+      ],
+      "mvpsVisitante": [
+        "タTaquito",
+        "AllenDartツ"
+      ]
+    },
+    {
+      "equipoLocal": "HOENN",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [
+        "7Froy",
+        "DønLux"
+      ],
+      "mvpsVisitante": [
+        "ZTG・Broken",
+        "I'MCARROT"
+      ]
+    },
+    {
+      "equipoLocal": "TSR",
+      "equipoVisitante": "EVL",
+      "mvpsLocal": [
+        "T星・Floppis",
+        "T星・Floppis"
+      ],
+      "mvpsVisitante": [
+        "EVL•Dop",
+        "KingAttacus"
+      ]
+    },
+    {
+      "equipoLocal": "E",
+      "equipoVisitante": "PEARL",
+      "mvpsLocal": [
+        "SPC・Brick魔",
+        "SPC・Brick魔"
+      ],
+      "mvpsVisitante": [
+        "DFs・PR0MDFK",
+        "TSF・Shemi"
+      ]
+    },
+    {
+      "equipoLocal": "AD",
+      "equipoVisitante": "POA",
+      "mvpsLocal": [
+        "AÐ・MerGas",
+        "AÐ・Efesto"
+      ],
+      "mvpsVisitante": [
+        "AÐ • Doni",
+        "AÐ • Doni"
+      ]
+    },
+    {
+      "equipoLocal": "SM",
+      "equipoVisitante": "DMD",
+      "mvpsLocal": [
+        "$M・Finn",
+        "$M・Krosty"
+      ],
+      "mvpsVisitante": [
+        "AÐ・Jumperメ",
+        "AÐ・Jumperメ"
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "MT",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    }
+  ]
+}

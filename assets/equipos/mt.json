@@ -1,0 +1,36 @@
+{
+    "nombre": "MISFIT TOYS",
+    "tag": "MT",
+    "mvps": [
+        {
+            "jugador": "Xtormer",
+            "avatar": "male1",
+            "tag": "MT"
+        },
+        {
+            "jugador": "Xerg",
+            "avatar": "female1",
+            "tag": "MT"
+        },
+        {
+            "jugador": "Drus",
+            "avatar": "male1",
+            "tag": "MT"
+        },
+        {
+            "jugador": "Saturn",
+            "avatar": "male1",
+            "tag": "MT"
+        },
+        {
+            "jugador": "NarutoGG",
+            "avatar": "male1",
+            "tag": "MT"
+        },
+        {
+            "jugador": "ArkBlueDark",
+            "avatar": "male1",
+            "tag": "MT"
+        }
+    ]
+}

@@ -5,122 +5,37 @@
         {
             "jugador": "RNT・TVPablo",
             "avatar": "male1",
-            "tag": "NEO",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 2,
-                    "contra": "GX"
-                },
-                {
-                    "ronda": 5,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                },
-                {
-                    "ronda": 3,
-                    "acumulado": 1,
-                    "contra": "HOENN"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "RK"
-                },
-                {
-                    "ronda": 6,
-                    "acumulado": 2,
-                    "contra": "RUBY"
-                },
-                {
-                    "ronda": 8,
-                    "acumulado": 1,
-                    "contra": "TUT"
-                },
-                {
-                    "ronda": 9,
-                    "acumulado": 2,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "NEO"
         },
         {
             "jugador": "RNT・Suo力",
             "avatar": "male1",
-            "tag": "NEO",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "GX"
-                },
-                {
-                    "ronda": 5,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                },
-                {
-                    "ronda": 10,
-                    "acumulado": 2,
-                    "contra": "PLAT"
-                }
-            ]
+            "tag": "NEO"
         },
         {
             "jugador": "RNT・Perro乡",
             "avatar": "male1",
-            "tag": "NEO",
-            "partidos": [ 
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "COL"
-                }
-            ]
+            "tag": "NEO"
         },
         {
             "jugador": "RNT・Kaine十",
             "avatar": "male1",
-            "tag": "NEO",
-            "partidos": [ 
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "COL"
-                },
-                {
-                    "ronda": 8,
-                    "acumulado": 1,
-                    "contra": "TUT"
-                }
-            ]
+            "tag": "NEO"
         },
         {
             "jugador": "RNT・Luffy12",
             "avatar": "male1",
-            "tag": "NEO",
-            "partidos": [ 
-                {
-                    "ronda": 3,
-                    "acumulado": 1,
-                    "contra": "HOENN"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "RK"
-                },
-                {
-                    "ronda": 8,
-                    "acumulado": 1,
-                    "contra": "TUT"
-                },
-                {
-                    "ronda": 9,
-                    "acumulado": 1,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "NEO"
+        },
+        {
+            "jugador": "RNT・ʝʊคɳƙค",
+            "avatar": "male1",
+            "tag": "NEO"
+        },
+        {
+            "jugador": "RNT・Inge",
+            "avatar": "male1",
+            "tag": "NEO"
         }
     ]
   }

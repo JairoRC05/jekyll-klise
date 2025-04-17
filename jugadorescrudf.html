@@ -98,7 +98,7 @@ title: IDS | LIGA INDIGO
   </div>
 
 
-  <div class="container teams-table">
+  <!-- <div class="container teams-table">
 
     <h1 class="teams-title text-center">LIGA INDIGO</h1>
 
@@ -150,8 +150,64 @@ title: IDS | LIGA INDIGO
 
 
 
-  </div>
+  </div> -->
 
+
+    <div class="container">
+      <h1>CRUD de Encuentros y MVPs</h1>
+
+
+      <div class="row">
+        <div class="col-2">
+          <div id="formulario-encuentro">
+            <h2>MATCH</h2>
+            <label for="equipo-local">LOCAL:</label>
+            <select class="form-select" id="equipo-local"></select>
+          
+            <label for="equipo-visitante">VISITANTE:</label>
+            <select class="form-select" id="equipo-visitante"></select>
+          
+            <h4>MVPs Local</h4>
+            <select class="form-select" id="mvp-local-1"></select>
+            <select class="form-select" id="mvp-local-2"></select>
+            <select class="form-select" id="mvp-local-3"></select>
+          
+            <h4>MVPs Visitante</h4>
+            <select class="form-select" id="mvp-visitante-1"></select>
+            <select class="form-select" id="mvp-visitante-2"></select>
+            <select class="form-select" id="mvp-visitante-3"></select>
+          
+            <button onclick="guardarEncuentro()" class="btn bg-cham w-100 text-white my-2">GUARDAR</button>
+          </div>
+              </div>
+        <div class="col-10">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3>VISOR</h3>
+            <button onclick="descargarJson()" class="btn bg-cham text-white my-2">Descargar JSON</button>
+      
+          </div>
+          <table id="tabla-encuentros" class="table w-100">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Equipo Local</th>
+                <th>MVPs Local</th>
+                <th>Equipo Visitante</th>
+                <th>MVPs Visitante</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+   
+      
+     
+     
+    </div>
 
 
 
@@ -187,7 +243,7 @@ title: IDS | LIGA INDIGO
   <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
  
-  <script>
+  <!-- <script>
     let equipoData = null; // Inicializamos como null
 
     const equipoNombreElement = document.querySelector('#equipo-info h2');
@@ -314,8 +370,246 @@ title: IDS | LIGA INDIGO
 
     // Cargar los datos del equipo al cargar la página
     cargarEquipo();
+</script> -->
+  
+<script>
+  let encuentros = [];
+  const MAX_ENCUENTROS = 12;
+  const tablaBody = document.getElementById('tabla-body');
+  const formulario = document.getElementById('formulario-encuentro');
+  const selectEquipoLocal = document.getElementById('equipo-local');
+  const selectEquipoVisitante = document.getElementById('equipo-visitante');
+  const selectMvpLocal = [
+    document.getElementById('mvp-local-1'),
+    document.getElementById('mvp-local-2'),
+    document.getElementById('mvp-local-3')
+  ];
+  const selectMvpVisitante = [
+    document.getElementById('mvp-visitante-1'),
+    document.getElementById('mvp-visitante-2'),
+    document.getElementById('mvp-visitante-3')
+  ];
+  const teamFiles = [
+    'assets/equipos/7z.json',
+    'assets/equipos/ad.json',
+    'assets/equipos/col.json',
+    'assets/equipos/enigma.json',
+    'assets/equipos/evl.json',
+    'assets/equipos/gx.json',
+    'assets/equipos/hoenn.json',
+    'assets/equipos/mexa.json',
+    'assets/equipos/neo.json',
+    'assets/equipos/ovg.json',
+    'assets/equipos/pearl.json',
+    'assets/equipos/plat.json',
+    'assets/equipos/poa.json',
+    'assets/equipos/rk.json',
+    'assets/equipos/ruby.json',
+    'assets/equipos/sm.json',
+    'assets/equipos/stmn.json',
+    'assets/equipos/tad.json',
+    'assets/equipos/tsr.json',
+    'assets/equipos/tut.json',
+    'assets/equipos/mt.json',
+    'assets/equipos/dmd.json'
+    // ... Agrega las rutas completas a tus otros archivos JSON aquí
+  ];
+  let teamsData = {};
+
+  async function loadTeams() {
+    for (const file of teamFiles) {
+      try {
+        const response = await fetch(file);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        teamsData[data.tag] = data;
+      } catch (error) {
+        console.error(`Error loading ${file}:`, error);
+      }
+    }
+    populateTeamSelects();
+  }
+
+  function populateTeamSelects() {
+    selectEquipoLocal.innerHTML = '<option value="">LOCAL</option>';
+    selectEquipoVisitante.innerHTML = '<option value="">VISITANTE</option>';
+
+    for (const tag in teamsData) {
+      const optionLocal = document.createElement('option');
+      optionLocal.value = tag;
+      optionLocal.textContent = teamsData[tag].tag;
+      selectEquipoLocal.appendChild(optionLocal);
+
+      const optionVisitante = document.createElement('option');
+      optionVisitante.value = tag;
+      optionVisitante.textContent = teamsData[tag].tag;
+      selectEquipoVisitante.appendChild(optionVisitante);
+    }
+  }
+
+  function populatePlayerSelects(teamTag, local) {
+    const team = teamsData[teamTag];
+    const players = team?.mvps || []; // Usamos 'mvps' en lugar de 'jugadores'
+    const selects = local ? selectMvpLocal : selectMvpVisitante;
+
+    selects.forEach(select => {
+      const currentValue = select.value;
+      select.innerHTML = '<option value="">Seleccionar Jugador</option>';
+      players.forEach(player => {
+        const option = document.createElement('option');
+        option.value = player.jugador;
+        option.textContent = player.jugador;
+        option.selected = currentValue === player.jugador;
+        select.appendChild(option);
+      });
+    });
+  }
+
+  selectEquipoLocal.addEventListener('change', function() {
+    populatePlayerSelects(this.value, true);
+  });
+
+  selectEquipoVisitante.addEventListener('change', function() {
+    populatePlayerSelects(this.value, false);
+  });
+
+  function guardarEncuentro() {
+    const equipoLocalTag = selectEquipoLocal.value;
+    const equipoVisitanteTag = selectEquipoVisitante.value;
+    const mvpsLocal = selectMvpLocal.map(select => select.value).filter(mvp => mvp !== "");
+    const mvpsVisitante = selectMvpVisitante.map(select => select.value).filter(mvp => mvp !== "");
+
+    if (encuentros.length < MAX_ENCUENTROS) {
+      if (equipoLocalTag && equipoVisitanteTag) {
+        encuentros.push({
+          "equipoLocal": equipoLocalTag,
+          "equipoVisitante": equipoVisitanteTag,
+          "mvpsLocal": mvpsLocal,
+          "mvpsVisitante": mvpsVisitante
+        });
+        actualizarTabla();
+        limpiarFormulario();
+      } else {
+        alert('Por favor, selecciona ambos equipos.');
+      }
+    } else {
+      alert(`Solo se permiten hasta ${MAX_ENCUENTROS} encuentros.`);
+    }
+  }
+
+  function limpiarFormulario() {
+    selectEquipoLocal.selectedIndex = 0;
+    selectEquipoVisitante.selectedIndex = 0;
+    selectMvpLocal.forEach(select => select.selectedIndex = 0);
+    selectMvpVisitante.forEach(select => select.selectedIndex = 0);
+  }
+
+  function actualizarTabla() {
+    tablaBody.innerHTML = '';
+    encuentros.forEach((encuentro, index) => {
+      const row = tablaBody.insertRow();
+      const cellNumero = row.insertCell();
+      const cellLocal = row.insertCell();
+      const cellMvpLocal = row.insertCell();
+      const cellVisitante = row.insertCell();
+      const cellMvpVisitante = row.insertCell();
+      const cellAcciones = row.insertCell();
+
+      cellNumero.textContent = index + 1;
+      cellLocal.textContent = encuentro.equipoLocal;
+      cellMvpLocal.textContent = encuentro.mvpsLocal.join(', ');
+      cellVisitante.textContent = encuentro.equipoVisitante;
+      cellMvpVisitante.textContent = encuentro.mvpsVisitante.join(', ');
+
+      const botonEditar = document.createElement('button');
+      botonEditar.textContent = 'Editar';
+      botonEditar.onclick = () => editarEncuentro(index);
+      cellAcciones.appendChild(botonEditar);
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = 'Eliminar';
+      botonEliminar.onclick = () => eliminarEncuentro(index);
+      cellAcciones.appendChild(botonEliminar);
+    });
+  }
+
+  function editarEncuentro(index) {
+    const encuentro = encuentros[index];
+    selectEquipoLocal.value = encuentro.equipoLocal;
+    selectEquipoVisitante.value = encuentro.equipoVisitante;
+    populatePlayerSelects(encuentro.equipoLocal, true);
+    populatePlayerSelects(encuentro.equipoVisitante, false);
+
+    selectMvpLocal.forEach((select, i) => {
+      select.value = encuentro.mvpsLocal[i] || '';
+    });
+    selectMvpVisitante.forEach((select, i) => {
+      select.value = encuentro.mvpsVisitante[i] || '';
+    });
+
+    const guardarBoton = document.querySelector('#formulario-encuentro button');
+    guardarBoton.textContent = 'Actualizar Encuentro';
+    guardarBoton.onclick = () => actualizarEncuentro(index);
+  }
+
+  function actualizarEncuentro(index) {
+    const equipoLocalTag = selectEquipoLocal.value;
+    const equipoVisitanteTag = selectEquipoVisitante.value;
+    const mvpsLocal = selectMvpLocal.map(select => select.value).filter(mvp => mvp !== "");
+    const mvpsVisitante = selectMvpVisitante.map(select => select.value).filter(mvp => mvp !== "");
+
+    if (equipoLocalTag && equipoVisitanteTag) {
+      encuentros[index] = {
+        "equipoLocal": equipoLocalTag,
+        "equipoVisitante": equipoVisitanteTag,
+        "mvpsLocal": mvpsLocal,
+        "mvpsVisitante": mvpsVisitante
+      };
+      actualizarTabla();
+      limpiarFormulario();
+      const guardarBoton = document.querySelector('#formulario-encuentro button');
+      guardarBoton.textContent = 'Guardar Encuentro';
+      guardarBoton.onclick = guardarEncuentro;
+    } else {
+      alert('Por favor, selecciona ambos equipos.');
+    }
+  }
+
+  function eliminarEncuentro(index) {
+    if (confirm('¿Estás seguro de eliminar este encuentro?')) {
+      encuentros.splice(index, 1);
+      actualizarTabla();
+    }
+  }
+
+  function descargarJson() {
+    const data = {
+      "ronda": 1,
+      "encuentros": encuentros.map(encuentro => ({
+        "equipoLocal": encuentro.equipoLocal,
+        "equipoVisitante": encuentro.equipoVisitante,
+        "mvpsLocal": encuentro.mvpsLocal,
+        "mvpsVisitante": encuentro.mvpsVisitante
+      }))
+    };
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  // Cargar la información de los equipos al cargar la página
+  loadTeams();
+  actualizarTabla(); // Inicializar la tabla vacía
 </script>
-  {% include g-analytics.html %}
+
+{% include g-analytics.html %}
 
 
 

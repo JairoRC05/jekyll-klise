@@ -1,0 +1,345 @@
+---
+layout:
+permalink: /super-copa-xforce.html
+title: SUPER COPA-XFORCE
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top SCXF">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/SUPER-COPA-XFORCE.webp" alt="SCXF" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <!-- <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span> -->
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home SCXF">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/SCXF.webp" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/SCXF.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container teams-table">
+
+    <h1 class="teams-title text-center">
+      SUPER COPA-XFORCE
+    </h1>
+
+    <p>Con motivo del aniversario de XF05 E-Sports y con el respaldo de la Liga Indigo, se presenta este torneo clasificatorio para la Super Copa XForce. ¡Atención equipos! La batalla por un lugar en la Super Copa (julio) es totalmente gratuita. Manténganse atentos a la Liga Indigo durante el mes de junio, donde se anunciará el formato y las reglas de este emocionante clasificatorio. Los 16 conjuntos con el mejor desempeño avanzarán a la Super Copa, donde además competirán por un prizepool total de $5,000 pesos mexicanos, distribuido entre el primer y segundo lugar.</p>
+
+
+    <table id="equiposTable"  class="table table-striped nowrap">
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Tag</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Total Puntos</th>
+          </tr>
+      </thead>
+      <tbody>
+      </tbody>
+  </table>
+
+  </div>
+
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#equiosTable").DataTable(
+        {
+        caption: 'REGISTRO LIGA INDIGO',
+        layout: {
+        topStart: {
+           
+            search: {
+                placeholder: 'Buscar: ID, TAG, TEAM, ORG'
+            }
+        },
+        topEnd: {
+          pageLength: {
+                menu: [ 25, 50, 100, 150 ]
+            }
+        },
+        bottomEnd: {
+            paging: {
+                numbers: 3
+            }
+        }
+    },
+        responsive: true,
+        paging: true,
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay información",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+          "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ Entradas",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "",
+          "zeroRecords": "Sin resultados encontrados",
+          "paginate": {
+            "first": "<",
+            "last": ">",
+            "next": ">>",
+            "previous": "<<"
+          }
+        }
+      }
+    );
+
+    });
+  </script>
+  
+
+
+  <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: '/assets/temporadas/temporadas.json', 
+            dataType: 'json',
+            success: function(data) {
+                var equipos = data.equipos;
+                var equiposConTotal = [];
+    
+                $.each(equipos, function(index, equipo) {
+                    var totalPuntos = 0;
+                    totalPuntos += parseInt(equipo.enero || 0);
+                    totalPuntos += parseInt(equipo.febrero || 0);
+                    totalPuntos += parseInt(equipo.marzo || 0);
+                    totalPuntos += parseInt(equipo.abril || 0);
+                    totalPuntos += parseInt(equipo.mayo || 0);
+                    totalPuntos += parseInt(equipo.junio || 0);
+    
+                    equiposConTotal.push({
+                        nombre: equipo.nombre,
+                        tag: equipo.tag,
+                        enero: equipo.enero,
+                        febrero: equipo.febrero,
+                        marzo: equipo.marzo,
+                        abril: equipo.abril,
+                        mayo: equipo.mayo,
+                        junio: equipo.junio,
+                        totalPuntos: totalPuntos
+                    });
+                });
+    
+                // Ordenar los equipos por total de puntos de forma descendente
+                equiposConTotal.sort(function(a, b) {
+                    return b.totalPuntos - a.totalPuntos;
+                });
+    
+                var tableData = [];
+                $.each(equiposConTotal, function(index, equipoOrdenado) {
+                    tableData.push([
+                        index + 1, // Asignar el número de orden basado en la clasificación
+                        equipoOrdenado.nombre,
+                        equipoOrdenado.tag,
+                        equipoOrdenado.enero,
+                        equipoOrdenado.febrero,
+                        equipoOrdenado.marzo,
+                        equipoOrdenado.abril,
+                        equipoOrdenado.mayo,
+                        equipoOrdenado.junio,
+                        equipoOrdenado.totalPuntos
+                    ]);
+                });
+    
+                $('#equiposTable').DataTable({
+                    data: tableData,
+                    columns: [
+                        { title: "#", orderable: false }, 
+                        { title: "Nombre" },
+                        { title: "Tag" },
+                        { title: "Enero" },
+                        { title: "Febrero" },
+                        { title: "Marzo" },
+                        { title: "Abril" },
+                        { title: "Mayo" },
+                        { title: "Junio" },
+                        { title: "Total Puntos" }
+                    ],
+                    caption: 'REGISTRO LIGA INDIGO',
+                    pageLength: 16, 
+                    layout: {
+                        topStart: {
+                            search: {
+                                placeholder: 'Buscar: Nombre, Tag'
+                            }
+                        },
+                        topEnd: {
+                            pageLength: {
+                                menu: [ 50, 100, 150 ]
+                            }
+                        },
+                        bottomEnd: {
+                            paging: {
+                                numbers: 3
+                            }
+                        }
+                    },
+                    responsive: true,
+                    paging: true,
+                    language: {
+                        "decimal": "",
+                        "emptyTable": "No hay información",
+                        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                        "infoPostFix": "",
+                        "thousands": ",",
+                        "lengthMenu": "Mostrar _MENU_ Entradas",
+                        "loadingRecords": "Cargando...",
+                        "processing": "Procesando...",
+                        "search": "",
+                        "zeroRecords": "Sin resultados encontrados",
+                        "paginate": {
+                            "first": "<",
+                            "last": ">",
+                            "next": ">>",
+                            "previous": "<<"
+                        }
+                    },
+                 
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error al cargar el JSON:", error);
+                $('#equiposTable').html('<p>Error al cargar los datos.</p>');
+            }
+        });
+    });
+    </script>
+
+  {% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

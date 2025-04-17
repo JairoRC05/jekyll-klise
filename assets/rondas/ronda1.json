@@ -1,0 +1,125 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "HOENN",
+      "equipoVisitante": "COL",
+      "mvpsLocal": [
+        "DønLux",
+        "Texaspurguis",
+        "BLK-luis205"
+      ],
+      "mvpsVisitante": [
+        "COL・Toreto",
+        "COL・Toreto",
+        "COL・Toreto"
+      ]
+    },
+    {
+      "equipoLocal": "OVG",
+      "equipoVisitante": "RK",
+      "mvpsLocal": [
+        "DemoliZM竜",
+        "DemoliZM竜",
+        "亗PѕуDÜÇҜ亗"
+      ],
+      "mvpsVisitante": [
+        "ЯK・Sunnyあ",
+        "ЯK・Belz돈",
+        "ЯK・ㅋKarma"
+      ]
+    },
+    {
+      "equipoLocal": "TAD",
+      "equipoVisitante": "RUBY",
+      "mvpsLocal": [
+        "AllenDartツ",
+        "AllenDartツ"
+      ],
+      "mvpsVisitante": [
+        "DFs・Charbet",
+        "DFs・DRAG8Dz"
+      ]
+    },
+    {
+      "equipoLocal": "PLAT",
+      "equipoVisitante": "MEXA",
+      "mvpsLocal": [
+        "DFs・AlexT",
+        "DFs・Winter"
+      ],
+      "mvpsVisitante": [
+        "MeXa・Kory",
+        "MeXa・Ismael"
+      ]
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "GX",
+      "mvpsLocal": [
+        "RNT・TVPablo",
+        "RNT・TVPablo",
+        "RNT・Suo力"
+      ],
+      "mvpsVisitante": [
+        "RNT・ČryptoX",
+        "RNT・ČryptoX",
+        "RNT・ČryptoX"
+      ]
+    },
+    {
+      "equipoLocal": "7Z",
+      "equipoVisitante": "MT",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "E",
+      "equipoVisitante": "SM",
+      "mvpsLocal": [
+        "SPC・Rodman",
+        "SPC・Lolfe教"
+      ],
+      "mvpsVisitante": [
+        "$M・Finn",
+        "$M・Krosty"
+      ]
+    },
+    {
+      "equipoLocal": "POA",
+      "equipoVisitante": "EVL",
+      "mvpsLocal": [
+        "AÐ • Doni",
+        "AÐ • Caleb"
+      ],
+      "mvpsVisitante": [
+        "KingAttacus",
+        "天竜•Banjo"
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "PEARL",
+      "mvpsLocal": [
+        "STMN • Frank",
+        "STMN • Regi"
+      ],
+      "mvpsVisitante": [
+        "DFs・Fer",
+        "DFs・PR0MDFK"
+      ]
+    },
+    {
+      "equipoLocal": "TSR",
+      "equipoVisitante": "DMD",
+      "mvpsLocal": [
+        "T星・DaniVal",
+        "T星・TonyVal"
+      ],
+      "mvpsVisitante": [
+        "NB・Charly",
+        "AÐ・Jumperメ"
+      ]
+    }
+  ]
+}

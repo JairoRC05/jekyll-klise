@@ -1,0 +1,143 @@
+{
+    "nombre": "HG SALARIO MINIMO",
+    "tag": "SM",
+    "mvps": [
+        {
+            "jugador": "$M・Finn",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "E"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "MT"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                }
+            ]
+        },
+        {
+            "jugador": "$M・Krosty",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "E"
+                },
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 3,
+                    "acumulado": 1,
+                    "contra": "MT"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "EVL"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "AD"
+                }
+            ]
+        },
+        {
+            "jugador": "$M・Alndingo",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 1,
+                    "contra": "POA"
+                }
+            ]
+        },
+        {
+            "jugador": "$M • Perron",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "EVL"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 2,
+                    "contra": "PEARL"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 2,
+                    "contra": "POA"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                },
+                {
+                    "ronda": 9,
+                    "acumulado": 2,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "AD"
+                }
+            ]
+        },
+        {
+            "jugador": "$M・Stimpy",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                }
+            ]
+        },
+        {
+            "jugador": "P£・么quario",
+            "avatar": "male1",
+            "tag": "SM",
+            "partidos": [
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "AD"
+                }
+            ]
+        }
+    ]
+}

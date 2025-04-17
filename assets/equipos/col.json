@@ -3,117 +3,49 @@
     "tag": "COL",
     "mvps": [
         {
-            "jugador": "GW3・Goom",
+            "jugador": "GW7・Goom",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 3,
-                    "acumulado": 2,
-                    "contra": "COL"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Toreto",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 3,
-                    "acumulado": 2,
-                    "contra": "COL"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Juaɴ0x",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Zabu",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Bogo",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "NEO"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Puyol",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "NEO"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Mongral",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 8,
-                    "acumulado": 2,
-                    "contra": "TAD"
-                },
-                {
-                    "ronda": 9,
-                    "acumulado": 1,
-                    "contra": "PLAT"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Roshek",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 9,
-                    "acumulado": 1,
-                    "contra": "PLAT"
-                }
-            ]
+            "tag": "COL"
         },
         {
             "jugador": "COL・Saphiro",
             "avatar": "male1",
-            "tag": "COL",
-            "partidos": [ 
-                {
-                    "ronda": 5,
-                    "acumulado": 2,
-                    "contra": "RUBY"
-                }
-            ]
+            "tag": "COL"
         }
     ]
 }

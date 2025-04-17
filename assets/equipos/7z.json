@@ -1,40 +1,40 @@
 {
-    "nombre": "SPC ENIGMA",
-    "tag": "E",
+    "nombre": "7Z E-SPORTS",
+    "tag": "7Z",
     "mvps": [
         {
-            "jugador": "SPC・Rodman",
+            "jugador": "7z・Hades",
             "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "SPC・Lolfe教",
+            "jugador": "7z・Tokito",
             "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "SPC・Brick魔",
+            "jugador": "7z・Rhz04",
             "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "SPC・Frice",
+            "jugador": "Bellvii",
             "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "SPC・May",
-            "avatar": "female1",
+            "jugador": "7z・Mystic",
+            "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "SPC・Kyoru空",
-            "avatar": "female1",
+            "jugador": "Raydemort",
+            "avatar": "male1",
             "tag": "E"
         },
         {
-            "jugador": "Gеnzo若林!",
-            "avatar": "female1",
+            "jugador": "7z・Nishino",
+            "avatar": "male1",
             "tag": "E"
         }
     ]

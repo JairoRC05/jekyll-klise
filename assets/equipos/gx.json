@@ -5,114 +5,32 @@
         {
             "jugador": "RNT・ČryptoX",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 3,
-                    "contra": "NEO"
-                },
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "RK"
-                },
-                {
-                    "ronda": 3,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "RUBY"
-                },
-                {
-                    "ronda": 6,
-                    "acumulado": 2,
-                    "contra": "TUT"
-                },
-                {
-                    "ronda": 7,
-                    "acumulado": 1,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "GX"
         },
         {
             "jugador": "RNT・DrFix銀",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "RK"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "RUBY"
-                },
-                {
-                    "ronda": 10,
-                    "acumulado": 1,
-                    "contra": "HOENN"
-                }
-            ]
+            "tag": "GX"
         },
         {
             "jugador": "RNT・Pikito",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 3,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                }
-            ]
+            "tag": "GX"
         },
         {
             "jugador": "RNT・PikaBro",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 6,
-                    "acumulado": 1,
-                    "contra": "TUT"
-                }
-            ]
+            "tag": "GX"
         },
         {
             "jugador": "RNT・Shoyo銀",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 7,
-                    "acumulado": 1,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "GX"
         },
         {
             "jugador": "RNT・Zulo銀",
             "avatar": "male1",
-            "tag": "GX",
-            "partidos": [ 
-                {
-                    "ronda": 8,
-                    "acumulado": 2,
-                    "contra": "PLAT"
-                },
-                {
-                    "ronda": 10,
-                    "acumulado": 2,
-                    "contra": "HOENN"
-                }
-            ]
+            "tag": "GX"
         }
     ]
   }

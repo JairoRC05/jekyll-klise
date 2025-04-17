@@ -1,0 +1,67 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    margin-top: 10px;
+  
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+  
+      .card-icon-mvp {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1rem;
+  
+        img {
+          max-width: 90px; /* Ajusta el tamaño máximo según necesites */
+          max-height: 90px;
+        }
+  
+        .font-weight-bold.mx-2 {
+          font-size: 1.2rem;
+          color: #555;
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+  
+      .card-subtitle {
+        margin-bottom: 0.75rem !important;
+        font-size: 1rem;
+        color: #777 !important;
+        text-align: center;
+      }
+  
+      .card-info-mvp {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+  
+          &.text-left {
+            text-align: left;
+          }
+  
+          &.text-right {
+            text-align: right;
+          }
+  
+          li {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+    }
+  }

@@ -5,149 +5,32 @@
         {
             "jugador": "ЯK・Sunnyあ",
             "avatar": "male1",
-            "tag": "RK",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "OVG"
-                },
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "GX"
-                },
-                {
-                    "ronda": 6,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                }
-            ]
+            "tag": "RK"
         },
         {
             "jugador": "нореи'т",
             "avatar": "male1",
-            "tag": "RK",
-            "partidos": [ 
-               
-                {
-                    "ronda": 3,
-                    "acumulado": 2,
-                    "contra": "COL"
-                }
-                
-            ]
+            "tag": "RK"
         },
         {
             "jugador": "ЯK・El_Vampi",
             "avatar": "male1",
-            "tag": "RK",
-            "partidos": [ 
-               
-                {
-                    "ronda": 5,
-                    "acumulado": 1,
-                    "contra": "HOENN"
-                }
-                
-            ]
+            "tag": "RK"
         },
         {
             "jugador": "ЯK・Sol",
             "avatar": "female1",
-            "tag": "RK",
-            "partidos": [ 
-            {
-                "ronda": 9,
-                "acumulado": 1,
-                "contra": "TUT"
-            },
-            {
-                "ronda": 10,
-                "acumulado": 1,
-                "contra": "TAD"
-            }
-                
-            ]
+            "tag": "RK"
         },
         {
             "jugador": "ЯK・ㅋKarma",
             "avatar": "male1",
-            "tag": "RK",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "OVG"
-                },
-                {
-                    "ronda": 2,
-                    "acumulado": 1,
-                    "contra": "GX"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "NEO"
-                },
-                {
-                    "ronda": 6,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                },
-                {
-                    "ronda": 7,
-                    "acumulado": 1,
-                    "contra": "RUBY"
-                },
-                {
-                    "ronda": 10,
-                    "acumulado": 1,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "RK"
         },
         {
             "jugador": "ЯK・Belz돈",
             "avatar": "male1",
-            "tag": "RK",
-            "partidos": [ 
-                {
-                    "ronda": 1,
-                    "acumulado": 1,
-                    "contra": "OVG"
-                },
-                {
-                    "ronda": 4,
-                    "acumulado": 1,
-                    "contra": "NEO"
-                },
-                {
-                    "ronda": 5,
-                    "acumulado": 1,
-                    "contra": "HOENN"
-                },
-                {
-                    "ronda": 6,
-                    "acumulado": 1,
-                    "contra": "MEXA"
-                },
-                {
-                    "ronda": 7,
-                    "acumulado": 1,
-                    "contra": "RUBY"
-                },
-                {
-                    "ronda": 9,
-                    "acumulado": 2,
-                    "contra": "TUT"
-                },
-                {
-                    "ronda": 10,
-                    "acumulado": 1,
-                    "contra": "TAD"
-                }
-            ]
+            "tag": "RK"
         }
     ]
 }

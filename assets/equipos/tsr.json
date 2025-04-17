@@ -1,0 +1,116 @@
+{
+    "nombre": "TEAM STAR",
+    "tag": "TSR",
+    "mvps": [
+        {
+            "jugador": "T星・DaniVal",
+            "avatar": "male1",
+            "tag": "TSR",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                }
+            ]
+        },
+        {
+            "jugador": "T星・TonyVal",
+            "avatar": "male1",
+            "tag": "TSR",
+            "partidos": [
+                {
+                    "ronda": 1,
+                    "acumulado": 1,
+                    "contra": "DMD"
+                },
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "SM"
+                },
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "AD"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 2,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 6,
+                    "acumulado": 2,
+                    "contra": "STMN"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "MT"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                }
+            ]
+        },
+        {
+            "jugador": "宙V・CLazo",
+            "avatar": "male1",
+            "tag": "TSR",
+            "partidos": [
+                {
+                    "ronda": 2,
+                    "acumulado": 1,
+                    "contra": "SM"
+                },
+                {
+                    "ronda": 11,
+                    "acumulado": 1,
+                    "contra": "7Z"
+                }
+            ]
+        },
+        {
+            "jugador": "T星・Floppis",
+            "avatar": "male1",
+            "tag": "TSR",
+            "partidos": [
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "AD"
+                },
+                {
+                    "ronda": 5,
+                    "acumulado": 1,
+                    "contra": "TSR"
+                },
+                {
+                    "ronda": 7,
+                    "acumulado": 1,
+                    "contra": "MT"
+                },
+                {
+                    "ronda": 8,
+                    "acumulado": 2,
+                    "contra": "EVL"
+                }
+            ]
+        },
+        {
+            "jugador": "宙V・Hungry",
+            "avatar": "male1",
+            "tag": "TSR",
+            "partidos": [
+                {
+                    "ronda": 4,
+                    "acumulado": 1,
+                    "contra": "AD"
+                }
+            ]
+        }
+    ]
+}
