@@ -1,0 +1,113 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "HOENN",
+      "equipoVisitante": "RUBY",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "TUT",
+      "equipoVisitante": "RK",
+      "mvpsLocal": [
+        "troncioNara",
+        "Orziie",
+        "7IBU"
+      ],
+      "mvpsVisitante": [
+        "ЯK・Belz돈",
+        "ЯK・Sol",
+        "ЯK・Belz돈"
+      ]
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        "RNT・TVPablo",
+        "RNT・Luffy12",
+        "RNT・TVPablo"
+      ],
+      "mvpsVisitante": [
+        "AllenDartツ",
+        "AllenDartツ",
+        "EL_CHEETO"
+      ]
+    },
+    {
+      "equipoLocal": "PLAT",
+      "equipoVisitante": "COL",
+      "mvpsLocal": [
+        "DFs・Forti",
+        "DFs・Winter"
+      ],
+      "mvpsVisitante": [
+        "COL・Roshek",
+        "COL・Mongral"
+      ]
+    },
+    {
+      "equipoLocal": "TSR",
+      "equipoVisitante": "PEARL",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "E",
+      "equipoVisitante": "POA",
+      "mvpsLocal": [
+        "SPC・Lolfe教",
+        "SPC・May"
+      ],
+      "mvpsVisitante": [
+        "AÐ • Doni",
+        "AÐ • Doni"
+      ]
+    },
+    {
+      "equipoLocal": "EVL",
+      "equipoVisitante": "MT",
+      "mvpsLocal": [
+        "EVL•Dop",
+        "KingAttacus",
+        "KingAttacus"
+      ],
+      "mvpsVisitante": [
+        "Xerg",
+        "ArkBlueDark",
+        "Xerg"
+      ]
+    },
+    {
+      "equipoLocal": "7Z",
+      "equipoVisitante": "AD",
+      "mvpsLocal": [
+        "Bellvii",
+        "7z・Tokito"
+      ],
+      "mvpsVisitante": [
+        "AÐ・MerGas",
+        "AÐ・DrMarioZ"
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "SM",
+      "mvpsLocal": [
+        "STMN • Regi",
+        "STMN • Frank"
+      ],
+      "mvpsVisitante": [
+        "$M • Perron",
+        "$M • Perron"
+      ]
+    }
+  ]
+}

@@ -1,309 +1,320 @@
 rondas:
 # RONDA 1
   - ronda: RONDA 1
-    fecha: 17-19 MAR
+    fecha: 23-25 ABR
     hora: "19:00"
     partidos:
     - equipo1: HOENN
-      equipo2: COL
-      resultado: 2-1
+      equipo2: DTY
+      resultado: VS
 
-    - equipo1: GX
+    - equipo1: STMN
       equipo2: NEO
-      resultado: 1-2
+      resultado: VS
 
-    - equipo1: TAD
-      equipo2: RUBY
-      resultado: 2-0
+    - equipo1: SM
+      equipo2: PE
+      resultado: VS
 
-    - equipo1: ЯK
+    - equipo1: RK
       equipo2: OVG
-      resultado: 1-2
+      resultado: VS
 
-    - equipo1: PLAT
-      equipo2: MEXA
-      resultado: 2-0
+    - equipo1: DBO
+      equipo2: ZAFIRO
+      resultado: VS
     
-    - equipo1: TUT
-      equipo2: DES
+    - equipo1: BD
+      equipo2: AD
+      resultado: VS
 
 # RONDA 2
   - ronda: RONDA 2
-    fecha: 20-21 MAR
+    fecha: 28 ABR
     hora: "19:00"
     partidos:
-    - equipo1: TUT
+    - equipo1: BD
       equipo2: HOENN
-      resultado: 2-1
+      resultado: VS
 
-    - equipo1: COL
+    - equipo1: DTY
       equipo2: NEO
-      resultado: 0-2
+      resultado: VS
 
-    - equipo1: GX
-      equipo2: ЯK
-      resultado: 2-0
+    - equipo1: STMN
+      equipo2: RK
+      resultado: VS
 
-    - equipo1: RUBY
-      equipo2: PLAT
-      resultado: 0-2
+    - equipo1: PE
+      equipo2: DBO
+      resultado: VS
 
-    - equipo1: MEXA
+    - equipo1: ZAFIRO
       equipo2: OVG
-      resultado: 1-2
+      resultado: VS
     
-    - equipo1: TAD
-      equipo2: DES
+    - equipo1: SM
+      equipo2: AD
+      resultado: VS
 
 # RONDA 3
   - ronda: RONDA 3
-    fecha: 24 MAR
+    fecha: 29 ABR
     hora: "19:00"
     partidos:
     - equipo1: HOENN
       equipo2: NEO
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: TAD
-      equipo2: TUT
-      resultado: 2-0
+    - equipo1: SM
+      equipo2: BD
+      resultado: VS
 
-    - equipo1: COL
-      equipo2: ЯK
-      resultado: 0-2
+    - equipo1: DTY
+      equipo2: RK
+      resultado: VS
 
-    - equipo1: MEXA
-      equipo2: GX
-      resultado: 0-2
+    - equipo1: ZAFIRO
+      equipo2: STMN
+      resultado: VS
 
-    - equipo1: RUBY
+    - equipo1: PE
       equipo2: OVG
-      resultado: 0-2
+      resultado: VS
     
-    - equipo1: PLAT
-      equipo2: DES
+    - equipo1: DBO
+      equipo2: AD
+      resultado: VS
 
 # RONDA 4
   - ronda: RONDA 4
-    fecha: 25 MAR
+    fecha: 30 ABR
     hora: "19:00"
     partidos:
-    - equipo1: TAD
+    - equipo1: SM
       equipo2: HOENN
-      resultado: 0-2
+      resultado: VS
 
-    - equipo1: COL
-      equipo2: MEXA
-      resultado: 2-0
+    - equipo1: DTY
+      equipo2: ZAFIRO
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: ЯK
-      resultado: 2-0
+      equipo2: RK
+      resultado: VS
 
-    - equipo1: TUT
-      equipo2: PLAT
-      resultado: 2-1
+    - equipo1: BD
+      equipo2: DBO
+      resultado: VS
 
-    - equipo1: RUBY
-      equipo2: GX
-      resultado: 0-2
+    - equipo1: PE
+      equipo2: STMN
+      resultado: VS
 
     - equipo1: OVG
-      equipo2: DES
+      equipo2: AD
+      resultado: VS 
 
 # RONDA 5
   - ronda: RONDA 5
-    fecha: 26 MAR
+    fecha:  1 MAY
     hora: "19:00"
     partidos:
     - equipo1: HOENN
-      equipo2: ЯK
-      resultado: 2-0
+      equipo2: RK
+      resultado: VS
 
-    - equipo1: PLAT
-      equipo2: TAD
-      resultado: 1-2
+    - equipo1: DBO
+      equipo2: SM
+      resultado: VS
 
-    - equipo1: RUBY
-      equipo2: COL
-      resultado: 0-2
+    - equipo1: PE
+      equipo2: DTY
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: MEXA
-      resultado: 0-2
+      equipo2: ZAFIRO
+      resultado: VS
 
     - equipo1: OVG
-      equipo2: TUT
-      resultado: 0-2
+      equipo2: BD
+      resultado: VS
     
-    - equipo1: GX
-      equipo2: DES
+    - equipo1: STMN
+      equipo2: AD
+      resultado: VS
 
 # RONDA 6
   - ronda: RONDA 6
-    fecha: 27 MAR
+    fecha: 2 MAY
     hora: "19:00"
     partidos:
-    - equipo1: PLAT
+    - equipo1: DBO
       equipo2: HOENN
-      resultado: 0-2
+      resultado: VS
 
-    - equipo1: MEXA
-      equipo2: ЯK
-      resultado: 2-1
+    - equipo1: ZAFIRO
+      equipo2: RK
+      resultado: VS
 
-    - equipo1: TAD
+    - equipo1: SM
       equipo2: OVG
-      resultado: 2-1
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: RUBY
-      resultado: 2-0
+      equipo2: PE
+      resultado: VS
 
-    - equipo1: TUT
-      equipo2: GX
-      resultado: 2-1
+    - equipo1: BD
+      equipo2: STMN
+      resultado: VS
     
-    - equipo1: COL
-      equipo2: DES
+    - equipo1: DTY
+      equipo2: AD
+      resultado: VS
 
 # RONDA 7
   - ronda: RONDA 7
-    fecha: 28 MAR
+    fecha: 5 MAY
     hora: "19:00"
     partidos:
     - equipo1: HOENN
-      equipo2: MEXA
-      resultado: 2-0
+      equipo2: ZAFIRO
+      resultado: VS
 
-    - equipo1: PLAT
+    - equipo1: DBO
       equipo2: OVG
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: ЯK
-      equipo2: RUBY
-      resultado: 2-0
+    - equipo1: RK
+      equipo2: PE
+      resultado: VS
 
-    - equipo1: TAD
-      equipo2: GX
-      resultado: 0-2
+    - equipo1: SM
+      equipo2: STMN
+      resultado: VS
 
-    - equipo1: COL
-      equipo2: TUT
-      resultado: 0-2
+    - equipo1: DTY
+      equipo2: BD
+      resultado: VS
     
     - equipo1: NEO
-      equipo2: DES
+      equipo2: AD
+      resultado: VS
 
 # RONDA 8
   - ronda: RONDA 8
-    fecha: 31 MAR
+    fecha: 7 MAY
     hora: "19:00"
     partidos:
     - equipo1: OVG
       equipo2: HOENN
-      resultado: 0-2
+      resultado: VS
 
-    - equipo1: MEXA
-      equipo2: RUBY
-      resultado: 2-0
+    - equipo1: ZAFIRO
+      equipo2: PE
+      resultado: VS
 
-    - equipo1: PLAT
-      equipo2: GX
-      resultado: 2-0
+    - equipo1: DBO
+      equipo2: STMN
+      resultado: VS
 
-    - equipo1: TAD
-      equipo2: COL
-      resultado: 0-2
+    - equipo1: SM
+      equipo2: DTY
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: TUT
-      resultado: 2-1
+      equipo2: BD
+      resultado: VS
     
-    - equipo1: ЯK
-      equipo2: DES
+    - equipo1: RK
+      equipo2: AD
+      resultado: VS
 
 # RONDA 9
   - ronda: RONDA 9
-    fecha: 1 ABR
+    fecha: 8 MAY
     hora: "19:00"
     partidos:
     - equipo1: HOENN
-      equipo2: RUBY
-      resultado: 2-0
+      equipo2: PE
+      resultado: VS
 
     - equipo1: OVG
-      equipo2: GX
-      resultado: 0-2
+      equipo2: STMN
+      resultado: VS
 
-    - equipo1: COL
-      equipo2: PLAT
-      resultado: 2-0
+    - equipo1: DTY
+      equipo2: DBO
+      resultado: VS
 
-    - equipo1: TUT
-      equipo2: ЯK
-      resultado: 2-1
+    - equipo1: BD
+      equipo2: RK
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: TAD
-      resultado: 2-1
+      equipo2: SM
+      resultado: VS
     
-    - equipo1: MEXA
-      equipo2: DES
+    - equipo1: ZAFIRO
+      equipo2: AD
+      resultado: VS
 
 # RONDA 10
   - ronda: RONDA 10
-    fecha: 2-3 ABR
+    fecha: 9-12 MAY
     hora: "19:00"
     partidos:
-    - equipo1: GX
+    - equipo1: STMN
       equipo2: HOENN
-      resultado: 1-2
+      resultado: VS
 
     - equipo1: OVG
-      equipo2: COL
-      resultado: 0-2
+      equipo2: DTY
+      resultado: VS
 
-    - equipo1: TUT
-      equipo2: MEXA
-      resultado: 2-1
+    - equipo1: BD
+      equipo2: ZAFIRO
+      resultado: VS
 
     - equipo1: NEO
-      equipo2: PLAT
-      resultado: 2-0
+      equipo2: DBO
+      resultado: VS
 
-    - equipo1: ЯK
-      equipo2: TAD
-      resultado: 2-1
+    - equipo1: RK
+      equipo2: SM
+      resultado: VS
     
-    - equipo1: RUBY
-      equipo2: DES
+    - equipo1: PE
+      equipo2: AD
+      resultado: VS
 
 # RONDA 11
   - ronda: RONDA 11
-    fecha: 4 ABR
+    fecha: 13 MAY
     hora: "19:00"
     partidos:
-    - equipo1: COL
-      equipo2: GX
-      resultado: 0-2
+    - equipo1: DTY
+      equipo2: STMN
+      resultado: VS
 
-    - equipo1: TUT
-      equipo2: RUBY
-      resultado: 2-0
+    - equipo1: BD
+      equipo2: PE
+      resultado: VS
 
     - equipo1: NEO
       equipo2: OVG
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: TAD
-      equipo2: MEXA
-      resultado: 2-0
+    - equipo1: SM
+      equipo2: ZAFIRO
+      resultado: VS
 
-    - equipo1: ЯK
-      equipo2: PLAT
-      resultado: 2-0
+    - equipo1: RK
+      equipo2: DBO
+      resultado: VS
     
     - equipo1: HOENN
-      equipo2: DES
+      equipo2: AD
+      resultado: VS
 

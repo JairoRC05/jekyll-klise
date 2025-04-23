@@ -985,3 +985,7 @@ background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
     background: #fedc08 !important;
     color: white !important;
   }
+  .bg-flyz{
+    background: #ad0051;
+    background: radial-gradient(circle, rgba(173, 0, 81, 1) 0%, rgba(216, 49, 127, 1) 100%);
+  }

@@ -1,0 +1,115 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "HOENN",
+      "equipoVisitante": "GX",
+      "mvpsLocal": [
+        "BLK-luis205",
+        "TTVXileKira",
+        "DønLux"
+      ],
+      "mvpsVisitante": [
+        "RNT・DrFix銀",
+        "RNT・Zulo銀",
+        "RNT・Zulo銀"
+      ]
+    },
+    {
+      "equipoLocal": "COL",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "TUT",
+      "equipoVisitante": "MEXA",
+      "mvpsLocal": [
+        "Orziie",
+        "Orziie",
+        "7IBU"
+      ],
+      "mvpsVisitante": [
+        "MeXa・Wott",
+        "MeXa・Wott",
+        "MeXa・Wott"
+      ]
+    },
+    {
+      "equipoLocal": "RK",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        "ЯK・Belz돈",
+        "ЯK・Sol",
+        "ЯK・ㅋKarma"
+      ],
+      "mvpsVisitante": [
+        "タTaquito",
+        "ムlixendカモ",
+        "ムlixendカモ"
+      ]
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "PLAT",
+      "mvpsLocal": [
+        "RNT・Suo力",
+        "RNT・Suo力"
+      ],
+      "mvpsVisitante": [
+        "DFs・Forti",
+        "DFs・Яalek"
+      ]
+    },
+    {
+      "equipoLocal": "TSR",
+      "equipoVisitante": "POA",
+      "mvpsLocal": [
+        "T星・TonyVal",
+        "T星・TonyVal"
+      ],
+      "mvpsVisitante": [
+        "AÐ • Caleb",
+        "AÐ • Doni"
+      ]
+    },
+    {
+      "equipoLocal": "7Z",
+      "equipoVisitante": "E",
+      "mvpsLocal": [
+        "7z・Hades",
+        "7z・Mystic"
+      ],
+      "mvpsVisitante": [
+        "SPC・May",
+        "SPC・May"
+      ]
+    },
+    {
+      "equipoLocal": "DMD",
+      "equipoVisitante": "AD",
+      "mvpsLocal": [
+        "NB・Charly",
+        "NB・Charly",
+        "AÐ・Jumperメ"
+      ],
+      "mvpsVisitante": [
+        "AÐ・DrMarioZ",
+        "AÐ・MrKawaii",
+        "AÐ・Icer"
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "EVL",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "PEARL",
+      "equipoVisitante": "MT",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    }
+  ]
+}

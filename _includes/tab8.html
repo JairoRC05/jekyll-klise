@@ -1,0 +1,108 @@
+
+
+{% if post.active8 == "active" %}
+<div
+  class="tab-pane fade show active"
+  id="pills-8"
+  role="tabpanel"
+  aria-labelledby="pills-8-tab"
+  tabindex="0"
+>
+  {% else %}
+  <div
+    class="tab-pane fade"
+    id="pills-8"
+    role="tabpanel"
+    aria-labelledby="pills-8-tab"
+    tabindex="0"
+  >
+    {% endif %} {% include banner-top.html %} {% assign DATE =
+    site.categories.FECHA %} {%- for post in DATE -%}
+    <h1 class="exo-style">{{post.j8}}</h1>
+    <span class="exo">{{post.f8}}</span>
+    {%-endfor-%} {% include banner-bottom.html %}
+
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-8 d-none d-md-block">
+          <div
+            class="d-flex justify-content-center align-items-center"
+            style="position: relative"
+          >
+            <div
+              class="bg-cham"
+              style="
+                clip-path: polygon(
+                  25% 0%,
+                  100% 0%,
+                  75% 100%,
+                  0% 100%
+                );
+                z-index: -1000;
+                position: absolute;
+                width: 400px;
+                height: 100%;
+              "
+            ></div>
+            <img
+              class="animate__animated animate__pulse animate__slow 2s animate__infinite infinite"
+              src="/assets/rounds/ROUND8.webp"
+              alt=""
+              style="
+                position: absolute;
+                width: 100%;
+                z-index: -999;
+              "
+            />
+            <img
+              src="/assets/skins/delphox.webp"
+              alt=""
+              style="width: 550px"
+            />
+            <img src="/assets/gifts/shine.gif" alt=""
+            style="position: absolute; width: 150px; height:
+            150px"">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row team--round mt-2">
+            {% if page.division == "PLATINO" %}
+            
+            {% assign DATE =
+                site.categories.FECHA %} {%- for post in DATE -%}
+                <div class="d-none d-md-block">
+                  <div class="d-flex justify-content-center align-items-center bg-cham bracket-round-list" style="border-radius: 10px;">
+                    <h1 class="exo-style">{{post.f8}}</h1>
+                  </div>
+                </div>
+                  {%-endfor-%} 
+            
+            
+            {% for partido
+            in site.data.gnorte.rondas[7].partidos %}
+            <div class="col-12 col-md-6 col-lg-6 col-xl-12">
+              {% include match-round.html %}
+            </div>
+            {% endfor %} {% else %}
+            
+            {% assign DATE =
+                site.categories.FECHA %} {%- for post in DATE -%}
+                <div class="d-none d-md-block">
+                  <div class="d-flex justify-content-center align-items-center bg-cham bracket-round-list" style="border-radius: 10px;">
+                    <h1 class="exo-style">{{post.f8}}</h1>
+                  </div>
+                </div>
+                  {%-endfor-%} 
+            
+            
+            {% for partido in
+            site.data.gsur.rondas[7].partidos %}
+            <div class="col-12 col-md-6 col-lg-6 col-xl-12">
+              {% include match-round.html %}
+            </div>
+            {% endfor %} {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -63,7 +63,8 @@ color: #ffbe00
   {% include banner-1st.html %}
  
 
-  <div class="container"  id="home">
+
+  <div class="container">
     <div class="teams-table">
       <h1 class="teams-title">CAMPEONATO</h1>
     </div>
@@ -75,26 +76,23 @@ color: #ffbe00
     {% endif %}
 
     
+  </div>
    
 
 
   
-   <div class="d-none d-lg-block">
-    <div class="teams-table" id="rondas">
-      <h1 class="teams-title">RONDAS</h1>
-    </div>
-    <div class="container text-white ">
-      {% include tabs-rondas.html %}
-      {% include rondas-league.html %}
-    </div>
+   <div class="d-none d-lg-block my-5">
+         <div class="container">
+          {% include tabs-rondas.html %}
+          {% include rondas-league.html %}
+         </div>
    </div>
     
-   <div class="d-none d-lg-block">
-    <div class="teams-table" id="mvps">
-      <h1 class="teams-title">MVPS</h1>
-    </div>
-    {% if page.division == "PLATINO" or page.division == "ORO" %}
-    {% include mvps-platino.html %}
+<div class="d-none d-lg-block">
+    
+ <div class="container-fluid p-0">
+  <img src="/assets//backgrounds/MVPS.png" alt="MVPS BANNER" class="img-fluid">
+ </div>
 
     <div class="container d-flex justify-content-center align-items-center">
       <a href="/liga-indigo-mvps" class="button-space">
@@ -104,10 +102,9 @@ color: #ffbe00
           </span>
         </span></a>
     </div>
-   </div>
+</div>
     
-    {% endif %}
-  </div>
+
 
 
   {% include temporada.html %}

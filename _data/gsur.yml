@@ -1,309 +1,320 @@
 rondas:
 # RONDA 1
   - ronda: RONDA 1
-    fecha: 17-19 MAR
+    fecha: 23-25 ABR
     hora: "19:00"
     partidos:
-    - equipo1: STMN
-      equipo2: PEARL
-      resultado: 2-0
+    - equipo1: NS
+      equipo2: TUT
+      resultado: VS
 
-    - equipo1: EVL
-      equipo2: POA
-      resultado: 0-2
+    - equipo1: AOGIRI
+      equipo2: OBS
+      resultado: VS
 
-    - equipo1: E
-      equipo2: SM
-      resultado: 2-0
+    - equipo1: AMT
+      equipo2: 2X1500
+      resultado: VS
 
-    - equipo1: 7Z
+    - equipo1: RNT X
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: TSR
-      equipo2: DMD
-      resultado: 2-0
+    - equipo1: GX
+      equipo2: CL
+      resultado: VS
     
-    - equipo1: AD
-      equipo2: DES
+    - equipo1: TAD
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 2
   - ronda: RONDA 2
-    fecha: 20-21 MAR
+    fecha: 28 ABR
     hora: "19:00"
     partidos:
-    - equipo1: AD
-      equipo2: STMN
-      resultado: 0-2
+    - equipo1: TAD
+      equipo2: NS
+      resultado: VS
 
-    - equipo1: PEARL
-      equipo2: POA
-      resultado: 0-2
+    - equipo1: TUT
+      equipo2: OBS
+      resultado: VS
 
-    - equipo1: EVL
-      equipo2: 7Z
-      resultado: 0-2
+    - equipo1: AOGIRI
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: SM
-      equipo2: TSR
-      resultado: 2-0
+    - equipo1: 2X1500
+      equipo2: GX
+      resultado: VS
 
-    - equipo1: DMD
+    - equipo1: CL
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
     
-    - equipo1: E
-      equipo2: DES
+    - equipo1: AMT
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 3
   - ronda: RONDA 3
-    fecha: 24 MAR
+    fecha: 29 ABR
     hora: "19:00"
     partidos:
-    - equipo1: STMN
-      equipo2: POA
-      resultado: 2-0
+    - equipo1: NS
+      equipo2: OBS
+      resultado: VS
 
-    - equipo1: E
-      equipo2: AD
-      resultado: 2-0
+    - equipo1: AMT
+      equipo2: TAD
+      resultado: VS
 
-    - equipo1: PEARL
-      equipo2: 7Z
-      resultado: 0-2
+    - equipo1: TUT
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: DMD
-      equipo2: EVL
-      resultado: 2-0
+    - equipo1: CL
+      equipo2: AOGIRI
+      resultado: VS
 
-    - equipo1: SM
+    - equipo1: 2X1500
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
     
-    - equipo1: TSR
-      equipo2: DES
+    - equipo1: GX
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 4
   - ronda: RONDA 4
-    fecha: 25 MAR
+    fecha: 30 ABR
     hora: "19:00"
     partidos:
-    - equipo1: E
-      equipo2: STMN
-      resultado: 0-2
+    - equipo1: AMT
+      equipo2: NS
+      resultado: VS
 
-    - equipo1: PEARL
-      equipo2: DMD
-      resultado: 1-2
+    - equipo1: TUT
+      equipo2: CL
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: 7Z
-      resultado: 1-2
+    - equipo1: OBS
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: AD
-      equipo2: TSR
-      resultado: 2-1
+    - equipo1: TAD
+      equipo2: GX
+      resultado: VS
 
-    - equipo1: SM
-      equipo2: EVL
-      resultado: 2-0
+    - equipo1: 2X1500
+      equipo2: AOGIRI
+      resultado: VS
 
     - equipo1: MT
-      equipo2: DES
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 5
   - ronda: RONDA 5
-    fecha: 26 MAR
+    fecha: 1 MAY
     hora: "19:00"
     partidos:
-    - equipo1: STMN
-      equipo2: 7Z
-      resultado: 2-0
+    - equipo1: NS
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: TSR
-      equipo2: E
-      resultado: 1-2
+    - equipo1: GX
+      equipo2: AMT
+      resultado: VS
 
-    - equipo1: SM
-      equipo2: PEARL
-      resultado: 2-0
+    - equipo1: 2X1500
+      equipo2: TUT
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: DMD
-      resultado: 2-0
+    - equipo1: OBS
+      equipo2: CL
+      resultado: VS
 
     - equipo1: MT
-      equipo2: AD
-      resultado: 0-2
+      equipo2: TAD
+      resultado: VS
     
-    - equipo1: EVL
-      equipo2: DES
+    - equipo1: AOGIRI
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 6
   - ronda: RONDA 6
-    fecha: 27 MAR
+    fecha: 2 MAY
     hora: "19:00"
     partidos:
-    - equipo1: TSR
-      equipo2: STMN
-      resultado: 0-2
+    - equipo1: GX
+      equipo2: NS
+      resultado: VS
 
-    - equipo1: DMD
-      equipo2: 7Z
-      resultado: 0-2
+    - equipo1: CL
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: E
+    - equipo1: AMT
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: SM
-      resultado: 1-2
+    - equipo1: OBS
+      equipo2: 2X1500
+      resultado: VS
 
-    - equipo1: AD
-      equipo2: EVL
-      resultado: 2-0
+    - equipo1: TAD
+      equipo2: AOGIRI
+      resultado: VS
     
-    - equipo1: PEARL
-      equipo2: DES
+    - equipo1: TUT
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 7
   - ronda: RONDA 7
-    fecha: 28 MAR
+    fecha: 5 MAY
     hora: "19:00"
     partidos:
-    - equipo1: STMN
-      equipo2: DMD
-      resultado: 2-0
+    - equipo1: NS
+      equipo2: CL
+      resultado: VS
 
-    - equipo1: TSR
+    - equipo1: GX
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: 7Z
-      equipo2: SM
-      resultado: 2-0
+    - equipo1: RNT X
+      equipo2: 2X1500
+      resultado: VS
 
-    - equipo1: E
-      equipo2: EVL
-      resultado: 2-0
+    - equipo1: AMT
+      equipo2: AOGIRI
+      resultado: VS
 
-    - equipo1: PEARL
-      equipo2: AD
-      resultado: 0-2
+    - equipo1: TUT
+      equipo2: TAD
+      resultado: VS
     
-    - equipo1: POA
-      equipo2: DES
+    - equipo1: OBS
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 8
   - ronda: RONDA 8
-    fecha: 31 MAR
+    fecha: 7 MAY
     hora: "19:00"
     partidos:
     - equipo1: MT
-      equipo2: STMN
-      resultado: 0-2
+      equipo2: NS
+      resultado: VS
 
-    - equipo1: DMD
-      equipo2: SM
-      resultado: 0-2
+    - equipo1: CL
+      equipo2: 2X1500
+      resultado: VS
 
-    - equipo1: TSR
-      equipo2: EVL
-      resultado: 2-0
+    - equipo1: GX
+      equipo2: AOGIRI
+      resultado: VS
 
-    - equipo1: E
-      equipo2: PEARL
-      resultado: 2-0
+    - equipo1: AMT
+      equipo2: TUT
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: AD
-      resultado: 0-2
+    - equipo1: OBS
+      equipo2: TAD
+      resultado: VS
     
-    - equipo1: 7Z
-      equipo2: DES
+    - equipo1: RNT X
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 9
   - ronda: RONDA 9
-    fecha: 1 ABR
+    fecha: 8 MAY
     hora: "19:00"
     partidos:
-    - equipo1: STMN
-      equipo2: SM
-      resultado: 2-0
+    - equipo1: NS
+      equipo2: 2X1500
+      resultado: VS
 
     - equipo1: MT
-      equipo2: EVL
-      resultado: 1-2
+      equipo2: AOGIRI
+      resultado: VS
 
-    - equipo1: PEARL
-      equipo2: TSR
-      resultado: 0-2
+    - equipo1: TUT
+      equipo2: GX
+      resultado: VS
 
-    - equipo1: AD
-      equipo2: 7Z
-      resultado: 0-2
+    - equipo1: TAD
+      equipo2: RNT X
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: E
-      resultado: 0-2
+    - equipo1: OBS
+      equipo2: AMT
+      resultado: VS
     
-    - equipo1: DMD
-      equipo2: DES
+    - equipo1: CL
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 10
   - ronda: RONDA 10
-    fecha: 2-3 ABR
+    fecha: 9-12 MAY
     hora: "19:00"
     partidos:
-    - equipo1: EVL
-      equipo2: STMN
-      resultado: 0-2
+    - equipo1: AOGIRI
+      equipo2: NS
+      resultado: VS
 
     - equipo1: MT
-      equipo2: PEARL
-      resultado: 0-0
+      equipo2: TUT
+      resultado: VS
 
-    - equipo1: AD
-      equipo2: DMD
-      resultado: 1-2
+    - equipo1: TAD
+      equipo2: CL
+      resultado: VS
 
-    - equipo1: POA
-      equipo2: TSR
-      resultado: 0-2
+    - equipo1: OBS
+      equipo2: GX
+      resultado: VS
 
-    - equipo1: 7Z
-      equipo2: E
-      resultado: 2-0
+    - equipo1: RNT X
+      equipo2: AMT
+      resultado: VS
     
-    - equipo1: SM
-      equipo2: DES
+    - equipo1: 2X1500
+      equipo2: ENIGMA
+      resultado: VS
 
 # RONDA 11
   - ronda: RONDA 11
-    fecha: 4 ABR
+    fecha: 13 MAY
     hora: "19:00"
     partidos:
-    - equipo1: PEARL
-      equipo2: EVL
-      resultado: 0-0
+    - equipo1: TUT
+      equipo2: AOGIRI
+      resultado: VS
 
-    - equipo1: AD
-      equipo2: SM
-      resultado: 1-2
+    - equipo1: TAD
+      equipo2: 2X1500
+      resultado: VS
 
-    - equipo1: POA
+    - equipo1: OBS
       equipo2: MT
-      resultado: 2-0
+      resultado: VS
 
-    - equipo1: E
-      equipo2: DMD
-      resultado: 0-2
+    - equipo1: AMT
+      equipo2: CL
+      resultado: VS
 
-    - equipo1: 7Z
-      equipo2: TSR
-      resultado: 2-0
+    - equipo1: RNT X
+      equipo2: GX
+      resultado: VS
     
-    - equipo1: STMN
-      equipo2: DES
+    - equipo1: NS
+      equipo2: ENIGMA
+      resultado: VS
 

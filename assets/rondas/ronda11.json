@@ -1,0 +1,91 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "E",
+      "equipoVisitante": "DMD",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "SM",
+      "equipoVisitante": "AD",
+      "mvpsLocal": [
+        "$M • Perron",
+        "$M・Krosty",
+        "P£・么quario"
+      ],
+      "mvpsVisitante": [
+        "AÐ・Icer",
+        "AÐ・MerGas",
+        "AÐ・DrMarioZ"
+      ]
+    },
+    {
+      "equipoLocal": "POA",
+      "equipoVisitante": "MT",
+      "mvpsLocal": [
+        "AÐ • Doni",
+        "AÐ • Doni"
+      ],
+      "mvpsVisitante": [
+        "ArkBlueDark",
+        "Saturn"
+      ]
+    },
+    {
+      "equipoLocal": "7Z",
+      "equipoVisitante": "TSR",
+      "mvpsLocal": [
+        "7z・Hades",
+        "Bellvii"
+      ],
+      "mvpsVisitante": [
+        "宙V・CLazo",
+        "T星・TonyVal"
+      ]
+    },
+    {
+      "equipoLocal": "EVL",
+      "equipoVisitante": "PEARL",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "COL",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "RK",
+      "equipoVisitante": "PLAT",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "TUT",
+      "equipoVisitante": "RUBY",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "TAD",
+      "equipoVisitante": "MEXA",
+      "mvpsLocal": [
+        "ムlixendカモ",
+        "AllenDartツ"
+      ],
+      "mvpsVisitante": [
+        "MeXa・Quique",
+        "MeXa・Kory"
+      ]
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    }
+  ]
+}
