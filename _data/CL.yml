@@ -3,26 +3,40 @@ team: CHRONOS LEGION
 org:
 activo: true
 jugadores: 
-  - nickname:
-    ID: 
+  - nickname: Jedm愛
+
+    ID: YAK4AAF
+
     avatar: male1
 
-  - nickname: 
-    ID: 
+  - nickname: Latios才
+    ID: LFNKXF1
     avatar: male1
   
-  - nickname: 
-    ID: 
+  - nickname: Kyōツ
+
+    ID: YT7R2HR
     avatar: male1
 
-  - nickname: 
-    ID: 
+  - nickname: Prof.Serna
+
+    ID: 22F41MF
     avatar: male1
  
 
-  - nickname: 
-    ID: 
-    avatar: male1
+  - nickname: Yukƙie
+
+    ID: 63PGCF
+
+    avatar: female1
+ 
+  - nickname: ・Hashi霧・
+    ID: X795T5L
+    avatar: female1
+ 
+  - nickname: Lumina心
+    ID: 97Y0RG3
+    avatar: female1
  
  
 
