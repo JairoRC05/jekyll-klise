@@ -184,3 +184,35 @@
 {% include card-roster.html %}
 {%- endfor -%}
 {% endif %}
+
+
+{% if page.ID == "AMT" %}
+{%- for jugador in site.data.AMT.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "OBS" %}
+{%- for jugador in site.data.OBS.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+
+{% if page.ID == "RNTX" %}
+{%- for jugador in site.data.RNTX.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "SPACE" %}
+{%- for jugador in site.data.SPACE.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "CL" %}
+{%- for jugador in site.data.CL.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}

@@ -97,7 +97,7 @@ sur:
   - equipo: SPACE
     nombre: SPACE VAL
     ID: SPACE
-    link: /equipos/space-val
+    link: /equipos/space-racoons--space-val
     order: 5
     line: 6
     pts:
@@ -132,9 +132,9 @@ sur:
     M10: 0
     M11: 0
 
-  - equipo: RNT X
+  - equipo: RNTX
     nombre: RNT XAPULOVERS
-    ID: RNT
+    ID: RNTX
     link: /equipos/ranked-team--xapulovers
     order: 9
     line: 7

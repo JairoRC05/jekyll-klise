@@ -726,6 +726,10 @@ background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%)
   background: rgb(255,196,0);
   background: radial-gradient(circle, rgba(255,196,0,1) 0%, rgba(230,243,63,1) 100%);
 }
+.RNTX{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
 
 /* ROSA */
 .S7Z{
@@ -736,6 +740,11 @@ background: radial-gradient(circle, rgba(254,56,144,1) 0%, rgba(210,0,94,1) 100%
 .TSR{
   background: rgb(240,10,136);
   background: radial-gradient(circle, rgba(240,10,136,1) 0%, rgba(255,63,168,1) 100%);
+}
+
+.SPACE{
+  background: #AD0D67;
+background: radial-gradient(circle, rgba(173, 13, 103, 1) 0%, rgba(115, 31, 119, 1) 100%);
 }
 
 

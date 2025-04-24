@@ -16,7 +16,7 @@ rondas:
       equipo2: 2X1500
       resultado: VS
 
-    - equipo1: RNT X
+    - equipo1: RNTX
       equipo2: SPACE
       resultado: VS
 
@@ -42,7 +42,7 @@ rondas:
       resultado: VS
 
     - equipo1: AOGIRI
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: 2X1500
@@ -71,7 +71,7 @@ rondas:
       resultado: VS
 
     - equipo1: TUT
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: CL
@@ -100,7 +100,7 @@ rondas:
       resultado: VS
 
     - equipo1: OBS
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: TAD
@@ -121,7 +121,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: NS
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: GX
@@ -154,7 +154,7 @@ rondas:
       resultado: VS
 
     - equipo1: CL
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: AMT
@@ -186,7 +186,7 @@ rondas:
       equipo2: SPACE
       resultado: VS
 
-    - equipo1: RNT X
+    - equipo1: RNTX
       equipo2: 2X1500
       resultado: VS
 
@@ -227,7 +227,7 @@ rondas:
       equipo2: TAD
       resultado: VS
     
-    - equipo1: RNT X
+    - equipo1: RNTX
       equipo2: ENIGMA
       resultado: VS
 
@@ -249,7 +249,7 @@ rondas:
       resultado: VS
 
     - equipo1: TAD
-      equipo2: RNT X
+      equipo2: RNTX
       resultado: VS
 
     - equipo1: OBS
@@ -281,7 +281,7 @@ rondas:
       equipo2: GX
       resultado: VS
 
-    - equipo1: RNT X
+    - equipo1: RNTX
       equipo2: AMT
       resultado: VS
     
@@ -310,7 +310,7 @@ rondas:
       equipo2: CL
       resultado: VS
 
-    - equipo1: RNT X
+    - equipo1: RNTX
       equipo2: GX
       resultado: VS
     

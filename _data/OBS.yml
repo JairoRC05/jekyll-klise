@@ -1,4 +1,4 @@
-tag: MEXA
+tag: OBS
 team: IMPERIO MEXA OBSIDIANA
 org: XFORCE05
 activo: true
@@ -6,12 +6,7 @@ jugadores:
   - nickname: MeXa・Quique
     ID: 5HHKX53
     avatar: male1
-    mvp: true
-    numero: 5
-    m2: 2
-    m3: 2
-    m4: 1
-    
+
   - nickname: MeXa・ Wott
     ID: 8Y586PC
     avatar: male1
@@ -22,30 +17,23 @@ jugadores:
   - nickname: MeXa・Kory
     ID: 7K4TY1F
     avatar: male1
-    mvp: true
-    numero: 1
-
-  - nickname: MeXa・Tory
-    ID: THMG76A
-    avatar: male1
-    mvp: true
-    numero: 1
-    m2: 1
-
-  - nickname: MeXa・Ismael
-    ID: TP5EPHQ
-    avatar: male1
-    mvp: true
-    numero: 1
 
   - nickname: MeXa・SoUriS
     ID: 57HAL9Y
     avatar: male1
+
   - nickname: MeXa・Tony
     ID: 301CYX8
     avatar: male1
 
 
-  - nickname: MeXa*Quique2
+  - nickname: MeXa°Atenea #MeXa*Quique2
     ID: CKCHQ1L
+    avatar: female1
+
+  - nickname: MeXa°ProFE
+    ID: PX60PCH
+
     avatar: male1
+
+

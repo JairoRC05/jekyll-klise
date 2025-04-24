@@ -1,16 +1,16 @@
-tag: TSR
-team: TEAM STAR
-org: VILLANOS E-SPORTS
+tag: SPACE
+team: SPACE VAL
+org: SPACE RACOOS
 activo: true
 jugadores: 
-  - nickname: T星・DaniVal
+  - nickname: 宙V・DaniVal
     ID: CT23992
     avatar: female1
     mvp: true
     numero: 1
     VS1: DMD
 
-  - nickname: T星・TonyVal
+  - nickname: 宙VTonyVal
     ID: RMEPEEA
     avatar: male1
     mvp: true
@@ -22,11 +22,13 @@ jugadores:
   - nickname: COMEMANGO
     ID: F6KNR2G
     avatar: male1
+
   - nickname: Golditto.TTV
     ID: E7ERYF9
     avatar: male1
-  - nickname: T星・Floppis
-    ID: NP03QT
+
+  - nickname: TronciaNara 
+    ID: 9RP17PY
     avatar: male1
     mvp: true
     numero: 1

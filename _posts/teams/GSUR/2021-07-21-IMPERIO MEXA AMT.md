@@ -1,6 +1,6 @@
 ---
 layout: liga-indigo-team
-permalink: /imperio-mexa/--amt
+permalink: /imperio-mexa/--amatista
 categories: TEAM GNORTE
 liga: LIGA INDIGO
 date: 2020-08-29 10:29:20 +0700

@@ -5,7 +5,7 @@ categories: TEAM GNORTE
 date: 2020-08-29 10:29:20 +0700
 title: RNT XAPULOVERS
 team: RNT XAPULOVERS
-ID: RNT X
+ID: RNTX
 region: LAN
 pais: mx
 ligas: 
