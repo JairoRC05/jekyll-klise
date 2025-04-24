@@ -1,4 +1,4 @@
-tag: E
+tag: ENIGMA
 team: SPC ENIGMA
 org: SPC E-SPORTS
 activo: true 
@@ -21,20 +21,16 @@ jugadores:
   - nickname: SPC・Frice
     ID: HR3X0NP
     avatar: male1
+    
   - nickname: SPC・May
     ID: X556TRH
     avatar: female1
-  - nickname: SPC・Brick魔
-    ID: QN0E8LQ
-    avatar: male1
-    mvp: true
-    numero: 3
-    m1: 2
-    m4: 1
+
 
   - nickname: SPC・Kyoru空
     ID: 2L72Q89
     avatar: male1
-  - nickname: Gеnzo若林!
-    ID: EG44F49
+
+  - nickname: SPC・Berny10
+    ID: RH49KXK
     avatar: male1

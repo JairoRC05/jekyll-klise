@@ -1,12 +1,12 @@
 ---
 layout: liga-indigo-team
-permalink: /imperio-mexa/--obsidiana
+permalink: /imperio-mexa/--zafiro
 categories: TEAM GNORTE
 liga: LIGA INDIGO
 date: 2020-08-29 10:29:20 +0700
-title: IMPERIO MEXA
-team: IMPERIO MEXA
-ID: MEXA
+title: IMPERIO MEXA ZAFIRO
+team: IMPERIO MEXA ZAFIRO
+ID: ZAFIRO
 region: LAN
 pais: mx
 ligas: 

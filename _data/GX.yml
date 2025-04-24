@@ -16,12 +16,7 @@ jugadores:
   - nickname: RNT・ČryptoX
     ID: A2AG7X1
     avatar: male1
-    mvp: true
-    numero: 6
-    m1: 3
-    m2: 1
-    m3: 1
-    m4: 1
+
 
   - nickname: RNT・Shoyo銀
     ID: 2CFC54X
@@ -32,6 +27,4 @@ jugadores:
     mvp: true
     numero: 1
     m3: 1
-  - nickname: RNT・PikaBro
-    ID: 668H1XE
-    avatar: male1
+

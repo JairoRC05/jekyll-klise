@@ -17,7 +17,7 @@ rondas:
       resultado: VS
 
     - equipo1: RNT X
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
 
     - equipo1: GX
@@ -50,7 +50,7 @@ rondas:
       resultado: VS
 
     - equipo1: CL
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
     
     - equipo1: AMT
@@ -79,7 +79,7 @@ rondas:
       resultado: VS
 
     - equipo1: 2X1500
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
     
     - equipo1: GX
@@ -111,7 +111,7 @@ rondas:
       equipo2: AOGIRI
       resultado: VS
 
-    - equipo1: MT
+    - equipo1: SPACE
       equipo2: ENIGMA
       resultado: VS
 
@@ -136,7 +136,7 @@ rondas:
       equipo2: CL
       resultado: VS
 
-    - equipo1: MT
+    - equipo1: SPACE
       equipo2: TAD
       resultado: VS
     
@@ -158,7 +158,7 @@ rondas:
       resultado: VS
 
     - equipo1: AMT
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
 
     - equipo1: OBS
@@ -183,7 +183,7 @@ rondas:
       resultado: VS
 
     - equipo1: GX
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
 
     - equipo1: RNT X
@@ -207,7 +207,7 @@ rondas:
     fecha: 7 MAY
     hora: "19:00"
     partidos:
-    - equipo1: MT
+    - equipo1: SPACE
       equipo2: NS
       resultado: VS
 
@@ -240,7 +240,7 @@ rondas:
       equipo2: 2X1500
       resultado: VS
 
-    - equipo1: MT
+    - equipo1: SPACE
       equipo2: AOGIRI
       resultado: VS
 
@@ -269,7 +269,7 @@ rondas:
       equipo2: NS
       resultado: VS
 
-    - equipo1: MT
+    - equipo1: SPACE
       equipo2: TUT
       resultado: VS
 
@@ -303,7 +303,7 @@ rondas:
       resultado: VS
 
     - equipo1: OBS
-      equipo2: MT
+      equipo2: SPACE
       resultado: VS
 
     - equipo1: AMT

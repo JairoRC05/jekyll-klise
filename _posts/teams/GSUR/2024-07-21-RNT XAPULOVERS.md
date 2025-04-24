@@ -1,25 +1,22 @@
 ---
 layout: liga-indigo-team
-permalink: /equipos/7z-e-sports
-categories: TEAM GSUR ENERO
+permalink: /equipos/ranked-team--xapulovers
+categories: TEAM GNORTE
 date: 2020-08-29 10:29:20 +0700
-title: 7Z
-team: 7Z
-ID: 7Z
+title: RNT XAPULOVERS
+team: RNT XAPULOVERS
+ID: RNT X
 region: LAN
 pais: mx
-cxf: "1"
-temporada: SI
-rango: ORO
-sector: CXF
 ligas: 
-puntos: 11
+cxf: 
+puntos: 10
+order: "01"
 line: fire
-order: "02"
-rec1: sup
+rec1: one
 rec2: sup
 rec3: sup
-rec4: win
+rec4: sup
 rec5: ---
 rec6: ---
 rec7: ---
@@ -31,5 +28,3 @@ org:
 secondcolor: 
 cham:
 ---
-
-

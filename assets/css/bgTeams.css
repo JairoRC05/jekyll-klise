@@ -202,6 +202,13 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
 }
 
+
+.PLAGA{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
+}
+
+
 .grGreen{
   background: rgb(0,0,0) !important;
   background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(4,101,70,1) 100%) !important;
@@ -640,7 +647,7 @@ background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
   background: rgb(209,0,0);
 background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
 }
-.E{
+.ENIGMA{
   background: rgb(61,38,154);
 background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
 }
@@ -648,7 +655,15 @@ background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%)
   background: rgb(61,38,154);
 background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
 }
+.PE{
+  background: rgb(61,38,154);
+background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
+}
 .TR{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.DTY{
   background: rgb(64,64,64);
   background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
@@ -657,6 +672,14 @@ background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%)
   background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
 .MEXA{
+  background: rgb(0,104,71);
+  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
+}
+.ZAFIRO{
+  background: rgb(0,104,71);
+  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
+}
+.AMT{
   background: rgb(0,104,71);
   background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
 }
@@ -670,8 +693,28 @@ background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%)
 }
 /* DORADO */
 .AD{
-  background: rgb(241,210,128);
-  background: radial-gradient(circle, rgba(241,210,128,1) 0%, rgba(200,145,16,1) 100%);
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.NS{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.D2X1500{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.AOGIRI{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.BD{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+}
+.DBO{
+  background: rgb(64,64,64);
+  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
 }
 .GGG{
   background: rgb(241,210,128);
@@ -749,6 +792,10 @@ background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100
 
 /* AZUL */
 .TUT{
+  background: rgb(2,126,222);
+  background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
+}
+.CL{
   background: rgb(2,126,222);
   background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
 }

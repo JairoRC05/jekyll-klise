@@ -1,9 +1,9 @@
-tag: 7Z
-team: 7Z E-SPORTS
-org: 7Z E-SPORTS
+tag: NS
+team: NO SMITES
+org: 
 activo: true
 jugadores: 
-  - nickname: 7z・Tokito
+  - nickname: IAMTOKITO
     ID: 820R14M
     avatar: male1
     mvp: true
@@ -11,7 +11,7 @@ jugadores:
     m4: 2
 
 
-  - nickname: 7z・Hades
+  - nickname: Hades地獄
     ID: C5C89CK
     avatar: male1
     mvp: true
@@ -19,22 +19,22 @@ jugadores:
     m3: 2
  
   
-  - nickname: 7z・Mystic
+  - nickname: MysticRLWolf
     ID: 3XG9P67
     avatar: male1
   
-  - nickname: 7z・Nishino
+  - nickname: Nishi-Chan
     ID: 6MH6P69
     avatar: male1
 
-  - nickname:  7z・Rhz04
+  - nickname:  Rhzeta
     ID: MT42FC1
     avatar: male1
     mvp: true
     numero: 2
     m1: 1
 
-  - nickname: Raydemort
-    ID: H8Y27LQ
+  - nickname: Bellvii
+    ID: 18Q9TAH
     avatar: male1
 

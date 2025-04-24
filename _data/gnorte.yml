@@ -4,7 +4,7 @@ rondas:
     fecha: 23-25 ABR
     hora: "19:00"
     partidos:
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: DTY
       resultado: VS
 
@@ -34,7 +34,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: BD
-      equipo2: HOENN
+      equipo2: PLAGA
       resultado: VS
 
     - equipo1: DTY
@@ -62,7 +62,7 @@ rondas:
     fecha: 29 ABR
     hora: "19:00"
     partidos:
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: NEO
       resultado: VS
 
@@ -92,7 +92,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: SM
-      equipo2: HOENN
+      equipo2: PLAGA
       resultado: VS
 
     - equipo1: DTY
@@ -120,7 +120,7 @@ rondas:
     fecha:  1 MAY
     hora: "19:00"
     partidos:
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: RK
       resultado: VS
 
@@ -150,7 +150,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: DBO
-      equipo2: HOENN
+      equipo2: PLAGA
       resultado: VS
 
     - equipo1: ZAFIRO
@@ -178,7 +178,7 @@ rondas:
     fecha: 5 MAY
     hora: "19:00"
     partidos:
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: ZAFIRO
       resultado: VS
 
@@ -208,7 +208,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: OVG
-      equipo2: HOENN
+      equipo2: PLAGA
       resultado: VS
 
     - equipo1: ZAFIRO
@@ -236,7 +236,7 @@ rondas:
     fecha: 8 MAY
     hora: "19:00"
     partidos:
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: PE
       resultado: VS
 
@@ -266,7 +266,7 @@ rondas:
     hora: "19:00"
     partidos:
     - equipo1: STMN
-      equipo2: HOENN
+      equipo2: PLAGA
       resultado: VS
 
     - equipo1: OVG
@@ -314,7 +314,7 @@ rondas:
       equipo2: DBO
       resultado: VS
     
-    - equipo1: HOENN
+    - equipo1: PLAGA
       equipo2: AD
       resultado: VS
 

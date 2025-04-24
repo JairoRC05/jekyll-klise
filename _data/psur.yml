@@ -1,176 +1,141 @@
 sur:
-  - equipo: STMN
-    nombre: STAMINA E-SPORTS
-    ID: STMN
-    link: /equipos/stamina-e-sports
-    order: 1
-    line: 1
-    M1: 3
-    M2: 3
-    M3: 3
-    M4: 3
-    M5: 3
-    M6: 3 
-    M7: 3
-    M8: 3
-    M9: 3
-    M10: 3
-    M11: Z
 
-  - equipo: 7Z
-    nombre: 7Z E-SPORTS
-    ID: 7Z
-    link: /equipos/7z-e-sports
-    order: 2
-    line: 2
-    pts:
-    M1: 3
-    M2: 3
-    M3: 3
-    M4: 2
-    M5: 0
-    M6: 3
-    M7: 3
-    M8: Z
-    M9: 3
-    M10: 3
-    M11: 3
 
-  - equipo: SM
-    nombre: HG SALARIO MINIMO
-    ID: SM
-    link: /equipos/house-of-ghost--salario-minimo
-    order: 3
-    line: 3
+  - equipo: NS
+    nombre: NO SMITES
+    ID: NS
+    link: /equipos/no-smites
+    order: 0
+    line: 0
     pts:
     M1: 0
-    M2: 3
-    M3: 3
-    M4: 3
-    M5: 3
-    M6: 2
-    M7: 0
-    M8: 3
-    M9: 0
-    M10: Z
-    M11: 2
-
-  - equipo: POA
-    nombre: PHOBIUS AURA
-    ID: POA
-    link: /equipos/phobius-aura
-    order: 7
-    line: 6
-    pts:
-    M1: 3
-    M2: 3
+    M2: 0
     M3: 0
-    M4: 1
-    M5: 3
-    M6: 1
-    M7: Z
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
     M8: 0
     M9: 0
     M10: 0
-    M11: 3
+    M11: 0
 
-  - equipo: E
-    nombre: SPC ENIGMA
-    ID: E
-    link: /equipos/spc-e-sports--enigma
-    order: 3
-    line: 3
-    M1: 3
-    M2: Z
-    M3: 3
+  - equipo: TUT
+    nombre: TUT WARRRIORS
+    ID: TUT
+    link: /equipos/theunownteam
+    order: 4
+    line: 4
+    M1: 0
+    M2: 0
+    M3: 0
     M4: 0
-    M5: 2
-    M6: 3
-    M7: R
-    M8: 3 
-    M9: 3
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0
+    M9: 0
     M10: 0
-    M11: 3
+    M11: 0
 
-  - equipo: DMD
-    nombre: DFS DIAMOND
-    ID: DMD
-    link: /equipos/dragonfliesgaming--diamond
+  - equipo: AOGIRI
+    nombre: AOGIRI
+    ID: AOGIRI
+    link: /equipos/aogiri
+    line: 6
+    pts:
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0
+    M9: 0
+    M10: 0
+    M11: 0
+
+  - equipo: ENIGMA
+    nombre: SPC ENIGMA
+    ID: ENIGMA
+    link: /equipos/spc-e-sports--enigma
+    order: 0
+    line: 0
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0 
+    M9: 0
+    M10: 0
+    M11: 0
+
+  - equipo: 2X1500
+    nombre: 2X1500
+    ID: 2X1500
+    link: /equipos/2X1500
     order: 8
     line: 6
     M1: 0
-    M2: 3
-    M3: 3
-    M4: 2
+    M2: 0
+    M3: 0
+    M4: 0
     M5: 0
     M6: 0
     M7: 0
     M8: 0
-    M9: Z
-    M10: 3
+    M9: 0
+    M10: 0
     M11: 0
 
-  - equipo: AD
-    nombre: AD GAMING
-    ID: AD
-    link: /equipos/ad-gaming
-    order: 6
-    line: 5
-    pts:
-    M1: Z
-    M2: 0
-    M3: 0
-    M4: 2
-    M5: 3
-    M6: 3
-    M7: 3
-    M8: 3
-    M9: 0
-    M10: 1
-    M11: 1
 
-  - equipo: TSR
-    nombre: TEAM STAR
-    ID: TSR
-    link: /equipos/villanos-e-sports--team-star
+
+  - equipo: SPACE
+    nombre: SPACE VAL
+    ID: SPACE
+    link: /equipos/space-val
     order: 5
     line: 6
     pts:
-    M1: 3
+    M1: 0
     M2: 0
-    M3: Z
-    M4: 1
-    M5: 1
+    M3: 0
+    M4: 0
+    M5: 0
     M6: 0
-    M7: 3
-    M8: 3
-    M9: 3
-    M10: 3
+    M7: 0
+    M8: 0
+    M9: 0
+    M10: 0
     M11: 0
 
-  - equipo: PEARL
-    nombre: DFS PEARL
-    ID: PEARL
-    link: /equipos/dragonfliesgaming--pearl
+  - equipo: CL
+    nombre: CHRONOS LEGION
+    ID: CL
+    link: /equipos/chronos-legion
     order: 8
     line: 10
     pts:
     M1: 0
     M2: 0
     M3: 0
-    M4: 1
+    M4: 0
     M5: 0
-    M6: Z
+    M6: 0
     M7: 0
     M8: 0
-    M9: R
+    M9: 0
     M10: 0
     M11: 0
 
-  - equipo: EVL
-    nombre: EEVEEVOLUTION
-    ID: EVL
-    link: /equipos/villanos-e-sports--eeveelution
+  - equipo: RNT X
+    nombre: RNT XAPULOVERS
+    ID: RNT
+    link: /equipos/ranked-team--xapulovers
     order: 9
     line: 7
     pts:
@@ -178,32 +143,82 @@ sur:
     M2: 0
     M3: 0
     M4: 0
-    M5: Z
+    M5: 0
     M6: 0
-    M7: R
-    M8: R
-    M9: 2
+    M7: 0
+    M8: 0
+    M9: 0
     M10: 0
     M11: 0
 
-  - equipo: MT
-    nombre: MISFIT TOYS
-    ID: MT
-    link: /equipos/misfit-toys
-    order: 8
-    line: 10
-    pts:
+  - equipo: GX
+    nombre: RNT GALÁCTICOS
+    ID: GX
+    link: /equipos/ranked-team--galacticos
+    order: 0
+    line: 0
     M1: 0
     M2: 0
     M3: 0
-    M4: Z
+    M4: 0
     M5: 0
     M6: 0
-    M7: R
+    M7: 0
     M8: 0
-    M9: 1
+    M9: 0
     M10: 0
     M11: 0
 
+  - equipo: TAD
+    nombre: TAQUITOS A LA DIABLA
+    ID: TAD
+    link: /equipos/taquitos-a-la-diabla
+    order: 6
+    line: 7
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0
+    M9: 0
+    M10: 0
+    M11: 0
 
+  - equipo: OBS
+    nombre: IMPERIO MEXA OBSIDIANA
+    ID: OBS
+    link: /imperio-mexa/--obsidiana
+    order: 10
+    line: 10
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0
+    M9: 0
+    M10: 0
+    M11: 0
 
+  - equipo: AMT
+    nombre: IMPERIO MEXA AMATISTA
+    ID: AMT
+    link: /imperio-mexa/--amatista
+    order: 10
+    line: 10
+    M1: 0
+    M2: 0
+    M3: 0
+    M4: 0
+    M5: 0
+    M6: 0
+    M7: 0
+    M8: 0
+    M9: 0
+    M10: 0
+    M11: 0

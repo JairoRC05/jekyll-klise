@@ -4,8 +4,56 @@
 {%- endfor -%}
 {% endif %}
 
+{% if page.ID == "DTY" %}
+{%- for jugador in site.data.DTY.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
 
-{% if page.ID == "ЯK" %}
+{% if page.ID == "PE" %}
+{%- for jugador in site.data.PE.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "DBO" %}
+{%- for jugador in site.data.DBO.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "ZAFIRO" %}
+{%- for jugador in site.data.ZAFIRO.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "AOGIRI" %}
+{%- for jugador in site.data.AOGIRI.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "NS" %}
+{%- for jugador in site.data.NS.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "2X1500" %}
+{%- for jugador in site.data.2X1500.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "BD" %}
+{%- for jugador in site.data.BD.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+
+{% if page.ID == "RK" %}
 {%- for jugador in site.data.RK.jugadores -%}
 {% include card-roster.html %}
 {%- endfor -%}
@@ -35,8 +83,8 @@
 {%- endfor -%}
 {% endif %}
 
-{% if page.ID == "HOENN" %}
-{%- for jugador in site.data.HOENN.jugadores -%}
+{% if page.ID == "PLAGA" %}
+{%- for jugador in site.data.PLAGA.jugadores -%}
 {% include card-roster.html %}
 {%- endfor -%}
 {% endif %}
@@ -83,7 +131,7 @@
 {%- endfor -%}
 {% endif %}
 
-{% if page.ID == "E" %}
+{% if page.ID == "ENIGMA" %}
 {%- for jugador in site.data.ENIGMA.jugadores -%}
 {% include card-roster.html %}
 {%- endfor -%}

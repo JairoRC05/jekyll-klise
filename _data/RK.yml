@@ -15,18 +15,21 @@ jugadores:
     n1: 1 
     n4: 1 
 
-  - nickname: AÐ・El_Vampi
+  - nickname: ЯK・El_Vampi
     ID: FP6REFM
     avatar: male1
 
   - nickname: нореи'т
     ID: LNTHXGT
     avatar: male1
-    mvp: true
-    numero: 2
-    m3: 2
 
-  - nickname: ЯK・Sunnyあ
+  - nickname: Jøhanfr38
+    ID: CK7KNQ7
+    avatar: male1
+ 
+ 
+
+  - nickname: ЯK・chaos #ЯK・Sunnyあ
     ID: 4CNKGAX
     avatar: male1
     mvp: true

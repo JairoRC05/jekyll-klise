@@ -1,0 +1,428 @@
+---
+layout:
+permalink: /liga-indigo-especial.html
+title: ESPECIAL | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container body-ruleta">
+    <h1>RADAR INDIGO</h1>
+
+    <div id="contenedor-sorteo">
+      <img src="/assets/logos/LIGA-INDIGO.webp" alt="Logo Sorteo" >
+      <span>Sorteando equipos...</span>
+    </div>
+
+    <div id="contenedor-ruleta">
+    </div>
+
+    <button id="boton-girar" class="btn">BUSCAR EN LA GALAXIA</button>
+
+    <div id="resultado"></div>
+    <div id="equipos-restantes"></div>
+  </div>
+
+
+  <div class="drag-and-drop-container container-fluid mt-5">
+    <h1>RONDA PORTAL DIMENSIONAL</h1>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-4 encuentros-col-1">
+            </div>
+            <div class="col-md-4 ">
+              <img src="/assets/skins/hoppa.png" alt="" style="filter: drop-shadow(5px 15px 8px #000000);">
+            </div>
+            <div class="col-md-4 encuentros-col-2">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">EQUIPOS</h2>
+    <div class="container">
+      <div class="equipos-container">
+      </div>
+    </div>
+</div>
+
+ 
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+
+
+
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  const contenedorRuleta = document.getElementById('contenedor-ruleta');
+  const contenedorSorteo = document.getElementById('contenedor-sorteo');
+  const botonGirar = document.getElementById('boton-girar');
+  const resultadoDiv = document.getElementById('resultado');
+  const equiposRestantesDiv = document.getElementById('equipos-restantes');
+  let equiposData = [];
+  let equiposRestantes = [];
+  let girando = false;
+  const duracionGiro = 3000; // Duración del efecto de "sorteo" en ms
+  let progressBar;
+
+  fetch('/assets/sorteo/sorteo.json')
+    .then(response => response.json())
+    .then(data => {
+      equiposData = data;
+      equiposRestantes = [...equiposData];
+      mostrarEquiposInicial();
+      actualizarEquiposRestantes();
+    })
+    .catch(error => console.error('Error al cargar el JSON:', error));
+
+  function mostrarEquiposInicial() {
+    contenedorRuleta.innerHTML = '';
+    contenedorRuleta.style.transform = `translateX(0px)`;
+    equiposRestantes.forEach((equipo) => {
+      const tarjeta = crearTarjetaEquipo(equipo);
+      contenedorRuleta.appendChild(tarjeta);
+    });
+  }
+
+  function crearTarjetaEquipo(equipo) {
+    const tarjeta = document.createElement('div');
+    tarjeta.classList.add('tarjeta-equipo');
+    const textoEquipo = document.createElement('span');
+    textoEquipo.textContent = equipo.nombre_de_equipo || equipo.tag || 'Equipo';
+    tarjeta.appendChild(textoEquipo);
+    return tarjeta;
+  }
+
+  function girarRuleta() {
+    if (girando || equiposRestantes.length <= 1) return;
+    girando = true;
+    resultadoDiv.textContent = '¡Más allá de las estrellas!';
+    botonGirar.disabled = true;
+
+    // Establecer la altura de contenedorSorteo igual a contenedorRuleta
+    contenedorSorteo.style.height = contenedorRuleta.offsetHeight + 'px';
+
+    // Limpiar cualquier contenido previo
+    contenedorSorteo.innerHTML = '';
+
+    // Crear la barra de progreso
+    const progressBarContainer = document.createElement('div');
+    progressBarContainer.classList.add('progress-bar-container');
+    progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    progressBarContainer.appendChild(progressBar);
+    contenedorSorteo.appendChild(progressBarContainer);
+
+    // Crear la leyenda
+    const leyendaSorteo = document.createElement('span');
+    leyendaSorteo.textContent = 'Buscando equipo en la Galaxia más cercana...';
+    contenedorSorteo.appendChild(leyendaSorteo);
+
+    // Mostrar el contenedor de sorteo y ocultar la ruleta
+    contenedorRuleta.style.opacity = 0;
+    contenedorSorteo.style.opacity = 1;
+
+    // Animar la barra de progreso
+    animateProgressBar();
+
+    contenedorRuleta.style.transform = `translateX(-50px)`;
+    setTimeout(() => {
+      contenedorRuleta.style.transform = `translateX(0px)`;
+      contenedorRuleta.style.opacity = 1;
+      contenedorSorteo.style.opacity = 0;
+      botonGirar.disabled = false;
+      girando = false;
+      setTimeout(eliminarEquipoAleatorio, 500);
+    }, duracionGiro);
+  }
+
+  function animateProgressBar() {
+    let width = 0;
+    const interval = 50;
+    const increment = 100 / (duracionGiro / interval);
+    const animationInterval = setInterval(() => {
+      width += increment;
+      progressBar.style.width = width + '%';
+      if (width >= 100) {
+        clearInterval(animationInterval);
+      }
+    }, interval);
+  }
+
+  function eliminarEquipoAleatorio() {
+    if (equiposRestantes.length <= 1) {
+      if (equiposRestantes.length === 1) {
+        resultadoDiv.textContent = `¡: ${equiposRestantes[0].nombre_de_equipo || equiposRestantes[0].tag || 'Equipo'}!`;
+      } else {
+        resultadoDiv.textContent = "¡No quedan equipos en la Galaxia!";
+      }
+      botonGirar.disabled = true;
+      girando = false;
+      return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
+    const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
+
+    resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.nombre_de_equipo || equipoEliminado.tag || 'Equipo'}`;
+    mostrarEquiposInicial();
+    actualizarEquiposRestantes();
+    botonGirar.disabled = false;
+    girando = false;
+  }
+
+  function actualizarEquiposRestantes() {
+    equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
+  }
+
+  setTimeout(() => {
+    if (equiposRestantes.length > 0 && contenedorRuleta.offsetWidth > 0) {
+      const primeraTarjeta = document.querySelector('.tarjeta-equipo');
+      if (primeraTarjeta) {
+        anchoTarjetaConMargen = primeraTarjeta.offsetWidth + 10;
+        numTarjetasVisibles = Math.ceil(contenedorRuleta.offsetWidth / anchoTarjetaConMargen);
+        mostrarEquiposInicial();
+        contenedorRuleta.style.width = `${equiposRestantes.length * anchoTarjetaConMargen}px`;
+      }
+    }
+  }, 100);
+
+  botonGirar.addEventListener('click', girarRuleta);
+});
+</script>
+
+
+
+<script>
+   const encuentrosCol1 = document.querySelector('.encuentros-col-1');
+    const encuentrosCol2 = document.querySelector('.encuentros-col-2');
+    const equiposContainer = document.querySelector('.equipos-container');
+    const numEncuentros = 12;
+
+    // Crear los contenedores de los encuentros y distribuirlos en columnas
+    for (let i = 0; i < numEncuentros; i++) {
+        const encuentroDiv = document.createElement('div');
+        encuentroDiv.classList.add('encuentro');
+
+        const contenedor1 = document.createElement('div');
+        contenedor1.classList.add('contenedor');
+        contenedor1.dataset.encuentro = i + 1;
+        contenedor1.dataset.slot = 1;
+        contenedor1.addEventListener('dragover', allowDrop);
+        contenedor1.addEventListener('drop', handleDrop);
+
+        const vs = document.createElement('span');
+        vs.textContent = 'vs';
+        vs.style.margin = '0 10px';
+
+        const contenedor2 = document.createElement('div');
+        contenedor2.classList.add('contenedor');
+        contenedor2.dataset.encuentro = i + 1;
+        contenedor2.dataset.slot = 2;
+        contenedor2.addEventListener('dragover', allowDrop);
+        contenedor2.addEventListener('drop', handleDrop);
+
+        encuentroDiv.appendChild(contenedor1);
+        encuentroDiv.appendChild(vs);
+        encuentroDiv.appendChild(contenedor2);
+
+        // Distribuir los encuentros en las dos columnas
+        if (i < 6) {
+            encuentrosCol1.appendChild(encuentroDiv);
+        } else {
+            encuentrosCol2.appendChild(encuentroDiv);
+        }
+    }
+
+    let draggedElement = null;
+
+    function handleDragStart(event) {
+        draggedElement = event.target;
+        event.dataTransfer.setData('text/plain', event.target.dataset.tag);
+    }
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        const targetContainer = event.target;
+
+        // Asegurarse de que el target es un contenedor vacío
+        if (targetContainer.classList.contains('contenedor') && targetContainer.children.length === 0) {
+            const draggedTag = event.dataTransfer.getData('text/plain');
+            const newElement = document.createElement('span');
+            newElement.textContent = draggedTag;
+            targetContainer.appendChild(newElement);
+
+            // Opcional: Eliminar el elemento arrastrado de su ubicación original
+            if (draggedElement && draggedElement.parentNode === equiposContainer) {
+                draggedElement.remove();
+            } else if (draggedElement && draggedElement.parentNode.classList.contains('contenedor')) {
+                draggedElement.parentNode.textContent = ''; // Limpiar el contenedor anterior
+                targetContainer.appendChild(draggedElement);
+            }
+            draggedElement = null; // Resetear el elemento arrastrado
+        }
+    }
+
+    // Fetch JSON data
+    fetch('/assets/sorteo/sorteo.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            // Crear los elementos arrastrables de los equipos
+            jsonData.forEach(equipo => {
+                const equipoDiv = document.createElement('div');
+                equipoDiv.classList.add('draggable');
+                equipoDiv.textContent = equipo.tag;
+                equipoDiv.dataset.tag = equipo.tag;
+                equipoDiv.draggable = true;
+                equipoDiv.addEventListener('dragstart', handleDragStart);
+                equiposContainer.appendChild(equipoDiv);
+            });
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

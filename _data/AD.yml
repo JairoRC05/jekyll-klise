@@ -28,14 +28,13 @@ jugadores:
   - nickname: AÐ・Tugfamon
     ID: 2A0PAYQ
     avatar: male1
-    mvp: true
-    numero: 2
-    m4: 2
-
-  - nickname: AÐ・MrKawaii
-    ID: A14HHN5
+ 
+  - nickname: RNT・PikaBro 
+    ID: 668H1XE
     avatar: male1
-    mvp: true
-    numero: 1
-    m3: 1
+
+  - nickname: AÐ・Pikinツ
+    ID: LY3YYX3
+    avatar: male1
+
 
