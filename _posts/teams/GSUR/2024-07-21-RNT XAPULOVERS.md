@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/ranked-team--xapulovers
-categories: TEAM GNORTE
+categories: TEAM GSUR
 date: 2020-08-29 10:29:20 +0700
 title: RNT XAPULOVERS
 team: RNT XAPULOVERS

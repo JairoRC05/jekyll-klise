@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/ad-gaming--broken-dreams
-categories: GSUR ENERO TEAM
+categories: GNORTE TEAM
 team: BROKEN DREAMS
 date: 2020-08-29 10:29:20 +0700
 title: BROKEN DREAMS

@@ -1,0 +1,346 @@
+---
+layout:
+permalink: /liga-indigo-presskit.html
+title: INICIO | LIGA INDIGO 
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+  
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+    
+      </div>
+ 
+    </div>
+  
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+<div class="container-fluid banner-home bg-cham" >
+  <div class="container banner">
+
+    <div class="banner-grupo" >
+      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+      {%- for post in norte-%}
+    <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+
+    <div class="banner-logo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class="banner-grupo" >
+      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+      {%- for post in norte-%}
+      <a href="{{post.url}}">
+      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+    </a>
+      {%- endfor -%} 
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="container mt-4">
+  <h2>PLANTILLAS</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="plantillas-grid">
+      </div>
+</div>
+
+
+<div class="container mt-5">
+  <input type="text" id="buscador-equipos" class="form-control mb-3" placeholder="Buscar por nombre, tag, grupo o rango...">
+  <select id="ordenar-equipos" class="form-select mb-3">
+    <option value="">Ordenar por...</option>
+    <option value="nombre_de_equipo">Nombre del equipo</option>
+    <option value="tag">Tag</option>
+    <option value="grupo">Grupo</option>
+    <option value="rango">Rango</option>
+</select>
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 row-cols-xl-6   g-4" id="equipos-grid">
+      
+  </div>
+</div>
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+ 
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  
+  
+      <script>
+        async function cargarPlantillas() {
+            try {
+                const response = await fetch('/assets/sorteo/plantillas.json');
+                const data = await response.json();
+                mostrarPlantillas(data);
+            } catch (error) {
+                console.error("Error al cargar el archivo JSON:", error);
+                document.getElementById('plantillas-grid').innerHTML = '<div class="alert alert-danger" role="alert">Error al cargar las plantillas.</div>';
+            }
+        }
+
+        function mostrarPlantillas(plantillas) {
+            const gridContainer = document.getElementById('plantillas-grid');
+            let html = '';
+
+            plantillas.forEach(plantilla => {
+        html += `
+            <div class="col">
+                <div class="card">
+                   
+                    <img src="/assets/plantillas/${plantilla.portada}" class="card-img-top" alt="${plantilla.nombre_de_plantilla}">
+                    <div class="card-footer">
+                          <small class="text-muted">${plantilla.temporada} ${plantilla.año}</small>
+                        <a href="${plantilla.link}" class="btn-link-icon" title="Editar" target="_blank">
+                            <i class="fas fa-pencil"></i>
+                        </a>
+                        <small class="text-muted">${plantilla.medidas}</small>
+                      
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+            gridContainer.innerHTML = html;
+        }
+
+        // Cargar las plantillas cuando la página se cargue
+        document.addEventListener('DOMContentLoaded', cargarPlantillas);
+    </script>
+  
+  <script>
+    async function cargarEquipos() {
+            try {
+                const response = await fetch('/assets/sorteo/sorteo.json');
+                const equipos = await response.json();
+                const equiposGrid = document.getElementById('equipos-grid');
+                const buscadorEquipos = document.getElementById('buscador-equipos');
+                const ordenarEquiposSelect = document.getElementById('ordenar-equipos');
+
+                let equiposOriginales = [...equipos];
+
+                function mostrarEquipos(equiposFiltrados) {
+                    equiposGrid.innerHTML = '';
+                    equiposFiltrados.forEach(equipo => {
+                        const card = document.createElement('div');
+                        card.classList.add('col');
+                        let redesSocialesHTML = '';
+                        if (equipo.facebook) {
+                            redesSocialesHTML += `<a href="${equipo.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>`;
+                        }
+                        if (equipo.x) {
+                            redesSocialesHTML += `<a href="${equipo.x}" target="_blank"><i class="fab fa-twitter"></i></a>`;
+                        }
+                        if (equipo.instagram) {
+                            redesSocialesHTML += `<a href="${equipo.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>`;
+                        }
+
+                        let nombreTruncado = equipo.nombre_de_equipo;
+        if (equipo.nombre_de_equipo.length > 10) {
+            nombreTruncado = equipo.nombre_de_equipo.substring(0, 10) + "...";
+        }
+
+                        card.innerHTML = `
+                            <div class="card h-100 shadow">
+                                <img src="/assets/logos/${equipo.tag}.webp" class="card-img-top p-3" alt="${equipo.nombre_de_equipo}" loading="lazy">
+                                <div class="card-body text-center">
+                                                  <h5 class="card-title" title="${equipo.nombre_de_equipo}">${nombreTruncado}</h5>
+                                    <button class="btn btn-primary btn-sm btn-descarga" data-imagen="/assets/logos/${equipo.tag}.png" data-nombre="${equipo.nombre_de_equipo}">
+                                        <span>Descargar</span>
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                        <i class="fas fa-check"></i>
+                                        <div class="descarga-confirmada">Descargado</div>
+                                    </button>
+                                    ${redesSocialesHTML ? `<div class="redes-sociales">${redesSocialesHTML}</div>` : ''}
+                                </div>
+                            </div>
+                        `;
+                        equiposGrid.appendChild(card);
+                    });
+
+                    const botonesDescarga = equiposGrid.querySelectorAll('.btn-descarga');
+                    botonesDescarga.forEach(boton => {
+                        boton.addEventListener('click', iniciarDescarga);
+                    });
+                }
+
+                mostrarEquipos(equiposOriginales);
+
+                buscadorEquipos.addEventListener('input', function() {
+                    const textoBusqueda = this.value.toLowerCase();
+                    const equiposFiltrados = equiposOriginales.filter(equipo =>
+                        equipo.nombre_de_equipo.toLowerCase().includes(textoBusqueda) ||
+                        equipo.tag.toLowerCase().includes(textoBusqueda) ||
+                        (equipo.grupo && equipo.grupo.toLowerCase().includes(textoBusqueda)) ||
+                        (equipo.rango !== undefined && equipo.rango.toString().includes(textoBusqueda))
+                    );
+                    mostrarEquipos(equiposFiltrados);
+                });
+
+                ordenarEquiposSelect.addEventListener('change', function() {
+                    const criterioOrdenamiento = this.value;
+                    if (criterioOrdenamiento) {
+                        const equiposOrdenados = [...equiposOriginales].sort((a, b) => {
+                            if (criterioOrdenamiento === 'rango') {
+                                return a[criterioOrdenamiento] - b[criterioOrdenamiento];
+                            } else {
+                                const valorA = a[criterioOrdenamiento] ? a[criterioOrdenamiento].toLowerCase() : '';
+                                const valorB = b[criterioOrdenamiento] ? b[criterioOrdenamiento].toLowerCase() : '';
+                                return valorA.localeCompare(valorB);
+                            }
+                        });
+                        mostrarEquipos(equiposOrdenados);
+                    } else {
+                        mostrarEquipos(equiposOriginales);
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error al cargar el JSON:", error);
+                document.getElementById('equipos-grid').innerHTML = '<div class="col"><div class="alert alert-danger" role="alert">Error al cargar los datos.</div></div>';
+            }
+        }
+
+        function iniciarDescarga(event) {
+    const boton = event.currentTarget;
+    const urlImagen = boton.dataset.imagen;
+    const nombreImagen = boton.dataset.nombre + ".png";
+    const progressBar = boton.querySelector('.progress-bar');
+    const mensajeDescarga = boton.querySelector('.descarga-confirmada');
+
+    boton.disabled = true;
+    boton.classList.add('descargando-progress');
+    progressBar.style.width = '0%';
+
+    let progreso = 0;
+    const intervalo = setInterval(() => {
+        progreso += 10;
+        progressBar.style.width = `${progreso}%`;
+        if (progreso >= 100) {
+            clearInterval(intervalo);
+            descargarImagen(urlImagen, nombreImagen);
+            boton.classList.remove('descargando-progress');
+            boton.classList.add('descargado-icono'); // Añadimos la clase del icono (si queremos mantenerla)
+            mensajeDescarga.classList.add('descargado-mensaje-activo'); // Clase para mostrar el mensaje
+
+            setTimeout(() => {
+                boton.classList.remove('descargado-icono');
+                mensajeDescarga.classList.remove('descargado-mensaje-activo'); // Ocultamos el mensaje
+                boton.querySelector('span').style.display = 'inline-block';
+                boton.querySelector('.fa-check').style.display = 'none';
+                boton.disabled = false;
+                progressBar.style.width = '0%';
+            }, 1500);
+        }
+    }, 100);
+}
+
+        function descargarImagen(url, nombre) {
+            const enlace = document.createElement('a');
+            enlace.href = url;
+            enlace.download = nombre;
+            document.body.appendChild(enlace);
+            enlace.click();
+            document.body.removeChild(enlace);
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarEquipos);
+    </script>
+
+
+      {% include g-analytics.html %}
+ 
+
+
+
+
+
+
+</body>
+
+</html>

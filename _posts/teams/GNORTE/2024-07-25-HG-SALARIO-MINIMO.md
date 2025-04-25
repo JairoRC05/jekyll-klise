@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/house-of-ghost--salario-minimo
-categories: TEAM GSUR
+categories: GNORTE TEAM
 team: HG SALARIO MINIMO
 maincover: /assets/logos/SM.png
 date: 2020-08-29 10:29:20 +0700

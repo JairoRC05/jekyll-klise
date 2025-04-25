@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/colspirit
-categories: TEAM GNORTE
+categories: 
 liga: LIGA INDIGO
 date: 2020-08-29 10:29:20 +0700
 title: COLSPIRIT

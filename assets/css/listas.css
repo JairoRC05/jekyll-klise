@@ -953,8 +953,8 @@
             img {
                 width: 350px;
 
-                @media screen and (max-width: 472px) {
-                    width: 40px;
+                @media screen and (max-width: 768px) {
+                    width: 230px;
                 }
             }
         }
@@ -978,8 +978,8 @@
                font-style: italic;
                font-weight: 900 !important;
 
-                  @media screen and (max-width: 472px) {
-                    font-size: 14px;
+                  @media screen and (max-width: 768px) {
+                    font-size: 50px;
                 }
             }
 
@@ -1028,10 +1028,15 @@
                margin: 0;
                font-size: 120px;
                color: #0000005e;
-              
                font-style: italic;
                font-weight: 900 !important;
 
+                  @media screen and (max-width: 1024px) {
+                    font-size: 100px;
+                }
+                  @media screen and (max-width: 768px) {
+                    font-size: 70px;
+                }
                   @media screen and (max-width: 472px) {
                     font-size: 14px;
                 }

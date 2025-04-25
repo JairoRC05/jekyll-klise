@@ -1,26 +1,95 @@
 [
-    { "nombre_de_equipo": "STAMINA", "tag": "STAMINA" },
-    { "nombre_de_equipo": "RNT XAPU", "tag": "RNT XAP" },
-    { "nombre_de_equipo": "RK YMIR", "tag": "RK YMIR" },
-    { "nombre_de_equipo": "IMPERIO MEXA OBS", "tag": "MEXA OBS" },
-    { "nombre_de_equipo": "IMPERIO MEXA AMT", "tag": "MEXA AMT" },
-    { "nombre_de_equipo": "MISFIT TOYS", "tag": "MISFIT TOYS" },
-    { "nombre_de_equipo": "AOGIRI", "tag": "AOGIRI" },
-    { "nombre_de_equipo": "DYNASTY", "tag": "DYNASTY" },
-    { "nombre_de_equipo": "AD GAMING", "tag": "AD GAMING" },
-    { "nombre_de_equipo": "PLAGA VILLANOS", "tag": "PLAGA VILLANOS" },
-    { "nombre_de_equipo": "RNT NEO STARS", "tag": "RNT NEO STARS" },
-    { "nombre_de_equipo": "RNT GALÁCTICOS", "tag": "RNT GALÁCTICOS" },
-    { "nombre_de_equipo": "HG SALRIO MINIMO", "tag": "HG SALARIO MINIMO" },
-    { "nombre_de_equipo": "PRESTACIONES DE LEY", "tag": "PRESTACIONES DE LEY" },
-    { "nombre_de_equipo": "TAQUITOS A LA DIBLA", "tag": "TAQUITOS A LA DIBLA" },
-    { "nombre_de_equipo": "NO SMITES", "tag": "NO SMITES" },
-    { "nombre_de_equipo": "SPC ENIGMA", "tag": "SPC ENIGMA" },
-    { "nombre_de_equipo": "BROKEN DREAMS", "tag": "BROKEN DREAMS" },
-    { "nombre_de_equipo": "IMPERIO MEXA ZAFIRO", "tag": "MEXA ZAFIRO" },
-    { "nombre_de_equipo": "OVERHEAT", "tag": "OVERHEAT" },
-    { "nombre_de_equipo": "ONE COIN", "tag": "ONE COIN" },
-    { "nombre_de_equipo": "DINAMITA BUENA ONDA", "tag": "DINAMITA BUENA ONDA" },
-    { "nombre_de_equipo": "CHRONOS LEGION", "tag": "CHRONOS LEGION" },
-    { "nombre_de_equipo": "2X1500", "tag": "2X1500" }
+    {
+        "nombre_de_equipo": "STAMINA",
+        "tag": "STMN"
+    },
+    {
+        "nombre_de_equipo": "RNT XAPU",
+        "tag": "RNTX"
+    },
+    {
+        "nombre_de_equipo": "RK YMIR",
+        "tag": "RK",
+        "facebook": "sdfs",
+        "x": "fsdfsf",
+        "instagram": "sdfsf"
+    },
+    {
+        "nombre_de_equipo": "IMPERIO MEXA",
+        "tag": "OBS"
+    },
+
+    {
+        "nombre_de_equipo": "MISFIT TOYS",
+        "tag": "MT"
+    },
+    {
+        "nombre_de_equipo": "AOGIRI",
+        "tag": "AOGIRI"
+    },
+    {
+        "nombre_de_equipo": "DINASTY",
+        "tag": "DTY"
+    },
+    {
+        "nombre_de_equipo": "AD GAMING",
+        "tag": "AD"
+    },
+    {
+        "nombre_de_equipo": "PLAGA VILLANOS",
+        "tag": "PLAGA"
+    },
+    {
+        "nombre_de_equipo": "RNT NEO STARS",
+        "tag": "NEO"
+    },
+    {
+        "nombre_de_equipo": "RNT GALÁCTICOS",
+        "tag": "GX"
+    },
+    {
+        "nombre_de_equipo": "HG SALRIO MINIMO",
+        "tag": "SM"
+    },
+    {
+        "nombre_de_equipo": "PRESTACIONES DE LEY",
+        "tag": "PE"
+    },
+    {
+        "nombre_de_equipo": "TAQUITOS A LA DIBLA",
+        "tag": "TAD"
+    },
+    {
+        "nombre_de_equipo": "NO SMITES",
+        "tag": "NS"
+    },
+    {
+        "nombre_de_equipo": "SPC ENIGMA",
+        "tag": "ENIGMA"
+    },
+    {
+        "nombre_de_equipo": "BROKEN DREAMS",
+        "tag": "BD"
+    },
+
+    {
+        "nombre_de_equipo": "OVERHEAT",
+        "tag": "OVG"
+    },
+    {
+        "nombre_de_equipo": "TUT WARRIOS",
+        "tag": "TUT"
+    },
+    {
+        "nombre_de_equipo": "DINAMITA BUENA ONDA",
+        "tag": "DBO"
+    },
+    {
+        "nombre_de_equipo": "CHRONOS LEGION",
+        "tag": "CL"
+    },
+    {
+        "nombre_de_equipo": "2X1500",
+        "tag": "2X1500"
+    }
 ]

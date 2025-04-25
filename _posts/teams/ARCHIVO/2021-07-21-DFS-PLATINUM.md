@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/dragonfliesgaming--platinum
-categories: GNORTE ENERO TEAM
+categories: 
 team: DFS PLATINUM
 date: 2020-08-29 10:29:20 +0700
 title: DFS PLATINUM

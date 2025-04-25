@@ -850,10 +850,10 @@ background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100
   border-bottom: 5px solid #000000 ;
 }
 
-.COL{
+/* .COL{
   background: rgb(71,17,121);
 background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
-}
+} */
 
 /* ROJO */
 .SM{

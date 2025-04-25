@@ -1,0 +1,34 @@
+[
+    {
+        "nombre_de_plantilla": "AERO SPACE",
+        "temporada": "ABRIL",
+        "año": "2025",
+        "medidas": "1080x1350",
+        "link": "https://www.canva.com/design/DAGloIxSK6M/J5GqJgmjvA7cGjOqsyq_4Q/view?utm_content=DAGloIxSK6M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+        "portada": "AEROSPACE.webp"
+    },
+    {
+        "nombre_de_plantilla": "LUSTY CARPET",
+        "temporada": "MARZO",
+        "año": "2025",
+        "medidas": "1080x1350",
+        "link": "https://www.canva.com/design/DAGloCVN6Ms/oupDq9xt1_uZFbc2Cjv4EQ/view?utm_content=DAGloCVN6Ms&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+        "portada": "LUSTYCARPET.webp"
+    },
+    {
+        "nombre_de_plantilla": "SPACE SCREENS",
+        "temporada": "FEBRERO",
+        "año": "2025",
+        "medidas": "1080x1350",
+        "link": "https://www.canva.com/design/DAGloV2-bSQ/z1QZur-eI08zqR88rw818w/view?utm_content=DAGloV2-bSQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+        "portada": "SPACESCREENS.webp"
+    },
+    {
+        "nombre_de_plantilla": "MISTERY DAY",
+        "temporada": "ENERO",
+        "año": "2025",
+        "medidas": "1080x1350",
+        "link": "https://www.canva.com/design/DAGlodWveCI/x4dpQGjwWAIxsOy2QusWCw/view?utm_content=DAGlodWveCI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+        "portada": "MYSTERYDAY.webp"
+    }
+]

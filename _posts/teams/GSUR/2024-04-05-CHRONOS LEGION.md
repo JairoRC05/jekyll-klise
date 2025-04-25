@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/chronos-legion
-categories: TEAM GNORTE ENERO
+categories: TEAM GSUR
 date: 2020-08-29 10:29:20 +0700
 title: CHRONOS LEGION
 team: CHRONOS LEGION

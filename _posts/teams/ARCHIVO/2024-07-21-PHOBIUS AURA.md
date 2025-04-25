@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/phobius-aura
-categories: TEAM GSUR
+categories: 
 date: 2020-08-29 10:29:20 +0700
 title: PHOBIUS AURA
 team: PHOBIUS AURA

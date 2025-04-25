@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /imperio-mexa/--amatista
-categories: TEAM GNORTE
+categories: TEAM GSUR
 liga: LIGA INDIGO
 date: 2020-08-29 10:29:20 +0700
 title: IMPERIO MEXA AMATISTA

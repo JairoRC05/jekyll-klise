@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/ranked-team--galacticos
-categories: TEAM GNORTE
+categories: TEAM GSUR
 date: 2020-08-29 10:29:20 +0700
 title: RNT GALÁCTICOS
 team: RNT GALÁCTICOS

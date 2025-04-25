@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/house-of-ghost--prestaciones-de-ley
-categories: TEAM GSUR
+categories: GNORTE TEAM
 team: PRESTACIONES DE LEY HG
 maincover: /assets/logos/SM.png
 date: 2020-08-29 10:29:20 +0700

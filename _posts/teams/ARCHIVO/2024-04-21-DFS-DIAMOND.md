@@ -1,7 +1,7 @@
 ---
 layout: liga-indigo-team
 permalink: /equipos/dragonfliesgaming--diamond
-categories: TEAM GSUR
+categories: 
 number: 1
 liga: LIGA INDIGO
 maincover: /assets/logos/DMD.png
