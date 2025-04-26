@@ -1,0 +1,16 @@
+[
+    {
+        "nickname": "Carlos",
+        "avatar": "male1",
+        "id": "78901",
+        "equipo": "ABC FC"
+    },
+    {
+        "nickname": "Laura",
+        "nickname-nuevo": "Laura2",
+        "avatar": "female1",
+        "id": "23456",
+        "equipo": "XYZ United"
+    }
+  
+]

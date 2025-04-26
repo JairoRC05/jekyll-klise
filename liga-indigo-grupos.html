@@ -100,6 +100,82 @@ title: INICIO | LIGA INDIGO
 
 
 
+
+
+
+
+
+<div class="container">
+
+  <div class="status-bar mx-4 mt-3">
+    <div class="status-left">
+      <span id="current-time"></span>
+    </div>
+    <div class="status-center">
+
+      <span id="season">Temporada Abril - 2025</span>
+        <span class="discord-link">
+            <a href="https://discord.gg/tu-enlace-de-discord" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord discord-icon"></i> La República del Unite
+            </a>
+        </span>
+    </div>
+    <div class="status-right">
+        <span id="current-date"></span>
+       
+    </div>
+</div>
+
+  <div class="fifa-grid-container">
+      <div class="fifa-grid-item ancho-1 alto-2 journey">
+          <div class="icon"></div>
+          <div>
+              <h2>ORION</h2>
+              <p>---------</p>
+           
+          </div>
+      </div>
+      <div class="fifa-grid-item ancho-1 alto-2 career">
+        <div class="icon"></div>
+        <div>
+            <h2>HYDRA</h2>
+            <p>---------</p>
+         
+        </div>
+      </div>
+      <div class="fifa-grid-item ancho-2 alto-2 ultimate-team">
+          <div class="icon">🏅</div>
+          <div>
+              <h2>CAMPEONES™</h2>
+              <p>UNITE FORZE STADIUM</p>
+              <small></small>
+              <div>
+                  <span>STMN </span>
+                  <span>STMN </span>
+                  <span>AD ENIGMA </span>
+              </div>
+          </div>
+      </div>
+      <div class="fifa-grid-item ancho-2 kick-off">
+          <div class="icon">🏟️</div>
+          <div>
+              <h2>RESULTADOS</h2>
+              <p>21st</p>
+              <small>30 DE FEB 22:30</small>
+              <small>IMPERIO MEXA 1 VS 1 DINASTY</small>
+          </div>
+      </div>
+      <div class="fifa-grid-item ancho-1 tournaments">
+          <div class="icon">🏅</div>
+          <h2>MVPS</h2>
+      </div>
+      <div class="fifa-grid-item ancho-1 skill-games">
+          <div class="icon">🎯</div>
+          <h2>ZONA RESTRINGIDA</h2>
+      </div>
+      </div>
+</div>
+
 <div class="container-fluid">
     <div class="container teams-table " id="norte">
       <h1 class="teams-title">GALAXIA NORTE</h1>
@@ -208,6 +284,24 @@ title: INICIO | LIGA INDIGO
         });
         splide.mount();
       </script>
+
+<script>
+
+  function updateDateTime() {
+            const now = new Date();
+            const optionsDate = { year: 'numeric', month: 'long', day: 'numeric' };
+            const optionsTime = { hour: 'numeric', minute: '2-digit', hour12: false }; 
+            document.getElementById('current-date').textContent = now.toLocaleDateString('es-MX', optionsDate);
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('es-MX', optionsTime);
+        }
+
+        // Actualizar la fecha y hora cada minuto (ya no necesitamos la precisión de segundos)
+        setInterval(updateDateTime, 60000);
+
+        // Inicializar la fecha y hora al cargar la página
+        updateDateTime();
+</script>
+
       {% include g-analytics.html %}
  
 
