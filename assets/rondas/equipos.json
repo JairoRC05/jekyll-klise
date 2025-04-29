@@ -1,0 +1,19 @@
+{
+    "ronda": 1,
+    "encuentros": [
+      {
+        "equipoLocal": "HOENN",
+        "equipoVisitante": "COL",
+        "mvpsLocal": [
+          "DønLux",
+          "Texaspurguis",
+          "BLK-luis205"
+        ],
+        "mvpsVisitante": [
+          "COL・Toreto",
+          "COL・Toreto",
+          "COL・Toreto"
+        ]
+      }
+    ]
+  }

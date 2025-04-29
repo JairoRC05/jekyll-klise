@@ -6,27 +6,27 @@ rondas:
     partidos:
     - equipo1: PLAGA
       equipo2: DTY
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: STMN
       equipo2: NEO
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: SM
       equipo2: PE
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: RK
       equipo2: OVG
-      resultado: VS
+      resultado: 2-1
 
     - equipo1: DBO
       equipo2: ZAFIRO
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: BD
       equipo2: AD
-      resultado: VS
+      resultado: PEN
 
 # RONDA 2
   - ronda: RONDA 2

@@ -6,27 +6,27 @@ rondas:
     partidos:
     - equipo1: NS
       equipo2: TUT
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: AOGIRI
       equipo2: OBS
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: AMT
       equipo2: 2X1500
-      resultado: VS
+      resultado: PEN
 
     - equipo1: RNTX
       equipo2: SPACE
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: GX
       equipo2: CL
-      resultado: VS
+      resultado: 2-0
     
     - equipo1: TAD
       equipo2: ENIGMA
-      resultado: VS
+      resultado: 0-2
 
 # RONDA 2
   - ronda: RONDA 2

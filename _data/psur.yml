@@ -1,14 +1,12 @@
 sur:
-
-
   - equipo: NS
     nombre: NO SMITES
     ID: NS
     link: /equipos/no-smites
-    order: 0
+    order: 1
     line: 0
     pts:
-    M1: 0
+    M1: 3
     M2: 0
     M3: 0
     M4: 0
@@ -25,7 +23,7 @@ sur:
     ID: TUT
     link: /equipos/theunownteam
     order: 4
-    line: 4
+    line: 0
     M1: 0
     M2: 0
     M3: 0
@@ -42,9 +40,9 @@ sur:
     nombre: AOGIRI
     ID: AOGIRI
     link: /equipos/aogiri
-    line: 6
-    pts:
-    M1: 0
+    order: 3
+    line: 0
+    M1: 1
     M2: 0
     M3: 0
     M4: 0
@@ -60,9 +58,9 @@ sur:
     nombre: SPC ENIGMA
     ID: ENIGMA
     link: /equipos/spc-e-sports--enigma
-    order: 0
+    order: 1
     line: 0
-    M1: 0
+    M1: 3
     M2: 0
     M3: 0
     M4: 0
@@ -78,9 +76,9 @@ sur:
     nombre: 2X1500
     ID: 2X1500
     link: /equipos/2X1500
-    order: 8
-    line: 6
-    M1: 0
+    order: 4
+    line: 0
+    M1: R
     M2: 0
     M3: 0
     M4: 0
@@ -98,10 +96,9 @@ sur:
     nombre: SPACE VAL
     ID: SPACE
     link: /equipos/space-racoons--space-val
-    order: 5
-    line: 6
-    pts:
-    M1: 0
+    order: 1
+    line: 0
+    M1: 3
     M2: 0
     M3: 0
     M4: 0
@@ -117,9 +114,8 @@ sur:
     nombre: CHRONOS LEGION
     ID: CL
     link: /equipos/chronos-legion
-    order: 8
-    line: 10
-    pts:
+    order: 4
+    line: 0
     M1: 0
     M2: 0
     M3: 0
@@ -136,9 +132,8 @@ sur:
     nombre: RNT XAPULOVERS
     ID: RNTX
     link: /equipos/ranked-team--xapulovers
-    order: 9
-    line: 7
-    pts:
+    order: 4
+    line: 0
     M1: 0
     M2: 0
     M3: 0
@@ -155,9 +150,9 @@ sur:
     nombre: RNT GALÁCTICOS
     ID: GX
     link: /equipos/ranked-team--galacticos
-    order: 0
+    order: 1
     line: 0
-    M1: 0
+    M1: 3
     M2: 0
     M3: 0
     M4: 0
@@ -173,8 +168,8 @@ sur:
     nombre: TAQUITOS A LA DIABLA
     ID: TAD
     link: /equipos/taquitos-a-la-diabla
-    order: 6
-    line: 7
+    order: 4
+    line: 0
     M1: 0
     M2: 0
     M3: 0
@@ -191,9 +186,9 @@ sur:
     nombre: IMPERIO MEXA OBSIDIANA
     ID: OBS
     link: /imperio-mexa/--obsidiana
-    order: 10
-    line: 10
-    M1: 0
+    order: 2
+    line: 0
+    M1: 2
     M2: 0
     M3: 0
     M4: 0
@@ -209,9 +204,9 @@ sur:
     nombre: IMPERIO MEXA AMATISTA
     ID: AMT
     link: /imperio-mexa/--amatista
-    order: 10
-    line: 10
-    M1: 0
+    order: 4
+    line: 0
+    M1: R
     M2: 0
     M3: 0
     M4: 0

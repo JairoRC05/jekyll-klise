@@ -9,23 +9,13 @@ jugadores:
   - nickname: $M・Finn
     ID: GF9L4M8
 
-    
-
   - nickname: $M・Krosty
     ID: KE5NP22
     avatar: male1
 
-
   - nickname: $M・Stimpy
     ID: HEQCNTP
     avatar: male1
-
-  - nickname: $M・Alndingo
-    ID: GCLK510
-    avatar: male1
-    mvp: true
-    numero: 1
-    m2: 1
 
   - nickname: $M-Nono
     ID: FFGKK82
@@ -37,5 +27,9 @@ jugadores:
 
   - nickname: ・Winters・
     ID: KT2ARX2
+    avatar: male1
+
+  - nickname: DFs・Forti
+    ID: FKH2R49
     avatar: male1
 

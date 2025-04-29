@@ -1,0 +1,365 @@
+---
+layout:
+permalink: /liga-indigo-partidas.html
+title: DRAFT | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h1>AGREGAR MVPS</h1>
+
+    <form id="addPlayerForm">
+        <div class="mb-3">
+            <label for="teamSelect" class="form-label">Equipo</label>
+            <select class="form-select" id="teamSelect" required>
+                <option value="" disabled selected>Seleccionar equipo</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="playerSelect" class="form-label">Jugador</label>
+            <select class="form-select" id="playerSelect" required>
+                <option value="" disabled selected>Seleccionar jugador</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary" id="openMvpModal" data-bs-toggle="modal" data-bs-target="#mvpModal" disabled>AGREGAR MVPs</button>
+    </form>
+
+    <div class="modal fade" id="mvpModal" tabindex="-1" aria-labelledby="mvpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mvpModalLabel">Agregar Valores MVP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="mvpValuesForm">
+                        <div class="mb-3">
+                            <label for="rolSelect" class="form-label">Rol</label>
+                            <select class="form-select" id="rolSelect" required>
+                                <option value="" disabled selected>Seleccionar rol</option>
+                                <option value="TOP">TOP</option>
+                                <option value="TANK">TANK</option>
+                                <option value="ADC">ADC</option>
+                                <option value="JUNGLE">JUNGLE</option>
+                                <option value="SUPPORT">SUPPORT</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mvp1" class="form-label">MVP 1</label>
+                            <input type="number" class="form-control" id="mvp1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mvp2" class="form-label">MVP 2</label>
+                            <input type="number" class="form-control" id="mvp2">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mvp3" class="form-label">MVP 3</label>
+                            <input type="number" class="form-control" id="mvp3">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveMvpValues">Guardar Valores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-4">5FIVESTAR</h2>
+    <table id="playersTable" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Equipo</th>
+                <th>Jugador</th>
+                <th>Rol</th>
+                <th>MVP 1</th>
+                <th>MVP 2</th>
+                <th>MVP 3</th>
+                <th>Suma</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success mt-3 d-none" id="downloadJson" >Descargar JSON</button>
+</div>
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+   
+
+  <script>
+      $(document).ready(function() {
+            let teamsData = {};
+            let addedPlayers = [];
+            const maxPlayers = 30;
+            const teamFiles = [
+                '/assets/equipos/2x1500.json',
+     
+            ];
+
+            async function loadTeams() {
+                for (const file of teamFiles) {
+                    try {
+                        const response = await fetch(file);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const dataArray = await response.json();
+                        if (dataArray && dataArray.length > 0 && dataArray[0].tag) {
+                            teamsData[dataArray[0].tag] = dataArray[0];
+                        }
+                    } catch (error) {
+                        console.error(`Error loading ${file}:`, error);
+                    }
+                }
+                populateTeamSelect();
+            }
+
+            function populateTeamSelect() {
+                const teamSelect = $('#teamSelect');
+                const teamTags = Object.keys(teamsData).sort();
+                teamTags.forEach(tag => {
+                    teamSelect.append(new Option(teamsData[tag].team, tag));
+                });
+            }
+
+            $('#teamSelect').change(function() {
+                const selectedTeamTag = $(this).val();
+                const playerSelect = $('#playerSelect');
+                playerSelect.empty().append('<option value="" disabled selected>Seleccionar jugador</option>');
+                $('#openMvpModal').prop('disabled', true); // Deshabilitar el botón hasta que se seleccione un jugador
+
+                if (selectedTeamTag && teamsData[selectedTeamTag] && teamsData[selectedTeamTag].jugadores) {
+                    teamsData[selectedTeamTag].jugadores.forEach(player => {
+                        playerSelect.append(new Option(player.nickname, player.nickname));
+                    });
+                }
+            });
+
+            $('#playerSelect').change(function() {
+                if ($(this).val()) {
+                    $('#openMvpModal').prop('disabled', false); // Habilitar el botón al seleccionar un jugador
+                } else {
+                    $('#openMvpModal').prop('disabled', true);
+                }
+            });
+
+            $('#saveMvpValues').click(function() {
+                const selectedTeamTag = $('#teamSelect').val();
+                const selectedPlayerNickname = $('#playerSelect').val();
+                const rol = $('#rolSelect').val();
+                const mvp1 = parseInt($('#mvp1').val()) || 0;
+                const mvp2 = parseInt($('#mvp2').val()) || 0;
+                const mvp3 = parseInt($('#mvp3').val()) || 0;
+                const suma = mvp1 + mvp2 + mvp3;
+
+                if (selectedTeamTag && selectedPlayerNickname) {
+                    const existingPlayer = addedPlayers.find(p => p.equipoTag === selectedTeamTag && p.jugador === selectedPlayerNickname);
+                    if (existingPlayer) {
+                        alert('Este jugador ya ha sido agregado.');
+                        return;
+                    }
+
+                    if (addedPlayers.length < maxPlayers) {
+                        addedPlayers.push({
+                            equipo: teamsData[selectedTeamTag].team,
+                            equipoTag: selectedTeamTag,
+                            jugador: selectedPlayerNickname,
+                            rol: rol,
+                            mvp1: mvp1,
+                            mvp2: mvp2,
+                            mvp3: mvp3,
+                            suma: suma
+                        });
+                        console.log("addedPlayers después de agregar:", addedPlayers);
+                        updatePlayersTable();
+                        $('#mvpModal').modal('hide');
+                        $('#mvpValuesForm')[0].reset();
+                        $('#playerSelect').val('').trigger('change'); // Resetear el selector de jugador
+                        $('#openMvpModal').prop('disabled', true); // Deshabilitar el botón después de agregar
+                    } else {
+                        alert(`Se ha alcanzado el límite máximo de ${maxPlayers} jugadores.`);
+                    }
+                } else {
+                    alert('Por favor, selecciona un equipo y un jugador.');
+                }
+
+                updatePlayersTable();
+            });
+
+            function updatePlayersTable() {
+    const dataTable = $('#playersTable').DataTable();
+    dataTable.clear(); // Limpiar las filas existentes
+
+    addedPlayers.forEach(player => {
+        dataTable.row.add([
+            player.equipo,
+            player.jugador,
+            player.rol,
+            player.mvp1,
+            player.mvp2,
+            player.mvp3,
+            player.suma
+        ]).draw(false); // Agregar la fila y redibujar (false para no volver a la primera página)
+    });
+}
+
+            $('#downloadJson').click(function() {
+                const jsonData = JSON.stringify(addedPlayers, null, 2);
+                const filename = 'jugadores_mvp.json';
+                const blob = new Blob([jsonData], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            loadTeams();
+        });
+
+  </script>
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

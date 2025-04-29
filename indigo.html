@@ -1,0 +1,258 @@
+---
+layout: 
+date: 
+color: #ffbe00
+permalink: /liga-indigo-control.html
+title: DRAFT | LIGA INDIGO
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body class="bg-home">
+  
+
+  <nav class="navbar top sticky-top indigo-yellow d-none d-lg-block">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="/liga-indigo-dashboard">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50px" height="44px">
+      </a>
+
+      
+
+      <div class="d-none d-md-block text-white">
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
+
+        {% if page.grupo == "NORTE" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+
+        {% elsif page.grupo == "SUR" %}
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        {% else %}
+        {% endif %}
+
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+ 
+    </div>
+  </nav>
+
+ 
+
+  <div class="container-fluid banner bg-cham d-none d-lg-block">
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class="bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">GALAXIA {{page.grupo}}</span>
+      </div>
+    </div>
+  </div>
+
+  {% include banner-1st.html %}
+ 
+
+
+  <div class="container my-5">
+    <div class="canva" style="width: 1080px; height: 1350px;">
+      <div class="canva-title">
+        <div class="canva-background-header"></div>
+      </div>
+      
+      <div class="canva-body">
+        <div class="canva-group" id="miDiv">
+
+            <div class="canva-group-cards">
+
+                <div class="card-round-list-canva bg-cham" style="color: white; border-radius: 10px;">
+                <h2>ORION</h2>
+                </div>
+
+
+                    {% assign ordenado = site.data.pnorte.norte | sort: "order"  %}
+                    {% for team in ordenado  %}
+                    {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
+                  
+                   
+                        <div class="card-round-list-canva">
+                            <div class="card-round-team">
+                              <a href="{{team.link}}">
+                                <img src="/assets/logos/{{team.ID}}.webp" alt="" class="img-fluid">
+                              </a>
+                              <div class="card-round-title">
+                                <h2>{{team.nombre}}</h2>
+                              </div>
+                            </div>
+                            <div class="card-round-pts">
+                              <h6>{{ suma }} pts</h6>
+                            </div>
+                            <div class="card-round-place">
+                             
+                              <span>{{team.order}}</span>
+                        
+                      
+                            </div>  
+                            <div class="card-back">
+                              {% if team.ID == "7Z" %}
+                              <div class="card-color-left S7Z">
+                              </div>
+                              {% else %}     
+                              <div class="card-color-left {{team.ID}}">
+                              </div>
+                              {% endif %}     
+                      
+                            </div>
+                        </div>
+                 
+                   
+              
+                    {% endfor %}
+         
+                </div>
+                <div class="canva-group-cards">
+
+                    <div class="card-round-list-canva bg-cham" style="color: white; border-radius: 10px;">
+                        <h2>HYDRA</h2>
+                        </div>
+        
+                    {% assign ordenado = site.data.psur.sur | sort: "order"  %}
+                    {% for team in ordenado  %}
+                    {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
+                  
+                
+                    <div class="card-round-list-canva">
+                        <div class="card-round-team">
+                          <a href="{{team.link}}">
+                            <img src="/assets/logos/{{team.ID}}.webp" alt="" class="img-fluid">
+                          </a>
+                          <div class="card-round-title">
+                            <h2>{{team.nombre}}</h2>
+                          </div>
+                        </div>
+                        <div class="card-round-pts">
+                          <h6>{{ suma }} pts</h6>
+                        </div>
+                        <div class="card-round-place">
+                         
+                          <span>{{team.order}}</span>
+                    
+                  
+                        </div>  
+                        <div class="card-back">
+                          {% if team.ID == "7Z" %}
+                          <div class="card-color-left S7Z">
+                          </div>
+                          {% else %}     
+                          <div class="card-color-left {{team.ID}}">
+                          </div>
+                          {% endif %}     
+                  
+                        </div>
+                    </div>
+             
+                    
+                 
+                    {% endfor %}
+                </div>
+           
+        </div>
+      </div>
+      <div class="canva-footer">
+        <div class="canva-background">
+            <div class="redes">
+                <img src="/assets/logos/pokemonUnite.webp" alt="">
+                <span>UNITEFORZESTADIUM</span>
+                <span>liga.indigo</span>
+               
+            </div>
+        </div>
+    
+      </div>
+      <div class="canva-footer bg-warning" style="height: 105px;"></div>
+     </div>
+
+     </div>
+
+
+  
+   
+
+    
+  </div>
+   
+
+
+
+    
+
+
+
+  
+
+
+
+
+  <div id="stars1"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+
+    {% include footer-transparent.html %}
+
+
+     {% include navbar-league.html %}
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+     {% include g-analytics.html %}
+
+
+     <script>
+        // const divCaptura = document.getElementById('miDiv');
+
+        html2canvas(divCaptura, {
+  scale: 2,
+  useCORS: true
+})
+
+  .then(function(canvas) {
+    // El 'canvas' contiene la imagen de la captura
+    // Puedes agregar el canvas al DOM para mostrar la imagen
+    document.body.appendChild(canvas);
+
+    // O puedes obtener la URL de la imagen (en formato data URL)
+    const imagenDataURL = canvas.toDataURL('image/png');
+    console.log(imagenDataURL);
+
+    // Y luego, por ejemplo, podrías crear un enlace para descargar la imagen
+    const linkDescarga = document.createElement('a');
+    linkDescarga.href = imagenDataURL;
+    linkDescarga.download = 'captura_div.png';
+    document.body.appendChild(linkDescarga);
+    linkDescarga.click();
+  })
+  .catch(function(error) {
+    console.error('Error al tomar la captura:', error);
+  });
+     </script>
+</body>
+
+</html>
