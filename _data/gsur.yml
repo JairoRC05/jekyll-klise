@@ -1,320 +1,451 @@
 rondas:
-# RONDA 1
+  # RONDA 1
   - ronda: RONDA 1
     fecha: 23-25 ABR
     hora: "19:00"
     partidos:
-    - equipo1: NS
-      equipo2: TUT
-      resultado: 2-0
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: TUT WARRIOS
+        tag2: TUT
+        resultado: 2-0
 
-    - equipo1: AOGIRI
-      equipo2: OBS
-      resultado: 1-2
+      - equipo1: AOGIRI
+        tag1: AOGIRI
+        equipo2: IM OBSIDIANA
+        tag2: OBS
+        resultado: 1-2
 
-    - equipo1: AMT
-      equipo2: 2X1500
-      resultado: PEN
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: PEN
 
-    - equipo1: RNTX
-      equipo2: SPACE
-      resultado: 0-2
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: 0-2
 
-    - equipo1: GX
-      equipo2: CL
-      resultado: 2-0
-    
-    - equipo1: TAD
-      equipo2: ENIGMA
-      resultado: 0-2
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: 2-0
 
-# RONDA 2
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: 0-2
+
+  # RONDA 2
   - ronda: RONDA 2
     fecha: 28 ABR
     hora: "19:00"
     partidos:
-    - equipo1: TAD
-      equipo2: NS
-      resultado: 0-2
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: 0-2
 
-    - equipo1: TUT
-      equipo2: OBS
-      resultado: 2-0
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: IM OBSIDIANA
+        tag2: OBS
+        resultado: 2-0
 
-    - equipo1: AOGIRI
-      equipo2: RNTX
-      resultado: 0-2
+      - equipo1: AOGIRI
+        tag1: AOGIRI
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: 0-2
 
-    - equipo1: 2X1500
-      equipo2: GX
-      resultado: 0-2
+      - equipo1: 2X1500
+        tag1: "2X1500"
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: 0-2
 
-    - equipo1: CL
-      equipo2: SPACE
-      resultado: 0-2
-    
-    - equipo1: AMT
-      equipo2: ENIGMA
-      resultado: 0-2
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: 0-2
 
-# RONDA 3
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: 0-2
+
+  # RONDA 3
   - ronda: RONDA 3
     fecha: 29 ABR
     hora: "19:00"
     partidos:
-    - equipo1: NS
-      equipo2: OBS
-      resultado: VS
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: IM OBSIDIANA
+        tag2: OBS
+        resultado: VS
 
-    - equipo1: AMT
-      equipo2: TAD
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: TAQUITOS A LA DIABLA
+        tag2: TAD
+        resultado: VS
 
-    - equipo1: TUT
-      equipo2: RNTX
-      resultado: VS
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: VS
 
-    - equipo1: CL
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: 2X1500
-      equipo2: SPACE
-      resultado: VS
-    
-    - equipo1: GX
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: 2X1500
+        tag1: "2X1500"
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: VS
 
-# RONDA 4
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 4
   - ronda: RONDA 4
     fecha: 30 ABR
     hora: "19:00"
     partidos:
-    - equipo1: AMT
-      equipo2: NS
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: VS
 
-    - equipo1: TUT
-      equipo2: CL
-      resultado: VS
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: RNTX
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: VS
 
-    - equipo1: TAD
-      equipo2: GX
-      resultado: VS
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: VS
 
-    - equipo1: 2X1500
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: 2X1500
+        tag1: "2X1500"
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: SPACE
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: SPACE VAL
+        tag1: SPACE
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
 
-# RONDA 5
+  # RONDA 5
   - ronda: RONDA 5
-    fecha: 1 MAY
+    fecha: "1 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: NS
-      equipo2: RNTX
-      resultado: VS
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: VS
 
-    - equipo1: GX
-      equipo2: AMT
-      resultado: VS
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: IM AMATISTA
+        tag2: AMT
+        resultado: VS
 
-    - equipo1: 2X1500
-      equipo2: TUT
-      resultado: VS
+      - equipo1: 2X1500
+        tag1: "2X1500"
+        equipo2: TUT WARRIOS
+        tag2: TUT
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: CL
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: VS
 
-    - equipo1: SPACE
-      equipo2: TAD
-      resultado: VS
-    
-    - equipo1: AOGIRI
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: SPACE VAL
+        tag1: SPACE
+        equipo2: TAQUITOS A LA DIABLA
+        tag2: TAD
+        resultado: VS
 
-# RONDA 6
+      - equipo1: AOGIRI
+        tag1: AOGIRI
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 6
   - ronda: RONDA 6
-    fecha: 2 MAY
+    fecha: "2 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: GX
-      equipo2: NS
-      resultado: VS
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: VS
 
-    - equipo1: CL
-      equipo2: RNTX
-      resultado: VS
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: VS
 
-    - equipo1: AMT
-      equipo2: SPACE
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: 2X1500
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: VS
 
-    - equipo1: TAD
-      equipo2: AOGIRI
-      resultado: VS
-    
-    - equipo1: TUT
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-# RONDA 7
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 7
   - ronda: RONDA 7
-    fecha: 5 MAY
+    fecha: "5 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: NS
-      equipo2: CL
-      resultado: VS
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: VS
 
-    - equipo1: GX
-      equipo2: SPACE
-      resultado: VS
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: VS
 
-    - equipo1: RNTX
-      equipo2: 2X1500
-      resultado: VS
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: VS
 
-    - equipo1: AMT
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: TUT
-      equipo2: TAD
-      resultado: VS
-    
-    - equipo1: OBS
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: TAQUITOS A LA DIABLA
+        tag2: TAD
+        resultado: VS
 
-# RONDA 8
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 8
   - ronda: RONDA 8
-    fecha: 7 MAY
+    fecha: "7 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: SPACE
-      equipo2: NS
-      resultado: VS
+      - equipo1: SPACE VAL
+        tag1: SPACE
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: VS
 
-    - equipo1: CL
-      equipo2: 2X1500
-      resultado: VS
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: VS
 
-    - equipo1: GX
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: AMT
-      equipo2: TUT
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: TUT WARRIOS
+        tag2: TUT
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: TAD
-      resultado: VS
-    
-    - equipo1: RNTX
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: TAQUITOS A LA DIABLA
+        tag2: TAD
+        resultado: VS
 
-# RONDA 9
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 9
   - ronda: RONDA 9
-    fecha: 8 MAY
+    fecha: "8 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: NS
-      equipo2: 2X1500
-      resultado: VS
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: VS
 
-    - equipo1: SPACE
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: SPACE VAL
+        tag1: SPACE
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: TUT
-      equipo2: GX
-      resultado: VS
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: VS
 
-    - equipo1: TAD
-      equipo2: RNTX
-      resultado: VS
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: RNT XAPULOVERS
+        tag2: RNTX
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: AMT
-      resultado: VS
-    
-    - equipo1: CL
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: IM AMATISTA
+        tag2: AMT
+        resultado: VS
 
-# RONDA 10
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 10
   - ronda: RONDA 10
     fecha: 9-12 MAY
     hora: "19:00"
     partidos:
-    - equipo1: AOGIRI
-      equipo2: NS
-      resultado: VS
+      - equipo1: AOGIRI
+        tag1: AOGIRI
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: VS
 
-    - equipo1: SPACE
-      equipo2: TUT
-      resultado: VS
+      - equipo1: SPACE VAL
+        tag1: SPACE
+        equipo2: TUT WARRIOS
+        tag2: TUT
+        resultado: VS
 
-    - equipo1: TAD
-      equipo2: CL
-      resultado: VS
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: GX
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: VS
 
-    - equipo1: RNTX
-      equipo2: AMT
-      resultado: VS
-    
-    - equipo1: 2X1500
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: IM AMATISTA
+        tag2: AMT
+        resultado: VS
 
-# RONDA 11
+      - equipo1: 2X1500
+        tag1: "2X1500"
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
+
+  # RONDA 11
   - ronda: RONDA 11
-    fecha: 13 MAY
+    fecha: "13 MAY"
     hora: "19:00"
     partidos:
-    - equipo1: TUT
-      equipo2: AOGIRI
-      resultado: VS
+      - equipo1: TUT WARRIOS
+        tag1: TUT
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
 
-    - equipo1: TAD
-      equipo2: 2X1500
-      resultado: VS
+      - equipo1: TAQUITOS A LA DIABLA
+        tag1: TAD
+        equipo2: 2X1500
+        tag2: "2X1500"
+        resultado: VS
 
-    - equipo1: OBS
-      equipo2: SPACE
-      resultado: VS
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: VS
 
-    - equipo1: AMT
-      equipo2: CL
-      resultado: VS
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: CHRONOS LEGION
+        tag2: CL
+        resultado: VS
 
-    - equipo1: RNTX
-      equipo2: GX
-      resultado: VS
-    
-    - equipo1: NS
-      equipo2: ENIGMA
-      resultado: VS
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: VS
 
+      - equipo1: NO SMITES
+        tag1: NS
+        equipo2: SPC ENIGMA
+        tag2: ENIGMA
+        resultado: VS
