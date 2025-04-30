@@ -5,23 +5,15 @@ activo: true
 jugadores: 
   - nickname: i'm.McLovin
     ID: 9KNN1KA
-
     avatar: male1
+
   - nickname: DemoliZM竜
     ID: L92XH05
-    mvp: true
-    numero: 6
-    m1: 2
-    m2: 3
-    m3: 1
-
     avatar: male1
-  - nickname: ZTG・Broken
 
+  - nickname: ZTG・Broken
     ID: MHAP9RC
     avatar: male1
-
-
 
   - nickname: 差Seruhio歩
     ID: 2HX0X8C
@@ -38,6 +30,10 @@ jugadores:
 
   - nickname: Sąē
     ID: KTF0CKP 
+    avatar: male1
+
+  - nickname: EK・Mich
+    ID: 64MY9H3
     avatar: male1
 
 
