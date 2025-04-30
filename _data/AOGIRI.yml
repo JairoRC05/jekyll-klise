@@ -3,34 +3,41 @@ team: AOGIRI
 org:
 activo: true
 jugadores: 
-  - nickname: KĘNsąsąki
-    ID: T87QRC8
-    avatar: male1
-
-  - nickname: JECCH01 
-    ID: LYKHAX6
-    avatar: male1
-  
-  - nickname: Hammerfall9
-    ID: R3L165C
-    avatar: male1
-
+#1
   - nickname: ʚJacoɞ
     ID: NHTN88E
     avatar: male1
- 
+#2
+  - nickname: KĘNsąsąki
+    ID: T87QRC8
+    avatar: male1
+#3
+  - nickname: ŠaṭʊяиọĞr
+    ID: R10QTME
+    avatar: male1
 
+#4
+  - nickname: Hammerfall9
+    ID: R3L165C
+    avatar: male1
+#5
   - nickname: Lûmiere
     ID: 7M7TNHA
     avatar: male1
- 
+#6
   - nickname: ア・Ękkō
     ID: 63MMNM
     avatar: male1
-
+#7
   - nickname: Ɗʝ・ƓaʀyOak
     ID: YN5YCY2
     avatar: male1
+#8
+  - nickname: Kikyo魂
+    ID: 5R0Q6LX
+    avatar: male1
+
+
  
  
 
