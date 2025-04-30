@@ -4,10 +4,10 @@ norte:
     nombre: PLAGA VILLANOS
     ID: PLAGA
     link: /equipos/plaga
-    order: 2
-    line: 0
+    line: 2
+    order: 4
     M1: 2
-    M2: 0
+    M2: R
     M3: 0
     M4: 0
     M5: 0
@@ -24,9 +24,9 @@ norte:
     ID: STMN
     link: /equipos/stamina-e-sports
     order: 1
-    line: 0
+    line: 1
     M1: 3
-    M2: 0
+    M2: 3
     M3: 0
     M4: 0
     M5: 0
@@ -42,9 +42,9 @@ norte:
     ID: NEO
     link: /equipos/ranked-team--neo-stars
     order: 4
-    line: 0
+    line: 4
     M1: 0
-    M2: 0
+    M2: 2
     M3: 0
     M4: 0
     M5: 0
@@ -59,10 +59,10 @@ norte:
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
-    order: 3
-    line: 0
+    order: 2
+    line: 3
     M1: 1
-    M2: 0
+    M2: 3
     M3: 0
     M4: 0
     M5: 0
@@ -77,10 +77,10 @@ norte:
     nombre: DINASTY
     ID: DTY
     link: /equipos/dinasty
-    order: 3
-    line: 0
+    order: 4
+    line: 3
     M1: 1
-    M2: 0
+    M2: 1
     M3: 0
     M4: 0
     M5: 0
@@ -95,8 +95,8 @@ norte:
     nombre: HG SALARIO MINIMO
     ID: SM
     link: /equipos/house-of-ghost--salario-minimo
-    order: 1
-    line: 0
+    order: 3
+    line: 1
     M1: 3
     M2: 0
     M3: 0
@@ -113,8 +113,8 @@ norte:
     nombre: ЯAGNAROK YMIR
     ID: RK
     link: /teams/club-ragnarok--ymir
-    order: 2
-    line: 0
+    line: 2
+    order: 4
     M1: 2
     M2: 0
     M3: 0
@@ -136,7 +136,7 @@ norte:
     order: 1  
     line: 0
     M1: 3
-    M2: 0
+    M2: R
     M3: 0
     M4: 0
     M5: 0
@@ -171,7 +171,7 @@ norte:
     link: /equipos/ad-gaming--broken-dreams
     order: 4
     line: 0
-    M1: R
+    M1: 0
     M2: 0
     M3: 0
     M4: 0
@@ -187,10 +187,10 @@ norte:
     nombre: AD GAMING
     ID: AD
     link: /equipos/ad-gaming
-    order: 4
-    line: 0
-    M1: R
-    M2: 0
+    line: 4
+    order: 1
+    M1: 3
+    M2: 3
     M3: 0
     M4: 0
     M5: 0
@@ -205,11 +205,10 @@ norte:
     nombre: PRESTACIONES DE LEY HG
     ID: PE
     link: /equipos/house-of-ghost--prestaciones-de-ley
-    order: 4
-    line: 0
-    pts:
+    line: 4
+    order: 5
     M1: 0
-    M2: 0
+    M2: R
     M3: 0
     M4: 0
     M5: 0

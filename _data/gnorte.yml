@@ -39,11 +39,11 @@ rondas:
 
     - equipo1: DTY
       equipo2: NEO
-      resultado: VS
+      resultado: 1-2
 
     - equipo1: STMN
       equipo2: RK
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: PE
       equipo2: DBO
@@ -51,11 +51,11 @@ rondas:
 
     - equipo1: ZAFIRO
       equipo2: OVG
-      resultado: VS
+      resultado: 0-2
     
     - equipo1: SM
       equipo2: AD
-      resultado: VS
+      resultado: 0-2
 
 # RONDA 3
   - ronda: RONDA 3

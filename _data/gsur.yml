@@ -35,27 +35,27 @@ rondas:
     partidos:
     - equipo1: TAD
       equipo2: NS
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: TUT
       equipo2: OBS
-      resultado: VS
+      resultado: 2-0
 
     - equipo1: AOGIRI
       equipo2: RNTX
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: 2X1500
       equipo2: GX
-      resultado: VS
+      resultado: 0-2
 
     - equipo1: CL
       equipo2: SPACE
-      resultado: VS
+      resultado: 0-2
     
     - equipo1: AMT
       equipo2: ENIGMA
-      resultado: VS
+      resultado: 0-2
 
 # RONDA 3
   - ronda: RONDA 3
