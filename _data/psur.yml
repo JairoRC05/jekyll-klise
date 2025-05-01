@@ -17,9 +17,9 @@ sur:
     M10: 0
     M11: 0
 
-  - equipo: TUT
+  - equipo: TUTW
     nombre: TUT WARRRIORS
-    ID: TUT
+    ID: TUTW
     link: /equipos/theunownteam--warriors
     line: 0
     order: 4
