@@ -165,10 +165,10 @@ norte:
     M10: 0
     M11: 0
 
-  - equipo: BD
-    nombre:  BROKEN DREAMS
-    ID: BD
-    link: /equipos/ad-gaming--broken-dreams
+  - equipo: TM
+    nombre: TEAM MANICOMIO
+    ID: TM
+    link: /equipos/team-manicomio
     order: 4
     line: 0
     M1: 0

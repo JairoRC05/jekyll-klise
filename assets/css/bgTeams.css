@@ -794,6 +794,11 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
   background: radial-gradient(circle, rgba(255,167,55,1) 0%, rgba(255,143,0,1) 100%);
 }
 
+.TM{
+  background: #ff000d;
+background: radial-gradient(circle, rgba(255, 0, 13, 1) 0%, rgba(218, 27, 35, 1) 100%);
+}
+
 .SCXF{
   background: #303030;
 background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100%);
@@ -801,6 +806,11 @@ background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100
 
 /* AZUL */
 .TUT{
+  background: rgb(2,126,222);
+  background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
+}
+
+.TUTW{
   background: rgb(2,126,222);
   background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
 }

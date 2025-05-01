@@ -34,8 +34,8 @@ rondas:
         tag2: ZAFIRO
         resultado: 2-0
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: AD GAMING
         tag2: AD
         resultado: PEN
@@ -45,8 +45,8 @@ rondas:
     fecha: 28 ABR
     hora: "19:00"
     partidos:
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: PLAGA VILLANOS
         tag2: PLAGA
         resultado: VS
@@ -94,8 +94,8 @@ rondas:
 
       - equipo1: HG SALARIO MINIMO
         tag1: SM
-        equipo2: BROKEN DREAMS
-        tag2: BD
+        equipo2: TEAM MANICOMIO
+        tag2: TM
         resultado: 2-1
 
       - equipo1: DINASTY
@@ -145,8 +145,8 @@ rondas:
         tag1: RK
         resultado: VS
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: DINAMITA BUENA ONDA
         tag2: DBO
         resultado: VS
@@ -158,7 +158,7 @@ rondas:
         resultado: VS
 
       - equipo1: OVERHEAT
-        tag2: OVG
+        tag1: OVG
         equipo2: AD GAMING
         tag2: AD
         resultado: VS
@@ -187,15 +187,15 @@ rondas:
         resultado: VS
 
       - equipo1: RNT NEO STARS
-        tag2: NEO
+        tag1: NEO
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
         resultado: VS
 
       - equipo1: OVERHEAT
         tag1: OVG
-        equipo2: BROKEN DREAMS
-        tag2: BD
+        equipo2: TEAM MANICOMIO
+        tag2: TM
         resultado: VS
 
       - equipo1: STAMINA E-SPORTS
@@ -233,8 +233,8 @@ rondas:
         tag2: PE
         resultado: VS
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: STAMINA E-SPORTS
         tag2: STMN
         resultado: VS
@@ -276,8 +276,8 @@ rondas:
 
       - equipo1: DINASTY
         tag1: DTY
-        equipo2: BROKEN DREAMS
-        tag2: BD
+        equipo2: TEAM MANICOMIO
+        tag2: TM
         resultado: VS
 
       - equipo1: RNT NEO STARS
@@ -317,8 +317,8 @@ rondas:
 
       - equipo1: RNT NEO STARS
         tag1: NEO
-        equipo2: BROKEN DREAMS
-        tag2: BD
+        equipo2: TEAM MANICOMIO
+        tag2: TM
         resultado: VS
 
       - equipo1: RAGNAROK YMIR
@@ -350,8 +350,8 @@ rondas:
         tag2: DBO
         resultado: VS
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: RAGNAROK YMIR
         tag2: RK
         resultado: VS
@@ -385,8 +385,8 @@ rondas:
         tag2: DTY
         resultado: VS
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
         resultado: VS
@@ -420,8 +420,8 @@ rondas:
         tag2: STMN
         resultado: VS
 
-      - equipo1: BROKEN DREAMS
-        tag1: BD
+      - equipo1: TEAM MANICOMIO
+        tag1: TM
         equipo2: PRESTACIONES DE LEY HG
         tag2: PE
         resultado: VS

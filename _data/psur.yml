@@ -20,7 +20,7 @@ sur:
   - equipo: TUT
     nombre: TUT WARRRIORS
     ID: TUT
-    link: /equipos/theunownteam
+    link: /equipos/theunownteam--warriors
     line: 0
     order: 4
     M1: 0
@@ -71,10 +71,10 @@ sur:
     M10: 0
     M11: 0
 
-  - equipo: 2X1500
-    nombre: 2X1500
-    ID: 2X1500
-    link: /equipos/2X1500
+  - equipo: TUT
+    nombre: THE UNOWN TEAM
+    ID: TUT
+    link: /equipos/theunownteam
     line: 4
     order: 5
     M1: R

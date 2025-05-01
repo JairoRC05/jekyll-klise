@@ -35,8 +35,8 @@
 {% else %}
   <div class="bracket-round-list">
     <div class="bracket-round-team">
-      <a href="/teams/{{partido.equipo1}}">
-        <img src="/assets/logos/{{partido.equipo1}}.webp" alt="" class="img-fluid">
+      <a href="/teams/{{partido.tag1}}">
+        <img src="/assets/logos/{{partido.tag1}}.webp" alt="" class="img-fluid">
       </a>
     
     </div>
@@ -68,23 +68,23 @@
 
     <div class="bracket-round-team-right">
      
-      <a href="/teams/{{partido.equipo2}}">
-        <img src="/assets/logos/{{partido.equipo2}}.webp" alt="" class="img-fluid">
+      <a href="/teams/{{partido.tag2}}">
+        <img src="/assets/logos/{{partido.tag2}}.webp" alt="" class="img-fluid">
       </a>
     </div>
 
   
       <div class="card-back">
-          {% if partido.equipo1 == "7Z" %}
+          {% if partido.tag1 == "7Z" %}
           <div class="card-color-left S7Z"> </div>  
           {% else %}
-          <div class="card-color-left {{partido.equipo1}}"> </div> 
+          <div class="card-color-left {{partido.tag1}}"> </div> 
           {% endif %} 
 
-          {% if partido.equipo2 == "7Z" %}
+          {% if partido.tag2 == "7Z" %}
           <div class="card-color-right S7Z"> </div>  
           {% else %}
-          <div class="card-color-right {{partido.equipo2}}"> </div>  
+          <div class="card-color-right {{partido.tag2}}"> </div>  
           {% endif %} 
 
       </div>

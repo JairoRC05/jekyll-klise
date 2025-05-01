@@ -1,7 +1,7 @@
 {% if page.ID == "RK" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "RK" or partido.equipo2 == "RK" %}
+{% if partido.tag1 == "RK" or partido.tag2 == "RK" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -13,7 +13,7 @@
 {% if page.ID == "DBO" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "DBO" or partido.equipo2 == "DBO" %}
+{% if partido.tag1 == "DBO" or partido.tag2 == "DBO" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -25,7 +25,7 @@
 {% if page.ID == "ZAFIRO" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "ZAFIRO" or partido.equipo2 == "ZAFIRO" %}
+{% if partido.tag1 == "ZAFIRO" or partido.tag2 == "ZAFIRO" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -37,7 +37,7 @@
 {% if page.ID == "BD" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "BD" or partido.equipo2 == "BD" %}
+{% if partido.tag1 == "BD" or partido.tag2 == "BD" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -49,7 +49,7 @@
 {% if page.ID == "GX" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "GX" or partido.equipo2 == "GX" %}
+{% if partido.tag1 == "GX" or partido.tag2 == "GX" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -61,7 +61,7 @@
 {% if page.ID == "NS" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "NS" or partido.equipo2 == "NS" %}
+{% if partido.tag1 == "NS" or partido.tag2 == "NS" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -73,7 +73,7 @@
 {% if page.ID == "DTY" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "DTY" or partido.equipo2 == "DTY" %}
+{% if partido.tag1 == "DTY" or partido.tag2 == "DTY" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -85,7 +85,7 @@
 {% if page.ID == "TAD" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "TAD" or partido.equipo2 == "TAD" %}
+{% if partido.tag1 == "TAD" or partido.tag2 == "TAD" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -97,55 +97,7 @@
 {% if page.ID == "AMT" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "AMT" or partido.equipo2 == "AMT" %}
-<div class="col-12 col-md-6 col-lg-6 col-xl-4">
-  {% include match.html %}
-</div>
-{% endif %}
-{% endfor %}
-{% endfor %}
-{% endif %}
-
-{% if page.ID == "OBS" %}
-{% for ronda in site.data.gsur.rondas %}
-{% for partido in ronda.partidos %}
-{% if partido.equipo1 == "OBS" or partido.equipo2 == "OBS" %}
-<div class="col-12 col-md-6 col-lg-6 col-xl-4">
-  {% include match.html %}
-</div>
-{% endif %}
-{% endfor %}
-{% endfor %}
-{% endif %}
-
-{% if page.ID == "RNTX" %}
-{% for ronda in site.data.gsur.rondas %}
-{% for partido in ronda.partidos %}
-{% if partido.equipo1 == "RNTX" or partido.equipo2 == "RNTX" %}
-<div class="col-12 col-md-6 col-lg-6 col-xl-4">
-  {% include match.html %}
-</div>
-{% endif %}
-{% endfor %}
-{% endfor %}
-{% endif %}
-
-{% if page.ID == "SPACE" %}
-{% for ronda in site.data.gsur.rondas %}
-{% for partido in ronda.partidos %}
-{% if partido.equipo1 == "SPACE" or partido.equipo2 == "SPACE" %}
-<div class="col-12 col-md-6 col-lg-6 col-xl-4">
-  {% include match.html %}
-</div>
-{% endif %}
-{% endfor %}
-{% endfor %}
-{% endif %}
-
-{% if page.ID == "CL" %}
-{% for ronda in site.data.gsur.rondas %}
-{% for partido in ronda.partidos %}
-{% if partido.equipo1 == "CL" or partido.equipo2 == "CL" %}
+{% if partido.tag1 == "AMT" or partido.tag2 == "AMT" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -157,7 +109,79 @@
 {% if page.ID == "TUT" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "TUT" or partido.equipo2 == "TUT" %}
+{% if partido.tag1 == "TUT" or partido.tag2 == "TUT" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "OBS" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "OBS" or partido.tag2 == "OBS" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "RNTX" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "RNTX" or partido.tag2 == "RNTX" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "SPACE" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "SPACE" or partido.tag2 == "SPACE" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "CL" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "CL" or partido.tag2 == "CL" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "TUTW" %}
+{% for ronda in site.data.gsur.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "TUTW" or partido.tag2 == "TUTW" %}
+<div class="col-12 col-md-6 col-lg-6 col-xl-4">
+  {% include match.html %}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if page.ID == "TM" %}
+{% for ronda in site.data.gnorte.rondas %}
+{% for partido in ronda.partidos %}
+{% if partido.tag1 == "TM" or partido.tag2 == "TM" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -169,7 +193,7 @@
 {% if page.ID == "OVG" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "OVG" or partido.equipo2 == "OVG" %}
+{% if partido.tag1 == "OVG" or partido.tag2 == "OVG" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -181,7 +205,7 @@
 {% if page.ID == "NEO" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "NEO" or partido.equipo2 == "NEO" %}
+{% if partido.tag1 == "NEO" or partido.tag2 == "NEO" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -193,7 +217,7 @@
 {% if page.ID == "MEXA" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "MEXA" or partido.equipo2 == "MEXA" %}
+{% if partido.tag1 == "MEXA" or partido.tag2 == "MEXA" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -205,7 +229,7 @@
 {% if page.ID == "PLAGA" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "PLAGA" or partido.equipo2 == "PLAGA" %}
+{% if partido.tag1 == "PLAGA" or partido.tag2 == "PLAGA" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -217,7 +241,7 @@
 {% if page.ID == "RUBY" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "RUBY" or partido.equipo2 == "RUBY" %}
+{% if partido.tag1 == "RUBY" or partido.tag2 == "RUBY" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -229,7 +253,7 @@
 {% if page.ID == "PLAT" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "PLAT" or partido.equipo2 == "PLAT" %}
+{% if partido.tag1 == "PLAT" or partido.tag2 == "PLAT" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -241,7 +265,7 @@
 {% if page.ID == "COL" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "COL" or partido.equipo2 == "COL" %}
+{% if partido.tag1 == "COL" or partido.tag2 == "COL" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -254,7 +278,7 @@
 {% if page.ID == "SM" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "SM" or partido.equipo2 == "SM" %}
+{% if partido.tag1 == "SM" or partido.tag2 == "SM" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -266,7 +290,7 @@
 {% if page.ID == "EVL" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "EVL" or partido.equipo2 == "EVL" %}
+{% if partido.tag1 == "EVL" or partido.tag2 == "EVL" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -278,7 +302,7 @@
 {% if page.ID == "POA" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "POA" or partido.equipo2 == "POA" %}
+{% if partido.tag1 == "POA" or partido.tag2 == "POA" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -290,7 +314,7 @@
 {% if page.ID == "DMD" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "DMD" or partido.equipo2 == "DMD" %}
+{% if partido.tag1 == "DMD" or partido.tag2 == "DMD" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -303,7 +327,7 @@
 {% if page.ID == "MT" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "MT" or partido.equipo2 == "MT" %}
+{% if partido.tag1 == "MT" or partido.tag2 == "MT" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -315,7 +339,7 @@
 {% if page.ID == "TSR" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "TSR" or partido.equipo2 == "TSR" %}
+{% if partido.tag1 == "TSR" or partido.tag2 == "TSR" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -327,7 +351,7 @@
 {% if page.ID == "STMN" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "STMN" or partido.equipo2 == "STMN" %}
+{% if partido.tag1 == "STMN" or partido.tag2 == "STMN" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -339,7 +363,7 @@
 {% if page.ID == "PEARL" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "PEARL" or partido.equipo2 == "PEARL" %}
+{% if partido.tag1 == "PEARL" or partido.tag2 == "PEARL" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -351,7 +375,7 @@
 {% if page.ID == "7Z" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "7Z" or partido.equipo2 == "7Z" %}
+{% if partido.tag1 == "7Z" or partido.tag2 == "7Z" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -363,7 +387,7 @@
 {% if page.ID == "AD" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "AD" or partido.equipo2 == "AD" %}
+{% if partido.tag1 == "AD" or partido.tag2 == "AD" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -375,7 +399,7 @@
 {% if page.ID == "PE" %}
 {% for ronda in site.data.gnorte.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "PE" or partido.equipo2 == "PE" %}
+{% if partido.tag1 == "PE" or partido.tag2 == "PE" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -387,7 +411,7 @@
 {% if page.ID == "ENIGMA" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "ENIGMA" or partido.equipo2 == "ENIGMA" %}
+{% if partido.tag1 == "ENIGMA" or partido.tag2 == "ENIGMA" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -399,7 +423,7 @@
 {% if page.ID == "2X1500" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "2X1500" or partido.equipo2 == "2X1500" %}
+{% if partido.tag1 == "2X1500" or partido.tag2 == "2X1500" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>
@@ -411,7 +435,7 @@
 {% if page.ID == "AOGIRI" %}
 {% for ronda in site.data.gsur.rondas %}
 {% for partido in ronda.partidos %}
-{% if partido.equipo1 == "AOGIRI" or partido.equipo2 == "AOGIRI" %}
+{% if partido.tag1 == "AOGIRI" or partido.tag2 == "AOGIRI" %}
 <div class="col-12 col-md-6 col-lg-6 col-xl-4">
   {% include match.html %}
 </div>

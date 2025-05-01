@@ -7,7 +7,7 @@ rondas:
       - equipo1: NO SMITES
         tag1: NS
         equipo2: TUT WARRIOS
-        tag2: TUT
+        tag2: TUTW
         resultado: 2-0
 
       - equipo1: AOGIRI
@@ -18,8 +18,8 @@ rondas:
 
       - equipo1: IM AMATISTA
         tag1: AMT
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT
         resultado: PEN
 
       - equipo1: RNT XAPULOVERS
@@ -52,7 +52,7 @@ rondas:
         resultado: 0-2
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: IM OBSIDIANA
         tag2: OBS
         resultado: 2-0
@@ -63,8 +63,8 @@ rondas:
         tag2: RNTX
         resultado: 0-2
 
-      - equipo1: 2X1500
-        tag1: "2X1500"
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
         equipo2: RNT GALÁCTICOS
         tag2: GX
         resultado: 0-2
@@ -99,7 +99,7 @@ rondas:
         resultado: VS
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: RNT XAPULOVERS
         tag2: RNTX
         resultado: VS
@@ -110,8 +110,8 @@ rondas:
         tag2: AOGIRI
         resultado: VS
 
-      - equipo1: 2X1500
-        tag1: "2X1500"
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
         equipo2: SPACE VAL
         tag2: SPACE
         resultado: VS
@@ -134,7 +134,7 @@ rondas:
         resultado: VS
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: CHRONOS LEGION
         tag2: CL
         resultado: VS
@@ -151,8 +151,8 @@ rondas:
         tag2: GX
         resultado: VS
 
-      - equipo1: 2X1500
-        tag1: "2X1500"
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
         equipo2: AOGIRI
         tag2: AOGIRI
         resultado: VS
@@ -180,10 +180,10 @@ rondas:
         tag2: AMT
         resultado: VS
 
-      - equipo1: 2X1500
-        tag1: "2X1500"
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
         equipo2: TUT WARRIOS
-        tag2: TUT
+        tag2: TUTW
         resultado: VS
 
       - equipo1: IM OBSIDIANA
@@ -229,8 +229,8 @@ rondas:
 
       - equipo1: IM OBSIDIANA
         tag1: OBS
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT
         resultado: VS
 
       - equipo1: TAQUITOS A LA DIABLA
@@ -240,7 +240,7 @@ rondas:
         resultado: VS
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: VS
@@ -264,8 +264,8 @@ rondas:
 
       - equipo1: RNT XAPULOVERS
         tag1: RNTX
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT
         resultado: VS
 
       - equipo1: IM AMATISTA
@@ -275,7 +275,7 @@ rondas:
         resultado: VS
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: TAQUITOS A LA DIABLA
         tag2: TAD
         resultado: VS
@@ -299,8 +299,8 @@ rondas:
 
       - equipo1: CHRONOS LEGION
         tag1: CL
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT
         resultado: VS
 
       - equipo1: RNT GALÁCTICOS
@@ -312,7 +312,7 @@ rondas:
       - equipo1: IM AMATISTA
         tag1: AMT
         equipo2: TUT WARRIOS
-        tag2: TUT
+        tag2: TUTW
         resultado: VS
 
       - equipo1: IM OBSIDIANA
@@ -334,8 +334,8 @@ rondas:
     partidos:
       - equipo1: NO SMITES
         tag1: NS
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT
         resultado: VS
 
       - equipo1: SPACE VAL
@@ -345,7 +345,7 @@ rondas:
         resultado: VS
 
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: RNT GALÁCTICOS
         tag2: GX
         resultado: VS
@@ -382,7 +382,7 @@ rondas:
       - equipo1: SPACE VAL
         tag1: SPACE
         equipo2: TUT WARRIOS
-        tag2: TUT
+        tag2: TUTW
         resultado: VS
 
       - equipo1: TAQUITOS A LA DIABLA
@@ -403,8 +403,8 @@ rondas:
         tag2: AMT
         resultado: VS
 
-      - equipo1: 2X1500
-        tag1: "2X1500"
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: VS
@@ -415,15 +415,15 @@ rondas:
     hora: "19:00"
     partidos:
       - equipo1: TUT WARRIOS
-        tag1: TUT
+        tag1: TUTW
         equipo2: AOGIRI
         tag2: AOGIRI
         resultado: VS
 
       - equipo1: TAQUITOS A LA DIABLA
         tag1: TAD
-        equipo2: 2X1500
-        tag2: "2X1500"
+        equipo2: THE UNOWN TEAM
+        tag2: TUT  
         resultado: VS
 
       - equipo1: IM OBSIDIANA

@@ -1,23 +1,22 @@
 ---
 layout: liga-indigo-team
-permalink: /equipos/theunownteam--warriors
-categories: TEAM GSUR
+permalink: /equipos/team-manicomio
+categories: GNORTE TEAM
+team: TEAM MANICOMIO
 date: 2020-08-29 10:29:20 +0700
-title: TUT
-sector: CXF
-team: THE UNOWN TEAM WARRIORS
+title: TEAM MANICOMIO
+ID: TM
 region: LAN
-pais: mx
-rango: ORO
-ID: TUTW
 ligas: 
-cxf: "3"
+cxf: 
+rango: BRONCE
 temporada: SI
-puntos: 4
-order: "06"
+puntos: 2
 line: down
+order: "08"
+pais: mx
 rec1: des
-rec2: win
+rec2: loss
 rec3: loss
 rec4: win
 rec5: ---

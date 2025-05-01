@@ -216,3 +216,15 @@
 {% include card-roster.html %}
 {%- endfor -%}
 {% endif %}
+
+{% if page.ID == "TUTW" %}
+{%- for jugador in site.data.TUTW.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
+
+{% if page.ID == "TM" %}
+{%- for jugador in site.data.TM.jugadores -%}
+{% include card-roster.html %}
+{%- endfor -%}
+{% endif %}
