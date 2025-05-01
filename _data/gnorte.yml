@@ -90,37 +90,37 @@ rondas:
         tag1: PLAGA
         equipo2: RNT NEO STARS
         tag2: NEO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: HG SALARIO MINIMO
         tag1: SM
         equipo2: BROKEN DREAMS
         tag2: BD
-        resultado: VS
+        resultado: 2-1
 
       - equipo1: DINASTY
         tag1: DTY
         equipo2: RAGNAROK YMIR
         tag2: RK
-        resultado: VS
+        resultado: 2-1
 
       - equipo1: IMPERIO MEXA ZAFIRO
         tag1: ZAFIRO
         equipo2: STAMINA E-SPORTS
         tag2: STMN
-        resultado: VS
+        resultado: 0-2 
 
       - equipo1: PRESTACIONES DE LEY HG
         tag1: PE
         equipo2: OVERHEAT
         tag2: OVG
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: DINAMITA BUENA ONDA
         tag1: DBO
         equipo2: AD GAMING
         tag2: AD
-        resultado: VS
+        resultado: 1-2
 
   # RONDA 4
   - ronda: RONDA 4

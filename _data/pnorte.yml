@@ -7,8 +7,8 @@ norte:
     line: 2
     order: 4
     M1: 2
-    M2: R
-    M3: 0
+    M2: 3
+    M3: 3
     M4: 0
     M5: 0
     M6: 0
@@ -27,7 +27,7 @@ norte:
     line: 1
     M1: 3
     M2: 3
-    M3: 0
+    M3: 3
     M4: 0
     M5: 0
     M6: 0 
@@ -81,7 +81,7 @@ norte:
     line: 3
     M1: 1
     M2: 1
-    M3: 0
+    M3: 2
     M4: 0
     M5: 0
     M6: 0
@@ -99,7 +99,7 @@ norte:
     line: 1
     M1: 3
     M2: 0
-    M3: 0
+    M3: 2
     M4: 0
     M5: 0
     M6: 0
@@ -117,7 +117,7 @@ norte:
     order: 4
     M1: 2
     M2: 0
-    M3: 0
+    M3: 1
     M4: 0
     M5: 0
     M6: 0
@@ -136,8 +136,8 @@ norte:
     order: 1  
     line: 0
     M1: 3
-    M2: R
-    M3: 0
+    M2: 0
+    M3: 1
     M4: 0
     M5: 0
     M6: 0
@@ -173,7 +173,7 @@ norte:
     line: 0
     M1: 0
     M2: 0
-    M3: 0
+    M3: 1
     M4: 0
     M5: 0
     M6: 0
@@ -191,7 +191,7 @@ norte:
     order: 1
     M1: 3
     M2: 3
-    M3: 0
+    M3: 2
     M4: 0
     M5: 0
     M6: 0
@@ -208,8 +208,8 @@ norte:
     line: 4
     order: 5
     M1: 0
-    M2: R
-    M3: 0
+    M2: 3
+    M3: 3
     M4: 0
     M5: 0
     M6: 0

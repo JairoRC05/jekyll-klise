@@ -24,13 +24,17 @@ jugadores:
     avatar: male1
 
 
-  - nickname: P£・Bugha漢
-    ID: H6X00LK
-    avatar: male1
+  # - nickname: P£・Bugha漢
+  #   ID: H6X00LK
+  #   avatar: male1
  
 
   - nickname: ElyLover愛
     ID: H6X00LK
+    avatar: male1
+
+  - nickname: JDA・Benny
+    ID: HXNG3M
     avatar: male1
  
 
