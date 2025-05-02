@@ -38,7 +38,7 @@ rondas:
         tag1: TM
         equipo2: AD GAMING
         tag2: AD
-        resultado: PEN
+        resultado: 0-2
 
   # RONDA 2
   - ronda: RONDA 2
@@ -49,7 +49,7 @@ rondas:
         tag1: TM
         equipo2: PLAGA VILLANOS
         tag2: PLAGA
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: DINASTY
         tag1: DTY
@@ -67,7 +67,7 @@ rondas:
         tag1: PE
         equipo2: DINAMITA BUENA ONDA
         tag2: DBO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: IMPERIO MEXA ZAFIRO
         tag1: ZAFIRO
@@ -79,7 +79,7 @@ rondas:
         tag1: SM
         equipo2: AD GAMING
         tag2: AD
-        resultado: 0-2
+        resultado: 1-2
 
   # RONDA 3
   - ronda: RONDA 3
@@ -131,37 +131,37 @@ rondas:
         tag1: SM
         equipo2: PLAGA VILLANOS
         tag2: PLAGA
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: DINASTY
         tag1: DTY
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: RNT NEO STARS
         tag2: NEO
         equipo2: RAGNAROK YMIR
         tag1: RK
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: TEAM MANICOMIO
         tag1: TM
         equipo2: DINAMITA BUENA ONDA
         tag2: DBO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: PRESTACIONES DE LEY HG
         tag1: PE
         equipo2: STAMINA E-SPORTS
         tag2: STMN
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: OVERHEAT
         tag1: OVG
         equipo2: AD GAMING
         tag2: AD
-        resultado: VS
+        resultado: PEN
 
   # RONDA 5
   - ronda: RONDA 5

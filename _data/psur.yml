@@ -3,91 +3,89 @@ sur:
     nombre: NO SMITES
     ID: NS
     link: /equipos/no-smites
-    line: 1
+
     order: 1
     M1: 3
     M2: 3
     M3: 3
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: TUTW
     nombre: TUT WARRRIORS
     ID: TUTW
     link: /equipos/theunownteam--warriors
-    line: 0
-    order: 4
+    order: 3
     M1: 0
     M2: 3
     M3: 2
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: AOGIRI
     nombre: AOGIRI
     ID: AOGIRI
     link: /equipos/aogiri
-    line: 3
-    order: 4
+    order: 5
     M1: 1
     M2: 0
     M3: 2
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: ENIGMA
     nombre: SPC ENIGMA
     ID: ENIGMA
     link: /equipos/spc-e-sports--enigma
-    line: 1
+
     order: 1
     M1: 3
     M2: 3
     M3: 3
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0 
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0 Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: TUT
     nombre: THE UNOWN TEAM
     ID: TUT
     link: /equipos/theunownteam
-    line: 4
-    order: 5
+
+    order: 8
     M1: R
     M2: 0
     M3: 0
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
 
 
@@ -95,124 +93,124 @@ sur:
     nombre: SPACE VAL
     ID: SPACE
     link: /equipos/space-racoons--space-val
-    line: 1
-    order: 1
+ 
+    order: 2
     M1: 3
     M2: 3
     M3: 3
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: CL
     nombre: CHRONOS LEGION
     ID: CL
     link: /equipos/chronos-legion
-    line: 4
-    order: 5
+
+    order: 7
     M1: 0
     M2: 0
     M3: 1
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: RNTX
     nombre: RNT XAPULOVERS
     ID: RNTX
     link: /equipos/ranked-team--xapulovers
-    line: 4
-    order: 2
+
+    order: 4
     M1: 0
     M2: 3
     M3: 1
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: GX
     nombre: RNT GALÁCTICOS
     ID: GX
     link: /equipos/ranked-team--galacticos
-    line: 1
-    order: 1
+
+    order: 2
     M1: 3
     M2: 3
     M3: 0
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: TAD
     nombre: TAQUITOS A LA DIABLA
     ID: TAD
     link: /equipos/taquitos-a-la-diabla
-    line: 4
+
     order: 5
     M1: 0
     M2: 0
     M3: 3
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: OBS
     nombre: IMPERIO MEXA OBSIDIANA
     ID: OBS
     link: /imperio-mexa/--obsidiana
-    line: 2
-    order: 3
+
+    order: 6
     M1: 2
     M2: 0
     M3: 0
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: AMT
     nombre: IMPERIO MEXA AMATISTA
     ID: AMT
     link: /imperio-mexa/--amatista
-    line: 4
-    order: 5
+
+    order: 8
     M1: R
     M2: 0
     M3: 0
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y

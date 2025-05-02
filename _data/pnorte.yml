@@ -5,18 +5,18 @@ norte:
     ID: PLAGA
     link: /equipos/plaga
     line: 2
-    order: 4
+    order: 2
     M1: 2
     M2: 3
     M3: 3
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
 
   - equipo: STMN
@@ -28,104 +28,104 @@ norte:
     M1: 3
     M2: 3
     M3: 3
-    M4: 0
-    M5: 0
-    M6: 0 
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: NEO
     nombre: RNT NEO STARS
     ID: NEO
     link: /equipos/ranked-team--neo-stars
-    order: 4
+    order: 5
     line: 4
     M1: 0
     M2: 2
-    M3: 0
+    M3: 3
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0 
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: OVG
     nombre: OVERHEAT
     ID: OVG
     link: /equipos/overheat
-    order: 2
+    order: 6
     line: 3
     M1: 1
     M2: 3
     M3: 0
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0 
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: DTY
     nombre: DINASTY
     ID: DTY
     link: /equipos/dinasty
-    order: 4
+    order: 3
     line: 3
     M1: 1
     M2: 1
     M3: 2
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: SM
     nombre: HG SALARIO MINIMO
     ID: SM
     link: /equipos/house-of-ghost--salario-minimo
-    order: 3
+    order: 4
     line: 1
     M1: 3
-    M2: 0
+    M2: 1
     M3: 2
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: ЯK
     nombre: ЯAGNAROK YMIR
     ID: RK
     link: /teams/club-ragnarok--ymir
     line: 2
-    order: 4
+    order: 7
     M1: 2
     M2: 0
     M3: 1
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
 
 
@@ -133,88 +133,87 @@ norte:
     nombre: DINAMITA BUENA ONDA
     ID: DBO
     link: /equipos/dinamita-buena-onda
-    order: 1  
+    order: 6  
     line: 0
     M1: 3
     M2: 0
     M3: 1
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
+    M5: 0Y
+    M6: 0YY
+    M7: 0Y
+    M8: 0YY
+    M9: 0Y
     M10: 0
-    M11: 0
+    M11: 0Y
 
   - equipo: ZAFIRO
     nombre: IMPERIO MEXA ZAFIRO
     ID: ZAFIRO
     link: /imperio-mexa/--zafiro
-    order: 4
+    order: 8
     line: 0
     M1: 0
     M2: 0
     M3: 0
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: TM
     nombre: TEAM MANICOMIO
     ID: TM
     link: /equipos/team-manicomio
-    order: 4
+    order: 6
     line: 0
     M1: 0
     M2: 0
     M3: 1
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: 3
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: AD
     nombre: AD GAMING
     ID: AD
     link: /equipos/ad-gaming
-    line: 4
-    order: 1
+    order: 3
     M1: 3
-    M2: 3
+    M2: 2
     M3: 2
-    M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M4: R
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0Y
+    M11: 0Y
 
   - equipo: PE
     nombre: PRESTACIONES DE LEY HG
     ID: PE
     link: /equipos/house-of-ghost--prestaciones-de-ley
     line: 4
-    order: 5
+    order: 4
     M1: 0
     M2: 3
     M3: 3
     M4: 0
-    M5: 0
-    M6: 0
-    M7: 0
-    M8: 0
-    M9: 0
-    M10: 0
-    M11: 0
+    M5: 0Y
+    M6: 0Y
+    M7: 0Y
+    M8: 0Y
+    M9: 0Y
+    M10: 0YY
+    M11: 0Y
