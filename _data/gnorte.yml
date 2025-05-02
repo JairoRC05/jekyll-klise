@@ -9,6 +9,9 @@ rondas:
         equipo2: DINASTY
         tag2: DTY
         resultado: 2-1
+        stream: true
+        hora: 
+        dia: 25 ABRIL
 
       - equipo1: STAMINA E-SPORTS
         tag1: STMN
@@ -21,6 +24,9 @@ rondas:
         equipo2: PRESTACIONES DE LEY HG
         tag2: PE
         resultado: 2-0
+        stream: true
+        hora: SI
+        dia: 24 ABRIL
 
       - equipo1: RAGNAROK YMIR
         tag1: RK
@@ -62,6 +68,9 @@ rondas:
         equipo2: RAGNAROK YMIR
         tag2: RK
         resultado: 2-0
+        stream: true
+        hora: 
+        dia: 28 ABRIL
 
       - equipo1: PRESTACIONES DE LEY HG
         tag1: PE
@@ -121,6 +130,9 @@ rondas:
         equipo2: AD GAMING
         tag2: AD
         resultado: 1-2
+        stream: true
+        hora: 
+        dia: 29 ABRIL
 
   # RONDA 4
   - ronda: RONDA 4
@@ -138,6 +150,9 @@ rondas:
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
         resultado: 2-0
+        stream: true
+        hora: 
+        dia: 30 ABRIL
 
       - equipo1: RNT NEO STARS
         tag2: NEO
@@ -173,6 +188,9 @@ rondas:
         equipo2: RAGNAROK YMIR
         tag2: RK
         resultado: VS
+        stream: true
+        hora: 
+        dia: 01 MAYO
 
       - equipo1: DINAMITA BUENA ONDA
         tag1: DBO
@@ -232,6 +250,8 @@ rondas:
         equipo2: PRESTACIONES DE LEY HG
         tag2: PE
         resultado: VS
+        stream: true
+        hora: 
 
       - equipo1: TEAM MANICOMIO
         tag1: TM
@@ -279,6 +299,8 @@ rondas:
         equipo2: TEAM MANICOMIO
         tag2: TM
         resultado: VS
+        stream: true
+        hora: 
 
       - equipo1: RNT NEO STARS
         tag1: NEO
@@ -320,6 +342,8 @@ rondas:
         equipo2: TEAM MANICOMIO
         tag2: TM
         resultado: VS
+        stream: true
+        hora: 
 
       - equipo1: RAGNAROK YMIR
         tag1: RK
@@ -339,10 +363,12 @@ rondas:
         resultado: VS
 
       - equipo1: OVERHEAT
-        tag2: OVG
+        tag1: OVG
         equipo2: STAMINA E-SPORTS
-        tag1: STMN
+        tag2: STMN
         resultado: VS
+        stream: true
+        hora: 
 
       - equipo1: DINASTY
         tag1: DTY
@@ -373,11 +399,23 @@ rondas:
     fecha: 9-12 MAY
     hora: "19:00"
     partidos:
+      - equipo1: PRESTACIONES DE LEY HG
+        tag1: PE
+        equipo2: AD GAMING
+        tag2: AD
+        resultado: VS
+        stream: true
+        hora: SI
+        fecha: 12 MAYO
+    
       - equipo1: STAMINA E-SPORTS
         tag1: STMN
         equipo2: PLAGA VILLANOS
         tag2: PLAGA
         resultado: VS
+        stream: true
+        hora: 
+        fecha: 12 MAYO
 
       - equipo1: OVERHEAT
         tag1: OVG
@@ -403,11 +441,7 @@ rondas:
         tag2: SM
         resultado: VS
 
-      - equipo1: PRESTACIONES DE LEY HG
-        tag1: PE
-        equipo2: AD GAMING
-        tag2: AD
-        resultado: VS
+      
 
   # RONDA 11
   - ronda: RONDA 11
@@ -419,6 +453,8 @@ rondas:
         equipo2: STAMINA E-SPORTS
         tag2: STMN
         resultado: VS
+        stream: true
+        hora: 
 
       - equipo1: TEAM MANICOMIO
         tag1: TM

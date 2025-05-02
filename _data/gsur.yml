@@ -6,9 +6,12 @@ rondas:
     partidos:
       - equipo1: NO SMITES
         tag1: NS
-        equipo2: TUT WARRIOS
+        equipo2: TUT WARRIORS
         tag2: TUTW
         resultado: 2-0
+        stream: true
+        hora: 
+        dia: 24 ABRIL
 
       - equipo1: AOGIRI
         tag1: AOGIRI
@@ -33,6 +36,9 @@ rondas:
         equipo2: CHRONOS LEGION
         tag2: CL
         resultado: 2-0
+        stream: true
+        hora: SI
+        dia: 25 ABRIL
 
       - equipo1: TAQUITOS A LA DIABLA
         tag1: TAD
@@ -51,7 +57,7 @@ rondas:
         tag2: NS
         resultado: 0-2
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: IM OBSIDIANA
         tag2: OBS
@@ -62,6 +68,9 @@ rondas:
         equipo2: RNT XAPULOVERS
         tag2: RNTX
         resultado: 0-2
+        stream: true
+        hora: SI
+        dia: 28 ABRIL
 
       - equipo1: THE UNOWN TEAM
         tag1: TUT
@@ -97,8 +106,11 @@ rondas:
         equipo2: TAQUITOS A LA DIABLA
         tag2: TAD
         resultado: 0-2
+        stream: true
+        hora: SI
+        dia: 29 ABRIL
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: RNT XAPULOVERS
         tag2: RNTX
@@ -133,7 +145,7 @@ rondas:
         tag2: NS
         resultado: 0-2
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: CHRONOS LEGION
         tag2: CL
@@ -162,6 +174,9 @@ rondas:
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: 0-2
+        stream: true
+        hora: SI
+        dia: 30 ABRIL
 
   # RONDA 5
   - ronda: RONDA 5
@@ -182,9 +197,12 @@ rondas:
 
       - equipo1: THE UNOWN TEAM
         tag1: TUT
-        equipo2: TUT WARRIOS
+        equipo2: TUT WARRIORS
         tag2: TUTW
         resultado: VS
+        stream: true
+        hora: SI
+        dia: 01 MAYO
 
       - equipo1: IM OBSIDIANA
         tag1: OBS
@@ -239,11 +257,13 @@ rondas:
         tag2: AOGIRI
         resultado: VS
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: VS
+        stream: true
+        hora: SI
 
   # RONDA 7
   - ronda: RONDA 7
@@ -255,12 +275,14 @@ rondas:
         equipo2: CHRONOS LEGION
         tag2: CL
         resultado: VS
+     
 
       - equipo1: RNT GALÁCTICOS
         tag1: GX
         equipo2: SPACE VAL
         tag2: SPACE
         resultado: VS
+       
 
       - equipo1: RNT XAPULOVERS
         tag1: RNTX
@@ -273,8 +295,11 @@ rondas:
         equipo2: AOGIRI
         tag2: AOGIRI
         resultado: VS
+        stream: true
+        hora: SI
+    
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: TAQUITOS A LA DIABLA
         tag2: TAD
@@ -296,6 +321,8 @@ rondas:
         equipo2: NO SMITES
         tag2: NS
         resultado: VS
+        stream: true
+        hora: SI
 
       - equipo1: CHRONOS LEGION
         tag1: CL
@@ -311,7 +338,7 @@ rondas:
 
       - equipo1: IM AMATISTA
         tag1: AMT
-        equipo2: TUT WARRIOS
+        equipo2: TUT WARRIORS
         tag2: TUTW
         resultado: VS
 
@@ -344,7 +371,7 @@ rondas:
         tag2: AOGIRI
         resultado: VS
 
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: RNT GALÁCTICOS
         tag2: GX
@@ -355,6 +382,8 @@ rondas:
         equipo2: RNT XAPULOVERS
         tag2: RNTX
         resultado: VS
+        stream: true
+        hora: SI
 
       - equipo1: IM OBSIDIANA
         tag1: OBS
@@ -379,11 +408,25 @@ rondas:
         tag2: NS
         resultado: VS
 
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: RNT GALÁCTICOS
+        tag2: GX
+        resultado: VS
+        stream: true
+        hora: SI
+        fecha: 9 MAYO
+
+
+
       - equipo1: SPACE VAL
         tag1: SPACE
-        equipo2: TUT WARRIOS
+        equipo2: TUT WARRIORS
         tag2: TUTW
         resultado: VS
+        stream: true
+        hora: 
+        fecha: 9 MAYO
 
       - equipo1: TAQUITOS A LA DIABLA
         tag1: TAD
@@ -391,12 +434,7 @@ rondas:
         tag2: CL
         resultado: VS
 
-      - equipo1: IM OBSIDIANA
-        tag1: OBS
-        equipo2: RNT GALÁCTICOS
-        tag2: GX
-        resultado: VS
-
+  
       - equipo1: RNT XAPULOVERS
         tag1: RNTX
         equipo2: IM AMATISTA
@@ -408,13 +446,14 @@ rondas:
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: VS
+  
 
   # RONDA 11
   - ronda: RONDA 11
     fecha: "13 MAY"
     hora: "19:00"
     partidos:
-      - equipo1: TUT WARRIOS
+      - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: AOGIRI
         tag2: AOGIRI
@@ -449,3 +488,5 @@ rondas:
         equipo2: SPC ENIGMA
         tag2: ENIGMA
         resultado: VS
+        stream: true
+        hora: SI

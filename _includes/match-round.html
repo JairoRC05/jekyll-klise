@@ -43,7 +43,21 @@
  
  
     <div class="card-round-promo mx-2">
+      {% if partido.stream %}
+      <span>TWITCH</span>
       <h6>{{partido.resultado}}</h6>
+          {% if partido.hora == "SI" %}
+          <span>{{partido.fecha}}</span>
+          <span>21:40</span>
+          {% else %}
+          <span>{{partido.fecha}}</span>
+          <span>22:20</span>
+          {% endif %}
+      {% else %}
+      <h6>{{partido.resultado}}</h6>
+      {% endif %}
+
+
     </div>
 
 
