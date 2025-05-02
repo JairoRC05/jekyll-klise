@@ -53,10 +53,16 @@
           <span>{{partido.fecha}}</span>
           <span>22:20</span>
           {% endif %}
+      {% elsif partido.special %}
+            <span>TWITCH</span>
+      <h6>{{partido.resultado}}</h6>
+      <span>{{partido.hora}}</span>
       {% else %}
       <h6>{{partido.resultado}}</h6>
       {% endif %}
 
+
+     
 
     </div>
 

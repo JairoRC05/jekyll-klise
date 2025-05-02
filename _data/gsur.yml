@@ -490,3 +490,55 @@ rondas:
         resultado: VS
         stream: true
         hora: SI
+
+  # RONDA H
+  - ronda: RONDA H
+    fecha: "13 MAY"
+    hora: "19:00"
+    partidos:
+      - equipo1: RK YMIR 
+        tag1: RK
+        equipo2: TAQUITOS A LA DIABLA
+        tag2: TAD
+        resultado: VS
+   
+
+      - equipo1: RNT XAPULOVERS
+        tag1: RNTX
+        equipo2: DINAMITA BUENA ONDA
+        tag2: DBO
+        resultado: VS
+
+      - equipo1: IM OBSIDIANA
+        tag1: OBS
+        equipo2: OVERHEAT
+        tag2: OVG
+        resultado: VS
+
+      - equipo1: SPC ENIGMA
+        tag1: ENIGMA
+        equipo2: DINASTY
+        tag2: DTY
+        resultado: VS
+        special: true
+        hora: 21 H
+
+
+      - equipo1: STAMINA E-SPORTS
+        tag1: STMN
+        equipo2: TUT WARRIORS
+        tag2: TUT
+        resultado: VS
+        special: true
+        hora: AT SPC VS DTY
+
+      - equipo1: THE UNOWN TEAM
+        tag1: TUT
+        equipo2: PLAGA VILLANOS
+        tag2: PLAGA
+        resultado: VS
+        special: true
+        hora:  AT SMTN VS TUTW
+
+
+    

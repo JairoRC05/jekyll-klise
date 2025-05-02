@@ -1,0 +1,96 @@
+{% if post.activeH == "active" %}
+<div
+  class="tab-pane fade show active"
+  id="pills-H"
+  role="tabpanel"
+  aria-labelledby="pills-H-tab"
+  tabindex="0"
+>
+  {% else %}
+  <div
+    class="tab-pane fade"
+    id="pills-H"
+    role="tabpanel"
+    aria-labelledby="pills-H-tab"
+    tabindex="0"
+  >
+    {% endif %} 
+    
+    {% include banner-top.html %} 
+    <h1 class="exo-style">PASO DIMENSIONAL</h1>
+    <span class="exo">6 DE MAYO</span>
+    {% include banner-bottom.html %}
+
+
+    <div class="container mt-2">
+      <div class="row">
+    
+        <div class="col-12 col-md-6 col-lg-3">
+          {% for
+            partido in
+            site.data.gnorte.rondas[11].partidos %}
+            <div
+              class="col-12"
+            >
+              {% include match-round.html %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          {% for
+            partido in
+            site.data.gsur.rondas[11].partidos %}
+            <div
+              class="col-12"
+            >
+              {% include match-round.html %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6">
+          <div
+          class="d-flex justify-content-center align-items-center"
+          style="position: relative"
+        >
+          <div
+            class="bg-cham"
+            style="
+              clip-path: polygon(
+                25% 0%,
+                100% 0%,
+                75% 100%,
+                0% 100%
+              );
+              z-index: -1000;
+              position: absolute;
+              width: 400px;
+              height: 100%;
+            "
+          ></div>
+          <!-- <img
+            class="animate__animated animate__pulse animate__slow 2s animate__infinite infinite"
+            src="/assets/rounds/ROUND11.webp"
+            alt=""
+            style="
+              position: absolute;
+              width: 100%;
+              z-index: -999;
+            "
+          /> -->
+          <img 
+          class="img-fluid"
+            src="/assets/skins/PORTAL.webp"
+            alt=""
+            style="width: 550px"
+          />
+          <img src="/assets/gifts/shine.gif" alt=""
+          style="position: absolute; width: 150px;
+          height: 150px"">
+        </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  </div>

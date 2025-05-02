@@ -485,3 +485,45 @@ rondas:
         equipo2: AD GAMING
         tag2: AD
         resultado: VS
+
+  # RONDA 11
+  - ronda: RONDA 11
+    fecha: "13 MAY"
+    hora: "19:00"
+    partidos:
+      - equipo1: IM AMATISTA
+        tag1: AMT
+        equipo2: AD GAMING
+        tag2: AD
+        resultado: VS
+   
+
+      - equipo1: IM ZAFIRO
+        tag1: ZAFIRO
+        equipo2: NO SMITES
+        tag2: NS
+        resultado: VS
+
+      - equipo1: CHRONOS LEGION
+        tag1: CL
+        equipo2: PRESTACIONES DE LEY HG
+        tag2: PE
+        resultado: VS
+
+      - equipo1: HG SALARIO MINIMO
+        tag1: SM
+        equipo2: AOGIRI
+        tag2: AOGIRI
+        resultado: VS
+
+      - equipo1: RNT GALÁCTICOS
+        tag1: GX
+        equipo2: TEAM MANICOMIO
+        tag2: TM
+        resultado: VS
+
+      - equipo1: RNT NEO STARS
+        tag1: NEO
+        equipo2: SPACE VAL
+        tag2: SPACE
+        resultado: VS
