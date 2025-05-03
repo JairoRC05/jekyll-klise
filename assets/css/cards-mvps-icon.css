@@ -529,3 +529,352 @@
   vertical-align: middle;
   margin: 0 5px; 
 }
+
+
+
+
+
+.fifa-card {
+  background-color: #ffffff; /* Fondo oscuro */
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+.fifa-card-header {
+  background-color: #2c3e50;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espaciar los elementos */
+}
+
+.fifa-card-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-right: 15px;
+  object-fit: cover;
+}
+.fifa-card-info {
+  flex-grow: 1; /* El info ocupa el espacio restante entre el avatar y el logo */
+  margin-left: 15px;
+}
+
+.fifa-card-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fifa-card-team {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.fifa-card-stats {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.fifa-stat {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.fifa-stat span:first-child {
+  color: #7a7a7a;
+}
+.fifa-stat span {
+  color: #000000;
+}
+
+
+.fifa-card-logo {
+  width: 40px; /* Ajusta el tamaño según necesites */
+  height: 40px;
+  object-fit: contain; /* Asegura que el logo se ajuste sin deformarse */
+}
+
+
+/* Estilo para las cartas de jugador en la pestaña de MVP general */
+.fifa-card-tab {
+  background-color: #1e272e;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* Ajusta la altura según necesites */
+}
+
+.fifa-card-name-tab {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #eee;
+}
+
+.fifa-card-team-tab {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+/* Estilo para las cartas de encuentro en las pestañas de ronda */
+.fifa-card-encounter {
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fifa-card-encounter .card-subtitle {
+  color: #bbb !important;
+}
+
+
+.fifa-card-mini {
+  background-color: #1e272e;
+  color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 120px; /* Ajusta el ancho según necesites */
+  margin: 0 auto; /* Centrar las cartas pequeñas */
+}
+
+.fifa-card-header-mini {
+  background-color: #2c3e50;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fifa-card-avatar-mini {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+
+.fifa-card-logo-mini {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  margin-left: 5px;
+}
+
+.fifa-card-name-mini {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+.team-logo {
+  width: 50px; /* Ajusta el tamaño según necesites */
+  height: 50px;
+  object-fit: contain;
+}
+
+.fifa-card-mini-mvp {
+  background-color: #1e272e;
+  color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 80px; /* Ajusta el ancho según necesites */
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fifa-card-avatar-mini {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #fff;
+  margin-bottom: 5px;
+}
+
+.fifa-card-name-mini {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+
+.team-logo-large {
+  width: 70px; /* Ajusta el tamaño según necesites */
+  height: 70px;
+  object-fit: contain;
+}
+
+.avatar-small {
+  width: 40px; /* Ajusta el tamaño según necesites */
+  height: 40px;
+  object-fit: cover;
+}
+
+
+.team-logo-round {
+  width: 100px; /* Ajusta el tamaño según necesites */
+  height: 100px;
+
+}
+
+.mvp-list-container {
+  display: none;
+  padding: 10px;
+  background: white;
+}
+
+.mvp-list-container.show {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar los nombres de los MVPs */
+  margin-top: 10px;
+}
+
+.fifa-card-name-mini {
+  font-size: 0.8rem;
+  margin: 0 5px; /* Espacio entre nombres */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+.fifa-card {
+  background-color: #ffffff;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fifa-card-header {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fifa-card-avatar-small-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.fifa-card-info-small {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.fifa-card-name-small {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.fifa-card-logo-small {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.fifa-card-stats-small {
+  padding: 10px;
+}
+
+.fifa-stat-small {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 5px;
+}
+
+.fifa-card-toggle {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fifa-card-toggle i {
+  font-size: 1rem;
+}
+
+.collapse {
+  display: none;
+}
+
+/* .collapse.show {
+  display: block;
+} */
+
+
+.fifa-card-stats-grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 10px;
+}
+
+.local-mvps h6,
+.visitante-mvps h6 {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #aaa;
+}
+
+.local-mvps .fifa-stat-small,
+.visitante-mvps .fifa-stat-small {
+  border-bottom: none; /* Quitar la línea divisoria individual */
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: black;
+}
+
+.local-mvps {
+  grid-column: 1 / 2; /* MVPs locales en la primera columna */
+}
+
+.visitante-mvps {
+  grid-column: 2 / 3; /* MVPs visitantes en la segunda columna */
+}

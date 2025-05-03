@@ -1,0 +1,40 @@
+[
+    {
+      "tag": "DTY",
+      "team": "DINASTY",
+      "org": null,
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "龍・Toro",
+          "ID": "RNCXGAK",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "龍・Light光",
+          "ID": "43LKYHQ",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "龍・Kraft",
+          "ID": "2NNA9P4",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "龍・Vicleo",
+          "ID": "446HY4X",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "龍・Ji9star",
+          "ID": "83AFR37",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "DAY·Sam",
+          "ID": "GNNTCMN",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

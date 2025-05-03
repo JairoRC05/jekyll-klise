@@ -1,41 +1,57 @@
-{
-    "nombre": "RNT NEO STARS",
-    "tag": "NEO",
-    "mvps": [
+[
+    {
+      "tag": "NEO",
+      "team": "RNT NEO STARS",
+      "org": "RANKED TEAM",
+      "activo": true,
+      "jugadores": [
         {
-            "jugador": "RNT・TVPablo",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・Luffy12",
+          "ID": "MKCA597",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 2,
+          "m3": 1,
+          "m4": 1
         },
         {
-            "jugador": "RNT・Suo力",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・Kaine十",
+          "ID": "RQ2PF50",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 1,
+          "m2": 1
         },
         {
-            "jugador": "RNT・Perro乡",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・Suo力",
+          "ID": "H0R6MF8",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Kaine十",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・TVPablo",
+          "ID": "843A4E0",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Luffy12",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・Memew",
+          "ID": "N2EAENF",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・ʝʊคɳƙค",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・Perro乡",
+          "ID": "KFCPP44",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Inge",
-            "avatar": "male1",
-            "tag": "NEO"
+          "nickname": "RNT・ʝʊคɳƙค",
+          "ID": "1GQ494T",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Myyn母鹿",
+          "ID": "4MYGCXL",
+          "avatar": "male1"
         }
-    ]
-  }
+      ]
+    }
+  ]

@@ -1,0 +1,44 @@
+[
+    {
+      "tag": "PE",
+      "team": "PRESTACIONES DE LEY HG",
+      "org": "HOUSE OF GHOST",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "P£・么quario",
+          "ID": "8XTYF12",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "JDA • 从ortem",
+          "ID": "FQTLQT6",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 3,
+          "m2": 2,
+          "m3": 1
+        },
+        {
+          "nickname": "¶ZinX¶",
+          "ID": "56T8G09",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Vamp_Lut.TTv",
+          "ID": "8XTYF12",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "ElyLover愛",
+          "ID": "H6X00LK",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "JDA・Benny",
+          "ID": "HXNG3M",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

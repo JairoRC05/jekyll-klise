@@ -1,0 +1,45 @@
+[
+    {
+      "tag": "CL",
+      "team": "CHRONOS LEGION",
+      "org": null,
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "Jedm愛",
+          "ID": "YAK4AAF",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Kyōツ",
+          "ID": "YT7R2HR",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Prof.Serna",
+          "ID": "22F41MF",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Yukƙie",
+          "ID": "63PGCF",
+          "avatar": "female1"
+        },
+        {
+          "nickname": "Lumina心",
+          "ID": "97Y0RG3",
+          "avatar": "female1"
+        },
+        {
+          "nickname": "PøĄ°Doni",
+          "ID": "8GYY47G",
+          "avatar": "female1"
+        },
+        {
+          "nickname": "Otger",
+          "ID": "9QRY308",
+          "avatar": "female1"
+        }
+      ]
+    }
+  ]

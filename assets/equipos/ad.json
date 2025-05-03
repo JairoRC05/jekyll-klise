@@ -1,36 +1,57 @@
-{
-    "nombre": "AD GAMING",
+[
+  {
     "tag": "AD",
-    "mvps": [
-        {
-            "jugador": "AÐ・MerGas",
-            "avatar": "male1",
-            "tag": "AD"
-        },
-        {
-            "jugador": "AÐ・MrKawaii",
-            "avatar": "male1",
-            "tag": "AD"
-        },
-        {
-            "jugador": "AÐ・Tugfamon",
-            "avatar": "male1",
-            "tag": "AD"
-        },
-        {
-            "jugador": "AÐ・DrMarioZ",
-            "avatar": "male1",
-            "tag": "AD"
-        },
-        {
-            "jugador": "AÐ・Efesto",
-            "avatar": "male1",
-            "tag": "AD"
-        },
-        {
-            "jugador": "AÐ・Icer",
-            "avatar": "male1",
-            "tag": "AD"
-        }
+    "team": "AD GAMING",
+    "org": "AD GAMING",
+    "activo": true,
+    "jugadores": [
+      {
+        "nickname": "AÐ・Efesto",
+        "ID": "7QT4YAA",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "AÐ・MerGas",
+        "ID": "C3EG7EF",
+        "avatar": "male1",
+        "mvp": true,
+        "numero": 3,
+        "m2": 2,
+        "m3": 1
+      },
+      {
+        "nickname": "AÐ・Icer",
+        "ID": "Y39HPAF",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "AÐ・DrMarioZ",
+        "ID": "GGA8QFL",
+        "avatar": "male1",
+        "mvp": true,
+        "numero": 1,
+        "m4": 1
+      },
+      {
+        "nickname": "AÐ・Tugfamon",
+        "ID": "2A0PAYQ",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "RNT・PikaBro",
+        "ID": "668H1XE",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "AÐ・Pikinツ",
+        "ID": "LY3YYX3",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "太ㅤGoomㅤ會",
+        "ID": "NFN0FN",
+        "avatar": "male1"
+      }
     ]
-}
+  }
+]

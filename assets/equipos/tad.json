@@ -1,116 +1,53 @@
-{
-  "nombre": "TAQUITOS A LA DIABLA",
-  "tag": "TAD",
-  "mvps": [
-    {
-      "jugador": "タTaquito",
-      "avatar": "female1",
-      "tag": "TAD",
-      "partidos": [
-        {
-          "ronda": 4,
-          "acumulado": 1,
-          "contra": "HOENN"
-        },
-        {
-          "ronda": 7,
-          "acumulado": 1,
-          "contra": "GX"
-        },
-        {
-          "ronda": 8,
-          "acumulado": 1,
-          "contra": "COL"
-        },
-        {
-          "ronda": 10,
-          "acumulado": 1,
-          "contra": "RK"
-      }
-      ]
-    },
-    {
-      "jugador": "ムlixendカモ",
-      "avatar": "male1",
-      "tag": "TAD",
-      "partidos": [
-        {
-          "ronda": 7,
-          "acumulado": 1,
-          "contra": "GX"
-        },
-        {
-          "ronda": 11,
-          "acumulado": 1,
-          "contra": "MEXA"
+[
+  {
+    "tag": "TAD",
+    "team": "TAQUITOS A LA DIABLA",
+    "org": "TAQUITOS A LA DIABLA",
+    "activo": true,
+    "jugadores": [
+      {
+        "nickname": "タTaquito",
+        "ID": "RQ6HFMP",
+        "avatar": "female1",
+        "mvp": true,
+        "numero": 1,
+        "m4": 1
       },
       {
-        "ronda": 10,
-        "acumulado": 2,
-        "contra": "RK"
-    }
-      ]
-    },
-    {
-      "jugador": "AllenDartツ",
-      "avatar": "male1",
-      "tag": "TAD",
-      "partidos": [
-        {
-          "ronda": 1,
-          "acumulado": 2,
-          "contra": "RUBY"
-        },
-        {
-          "ronda": 4,
-          "acumulado": 1,
-          "contra": "HOENN"
-        },
-        {
-          "ronda": 5,
-          "acumulado": 2,
-          "contra": "PLAT"
-        },
-        {
-          "ronda": 8,
-          "acumulado": 1,
-          "contra": "COL"
-        },
-        {
-          "ronda": 9,
-          "acumulado": 2,
-          "contra": "NEO"
-        },
-        {
-          "ronda": 11,
-          "acumulado": 1,
-          "contra": "MEXA"
+        "nickname": "ムlixendカモ",
+        "ID": "5F9X6LC",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "Kaldnese氷",
+        "ID": "F425CK",
+        "avatar": "female1"
+      },
+      {
+        "nickname": "CarlaConC",
+        "ID": "4C5771N",
+        "avatar": "female1"
+      },
+      {
+        "nickname": "smurfDWanaba",
+        "ID": "KKME1H5",
+        "avatar": "female1"
+      },
+      {
+        "nickname": "EL_CHEETO",
+        "ID": "1LFHA28",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "CHC・CHIPIS",
+        "ID": "TL498K9",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "EK・Ikal",
+        "ID": "TMRR3XN",
+        "avatar": "male1"
       }
-      ]
-    },
-    {
-      "jugador": "Wanaba",
-      "avatar": "female1",
-      "tag": "TAD",
-      "partidos": [
-        {
-          "ronda": 6,
-          "acumulado": 3,
-          "contra": "OVG"
-        }
-      ]
-    },
-    {
-      "jugador": "EL_CHEETO",
-      "avatar": "male1",
-      "tag": "TAD",
-      "partidos": [
-        {
-          "ronda": 9,
-          "acumulado": 1,
-          "contra": "NEO"
-        }
-      ]
-    }
-  ]
-}
+    ]
+  }
+]

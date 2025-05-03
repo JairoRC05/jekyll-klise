@@ -1,36 +1,50 @@
-{
-    "nombre": "OVERHEAT",
-    "tag": "OVG",
-    "mvps": [
+[
+    {
+      "tag": "OVG",
+      "team": "OVERHEAT",
+      "org": "OVERHEAT",
+      "activo": true,
+      "jugadores": [
         {
-            "jugador": "DemoliZM竜",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "i'm.McLovin",
+          "ID": "9KNN1KA",
+          "avatar": "male1"
         },
         {
-            "jugador": "亗PѕуDÜÇҜ亗",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "TESLA科学",
+          "ID": "50L82YG",
+          "avatar": "male1"
         },
         {
-            "jugador": "ZTG・Broken",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "ZTG・Broken",
+          "ID": "MHAP9RC",
+          "avatar": "male1"
         },
         {
-            "jugador": "i'm.McLovin",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "差Seruhio歩",
+          "ID": "2HX0X8C",
+          "avatar": "male1"
         },
         {
-            "jugador": "I'MCARROT",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "ZEILAZ_ttv",
+          "ID": "Y9HYL8G",
+          "avatar": "male1"
         },
         {
-            "jugador": "Justlvoy",
-            "avatar": "male1",
-            "tag": "OVG"
+          "nickname": "Göndul愛",
+          "ID": "N3C2HQ",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Sąē",
+          "ID": "KTF0CKP",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "EK・Mich",
+          "ID": "64MY9H3",
+          "avatar": "male1"
         }
-    ]
-}
+      ]
+    }
+  ]

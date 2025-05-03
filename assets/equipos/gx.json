@@ -1,36 +1,40 @@
-{
-    "nombre": "RNT GALÁCTICOS",
-    "tag": "GX",
-    "mvps": [
+[
+    {
+      "tag": "GX",
+      "team": "RNT GALÁCTICOS",
+      "org": "RANKED TEAM",
+      "activo": true,
+      "jugadores": [
         {
-            "jugador": "RNT・ČryptoX",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "RNT・DrFix銀",
+          "ID": "EFE5E97",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・DrFix銀",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "RNT・Zulo銀",
+          "ID": "7759CK5",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Pikito",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "RNT・ČryptoX",
+          "ID": "A2AG7X1",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・PikaBro",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "RNT・Shoyo銀",
+          "ID": "2CFC54X",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Shoyo銀",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "RNT・Pikito",
+          "ID": "2NKE093",
+          "avatar": "male1"
         },
         {
-            "jugador": "RNT・Zulo銀",
-            "avatar": "male1",
-            "tag": "GX"
+          "nickname": "Valdez.",
+          "ID": "ENX6670",
+          "avatar": "male1"
         }
-    ]
-  }
+      ]
+    }
+  ]

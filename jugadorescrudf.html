@@ -154,7 +154,7 @@ title: IDS | LIGA INDIGO
 
 
     <div class="container">
-      <h1>CRUD de Encuentros y MVPs</h1>
+
 
 
       <div class="row">
@@ -372,7 +372,7 @@ title: IDS | LIGA INDIGO
     cargarEquipo();
 </script> -->
   
-<script>
+<!-- <script>
   let encuentros = [];
   const MAX_ENCUENTROS = 12;
   const tablaBody = document.getElementById('tabla-body');
@@ -607,8 +607,318 @@ title: IDS | LIGA INDIGO
   // Cargar la información de los equipos al cargar la página
   loadTeams();
   actualizarTabla(); // Inicializar la tabla vacía
-</script>
+</script> -->
 
+
+<script>
+  let encuentros = [];
+  const MAX_ENCUENTROS = 12;
+  const tablaBody = document.getElementById('tabla-body');
+  const formulario = document.getElementById('formulario-encuentro');
+  const selectEquipoLocal = document.getElementById('equipo-local');
+  const selectEquipoVisitante = document.getElementById('equipo-visitante');
+  const selectMvpLocal = [
+    document.getElementById('mvp-local-1'),
+    document.getElementById('mvp-local-2'),
+    document.getElementById('mvp-local-3')
+  ];
+  const selectMvpVisitante = [
+    document.getElementById('mvp-visitante-1'),
+    document.getElementById('mvp-visitante-2'),
+    document.getElementById('mvp-visitante-3')
+  ];
+  const teamFiles = [
+  'assets/equipos/ad.json',
+'assets/equipos/amt.json',
+'assets/equipos/aogiri.json',
+'assets/equipos/cl.json',
+'assets/equipos/dbo.json',
+'assets/equipos/dty.json',
+'assets/equipos/enigma.json',
+'assets/equipos/gx.json',
+'assets/equipos/neo.json',
+'assets/equipos/ns.json',
+'assets/equipos/obs.json',
+'assets/equipos/ovg.json',
+'assets/equipos/pe.json',
+'assets/equipos/plaga.json',
+'assets/equipos/rk.json',
+'assets/equipos/rntx.json',
+'assets/equipos/sm.json',
+'assets/equipos/space.json',
+'assets/equipos/stmn.json',
+'assets/equipos/tad.json',
+'assets/equipos/tm.json',
+'assets/equipos/tut.json',
+'assets/equipos/tutw.json',
+'assets/equipos/zafiro.json'
+    // ... Agrega las rutas completas a tus otros archivos JSON aquí
+  ];
+  let teamsData = {};
+
+  async function loadTeams() {
+    for (const file of teamFiles) {
+      try {
+        const response = await fetch(file);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const dataArray = await response.json();
+        if (dataArray && dataArray.length > 0) {
+          const data = dataArray[0];
+          teamsData[data.tag] = data;
+        } else {
+          console.warn(`El archivo ${file} está vacío o no tiene la estructura esperada.`);
+        }
+      } catch (error) {
+        console.error(`Error loading ${file}:`, error);
+      }
+    }
+    populateTeamSelects();
+  }
+
+  function populateTeamSelects() {
+    selectEquipoLocal.innerHTML = '<option value="">LOCAL</option>';
+    selectEquipoVisitante.innerHTML = '<option value="">VISITANTE</option>';
+
+    for (const tag in teamsData) {
+      const optionLocal = document.createElement('option');
+      optionLocal.value = tag;
+      optionLocal.textContent = teamsData[tag].tag;
+      selectEquipoLocal.appendChild(optionLocal);
+
+      const optionVisitante = document.createElement('option');
+      optionVisitante.value = tag;
+      optionVisitante.textContent = teamsData[tag].tag;
+      selectEquipoVisitante.appendChild(optionVisitante);
+    }
+  }
+
+  function populatePlayerSelects(teamTag, local) {
+    const team = teamsData[teamTag];
+    const players = team?.jugadores || [];
+    const selects = local ? selectMvpLocal : selectMvpVisitante;
+
+    selects.forEach(select => {
+      const currentValue = select.value;
+      select.innerHTML = '<option value="">Seleccionar Jugador</option>';
+      players.forEach(player => {
+        const option = document.createElement('option');
+        option.value = player.nickname;
+        option.textContent = player.nickname;
+        option.selected = currentValue === player.nickname;
+        select.appendChild(option);
+      });
+    });
+  }
+
+  selectEquipoLocal.addEventListener('change', function() {
+    populatePlayerSelects(this.value, true);
+  });
+
+  selectEquipoVisitante.addEventListener('change', function() {
+    populatePlayerSelects(this.value, false);
+  });
+
+  function guardarEncuentro() {
+    const equipoLocalTag = selectEquipoLocal.value;
+    const equipoVisitanteTag = selectEquipoVisitante.value;
+    const mvpsLocal = selectMvpLocal.map(select => {
+      const player = teamsData[equipoLocalTag]?.jugadores?.find(j => j.nickname === select.value);
+      return player ? { nombre: player.nickname, equipo: equipoLocalTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+    }).filter(mvp => mvp !== null);
+    const mvpsVisitante = selectMvpVisitante.map(select => {
+      const player = teamsData[equipoVisitanteTag]?.jugadores?.find(j => j.nickname === select.value);
+      return player ? { nombre: player.nickname, equipo: equipoVisitanteTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+    }).filter(mvp => mvp !== null);
+
+    if (encuentros.length < MAX_ENCUENTROS) {
+      if (equipoLocalTag && equipoVisitanteTag) {
+        encuentros.push({
+          "equipoLocal": equipoLocalTag,
+          "equipoVisitante": equipoVisitanteTag,
+          "mvpsLocal": mvpsLocal,
+          "mvpsVisitante": mvpsVisitante
+        });
+        actualizarTabla();
+        limpiarFormulario();
+      } else {
+        alert('Por favor, selecciona ambos equipos.');
+      }
+    } else {
+      alert(`Solo se permiten hasta ${MAX_ENCUENTROS} encuentros.`);
+    }
+  }
+
+  function limpiarFormulario() {
+    selectEquipoLocal.selectedIndex = 0;
+    selectEquipoVisitante.selectedIndex = 0;
+    selectMvpLocal.forEach(select => select.selectedIndex = 0);
+    selectMvpVisitante.forEach(select => select.selectedIndex = 0);
+  }
+
+  function actualizarTabla() {
+    tablaBody.innerHTML = '';
+    encuentros.forEach((encuentro, index) => {
+      const row = tablaBody.insertRow();
+      const cellNumero = row.insertCell();
+      const cellLocal = row.insertCell();
+      const cellMvpLocal = row.insertCell();
+      const cellVisitante = row.insertCell();
+      const cellMvpVisitante = row.insertCell();
+      const cellAcciones = row.insertCell();
+
+      cellNumero.textContent = index + 1;
+      cellLocal.textContent = encuentro.equipoLocal;
+      cellMvpLocal.textContent = encuentro.mvpsLocal.map(mvp => mvp.nombre).join(', ');
+      cellVisitante.textContent = encuentro.equipoVisitante;
+      cellMvpVisitante.textContent = encuentro.mvpsVisitante.map(mvp => mvp.nombre).join(', ');
+
+      const botonEditar = document.createElement('button');
+      botonEditar.textContent = 'Editar';
+      botonEditar.onclick = () => editarEncuentro(index);
+      cellAcciones.appendChild(botonEditar);
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = 'Eliminar';
+      botonEliminar.onclick = () => eliminarEncuentro(index);
+      cellAcciones.appendChild(botonEliminar);
+    });
+  }
+
+  function editarEncuentro(index) {
+    const encuentro = encuentros[index];
+    selectEquipoLocal.value = encuentro.equipoLocal;
+    selectEquipoVisitante.value = encuentro.equipoVisitante;
+    populatePlayerSelects(encuentro.equipoLocal, true);
+    populatePlayerSelects(encuentro.equipoVisitante, false);
+
+    selectMvpLocal.forEach((select, i) => {
+      select.value = encuentro.mvpsLocal[i]?.nombre || '';
+    });
+    selectMvpVisitante.forEach((select, i) => {
+      select.value = encuentro.mvpsVisitante[i]?.nombre || '';
+    });
+
+    const guardarBoton = document.querySelector('#formulario-encuentro button');
+    guardarBoton.textContent = 'Actualizar Encuentro';
+    guardarBoton.onclick = () => actualizarEncuentro(index);
+  }
+
+  function actualizarEncuentro(index) {
+    const equipoLocalTag = selectEquipoLocal.value;
+    const equipoVisitanteTag = selectEquipoVisitante.value;
+    const mvpsLocal = selectMvpLocal.map(select => {
+      const player = teamsData[equipoLocalTag]?.jugadores?.find(j => j.nickname === select.value);
+      return player ? { nombre: player.nickname, equipo: equipoLocalTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+    }).filter(mvp => mvp !== null);
+    const mvpsVisitante = selectMvpVisitante.map(select => {
+      const player = teamsData[equipoVisitanteTag]?.jugadores?.find(j => j.nickname === select.value);
+      return player ? { nombre: player.nickname, equipo: equipoVisitanteTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+    }).filter(mvp => mvp !== null);
+
+    if (equipoLocalTag && equipoVisitanteTag) {
+      encuentros[index] = {
+        "equipoLocal": equipoLocalTag,
+        "equipoVisitante": equipoVisitanteTag,
+        "mvpsLocal": mvpsLocal,
+        "mvpsVisitante": mvpsVisitante
+      };
+      actualizarTabla();
+      limpiarFormulario();
+      const guardarBoton = document.querySelector('#formulario-encuentro button');
+      guardarBoton.textContent = 'Guardar Encuentro';
+      guardarBoton.onclick = guardarEncuentro;
+    } else {
+      alert('Por favor, selecciona ambos equipos.');
+    }
+  }
+
+  function eliminarEncuentro(index) {
+    if (confirm('¿Estás seguro de eliminar este encuentro?')) {
+      encuentros.splice(index, 1);
+      actualizarTabla();
+    }
+  }
+
+  function descargarJson() {
+    const data = {
+      "encuentros": encuentros.map(encuentro => ({
+        "equipoLocal": encuentro.equipoLocal,
+        "equipoVisitante": encuentro.equipoVisitante,
+        "mvpsLocal": encuentro.mvpsLocal.map(mvp => ({
+          "nombre": mvp.nombre,
+          "equipo": encuentro.equipoLocal,
+          "genero": mvp.genero
+        })),
+        "mvpsVisitante": encuentro.mvpsVisitante.map(mvp => ({
+          "nombre": mvp.nombre,
+          "equipo": encuentro.equipoVisitante,
+          "genero": mvp.genero
+        }))
+      }))
+    };
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  function cargarYMostrarJson(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const jsonData = JSON.parse(e.target.result);
+          if (jsonData && Array.isArray(jsonData.encuentros)) {
+            encuentros = jsonData.encuentros.map(encuentro => ({
+              equipoLocal: encuentro.equipoLocal,
+              equipoVisitante: encuentro.equipoVisitante,
+              mvpsLocal: encuentro.mvpsLocal.map(mvp => ({
+                nombre: mvp.nombre,
+                equipo: mvp.equipo,
+                genero: mvp.genero
+              })),
+              mvpsVisitante: encuentro.mvpsVisitante.map(mvp => ({
+                nombre: mvp.nombre,
+                equipo: mvp.equipo,
+                genero: mvp.genero
+              }))
+            }));
+            actualizarTabla();
+          } else if (jsonData && jsonData.encuentros && Array.isArray(jsonData.encuentros)) {
+             encuentros = jsonData.encuentros;
+             actualizarTabla();
+          }
+           else {
+            alert('El archivo JSON no tiene la estructura esperada.');
+          }
+        } catch (error) {
+          console.error('Error al parsear el archivo JSON:', error);
+          alert('Error al leer o procesar el archivo JSON.');
+        }
+      };
+      reader.readAsText(file);
+    }
+  }
+
+  // Agregar un input de tipo archivo al HTML
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'application/json';
+  fileInput.id = 'cargar-json';
+  fileInput.onchange = cargarYMostrarJson;
+  formulario.parentNode.insertBefore(fileInput, formulario.nextSibling);
+
+  // Cargar la información de los equipos al cargar la página
+  loadTeams();
+  actualizarTabla(); // Inicializar la tabla vacía
+</script>
 {% include g-analytics.html %}
 
 

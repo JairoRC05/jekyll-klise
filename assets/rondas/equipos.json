@@ -1,19 +1,24 @@
-{
-    "ronda": 1,
-    "encuentros": [
-      {
-        "equipoLocal": "HOENN",
-        "equipoVisitante": "COL",
-        "mvpsLocal": [
-          "DønLux",
-          "Texaspurguis",
-          "BLK-luis205"
-        ],
-        "mvpsVisitante": [
-          "COL・Toreto",
-          "COL・Toreto",
-          "COL・Toreto"
-        ]
-      }
-    ]
-  }
+'assets/equipos/ad.json',
+'assets/equipos/amt.json',
+'assets/equipos/aogiri.json',
+'assets/equipos/cl.json',
+'assets/equipos/dbo.json',
+'assets/equipos/dty.json',
+'assets/equipos/enigma.json',
+'assets/equipos/gx.json',
+'assets/equipos/neo.json',
+'assets/equipos/ns.json',
+'assets/equipos/obs.json',
+'assets/equipos/ovg.json',
+'assets/equipos/pe.json',
+'assets/equipos/plaga.json',
+'assets/equipos/rk.json',
+'assets/equipos/rntx.json',
+'assets/equipos/sm.json',
+'assets/equipos/space.json',
+'assets/equipos/stmn.json',
+'assets/equipos/tad.json',
+'assets/equipos/tm.json',
+'assets/equipos/tut.json',
+'assets/equipos/tutw.json',
+'assets/equipos/zafiro.json'

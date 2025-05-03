@@ -9,12 +9,7 @@ jugadores:
   - nickname: STMN・Regi
     ID: E9ENLYE
     avatar: male1
-    mvp: true
-    numero: 5
-    n1: 1
-    n2: 1
-    n3: 2
-    n4: 1
+ 
 
   - nickname: STMN・Holmes
     ID: L1G1GF2
@@ -22,15 +17,9 @@ jugadores:
   - nickname: STMN・Pachy
     ID: Q3HCM3A
     avatar: male1
-    mvp: true
-    numero: 1
-    m4: 1
+
     
   - nickname: STMN • Frank
     ID: 6990CYH
     avatar: male1
-    mvp: true
-    numero: 2
-    m1: 1
-    m2: 1
- 
+

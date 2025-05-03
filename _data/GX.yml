@@ -6,10 +6,7 @@ jugadores:
   - nickname: RNT・DrFix銀
     ID: EFE5E97
     avatar: male1
-    mvp: true
-    numero: 2
-    m2: 1
-    m4: 1
+
   - nickname: RNT・Zulo銀
     ID: 7759CK5
     avatar: male1

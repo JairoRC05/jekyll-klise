@@ -1,0 +1,45 @@
+[
+    {
+      "tag": "AMT",
+      "team": "IMPERIO MEXA AMT",
+      "org": "XFORCE05",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "MeXa・Tory",
+          "ID": "THMG76A",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・Cage",
+          "ID": "YT150XU",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・Chaq鋼",
+          "ID": "4H2XNPY",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa • Black",
+          "ID": "TXG338A",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "真kikurihime",
+          "ID": "L4G70NX",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "x7Fxst100%",
+          "ID": "TPK7R51",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "GamaMx1%",
+          "ID": "Q56X4K5",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

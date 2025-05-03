@@ -1,0 +1,131 @@
+{
+  "ronda": 1,
+  "encuentros": [
+    {
+      "equipoLocal": "AD",
+      "equipoVisitante": "TM",
+      "mvpsLocal": [
+        "AÐ・DrMarioZ",
+        "AÐ・Tugfamon"
+      ],
+      "mvpsVisitante": [
+        "cristoff",
+        "SoyYasuッ"
+      ]
+    },
+    {
+      "equipoLocal": "PLAGA",
+      "equipoVisitante": "DTY",
+      "mvpsLocal": [
+        "BLK-luis205",
+        "Texaspurguis",
+        "DønLux"
+      ],
+      "mvpsVisitante": [
+        "龍・Toro",
+        "龍・Toro",
+        "龍・Kraft"
+      ]
+    },
+    {
+      "equipoLocal": "SM",
+      "equipoVisitante": "PE",
+      "mvpsLocal": [
+        "$M・Stimpy",
+        "・Winters・"
+      ],
+      "mvpsVisitante": [
+        "P£・么quario",
+        "P£・么quario"
+      ]
+    },
+    {
+      "equipoLocal": "DBO",
+      "equipoVisitante": "ZAFIRO",
+      "mvpsLocal": [
+        "ttvStarbae01",
+        "Muertin木火"
+      ],
+      "mvpsVisitante": [
+        "MeXa • Nadir",
+        "MeXa • Nadir"
+      ]
+    },
+    {
+      "equipoLocal": "RK",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [
+        "ЯK・Belz돈",
+        "ЯK・Belz돈",
+        "ЯK・Belz돈"
+      ],
+      "mvpsVisitante": [
+        "ZEILAZ_ttv",
+        "TESLA科学",
+        "ZEILAZ_ttv"
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "NEO",
+      "mvpsLocal": [
+        "STMN・Regi",
+        "STMN・Regi"
+      ],
+      "mvpsVisitante": [
+        "RNT・Memew",
+        "RNT・Memew"
+      ]
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "CL",
+      "mvpsLocal": [
+        "RNT・ČryptoX",
+        "RNT・DrFix銀"
+      ],
+      "mvpsVisitante": [
+        "Yukƙie",
+        "PøĄ°Doni"
+      ]
+    },
+    {
+      "equipoLocal": "OBS",
+      "equipoVisitante": "AOGIRI",
+      "mvpsLocal": [
+        "MeXa°Atenea",
+        "MeXa・Kory",
+        "MeXa・Kory"
+      ],
+      "mvpsVisitante": [
+        "ア・Ękkō",
+        "Hammerfall9",
+        "Hammerfall9"
+      ]
+    },
+    {
+      "equipoLocal": "NS",
+      "equipoVisitante": "TUTW",
+      "mvpsLocal": [
+        "IAMTOKITO",
+        "Hades地獄"
+      ],
+      "mvpsVisitante": [
+        "• Raziel",
+        "• Raziel"
+      ]
+    },
+    {
+      "equipoLocal": "ENIGMA",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        "SPC・Lolfe教",
+        "SPC・Berny10"
+      ],
+      "mvpsVisitante": [
+        "CarlaConC",
+        "CarlaConC"
+      ]
+    }
+  ]
+}

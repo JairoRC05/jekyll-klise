@@ -1,0 +1,44 @@
+[
+    {
+      "tag": "PLAGA",
+      "team": "PLAGA VILLANOS",
+      "org": "PLAGA/VILLANOS E-SPORTS",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "Texaspurguis",
+          "ID": "A0829K4",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Fersaw",
+          "ID": "916CTAR",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "7Froy",
+          "ID": "KX010TK"
+        },
+        {
+          "nickname": "DønLux",
+          "ID": "MAL0Q6H",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "BLK-luis205",
+          "ID": "GM9M2YN",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "TTVXileKira",
+          "ID": "H7YC4XP",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "TTV.JuanEury",
+          "ID": "YCTP26Q",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

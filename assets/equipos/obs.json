@@ -1,0 +1,48 @@
+[
+    {
+      "tag": "OBS",
+      "team": "IMPERIO MEXA OBSIDIANA",
+      "org": "XFORCE05",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "MeXa・Quique",
+          "ID": "5HHKX53",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・ Wott",
+          "ID": "8Y586PC",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 1,
+          "m4": 1
+        },
+        {
+          "nickname": "MeXa・Kory",
+          "ID": "7K4TY1F",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・SoUriS",
+          "ID": "57HAL9Y",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・Tony",
+          "ID": "301CYX8",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa°Atenea",
+          "ID": "CKCHQ1L",
+          "avatar": "female1"
+        },
+        {
+          "nickname": "MeXa • Salie",
+          "ID": "AX09NA2",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

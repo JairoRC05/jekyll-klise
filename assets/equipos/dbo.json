@@ -1,0 +1,42 @@
+[
+    {
+      "tag": "DBO",
+      "team": "DINAMITA BUENA ONDA",
+      "org": null,
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "ttvNewt_ez",
+          "ID": "XAMMFEP",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Jønasシ",
+          "ID": "R5FX423",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 3,
+          "m2": 2,
+          "m3": 1
+        },
+        {
+          "nickname": "・Yata・",
+          "ID": "7X4C0CK",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "ttvStarbae01",
+          "ID": "NA9QXAT",
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 1,
+          "m4": 1
+        },
+        {
+          "nickname": "Muertin木火",
+          "ID": "5TR8K9T",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

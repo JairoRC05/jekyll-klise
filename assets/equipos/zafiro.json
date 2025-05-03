@@ -1,0 +1,40 @@
+[
+    {
+      "tag": "ZAFIRO",
+      "team": "IMPERIO MEXA ZAFIRO",
+      "org": "XF05 ESPORTS",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "MeXa • Frost",
+          "ID": "T30862L",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa • Magnus",
+          "ID": "89CTXY4",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa • Nadir",
+          "ID": "M3LXQGP",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa・Masaru",
+          "ID": "AGM28R9",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa • Isma",
+          "ID": "TP5EPHQ",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "MeXa • Cuatzo",
+          "ID": "1XTK4H9",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]

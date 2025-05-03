@@ -1,0 +1,50 @@
+[
+    {
+      "tag": "TUTW",
+      "team": "TUT WARRIORS",
+      "org": "THE UNOWN TEAM",
+      "activo": true,
+      "jugadores": [
+        {
+          "nickname": "Sitetampo勢",
+          "ID": "XYXN83R",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "LFT・Felix",
+          "ID": "CNFF5T9",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "• Raziel",
+          "ID": "KP3MGGK",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "Raydemort",
+          "ID": "H8Y27LQ",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "GerardAC",
+          "ID": "A9390CX",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "WK・Metal",
+          "ID": "MR027NE",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "• Solstice",
+          "ID": "FHREPPG",
+          "avatar": "male1"
+        },
+        {
+          "nickname": "DannGP",
+          "ID": "77GCPT4",
+          "avatar": "male1"
+        }
+      ]
+    }
+  ]
