@@ -2,8 +2,14 @@
     {
       "tag": "OBS",
       "team": "IMPERIO MEXA OBSIDIANA",
-      "org": "XFORCE05",
+      "org": "XF05 ESPORTS",
       "activo": true,
+      "capitan": "",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "MeXa・Quique",

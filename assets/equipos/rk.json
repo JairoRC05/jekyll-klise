@@ -1,9 +1,15 @@
 [
     {
       "tag": "RK",
-      "team": "ЯAGNAROK YMIR",
+      "team": "RAGNAROK YMIR",
       "org": "CLUB RAGNAROK",
       "activo": true,
+      "capitan": "JOHAN",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "ЯK・Sol",

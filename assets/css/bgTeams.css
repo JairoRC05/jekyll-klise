@@ -753,9 +753,9 @@ background: radial-gradient(circle, rgba(173, 13, 103, 1) 0%, rgba(115, 31, 119,
   border-bottom: 5px solid #c4342c ;
 }
 .TAD{
-  background: rgb(222,56,14);
-  background: radial-gradient(circle, rgba(222,56,14,1) 0%, rgba(253,126,29,1) 51%, rgba(130,98,27,1) 100%);
-}
+
+  background: #ff6f00;
+  background: radial-gradient(circle, rgba(255, 111, 0, 1) 0%, rgba(253, 127, 28, 1) 100%);}
 .ZTG{
   background: rgb(240,241,128);
   background: radial-gradient(circle, rgba(240,241,128,1) 0%, rgba(238,240,128,1) 1%, rgba(0,170,142,1) 100%);
@@ -795,8 +795,8 @@ background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
 }
 
 .TM{
-  background: #ff000d;
-background: radial-gradient(circle, rgba(255, 0, 13, 1) 0%, rgba(218, 27, 35, 1) 100%);
+  background: #202357;
+  background: radial-gradient(circle, rgba(32, 35, 87, 1) 0%, rgba(19, 20, 52, 1) 100%);
 }
 
 .SCXF{

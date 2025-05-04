@@ -4,6 +4,12 @@
       "team": "RNT GALÁCTICOS",
       "org": "RANKED TEAM",
       "activo": true,
+      "capitan": "DR. FIX",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "RNT・DrFix銀",

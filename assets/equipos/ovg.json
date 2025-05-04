@@ -4,6 +4,12 @@
       "team": "OVERHEAT",
       "org": "OVERHEAT",
       "activo": true,
+      "capitan": "ELIOT",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "i'm.McLovin",

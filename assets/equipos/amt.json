@@ -2,8 +2,14 @@
     {
       "tag": "AMT",
       "team": "IMPERIO MEXA AMT",
-      "org": "XFORCE05",
+      "org": "XF05 ESPORTS",
       "activo": true,
+      "capitan": "",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "MeXa・Tory",

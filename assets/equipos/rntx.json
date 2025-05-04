@@ -4,6 +4,12 @@
     "team": "RNT XAPULOVERS",
     "org": "RANKED TEAM",
     "activo": true,
+    "capitan": "XAPU",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "/equipos/",
     "jugadores": [
       {
         "nickname": "RNT・Xapu",

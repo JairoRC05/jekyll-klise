@@ -2,8 +2,14 @@
   {
     "tag": "TAD",
     "team": "TAQUITOS A LA DIABLA",
-    "org": "TAQUITOS A LA DIABLA",
+    "org": "",
     "activo": true,
+    "capitan": "TAQUITO",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "/equipos/",
     "jugadores": [
       {
         "nickname": "タTaquito",

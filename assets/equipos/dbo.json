@@ -4,6 +4,12 @@
       "team": "DINAMITA BUENA ONDA",
       "org": null,
       "activo": true,
+      "capitan": "NEW",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "ttvNewt_ez",

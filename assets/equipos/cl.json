@@ -4,6 +4,12 @@
       "team": "CHRONOS LEGION",
       "org": null,
       "activo": true,
+      "capitan": "JEDM",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "Jedm愛",

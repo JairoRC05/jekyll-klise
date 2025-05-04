@@ -4,6 +4,12 @@
       "team": "RNT NEO STARS",
       "org": "RANKED TEAM",
       "activo": true,
+      "capitan": "LUFFY",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "RNT・Luffy12",

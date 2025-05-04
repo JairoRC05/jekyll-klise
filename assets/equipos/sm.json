@@ -4,6 +4,12 @@
     "team": "HG SALARIO MINIMO",
     "org": "HOUSE OF GHOST",
     "activo": true,
+    "capitan": "PERRON",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "/equipos/",
     "jugadores": [
       {
         "nickname": "$M • Perron",

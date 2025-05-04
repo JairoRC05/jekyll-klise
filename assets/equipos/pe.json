@@ -4,6 +4,12 @@
       "team": "PRESTACIONES DE LEY HG",
       "org": "HOUSE OF GHOST",
       "activo": true,
+      "capitan": "JIMBOO",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "P£・么quario",

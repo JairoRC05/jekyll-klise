@@ -4,6 +4,12 @@
     "team": "THE UNOWN TEAM",
     "org": "THE UNOWN TEAM",
     "activo": true,
+    "capitan": "BREN",
+    "region": "LAN",
+    "teamNombreAnterior": "2X1500",
+    "teamNuevoNombre": "THE UNOWN TEAM",
+    "seguro": false,
+    "link": "/equipos/",
     "jugadores": [
       {
         "nickname": "TuT • Bren",

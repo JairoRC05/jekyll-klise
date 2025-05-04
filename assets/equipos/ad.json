@@ -4,6 +4,12 @@
     "team": "AD GAMING",
     "org": "AD GAMING",
     "activo": true,
+    "capitan": "TUGFAMON",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "/equipos/ad-gaming",
     "jugadores": [
       {
         "nickname": "AÐ・Efesto",

@@ -4,6 +4,12 @@
       "team": "SPACE VAL",
       "org": "SPACE RACOOS",
       "activo": true,
+      "capitan": "DANNY",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "宙V・DaniVal",

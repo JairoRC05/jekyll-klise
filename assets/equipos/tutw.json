@@ -4,6 +4,12 @@
       "team": "TUT WARRIORS",
       "org": "THE UNOWN TEAM",
       "activo": true,
+      "capitan": "GERD",
+      "region": "LAN",
+      "teamNombreAnterior": "LA ONE COIN",
+      "teamNuevoNombre": "TUT WARRIORS",
+      "seguro": false,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "Sitetampo勢",

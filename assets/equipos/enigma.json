@@ -4,6 +4,12 @@
       "team": "SPC ENIGMA",
       "org": "SPC E-SPORTS",
       "activo": true,
+      "capitan": "RODMAN",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "SPC・Rodman",

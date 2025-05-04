@@ -4,6 +4,12 @@
       "team": "AOGIRI",
       "org": null,
       "activo": true,
+      "capitan": "JACO",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "ʚJacoɞ",

@@ -4,6 +4,12 @@
     "team": "PLAGA VILLANOS",
     "org": "PLAGA/VILLANOS E-SPORTS",
     "activo": true,
+    "capitan": "TEXAS",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "/equipos/",
     "jugadores": [
       {
         "nickname": "Texaspurguis",

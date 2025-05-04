@@ -4,6 +4,12 @@
       "team": "TEAM MANICOMIO",
       "org": null,
       "activo": true,
+      "capitan": "YASU",
+      "region": "LAN",
+      "teamNombreAnterior": "BROKEN DREAMS",
+      "teamNuevoNombre": "TEAM MANICOMIO",
+      "seguro": false,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "SoyYasuッ",

@@ -4,6 +4,12 @@
       "team": "STAMINA E-SPORTS",
       "org": "STAMINA E-SPORTS",
       "activo": true,
+      "capitan": "RANMA",
+      "region": "LAN",
+      "teamNombreAnterior": "",
+      "teamNuevoNombre": "",
+      "seguro": true,
+      "link": "/equipos/",
       "jugadores": [
         {
           "nickname": "STMN・Ranma",
