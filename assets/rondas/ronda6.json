@@ -1,0 +1,235 @@
+{
+  "encuentros": [
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "TM",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "PE",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・Perro乡",
+          "equipo": "NEO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・Luffy12",
+          "equipo": "NEO",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "¶ZinX¶",
+          "equipo": "PE",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "RK",
+      "equipoVisitante": "ZAFIRO",
+      "mvpsLocal": [
+        {
+          "nombre": "ЯK・Belz돈",
+          "equipo": "RK",
+          "genero": "male1"
+        },
+        {
+          "nombre": "ЯK・Belz돈",
+          "equipo": "RK",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa • Isma",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "PLAGA",
+      "equipoVisitante": "DBO",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "SM",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "DTY",
+      "equipoVisitante": "AD",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "NS",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・DrFix銀",
+          "equipo": "GX",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・DrFix銀",
+          "equipo": "GX",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "IAMTOKITO",
+          "equipo": "NS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Hades地獄",
+          "equipo": "NS",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "CL",
+      "equipoVisitante": "RNTX",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "AMT",
+      "equipoVisitante": "SPACE",
+      "mvpsLocal": [
+        {
+          "nombre": "MeXa・Cage",
+          "equipo": "AMT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Chaq鋼",
+          "equipo": "AMT",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "宙VTonyVal",
+          "equipo": "SPACE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TronciaNara",
+          "equipo": "SPACE",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "OBS",
+      "equipoVisitante": "TUT",
+      "mvpsLocal": [
+        {
+          "nombre": "MeXa・Kory",
+          "equipo": "OBS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Kory",
+          "equipo": "OBS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・ Wott",
+          "equipo": "OBS",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Akane秋",
+          "equipo": "TUT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Akane秋",
+          "equipo": "TUT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Akane秋",
+          "equipo": "TUT",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "TAD",
+      "equipoVisitante": "AOGIRI",
+      "mvpsLocal": [
+        {
+          "nombre": "ムlixendカモ",
+          "equipo": "TAD",
+          "genero": "male1"
+        },
+        {
+          "nombre": "CHC・CHIPIS",
+          "equipo": "TAD",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ア・Ękkō",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Hammerfall9",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "TUTW",
+      "equipoVisitante": "ENIGMA",
+      "mvpsLocal": [
+        {
+          "nombre": "Raydemort",
+          "equipo": "TUTW",
+          "genero": "male1"
+        },
+        {
+          "nombre": "WK・Metal",
+          "equipo": "TUTW",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "SPC・Lolfe教",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SPC・Rodman",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        }
+      ]
+    }
+  ]
+}

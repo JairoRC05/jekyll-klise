@@ -878,3 +878,18 @@
 .visitante-mvps {
   grid-column: 2 / 3; /* MVPs visitantes en la segunda columna */
 }
+
+
+.barra-estado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  color: #2f2f2f;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  margin-top: 5px;
+  padding: 5px 10px;
+}

@@ -725,11 +725,19 @@ title: IDS | LIGA INDIGO
     const equipoVisitanteTag = selectEquipoVisitante.value;
     const mvpsLocal = selectMvpLocal.map(select => {
       const player = teamsData[equipoLocalTag]?.jugadores?.find(j => j.nickname === select.value);
-      return player ? { nombre: player.nickname, equipo: equipoLocalTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+      return player ? { 
+        nombre: player.nickname, 
+        equipo: equipoLocalTag, 
+        genero: player.avatar || 'unknown' 
+      } : null;
     }).filter(mvp => mvp !== null);
     const mvpsVisitante = selectMvpVisitante.map(select => {
       const player = teamsData[equipoVisitanteTag]?.jugadores?.find(j => j.nickname === select.value);
-      return player ? { nombre: player.nickname, equipo: equipoVisitanteTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+      return player ? { 
+        nombre: player.nickname, 
+        equipo: equipoVisitanteTag, 
+        genero: player.avatar || 'unknown' 
+      } : null;
     }).filter(mvp => mvp !== null);
 
     if (encuentros.length < MAX_ENCUENTROS) {
@@ -810,11 +818,19 @@ title: IDS | LIGA INDIGO
     const equipoVisitanteTag = selectEquipoVisitante.value;
     const mvpsLocal = selectMvpLocal.map(select => {
       const player = teamsData[equipoLocalTag]?.jugadores?.find(j => j.nickname === select.value);
-      return player ? { nombre: player.nickname, equipo: equipoLocalTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+      return player ? { 
+        nombre: player.nickname, 
+        equipo: equipoLocalTag, 
+        genero: player.avatar || 'unknown' 
+      } : null;
     }).filter(mvp => mvp !== null);
     const mvpsVisitante = selectMvpVisitante.map(select => {
       const player = teamsData[equipoVisitanteTag]?.jugadores?.find(j => j.nickname === select.value);
-      return player ? { nombre: player.nickname, equipo: equipoVisitanteTag, genero: player.avatar ? (player.avatar.startsWith('male') ? 'male' : 'female') : 'unknown' } : null;
+      return player ? { 
+        nombre: player.nickname, 
+        equipo: equipoVisitanteTag, 
+        genero: player.avatar || 'unknown' 
+      } : null;
     }).filter(mvp => mvp !== null);
 
     if (equipoLocalTag && equipoVisitanteTag) {
@@ -827,7 +843,7 @@ title: IDS | LIGA INDIGO
       actualizarTabla();
       limpiarFormulario();
       const guardarBoton = document.querySelector('#formulario-encuentro button');
-      guardarBoton.textContent = 'Guardar Encuentro';
+      guardarBoton.textContent = 'GUARDAR';
       guardarBoton.onclick = guardarEncuentro;
     } else {
       alert('Por favor, selecciona ambos equipos.');

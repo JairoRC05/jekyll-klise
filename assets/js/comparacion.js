@@ -75,7 +75,10 @@ function obtenerEstadisticasJugador(nombreJugador) {
     ultimaRondaMvp: null,
     rachaMaximaConsecutiva: 0,
     equipoActual: null,
-    genero: null // <- Añadido para almacenar el género
+    genero: null,
+    equiposRivalMvp: new Set(),
+    rondaConMasMvps: null, 
+    maxMvpsEnRonda: 0 
   };
 
   let ultimaRonda = 0;
@@ -89,11 +92,13 @@ function obtenerEstadisticasJugador(nombreJugador) {
           esMvpEnRonda = true;
           estadisticas.totalMvps++;
           estadisticas.equiposComoMvp.add(mvp.equipo);
+          console.log('Equipos MVP para', nombreJugador, ':', estadisticas.equiposComoMvp);
           estadisticas.mvpsPorEquipo[mvp.equipo] = (estadisticas.mvpsPorEquipo[mvp.equipo] || 0) + 1;
           estadisticas.mvpsPorRonda[rondaNumero] = (estadisticas.mvpsPorRonda[rondaNumero] || 0) + 1;
           estadisticas.equipoActual = mvp.equipo;
           ultimaRonda = Math.max(ultimaRonda, rondaNumero);
-          estadisticas.genero = mvp.genero; // <-- Obtener el género
+          estadisticas.genero = mvp.genero; 
+          estadisticas.equiposRivalMvp.add(encuentro.equipoVisitante);
         }
       });
       encuentro.mvpsVisitante.forEach(mvp => {
@@ -105,7 +110,8 @@ function obtenerEstadisticasJugador(nombreJugador) {
           estadisticas.mvpsPorRonda[rondaNumero] = (estadisticas.mvpsPorRonda[rondaNumero] || 0) + 1;
           estadisticas.equipoActual = mvp.equipo;
           ultimaRonda = Math.max(ultimaRonda, rondaNumero);
-          estadisticas.genero = mvp.genero; // <-- Obtener el género
+          estadisticas.genero = mvp.genero; 
+          estadisticas.equiposRivalMvp.add(encuentro.equipoLocal);
         }
       });
     });
@@ -130,52 +136,71 @@ function obtenerEstadisticasJugador(nombreJugador) {
     estadisticas.rachaMaximaConsecutiva = Math.max(estadisticas.rachaMaximaConsecutiva, rachaActual + 1);
   }
 
+  for (const ronda in estadisticas.mvpsPorRonda) {
+    if (estadisticas.mvpsPorRonda[ronda] > estadisticas.maxMvpsEnRonda) {
+      estadisticas.maxMvpsEnRonda = estadisticas.mvpsPorRonda[ronda];
+      estadisticas.rondaConMasMvps = parseInt(ronda);
+    } else if (estadisticas.mvpsPorRonda[ronda] === estadisticas.maxMvpsEnRonda && estadisticas.maxMvpsEnRonda > 0) {
+     
+      if (!estadisticas.rondaConMasMvps) {
+        estadisticas.rondaConMasMvps = parseInt(ronda);
+      }
+    }
+  }
+
+
+
   return estadisticas;
 }
 
 function mostrarResultadosComparacion(estadisticas1, estadisticas2, jugador1Nombre, jugador2Nombre) {
   comparacionResultadosDiv.innerHTML = `
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="fifa-card">
-          <div class="fifa-card-header ${estadisticas1.equipoActual ? estadisticas1.equipoActual.toUpperCase() : ''}">
-            ${estadisticas1.genero ? `<img src="/assets/avatars/${estadisticas1.genero}.webp" alt="${jugador1Nombre}" class="fifa-card-avatar">` : ''}
-            <div class="fifa-card-info">
-              <h5 class="fifa-card-name">${jugador1Nombre}</h5>
-              <p class="fifa-card-team">${estadisticas1.equipoActual || 'N/A'}</p>
-            </div>
-            ${estadisticas1.equipoActual ? `<img src="/assets/logos/${estadisticas1.equipoActual}.webp" alt="${estadisticas1.equipoActual}" class="fifa-card-logo">` : ''}
+      <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="fifa-card">
+        <div class="fifa-card-header ${estadisticas1.equipoActual ? estadisticas1.equipoActual.toUpperCase() : ''}">
+          ${estadisticas1.genero ? `<img src="/assets/avatars/${estadisticas1.genero}.webp" alt="${jugador1Nombre}" class="fifa-card-avatar">` : ''}
+          <div class="fifa-card-info">
+            <h5 class="fifa-card-name">${jugador1Nombre}</h5>
+            <p class="fifa-card-team">${estadisticas1.equipoActual || 'N/A'}</p>
           </div>
-          <div class="fifa-card-stats">
-            <div class="fifa-stat"><span>MVP:</span> <span>${estadisticas1.totalMvps}</span></div>
-            <div class="fifa-stat"><span>Equipos MVP:</span> <span>${[...estadisticas1.equiposComoMvp].join(', ')}</span></div>
-            <div class="fifa-stat"><span>Primer MVP:</span> <span>${estadisticas1.primeraRondaMvp ? estadisticas1.primeraRondaMvp : 'N/A'}</span></div>
-            <div class="fifa-stat"><span>Último MVP:</span> <span>${estadisticas1.ultimaRondaMvp ? estadisticas1.ultimaRondaMvp : 'N/A'}</span></div>
-            <div class="fifa-stat"><span>Racha:</span> <span>${estadisticas1.rachaMaximaConsecutiva}</span></div>
-          </div>
+          ${estadisticas1.equipoActual ? `<img src="/assets/logos/${estadisticas1.equipoActual}.webp" alt="${estadisticas1.equipoActual}" class="fifa-card-logo">` : ''}
         </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="fifa-card">
-          <div class="fifa-card-header ${estadisticas2.equipoActual ? estadisticas2.equipoActual.toUpperCase() : ''}">
-            ${estadisticas2.genero ? `<img src="/assets/avatars/${estadisticas2.genero}.webp" alt="${jugador2Nombre}" class="fifa-card-avatar">` : ''}
-            <div class="fifa-card-info">
-              <h5 class="fifa-card-name">${jugador2Nombre}</h5>
-              <p class="fifa-card-team">${estadisticas2.equipoActual || 'N/A'}</p>
-            </div>
-            ${estadisticas2.equipoActual ? `<img src="/assets/logos/${estadisticas2.equipoActual}.webp" alt="${jugador2Nombre}" class="fifa-card-logo">` : ''}
-          </div>
-          <div class="fifa-card-stats">
-            <div class="fifa-stat"><span>MVP:</span> <span>${estadisticas2.totalMvps}</span></div>
-            <div class="fifa-stat"><span>Equipos MVP:</span> <span>${[...estadisticas2.equiposComoMvp].join(', ')}</span></div>
-            <div class="fifa-stat"><span>Primer MVP:</span> <span>${estadisticas2.primeraRondaMvp ? estadisticas2.primeraRondaMvp : 'N/A'}</span></div>
-            <div class="fifa-stat"><span>Último MVP:</span> <span>${estadisticas2.ultimaRondaMvp ? estadisticas2.ultimaRondaMvp : 'N/A'}</span></div>
-            <div class="fifa-stat"><span>Racha:</span> <span>${estadisticas2.rachaMaximaConsecutiva}</span></div>
-          </div>
+        <div class="fifa-card-stats">
+          <div class="fifa-stat"><span>MVP:</span> <span>${estadisticas1.totalMvps}</span></div>
+          <div class="fifa-stat"><span>Equipos MVP:</span> <span>${[...estadisticas1.equiposComoMvp].join(', ')}</span></div>
+          <div class="fifa-stat"><span>Primer MVP:</span> <span>${estadisticas1.primeraRondaMvp ? estadisticas1.primeraRondaMvp : 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Último MVP:</span> <span>${estadisticas1.ultimaRondaMvp ? estadisticas1.ultimaRondaMvp : 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Racha:</span> <span>${estadisticas1.rachaMaximaConsecutiva}</span></div>
+          <div class="fifa-stat"><span>MVP vs:</span> <span>${[...estadisticas1.equiposRivalMvp].join(', ') || 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Más MVPs en Ronda:</span> <span>${estadisticas1.rondaConMasMvps ? estadisticas1.rondaConMasMvps : 'N/A'} (${estadisticas1.maxMvpsEnRonda})</span></div>
         </div>
       </div>
     </div>
-  `;
+    <div class="col-md-6 mb-4">
+      <div class="fifa-card">
+        <div class="fifa-card-header ${estadisticas2.equipoActual ? estadisticas2.equipoActual.toUpperCase() : ''}">
+          ${estadisticas2.genero ? `<img src="/assets/avatars/${estadisticas2.genero}.webp" alt="${jugador2Nombre}" class="fifa-card-avatar">` : ''}
+          <div class="fifa-card-info">
+            <h5 class="fifa-card-name">${jugador2Nombre}</h5>
+            <p class="fifa-card-team">${estadisticas2.equipoActual || 'N/A'}</p>
+          </div>
+          ${estadisticas2.equipoActual ? `<img src="/assets/logos/${estadisticas2.equipoActual}.webp" alt="${jugador2Nombre}" class="fifa-card-logo">` : ''}
+        </div>
+        <div class="fifa-card-stats">
+          <div class="fifa-stat"><span>MVP:</span> <span>${estadisticas2.totalMvps}</span></div>
+          <div class="fifa-stat"><span>Equipos MVP:</span> <span>${[...estadisticas2.equiposComoMvp].join(', ')}</span></div>
+          <div class="fifa-stat"><span>Primer MVP:</span> <span>${estadisticas2.primeraRondaMvp ? estadisticas2.primeraRondaMvp : 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Último MVP:</span> <span>${estadisticas2.ultimaRondaMvp ? estadisticas2.ultimaRondaMvp : 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Racha:</span> <span>${estadisticas2.rachaMaximaConsecutiva}</span></div>
+          <div class="fifa-stat"><span>MVP vs:</span> <span>${[...estadisticas2.equiposRivalMvp].join(', ') || 'N/A'}</span></div>
+          <div class="fifa-stat"><span>Más MVPs en Ronda:</span> <span>${estadisticas2.rondaConMasMvps ? estadisticas2.rondaConMasMvps : 'N/A'} (${estadisticas2.maxMvpsEnRonda})</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
 }
 
 export { compararJugadores };

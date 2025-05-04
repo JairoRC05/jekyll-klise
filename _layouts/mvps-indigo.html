@@ -7,104 +7,114 @@ layout:
 {% include header.html %}
 
 <body class="bg-home">
- <!-- <video class="fondocss" autoplay muted loop >
+  <!-- <video class="fondocss" autoplay muted loop >
     <source src="/assets/img/terror.mp4" type="video/mp4">
     </video> -->
 
-    <nav class="navbar top sticky-top indigo-yellow d-none d-lg-block">
-      <div class="container d-flex justify-content-center align-items-center text-white">
-        <a href="/">
-          <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
-          </span>
-        </a>
+  <nav class="navbar top sticky-top indigo-yellow d-none d-lg-block">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50px" height="44px">
+      </a>
+
+
+
+      <div class="d-none d-md-block text-white">
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+
       </div>
-    </nav>
-    
-    <nav class="navbar top sticky-top bg-cham">
-      <div class="container d-flex justify-content-between align-items-center text-white ">
-        <a class="navbar-brand" href="#">
-          <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50px" height="44px">
-        </a>
-  
-        
-  
-        <div class="d-none d-md-block text-white">
-          <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-dashboard" class="text-white">INICIO</a></span>
-          <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
-          <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
-    
-        </div>
-   
-      </div>
-    </nav>
-  
+
+    </div>
+  </nav>
+
 
 
 
 
   <div class="container-fluid banner_bg_team bg-cham">
-  
+
     <div class="container banner_team">
       <a href="{{post.url}}">
         <img src="/assets/logos/LIGA-INDIGO-ALT.webp" class="drop img-fluid" alt="" ">
       </a>
-      <div class="bannerText">
-      <div class="record-line">
-        {% if page.ligas.size == 1 %}
-        <div class="trofeos">
-          <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
-          <span>{{page.ligas}}</span>
+      <div class=" bannerText">
+        <div class="record-line">
+          {% if page.ligas.size == 1 %}
+          <div class="trofeos">
+            <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+            <span>{{page.ligas}}</span>
+          </div>
+          {% else %}
+          {% endif %}
+          {% if page.cxf.size == 1 %}
+          <div class="trofeos ms-2">
+            <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
+            <span>{{page.cxf}}</span>
+          </div>
+          {% else %}
+          {% endif %}
+          {% if page.cham.size == 1 %}
+          <div class="trofeos ms-2">
+            <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
+            <span>{{page.cham}}</span>
+          </div>
+          {% else %}
+          {% endif %}
         </div>
-        {% else %}
-        {% endif %}
-        {% if page.cxf.size == 1 %}
-        <div class="trofeos ms-2">
-          <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
-          <span>{{page.cxf}}</span>
-        </div>
-        {% else %}
-        {% endif %}
-        {% if page.cham.size == 1 %}
-        <div class="trofeos ms-2">
-          <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
-          <span>{{page.cham}}</span>
-        </div>
-        {% else %}
-        {% endif %}
-      </div>
         <h1 class="exo-style d-none d-md-block">MVPS</h1>
         <span class="exo d-none d-md-block">GALAXIA NORTE / SUR</span>
         <div class="region">
           <div class="localization">
-            <img src="https://flagcdn.com/h20/mx.webp"  alt="REGION: MEXICO">
-            <img src="https://flagcdn.com/h20/co.webp"  alt="REGION: COLOMBIA">
-            <img src="https://flagcdn.com/h20/cl.webp"  alt="REGION: CHILE">
-            <img src="https://flagcdn.com/h20/us.webp"  alt="REGION: USA">
+            <img src="https://flagcdn.com/h20/mx.webp" alt="REGION: MEXICO">
+            <img src="https://flagcdn.com/h20/co.webp" alt="REGION: COLOMBIA">
+            <img src="https://flagcdn.com/h20/cl.webp" alt="REGION: CHILE">
+            <img src="https://flagcdn.com/h20/us.webp" alt="REGION: USA">
           </div>
-    
+
         </div>
+    </div>
+  </div>
+  <div class="container banner-info d-block d-sm-none p-0">
+    <h1 class="exo-style">MVPS</h1>
+    <span class="exo">GALAXIA NORTE / SUR</span>
+    <div class="region">
+      <div class="localization">
+        <img src="https://flagcdn.com/h20/mx.webp" alt="REGION: MEXICO">
+        <img src="https://flagcdn.com/h20/co.webp" alt="REGION: COLOMBIA">
+        <img src="https://flagcdn.com/h20/cl.webp" alt="REGION: CHILE">
+        <img src="https://flagcdn.com/h20/us.webp" alt="REGION: USA">
       </div>
     </div>
-    <div class="container banner-info d-block d-sm-none p-0">
-      <h1 class="exo-style">MVPS</h1>
-      <span class="exo">GALAXIA NORTE / SUR</span>
-      <div class="region">
-        <div class="localization">
-          <img src="https://flagcdn.com/h20/mx.webp"  alt="REGION: MEXICO">
-          <img src="https://flagcdn.com/h20/co.webp"  alt="REGION: COLOMBIA">
-          <img src="https://flagcdn.com/h20/cl.webp"  alt="REGION: CHILE">
-          <img src="https://flagcdn.com/h20/us.webp"  alt="REGION: USA">
-        </div>
-      </div>
-    </div>
+  </div>
 
   </div>
 
 
- 
 
 
- 
+
+<div class="container">
+
+    <div id="barraEstado" class="barra-estado">
+      <div id="estadoRondas" class="estado-item"></div>
+      <div id="estadoPartidos" class="estado-item"></div>
+      <div id="estadoTotalMvp" class="estado-item"></div>
+      <div id="estadoTotalJugadoresMvp" class="estado-item"></div>
+    </div>
+
+</div>
+
   <div class="container mt-3">
     <h2><b>MVPS POR RONDA</b></h2>
     <ul class="nav nav-pills nav-justified" id="roundTabs" role="tablist">
@@ -140,34 +150,34 @@ layout:
 
   <div class="container">
     <div class="row"></div>
-</div>
+  </div>
 
-<div class="modal fade" id="jugadorModal" tabindex="-1" aria-labelledby="jugadorModalLabel" aria-hidden="true">
+  <div class="modal fade" id="jugadorModal" tabindex="-1" aria-labelledby="jugadorModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header  bg-cham">
-                <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
-                <h5 class="modal-title ms-2" id="jugadorModalLabel">DETALLES DEL JUGADOR</h5>
-          
-            </div>
-            <div class="modal-body">
-                <div id="jugadorModalContent">
-                </div>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header  bg-cham">
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+          <h5 class="modal-title ms-2" id="jugadorModalLabel">DETALLES DEL JUGADOR</h5>
+
         </div>
+        <div class="modal-body">
+          <div id="jugadorModalContent">
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
 
 
 
-  <div class="container teams-table d-none d-md-block"  id="home">
-      <h1 class="teams-title m-10">PATROCINADORES</h1>
-      {% include sponsors.html %}
-    </div>
+  <div class="container teams-table d-none d-md-block" id="home">
+    <h1 class="teams-title m-10">PATROCINADORES</h1>
+    {% include sponsors.html %}
+  </div>
 
-    {% include hora.html %}
+  {% include hora.html %}
 
 
 
@@ -184,9 +194,32 @@ layout:
 
   <div class="d-none d-md-block">
     {% include footer-transparent.html %}
-</div>
+  </div>
 
-{% include navbar-league.html %}
+  <div class="d-block d-md-none ">
+    <nav class="navbar fixed-bottom navbar-light bg-cham">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="item-bar">
+            <a href="/liga-indigo-norte">
+              <i class="ti ti-swords"></i>
+              <span>NORTE</span>
+            </a>
+          </div>
+          <div class="item-bar">
+            <a href="/reglamento-liga-indigo">
+              <i class="ti ti-chess-rook-filled"></i>
+            <span>REGLAS</span>
+            </a>
+          </div>
+          <div class="item-bar">
+            <a href="/liga-indigo-sur">
+              <i class="ti ti-shield-filled"></i>
+              <span>SUR</span>
+            </a>
+          </div>
+        </div>
+    </nav>
+</div>
 
 
 </body>
@@ -194,10 +227,10 @@ layout:
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script type="module" src="/assets/js/tabs-mvps.js"></script>
-        <script type="module" src="/assets/js/comparacion.js"></script>
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module" src="/assets/js/tabs-mvps.js"></script>
+<script type="module" src="/assets/js/comparacion.js"></script>
+<script type="module" src="/assets/js/barra-estado.js"></script>
 
 
 

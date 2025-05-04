@@ -1,48 +1,50 @@
 [
-    {
-      "tag": "SM",
-      "team": "HG SALARIO MINIMO",
-      "org": "HOUSE OF GHOST",
-      "activo": true,
-      "jugadores": [
-        {
-          "nickname": "$M • Perron",
-          "ID": "74HHH8H"
-        },
-        {
-          "nickname": "$M・Finn",
-          "ID": "GF9L4M8"
-        },
-        {
-          "nickname": "$M・Krosty",
-          "ID": "KE5NP22",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "$M・Stimpy",
-          "ID": "HEQCNTP",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "$M・Alndingo",
-          "ID": "GCLK510",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "$M*SaBroso",
-          "ID": "87YFMQA",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "・Winters・",
-          "ID": "KT2ARX2",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "DFs・Forti",
-          "ID": "FKH2R49",
-          "avatar": "male1"
-        }
-      ]
-    }
-  ]
+  {
+    "tag": "SM",
+    "team": "HG SALARIO MINIMO",
+    "org": "HOUSE OF GHOST",
+    "activo": true,
+    "jugadores": [
+      {
+        "nickname": "$M • Perron",
+        "ID": "74HHH8H",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "$M・Finn",
+        "ID": "GF9L4M8",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "$M・Krosty",
+        "ID": "KE5NP22",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "$M・Stimpy",
+        "ID": "HEQCNTP",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "$M・Alndingo",
+        "ID": "GCLK510",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "$M*SaBroso",
+        "ID": "87YFMQA",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "・Winters・",
+        "ID": "KT2ARX2",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "DFs・Forti",
+        "ID": "FKH2R49",
+        "avatar": "male1"
+      }
+    ]
+  }
+]
