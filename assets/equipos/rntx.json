@@ -9,7 +9,22 @@
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
     "seguro": true,
-    "link": "/equipos/",
+    "link": "/equipos/ranked-team--xapulovers",
+    "grupo": "SUR",
+    "partidos": {
+      "M1": 0,
+      "M2": 3,
+      "M3": 1,
+      "M4": "R",
+      "M5": "R",
+      "M6": "R",
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0,
+      "M12": 0
+    },
     "jugadores": [
       {
         "nickname": "RNT・Xapu",

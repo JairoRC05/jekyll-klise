@@ -9,7 +9,22 @@
       "teamNombreAnterior": "",
       "teamNuevoNombre": "",
       "seguro": true,
-      "link": "/equipos/",
+      "link": "/imperio-mexa/--zafiro",
+      "grupo": "NORTE",
+      "partidos": {
+        "M1": 0,
+        "M2": 0,
+        "M3": 0,
+        "M4": 0,
+        "M5": 0,
+        "M6": 0,
+        "M7": "",
+        "M8": "",
+        "M9": "",
+        "M10": "",
+        "M11": "",
+        "M12": ""
+      },
       "jugadores": [
         {
           "nickname": "MeXa • Frost",

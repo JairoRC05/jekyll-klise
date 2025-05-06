@@ -9,7 +9,22 @@
       "teamNombreAnterior": "",
       "teamNuevoNombre": "",
       "seguro": true,
-      "link": "/equipos/",
+      "link": "/equipos/club-ragnarok--ymir",
+      "grupo": "NORTE",
+      "partidos": {
+        "M1": 2,
+        "M2": 0,
+        "M3": 1,
+        "M4": 0,
+        "M5": 0,
+        "M6": 3,
+        "M7": 0,
+        "M8": 0,
+        "M9": 0,
+        "M10": 0,
+        "M11": 0,
+        "M12": 0
+      },
       "jugadores": [
         {
           "nickname": "ЯK・Sol",

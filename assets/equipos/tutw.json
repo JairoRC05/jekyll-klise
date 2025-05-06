@@ -9,7 +9,22 @@
       "teamNombreAnterior": "LA ONE COIN",
       "teamNuevoNombre": "TUT WARRIORS",
       "seguro": false,
-      "link": "/equipos/",
+      "link": "/equipos/theunownteam--warriors",
+      "grupo": "SUR",
+      "partidos": {
+        "M1": 0,
+        "M2": 3,
+        "M3": 2,
+        "M4": 3,
+        "M5": 0,
+        "M6": 3,
+        "M7": 0,
+        "M8": 0,
+        "M9": 0,
+        "M10": 0,
+        "M11": 0,
+        "M12": 0
+      },
       "jugadores": [
         {
           "nickname": "Sitetampo勢",

@@ -11,38 +11,42 @@
 
 
 <div class="row last">
-  {% assign ordenado = site.data.pnorte.norte | sort: "order"  %}
-  {% for team in ordenado  %}
-  {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
+  {% assign equipos_norte = site.data.pnorte.norte %}
+  {% assign equipos_con_suma = "" | split: "" %} 
 
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card-round-list">
-      <div class="card-round-team">
-        <a href="{{team.link}}">
-          <img src="/assets/logos/{{team.ID}}.webp" alt="" class="img-fluid">
-        </a>
-        {% include rounds.html %}
-      </div>
-      <div class="card-round-pts">
-        <h6>{{ suma }} pts</h6>
-      </div>
-      <div class="card-round-place">
-       
-        <span>{{team.order}}</span>
-  
+  {% for team in equipos_norte %}
+    {% assign suma = team.M1 | default: 0 | plus: team.M2 | default: 0 | plus: team.M3 | default: 0 | plus: team.M4 | default: 0 | plus: team.M5 | default: 0 | plus: team.M6 | default: 0 | plus: team.M7 | default: 0 | plus: team.M8 | default: 0 | plus: team.M9 | default: 0 | plus: team.M10 | default: 0 | plus: team.M11 | default: 0 %}
+    {% assign team_con_suma = team | merge: {"suma": suma} %}
+    {% assign equipos_con_suma = equipos_con_suma | push: team_con_suma %}
+  {% endfor %}
 
-      </div>  
-      <div class="card-back">
-        {% if team.ID == "7Z" %}
-        <div class="card-color-left S7Z">
+  {% assign ordenado_por_suma = equipos_con_suma | sort: "suma" | reverse %}
+
+  {% for team in ordenado_por_suma %}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card-round-list">
+        <div class="card-round-team">
+          <a href="{{ team.link }}">
+            <img src="/assets/logos/{{ team.ID }}.webp" alt="" class="img-fluid">
+          </a>
+          {% include rounds.html %}
         </div>
-        {% else %}     
-        <div class="card-color-left {{team.ID}}">
+        <div class="card-round-pts">
+          <h6>{{ team.suma }} pts</h6>
         </div>
-        {% endif %}     
-
+        <div class="card-round-place">
+          <span>{{ team.order }}</span>
+        </div>
+        <div class="card-back">
+          {% if team.ID == "7Z" %}
+          <div class="card-color-left S7Z">
+          </div>
+          {% else %}
+          <div class="card-color-left {{ team.ID }}">
+          </div>
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
   {% endfor %}
 </div>

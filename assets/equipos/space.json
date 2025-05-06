@@ -2,14 +2,29 @@
     {
       "tag": "SPACE",
       "team": "SPACE VAL",
-      "org": "SPACE RACOOS",
+      "org": "SPACE RACOONS",
       "activo": true,
-      "capitan": "DANNY",
+      "capitan": "DaniVal",
       "region": "LAN",
       "teamNombreAnterior": "",
       "teamNuevoNombre": "",
       "seguro": true,
-      "link": "/equipos/",
+      "link": "/equipos/space-racoons--space-val",
+      "grupo": "SUR",
+      "partidos": {
+        "M1": 3,
+        "M2": 3,
+        "M3": 3,
+        "M4": 0,
+        "M5": "R",
+        "M6": 3,
+        "M7": 0,
+        "M8": 0,
+        "M9": 0,
+        "M10": 0,
+        "M11": 0,
+        "M12": 0
+      },
       "jugadores": [
         {
           "nickname": "宙V・DaniVal",
@@ -19,12 +34,7 @@
         {
           "nickname": "宙VTonyVal",
           "ID": "RMEPEEA",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 3,
-          "m1": 1,
-          "m2": 1,
-          "m4": 1
+          "avatar": "male1"
         },
         {
           "nickname": "COMEMANGO",
@@ -39,26 +49,17 @@
         {
           "nickname": "TronciaNara",
           "ID": "9RP17PY",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m4": 1
+          "avatar": "male1"
         },
         {
           "nickname": "宙V・Hungry",
           "ID": "F3TEE13",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m4": 1
+          "avatar": "male1"
         },
         {
           "nickname": "宙V・CLazo",
           "ID": "A6RASMX",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m2": 1
+          "avatar": "male1"
         }
       ]
     }

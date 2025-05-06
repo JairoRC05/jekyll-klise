@@ -9,7 +9,22 @@
       "teamNombreAnterior": "",
       "teamNuevoNombre": "",
       "seguro": true,
-      "link": "/equipos/",
+      "link": "/equipos/stamina-e-sports",
+      "grupo": "NORTE",
+      "partidos": {
+        "M1": 3,
+        "M2": 3,
+        "M3": 3,
+        "M4": 3,
+        "M5": 3,
+        "M6": 3,
+        "M7": 0,
+        "M8": 0,
+        "M9": 0,
+        "M10": 0,
+        "M11": 0,
+        "M12": 0
+      },
       "jugadores": [
         {
           "nickname": "STMN・Ranma",

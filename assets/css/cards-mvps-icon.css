@@ -893,3 +893,63 @@
   margin-top: 5px;
   padding: 5px 10px;
 }
+
+.pagination{
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+#equiposTabla_info{
+  text-align: center;
+}
+
+
+#equiposTabla_info td.icons,
+#equiposTabla_info th.icons {
+  text-align: center;
+}
+
+
+
+.details-league-card{
+  /* background: #fff; */
+  padding:  5px 15px !important;
+  /* border: 1px solid rgb(228, 228, 228);
+  border-radius: 10px; */
+
+}
+
+.details-league{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+.circle-badge{
+  margin: 0 2px 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(215, 215, 215);
+                width: 15px !important;
+                height: 15px !important;
+                border-radius: 50%;
+                font-size: 10px;
+                text-align: center;
+                text-transform: capitalize;
+}
+
+span{
+  text-transform: capitalize;
+}
+
+.circle-badge-icon{
+  margin: 0 2px 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+}
+
+
+}

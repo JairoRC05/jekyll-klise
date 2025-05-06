@@ -9,7 +9,22 @@
     "teamNombreAnterior": "2X1500",
     "teamNuevoNombre": "THE UNOWN TEAM",
     "seguro": false,
-    "link": "/equipos/",
+    "link": "/equipos/theunownteam",
+    "grupo": "SUR",
+    "partidos": {
+      "M1": "R",
+      "M2": 0,
+      "M3": 0,
+      "M4":  "R",
+      "M5": 3,
+      "M6": 1,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0,
+      "M12": 0
+    },
     "jugadores": [
       {
         "nickname": "TuT • Bren",

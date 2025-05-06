@@ -1,7 +1,7 @@
 ---
 layout:
 permalink: /liga-indigo-status.html
-title: IDS | LIGA INDIGO
+title: ESTATUS | LIGA INDIGO
 ---
 
 
@@ -98,40 +98,65 @@ title: IDS | LIGA INDIGO
   </div>
 
 
-  <div class="container">
-    <h1>Lista de Equipos</h1>
-    <table id="equiposTabla" class="table table-striped table-bordered" style="width:100%">
+ <div class="container mt-3">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="jugadores-tab" data-bs-toggle="tab" data-bs-target="#jugadores-pane" type="button" role="tab" aria-controls="jugadores-pane" aria-selected="true"><i class="ti ti-users-group me-2"></i>Jugadores por Equipo</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="equipos-tab" data-bs-toggle="tab" data-bs-target="#equipos-pane" type="button" role="tab" aria-controls="equipos-pane" aria-selected="false"><i class="ti ti-shield-check me-2"></i>Información de Equipos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="redes-tab" data-bs-toggle="tab" data-bs-target="#redes-pane" type="button" role="tab" aria-controls="redes-pane" aria-selected="false"><i class="ti ti-share me-2"></i>Redes Sociales</button>
+    </li>
+  </ul>
+  <div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="jugadores-pane" role="tabpanel" aria-labelledby="jugadores-tab" tabindex="0">
+      <table id="equiposTablaID" class="table table-striped table-bordered" style="width:100%">
         <thead>
-            <tr>
-                <th>Team</th>
-                <th>Capitán</th>
-                <th>Organización</th>
-
-                <th>Nuevo Anterior</th>
-                <th>Seguro</th>
-                <th>Link</th>
-                <th>Jugadores</th>
-            </tr>
+          <tr>
+            <th>Equipo</th>
+            <th>Nickname</th>
+            <th>ID</th>
+          </tr>
         </thead>
         <tbody>
-            </tbody>
-        <tfoot>
-            <tr>
-                <th>Team</th>
-                <th>Capitán</th>
-                <th>Organización</th>
-
-                <th>Anterior</th>
-                <th>Seguro</th>
-                <th>Link</th>
-                <th>Jugadores</th>
-            </tr>
-        </tfoot>
-    </table>
-</div>
-
-
-
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane fade" id="equipos-pane" role="tabpanel" aria-labelledby="equipos-tab" tabindex="0">
+      <table id="equiposTabla" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+          <tr>
+            <th>Equipo</th>
+            <th>Capitán</th>
+            <th>Organización</th>
+            <th>Nombre Anterior</th>
+            <th>Seguro</th>
+            <th>Link</th>
+            <th># Jugadores</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane fade" id="redes-pane" role="tabpanel" aria-labelledby="redes-tab" tabindex="0">
+      <table id="redesTabla" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+          <tr>
+            <th>Equipo</th>
+            <th>Facebook</th>
+            <th>X (Twitter)</th>
+            <th>Instagram</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>
  
 
 
@@ -171,86 +196,236 @@ title: IDS | LIGA INDIGO
 
 <script>
   $(document).ready(function() {
-      let equiposData = [];
-      const teamFiles = [
-          'assets/equipos/ad.json',
-          'assets/equipos/amt.json',
-          'assets/equipos/aogiri.json',
-          'assets/equipos/cl.json',
-          'assets/equipos/dbo.json',
-          'assets/equipos/dty.json',
-          'assets/equipos/enigma.json',
-          'assets/equipos/gx.json',
-          'assets/equipos/neo.json',
-          'assets/equipos/ns.json',
-          'assets/equipos/obs.json',
-          'assets/equipos/ovg.json',
-          'assets/equipos/pe.json',
-          'assets/equipos/plaga.json',
-          'assets/equipos/rk.json',
-          'assets/equipos/rntx.json',
-          'assets/equipos/sm.json',
-          'assets/equipos/space.json',
-          'assets/equipos/stmn.json',
-          'assets/equipos/tad.json',
-          'assets/equipos/tm.json',
-          'assets/equipos/tut.json',
-          'assets/equipos/tutw.json',
-          'assets/equipos/zafiro.json'
-      ];
+  let jugadoresData = []; // Usamos un nombre diferente para los datos de esta tabla
+  let redesData = [];
+  const teamFiles = [
+    'assets/equipos/ad.json',
+    'assets/equipos/amt.json',
+    'assets/equipos/aogiri.json',
+    'assets/equipos/cl.json',
+    'assets/equipos/dbo.json',
+    'assets/equipos/dty.json',
+    'assets/equipos/enigma.json',
+    'assets/equipos/gx.json',
+    'assets/equipos/neo.json',
+    'assets/equipos/ns.json',
+    'assets/equipos/obs.json',
+    'assets/equipos/ovg.json',
+    'assets/equipos/pe.json',
+    'assets/equipos/plaga.json',
+    'assets/equipos/rk.json',
+    'assets/equipos/rntx.json',
+    'assets/equipos/sm.json',
+    'assets/equipos/space.json',
+    'assets/equipos/stmn.json',
+    'assets/equipos/tad.json',
+    'assets/equipos/tm.json',
+    'assets/equipos/tut.json',
+    'assets/equipos/tutw.json',
+    'assets/equipos/zafiro.json'
+  ];
 
-      // Función para obtener los datos de cada archivo JSON
-      async function cargarEquipos() {
-          const promises = teamFiles.map(async (file) => {
-              const response = await fetch(file);
-              const data = await response.json();
-              equiposData = equiposData.concat(data);
-          });
-          await Promise.all(promises);
-          inicializarTabla();
+  // Función para obtener los datos de los jugadores de cada equipo
+  async function cargarDatosJugadores() {
+    const promises = teamFiles.map(async (file) => {
+      const response = await fetch(file);
+      if (!response.ok) {
+        console.error(`Error al cargar ${file}: ${response.status}`);
+        return [];
       }
-
-      
-      function inicializarTabla() {
-    $('#equiposTabla').DataTable({
-        data: equiposData,
-        columns: [
-            { data: 'team', title: 'Equipo' }, 
-            { data: 'capitan', title: 'Capitán' },
-            { data: 'org', title: 'Organización' }, 
-  
-            { data: 'teamNombreAnterior', title: 'Nombre Anterior' }, 
-            {
-                data: 'seguro',
-                render: function(data, type, row) {
-                    if (type === 'display') {
-                        return data ? '<i class="ti ti-circle-check-filled text-success"></i>' : '<i class="ti ti-circle-x-filled text-danger"></i>';
-                    }
-                    return data;
-                }
-            },
-            {
-                data: 'link',
-                render: function(data, type, row) {
-                    if (type === 'display') {
-                        return `<a href="${data}"><i class="ti ti-world-code"></i></a>`;
-                    }
-                    return data;
-                }
-            },
-            {
-                data: 'jugadores',
-                render: function(data, type, row) {
-                    return data.length;
-                }
-            }
-        ],
-        pageLength: 25
+      const data = await response.json();
+      return data.flatMap(equipo =>
+        equipo.jugadores.map(jugador => ({
+          team: equipo.team,
+          nickname: jugador.nickname,
+          id: jugador.ID
+        }))
+      );
     });
-}
-    
-      cargarEquipos();
-  });
+
+    const allJugadoresData = await Promise.all(promises);
+    jugadoresData = allJugadoresData.flat();
+    inicializarTablaJugadores();
+  }
+
+  function inicializarTablaJugadores() {
+    $('#equiposTablaID').DataTable({
+      data: jugadoresData,
+      columns: [
+        { data: 'team', title: 'Equipo' },
+        { data: 'nickname', title: 'Nickname' },
+        { data: 'id', title: 'ID' }
+      ],
+      pageLength: 25,
+      responsive: true,
+      language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+          "first": "<",
+          "last": ">",
+          "next": ">>",
+          "previous": "<<"
+        }
+      }
+    });
+  }
+
+
+  let equiposData = [];
+  async function cargarEquipos() {
+    const promises = teamFiles.map(async (file) => {
+      const response = await fetch(file);
+      if (!response.ok) {
+        console.error(`Error al cargar ${file}: ${response.status}`);
+        return [];
+      }
+      const data = await response.json();
+      equiposData = equiposData.concat(data);
+    });
+    await Promise.all(promises);
+    inicializarTablaEquipos();
+  }
+
+  function inicializarTablaEquipos() {
+    $('#equiposTabla').DataTable({
+      data: equiposData,
+      columns: [
+        { data: 'team', title: 'Equipo' },
+        { data: 'capitan', title: 'Capitán' },
+        { data: 'org', title: 'Organización' },
+        { data: 'teamNombreAnterior', title: 'Nombre Anterior' },
+        {
+          data: 'seguro',
+          render: function(data, type, row) {
+            return data ? '<i class="ti ti-circle-check-filled text-success"></i>' : '<i class="ti ti-circle-x-filled text-danger"></i>';
+          }
+        },
+        {
+          data: 'link',
+          render: function(data, type, row) {
+            return `<a href="${data}"><i class="ti ti-world-code"></i></a>`;
+          }
+        },
+        {
+          data: 'jugadores',
+          render: function(data, type, row) {
+            return data.length;
+          }
+        }
+      ],
+      pageLength: 25,
+      responsive: true,
+      language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+          "first": "<",
+          "last": ">",
+          "next": ">>",
+          "previous": "<<"
+        }
+      }
+    });
+  }
+
+  async function cargarRedesSociales() {
+    const promises = teamFiles.map(async (file) => {
+      const response = await fetch(file);
+      if (!response.ok) {
+        console.error(`Error al cargar ${file}: ${response.status}`);
+        return [];
+      }
+      const data = await response.json();
+      return data.map(equipo => ({
+        team: equipo.team,
+        facebook: equipo.redes?.facebook || '',
+        x: equipo.redes?.x || '',
+        instagram: equipo.redes?.instagram || ''
+      }));
+    });
+    const allRedesData = await Promise.all(promises);
+    redesData = allRedesData.flat();
+    inicializarTablaRedesSociales();
+  }
+
+  function inicializarTablaRedesSociales() {
+    $('#redesTabla').DataTable({
+      data: redesData,
+      columns: [
+        { data: 'team', title: 'Equipo' },
+        {
+          data: 'facebook',
+          title: 'Facebook',
+          render: function(data, type, row) {
+            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-facebook"></i></a>` : '';
+          }
+        },
+        {
+          data: 'x',
+          title: 'X (Twitter)',
+          render: function(data, type, row) {
+            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-x"></i></a>` : '';
+          }
+        },
+        {
+          data: 'instagram',
+          title: 'Instagram',
+          render: function(data, type, row) {
+            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-instagram"></i></a>` : '';
+          }
+        }
+      ],
+      pageLength: 25,
+      responsive: true,
+      language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+          "first": "<",
+          "last": ">",
+          "next": ">>",
+          "previous": "<<"
+        }
+      }
+    });
+  }
+
+  cargarDatosJugadores();
+  cargarEquipos(); 
+  cargarRedesSociales();
+});
+
 </script>
 
 

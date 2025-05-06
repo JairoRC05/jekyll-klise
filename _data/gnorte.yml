@@ -187,7 +187,7 @@ rondas:
         tag1: PLAGA
         equipo2: RAGNAROK YMIR
         tag2: RK
-        resultado: VS
+        resultado: 2-0
         stream: true
         hora: 
         dia: 01 MAYO
@@ -196,31 +196,31 @@ rondas:
         tag1: DBO
         equipo2: HG SALARIO MINIMO
         tag2: SM
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: PRESTACIONES DE LEY HG
         tag1: PE
         equipo2: DINASTY
         tag2: DTY
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: RNT NEO STARS
         tag1: NEO
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: OVERHEAT
         tag1: OVG
         equipo2: TEAM MANICOMIO
         tag2: TM
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: STAMINA E-SPORTS
         tag1: STMN
         equipo2: AD GAMING
         tag2: AD
-        resultado: VS
+        resultado: 2-0
 
   # RONDA 6
   - ronda: RONDA 6
@@ -237,7 +237,7 @@ rondas:
         tag1: ZAFIRO
         equipo2: RAGNAROK YMIR
         tag2: RK
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: HG SALARIO MINIMO
         tag1: SM
@@ -249,7 +249,7 @@ rondas:
         tag1: NEO
         equipo2: PRESTACIONES DE LEY HG
         tag2: PE
-        resultado: VS
+        resultado: 2-0
         stream: true
         hora: 
 
@@ -257,13 +257,13 @@ rondas:
         tag1: TM
         equipo2: STAMINA E-SPORTS
         tag2: STMN
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: DINASTY
         tag1: DTY
         equipo2: AD GAMING
         tag2: AD
-        resultado: VS
+        resultado: 2-0
 
   # RONDA 7
   - ronda: RONDA 7
@@ -487,7 +487,7 @@ rondas:
         resultado: VS
 
   # RONDA 11
-  - ronda: RONDA 11
+  - ronda: RONDA HOOPA
     fecha: "13 MAY"
     hora: "19:00"
     partidos:

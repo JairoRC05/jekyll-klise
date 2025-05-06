@@ -70,10 +70,62 @@ color: #ffbe00
     </div>
   
     {% if page.division == "PLATINO" %}
-    {% include list-mobile-platino.html %} 
+    <div class="row" id="grupoNorte">
+
+    </div>
     {% else page.division == "ORO" %}
-    {% include list-mobile-oro.html %} 
+    <div class="row" id="grupoSur">
+
+    </div>
     {% endif %}
+
+
+    <div class="details-league-card mt-4">
+      <h5>Simbología</h5>
+      <div class="row row-cols-1 row-cols-md-4">
+        <div class="col">
+          <div class="details-league">
+            <span class="sup  circle-badge me-2 m-0">V</span> <span>Victoria (2-0)</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="win  circle-badge me-2 m-0">V</span> <span>Victoria (2-1)</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="one  circle-badge me-2 m-0">V</span> <span>Victoria (1-2)</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="circle-badge-icon me-2 m-0"><i class="ti ti-vip   text-primary me-2  m-0"></i></span> <span>Fase Final Liga Indigo</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="loss  circle-badge me-2 m-0">D</span> <span>Derrota (0-2)</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="des circle-badge me-2 m-0">Z</span> <span>Descanso</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="details-league">
+            <span class="rea circle-badge me-2 m-0">R</span> <span>Reagenado</span>
+          </div>
+        </div>
+       
+        <div class="col">
+          <div class="details-league">
+            <span class="circle-badge-icon me-2 m-0"><i class="ti ti-shield-up text-warning me-2 m-0"></i></span> <span>Copa XForze SPC</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     
   </div>
@@ -138,6 +190,208 @@ color: #ffbe00
 
      {% include g-analytics.html %}
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const grupoNorteDiv = document.getElementById('grupoNorte');
+  const grupoSurDiv = document.getElementById('grupoSur');
+  const equiposDataNorte = [];
+  const equiposDataSur = [];
+  const teamFiles = [
+    'assets/equipos/ad.json',
+    'assets/equipos/amt.json',
+    'assets/equipos/aogiri.json',
+    'assets/equipos/cl.json',
+    'assets/equipos/dbo.json',
+    'assets/equipos/dty.json',
+    'assets/equipos/enigma.json',
+    'assets/equipos/gx.json',
+    'assets/equipos/neo.json',
+    'assets/equipos/ns.json',
+    'assets/equipos/obs.json',
+    'assets/equipos/ovg.json',
+    'assets/equipos/pe.json',
+    'assets/equipos/plaga.json',
+    'assets/equipos/rk.json',
+    'assets/equipos/rntx.json',
+    'assets/equipos/sm.json',
+    'assets/equipos/space.json',
+    'assets/equipos/stmn.json',
+    'assets/equipos/tad.json',
+    'assets/equipos/tm.json',
+    'assets/equipos/tut.json',
+    'assets/equipos/tutw.json',
+    'assets/equipos/zafiro.json'
+  ];
+
+  const fetchPromises = teamFiles.map(file => {
+    return fetch('/' + file) 
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          const equipo = data[0];
+          let suma = 0;
+          if (equipo.partidos) {
+            for (const partido in equipo.partidos) {
+              suma += parseInt(equipo.partidos[partido]) || 0;
+            }
+          }
+          const equipoConSuma = {...equipo, suma: suma};
+          if (equipo.grupo === 'NORTE') {
+            equiposDataNorte.push(equipoConSuma);
+          } else if (equipo.grupo === 'SUR') {
+            equiposDataSur.push(equipoConSuma);
+          }
+        }
+      })
+      .catch(error => console.error(`Error fetching ${file}:`, error));
+  });
+
+  Promise.all(fetchPromises)
+    .then(() => {
+      equiposDataNorte.sort((a, b) => b.suma - a.suma);
+      equiposDataSur.sort((a, b) => b.suma - a.suma);
+
+      console.log("equiposDataNorte:", equiposDataNorte);
+      console.log("equiposDataSur:", equiposDataSur);
+
+      if (grupoNorteDiv) {
+        mostrarEquipos(equiposDataNorte, grupoNorteDiv);
+      } else if (grupoSurDiv) {
+        mostrarEquipos(equiposDataSur, grupoSurDiv);
+      } else {
+        console.log("Ningún div de grupo (norte o sur) se encontró en esta página.");
+      }
+
+    });
+
+    function mostrarEquipos(equipos, contenedor) {
+  contenedor.innerHTML = '';
+
+  const resultadoMapeo = {
+    3: 'V',
+    2: 'V',
+    1: 'V',
+    'R': 'R',
+    'Z': 'Z',
+    0: 'D'
+  };
+
+  const equiposPorPuntos = equipos.reduce((acc, equipo) => {
+    acc[equipo.suma] = acc[equipo.suma] || [];
+    acc[equipo.suma].push(equipo);
+    return acc;
+  }, {});
+
+  const puntosOrdenados = Object.keys(equiposPorPuntos)
+    .map(Number)
+    .sort((a, b) => b - a);
+
+  let rank = 0;
+  let overallIndex = 0; // Nuevo índice para rastrear la posición general
+
+  puntosOrdenados.forEach(puntos => {
+    const grupoDeEquipos = equiposPorPuntos[puntos];
+    rank++;
+
+    grupoDeEquipos.forEach(equipo => {
+      const colDiv = document.createElement('div');
+      colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4');
+      const cardRoundListDiv = document.createElement('div');
+      cardRoundListDiv.classList.add('card-round-list');
+      const cardRoundTeamDiv = document.createElement('div');
+      cardRoundTeamDiv.classList.add('card-round-team');
+      const link = document.createElement('a');
+      link.href = equipo.link;
+      const img = document.createElement('img');
+      img.src = `/assets/logos/${equipo.tag}.webp`;
+      img.alt = '';
+      img.classList.add('img-fluid');
+      link.appendChild(img);
+      cardRoundTeamDiv.appendChild(link);
+      const cardRoundTitleDiv = document.createElement('div');
+      cardRoundTitleDiv.classList.add('card-round-title');
+      const titleH2 = document.createElement('h2');
+      titleH2.textContent = equipo.team;
+
+      // Lógica para los iconos VIP y Escudo basada en el índice general
+      if (overallIndex < 4) {
+        const vipLogo = document.createElement('i');
+        vipLogo.classList.add('ti', 'ti-vip');
+        vipLogo.style.color = 'blue';
+        titleH2.appendChild(document.createTextNode(' '));
+        titleH2.appendChild(vipLogo);
+      }
+      if (overallIndex < 8) {
+        const shieldLogo = document.createElement('i');
+        shieldLogo.classList.add('ti', 'ti-shield-up');
+        shieldLogo.style.color = 'orange';
+        titleH2.appendChild(document.createTextNode(' '));
+        titleH2.appendChild(shieldLogo);
+      }
+
+      cardRoundTitleDiv.appendChild(titleH2);
+      cardRoundTeamDiv.appendChild(cardRoundTitleDiv);
+      const cardRoundRecordDiv = document.createElement('div');
+      cardRoundRecordDiv.classList.add('card-round-record');
+      const partidos = equipo.partidos;
+      const partidosKeys = Object.keys(partidos).slice(0, 11);
+      partidosKeys.forEach(key => {
+        const resultado = partidos.hasOwnProperty(key) ? partidos[key] : null;
+        const spanRecord = document.createElement('span');
+        spanRecord.classList.add('record');
+        if (resultado === 3) {
+          spanRecord.classList.add('sup');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else if (resultado === 2) {
+          spanRecord.classList.add('win');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else if (resultado === 1) {
+          spanRecord.classList.add('one');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else if (resultado === 'R') {
+          spanRecord.classList.add('rea');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else if (resultado === 'Z') {
+          spanRecord.classList.add('des');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else if (resultado === 0) {
+          spanRecord.classList.add('loss');
+          spanRecord.textContent = resultadoMapeo[resultado];
+        } else {
+          spanRecord.textContent = resultado;
+        }
+        cardRoundRecordDiv.appendChild(spanRecord);
+      });
+      cardRoundTitleDiv.appendChild(cardRoundRecordDiv);
+      cardRoundTeamDiv.appendChild(cardRoundTitleDiv);
+      const cardRoundPtsDiv = document.createElement('div');
+      cardRoundPtsDiv.classList.add('card-round-pts');
+      const ptsH6 = document.createElement('h6');
+      ptsH6.textContent = `${equipo.suma} pts`;
+      cardRoundPtsDiv.appendChild(ptsH6);
+      const cardRoundPlaceDiv = document.createElement('div');
+      cardRoundPlaceDiv.classList.add('card-round-place');
+      const placeSpan = document.createElement('span');
+      placeSpan.textContent = rank < 10 ? `0${rank}` : rank;
+      cardRoundPlaceDiv.appendChild(placeSpan);
+      const cardBackDiv = document.createElement('div');
+      cardBackDiv.classList.add('card-back');
+      const colorLeftDiv = document.createElement('div');
+      colorLeftDiv.classList.add('card-color-left', equipo.tag);
+      cardBackDiv.appendChild(colorLeftDiv);
+      cardRoundListDiv.appendChild(cardRoundTeamDiv);
+      cardRoundListDiv.appendChild(cardRoundPtsDiv);
+      cardRoundListDiv.appendChild(cardRoundPlaceDiv);
+      cardRoundListDiv.appendChild(cardBackDiv);
+      colDiv.appendChild(cardRoundListDiv);
+      contenedor.appendChild(colDiv);
+      overallIndex++; // Incrementar el índice general por cada equipo procesado
+    });
+  });
+}
+   
+});
+    </script>
 
 </body>
 

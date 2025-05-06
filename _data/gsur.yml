@@ -187,19 +187,19 @@ rondas:
         tag1: NS
         equipo2: RNT XAPULOVERS
         tag2: RNTX
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: RNT GALÁCTICOS
         tag1: GX
         equipo2: IM AMATISTA
         tag2: AMT
-        resultado: VS
+        resultado: PEN
 
       - equipo1: THE UNOWN TEAM
         tag1: TUT
         equipo2: TUT WARRIORS
         tag2: TUTW
-        resultado: VS
+        resultado: 2-1
         stream: true
         hora: SI
         dia: 01 MAYO
@@ -208,19 +208,19 @@ rondas:
         tag1: OBS
         equipo2: CHRONOS LEGION
         tag2: CL
-        resultado: VS
+        resultado: PEN
 
       - equipo1: SPACE VAL
         tag1: SPACE
         equipo2: TAQUITOS A LA DIABLA
         tag2: TAD
-        resultado: VS
+        resultado: PEN
 
       - equipo1: AOGIRI
         tag1: AOGIRI
         equipo2: SPC ENIGMA
         tag2: ENIGMA
-        resultado: VS
+        resultado: 0-2
 
   # RONDA 6
   - ronda: RONDA 6
@@ -231,37 +231,37 @@ rondas:
         tag1: GX
         equipo2: NO SMITES
         tag2: NS
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: CHRONOS LEGION
         tag1: CL
         equipo2: RNT XAPULOVERS
         tag2: RNTX
-        resultado: VS
+        resultado: PEN
 
       - equipo1: IM AMATISTA
         tag1: AMT
         equipo2: SPACE VAL
         tag2: SPACE
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: IM OBSIDIANA
         tag1: OBS
         equipo2: THE UNOWN TEAM
         tag2: TUT
-        resultado: VS
+        resultado: 2-1
 
       - equipo1: TAQUITOS A LA DIABLA
         tag1: TAD
         equipo2: AOGIRI
         tag2: AOGIRI
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: TUT WARRIORS
         tag1: TUTW
         equipo2: SPC ENIGMA
         tag2: ENIGMA
-        resultado: VS
+        resultado: 2-0
         stream: true
         hora: SI
 

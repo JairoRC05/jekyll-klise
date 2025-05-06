@@ -10,7 +10,7 @@ norte:
     M2: 3
     M3: 3
     M4: 3
-    M5: 0Y
+    M5: 3
     M6: 0Y
     M7: 0Y
     M8: 0Y
@@ -29,8 +29,8 @@ norte:
     M2: 3
     M3: 3
     M4: 3
-    M5: 0Y
-    M6: 0Y
+    M5: 3
+    M6: 3
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -41,14 +41,13 @@ norte:
     nombre: RNT NEO STARS
     ID: NEO
     link: /equipos/ranked-team--neo-stars
-    order: 5
-    line: 4
+    order: 4
     M1: 0
     M2: 2
     M3: 3
     M4: 0
-    M5: 0Y
-    M6: 0Y
+    M5: 3
+    M6: 3
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -65,7 +64,7 @@ norte:
     M2: 3
     M3: 0
     M4: R
-    M5: 0Y
+    M5: 0
     M6: 0Y
     M7: 0Y
     M8: 0Y
@@ -83,8 +82,8 @@ norte:
     M2: 1
     M3: 2
     M4: 3
-    M5: 0Y
-    M6: 0Y
+    M5: 3
+    M6: 3
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -101,7 +100,7 @@ norte:
     M2: 1
     M3: 2
     M4: 0
-    M5: 0Y
+    M5: 0
     M6: 0Y
     M7: 0Y
     M8: 0Y
@@ -112,15 +111,15 @@ norte:
   - equipo: ЯK
     nombre: ЯAGNAROK YMIR
     ID: RK
-    link: /teams/club-ragnarok--ymir
+    link: /equipos/club-ragnarok--ymir
     line: 2
     order: 7
     M1: 2
     M2: 0
     M3: 1
     M4: 0
-    M5: 0Y
-    M6: 0Y
+    M5: 0
+    M6: 3
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -139,12 +138,12 @@ norte:
     M2: 0
     M3: 1
     M4: 0
-    M5: 0Y
+    M5: 3
     M6: 0YY
     M7: 0Y
     M8: 0YY
     M9: 0Y
-    M10: 0
+    M10: 0Y
     M11: 0Y
 
   - equipo: ZAFIRO
@@ -157,8 +156,8 @@ norte:
     M2: 0
     M3: 0
     M4: 0
-    M5: 0Y
-    M6: 0Y
+    M5: 0
+    M6: 0
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -175,8 +174,8 @@ norte:
     M2: 0
     M3: 1
     M4: 3
-    M5: 0Y
-    M6: 0Y
+    M5: 3
+    M6: 0
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -187,13 +186,13 @@ norte:
     nombre: AD GAMING
     ID: AD
     link: /equipos/ad-gaming
-    order: 3
+    order: 5
     M1: 3
     M2: 2
     M3: 2
     M4: R
-    M5: 0Y
-    M6: 0Y
+    M5: 0
+    M6: 0
     M7: 0Y
     M8: 0Y
     M9: 0Y
@@ -210,8 +209,8 @@ norte:
     M2: 3
     M3: 3
     M4: 0
-    M5: 0Y
-    M6: 0Y
+    M5: 0
+    M6: 0
     M7: 0Y
     M8: 0Y
     M9: 0Y
