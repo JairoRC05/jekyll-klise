@@ -1,0 +1,150 @@
+{
+  "norte": [
+    {
+      "tag": "STMN",
+      "team": "STAMINA E-SPORTS",
+      "posicion": 1,
+      "suma": 15
+    },
+    {
+      "tag": "PLAGA",
+      "team": "PLAGA VILLANOS",
+      "posicion": 2,
+      "suma": 14
+    },
+    {
+      "tag": "DTY",
+      "team": "DINASTY",
+      "posicion": 3,
+      "suma": 10
+    },
+    {
+      "tag": "NEO",
+      "team": "RNT NEO STARS",
+      "posicion": 4,
+      "suma": 8
+    },
+    {
+      "tag": "AD",
+      "team": "AD GAMING",
+      "posicion": 5,
+      "suma": 7
+    },
+    {
+      "tag": "DBO",
+      "team": "DINAMITA BUENA ONDA",
+      "posicion": 5,
+      "suma": 7
+    },
+    {
+      "tag": "TM",
+      "team": "TEAM MANICOMIO",
+      "posicion": 5,
+      "suma": 7
+    },
+    {
+      "tag": "RK",
+      "team": "RAGNAROK YMIR",
+      "posicion": 8,
+      "suma": 3
+    },
+    {
+      "tag": "PE",
+      "team": "PRESTACIONES DE LEY HG",
+      "posicion": 6,
+      "suma": 6
+    },
+    {
+      "tag": "SM",
+      "team": "HG SALARIO MINIMO",
+      "posicion": 6,
+      "suma": 6
+    },
+    {
+      "tag": "OVG",
+      "team": "OVERHEAT",
+      "posicion": 7,
+      "suma": 4
+    },
+    {
+      "tag": "ZAFIRO",
+      "team": "IMPERIO MEXA ZAFIRO",
+      "posicion": 12,
+      "suma": 0
+    }
+  ],
+  "sur": [
+    {
+      "tag": "NS",
+      "team": "NO SMITES",
+      "posicion": 1,
+      "suma": 18
+    },
+    {
+      "tag": "ENIGMA",
+      "team": "SPC ENIGMA",
+      "posicion": 2,
+      "suma": 15
+    },
+    {
+      "tag": "SPACE",
+      "team": "SPACE VAL",
+      "posicion": 3,
+      "suma": 12
+    },
+    {
+      "tag": "TUTW",
+      "team": "TUT WARRIORS",
+      "posicion": 4,
+      "suma": 11
+    },
+    {
+      "tag": "GX",
+      "team": "RNT GALÁCTICOS",
+      "posicion": 5,
+      "suma": 9
+    },
+    {
+      "tag": "AOGIRI",
+      "team": "AOGIRI",
+      "posicion": 6,
+      "suma": 6
+    },
+    {
+      "tag": "OBS",
+      "team": "IMPERIO MEXA OBSIDIANA",
+      "posicion": 7,
+      "suma": 4
+    },
+    {
+      "tag": "RNTX",
+      "team": "RNT XAPULOVERS",
+      "posicion": 8,
+      "suma": 4
+    },
+    {
+      "tag": "TUT",
+      "team": "THE UNOWN TEAM",
+      "posicion": 9,
+      "suma": 4
+    },
+    {
+      "tag": "TAD",
+      "team": "TAQUITOS A LA DIABLA",
+      "posicion": 10,
+      "suma": 3
+    },
+    {
+      "tag": "CL",
+      "team": "CHRONOS LEGION",
+      "posicion": 11,
+      "suma": 1
+    },
+    {
+      "tag": "AMT",
+      "team": "IMPERIO MEXA AMT",
+      "posicion": 12,
+      "suma": 0
+    }
+  ]
+}
