@@ -26,46 +26,51 @@
         "M12": 0
       },
       "jugadores": [
-        {
-          "nickname": "i'm.McLovin",
-          "ID": "9KNN1KA",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "TESLA科学",
-          "ID": "50L82YG",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ZTG・Broken",
-          "ID": "MHAP9RC",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "差Seruhio歩",
-          "ID": "2HX0X8C",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ZEILAZ_ttv",
-          "ID": "Y9HYL8G",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Göndul愛",
-          "ID": "N3C2HQ",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Sąē",
-          "ID": "KTF0CKP",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "EK・Mich",
-          "ID": "64MY9H3",
-          "avatar": "female1"
-        }
-      ]
+      {
+        "nickname": "i'm.McLovin",
+        "ID": "9KNN1KA",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "TESLA科学",
+        "ID": "50L82YG",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "ZTG・Broken",
+        "ID": "MHAP9RC",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "差Seruhio歩",
+        "ID": "2HX0X8C",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "ZEILAZ_ttv",
+        "ID": "Y9HYL8G",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "Göndul愛",
+        "ID": "N3C2HQ",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "マキレツクス",
+        "ID": "T6Q62NX",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "EK・Mich",
+        "ID": "64MY9H3",
+        "avatar": "female1"
+      },
+      {
+        "nickname": "DemoliZM",
+        "ID": "L92XH05",
+        "avatar": "male1"
+      }
+    ]
     }
   ]

@@ -27,14 +27,18 @@
       },
       "jugadores": [
         {
-          "nickname": "P£・么quario",
+          "nickname": "PL・么quario",
           "ID": "8XTYF12",
           "avatar": "male1"
         },
         {
           "nickname": "JDA • 从ortem",
           "ID": "FQTLQT6",
-          "avatar": "male1"
+          "avatar": "male1",
+          "mvp": true,
+          "numero": 3,
+          "m2": 2,
+          "m3": 1
         },
         {
           "nickname": "¶ZinX¶",

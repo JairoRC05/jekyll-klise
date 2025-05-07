@@ -25,47 +25,47 @@
         "M11": 0,
         "M12": 0
       },
-      "jugadores": [
-        {
-          "nickname": "Sitetampo勢",
-          "ID": "XYXN83R",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "LFT・Felix",
-          "ID": "CNFF5T9",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "• Raziel",
-          "ID": "KP3MGGK",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Raydemort",
-          "ID": "H8Y27LQ",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "GerardAC",
-          "ID": "A9390CX",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "WK・Metal",
-          "ID": "MR027NE",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "• Solstice",
-          "ID": "FHREPPG",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "DannGP",
-          "ID": "77GCPT4",
-          "avatar": "male1"
-        }
-      ]
+     "jugadores": [
+      {
+        "nickname": "ZzzRay!",
+        "ID": "XYXN83R",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "~ Rygar ~",
+        "ID": "PF6688A",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "• Raziel",
+        "ID": "KP3MGGK",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "Raydemort",
+        "ID": "H8Y27LQ",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "GerardAC",
+        "ID": "A9390CX",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "WK・Metal",
+        "ID": "MR027NE",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "• Solstice",
+        "ID": "FHREPPG",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "Sorcière.",
+        "ID": "LQ4G524",
+        "avatar": "female1"
+      }
+    ]
     }
   ]

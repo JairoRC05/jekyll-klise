@@ -26,46 +26,41 @@
         "M12": 0
       },
       "jugadores": [
-        {
-          "nickname": "ЯK・Sol",
-          "ID": "CLN0GPX",
-          "avatar": "female1"
-        },
-        {
-          "nickname": "ЯK・Belz돈",
-          "ID": "58EAE21",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ЯK・El_Vampi",
-          "ID": "FP6REFM",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "нореи'т",
-          "ID": "LNTHXGT",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Jøhanfr38",
-          "ID": "CK7KNQ7",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ЯK・chaos",
-          "ID": "4CNKGAX",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ЯK・ㅋKarma",
-          "ID": "KE4PTR9",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Sorcière.",
-          "ID": "LQ4G524",
-          "avatar": "female1"
-        }
-      ]
+      {
+        "nickname": "ЯK・Sol",
+        "ID": "CLN0GPX",
+        "avatar": "female1"
+      },
+      {
+        "nickname": "ЯK・Belz돈",
+        "ID": "58EAE21",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "нореи'т",
+        "ID": "LNTHXGT",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "Jøhanfr38",
+        "ID": "CK7KNQ7",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "ЯK・chaos",
+        "ID": "4CNKGAX",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "ЯK・ㅋKarma",
+        "ID": "KE4PTR9",
+        "avatar": "male1"
+      },
+      {
+        "nickname": "andarna_",
+        "ID": "EQQC61T",
+        "avatar": "male1"
+      }
+    ]
     }
   ]
