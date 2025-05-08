@@ -1,0 +1,206 @@
+---
+layout:
+permalink: /sorteo-mensual
+title: SORTEO MENSUAL | NACIÓN UNITE
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
+
+<body>
+
+    <nav class="navbar top sticky-top indigo-yellow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/"><span class="navbar-brand mb-0 h1 text-white"><b>LA REPÚBLICA DEL UNITE</b></span></a>
+            <div class="d-none d-md-block text-white">
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Transition effect for navbar 
+            $(window).scroll(function () {
+                // checks if window is scrolled more than 500px, adds/removes solid class
+                if ($(this).scrollTop() > 30) {
+                    $('.top').addClass('white');
+                } else {
+                    $('.top').removeClass('white');
+                }
+            });
+        });
+    </script>
+
+
+    <div class="container-fluid banner poster">
+        <div class="container bannerPromo d-flex justify-content-start align-items-center">
+            <a href="/assets/logos/LRDU.png" role="button" download="{{ page.title | escape }}.png">
+                <img src="/assets/logos/LRDU.webp" class="drop img-fluid" alt="" ">
+                </a>
+                <div class=" bannerText">
+                <h3 class="exo-style">NACIÓN UNITE</h3>
+                <span>TORNEOS, BUILDS Y MÁS</span>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="container my-5">
+   <div class="d-flex justify-content-between align-items-center">
+    <h2 class="mb-4">Sorteo Mensual</h2>
+    <a href="https://www.twitch.tv/hollywood_forze" target="_blank"><i class="fa-brands fa-discord"></i> Discord</a> 
+   </div>
+
+
+   <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="participantes-tab" data-bs-toggle="tab" data-bs-target="#participantes" type="button" role="tab" aria-controls="participantes" aria-selected="true">Participantes</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="reglas-tab" data-bs-toggle="tab" data-bs-target="#reglas" type="button" role="tab" aria-controls="reglas" aria-selected="false">Reglas</button>
+    </li>
+</ul>
+
+
+
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="participantes" role="tabpanel" aria-labelledby="participantes-tab">
+  </div>
+
+
+  <div class="tab-pane fade" id="reglas" role="tabpanel" aria-labelledby="reglas-tab">
+    <h3 class="mt-3">Reglas del Sorteo Mensual</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+          <strong>Elegibilidad para Premios (Suscriptores, VIPS y Donadores de Bits):</strong> Los suscriptores, miembros VIP y Donadores de Bits que resulten ganadores tendrán su premio asegurado, sin necesidad de asistencia al sorteo.
+      </li>
+      <li class="list-group-item">
+          <strong>Límite de Boletos por Participante:</strong> El límite máximo de boletos por participante para este sorteo es de 25. Los boletos que excedan este límite serán válidos para el sorteo del mes siguiente.
+      </li>
+      <li class="list-group-item">
+          <strong>Boletos y Reclamo para Suscriptores:</strong>
+          <ul>
+              <li>Cada suscriptor recibe automáticamente 5 boletos para el sorteo mensual.</li>
+              <li>Plazo para Reclamar Premios: 20 días.</li>
+          </ul>
+      </li>
+      <li class="list-group-item">
+          <strong>Boletos y Reclamo para Miembros VIP:</strong>
+          <ul>
+              <li>No reciben boletos automáticamente y deben obtenerlos a través del intercambio en los canales de <a href="https://www.twitch.tv/hollywood_forze" target="_blank"><i class="fab fa-twitch"></i> Hollywood Forze</a> y <a href="https://www.twitch.tv/uniteforzestadium" target="_blank"><i class="fab fa-twitch"></i> Unite Forze Stadium</a>.</li>
+              <li>Plazo para Reclamar Premios: 20 días.</li>
+          </ul>
+      </li>
+      <li class="list-group-item">
+          <strong>Boletos y Reclamo por Donación de Bits:</strong>
+          <ul>
+              <li>Por cada 50 bits donados, el donante recibirá 1 boleto para el sorteo mensual.</li>
+              <li>Plazo para Reclamar Premios: 7 días.</li>
+          </ul>
+      </li>
+      <li class="list-group-item">
+          <strong>Participantes No Suscriptores ni VIPS:</strong>
+          <ul>
+              <li>Deben estar presentes el día del sorteo para poder reclamar cualquier premio.</li>
+              <li>Plazo para Reclamar Premios: El plazo para reclamar el premio es inmediato una vez anunciado el ganador.</li>
+          </ul>
+      </li>
+      <li class="list-group-item">
+          <strong>Intercambio de Boletos:</strong> Todos los participantes pueden intercambiar boletos adicionales en los canales de <a href="https://www.twitch.tv/hollywood_forze" target="_blank"><i class="fab fa-twitch"></i> Hollywood Forze</a> y <a href="https://www.twitch.tv/uniteforzestadium" target="_blank"><i class="fab fa-twitch"></i> Unite Forze Stadium</a>.
+      </li>
+      <li class="list-group-item">
+          <strong>Fecha y Proceso del Sorteo:</strong>
+          <ul>
+              <li>El sorteo se realizará el último día de cada mes en curso. El horario y día exacto se anunciarán en el canal de Discord #sorteos.</li>
+              <li>El sorteo se llevará a cabo en vivo utilizando la plataforma <a href="https://app-sorteos.com/es" target="_blank"><i class="fas fa-external-link-alt"></i> App Sorteo</a>.</li>
+          </ul>
+      </li>
+      <li class="list-group-item">
+          <strong>Cómo Reclamar los Premios (No Suscriptores/VIPS):</strong> Una vez anunciado como ganador, deberás enviar un mensaje en el chat de Twitch. Para verificar tu identidad, adjunta una captura de pantalla del stream donde se vea tu comentario. Si has cambiado tu nickname recientemente, debes notificarlo antes o durante el sorteo para que podamos validar tu identidad.
+      </li>
+      <li class="list-group-item">
+          <strong>Detalles sobre los Premios:</strong> El premio principal es una Tarjeta Google Play de 500 pesos. En caso de que el ganador prefiera recibir el premio por PayPal, el pago se realizará 5 días después de haber sido anunciado como ganador y no se cubrirán comisiones de envío.
+      </li>
+      <li class="list-group-item">
+          <strong>Otras Condiciones:</strong>
+          <ul>
+              <li>No Acumulación de Boletos: Los boletos no son válidos para sorteos de meses posteriores, a excepción de aquellos que excedan el límite de 25 para este mes.</li>
+              <li>Validez de Boletos (Día del Sorteo): Los boletos canjeados el mismo día del sorteo contarán para el sorteo del mes siguiente.</li>
+              <li>Modificaciones a las Reglas: Cualquier modificación a estas reglas será anunciada en el canal de Discord #sorteos.</li>
+              <li>Privacidad de los Datos: Los datos proporcionados se utilizarán de manera confidencial. En la página del sorteo solo aparecerá tu nickname de Twitch.</li>
+          </ul>
+      </li>
+  </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+     
+
+  </div>
+
+
+    {% include paypal.html %}
+
+
+    <footer>
+        <div class="indigo-yellow py-5  py-xl-8 py-xxl-9 mt-5">
+         <div class="container overflow-hidden">
+           <div class="row gy-5 gy-md-0 align-items-md-center">
+             <div class="col-xs-12 col-md-7 order-1 order-md-0">
+               <div class="copyright text-center text-md-start text-white">
+                 &copy; 2025.  Algunos derechos reservados XForce05 2022-2025. La presentación, explicación e información de las diferentes secciones, son de la autoría de su webmaster, bajo una licencia <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.es">Creative Commons 2003-2025.</a> Nintendo, Pokémon y el resto de nombres relacionados son © de Nintendo, Creatures y GameFreak 1996-2025
+               </div>
+               <div class="credits text-white text-center text-md-start mt-2 fs-8">
+                #LaRepublicaDelUnite
+               </div>
+             </div>
+      
+             <div class="col-xs-12 col-md-5 order-0 order-md-1">
+               <div class="social-media-wrapper">
+                 <ul class="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-md-end">
+                   <li class="me-3">
+                     <a href="https://www.facebook.com/profile.php?id=100079075191093" class="link-light link-opacity-75-hover" target="_blank">
+                       <i class="fa-brands fa-facebook"></i>
+                     </a>
+                   </li>
+                   <li class="me-3">
+                     <a href="https://www.youtube.com/channel/UCBq7KYCM-cQJFuUImuqTklA" class="link-light link-opacity-75-hover" target="_blank">
+                       <i class="fa-brands fa-youtube"></i>
+                     </a>
+                   </li>
+                   <li class="me-3">
+                     <a href="https://discord.gg/8mYH8EyD9P" class="link-light link-opacity-75-hover" target="_blank">
+                       <i class="fa-brands fa-discord"></i>
+                     </a>
+                   </li>
+                   <li class="">
+                     <a href="https://www.twitch.tv/x_force05" class="link-light link-opacity-75-hover" target="_blank">
+                       <i class="fa-brands fa-twitch"></i>
+                     </a>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      </footer>
+
+    <script src="tierlist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
