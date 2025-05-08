@@ -257,7 +257,7 @@ rondas:
         tag1: TM
         equipo2: STAMINA E-SPORTS
         tag2: STMN
-        resultado: 2-0
+        resultado: 0-2
 
       - equipo1: DINASTY
         tag1: DTY
@@ -274,31 +274,31 @@ rondas:
         tag1: PLAGA
         equipo2: IMPERIO MEXA ZAFIRO
         tag2: ZAFIRO
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: DINAMITA BUENA ONDA
         tag1: DBO
         equipo2: OVERHEAT
         tag2: OVG
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: RAGNAROK YMIR
         tag1: RK
         equipo2: PRESTACIONES DE LEY HG
         tag2: PE
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: HG SALARIO MINIMO
         tag1: SM
         equipo2: STAMINA E-SPORTS
         tag2: STMN
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: DINASTY
         tag1: DTY
         equipo2: TEAM MANICOMIO
         tag2: TM
-        resultado: VS
+        resultado: 2-0
         stream: true
         hora: 
 
@@ -306,7 +306,7 @@ rondas:
         tag1: NEO
         equipo2: AD GAMING
         tag2: AD
-        resultado: VS
+        resultado: 1-2
 
   # RONDA 8
   - ronda: RONDA 8

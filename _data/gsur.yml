@@ -274,27 +274,27 @@ rondas:
         tag1: NS
         equipo2: CHRONOS LEGION
         tag2: CL
-        resultado: VS
+        resultado: PEN
      
 
       - equipo1: RNT GALÁCTICOS
         tag1: GX
         equipo2: SPACE VAL
         tag2: SPACE
-        resultado: VS
+        resultado: 0-2
        
 
       - equipo1: RNT XAPULOVERS
         tag1: RNTX
         equipo2: THE UNOWN TEAM
         tag2: TUT
-        resultado: VS
+        resultado: 0-2
 
       - equipo1: IM AMATISTA
         tag1: AMT
         equipo2: AOGIRI
         tag2: AOGIRI
-        resultado: VS
+        resultado: 0-2
         stream: true
         hora: SI
     
@@ -303,13 +303,13 @@ rondas:
         tag1: TUTW
         equipo2: TAQUITOS A LA DIABLA
         tag2: TAD
-        resultado: VS
+        resultado: 2-0
 
       - equipo1: IM OBSIDIANA
         tag1: OBS
         equipo2: SPC ENIGMA
         tag2: ENIGMA
-        resultado: VS
+        resultado: 0-2
 
   # RONDA 8
   - ronda: RONDA 8
