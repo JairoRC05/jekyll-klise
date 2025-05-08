@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const equiposContainer = document.getElementById('equipos-container');
+    const tierSS = document.getElementById('tier-ss');
     const tierS = document.getElementById('tier-s');
+    const tierAA = document.getElementById('tier-aa');
     const tierA = document.getElementById('tier-a');
     const tierB = document.getElementById('tier-b');
     const tierC = document.getElementById('tier-c');
-    const tierLists = [equiposContainer, tierS, tierA, tierB, tierC];
+    const tierD = document.getElementById('tier-d');
+    const tierF = document.getElementById('tier-f');
+    const tierLists = [equiposContainer, tierSS, tierS, tierA, tierAA, tierB, tierC, tierD, tierF];
 
     const equiposData = [
         { tag: 'STMN', nombre: 'STAMINA' },
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let draggedItem = null;
     let sourceContainer = null;
 
-   
+
     function crearEquipoElemento(equipo) {
         const item = document.createElement('div');
         item.classList.add('list-group-item', 'draggable');
@@ -54,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return item;
     }
 
-  
+
     equiposData.forEach(equipo => {
         const equipoElemento = crearEquipoElemento(equipo);
         equiposContainer.appendChild(equipoElemento);
@@ -94,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nombreCreadorInput = document.getElementById('nombreCreador');
     const confirmarNombreBtn = document.getElementById('confirmarNombre');
     const descargarElemento = document.getElementById('descargar');
-    const nickPlaceholder = 'FORZE'; 
+    const nickPlaceholder = 'FORZE';
 
-    let tierlistCreador = nickPlaceholder; // Inicialmente el nick por defecto
+    let tierlistCreador = nickPlaceholder;
 
     descargarBtn.addEventListener('click', () => {
         nombreModal.show();
@@ -115,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    function generarYDescargarImagen() {
+function generarYDescargarImagen() {
         const bannerTextSpan = descargarElemento.querySelector('.bannerText span:nth-child(2)');
         if (bannerTextSpan) {
             bannerTextSpan.textContent = `TIERLIST POR ${tierlistCreador} | `;
