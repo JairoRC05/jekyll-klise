@@ -1,70 +1,70 @@
 [
-  {
-    "tag": "AD",
-    "team": "AD GAMING",
-    "org": "AD GAMING",
-    "activo": true,
-    "capitan": "TUGFAMON",
-    "region": "LAN",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "/equipos/ad-gaming",
-    "grupo": "NORTE",
-    "partidos": {
-      "M1": 3,
-      "M2": 2,
-      "M3": 2,
-      "M4": "R",
-      "M5": 0,
-      "M6": 2,
-      "M7": 0,
-      "M8": "W",
-      "M9": "W",
-      "M10": "W",
-      "M11": "W",
-      "M12": "W"
-    },
-    "jugadores": [
-      {
-        "nickname": "AÐ・Efesto",
-        "ID": "7QT4YAA",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "AÐ・MerGas",
-        "ID": "C3EG7EF",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "AÐ・Icer",
-        "ID": "Y39HPAF",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "AÐ・DrMarioZ",
-        "ID": "GGA8QFL"
-      },
-      {
-        "nickname": "AÐ・Tugfamon",
-        "ID": "2A0PAYQ",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "RNT・PikaBro",
-        "ID": "668H1XE",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "AÐ・Pikinツ",
-        "ID": "LY3YYX3",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "太ㅤGoomㅤ會",
-        "ID": "NFN0FN",
-        "avatar": "male1"
-      }
-    ]
-  }
+    {
+        "tag": "AD",
+        "team": "AD GAMING",
+        "org": "AD GAMING",
+        "activo": true,
+        "capitan": "TUGFAMON",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ad-gaming",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": 3,
+            "M2": 2,
+            "M3": 2,
+            "M4": 3,
+            "M5": 0,
+            "M6": 0,
+            "M7": 2,
+            "M8": 3,
+            "M9": 3,
+            "M10": "W",
+            "M11": "W",
+            "M12": 3
+        },
+        "jugadores": [
+            {
+                "nickname": "AÐ・Efesto",
+                "ID": "7QT4YAA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・KION",
+                "ID": "C3EG7EF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Icer",
+                "ID": "Y39HPAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・DrMarioZ",
+                "ID": "GGA8QFL"
+            },
+            {
+                "nickname": "AÐ・Criska",
+                "ID": "2A0PAYQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・PikaBro",
+                "ID": "668H1XE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Pikinツ",
+                "ID": "LY3YYX3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "太ㅤGoomㅤ會",
+                "ID": "NFN0FN",
+                "avatar": "male1"
+            }
+        ]
+    }
 ]

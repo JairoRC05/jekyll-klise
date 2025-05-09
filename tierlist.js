@@ -12,21 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const equiposData = [
         { tag: 'STMN', nombre: 'STAMINA' },
-        { tag: 'RNTX', nombre: 'RNT XAPULOVERS' },
         { tag: 'AD', nombre: 'AD GAMING' },
+        { tag: 'SPACE', nombre: 'SPACE VAL' },
         { tag: 'NEK', nombre: 'NEKOMA' },
         { tag: 'PLAGA', nombre: 'HOENN PLAGA' },
-        { tag: 'NEO', nombre: 'RNT NEO STARS' },
-        { tag: 'SPACE', nombre: 'SPACE VAL' },
-        { tag: 'TM', nombre: 'TEAM MANICOMIO' },
+        { tag: 'RNTX', nombre: 'RNT XAPULOVERS' },
+        { tag: 'TAE', nombre: 'TEAM AETHER' },
+        { tag: 'TAD', nombre: 'TAQUITOS CAMPECHANOS' },
         { tag: 'SL', nombre: 'SANTOS LAGUNA' },
         { tag: 'ENIGMA', nombre: 'SPC ENIGMA' },
-        { tag: 'TAE', nombre: 'TEAM AETHER' },
+        { tag: 'DTY', nombre: 'DINASTY' },
         { tag: 'ZC', nombre: 'ZIQS CARMA' },
         { tag: 'PAP', nombre: 'LOS PAPUL0VERS' },
         { tag: 'NS', nombre: 'NO SMITES' },
-        { tag: 'DTY', nombre: 'DINASTY' },
-        { tag: 'JUB', nombre: 'LOS JUBILADOS' }
+        { tag: 'TUT', nombre: 'UNOWN TEAM' },
+        { tag: 'TM', nombre: 'TEAM MANICOMIO' }
     ];
 
     let draggedItem = null;

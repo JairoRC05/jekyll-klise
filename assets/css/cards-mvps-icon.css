@@ -1389,3 +1389,8 @@
   color: white;
   font-weight: bold;
 }
+
+
+#equipos-container { margin-top: 20px; }
+.jugador-item { margin-bottom: 5px; }
+.edit-form { display: none; margin-top: 10px; }
