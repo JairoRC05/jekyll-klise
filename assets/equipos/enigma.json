@@ -1,68 +1,68 @@
 [
     {
-      "tag": "ENIGMA",
-      "team": "SPC ENIGMA",
-      "org": "SPC E-SPORTS",
-      "activo": true,
-      "capitan": "RODMAN",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/spc-e-sports--enigma",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 3,
-        "M2": 3,
-        "M3": 3,
-        "M4": 3,
-        "M5": 3,
-        "M6": 0,
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "SPC・Rodman",
-          "ID": "A6YE7LQ",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m1": "HG"
+        "tag": "ENIGMA",
+        "team": "SPC ENIGMA",
+        "org": "SPC E-SPORTS",
+        "activo": true,
+        "capitan": "RODMAN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/spc-e-sports--enigma",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 3,
+            "M2": 3,
+            "M3": 3,
+            "M4": 3,
+            "M5": 3,
+            "M6": "0",
+            "M7": 3,
+            "M8": "3",
+            "M9": "R",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "SPC・Lolfe教",
-          "ID": "F942677",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m1": 1,
-          "m4": 1
-        },
-        {
-          "nickname": "SPC・Frice",
-          "ID": "HR3X0NP",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "SPC・May",
-          "ID": "X556TRH",
-          "avatar": "female1"
-        },
-        {
-          "nickname": "SPC・Kyoru空",
-          "ID": "2L72Q89",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "SPC・Berny10",
-          "ID": "RH49KXK",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "SPC・Rodman",
+                "ID": "A6YE7LQ",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m1": "HG"
+            },
+            {
+                "nickname": "SPC・Lolfe教",
+                "ID": "F942677",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m1": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "SPC・Frice",
+                "ID": "HR3X0NP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SPC・May",
+                "ID": "X556TRH",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "SPC・Kyoru空",
+                "ID": "2L72Q89",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SPC・Berny10",
+                "ID": "RH49KXK",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

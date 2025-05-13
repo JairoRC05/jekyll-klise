@@ -1,71 +1,71 @@
 [
-  {
-    "tag": "RNTX",
-    "team": "RNT XAPULOVERS",
-    "org": "RANKED TEAM",
-    "activo": true,
-    "capitan": "XAPU",
-    "region": "LAN",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "/equipos/ranked-team--xapulovers",
-    "grupo": "SUR",
-    "partidos": {
-      "M1": 0,
-      "M2": 3,
-      "M3": 1,
-      "M4": "R",
-      "M5": "R",
-      "M6": "R",
-      "M7": 0,
-      "M8": 0,
-      "M9": 0,
-      "M10": 0,
-      "M11": 0,
-      "M12": 0
-    },
-    "jugadores": [
-      {
-        "nickname": "RNT・Xapu",
-        "ID": "QEMX34",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Lewxen愛",
-        "ID": "PNR52M1",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "ElJavizzTTV",
-        "ID": "1H3AL5L",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "RNT・SAE",
-        "ID": "M53P4YX",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Niwatøri",
-        "ID": "6R3EH5G",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Latios才",
-        "ID": "LFNKXF1",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "ÆP·(xEDCI",
-        "ID": "4X89CRA",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "¡caos",
-        "ID": "Q4NRL96",
-        "avatar": "male1"
-      }
-    ]
-  }
+    {
+        "tag": "RNTX",
+        "team": "RNT XAPULOVERS",
+        "org": "RANKED TEAM",
+        "activo": true,
+        "capitan": "XAPU",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ranked-team--xapulovers",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 0,
+            "M2": 3,
+            "M3": 1,
+            "M4": "R",
+            "M5": "0",
+            "M6": "R",
+            "M7": "0",
+            "M8": "0",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": ""
+        },
+        "jugadores": [
+            {
+                "nickname": "RNT・Xapu",
+                "ID": "QEMX34",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Lewxen愛",
+                "ID": "PNR52M1",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ElJavizzTTV",
+                "ID": "1H3AL5L",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・SAE",
+                "ID": "M53P4YX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Niwatøri",
+                "ID": "6R3EH5G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Latios才",
+                "ID": "LFNKXF1",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ÆP·(xEDCI",
+                "ID": "4X89CRA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "¡caos",
+                "ID": "Q4NRL96",
+                "avatar": "male1"
+            }
+        ]
+    }
 ]

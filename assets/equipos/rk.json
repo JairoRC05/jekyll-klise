@@ -1,66 +1,66 @@
 [
     {
-      "tag": "RK",
-      "team": "RAGNAROK YMIR",
-      "org": "CLUB RAGNAROK",
-      "activo": true,
-      "capitan": "JOHAN",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/club-ragnarok--ymir",
-      "grupo": "NORTE",
-      "partidos": {
-        "M1": 2,
-        "M2": 0,
-        "M3": 1,
-        "M4": 0,
-        "M5": 0,
-        "M6": 3,
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-      {
-        "nickname": "ЯK・Sol",
-        "ID": "CLN0GPX",
-        "avatar": "female1"
-      },
-      {
-        "nickname": "ЯK・Belz돈",
-        "ID": "58EAE21",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "нореи'т",
-        "ID": "LNTHXGT",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Jøhanfr38",
-        "ID": "CK7KNQ7",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "ЯK・chaos",
-        "ID": "4CNKGAX",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "ЯK・ㅋKarma",
-        "ID": "KE4PTR9",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "andarna_",
-        "ID": "EQQC61T",
-        "avatar": "male1"
-      }
-    ]
+        "tag": "RK",
+        "team": "RAGNAROK YMIR",
+        "org": "CLUB RAGNAROK",
+        "activo": true,
+        "capitan": "JOHAN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/club-ragnarok--ymir",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": 2,
+            "M2": "0",
+            "M3": 1,
+            "M4": "0",
+            "M5": "0",
+            "M6": 3,
+            "M7": 3,
+            "M8": " ",
+            "M9": " ",
+            "M10": " ",
+            "M11": " ",
+            "M12": " "
+        },
+        "jugadores": [
+            {
+                "nickname": "ЯK・Sol",
+                "ID": "CLN0GPX",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "ЯK・Belz돈",
+                "ID": "58EAE21",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "нореи'т",
+                "ID": "LNTHXGT",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Jøhanfr38",
+                "ID": "CK7KNQ7",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・chaos",
+                "ID": "4CNKGAX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・ㅋKarma",
+                "ID": "KE4PTR9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "andarna_",
+                "ID": "EQQC61T",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

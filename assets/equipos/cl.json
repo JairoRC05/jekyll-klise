@@ -1,66 +1,66 @@
 [
     {
-      "tag": "CL",
-      "team": "CHRONOS LEGION",
-      "org": null,
-      "activo": true,
-      "capitan": "JEDM",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/chronos-legion",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 0,
-        "M2": 0,
-        "M3": 1,
-        "M4": 0,
-        "M5": "R",
-        "M6": 0,
-        "M7": "R",
-       "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "Jedm愛",
-          "ID": "YAK4AAF",
-          "avatar": "male1"
+        "tag": "CL",
+        "team": "CHRONOS LEGION",
+        "org": null,
+        "activo": true,
+        "capitan": "JEDM",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/chronos-legion",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": 1,
+            "M4": "0",
+            "M5": "0",
+            "M6": "R",
+            "M7": "R",
+            "M8": "R",
+            "M9": "R",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "Kyōツ",
-          "ID": "YT7R2HR",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Prof.Serna",
-          "ID": "22F41MF",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Yukƙie",
-          "ID": "63PGCF",
-          "avatar": "female1"
-        },
-        {
-          "nickname": "Lumina心",
-          "ID": "97Y0RG3",
-          "avatar": "female1"
-        },
-        {
-          "nickname": "PøĄ°Doni",
-          "ID": "8GYY47G",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Otger",
-          "ID": "9QRY308",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "Jedm愛",
+                "ID": "YAK4AAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Kyōツ",
+                "ID": "YT7R2HR",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Prof.Serna",
+                "ID": "22F41MF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Yukƙie",
+                "ID": "63PGCF",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "Lumina心",
+                "ID": "97Y0RG3",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "PøĄ°Doni",
+                "ID": "8GYY47G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Otger",
+                "ID": "9QRY308",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

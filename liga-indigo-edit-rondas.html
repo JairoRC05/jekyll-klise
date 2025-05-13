@@ -1,0 +1,221 @@
+---
+layout:
+permalink: /liga-indigo-gestion-rondas.html
+title: RONDAS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="crud-partidos-container mt-5">
+      <h2>Gestionar Partidos</h2>
+
+      <div class="mb-3">
+        <label for="archivo-selector" class="form-label">Seleccionar Archivo de Partidos:</label>
+        <select class="form-select" id="archivo-selector">
+          <option value="pnorte">pnorte.json</option>
+          <option value="psur">psur.json</option>
+          <option value="cruces">cruces.json</option>
+        </select>
+      </div>
+
+      
+<div id="formulario-edicion-partido" class="mt-3" style="display: none;">
+    <div class="row mb-3">
+        <div class="col-lg-10">
+            <div class="admin-card-match">
+                <div class="admin-card-team">
+                    <img src="/assets/logos/default.webp" alt="" id="logo-local-edit">
+                    <input class="form-control" type="text" id="equipo1-edit" placeholder="EQUIPO LOCAL (equipo1)" aria-label="equipo local">
+                </div>
+                <div class="admin-card-status">
+                    <label for="stream-edit" class="form-label">STREAM</label>
+                    <select class="form-select" id="stream-edit">
+                        <option value="true">SI</option>
+                        <option value="false">NO</option>
+                    </select>
+                    <label for="resultado-edit" class="form-label">MARCADOR</label>
+                    <select class="form-select" id="resultado-edit">
+                        <option value="VS">VS</option>
+                        <option value="2-0">2-0</option>
+                        <option value="2-1">2-1</option>
+                        <option value="0-2">0-2</option>
+                        <option value="1-2">1-2</option>
+                        <option value="0-0">0-0</option>
+                        <option value="PEN">PEN</option>
+                        <option value="DES">DES</option>
+                    </select>
+        
+                    <input class="form-control" type="date" id="fecha-edit"/>
+           
+                    <input class="form-control" type="time" id="hora-edit"/>
+                </div>
+                <div class="admin-card-team">
+                    <img src="/assets/logos/default.webp" alt="" id="logo-visitante-edit">
+                    <input class="form-control" type="text" id="equipo2-edit" placeholder="EQUIPO VISITANTE (equipo2)" aria-label="equipo visitante">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-primary btn-sm" id="guardar-edicion-btn">Guardar</button>
+            <button class="btn btn-secondary btn-sm" id="cancelar-edicion-btn">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+
+
+      <div id="gestion-rondas">
+      </div>
+      <button class="btn btn-primary mt-3" id="descargar-json-modificado">Descargar JSON Modificado</button>
+    </div>
+
+
+
+    <button class="btn btn-success mt-2" id="nueva-ronda-btn">Crear Nueva Ronda</button>
+
+    <div id="formulario-nueva-ronda" class="mt-3" style="display: none;">
+      <h4>Nueva Ronda</h4>
+      <div class="mb-3">
+        <label for="nueva-ronda-nombre" class="form-label">Nombre de la Ronda:</label>
+        <input type="text" class="form-control" id="nueva-ronda-nombre">
+      </div>
+      <button class="btn btn-primary btn-sm" id="guardar-nueva-ronda-btn">Guardar Nueva Ronda</button>
+      <button class="btn btn-secondary btn-sm" id="cancelar-nueva-ronda-btn">Cancelar</button>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/gestion-rondas.js"></script>
+
+
+  {% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

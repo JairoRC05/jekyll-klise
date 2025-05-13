@@ -1,61 +1,61 @@
 [
     {
-      "tag": "TM",
-      "team": "TEAM MANICOMIO",
-      "org": null,
-      "activo": true,
-      "capitan": "YASU",
-      "region": "LAN",
-      "teamNombreAnterior": "BROKEN DREAMS",
-      "teamNuevoNombre": "TEAM MANICOMIO",
-      "seguro": false,
-      "link": "/equipos/team-manicomio",
-      "grupo": "NORTE",
-      "partidos": {
-        "M1": 0,
-        "M2": 0,
-        "M3": 1,
-        "M4": 3,
-        "M5": 3,
-        "M6": 0,
-        "M7": 0,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "SoyYasuッ",
-          "ID": "LYP1195",
-          "avatar": "male1"
+        "tag": "TM",
+        "team": "TEAM MANICOMIO",
+        "org": null,
+        "activo": true,
+        "capitan": "YASU",
+        "region": "LAN",
+        "teamNombreAnterior": "BROKEN DREAMS",
+        "teamNuevoNombre": "TEAM MANICOMIO",
+        "seguro": false,
+        "link": "/equipos/team-manicomio",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": 0,
+            "M3": 1,
+            "M4": 3,
+            "M5": 3,
+            "M6": "0",
+            "M7": "0",
+            "M8": " ",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "Arlukii",
-          "ID": "H445QXX",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "danonino",
-          "ID": "7QXNLHK",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "cristoff",
-          "ID": "GM5E987",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Holmes",
-          "ID": "R47MG87",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "zenkichi",
-          "ID": "7YC23GC",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "SoyYasuッ",
+                "ID": "LYP1195",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Arlukii",
+                "ID": "H445QXX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "danonino",
+                "ID": "7QXNLHK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "cristoff",
+                "ID": "GM5E987",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Holmes",
+                "ID": "R47MG87",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "zenkichi",
+                "ID": "7YC23GC",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

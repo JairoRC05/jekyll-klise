@@ -1,69 +1,69 @@
 [
     {
-      "tag": "OBS",
-      "team": "IMPERIO MEXA OBSIDIANA",
-      "org": "XF05 ESPORTS",
-      "activo": true,
-      "capitan": "",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/imperio-mexa/--obsidiana",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 2,
-        "M2": 0,
-        "M3": 0,
-        "M4": "R",
-        "M5": "R",
-        "M6": 2,
-        "M7": 0,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "MeXa・Quique",
-          "ID": "5HHKX53",
-          "avatar": "male1"
+        "tag": "OBS",
+        "team": "IMPERIO MEXA OBSIDIANA",
+        "org": "XF05 ESPORTS",
+        "activo": true,
+        "capitan": "",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/imperio-mexa/--obsidiana",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 2,
+            "M2": "0",
+            "M3": "0",
+            "M4": "R",
+            "M5": "3",
+            "M6": 2,
+            "M7": "0",
+            "M8": "2",
+            "M9": "R",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "MeXa・ Wott",
-          "ID": "8Y586PC",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m4": 1
-        },
-        {
-          "nickname": "MeXa・Kory",
-          "ID": "7K4TY1F",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "MeXa・SoUriS",
-          "ID": "57HAL9Y",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "MeXa・Tony",
-          "ID": "301CYX8",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "MeXa°Atenea",
-          "ID": "CKCHQ1L",
-          "avatar": "female1"
-        },
-        {
-          "nickname": "MeXa • Salie",
-          "ID": "AX09NA2",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "MeXa・Quique",
+                "ID": "5HHKX53",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・ Wott",
+                "ID": "8Y586PC",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "MeXa・Kory",
+                "ID": "7K4TY1F",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・SoUriS",
+                "ID": "57HAL9Y",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・Tony",
+                "ID": "301CYX8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa°Atenea",
+                "ID": "CKCHQ1L",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "MeXa • Salie",
+                "ID": "AX09NA2",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

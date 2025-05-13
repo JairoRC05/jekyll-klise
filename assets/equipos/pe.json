@@ -1,65 +1,65 @@
 [
     {
-      "tag": "PE",
-      "team": "PRESTACIONES DE LEY HG",
-      "org": "HOUSE OF GHOST",
-      "activo": true,
-      "capitan": "JIMBOO",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/house-of-ghost--prestaciones-de-ley",
-      "grupo": "NORTE",
-      "partidos": {
-        "M1": 0,
-        "M2": 3,
-        "M3": 3,
-        "M4": 0,
-        "M5": 0,
-        "M6": 0,
-        "M7": 0,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "PL・么quario",
-          "ID": "8XTYF12",
-          "avatar": "male1"
+        "tag": "PE",
+        "team": "PRESTACIONES DE LEY HG",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "JIMBOO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--prestaciones-de-ley",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": 3,
+            "M3": 3,
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "3",
+            "M9": "1",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "JDA • 从ortem",
-          "ID": "FQTLQT6",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 3,
-          "m2": 2,
-          "m3": 1
-        },
-        {
-          "nickname": "¶ZinX¶",
-          "ID": "56T8G09",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Vamp_Lut.TTv",
-          "ID": "8XTYF12",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ElyLover愛",
-          "ID": "H6X00LK",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "JDA・Benny",
-          "ID": "HXNG3M",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "PL・么quario",
+                "ID": "8XTYF12",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "JDA • 从ortem",
+                "ID": "FQTLQT6",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1
+            },
+            {
+                "nickname": "¶ZinX¶",
+                "ID": "56T8G09",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Vamp_Lut.TTv",
+                "ID": "8XTYF12",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ElyLover愛",
+                "ID": "H6X00LK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "JDA・Benny",
+                "ID": "HXNG3M",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

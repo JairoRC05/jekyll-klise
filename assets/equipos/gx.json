@@ -1,61 +1,61 @@
 [
     {
-      "tag": "GX",
-      "team": "RNT GALÁCTICOS",
-      "org": "RANKED TEAM",
-      "activo": true,
-      "capitan": "DR. FIX",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/ranked-team--galacticos",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 3,
-        "M2": 3,
-        "M3": 0,
-        "M4": 3,
-        "M5": 0,
-        "M6": 0,
-        "M7": 0,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "RNT・DrFix銀",
-          "ID": "EFE5E97",
-          "avatar": "male1"
+        "tag": "GX",
+        "team": "RNT GALÁCTICOS",
+        "org": "RANKED TEAM",
+        "activo": true,
+        "capitan": "DR. FIX",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ranked-team--galacticos",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 3,
+            "M2": 3,
+            "M3": "0",
+            "M4": 3,
+            "M5": "3",
+            "M6": "0",
+            "M7": "0",
+            "M8": "3",
+            "M9": " ",
+            "M10": "",
+            "M11": "",
+            "M12": "3"
         },
-        {
-          "nickname": "RNT・Zulo銀",
-          "ID": "7759CK5",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "RNT・ČryptoX",
-          "ID": "A2AG7X1",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "RNT・Shoyo銀",
-          "ID": "2CFC54X",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "RNT・Pikito",
-          "ID": "2NKE093",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Valdez.",
-          "ID": "ENX6670",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "RNT・DrFix銀",
+                "ID": "EFE5E97",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Zulo銀",
+                "ID": "7759CK5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・ČryptoX",
+                "ID": "A2AG7X1",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Shoyo銀",
+                "ID": "2CFC54X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Pikito",
+                "ID": "2NKE093",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Valdez.",
+                "ID": "ENX6670",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

@@ -1,71 +1,71 @@
 [
-  {
-    "tag": "SM",
-    "team": "HG SALARIO MINIMO",
-    "org": "HOUSE OF GHOST",
-    "activo": true,
-    "capitan": "PERRON",
-    "region": "LAN",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "/equipos/house-of-ghost--salario-minimo",
-    "grupo": "NORTE",
-    "partidos": {
-      "M1": 3,
-      "M2": 1,
-      "M3": 2,
-      "M4": 0,
-      "M5": 0,
-      "M6": "R",
-      "M7": 0,
-      "M8": " ",
-      "M9": " ",
-      "M10": " ",
-      "M11": " ",
-      "M12": " "
-    },
-    "jugadores": [
-      {
-        "nickname": "$M • Perron",
-        "ID": "74HHH8H",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "$M・Finn",
-        "ID": "GF9L4M8",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "$M・Krosty",
-        "ID": "KE5NP22",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "$M・Stimpy",
-        "ID": "HEQCNTP",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "$M・Alndingo",
-        "ID": "GCLK510",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "$M*SaBroso",
-        "ID": "87YFMQA",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "・Winters・",
-        "ID": "KT2ARX2",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "DFs・Forti",
-        "ID": "FKH2R49",
-        "avatar": "male1"
-      }
-    ]
-  }
+    {
+        "tag": "SM",
+        "team": "HG SALARIO MINIMO",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "PERRON",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--salario-minimo",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": 3,
+            "M2": 1,
+            "M3": 2,
+            "M4": "1",
+            "M5": "0",
+            "M6": "3",
+            "M7": "0",
+            "M8": "1",
+            "M9": " ",
+            "M10": "3",
+            "M11": "",
+            "M12": ""
+        },
+        "jugadores": [
+            {
+                "nickname": "$M • Perron",
+                "ID": "74HHH8H",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Finn",
+                "ID": "GF9L4M8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Krosty",
+                "ID": "KE5NP22",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Stimpy",
+                "ID": "HEQCNTP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Alndingo",
+                "ID": "GCLK510",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M*SaBroso",
+                "ID": "87YFMQA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "・Winters・",
+                "ID": "KT2ARX2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Forti",
+                "ID": "FKH2R49",
+                "avatar": "male1"
+            }
+        ]
+    }
 ]

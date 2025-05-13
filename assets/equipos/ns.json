@@ -1,75 +1,75 @@
 [
     {
-      "tag": "NS",
-      "team": "NO SMITES",
-      "org": null,
-      "activo": true,
-      "capitan": "TOKITO",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/no-smites",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 3,
-        "M2": 3,
-        "M3": 3,
-        "M4": 3,
-        "M5": 3,
-        "M6": 3,
-        "M7": "R",
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "IAMTOKITO",
-          "ID": "820R14M",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 2,
-          "m4": 2
+        "tag": "NS",
+        "team": "NO SMITES",
+        "org": null,
+        "activo": true,
+        "capitan": "TOKITO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/no-smites",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 3,
+            "M2": 3,
+            "M3": 3,
+            "M4": 3,
+            "M5": 3,
+            "M6": 3,
+            "M7": "R",
+            "M8": "3",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": "3"
         },
-        {
-          "nickname": "Hades地獄",
-          "ID": "C5C89CK",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 2,
-          "m3": 2
-        },
-        {
-          "nickname": "MysticRLWolf",
-          "ID": "3XG9P67",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Nishi-Chan",
-          "ID": "6MH6P69",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Rhzeta",
-          "ID": "MT42FC1",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 2,
-          "m1": 1
-        },
-        {
-          "nickname": "Bellvii",
-          "ID": "18Q9TAH",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Uzuimonroll^",
-          "ID": "MRA5GPT",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "IAMTOKITO",
+                "ID": "820R14M",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m4": 2
+            },
+            {
+                "nickname": "Hades地獄",
+                "ID": "C5C89CK",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m3": 2
+            },
+            {
+                "nickname": "MysticRLWolf",
+                "ID": "3XG9P67",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Nishi-Chan",
+                "ID": "6MH6P69",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Rhzeta",
+                "ID": "MT42FC1",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m1": 1
+            },
+            {
+                "nickname": "Bellvii",
+                "ID": "18Q9TAH",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Uzuimonroll^",
+                "ID": "MRA5GPT",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

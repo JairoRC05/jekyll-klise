@@ -1,66 +1,66 @@
 [
     {
-      "tag": "AOGIRI",
-      "team": "AOGIRI",
-      "org": null,
-      "activo": true,
-      "capitan": "JACO",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/aogiri",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 1,
-        "M2": 0,
-        "M3": 2,
-        "M4": "R",
-        "M5": 0,
-        "M6": 3,
-        "M7": 3,
-       "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "ʚJacoɞ",
-          "ID": "NHTN88E",
-          "avatar": "female1"
+        "tag": "AOGIRI",
+        "team": "AOGIRI",
+        "org": null,
+        "activo": true,
+        "capitan": "JACO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/aogiri",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 1,
+            "M2": "0",
+            "M3": 2,
+            "M4": "R",
+            "M5": "0",
+            "M6": 3,
+            "M7": 3,
+            "M8": " ",
+            "M9": " ",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "KĘNsąsąki",
-          "ID": "T87QRC8",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ŠaṭʊяиọĞr",
-          "ID": "R10QTME",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Hammerfall9",
-          "ID": "R3L165C",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ア・Ękkō",
-          "ID": "63MMNM",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Ɗʝ・ƓaʀyOak",
-          "ID": "YN5YCY2",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "NekiusTTV",
-          "ID": "RM72RE0",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "ʚJacoɞ",
+                "ID": "NHTN88E",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "KĘNsąsąki",
+                "ID": "T87QRC8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ŠaṭʊяиọĞr",
+                "ID": "R10QTME",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Hammerfall9",
+                "ID": "R3L165C",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ア・Ękkō",
+                "ID": "63MMNM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Ɗʝ・ƓaʀyOak",
+                "ID": "YN5YCY2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "NekiusTTV",
+                "ID": "RM72RE0",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

@@ -1,56 +1,56 @@
 [
     {
-      "tag": "STMN",
-      "team": "STAMINA E-SPORTS",
-      "org": "STAMINA E-SPORTS",
-      "activo": true,
-      "capitan": "RANMA",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/stamina-e-sports",
-      "grupo": "NORTE",
-      "partidos": {
-        "M1": 3,
-        "M2": 3,
-        "M3": 3,
-        "M4": 3,
-        "M5": 3,
-        "M6": 3,
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "STMN・Ranma",
-          "ID": "A38905X",
-          "avatar": "male1"
+        "tag": "STMN",
+        "team": "STAMINA E-SPORTS",
+        "org": "STAMINA E-SPORTS",
+        "activo": true,
+        "capitan": "RANMA",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/stamina-e-sports",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": 3,
+            "M2": 3,
+            "M3": 3,
+            "M4": 3,
+            "M5": 3,
+            "M6": 3,
+            "M7": 3,
+            "M8": "3",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": "3"
         },
-        {
-          "nickname": "STMN・Regi",
-          "ID": "E9ENLYE",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "STMN・Holmes",
-          "ID": "L1G1GF2",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "STMN・Pachy",
-          "ID": "Q3HCM3A",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "STMN • Frank",
-          "ID": "6990CYH",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "STMN・Ranma",
+                "ID": "A38905X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Regi",
+                "ID": "E9ENLYE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Holmes",
+                "ID": "L1G1GF2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Pachy",
+                "ID": "Q3HCM3A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN • Frank",
+                "ID": "6990CYH",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

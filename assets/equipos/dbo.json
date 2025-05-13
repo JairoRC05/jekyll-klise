@@ -1,63 +1,63 @@
 [
     {
-      "tag": "DBO",
-      "team": "DINAMITA BUENA ONDA",
-      "org": null,
-      "activo": true,
-      "capitan": "NEW",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/dinamita-buena-onda",
-      "grupo": "NORTE",
-      "partidos": {
-        "M1": 3,
-        "M2": 0,
-        "M3": 1,
-        "M4": 0,
-        "M5": 3,
-        "M6": "R",
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "ttvNewt_ez",
-          "ID": "XAMMFEP",
-          "avatar": "male1"
+        "tag": "DBO",
+        "team": "DINAMITA BUENA ONDA",
+        "org": null,
+        "activo": true,
+        "capitan": "NEW",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/dinamita-buena-onda",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": 3,
+            "M2": "0",
+            "M3": 1,
+            "M4": "0",
+            "M5": 3,
+            "M6": "R",
+            "M7": 3,
+            "M8": "0",
+            "M9": "0",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "Jønasシ",
-          "ID": "R5FX423",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 3,
-          "m2": 2,
-          "m3": 1
-        },
-        {
-          "nickname": "・Yata・",
-          "ID": "7X4C0CK",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "ttvStarbae01",
-          "ID": "NA9QXAT",
-          "avatar": "male1",
-          "mvp": true,
-          "numero": 1,
-          "m4": 1
-        },
-        {
-          "nickname": "Muertin木火",
-          "ID": "5TR8K9T",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "ttvNewt_ez",
+                "ID": "XAMMFEP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Jønasシ",
+                "ID": "R5FX423",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1
+            },
+            {
+                "nickname": "・Yata・",
+                "ID": "7X4C0CK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ttvStarbae01",
+                "ID": "NA9QXAT",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "Muertin木火",
+                "ID": "5TR8K9T",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]

@@ -1,61 +1,61 @@
 [
-  {
-    "tag": "TUT",
-    "team": "THE UNOWN TEAM",
-    "org": "THE UNOWN TEAM",
-    "activo": true,
-    "capitan": "BREN",
-    "region": "LAN",
-    "teamNombreAnterior": "2X1500",
-    "teamNuevoNombre": "THE UNOWN TEAM",
-    "seguro": false,
-    "link": "/equipos/theunownteam",
-    "grupo": "SUR",
-    "partidos": {
-      "M1": "R",
-      "M2": 0,
-      "M3": 0,
-      "M4":  "R",
-      "M5": 3,
-      "M6": 1,
-      "M7": 3,
-      "M8": " ",
-      "M9": " ",
-      "M10": " ",
-      "M11": " ",
-      "M12": " "
-    },
-   "jugadores": [
-      {
-        "nickname": "TuT • Bren",
-        "ID": "2XX1PF0",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "炊・Ashura",
-        "ID": "140PENG",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "BeniManitas?",
-        "ID": "229QRAM",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "TuT • 7Ibu",
-        "ID": "21QE8M2",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Akane秋",
-        "ID": "FYF3MC8",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "TuT狩DownURL",
-        "ID": "XH4P03E",
-        "avatar": "male1"
-      }
-    ]
-  }
+    {
+        "tag": "TUT",
+        "team": "THE UNOWN TEAM",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "BREN",
+        "region": "LAN",
+        "teamNombreAnterior": "2X1500",
+        "teamNuevoNombre": "THE UNOWN TEAM",
+        "seguro": false,
+        "link": "/equipos/theunownteam",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "R",
+            "M2": "0",
+            "M3": "0",
+            "M4": "2",
+            "M5": 3,
+            "M6": 1,
+            "M7": 3,
+            "M8": "R",
+            "M9": " ",
+            "M10": "",
+            "M11": "",
+            "M12": "1"
+        },
+        "jugadores": [
+            {
+                "nickname": "TuT • Bren",
+                "ID": "2XX1PF0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "炊・Ashura",
+                "ID": "140PENG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "BeniManitas?",
+                "ID": "229QRAM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT • 7Ibu",
+                "ID": "21QE8M2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Akane秋",
+                "ID": "FYF3MC8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT狩DownURL",
+                "ID": "XH4P03E",
+                "avatar": "male1"
+            }
+        ]
+    }
 ]

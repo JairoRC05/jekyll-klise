@@ -1,628 +1,614 @@
 [
+  {
+  "rondas": [
     {
-      "rondas": [
+      "ronda": "RONDA 1",
+      "fecha": "23-25 ABR",
+      "hora": "19:00",
+      "partidos": [
         {
-          "ronda": "RONDA 1",
-          "fecha": "23-25 ABR",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "DINASTY",
-              "tag2": "DTY",
-              "resultado": "2-1",
-              "stream": true,
-              "hora": null,
-              "dia": "25 ABRIL"
-            },
-            {
-              "equipo1": "STAMINA E-SPORTS",
-              "tag1": "STMN",
-              "equipo2": "RNT NEO STARS",
-              "tag2": "NEO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": "SI",
-              "dia": "24 ABRIL"
-            },
-            {
-              "equipo1": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "2-1"
-            },
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "0-2"
-            }
-          ]
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "DINASTY",
+          "tag2": "DTY",
+          "resultado": "2-1",
+          "stream": true,
+          "hora": null,
+          "dia": "25 ABRIL"
         },
         {
-          "ronda": "RONDA 2",
-          "fecha": "28 ABR",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "PLAGA VILLANOS",
-              "tag2": "PLAGA",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "RNT NEO STARS",
-              "tag2": "NEO",
-              "resultado": "1-2"
-            },
-            {
-              "equipo1": "STAMINA E-SPORTS",
-              "tag1": "STMN",
-              "equipo2": "RAGNAROK YMIR",
-              "tag2": "RK",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": null,
-              "dia": "28 ABRIL"
-            },
-            {
-              "equipo1": "PRESTACIONES DE LEY HG",
-              "tag1": "PE",
-              "equipo2": "DINAMITA BUENA ONDA",
-              "tag2": "DBO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "IMPERIO MEXA ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "1-2"
-            }
-          ]
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "RNT NEO STARS",
+          "tag2": "NEO",
+          "resultado": "2-0"
         },
         {
-          "ronda": "RONDA 3",
-          "fecha": "29 ABR",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "RNT NEO STARS",
-              "tag2": "NEO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "TEAM MANICOMIO",
-              "tag2": "TM",
-              "resultado": "2-1"
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "RAGNAROK YMIR",
-              "tag2": "RK",
-              "resultado": "2-1"
-            },
-            {
-              "equipo1": "IMPERIO MEXA ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "PRESTACIONES DE LEY HG",
-              "tag1": "PE",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "1-2",
-              "stream": true,
-              "hora": null,
-              "dia": "29 ABRIL"
-            }
-          ]
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": "SI",
+          "dia": "24 ABRIL"
         },
         {
-          "ronda": "RONDA 4",
-          "fecha": "30 ABR",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "PLAGA VILLANOS",
-              "tag2": "PLAGA",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": null,
-              "dia": "30 ABRIL"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag2": "NEO",
-              "equipo2": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "DINAMITA BUENA ONDA",
-              "tag2": "DBO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "PRESTACIONES DE LEY HG",
-              "tag1": "PE",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "OVERHEAT",
-              "tag1": "OVG",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "PEN"
-            }
-          ]
+          "equipo1": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "2-1"
         },
         {
-          "ronda": "RONDA 5",
-          "fecha": " 1 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "RAGNAROK YMIR",
-              "tag2": "RK",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": null,
-              "dia": "01 MAYO"
-            },
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "HG SALARIO MINIMO",
-              "tag2": "SM",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "PRESTACIONES DE LEY HG",
-              "tag1": "PE",
-              "equipo2": "DINASTY",
-              "tag2": "DTY",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "OVERHEAT",
-              "tag1": "OVG",
-              "equipo2": "TEAM MANICOMIO",
-              "tag2": "TM",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "STAMINA E-SPORTS",
-              "tag1": "STMN",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "2-0"
-            }
-          ]
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "2-0"
         },
         {
-          "ronda": "RONDA 6",
-          "fecha": "2 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "PLAGA VILLANOS",
-              "tag2": "PLAGA",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "IMPERIO MEXA ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "RAGNAROK YMIR",
-              "tag2": "RK",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": null
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "2-0"
-            }
-          ]
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "0-2"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 2",
+      "fecha": "28 ABR",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "0-2"
         },
         {
-          "ronda": "RONDA 7",
-          "fecha": "5 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "2-0"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "0-2"
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "TEAM MANICOMIO",
-              "tag2": "TM",
-              "resultado": "2-0",
-              "stream": true,
-              "hora": null
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "1-2"
-            }
-          ]
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "RNT NEO STARS",
+          "tag2": "NEO",
+          "resultado": "1-2"
         },
         {
-          "ronda": "RONDA 8",
-          "fecha": "7 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "OVERHEAT",
-              "tag1": "OVG",
-              "equipo2": "PLAGA VILLANOS",
-              "tag2": "PLAGA",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "IMPERIO MEXA ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "DINAMITA BUENA ONDA",
-              "tag1": "DBO",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "DINASTY",
-              "tag2": "DTY",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "TEAM MANICOMIO",
-              "tag2": "TM",
-              "resultado": "VS",
-              "stream": true,
-              "hora": null
-            },
-            {
-              "equipo1": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "VS"
-            }
-          ]
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "RAGNAROK YMIR",
+          "tag2": "RK",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": null,
+          "dia": "28 ABRIL"
         },
         {
-          "ronda": "RONDA 9",
-          "fecha": "8 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "OVERHEAT",
-              "tag1": "OVG",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "VS",
-              "stream": true,
-              "hora": null
-            },
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "DINAMITA BUENA ONDA",
-              "tag2": "DBO",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "RAGNAROK YMIR",
-              "tag2": "RK",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "HG SALARIO MINIMO",
-              "tag2": "SM",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "IMPERIO MEXA ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "VS"
-            }
-          ]
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PE",
+          "equipo2": "DINAMITA BUENA ONDA",
+          "tag2": "DBO",
+          "resultado": "2-0"
         },
         {
-          "ronda": "RONDA 10",
-          "fecha": "9-12 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "PRESTACIONES DE LEY HG",
-              "tag1": "PE",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "VS",
-              "stream": true,
-              "hora": "SI",
-              "fecha": "12 MAYO"
-            },
-            {
-              "equipo1": "STAMINA E-SPORTS",
-              "tag1": "STMN",
-              "equipo2": "PLAGA VILLANOS",
-              "tag2": "PLAGA",
-              "resultado": "VS",
-              "stream": true,
-              "hora": null,
-              "fecha": "12 MAYO"
-            },
-            {
-              "equipo1": "OVERHEAT",
-              "tag1": "OVG",
-              "equipo2": "DINASTY",
-              "tag2": "DTY",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "DINAMITA BUENA ONDA",
-              "tag2": "DBO",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "equipo2": "HG SALARIO MINIMO",
-              "tag2": "SM",
-              "resultado": "VS"
-            }
-          ]
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "0-2"
         },
         {
-          "ronda": "RONDA 11",
-          "fecha": "13 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "DINASTY",
-              "tag1": "DTY",
-              "equipo2": "STAMINA E-SPORTS",
-              "tag2": "STMN",
-              "resultado": "VS",
-              "stream": true,
-              "hora": null
-            },
-            {
-              "equipo1": "TEAM MANICOMIO",
-              "tag1": "TM",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "OVERHEAT",
-              "tag2": "OVG",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "IMPERIO MEXA ZAFIRO",
-              "tag2": "ZAFIRO",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RAGNAROK YMIR",
-              "tag1": "RK",
-              "equipo2": "DINAMITA BUENA ONDA",
-              "tag2": "DBO",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "PLAGA VILLANOS",
-              "tag1": "PLAGA",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "VS"
-            }
-          ]
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "1-2"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 3",
+      "fecha": "29 ABR",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "RNT NEO STARS",
+          "tag2": "NEO",
+          "resultado": "2-0"
         },
         {
-          "ronda": "RONDA HOOPA",
-          "fecha": "13 MAY",
-          "hora": "19:00",
-          "partidos": [
-            {
-              "equipo1": "IM AMATISTA",
-              "tag1": "AMT",
-              "equipo2": "AD GAMING",
-              "tag2": "AD",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "IM ZAFIRO",
-              "tag1": "ZAFIRO",
-              "equipo2": "NO SMITES",
-              "tag2": "NS",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "CHRONOS LEGION",
-              "tag1": "CL",
-              "equipo2": "PRESTACIONES DE LEY HG",
-              "tag2": "PE",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "HG SALARIO MINIMO",
-              "tag1": "SM",
-              "equipo2": "AOGIRI",
-              "tag2": "AOGIRI",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT GALÁCTICOS",
-              "tag1": "GX",
-              "equipo2": "TEAM MANICOMIO",
-              "tag2": "TM",
-              "resultado": "VS"
-            },
-            {
-              "equipo1": "RNT NEO STARS",
-              "tag1": "NEO",
-              "equipo2": "SPACE VAL",
-              "tag2": "SPACE",
-              "resultado": "VS"
-            }
-          ]
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "TEAM MANICOMIO",
+          "tag2": "TM",
+          "resultado": "2-1"
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "RAGNAROK YMIR",
+          "tag2": "RK",
+          "resultado": "2-1"
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PE",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "1-2",
+          "stream": true,
+          "hora": null,
+          "dia": "29 ABRIL"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 4",
+      "fecha": "30 ABR",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": null,
+          "dia": "30 ABRIL"
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag2": "NEO",
+          "equipo2": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "DINAMITA BUENA ONDA",
+          "tag2": "DBO",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PE",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "OVERHEAT",
+          "tag1": "OVG",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 5",
+      "fecha": " 1 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "RAGNAROK YMIR",
+          "tag2": "RK",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": null,
+          "dia": "01 MAYO"
+        },
+        {
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "HG SALARIO MINIMO",
+          "tag2": "SM",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PE",
+          "equipo2": "DINASTY",
+          "tag2": "DTY",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "OVERHEAT",
+          "tag1": "OVG",
+          "equipo2": "TEAM MANICOMIO",
+          "tag2": "TM",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "2-0"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 6",
+      "fecha": "2 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "RAGNAROK YMIR",
+          "tag2": "RK",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": null
+        },
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "2-0"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 7",
+      "fecha": "5 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "2-0"
+        },
+        {
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2"
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "TEAM MANICOMIO",
+          "tag2": "TM",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": null
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "1-2"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 8",
+      "fecha": "7 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "OVERHEAT",
+          "tag1": "OVG",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "DINAMITA BUENA ONDA",
+          "tag1": "DBO",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "DINASTY",
+          "tag2": "DTY",
+          "resultado": "1-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "TEAM MANICOMIO",
+          "tag2": "TM",
+          "resultado": "2-0",
+          "stream": true,
+          "hora": "",
+          "fecha": ""
+        },
+        {
+          "equipo1": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 9",
+      "fecha": "8 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "2-1",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "OVERHEAT",
+          "tag1": "OVG",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "0-2",
+          "stream": true,
+          "hora": "",
+          "fecha": ""
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "DINAMITA BUENA ONDA",
+          "tag2": "DBO",
+          "resultado": "2-0",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "RAGNAROK YMIR",
+          "tag2": "RK",
+          "resultado": "2-0",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "HG SALARIO MINIMO",
+          "tag2": "SM",
+          "resultado": "2-0",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "0-2",
+          "stream": false,
+          "fecha": "",
+          "hora": ""
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 10",
+      "fecha": "9-12 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PE",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "SI",
+          "fecha": "12 MAYO"
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": null,
+          "fecha": "12 MAYO"
+        },
+        {
+          "equipo1": "OVERHEAT",
+          "tag1": "OVG",
+          "equipo2": "DINASTY",
+          "tag2": "DTY",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "DINAMITA BUENA ONDA",
+          "tag2": "DBO",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "equipo2": "HG SALARIO MINIMO",
+          "tag2": "SM",
+          "resultado": "VS"
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 11",
+      "fecha": "13 MAY",
+      "hora": "19:00",
+      "partidos": [
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DTY",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": true,
+          "hora": null
+        },
+        {
+          "equipo1": "TEAM MANICOMIO",
+          "tag1": "TM",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PE",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "RNT NEO STARS",
+          "tag1": "NEO",
+          "equipo2": "OVERHEAT",
+          "tag2": "OVG",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "HG SALARIO MINIMO",
+          "tag1": "SM",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "RAGNAROK YMIR",
+          "tag1": "RK",
+          "equipo2": "DINAMITA BUENA ONDA",
+          "tag2": "DBO",
+          "resultado": "VS"
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS"
         }
       ]
     }
   ]
+}
+]

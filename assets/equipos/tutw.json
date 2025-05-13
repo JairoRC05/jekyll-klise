@@ -1,71 +1,71 @@
 [
     {
-      "tag": "TUTW",
-      "team": "TUT WARRIORS",
-      "org": "THE UNOWN TEAM",
-      "activo": true,
-      "capitan": "GERD",
-      "region": "LAN",
-      "teamNombreAnterior": "LA ONE COIN",
-      "teamNuevoNombre": "TUT WARRIORS",
-      "seguro": false,
-      "link": "/equipos/theunownteam--warriors",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 0,
-        "M2": 3,
-        "M3": 2,
-        "M4": 3,
-        "M5": 0,
-        "M6": 3,
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-     "jugadores": [
-      {
-        "nickname": "ZzzRay!",
-        "ID": "XYXN83R",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "~ Rygar ~",
-        "ID": "PF6688A",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "• Raziel",
-        "ID": "KP3MGGK",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Raydemort",
-        "ID": "H8Y27LQ",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "GerardAC",
-        "ID": "A9390CX",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "WK・Metal",
-        "ID": "MR027NE",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "• Solstice",
-        "ID": "FHREPPG",
-        "avatar": "male1"
-      },
-      {
-        "nickname": "Sorcière.",
-        "ID": "LQ4G524",
-        "avatar": "female1"
-      }
-    ]
+        "tag": "TUTW",
+        "team": "TUT WARRIORS",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "GERD",
+        "region": "LAN",
+        "teamNombreAnterior": "LA ONE COIN",
+        "teamNuevoNombre": "TUT WARRIORS",
+        "seguro": false,
+        "link": "/equipos/theunownteam--warriors",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": 3,
+            "M3": 2,
+            "M4": 3,
+            "M5": "1",
+            "M6": 3,
+            "M7": 3,
+            "M8": "R",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": " "
+        },
+        "jugadores": [
+            {
+                "nickname": "ZzzRay!",
+                "ID": "XYXN83R",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "~ Rygar ~",
+                "ID": "PF6688A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "• Raziel",
+                "ID": "KP3MGGK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Raydemort",
+                "ID": "H8Y27LQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "GerardAC",
+                "ID": "A9390CX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "WK・Metal",
+                "ID": "MR027NE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "• Solstice",
+                "ID": "FHREPPG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Sorcière.",
+                "ID": "LQ4G524",
+                "avatar": "female1"
+            }
+        ]
     }
-  ]
+]

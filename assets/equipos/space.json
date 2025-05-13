@@ -1,66 +1,66 @@
 [
     {
-      "tag": "SPACE",
-      "team": "SPACE VAL",
-      "org": "SPACE RACOONS",
-      "activo": true,
-      "capitan": "DaniVal",
-      "region": "LAN",
-      "teamNombreAnterior": "",
-      "teamNuevoNombre": "",
-      "seguro": true,
-      "link": "/equipos/space-racoons--space-val",
-      "grupo": "SUR",
-      "partidos": {
-        "M1": 3,
-        "M2": 3,
-        "M3": 3,
-        "M4": 0,
-        "M5": "R",
-        "M6": 3,
-        "M7": 3,
-      "M8": " ",
-        "M9": " ",
-        "M10": " ",
-        "M11": " ",
-        "M12": " "
-      },
-      "jugadores": [
-        {
-          "nickname": "宙V・DaniVal",
-          "ID": "CT23992",
-          "avatar": "female1"
+        "tag": "SPACE",
+        "team": "SPACE VAL",
+        "org": "SPACE RACOONS",
+        "activo": true,
+        "capitan": "DaniVal",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/space-racoons--space-val",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": 3,
+            "M2": 3,
+            "M3": 3,
+            "M4": "0",
+            "M5": "R",
+            "M6": 3,
+            "M7": 3,
+            "M8": " ",
+            "M9": "3",
+            "M10": "",
+            "M11": "",
+            "M12": ""
         },
-        {
-          "nickname": "宙VTonyVal",
-          "ID": "RMEPEEA",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "COMEMANGO",
-          "ID": "F6KNR2G",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "Golditto.TTV",
-          "ID": "E7ERYF9",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "TronciaNara",
-          "ID": "9RP17PY",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "宙V・Hungry",
-          "ID": "F3TEE13",
-          "avatar": "male1"
-        },
-        {
-          "nickname": "宙V・CLazo",
-          "ID": "A6RASMX",
-          "avatar": "male1"
-        }
-      ]
+        "jugadores": [
+            {
+                "nickname": "宙V・DaniVal",
+                "ID": "CT23992",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "宙VTonyVal",
+                "ID": "RMEPEEA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "COMEMANGO",
+                "ID": "F6KNR2G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Golditto.TTV",
+                "ID": "E7ERYF9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TronciaNara",
+                "ID": "9RP17PY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "宙V・Hungry",
+                "ID": "F3TEE13",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "宙V・CLazo",
+                "ID": "A6RASMX",
+                "avatar": "male1"
+            }
+        ]
     }
-  ]
+]
