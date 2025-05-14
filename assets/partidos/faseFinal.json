@@ -1,0 +1,133 @@
+[
+  {
+    "rondas": [
+      {
+        "ronda": "4TOS DE FINAL",
+        "fecha_inicio": "2025-05-06",
+        "fecha_fin": "2025-05-06",
+        "hora": "19:00",
+        "partidos": [
+          {
+            "equipo1": "IM AMATISTA",
+            "tag1": "AMT",
+            "equipo2": "AD GAMING",
+            "tag2": "AD",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 1",
+             "active": false,
+            "p1": "#1 ORION",
+            "p2": "#4 HYDRA"
+          },
+          {
+            "equipo1": "IM ZAFIRO",
+            "tag1": "ZAFIRO",
+            "equipo2": "NO SMITES",
+            "tag2": "NS",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 2",
+            "active": false,
+            "p1": "#2 HYDRA",
+            "p2": "#3 ORION"
+          },
+          {
+            "equipo1": "CHRONOS LEGION",
+            "tag1": "CL",
+            "equipo2": "PRESTACIONES DE LEY HG",
+            "tag2": "PE",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 3",
+            "active": false,
+            "p1": "#1 HYDRA",
+            "p2": "#4 ORION"
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "AOGIRI",
+            "tag2": "AOGIRI",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 4",
+              "active": false,
+                "p1": "#2 ORION",
+            "p2": "#3 HYDRA"
+        
+          }
+        ]
+      },
+      {
+        "ronda": "SEMIFNAL",
+        "fecha_inicio": "2025-05-06",
+        "fecha_fin": "2025-05-06",
+        "hora": "19:00",
+        "partidos": [
+          {
+            "equipo1": "IM AMATISTA",
+            "tag1": "AMT",
+            "equipo2": "AD GAMING",
+            "tag2": "AD",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 5"
+          },
+          {
+            "equipo1": "IM ZAFIRO",
+            "tag1": "ZAFIRO",
+            "equipo2": "NO SMITES",
+            "tag2": "NS",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 6"
+          }
+        ]
+      },
+      {
+        "ronda": "FINAL",
+        "fecha_inicio": "2025-05-06",
+        "fecha_fin": "2025-05-06",
+        "hora": "19:00",
+        "partidos": [
+          {
+            "equipo1": "IM AMATISTA",
+            "tag1": "AMT",
+            "equipo2": "AD GAMING",
+            "tag2": "AD",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": "",
+            "llave": "LLAVE 7"
+          }
+        ]
+      },
+      {
+        "ronda": "CAMPEON",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "LIGA-INDIGO-ALT",
+            "tag1": "LIGA-INDIGO-ALT",
+            "llave": "CAMPEON"
+          }
+        ]
+      }
+    ]
+  }
+]

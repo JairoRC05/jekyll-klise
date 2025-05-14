@@ -10,20 +10,21 @@
         "teamNuevoNombre": "",
         "seguro": true,
         "link": "/imperio-mexa/--obsidiana",
+           "posicionDesempate": true,
         "grupo": "SUR",
         "partidos": {
-            "M1": 2,
+            "M1": "2",
             "M2": "0",
             "M3": "0",
-            "M4": "R",
+            "M4": "2",
             "M5": "3",
-            "M6": 2,
+            "M6": "2",
             "M7": "0",
             "M8": "2",
             "M9": "R",
-            "M10": "",
-            "M11": "",
-            "M12": ""
+            "M10": "0",
+            "M11": "0",
+            "M12": "3"
         },
         "jugadores": [
             {

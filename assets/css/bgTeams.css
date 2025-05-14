@@ -896,6 +896,17 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
 
 }
 
+
+.exo-style-black {
+    color: #000000;
+    background-image: linear-gradient(180deg, #000000 48%, #414141 60%, #000000 84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 900 !important;
+}
+
 .bg-league-in{
   background: #0d48ec !important;
 }

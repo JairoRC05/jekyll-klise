@@ -37,3 +37,12 @@
   
   }
   
+
+
+  .section-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin: 100px 0 15px 0;
+  }

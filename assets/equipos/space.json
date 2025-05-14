@@ -11,19 +11,20 @@
         "seguro": true,
         "link": "/equipos/space-racoons--space-val",
         "grupo": "SUR",
+        "posicionDesempate": true,
         "partidos": {
-            "M1": 3,
-            "M2": 3,
-            "M3": 3,
+            "M1": "3",
+            "M2": "3",
+            "M3": "3",
             "M4": "0",
             "M5": "R",
-            "M6": 3,
-            "M7": 3,
-            "M8": " ",
+            "M6": "3",
+            "M7": "3",
+            "M8": "0",
             "M9": "3",
-            "M10": "",
-            "M11": "",
-            "M12": ""
+            "M10": "3",
+            "M11": "3",
+            "M12": "0"
         },
         "jugadores": [
             {

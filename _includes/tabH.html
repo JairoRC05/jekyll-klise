@@ -94,3 +94,67 @@
 
  
   </div>
+
+   <!-- <h1 class="exo-style">${rondaHoopa.ronda}</h1>
+        <span class="exo">${rondaHoopa.fecha}</span> -->
+
+
+          let html = `
+      <div class="container mt-2">
+  
+            <div class="d-flex justify-content-between align-items-center bg-cham bracket-round-list" style="padding: 0 20px">
+              <h1 class="exo-style">${rondaHoopa.ronda}</h1>
+        <span class="exo">${rondaHoopa.fecha}</span>
+            </div>
+       
+        
+        <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-3">
+            ${rondaHoopa.partidos.slice(0, Math.ceil(rondaHoopa.partidos.length / 2)).map(partido => `
+              <div class="col-12">
+                ${generarPartidoHTML(partido)}
+              </div>
+            `).join('')}
+          </div>
+
+       
+
+          <div class="col-12 col-md-6 col-lg-3">
+            ${rondaHoopa.partidos.slice(Math.ceil(rondaHoopa.partidos.length / 2)).map(partido => `
+              <div class="col-12">
+                ${generarPartidoHTML(partido)}
+              </div>
+            `).join('')}
+          </div>
+
+
+               <div class="col-12 col-md-6 col-lg-6">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="position: relative">
+              <div
+                class="bg-cham"
+                style="
+                  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                  z-index: -1000;
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <img
+                class="img-fluid"
+                src="/assets/skins/PORTAL.webp"
+                alt=""
+                style="width: 550px"
+              />
+              <img src="/assets/gifts/shine.gif" alt=""
+                style="position: absolute; width: 150px;
+                height: 150px">
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    `;
