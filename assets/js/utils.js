@@ -115,21 +115,15 @@ function generarContenidoRonda(rondaData) {
     let html = `
     <div class="container mt-2">
       <div class="row">
-        <div class="col-8 d-none d-md-block">
-          <div
-            class="d-flex justify-content-center align-items-center"
-            style="position: relative"
-          >
-            <div
-              class="bg-cham"
-              style="
-                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        <div class="col-8 col-md-6 col-lg-8 d-none d-lg-block">
+          <div class="d-flex justify-content-center align-items-center"
+            style="position: relative">
+            <div class="bg-cham" style="clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
                 z-index: -1000;
                 position: absolute;
                 width: 400px;
-                height: 100%;
-              "
-            ></div>
+                height: 100%;">
+            </div>
             <img
               class="animate__animated animate__pulse animate__slow 2s animate__infinite infinite"
               src="/assets/rounds/ROUND${rondaData.ronda.split(' ')[1] || 'H'}.webp"
@@ -145,7 +139,7 @@ function generarContenidoRonda(rondaData) {
             absolute; width: 150px; height: 150px"">
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-12 col-lg-4 p-0 ">
           <div class="d-none d-md-block">
             <div class="d-flex justify-content-center align-items-center bg-cham bracket-round-list" style="border-radius: 10px;">
               <h1 class="exo-style">${fechaMostrar}</h1>
@@ -153,7 +147,7 @@ function generarContenidoRonda(rondaData) {
           </div>
           <div class="row team--round mt-2">
             ${rondaData.partidos.map(partido => `
-              <div class="col-12 col-md-6 col-lg-6 col-xl-12">
+              <div class="col-12 col-md-6 col-lg-12">
                 ${generarPartidoHTML(partido)}
               </div>
             `).join('')}

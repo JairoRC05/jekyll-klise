@@ -384,3 +384,175 @@
   
   }
   
+
+
+
+
+
+
+       
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .form-check-label {
+            margin-left: 10px;
+        }
+        .btn-primary {
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px; /*Añadido margin superior*/
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .table-responsive {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .table {
+            width: 100%;
+            margin-bottom: 0;
+            background-color: transparent;
+            border-collapse: collapse;
+        }
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            padding: 12px;
+            font-weight: 600;
+            color: #343a40;
+            background-color: #f8f9fa;
+        }
+        .table tbody tr {
+            border-bottom: 1px solid #dee2e6;
+        }
+        .table tbody td {
+            padding: 12px;
+            vertical-align: middle;
+        }
+        .table tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.07);
+        }
+        .form-check-input {
+            cursor: pointer;
+        }
+
+        #mvpTable {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #mvpTable thead th {
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        #mvpTable tbody tr {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        #mvpTable tbody td {
+            padding: 12px;
+        }
+        #mvpTable tbody tr:nth-child(odd) {
+            background-color: rgba(0,0,0,.05);
+        }
+
+        #mvpTable tbody tr:hover {
+            background-color: rgba(0,0,0,.075);
+        }
+
+        #mvpTable .equipo-local {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        #mvpTable .equipo-visitante {
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .alert {
+            margin-top: 20px;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        @media (max-width: 768px) {
+            .table-responsive {
+                border: none;
+            }
+            .table {
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+            }
+            .table thead {
+                display: none;
+            }
+            .table tbody tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .table tbody td {
+                display: block;
+                text-align: left;
+                padding: 5px;
+                border-bottom: none;
+            }
+            .table tbody td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: inline-block;
+                width: 120px;
+                margin-right: 5px;
+                color: #343a40;
+            }
+            .table tbody tr:last-child {
+                border-bottom: none;
+            }
+            .btn-primary {
+                margin-top: 10px;
+            }
+        }

@@ -443,9 +443,10 @@
         display: block;
         position: absolute;
         right: 2%;
-        color: #0000001a;
+        color: #d6d6d67c;
         z-index: -1;
 
+    
 
         p{
             margin: 0;

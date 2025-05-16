@@ -8,62 +8,66 @@
         "hora": "19:00",
         "partidos": [
           {
-            "equipo1": "IM AMATISTA",
-            "tag1": "AMT",
-            "equipo2": "AD GAMING",
-            "tag2": "AD",
-            "resultado": "0-2",
+            "equipo1": "PLAGA VILLANOS",
+            "tag1": "PLAGA",
+            "equipo2": "TUT WARRIORS",
+            "tag2": "TUTW",
+            "resultado": "2-1",
             "stream": false,
-            "fecha": "",
-            "hora": "",
+            "fecha": "2025/05/15",
+            "hora": "21:40",
             "llave": "LLAVE 1",
-             "active": false,
+            "active": true,
             "p1": "#1 ORION",
-            "p2": "#4 HYDRA"
+            "p2": "#4 HYDRA",
+            "posiciones": "1O-4H"
           },
           {
-            "equipo1": "IM ZAFIRO",
-            "tag1": "ZAFIRO",
-            "equipo2": "NO SMITES",
-            "tag2": "NS",
-            "resultado": "0-2",
+            "equipo1": "SPC ENIGMA",
+            "tag1": "ENIGMA",
+            "equipo2": "DINASTY",
+            "tag2": "DTY",
+            "resultado": "2-0",
             "stream": false,
-            "fecha": "",
-            "hora": "",
+             "fecha": "2025/05/15",
+            "hora": "AT LLAVE 1",
             "llave": "LLAVE 2",
-            "active": false,
+            "active": true,
             "p1": "#2 HYDRA",
-            "p2": "#3 ORION"
+            "p2": "#3 ORION",
+               "posiciones": "2H-3O"
           },
-          {
-            "equipo1": "CHRONOS LEGION",
-            "tag1": "CL",
-            "equipo2": "PRESTACIONES DE LEY HG",
-            "tag2": "PE",
-            "resultado": "0-2",
+           {
+            "equipo1": "NO SMITES",
+            "tag1": "NS",
+            "equipo2": "RNT NEO STARS",
+            "tag2": "NEO",
+            "resultado": "VS",
             "stream": false,
-            "fecha": "",
-            "hora": "",
+            "fecha": "2025/05/16",
+            "hora": "21:40",
             "llave": "LLAVE 3",
-            "active": false,
-            "p1": "#1 HYDRA",
-            "p2": "#4 ORION"
+            "active": true,
+            "p1": "#2 ORION",
+            "p2": "#3 HYDRA",
+            "posiciones": "1H-4O"
           },
           {
-            "equipo1": "HG SALARIO MINIMO",
-            "tag1": "SM",
-            "equipo2": "AOGIRI",
-            "tag2": "AOGIRI",
-            "resultado": "0-2",
+            "equipo1": "STAMINA ES",
+            "tag1": "STMN",
+            "equipo2": "SPACE VAL",
+            "tag2": "SPACE",
+            "resultado": "VS",
             "stream": false,
-            "fecha": "",
-            "hora": "",
+            "fecha": "2025/05/15",
+            "hora": "AT LLAVE 3",
             "llave": "LLAVE 4",
-              "active": false,
-                "p1": "#2 ORION",
-            "p2": "#3 HYDRA"
-        
+            "active": true,
+            "p1": "#1 HYDRA",
+            "p2": "#4 ORION",
+            "posiciones": "2O-3H"
           }
+         
         ]
       },
       {
@@ -73,15 +77,18 @@
         "hora": "19:00",
         "partidos": [
           {
-            "equipo1": "IM AMATISTA",
-            "tag1": "AMT",
-            "equipo2": "AD GAMING",
-            "tag2": "AD",
-            "resultado": "0-2",
+            "equipo1": "PLAGA VILLANOS",
+            "tag1": "PLAGA",
+            "equipo2": "SPC ENIGMA",
+            "tag2": "ENIGMA",
+            "resultado": "VS",
             "stream": false,
-            "fecha": "",
-            "hora": "",
-            "llave": "LLAVE 5"
+            "fecha": "2025/05/19",
+            "hora": "21:00",
+            "llave": "LLAVE 5",
+            "active": true,
+            "p1": "LLAVE 1",
+            "p2": "LLAVE 2"
           },
           {
             "equipo1": "IM ZAFIRO",
@@ -90,9 +97,11 @@
             "tag2": "NS",
             "resultado": "0-2",
             "stream": false,
-            "fecha": "",
-            "hora": "",
-            "llave": "LLAVE 6"
+             "fecha": "2025/05/19",
+            "hora": "AT LLAVE 5",
+            "llave": "LLAVE 6",
+            "p1": "LLAVE 3",
+            "p2": "LLAVE 4"
           }
         ]
       },
@@ -109,8 +118,8 @@
             "tag2": "AD",
             "resultado": "0-2",
             "stream": false,
-            "fecha": "",
-            "hora": "",
+           "fecha": "2025/05/19",
+            "hora": "AT LLAVE 6",
             "llave": "LLAVE 7"
           }
         ]

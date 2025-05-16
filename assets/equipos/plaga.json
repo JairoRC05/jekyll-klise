@@ -11,14 +11,14 @@
         "seguro": true,
         "link": "/equipos/plaga",
         "grupo": "NORTE",
-          "posicionDesempate": true,
+        "posicionDesempate": true,
         "partidos": {
             "M1": "2",
             "M2": "3",
             "M3": "3",
             "M4": "3",
             "M5": "3",
-            "M6": "R",
+            "M6": "3",
             "M7": "3",
             "M8": "3",
             "M9": "2",
@@ -28,7 +28,7 @@
         },
         "jugadores": [
             {
-                "nickname": "Texaspurguis",
+                "nickname": "TexasLuna[:",
                 "ID": "A0829K4",
                 "avatar": "male1"
             },

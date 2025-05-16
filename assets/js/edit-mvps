@@ -1,0 +1,550 @@
+const partidosContainer = document.getElementById('partidos-container');
+const descargarMvpsBtn = document.getElementById('descargar-mvps');
+const mensajeDescarga = document.getElementById('mensaje-descarga');
+const mensajeError = document.getElementById('mensaje-error');
+const mvpTable = document.getElementById('mvpTable').getElementsByTagName('tbody')[0];
+const filtroRonda = document.createElement('select');
+filtroRonda.className = 'form-select mb-3';
+const defaultOption = document.createElement('option');
+defaultOption.value = '';
+defaultOption.textContent = 'Seleccionar Ronda';
+filtroRonda.appendChild(defaultOption);
+const paginacionContainer = document.createElement('div'); // Contenedor para los botones de paginación
+paginacionContainer.className = 'mt-3 d-flex justify-content-center';
+
+let partidosData = [];
+let equiposPorTag = {};
+const mvpsSeleccionados = {};
+let paginaActual = 1;
+const partidosPorPagina = 2;
+let totalPaginas = 0;
+
+
+async function cargarEquipos() {
+    // ... (tu código para cargar equipos)
+    const equiposPromises = [
+        'assets/equipos/ad.json',
+        'assets/equipos/amt.json',
+        'assets/equipos/aogiri.json',
+        'assets/equipos/cl.json',
+        'assets/equipos/dbo.json',
+        'assets/equipos/dty.json',
+        'assets/equipos/enigma.json',
+        'assets/equipos/gx.json',
+        'assets/equipos/neo.json',
+        'assets/equipos/ns.json',
+        'assets/equipos/obs.json',
+        'assets/equipos/ovg.json',
+        'assets/equipos/pe.json',
+        'assets/equipos/plaga.json',
+        'assets/equipos/rk.json',
+        'assets/equipos/rntx.json',
+        'assets/equipos/sm.json',
+        'assets/equipos/space.json',
+        'assets/equipos/stmn.json',
+        'assets/equipos/tad.json',
+        'assets/equipos/tm.json',
+        'assets/equipos/tut.json',
+        'assets/equipos/tutw.json',
+        'assets/equipos/zafiro.json'
+    ].map(async (file) => {
+        const response = await fetch(file);
+        if (!response.ok) {
+            throw new Error(`Error al cargar ${file}: ${response.status}`);
+        }
+        return await response.json();
+    });
+
+    const equiposData = await Promise.all(equiposPromises);
+    equiposData.forEach(equipo => {
+        if (equipo && equipo.length > 0) {
+            equiposPorTag[equipo[0].tag] = equipo[0];
+        }
+    });
+}
+
+async function cargarPartidos() {
+    const partidosPromises = ['assets/partidos/pnorte.json', 'assets/partidos/psur.json', 'assets/partidos/cruces.json'].map(async (file) => {
+        const response = await fetch(file);
+        if (!response.ok) {
+            throw new Error(`Error al cargar ${file}: ${response.status}`);
+        }
+        return await response.json();
+    });
+    const partidosArrays = await Promise.all(partidosPromises);
+
+    let partidos = [];
+    partidosArrays.forEach(partidoArray => {
+        if (partidoArray && partidoArray.length > 0 && partidoArray[0].rondas) {
+            partidos = partidos.concat(partidoArray);
+        }
+    });
+
+    partidosData = partidos.map(archivo => {
+        return archivo.rondas.map(ronda => ({
+            ronda: ronda.ronda,
+            partidos: ronda.partidos.map(partido => ({
+                equipoLocal: equiposPorTag[partido.tag1] ? equiposPorTag[partido.tag1].team : partido.tag1,
+                tagLocal: partido.tag1,
+                jugadoresLocal: equiposPorTag[partido.tag1] ? equiposPorTag[partido.tag1].jugadores.map(jugador => ({ nombre: jugador.nickname, id: jugador.ID, avatar: jugador.avatar, mvp: 0 })) : [],
+                equipoVisitante: equiposPorTag[partido.tag2] ? equiposPorTag[partido.tag2].team : partido.tag2,
+                tagVisitante: partido.tag2,
+                jugadoresVisitante: equiposPorTag[partido.tag2] ? equiposPorTag[partido.tag2].jugadores.map(jugador => ({ nombre: jugador.nickname, id: jugador.ID, avatar: jugador.avatar, mvp: 0 })) : [],
+                resultado: partido.resultado,
+                stream: partido.stream,
+                hora: partido.hora,
+                dia: partido.dia,
+                ronda: ronda.ronda,
+                idUnico: `${partido.tagLocal}-${partido.tagVisitante}-${ronda.ronda.replace(/\s+/g, '')}`
+            }))
+        })).flat();
+    }).flat();
+
+    const rondasUnicas = [...new Set(partidosData.map(item => item.ronda))];
+    rondasUnicas.forEach(ronda => {
+        const option = document.createElement('option');
+        option.value = ronda;
+        option.textContent = ronda;
+        filtroRonda.appendChild(option);
+    });
+
+    partidosContainer.parentNode.insertBefore(filtroRonda, partidosContainer);
+    partidosContainer.parentNode.insertBefore(paginacionContainer, partidosContainer.nextSibling);
+
+    if (rondasUnicas.length > 0) {
+        const primeraRonda = rondasUnicas[0];
+        filtroRonda.value = primeraRonda;
+        mostrarPartidosPorRonda(primeraRonda);
+    } else {
+        mostrarPartidosPorRonda('');
+    }
+}
+
+function mostrarPartidosPorRonda(rondaSeleccionada) {
+    const partidosFiltradosPorRonda = rondaSeleccionada
+        ? partidosData.filter(rondaData => rondaData.ronda === rondaSeleccionada).flatMap(rondaData => rondaData.partidos)
+        : partidosData.flatMap(rondaData => rondaData.partidos);
+
+    paginaActual = 1;
+    totalPaginas = Math.ceil(partidosFiltradosPorRonda.length / partidosPorPagina);
+    mostrarPagina(partidosFiltradosPorRonda, paginaActual);
+    generarBotonesPaginacion(totalPaginas);
+}
+
+function mostrarPagina(partidos, pagina) {
+    partidosContainer.innerHTML = '';
+    const indiceInicio = (pagina - 1) * partidosPorPagina;
+    const indiceFin = indiceInicio + partidosPorPagina;
+    const partidosDeLaPagina = partidos.slice(indiceInicio, indiceFin);
+
+    if (partidosDeLaPagina.length === 0) {
+        partidosContainer.innerHTML = '<p>No hay partidos en esta página.</p>';
+        return;
+    }
+
+    const partidosRow = document.createElement('div');
+    partidosRow.className = 'row';
+    partidosDeLaPagina.forEach(partido => {
+        const partidoCol = document.createElement('div');
+        partidoCol.className = 'col-md-6 mb-3';
+        const partidoDiv = document.createElement('div');
+        partidoDiv.className = 'partido-container p-3 bg-light rounded h-100 d-flex flex-column';
+        partidoDiv.dataset.partidoId = partido.idUnico;
+
+        const equiposDiv = document.createElement('div');
+        equiposDiv.className = 'd-flex justify-content-center align-items-center mb-2';
+        const resultadoTexto = partido.resultado ? ` ${partido.resultado} ` : ' vs ';
+        equiposDiv.innerHTML = `<h5 class="equipo-local text-primary text-center">${partido.equipoLocal}</h5>${resultadoTexto}<h5 class="equipo-visitante text-danger text-center">${partido.equipoVisitante}</h5>`;
+
+        const jugadoresRow = document.createElement('div'); // Contenedor para las dos columnas de jugadores
+        jugadoresRow.className = 'row';
+
+        const jugadoresLocalCol = document.createElement('div');
+        jugadoresLocalCol.className = 'col-6';
+        jugadoresLocalCol.innerHTML = `<h6 class="text-primary text-center">MVPs de ${partido.equipoLocal}:</h6>`;
+        partido.jugadoresLocal.forEach(jugador => {
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group input-group-sm mb-1';
+            const label = document.createElement('label');
+            label.className = 'input-group-text small';
+            label.textContent = jugador.nombre.split('・').pop();
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.className = 'form-control form-control-sm mvp-input';
+            input.id = `local-${partido.tagLocal}-${jugador.id}`;
+            input.min = '0';
+            input.value = '0';
+            input.dataset.equipo = partido.tagLocal;
+            input.dataset.jugadorId = jugador.id;
+            inputGroup.appendChild(label);
+            inputGroup.appendChild(input);
+            jugadoresLocalCol.appendChild(inputGroup); // Agregar directamente a la columna
+        });
+        jugadoresRow.appendChild(jugadoresLocalCol);
+
+        const jugadoresVisitanteCol = document.createElement('div');
+        jugadoresVisitanteCol.className = 'col-6';
+        jugadoresVisitanteCol.innerHTML = `<h6 class="text-danger text-center">MVPs de ${partido.equipoVisitante}:</h6>`;
+        partido.jugadoresVisitante.forEach(jugador => {
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group input-group-sm mb-1';
+            const label = document.createElement('label');
+            label.className = 'input-group-text small';
+            label.textContent = jugador.nombre.split('・').pop();
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.className = 'form-control form-control-sm mvp-input';
+            input.id = `visitante-${partido.tagVisitante}-${jugador.id}`;
+            input.min = '0';
+            input.value = '0';
+            input.dataset.equipo = partido.tagVisitante;
+            input.dataset.jugadorId = jugador.id;
+            inputGroup.appendChild(label);
+            inputGroup.appendChild(input);
+            jugadoresVisitanteCol.appendChild(inputGroup); // Agregar directamente a la columna
+        });
+        jugadoresRow.appendChild(jugadoresVisitanteCol);
+
+        const guardarBtn = document.createElement('button');
+        guardarBtn.textContent = 'Guardar MVPs';
+        guardarBtn.className = 'btn btn-sm btn-success mt-auto w-100';
+        guardarBtn.addEventListener('click', () => guardarMvpsPartido(partido));
+
+        partidoDiv.appendChild(equiposDiv);
+        partidoDiv.appendChild(jugadoresRow); // Append la fila que contiene las dos columnas de jugadores
+        partidoDiv.appendChild(guardarBtn);
+        partidoCol.appendChild(partidoDiv);
+        partidosRow.appendChild(partidoCol);
+    });
+    partidosContainer.appendChild(partidosRow);
+}
+function generarBotonesPaginacion(totalPaginas) {
+    paginacionContainer.innerHTML = '';
+    if (totalPaginas > 1) {
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Anterior';
+        prevButton.className = 'btn btn-sm btn-outline-primary me-2';
+        prevButton.addEventListener('click', () => {
+            if (paginaActual > 1) {
+                paginaActual--;
+                const rondaSeleccionada = filtroRonda.value;
+                const partidosFiltradosPorRonda = rondaSeleccionada
+                    ? partidosData.filter(rondaData => rondaData.ronda === rondaSeleccionada).flatMap(rondaData => rondaData.partidos)
+                    : partidosData.flatMap(rondaData => rondaData.partidos);
+                mostrarPagina(partidosFiltradosPorRonda, paginaActual);
+            }
+        });
+        paginacionContainer.appendChild(prevButton);
+
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Siguiente';
+        nextButton.className = 'btn btn-sm btn-outline-primary';
+        nextButton.addEventListener('click', () => {
+            if (paginaActual < totalPaginas) {
+                paginaActual++;
+                const rondaSeleccionada = filtroRonda.value;
+                const partidosFiltradosPorRonda = rondaSeleccionada
+                    ? partidosData.filter(rondaData => rondaData.ronda === rondaSeleccionada).flatMap(rondaData => rondaData.partidos)
+                    : partidosData.flatMap(rondaData => rondaData.partidos);
+                mostrarPagina(partidosFiltradosPorRonda, paginaActual);
+            }
+        });
+        paginacionContainer.appendChild(nextButton);
+    }
+}
+
+
+function mostrarPagina(partidos, pagina) {
+    partidosContainer.innerHTML = '';
+    const indiceInicio = (pagina - 1) * partidosPorPagina;
+    const indiceFin = indiceInicio + partidosPorPagina;
+    const partidosDeLaPagina = partidos.slice(indiceInicio, indiceFin);
+
+    if (partidosDeLaPagina.length === 0) {
+        partidosContainer.innerHTML = '<p>No hay partidos en esta página.</p>';
+        return;
+    }
+
+    const partidosRow = document.createElement('div');
+    partidosRow.className = 'row';
+    partidosDeLaPagina.forEach(partido => {
+        const partidoCol = document.createElement('div');
+        partidoCol.className = 'col-md-6 mb-3';
+        const partidoDiv = document.createElement('div');
+        partidoDiv.className = 'partido-container p-3 bg-light rounded h-100 d-flex flex-column';
+        partidoDiv.dataset.partidoId = partido.idUnico;
+
+        const equiposDiv = document.createElement('div');
+        equiposDiv.className = 'd-flex justify-content-center align-items-center mb-2';
+        const resultadoTexto = partido.resultado ? ` ${partido.resultado} ` : ' vs ';
+        equiposDiv.innerHTML = `<h5 class="equipo-local text-primary text-center">${partido.equipoLocal}</h5>${resultadoTexto}<h5 class="equipo-visitante text-danger text-center">${partido.equipoVisitante}</h5>`;
+
+        const jugadoresLocalDiv = document.createElement('div');
+        jugadoresLocalDiv.className = 'jugadores-local mb-3';
+        jugadoresLocalDiv.innerHTML = `<h6 class="text-primary text-center">MVPs de ${partido.equipoLocal}:</h6><div class="row row-cols-md-2"></div>`;
+        partido.jugadoresLocal.forEach(jugador => {
+            const inputGroupCol = document.createElement('div');
+            inputGroupCol.className = 'col mb-1';
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group input-group-sm';
+            const label = document.createElement('label');
+            label.className = 'input-group-text small';
+            label.textContent = jugador.nombre.split('・').pop();
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.className = 'form-control form-control-sm mvp-input';
+            input.id = `local-${partido.tagLocal}-${jugador.id}`;
+            input.min = '0';
+            input.value = '0';
+            input.dataset.equipo = partido.tagLocal;
+            input.dataset.jugadorId = jugador.id;
+            inputGroup.appendChild(label);
+            inputGroup.appendChild(input);
+            inputGroupCol.appendChild(inputGroup);
+            jugadoresLocalDiv.querySelector('.row').appendChild(inputGroupCol);
+        });
+
+        const jugadoresVisitanteDiv = document.createElement('div');
+        jugadoresVisitanteDiv.className = 'jugadores-visitante mb-3';
+        jugadoresVisitanteDiv.innerHTML = `<h6 class="text-danger text-center">MVPs de ${partido.equipoVisitante}:</h6><div class="row row-cols-md-2"></div>`;
+        partido.jugadoresVisitante.forEach(jugador => {
+            const inputGroupCol = document.createElement('div');
+            inputGroupCol.className = 'col mb-1';
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group input-group-sm';
+            const label = document.createElement('label');
+            label.className = 'input-group-text small';
+            label.textContent = jugador.nombre.split('・').pop();
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.className = 'form-control form-control-sm mvp-input';
+            input.id = `visitante-${partido.tagVisitante}-${jugador.id}`;
+            input.min = '0';
+            input.value = '0';
+            input.dataset.equipo = partido.tagVisitante;
+            input.dataset.jugadorId = jugador.id;
+            inputGroup.appendChild(label);
+            inputGroup.appendChild(input);
+            inputGroupCol.appendChild(inputGroup);
+            jugadoresVisitanteDiv.querySelector('.row').appendChild(inputGroupCol);
+        });
+
+        const guardarBtn = document.createElement('button');
+        guardarBtn.textContent = 'Guardar MVPs';
+        guardarBtn.className = 'btn btn-sm btn-success mt-auto w-100';
+        guardarBtn.addEventListener('click', () => guardarMvpsPartido(partido));
+
+        partidoDiv.appendChild(equiposDiv);
+        partidoDiv.appendChild(jugadoresLocalDiv);
+        partidoDiv.appendChild(jugadoresVisitanteDiv);
+        partidoDiv.appendChild(guardarBtn);
+        partidoCol.appendChild(partidoDiv);
+        partidosRow.appendChild(partidoCol);
+    });
+    partidosContainer.appendChild(partidosRow);
+}
+
+function guardarMvpsPartido(partido) {
+    const partidoId = partido.idUnico;
+
+    // Verificar si ya existe una entrada para este partido, si no, crear una nueva
+    if (!mvpsSeleccionados[partidoId]) {
+        mvpsSeleccionados[partidoId] = {
+            equipoLocal: partido.tagLocal,
+            equipoVisitante: partido.tagVisitante,
+            mvpsLocal: [],
+            mvpsVisitante: []
+        };
+    } else {
+        // Si ya existe, podrías optar por limpiar los MVPs anteriores antes de guardar los nuevos
+        mvpsSeleccionados[partidoId].mvpsLocal = [];
+        mvpsSeleccionados[partidoId].mvpsVisitante = [];
+    }
+
+    partido.jugadoresLocal.forEach(jugador => {
+        const input = document.getElementById(`local-${partido.tagLocal}-${jugador.id}`);
+        const numMvps = parseInt(input.value);
+        if (numMvps > 0) {
+            for (let i = 0; i < numMvps; i++) {
+                mvpsSeleccionados[partidoId].mvpsLocal.push({
+                    nombre: jugador.nombre,
+                    equipo: partido.tagLocal,
+                    genero: jugador.avatar,
+                    id: jugador.id
+                });
+            }
+        }
+    });
+
+    partido.jugadoresVisitante.forEach(jugador => {
+        const input = document.getElementById(`visitante-${partido.tagVisitante}-${jugador.id}`);
+        const numMvps = parseInt(input.value);
+        if (numMvps > 0) {
+            for (let i = 0; i < numMvps; i++) {
+                mvpsSeleccionados[partidoId].mvpsVisitante.push({
+                    nombre: jugador.nombre,
+                    equipo: partido.tagVisitante,
+                    genero: jugador.avatar,
+                    id: jugador.id
+                });
+            }
+        }
+    });
+
+    console.log('mvpsSeleccionados después de guardar:', mvpsSeleccionados); // Para verificar
+    actualizarTablaResumen();
+    // alert(`MVPs guardados para el partido ${partido.equipoLocal} vs ${partido.equipoVisitante}`);
+}
+
+
+function generarJsonMvps() {
+    const encuentrosMvp = [];
+    for (const partidoId in mvpsSeleccionados) {
+        if (mvpsSeleccionados.hasOwnProperty(partidoId)) {
+            const encuentroSeleccionado = mvpsSeleccionados[partidoId];
+            encuentrosMvp.push({
+                equipoLocal: encuentroSeleccionado.equipoLocal,
+                equipoVisitante: encuentroSeleccionado.equipoVisitante,
+                mvpsLocal: encuentroSeleccionado.mvpsLocal.map(mvp => ({
+                    nombre: mvp.nombre,
+                    equipo: mvp.equipo,
+                    genero: mvp.genero
+                })),
+                mvpsVisitante: encuentroSeleccionado.mvpsVisitante.map(mvp => ({
+                    nombre: mvp.nombre,
+                    equipo: mvp.equipo,
+                    genero: mvp.genero
+                }))
+            });
+        }
+    }
+    return { encuentros: encuentrosMvp };
+}
+function actualizarTablaResumen() {
+    mvpTable.innerHTML = ''; // Limpiar la tabla al inicio de la actualización
+
+    for (const partidoId in mvpsSeleccionados) {
+        if (mvpsSeleccionados.hasOwnProperty(partidoId)) {
+            const encuentro = mvpsSeleccionados[partidoId];
+            let fila = mvpTable.insertRow();
+            let celdaEncuentro = fila.insertCell();
+            let celdaEquipoLocal = fila.insertCell();
+            let celdaMvpsLocal = fila.insertCell();
+            let celdaEquipoVisitante = fila.insertCell();
+            let celdaMvpsVisitante = fila.insertCell();
+            let celdaAcciones = fila.insertCell(); // Nueva celda para los botones de acción
+
+            celdaEncuentro.textContent = `${encuentro.equipoLocal} vs ${encuentro.equipoVisitante}`;
+            celdaEquipoLocal.textContent = encuentro.equipoLocal;
+            celdaEquipoLocal.classList.add('equipo-local');
+            celdaEquipoVisitante.textContent = encuentro.equipoVisitante;
+            celdaEquipoVisitante.classList.add('equipo-visitante');
+
+            if (encuentro.mvpsLocal.length > 0) {
+                celdaMvpsLocal.innerHTML = encuentro.mvpsLocal.map(mvp => `<p>${mvp.nombre} (${mvp.equipo})</p>`).join('');
+            } else {
+                celdaMvpsLocal.textContent = 'No hay MVPs seleccionados';
+            }
+
+            if (encuentro.mvpsVisitante.length > 0) {
+                celdaMvpsVisitante.innerHTML = encuentro.mvpsVisitante.map(mvp => `<p>${mvp.nombre} (${mvp.equipo})</p>`).join('');
+            } else {
+                celdaMvpsVisitante.textContent = 'No hay MVPs seleccionados';
+            }
+
+            // Crear botón de Editar
+            const editarBtn = document.createElement('button');
+            editarBtn.textContent = 'Editar';
+            editarBtn.className = 'btn btn-sm btn-warning me-1';
+            editarBtn.addEventListener('click', () => cargarMvpsParaEdicion(partidoId));
+            celdaAcciones.appendChild(editarBtn);
+
+            // Crear botón de Eliminar
+            const eliminarBtn = document.createElement('button');
+            eliminarBtn.textContent = 'Eliminar';
+            eliminarBtn.className = 'btn btn-sm btn-danger';
+            eliminarBtn.addEventListener('click', () => eliminarRegistroMvp(partidoId, fila));
+            celdaAcciones.appendChild(eliminarBtn);
+        }
+    }
+}
+
+function cargarMvpsParaEdicion(partidoId) {
+    const encuentroMvp = mvpsSeleccionados[partidoId];
+    if (!encuentroMvp) {
+        return;
+    }
+
+    // Deseleccionar la ronda actual para que se muestren todos los partidos
+    filtroRonda.value = '';
+    mostrarPartidosPorRonda(''); // Mostrar todos los partidos
+
+    // Esperar un breve momento para que se recarguen todos los partidos
+    setTimeout(() => {
+        const partidoDiv = document.querySelector(`.partido-container[data-partido-id="${partidoId}"]`);
+        if (partidoDiv) {
+            // Limpiar los inputs de MVP locales
+            const inputsLocal = partidoDiv.querySelectorAll(`.jugadores-local input[data-equipo="${encuentroMvp.equipoLocal}"]`);
+            inputsLocal.forEach(input => input.value = 0);
+
+            // Llenar los inputs de MVP locales con los valores guardados
+            encuentroMvp.mvpsLocal.forEach(mvp => {
+                const input = Array.from(inputsLocal).find(input => input.dataset.jugadorId === mvp.id);
+                if (input) {
+                    input.value = parseInt(input.value || 0) + 1;
+                }
+            });
+
+            // Limpiar los inputs de MVP visitantes
+            const inputsVisitante = partidoDiv.querySelectorAll(`.jugadores-visitante input[data-equipo="${encuentroMvp.equipoVisitante}"]`);
+            inputsVisitante.forEach(input => input.value = 0);
+
+            // Llenar los inputs de MVP visitantes con los valores guardados
+            encuentroMvp.mvpsVisitante.forEach(mvp => {
+                const input = Array.from(inputsVisitante).find(input => input.dataset.jugadorId === mvp.id);
+                if (input) {
+                    input.value = parseInt(input.value || 0) + 1;
+                }
+            });
+
+            // Hacer scroll hasta la tarjeta del partido (opcional)
+            partidoDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, 500); // Esperar medio segundo para que se recarguen los partidos
+}
+
+function eliminarRegistroMvp(partidoId, fila) {
+    if (confirm(`¿Seguro que quieres eliminar los MVPs guardados para el partido ${mvpsSeleccionados[partidoId].equipoLocal} vs ${mvpsSeleccionados[partidoId].equipoVisitante}?`)) {
+        delete mvpsSeleccionados[partidoId];
+        fila.remove(); // Eliminar la fila de la tabla
+    }
+}
+
+// Evento al cambiar la ronda seleccionada (limpiar la tabla al cambiar de ronda)
+filtroRonda.addEventListener('change', (event) => {
+    mostrarPartidosPorRonda(event.target.value);
+    mvpTable.innerHTML = '';
+    Object.keys(mvpsSeleccionados).forEach(key => delete mvpsSeleccionados[key]); // Limpiar selecciones
+});
+
+// Evento al hacer clic en el botón de descargar
+descargarMvpsBtn.addEventListener('click', () => {
+    const mvpsData = generarJsonMvps();
+    if (Object.keys(mvpsData.encuentros).length === 0) {
+        mensajeError.textContent = "No se ha seleccionado ningún MVP para descargar.";
+        mensajeError.style.display = "block";
+        setTimeout(() => {
+            mensajeError.style.display = 'none';
+        }, 3000);
+        return;
+    }
+    descargarJson(mvpsData, 'mvps.json'); // El nombre del archivo puede ser 'ronda1.json' si lo deseas
+});
+
+// Cargar los datos al cargar la página
+async function inicializar() {
+    await cargarEquipos();
+    await cargarPartidos();
+}
+
+inicializar();

@@ -283,7 +283,10 @@
             "tag1": "DBO",
             "equipo2": "PLAGA VILLANOS",
             "tag2": "PLAGA",
-            "resultado": "VS"
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
           },
           {
             "equipo1": "IMPERIO MEXA ZAFIRO",

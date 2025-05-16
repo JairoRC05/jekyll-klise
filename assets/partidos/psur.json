@@ -29,7 +29,10 @@
             "tag1": "AMT",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "PEN"
+            "resultado": "2-0",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
           },
           {
             "equipo1": "RNT XAPULOVERS",
@@ -568,7 +571,7 @@
             "tag1": "TAD",
             "equipo2": "CHRONOS LEGION",
             "tag2": "CL",
-            "resultado": "PEN",
+            "resultado": "0-2",
             "stream": false,
             "fecha": "",
             "hora": ""
@@ -633,14 +636,20 @@
             "tag1": "AMT",
             "equipo2": "CHRONOS LEGION",
             "tag2": "CL",
-            "resultado": "VS"
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
           },
           {
             "equipo1": "RNT XAPULOVERS",
             "tag1": "RNTX",
             "equipo2": "RNT GALÁCTICOS",
             "tag2": "GX",
-            "resultado": "VS"
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
           },
           {
             "equipo1": "NO SMITES",

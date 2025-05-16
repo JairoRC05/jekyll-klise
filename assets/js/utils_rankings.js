@@ -50,7 +50,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
 
         grupoDeEquipos.forEach(equipo => {
             const colDiv = document.createElement('div');
-            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4');
+            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6','col-xl-4');
             const cardRoundListDiv = document.createElement('div');
             cardRoundListDiv.classList.add('card-round-list');
             const cardRoundTeamDiv = document.createElement('div');
