@@ -1,0 +1,310 @@
+---
+layout:
+permalink: /liga-indigo-inscripciones.html
+title: INSCRIPCIONES | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid banner-home bg-cham">
+    <div class="container banner">
+
+      <div class="banner-grupo">
+        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
+        {%- for post in norte-%}
+        <a href="{{post.url}}">
+          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+        </a>
+        {%- endfor -%}
+      </div>
+
+
+      <div class="banner-logo">
+        <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+          <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
+      </a>
+
+   
+
+    </div>
+
+    <div class=" banner-grupo">
+          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
+          {%- for post in norte-%}
+          <a href="{{post.url}}">
+            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
+          </a>
+          {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+
+ <div class="container mt-5">
+        <h1>Gestión de Equipos</h1>
+        <button class="btn btn-primary mb-3" id="btnNuevoEquipo">Nuevo Equipo</button>
+
+        <table id="tablaEquipos" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Equipo</th>
+                    <th>Capitán</th>
+                    <th>Región</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <div class="modal fade" id="modalEquipo" tabindex="-1" aria-labelledby="modalEquipoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEquipoLabel">Crear Nuevo Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formEquipo">
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label for="tag" class="form-label">Tag</label>
+                                    <input type="text" class="form-control" id="tag" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="team" class="form-label">Equipo</label>
+                                    <input type="text" class="form-control" id="team" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="capitan" class="form-label">Capitán</label>
+                                    <input type="text" class="form-control" id="capitan">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="region" class="form-label">Región</label>
+                                    <input type="text" class="form-control" id="region">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label for="org" class="form-label">Organización</label>
+                                    <input type="text" class="form-control" id="org">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="activo" class="form-label">Activo</label>
+                                    <select class="form-select" id="activo">
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="seguro" class="form-label">Seguro</label>
+                                    <select class="form-select" id="seguro">
+                                        <option value="true">Sí</option>
+                                        <option value="false">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="link" class="form-label">Link</label>
+                                    <input type="text" class="form-control" id="link">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label for="grupo" class="form-label">Grupo</label>
+                                    <input type="text" class="form-control" id="grupo">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="teamNombreAnterior" class="form-label">Nombre Anterior</label>
+                                    <input type="text" class="form-control" id="teamNombreAnterior">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="teamNuevoNombre" class="form-label">Nuevo Nombre</label>
+                                    <input type="text" class="form-control" id="teamNuevoNombre">
+                                </div>
+                            </div>
+
+                            <h5>Partidos</h5>
+                            <div class="row mb-3" id="partidosContainer">
+                                <div class="col-md-3">
+                                    <label for="M1" class="form-label">M1</label>
+                                    <input type="text" class="form-control" id="M1">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M2" class="form-label">M2</label>
+                                    <input type="text" class="form-control" id="M2">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M3" class="form-label">M3</label>
+                                    <input type="text" class="form-control" id="M3">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M4" class="form-label">M4</label>
+                                    <input type="text" class="form-control" id="M4">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M5" class="form-label">M5</label>
+                                    <input type="text" class="form-control" id="M5">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M6" class="form-label">M6</label>
+                                    <input type="text" class="form-control" id="M6">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M7" class="form-label">M7</label>
+                                    <input type="text" class="form-control" id="M7">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M8" class="form-label">M8</label>
+                                    <input type="text" class="form-control" id="M8">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M9" class="form-label">M9</label>
+                                    <input type="text" class="form-control" id="M9">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M10" class="form-label">M10</label>
+                                    <input type="text" class="form-control" id="M10">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M11" class="form-label">M11</label>
+                                    <input type="text" class="form-control" id="M11">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="M12" class="form-label">M12</label>
+                                    <input type="text" class="form-control" id="M12">
+                                </div>
+                            </div>
+
+                            <h5>Jugadores</h5>
+                            <div id="jugadoresContainer">
+                                </div>
+                            <button type="button" class="btn btn-success btn-sm mt-2" id="btnAgregarJugador">Agregar Jugador</button>
+
+                            <input type="hidden" id="equipoId"> </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" form="formEquipo" id="btnGuardarEquipo">Guardar Equipo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-success mt-3" id="btnDescargarJson">Descargar JSON</button>
+    </div>
+ 
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  {% include navbar-league.html %}
+
+
+
+  {% include footer-transparent.html %}
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script src="/assets/js/inscripcion.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+
+
+        .ticket-container-p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: Thistle; /* Color de fondo del contenedor */
+        }
+
+        .ticket-container {
+            margin: 5px 0;
+            border: 1px solid #000;
+            width: 420px;
+            height: 780px;
+        }
+
+        .ticket {
+            font-family: 'Yanone Kaffeesatz', sans-serif !important;
+            font-weight: 600;
+            width: 400px;
+            height: 775px;
+            background-color: white;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .holes-top {
+            height: 50px;
+            width: 50px;
+            background-color: Thistle;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            top: -25px;
+
+            &::before,
+            &::after {
+                content: '';
+                height: 50px;
+                width: 50px;
+                background-color: Thistle;
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            &::before {
+                left: -200px;
+            }
+
+            &::after {
+                left: 200px;
+            }
+        }
+
+        .holes-lower {
+            position: relative;
+            margin: 25px;
+            border: 1px dashed #aaa;
+
+            &::before,
+            &::after {
+                content: '';
+                height: 50px;
+                width: 50px;
+                background-color: Thistle;
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            &::before {
+                top: -25px;
+                left: -50px;
+            }
+
+            &::after {
+                top: -25px;
+                left: 350px;
+            }
+        }
+
+        .title {
+            padding: 50px 25px 10px;
+            text-align: center;
+        }
+
+        .cinema {
+            color: #aaa;
+            font-size: 22px;
+            margin: 10px 0 0 0;
+        }
+
+        .movie-title {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .poster-ticket {
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .poster-ticket img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .info {
+            padding: 15px 25px;
+        }
+
+        table {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        table tr {
+            margin-bottom: 10px;
+        }
+
+        table th {
+            text-align: left;
+
+            &:nth-of-type(1) {
+                width: 38%;
+            }
+
+            &:nth-of-type(2) {
+                width: 40%;
+            }
+
+            &:nth-of-type(3) {
+                width: 15%;
+            }
+        }
+
+        table td {
+            width: 33%;
+            font-size: 20px;
+        }
+
+        .bigger {
+            font-size: 20px;
+        }
+
+        .serial {
+            padding: 25px;
+        }
+
+        .serial table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        .serial td {
+            width: 3px;
+            height: 50px;
+        }
+
+        .numbers {
+            td {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
