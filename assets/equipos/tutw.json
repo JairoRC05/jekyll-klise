@@ -11,6 +11,7 @@
         "seguro": false,
         "link": "/equipos/theunownteam--warriors",
         "grupo": "SUR",
+             "posicionDesempate": true,
         "partidos": {
             "M1": "0",
             "M2": "3",

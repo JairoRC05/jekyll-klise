@@ -6,6 +6,7 @@
         "fecha_inicio": "2025-05-06",
         "fecha_fin": "2025-05-06",
         "hora": "19:00",
+        "active":true,
         "partidos": [
           {
             "equipo1": "PLAGA VILLANOS",
@@ -75,6 +76,7 @@
         "fecha_inicio": "2025-05-06",
         "fecha_fin": "2025-05-06",
         "hora": "19:00",
+         "active":true,
         "partidos": [
           {
             "equipo1": "PLAGA VILLANOS",
@@ -110,6 +112,7 @@
         "fecha_inicio": "2025-05-06",
         "fecha_fin": "2025-05-06",
         "hora": "19:00",
+         "active":true,
         "partidos": [
           {
             "equipo1": "IM AMATISTA",

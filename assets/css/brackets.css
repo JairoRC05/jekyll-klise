@@ -19,7 +19,13 @@
     flex-direction: column;
     margin-bottom: 50px;
   }
-  @media (min-width: 38em) {
+  @media (min-width: 768px) {
+    .tournament-bracket {
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 992px) {
     .tournament-bracket {
       flex-direction: row;
     }
@@ -50,13 +56,13 @@
     margin-bottom: 2em;
     transition: padding 0.2s ease-in-out, margin 0.2s ease-in-out;
   }
-  @media (max-width: 24em) {
+  @media (max-width: 767.98px) {
     .tournament-bracket__list {
       padding-bottom: 1em;
       margin-bottom: 1em;
     }
   }
-  @media (min-width: 38em) {
+  @media (min-width: 768px) {
     .tournament-bracket__list {
       margin-bottom: 0;
       padding-bottom: 0;
@@ -87,7 +93,7 @@
   .tournament-bracket__item::after {
     transition: width 0.2s linear;
   }
-  @media (max-width: 24em) {
+  @media (max-width: 767.98px) {
     .tournament-bracket__item {
       width: 100%;
     }
@@ -97,7 +103,7 @@
       margin-right: 0;
     }
   }
-  @media (min-width: 38em) {
+  @media (min-width: 992px) {
     .tournament-bracket__item {
       padding: 0.5em 1em;
       width: 100%;
@@ -147,7 +153,7 @@
       border-right: 0;
     }
   }
-  @media (min-width: 72em) {
+  @media (min-width: 1200px) {
     .tournament-bracket__item {
       padding: 0.5em 1.5em;
     }
@@ -174,12 +180,12 @@
   .tournament-bracket__match::after {
     transition: all 0.2s linear;
   }
-  /* @media (max-width: 24em) {
+  /* @media (max-width: 767.98px) {
     .tournament-bracket__match {
       padding: 0.75em 0.5em;
     }
   } */
-  @media (min-width: 38em) {
+  @media (min-width: 992px) {
     .tournament-bracket__match::before,
     .tournament-bracket__match::after {
       position: absolute;
@@ -247,7 +253,7 @@
     text-align: center;
     padding: 0.2em 0.1em;
   }
-  @media (min-width: 38em) {
+  @media (min-width: 768px) {
     .tournament-bracket__content::after {
       order: 1;
     }
@@ -257,7 +263,7 @@
     order: 0;
     text-align: right;
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__content .tournament-bracket__team:first-child {
       align-items: flex-end;
     }
@@ -266,12 +272,12 @@
     order: 2;
     justify-content: flex-end;
   }
-  @media (min-width: 24em) {
+  @media (min-width: 767.98px) {
     .tournament-bracket__content .tournament-bracket__team:first-child .tournament-bracket__country {
       order: 0;
     }
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__content .tournament-bracket__team:first-child .tournament-bracket__country {
       flex-direction: column-reverse;
       align-items: flex-end;
@@ -280,7 +286,7 @@
   .tournament-bracket__content .tournament-bracket__team:first-child .tournament-bracket__score {
     order: 0;
   }
-  @media (min-width: 24em) {
+  @media (min-width: 767.98px) {
     .tournament-bracket__content .tournament-bracket__team:first-child .tournament-bracket__score {
       order: 2;
     }
@@ -290,17 +296,17 @@
     order: 2;
     text-align: left;
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__content .tournament-bracket__team:last-child {
       align-items: flex-start;
     }
   }
-  @media (min-width: 38em) {
+  @media (min-width: 768px) {
     .tournament-bracket__content .tournament-bracket__team:last-child .tournament-bracket__country {
       justify-content: flex-start;
     }
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__content .tournament-bracket__team:last-child .tournament-bracket__country {
       align-items: flex-start;
     }
@@ -322,12 +328,12 @@
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  @media (min-width: 24em) {
+  @media (min-width: 767.98px) {
     .tournament-bracket__team {
       flex-direction: column-reverse;
     }
   }
-  @media (min-width: 38em) {
+  @media (min-width: 768px) {
     .tournament-bracket__team {
       flex-direction: column-reverse;
     }
@@ -338,12 +344,12 @@
     margin-top: 0.5em;
     align-items: center;
   }
-  @media (max-width: 24em) {
+  @media (max-width: 767.98px) {
     .tournament-bracket__country {
       margin-top: 0;
     }
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__country {
       display: flex;
       flex-direction: column;
@@ -362,12 +368,12 @@
     cursor: help;
     transition: padding 0.2s ease-in-out;
   }
-  @media (max-width: 24em) {
+  @media (max-width: 767.98px) {
     .tournament-bracket__code {
       padding: 0 0.25em;
     }
   }
-  @media (min-width: 38em) and (max-width: 52em) {
+  @media (min-width: 768px) and (max-width: 52em) {
     .tournament-bracket__code {
       padding: 0;
     }
@@ -408,6 +414,17 @@
     color: #CD7F32;
   }
   
+  
+
+
+
+
+
+
+
+
+
+
 
 .bracket-container{
   width: 300px;
@@ -1328,7 +1345,7 @@
           
         }
     }
-    }
+    
   
     .card-back {
         width: 100%;
@@ -1365,6 +1382,7 @@
     
   
     }
+
     .card-color-right {
         position: absolute;
         width: 60%;
@@ -1376,7 +1394,337 @@
   
     }
 
-  
+
   
   }
   
+
+  .bracket-round-final-edition {
+    height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-bottom: 5px;
+  
+    @media screen and (max-width: 1024px) {
+        padding: 5px 0;
+        justify-content: space-around;
+        height:70px;
+        margin-bottom: 5px;
+    }
+
+
+    .round-block{
+      display: block;
+
+      p{
+        margin: 0;
+        color: #fff;
+      }
+    }
+  
+    .bracket-round-team {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        left: 1%;
+        color: #fff;
+
+
+        @media screen and (max-width: 768px) {
+          left: 2%;
+      }
+  
+      
+            img {
+                width: 55px;
+  
+                @media screen and (max-width: 472px) {
+                    width: 40px;
+                }
+  
+            }
+      
+  
+        .card-round-title{
+        display: flex;
+        color: #000;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 0 0 0 7px;
+  
+            h2{
+               margin: 0;
+                font-size: 20px;
+  
+                  @media screen and (max-width: 472px) {
+                    font-size: 14px;
+                }
+  
+            }
+  
+          .card-round-record{
+           display: flex;
+           flex-direction: row;
+           justify-content: start;
+           align-items: start;
+  
+           .record{
+                margin: 0 2px 0 0; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #94919117;
+                border: 1px solid rgb(215, 215, 215);
+                width: 12px !important;
+                height: 12px !important;
+                border-radius: 50%;
+                font-size: 8px;
+                text-align: center;
+            }
+          }
+        }
+    }
+  
+    .bracket-round-team-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      position: absolute;
+      right: 1%;
+      color: #fff;
+
+
+      @media screen and (max-width: 768px) {
+        right: 2%;
+    }
+
+ 
+          img {
+              width: 55px;
+
+              @media screen and (max-width: 472px) {
+                  width: 40px;
+              }
+
+          }
+    
+
+      .card-round-title{
+      display: flex;
+      color: #000;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin: 0 0 0 7px;
+
+          h2{
+             margin: 0;
+              font-size: 20px;
+
+                @media screen and (max-width: 472px) {
+                  font-size: 14px;
+              }
+
+          }
+
+        .card-round-record{
+         display: flex;
+         flex-direction: row;
+         justify-content: start;
+         align-items: start;
+
+         .record{
+              margin: 0 2px 0 0; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #94919117;
+              border: 1px solid rgb(215, 215, 215);
+              width: 12px !important;
+              height: 12px !important;
+              border-radius: 50%;
+              font-size: 8px;
+              text-align: center;
+          }
+        }
+      }
+  }
+
+    .card-round-num{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        left: 3%;
+        color: #fff;
+  
+  
+        h6{
+            margin: 0;
+        }
+    }
+  
+    .round-titles{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      .card-round-equipoLocal{
+        width: 100px;
+        text-align: right !important;
+
+         @media screen and (max-width: 1024px) {
+         display: none !important;
+        }
+         @media screen and (max-width: 375px) {
+         display: block !important;
+        }
+     
+
+        h6{
+          margin: 0;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+      .card-round-equipoVisitante{
+        width:100px;
+        text-align: left !important;
+
+         @media screen and (max-width: 1024px) {
+         display: none !important;
+        }
+
+          @media screen and (max-width: 375px) {
+         display: block !important;
+        }
+     
+
+          h6{
+          margin: 0;
+          font-size: 12px;
+          font-weight: bold;
+
+            
+
+        }
+      }
+
+      .card-round-promo{
+        display: grid;
+       
+        .llave{
+          background: rgb(0, 110, 0);
+          color: #fff !important;
+          padding: 0 5%;
+          width: 100%;
+          border-radius: 5px;
+          font-size: 8px;
+          display: block;
+
+
+        @media screen and (max-width: 1024px) {
+         display: none !important;
+        }
+     
+        
+        }
+
+        .info{
+               background: rgb(0, 110, 0);
+          color: #fff !important;
+          padding: 0 5%;
+          width: 100%;
+          border-radius: 5px;
+          font-size: 8px;
+
+
+             @media screen and (max-width: 1024px) {
+            display: none;
+          
+        }
+
+        }
+  
+        span{
+            color: #012c50 !important;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .record{
+            color: #012c50 !important;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        h6{
+          margin: 0;
+          color: #000;
+          font-weight: bold ;
+          font-size: 12px;
+          }
+          
+        }
+    }
+    
+  
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        /* background: url(/assets/mis/ice-mask-team.png); */
+        /* background-size: cover; */
+        /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
+        border: 1px solid rgb(228, 228, 228);
+        /* border-right: 2px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
+        /* backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(10px); */
+        border-radius:10px ;
+        z-index: -900;
+        overflow: hidden;
+  
+        @media screen and (max-width: 472px) {
+          border-bottom: 1px solid rgb(228, 228, 228);
+        }
+    }
+  
+  
+    .card-color-left {
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        top: -35px;
+        left: -45px;
+        z-index: -1000;
+        transform: rotate(135deg);
+
+    
+  
+    }
+
+    .card-color-right {
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        top: -35px;
+        right: -45px;
+        z-index: -1000;
+        transform: rotate(45deg);
+  
+    }
+
+
+  
+  }
