@@ -3,238 +3,72 @@
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="general-inscripcion-tab" data-bs-toggle="tab" data-bs-target="#general-inscripcion" type="button" role="tab" aria-controls="general-inscripcion" aria-selected="true">General & Inscripción</button>
+            <button class="nav-link active" id="general-inscripcion-tab" data-bs-toggle="tab" data-bs-target="#general-inscripcion" type="button" role="tab" aria-controls="general-inscripcion" aria-selected="true">Inscripción</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="juego-tolerancia-tab" data-bs-toggle="tab" data-bs-target="#juego-tolerancia" type="button" role="tab" aria-controls="juego-tolerancia" aria-selected="false">Juego & Tolerancia</button>
+            <button class="nav-link" id="juego-tolerancia-tab" data-bs-toggle="tab" data-bs-target="#juego-tolerancia" type="button" role="tab" aria-controls="juego-tolerancia" aria-selected="false">Juego</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="calendario-resultados-tab" data-bs-toggle="tab" data-bs-target="#calendario-resultados" type="button" role="tab" aria-controls="calendario-resultados" aria-selected="false">Calendario & Resultados</button>
+            <button class="nav-link" id="calendario-resultados-tab" data-bs-toggle="tab" data-bs-target="#calendario-resultados" type="button" role="tab" aria-controls="calendario-resultados" aria-selected="false">Calendario</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="roster-conducta-tab" data-bs-toggle="tab" data-bs-target="#roster-conducta" type="button" role="tab" aria-controls="roster-conducta" aria-selected="false">Roster & Conducta</button>
+            <button class="nav-link" id="roster-conducta-tab" data-bs-toggle="tab" data-bs-target="#roster-conducta" type="button" role="tab" aria-controls="roster-conducta" aria-selected="false">Clasificación</button>
+        </li>
+ 
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="conexion-descalificacion-tab" data-bs-toggle="tab" data-bs-target="#conexion-descalificacion" type="button" role="tab" aria-controls="conexion-descalificacion" aria-selected="false">Conexión</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="campeonato-firstpick-tab" data-bs-toggle="tab" data-bs-target="#campeonato-firstpick" type="button" role="tab" aria-controls="campeonato-firstpick" aria-selected="false">Campeonato & 1st Pick</button>
+            <button class="nav-link" id="premios-promocion-tab" data-bs-toggle="tab" data-bs-target="#premios-promocion" type="button" role="tab" aria-controls="premios-promocion" aria-selected="false">Descalificación</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="conexion-descalificacion-tab" data-bs-toggle="tab" data-bs-target="#conexion-descalificacion" type="button" role="tab" aria-controls="conexion-descalificacion" aria-selected="false">Conexión & Descalificación</button>
+            <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="false">Registro</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="premios-promocion-tab" data-bs-toggle="tab" data-bs-target="#premios-promocion" type="button" role="tab" aria-controls="premios-promocion" aria-selected="false">Premios & Promoción</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="adicionales-tab" data-bs-toggle="tab" data-bs-target="#adicionales" type="button" role="tab" aria-controls="adicionales" aria-selected="false">Reglas Adicionales</button>
+            <button class="nav-link" id="prizepool-tab" data-bs-toggle="tab" data-bs-target="#prizepool" type="button" role="tab" aria-controls="prizepool" aria-selected="false">Prizepool</button>
         </li>
     </ul>
 
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="general-inscripcion" role="tabpanel" aria-labelledby="general-inscripcion-tab">
-            <h2>Datos Generales</h2>
-            <ul>
-                <li><strong>Re-Inscripción:</strong> $250.00 MXN (Solo para equipos de la temporada de ABRL-MAYO)</li>
-                <li><strong>Inscripción:</strong> $300.00 MXN (Equipo nuevo)</li>
-                <li><strong>Inicio:</strong> 26 de MAYO</li>
-                <li><strong>Cierre de inscripción:</strong> 11 de MARZO</li>
-                <li><strong>Formato:</strong> Round robin (BO3)</li>
-                <li><strong>Roster:</strong> 8 jugadores</li>
-                <li><strong>Modo de Juego:</strong> Torneo</li>
-                <li><strong>Servidor:</strong> NA04</li>
-                <li><strong>Partidas:</strong> No personalizadas</li>
-                <li><strong>Espectadores:</strong> No se permiten</li>
-                <li><strong>Cupos:</strong> Limitados</li>
-            </ul>
-            <h2>CAMBIO DE NOMBRE DE EQUIPO</h2>
-            <p>En caso de que un equipo desee cambiar su nombre después de haber completado la inscripción o reinscripción, se aplicará un cargo adicional de $50.00 MXN. Este cargo cubre los costos administrativos asociados con la actualización de registros y la generación de nuevas imágenes y materiales promocionales. Si el equipo informa del cambio de nombre antes de que se hayan generado los materiales promocionales y no se requieran actualizaciones extensas en los registros, el cargo adicional podrá ser reembolsado o aplicado como crédito para futuras inscripciones o reinscripciones, a discreción de la administración de la liga.</p>
-            <p><strong>NOTA:</strong> Este cargo se aplicará adicionalmente al pago de inscripción o reinscripción en caso de solicitar un cambio de nombre posterior una vez iniciando la Liga (Liga Índigo).</p>
-        </div>
+     
+                {% include reglamento-inscripcion.html %}
+            </div>
 
         <div class="tab-pane fade" id="juego-tolerancia" role="tabpanel" aria-labelledby="juego-tolerancia-tab">
-            <h2>Tolerancia</h2>
-            <p><strong>10 minutos:</strong> El tiempo corre una vez entregada la sala. Si el equipo no entra a la sala en el tiempo antes mencionado, se le dará win al equipo remitente de la sala por marcador 2-0.</p>
-            <h2>Bans</h2>
-            <ul>
-                <li>RAICHU DE ALOLA</li>
-                <li>OFENSIVO</li>
-                <li>Liciencias Unites nuevas durante el torneo quedan automáticamente prohibidas.</li>
-            </ul>
+  
+                {% include reglamento-juego.html %}
+        
         </div>
 
         <div class="tab-pane fade" id="calendario-resultados" role="tabpanel" aria-labelledby="calendario-resultados-tab">
-            <h2>Calendario</h2>
-            <p>Cada capitán agendará el horario de sus partidos bajo el calendario dado por la Liga. (En el límite de días asignado por el ADMIN). Los equipos pueden reagendar partido si hay un evento externo mientras todo se avise con mínimo 1h de anticipación. En caso de ser necesario, la Liga dará días adicionales para la entrega de partidos.</p>
-            <ul>
-                <li>No se podrán jugar partidos pendientes después de la última ronda.</li>
-                <li>La última ronda se juega 10:00pm, con excepción del partido en Stream.</li>
-                <li>La página marcará qué partido es VÍA STREAM, ese partido será en el horario de 10:30 PM.</li>
-                <li>Para solicitar stream debes hacerlo un día antes, el partido debe ser antes o después del partido VÍA STREAM.</li>
-            </ul>
-            <h2>Entrega de Resultados</h2>
-            <p>El registro de la partida la debe hacer el capitán del equipo ganador en el canal asignado de Discord por el administrador de resultados del torneo antes de las 8pm del día posterior de la partida.</p>
-            <ul>
-                <li>Partidos que no se juegan en la fecha acordada pasarán a tener registro 0-0. (En el caso que no se dé acuerdo por ambos capitanes). En caso de que un equipo no conteste para acordar el partido, se le dará victoria por 2-0 al equipo que envió mensaje para acordarlo.</li>
-                <li>Partido que no se notifique para su registro antes de la 8pm del día después de la fecha asignada para entrega de resultados pasará a tener victoria el equipo rival 2-1. (debido a que el equipo ganador es quien debe notificar).</li>
-            </ul>
+
+            {% include reglamento-calendario.html %}
         </div>
 
         <div class="tab-pane fade" id="roster-conducta" role="tabpanel" aria-labelledby="roster-conducta-tab">
-            <h2>Altas/Bajas</h2>
-            <p>El equipo podrá hacer cambios de altas, bajas o actualizaciones de jugador antes de las 6 p. m. de la tarde, en el grupo de Whatsapp asignado para dicha tarea, siguiendo el siguiente formato:</p>
-            <ul>
-                <li><strong>ALTA:</strong> ID: 15664WD | HX • JUN</li>
-                <li><strong>BAJA:</strong> ID: ED3RFW2 | HX • JUN</li>
-                <li><strong>ACTUALIZACIÓN:</strong> ID: 15664WD | HX • JUN > HX • JUNITO</li>
-            </ul>
-            <p>Si un jugador se sorprende en otro equipo con una cuenta alternativa, no notifica su cambio de nick, se llevará a cabo una o más de las siguientes sanciones:</p>
-            <ul>
-                <li>Baja del torneo del equipo.</li>
-                <li>Baja del jugador de la cuenta alternativa.</li>
-                <li>Marcador 2-0 a favor del equipo rival.</li>
-            </ul>
-            <h2>Descalificación</h2>
-            <p>Cualquier conducta antideportiva, el equipo en cuestión tendrá un llamado de atención o será descalificado en automático bajos los siguientes puntos:</p>
-            <ul>
-                <li>Agresiones.</li>
-                <li>Acoso.</li>
-                <li>Faltas de respeto hacia los jugadores, equipos, comunidades o administradores del torneo.</li>
-            </ul>
-            <p>El equipo que abandone el torneo pasará a tener 0 puntos y los equipos que jugaron con el equipo dado de baja o que falten por jugar tendrán 2 puntos en su registro. (Marcador por 2-0).</p>
-            <p>Cada temporada tiene una duración de 20 a 25 días. (Esta duración puede variar por eventos externos o del propio juego.) Solo existirá reembolso en caso de no haber iniciado la LIGA, se debe avisar la baja del equipo 2 días antes del comienzo de la misma, dicho reembolso se dará a la brevedad posible. En caso contrario no existirá reembolso debido que se genera un calendario asimismo la imagen del equipo en la pagina WEB.</p>
-            <p>Antes de inscribir a tu equipo, favor de revisar el REGLAMENTO, tener en cuenta que los BONOS adicionales se agregan 2 días antes del inicio de la Liga Indigo. Toda esta información se detalla en el grupo de Whatsapp por el administrador.</p>
-        </div>
-
-        <div class="tab-pane fade" id="campeonato-firstpick" role="tabpanel" aria-labelledby="campeonato-firstpick-tab">
-            <h2>Formato del Campeonato</h2>
-            <h3>Clasificación (Fase de Grupos)</h3>
-            <p>Los mejores 4 equipos de cada grupo clasifican a la Fase de 4tos de Final.</p>
-            <h3>Puntos</h3>
-            <ul>
-                <li>Partido ganado por marcador 2-0 | 3pts</li>
-                <li>Partido ganado por marcador 2-1 | 2pts</li>
-                <li>Partido perdido por marcador 2-1 | 1pts</li>
-                <li>Partido perdido por marcador 2-0 | 0pts</li>
-            </ul>
-            <h3>Empate</h3>
-            <p>En caso de empate en la tabla, se definirán las posiciones por el resultado de la partida entre ambos equipos en la temporada.</p>
-            <p>En caso de empate entre 3 o más equipos y no exista un resultado que defina ganador, se procederá a jugar un partido Bo1 entre los equipos involucrados hasta obtener un ganador.</p>
-            <h3>Fase Final | 4tos de Final > Semifinales > Gran Final</h3>
-            <p>Todos los partidos son Bo3</p>
-            <p>1st PICK se determina por el bracket generado por la página siguiendo el cruce de encuentros en 4tos de FINAL:</p>
-            <ul>
-                <li>1ro NORTE VS 4to SUR</li>
-                <li>2do NORTE VS 3to SUR</li>
-                <li>1ro SUR VS 4to NORTE</li>
-                <li>2do SUR VS 3to NORTE</li>
-            </ul>
-            <h2>1st Pick</h2>
-            <p>Será asignado por la página para el primer MATCH es el equipo de la IZQUIERDA como se muestra en la página de cada división, para los partidos restantes, 1st PICK será el equipo perdedor.</p>
+                {% include reglamento-clasificacion.html %}
         </div>
 
         <div class="tab-pane fade" id="conexion-descalificacion" role="tabpanel" aria-labelledby="conexion-descalificacion-tab">
-            <h2>Conexión Stream</h2>
-            <p>El partido no se detendrá una vez iniciado en caso de falla por internet o luz, debido a que es responsabilidad de cada equipo.</p>
-            <p>Durante la fase de DRAFT o PANTALLA DE CARGA, se pondrá pausa solo si es anunciado por el capitán al reportar algún detalle:</p>
-            <ol>
-                <li>EL JUEGO SE CERRÓ.</li>
-                <li>NO DEJO SELECCIONAR PICK.</li>
-            </ol>
-            <p>En caso de no poder seleccionar pick, será reset base a los mismos PICKS respetando los BANS, favor de quedarse en base, la selección se reanuda donde pasó dicho suceso.</p>
-            <h2>Conexión Off-Stream</h2>
-            <p>El partido no se detendrá una vez iniciado en caso de falla por internet o luz, debido a que es responsabilidad de cada equipo.</p>
-            <p>Durante la fase de DRAFT o PANTALLA DE CARGA si pasan los siguientes detalles, favor de avisar al capitán rival y quedarse en base:</p>
-            <ol>
-                <li>EL JUEGO SE CERRÓ.</li>
-                <li>NO DEJO SELECCIONAR PICK.</li>
-            </ol>
-            <p>En caso de no poder seleccionar pick será reset base a los mismos PICKS respetando los BANS, favor de quedarse en base, la selección se reanuda donde pasó dicho suceso.</p>
-            <h2>Partidos en Stream y Horarios Web</h2>
-            <p>A partir de ahora, algunos partidos del torneo serán transmitidos en vivo (stream) para que puedas disfrutar de la acción en directo. Además, tendremos partidos exclusivos en stream los sábados y domingos a las 22:30 hora de la Ciudad de México (CDMX). Los equipos y horarios de todos los partidos que se transmitirán se mostrarán en nuestra página web en los siguientes horarios (hora de México): 21:30 22:30 (Y los partidos exclusivos de sábado y domingo a las 22:30).</p>
-            <p><strong>Importante:</strong> Al momento de la inscripción, los equipos deberán notificar si tienen disponibilidad para jugar en alguno de los horarios exclusivos de los sábados y domingos a las 22:30 hora de la Ciudad de México (CDMX).</p>
-            <h2>HERRAMIENTAS DE PROMOCIÓN PARA EQUIPOS PARTICIPANTES</h2>
-            <p>Para apoyar la difusión y el entusiasmo en torno a la Liga (Liga Indigo), hemos preparado una variedad de materiales promocionales que los equipos podrán utilizar y personalizar. En la sección dedicada a "Recursos para Equipos" de nuestra página web, encontrarán elementos para crear:</p>
-            <ul>
-                <li>Promocionales de Partido: Anuncia tus próximos encuentros con diseños atractivos.</li>
-                <li>Celebraciones de Victoria: Comparte tus triunfos con plantillas listas para usar.</li>
-                <li>Comunicados de Derrota: Informa sobre los resultados de manera profesional.</li>
-                <li>Anuncios de Horarios de Juego: Difunde fácilmente cuándo y contra quién juega tu equipo.</li>
-                <li>Visualización del Calendario: Comparte el calendario completo del torneo con tus seguidores.</li>
-            </ul>
+             {% include reglamento-conexion.html %}
         </div>
 
         <div class="tab-pane fade" id="premios-promocion" role="tabpanel" aria-labelledby="premios-promocion-tab">
-            <h2>Prize Pool</h2>
-            <ul>
-                <li><strong>1er lugar:</strong> $2500 MXN</li>
-                <li><strong>2do lugar:</strong> $500 MXN</li>
-                <li><strong>1er lugar de cada grupo:</strong> $200 MXN (Bono por victorias con marcador de 2-0 es de 200 pesos MXN) (este bono aplica solo para la fase de GRUPOS)</li>
-                <li><strong>MVP de la fase de GRUPOS:</strong> $250 MXN. (Si se hace cambio de nickname se debe mandar ID para comprobar que sea el mismo jugador. Dicho cambio debe ser notificado) (Nickname: se debe tomar captura antes y después de cambiar el nick).</li>
-            </ul>
-            <h2>MODIFICACIÓN EN LA PREMIACIÓN INDIVIDUAL</h2>
-            <p>Se informa a los participantes que el premio al Jugador Más Valioso (MVP) ha sido sustituido por el Premio a la Mayor Cantidad de PENTAKILLS Grabadas. Para optar por este reconocimiento, es indispensable contar con la grabación clara y verificable de cada pentakill.</p>
-            <h2>REGLA ESPECIAL: PREMIO A LA MAYOR CANTIDAD DE PENTAKILLS GRABADAS</h2>
-            <h3>ELEGIBILIDAD</h3>
-            <p>Todos los jugadores participantes en la Liga Índigo son elegibles para optar por el premio a la mayor cantidad de PENTAKILLS grabadas, siempre y cuando cumplan con los siguientes requisitos.</p>
-            <h3>DEFINICIÓN DE PENTAKILL</h3>
-            <p>Para los efectos de este premio, se considerará PENTAKILL la acción de un único jugador al eliminar a los cinco (5) miembros del equipo oponente dentro de un lapso de tiempo razonable, el cual lo marca el juego bajo la alerta de Racha 5 KO (KO Streak 5 ). La decisión final sobre si una jugada constituye una PENTAKILL será tomada por el equipo de verificación del torneo.</p>
-            <h3>REQUISITOS DE GRABACIÓN</h3>
-            <p>Los jugadores que logren una PENTAKILL durante una partida oficial del torneo y deseen optar por este premio, deberán grabar el momento exacto. La grabación deberá tener una calidad mínima aceptable (resolución clara y fluidez). Se recomienda grabar la partida completa o al menos un periodo significativo antes y después de la PENTAKILL para su correcta contextualización. EL VIDEO DE LA PENTAKILL DEBERÁ MOSTRAR CLARAMENTE LOS NICKNAMES DE LOS JUGADORES INVOLUCRADOS (TANTO EL JUGADOR QUE REALIZA LA PENTAKILL COMO LOS OPONENTES ELIMINADOS).</p>
-            <h3>PROCESO DE ENVÍO</h3>
-            <p>Las grabaciones de las PENTAKILLS deberán ser enviadas mediante una nueva publicación en el canal de Discord designado para ello: #pentakills. Para poder publicar en el canal #pentakills, el jugador deberá haber solicitado y obtenido el rol de "jugador" en el canal #pedir-rol indicando su nickname y equipo. Esto permitirá identificar al jugador y su equipo. Al agregar su video mediante una publicación en #pentakills, el jugador deberá incluir las etiquetas de la ronda y el partido donde ocurrió la PENTAKILL (ej: #Ronda1 #SBvsOPI). Tendrán disponible para el envío de su PENTAKILL hasta la finalización de la última ronda del torneo.</p>
-            <h3>VERIFICACIÓN</h3>
-            <p>Un equipo designado por la organización del torneo verificará cada grabación recibida en el canal #pentakills para confirmar la autenticidad de la PENTAKILL y el cumplimiento de los requisitos (incluida la visibilidad de los nicknames). La información del jugador y el partido se extraerá del rol y las etiquetas proporcionadas. La decisión del equipo de verificación será final e inapelable.</p>
-            <h3>DURACIÓN DE LOS VIDEOS</h3>
-            <p>Los videos de las PENTAKILLS enviados para su consideración deben tener una duración mínima de 30 segundos y máxima de 60 segundos (un minuto).</p>
-            <h3>USO DEL CONTENIDO</h3>
-            <p>Al enviar su grabación de PENTAKILL, los jugadores aceptan que la Liga organizadora del torneo podrá utilizar dicho material para la creación de contenido en sus cuentas de TikTok e Instagram.</p>
-            <h3>GANADOR DEL PREMIO</h3>
-            <p>Al finalizar el torneo y una vez revisadas todas las grabaciones enviadas dentro del plazo, se determinará al jugador que haya presentado la mayor cantidad de PENTAKILLS verificadas. En caso de empate en la cantidad de PENTAKILLS, la organización del torneo se reserva el derecho de implementar un criterio de desempate (ej. votación de la comunidad sobre la PENTAKILL más espectacular, sorteo, etc.), el cual será comunicado previamente si ocurre un empate.</p>
-            <h3>ANUNCIO DEL GANADOR</h3>
-            <p>El ganador del premio a la mayor cantidad de PENTAKILLS grabadas será anunciado al finalizar el torneo, durante la ceremonia de premiación o a través de los canales oficiales del torneo.</p>
-            <p><strong>Nota:</strong> Se recomienda encarecidamente a todos los participantes grabar sus partidas completas y asegurarse de que los NICKNAMES de los jugadores sean visibles en la grabación para no perder la oportunidad de optar por este premio en caso de lograr una PENTAKILL. La organización del torneo no se responsabiliza por la pérdida de oportunidades debido a la falta de grabación, la mala calidad del video o el incumplimiento de los requisitos establecidos. Al participar en este premio, los jugadores otorgan permiso para el uso de sus jugadas para la creación de contenido promocional del torneo.</p>
+            {% include reglamento-descalificacion.html %}
+        </div>
+       
+        <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+            {% include reglamento-registro.html %}
+        </div>
+     
+        <div class="tab-pane fade" id="prizepool" role="tabpanel" aria-labelledby="prizepool-tab">
+            {% include reglamento-prizepool.html %}
         </div>
 
-        <div class="tab-pane fade" id="adicionales" role="tabpanel" aria-labelledby="adicionales-tab">
-            <h2>REGLA DE INCOMPARECENCIA Y SANCIONES PARA FUTUROS TORNEOS</h2>
-            <h3>OBLIGACIÓN DE PRESENTACIÓN</h3>
-            <p>Todos los equipos inscritos en el torneo están obligados a presentarse a todos los partidos programados en el horario y fecha indicados por la organización.</p>
-            <h3>CONSECUENCIAS DE LA INCOMPARECENCIA</h3>
-            <ul>
-                <li>La no presentación a un (1) partido resultará en la derrota automática del equipo en dicho encuentro.</li>
-                <li>La no presentación a dos (2) partidos durante el transcurso del torneo resultará en la inelegibilidad del equipo para participar en los próximos torneos organizados por esta Liga. La duración específica de la sanción (ej. el siguiente torneo, los próximos dos torneos, etc.) será determinada y comunicada por la organización al equipo infractor.</li>
-            </ul>
-            <h3>JUSTIFICACIÓN DE LA INCOMPARECENCIA</h3>
-            <p>Los equipos podrán presentar una justificación válida y documentada (ej. problemas de salud graves, fallas de conexión masivas que afecten a todo el equipo, etc.) para su incomparecencia. Esta justificación deberá ser comunicada a la organización a la mayor brevedad posible y, en ningún caso, después de la hora programada del partido. La organización del torneo evaluará la validez de la justificación y se reserva el derecho de aceptarla o rechazarla. La aceptación de una justificación no necesariamente exime al equipo de la derrota automática en el partido en cuestión, pero podría evitar la sanción para futuros torneos.</p>
-            <h3>COMUNICACIÓN</h3>
-            <p>Es responsabilidad del capitán o representante del equipo comunicar cualquier problema que pueda impedir la presentación del equipo a un partido con la mayor antelación posible a la organización del torneo.</p>
-            <p><strong>Nota:</strong> El objetivo de esta regla es asegurar la integridad y el desarrollo fluido del torneo, así como garantizar la participación de equipos comprometidos con la competencia. La organización del torneo se reserva el derecho de modificar esta regla en caso de ser necesario, comunicándolo a los participantes con la debida antelación.</p>
-
-            <h2>REAGENDACIÓN DE PARTIDOS - PLAZO Y NOTIFICACIÓN</h2>
-            <p>Los equipos disponen de un plazo de 24 horas a partir de la cancelación del partido original para acordar y notificar la nueva fecha y hora de juego. Esta notificación deberá realizarse en el grupo de WhatsApp “Partidos Reagendados” (en sustitución del canal de Discord previamente utilizado). La notificación deberá seguir el siguiente formato:</p>
-            <p><strong>RONDA (NÚMERO) | EQUIPO A VS EQUIPO B (REA) FECHA Y HORA:</strong> [DÍA] [MES ABREVIADO] A LAS [HORA] H</p>
-            <p><strong>Nota:</strong> Si los equipos no logran un acuerdo sobre la fecha y hora dentro del plazo de 24 horas, no es necesario incluir esta información en la notificación inicial. Sin embargo, es obligatorio notificar el acuerdo final de reagendación en el mismo grupo antes de la ronda final de la Liga (Liga Índigo). Una vez disputado el partido reagendado, se deberá notificar su finalización en el grupo “Partidos Reagendados”.</p>
-
-            <h2>REGLA DE "LA RONDA PASO INTERDIMENSIONAL"</h2>
-            <h3>MOMENTO DE LA RONDA</h3>
-            <p>Esta ronda especial se llevará a cabo inmediatamente después de la finalización de la Ronda 7 de la fase de grupos y antes del inicio de la Ronda 8 .</p>
-            <h3>PARTICIPANTES</h3>
-            <p>Todos los equipos que hayan participado en la fase de grupos (tanto del Grupo A como del Grupo B) serán elegibles para participar en "La Ronda Paso Interdimensional".</p>
-            <h3>FORMATO DE CRUCE</h3>
-            <p>Los enfrentamientos de esta ronda se determinarán mediante un sorteo aleatorio que emparejará a equipos del Grupo A con equipos del Grupo B. Esto ronda se creará durante el sorteo de grupos antes que inicie la Liga.</p>
-            <h3>PROCEDIMIENTO DEL SORTEO</h3>
-            <p>Se crearán dos bombos, uno con los nombres de todos los equipos del Grupo A y otro con los nombres de todos los equipos del Grupo B. Se extraerá un equipo del Bombo A y, a continuación, se extraerá un equipo del Bombo B. Estos dos equipos se enfrentarán en un partido de "La Ronda Paso Interdimensional". Este proceso se repetirá hasta que todos los equipos de ambos grupos hayan sido emparejados.</p>
-            <h3>NÚMERO DE ENFRENTAMIENTOS</h3>
-            <p>Se jugará un número de partidos igual al menor número de equipos que haya en alguno de los dos grupos.</p>
-            <ul>
-                <li><strong>Caso de igual número de equipos:</strong> Si ambos grupos tienen el mismo número de equipos, cada equipo jugará un partido en esta ronda.</li>
-                <li><strong>Caso de número desigual de equipos:</strong> Si un grupo tiene más equipos que el otro, algunos equipos del grupo con mayor número quedarán sin un oponente en esta ronda. La forma en que se manejen estos equipos se les dará la victoria de marcador 2-0 y el incentivo Especial.</li>
-            </ul>
-            <h3>DURACIÓN Y REGLAS DEL PARTIDO</h3>
-            <p>Los partidos de "La Ronda Paso Interdimensional" tendrán la misma duración y se jugarán bajo las mismas reglas que los partidos de la fase de grupos, a menos que la organización del torneo decida especificar reglas diferentes para esta ronda especial.</p>
-            <h3>INCENTIVO ESPECIAL: DESCUENTO EN LA PRÓXIMA INSCRIPCIÓN</h3>
-            <p>Los equipos que ganen su partido en "La Ronda Paso Interdimensional" recibirán un descuento del 20% en la inscripción para el próximo torneo. Este descuento se aplicará automáticamente al realizar la inscripción y se verificará la participación en la ronda especial.</p>
-        </div>
+       
     </div>
 </div>
 
-</div>
+
 

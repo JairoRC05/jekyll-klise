@@ -1,0 +1,97 @@
+.card-rules{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 5px;
+
+  
+
+        .title-group {
+        position: absolute;
+        top: 10px;
+        color: #2e2e2e;
+        left: 10px;
+    }
+    
+    .title-star {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #8e8d8d;
+
+        a{
+            font-size: 25px;
+        }
+
+        img{
+            width: 85px;
+        }
+
+    }
+
+        .descrip{
+        position: absolute;
+        bottom: 5px;
+        color: #2e2e2e;
+        left: 10px;
+
+       
+                margin: 0;
+         
+    }
+
+
+
+}
+
+
+
+ /* Estilos para el div oculto que se convertirá a imagen */
+        #TYC {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.6;
+            width: 700px; /* Ancho fijo para la imagen */
+        }
+
+
+        #TTC p{
+            font-weight: 500;
+        }
+
+        #TYC h2, #TYC h3 {
+            color: #00bcd4;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        #TYC ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        #TYC li {
+            margin-bottom: 5px;
+            padding-left: 0; /* Anula el padding del li general para este div */
+        }
+        #TYC li::before {
+            content: none; /* Anula el icono de Font Awesome del li general para este div */
+        }
+        #TYC .signature {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        #TYC .date {
+            font-size: 0.9em;
+            color: #bbb;
+        }

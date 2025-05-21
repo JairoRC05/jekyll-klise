@@ -1,6 +1,9 @@
 ---
 layout:
 permalink: /reglamento-liga-indigo.html
+temporada: ABRIL-MAYO
+discord: https://discord.gg/9erYuwT78n
+twitch: https://www.twitch.tv/uniteforzestadium
 ---
 
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
@@ -46,7 +49,127 @@ permalink: /reglamento-liga-indigo.html
  </div>
 
 
+  <div class="container">
+     <div class="status-bar mt-3">
+    <div class="status-left">
+      <span id="current-time"></span>
+    </div>
+    <div class="status-center">
+
+      <span id="season">Temporada MAYO/JUNIO - 2025</span>
+        <span class="discord-link">
+            <a href="{{page.discord}}" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord discord-icon"></i> Nación Unite
+            </a>
+        </span>
+    </div>
+    <div class="status-right">
+        <span id="current-date"></span>
+       
+    </div>
+</div>
+  </div>
+
+
+
+
 {% include reglamento-oficial.html%}
+
+<div class="container">
+   <h3>Modificaciones al Reglamento</h3>
+                <p>La administración de la Liga Indigo se reserva el derecho de <b>modificar o ajustar este reglamento en cualquier momento</b> durante el transcurso del torneo. Esto puede ocurrir para abordar situaciones imprevistas, garantizar la equidad competitiva o mejorar la experiencia general de la Liga.</p>
+                <p>Cualquier modificación será <b>comunicada de inmediato</b> a todos los equipos participantes a través de los canales oficiales del torneo (ej. grupo de WhatsApp, página web, Discord). Es responsabilidad de los equipos mantenerse informados sobre dichas actualizaciones. La continuidad en la participación del torneo implica la aceptación de cualquier cambio realizado.</p>
+                <p>La participación en la Liga Indigo implica el reconocimiento y la <b>aceptación de que las decisiones de la administración son finales e inapelables</b> en todos los asuntos relacionados con el torneo.</p>
+</div>
+
+
+
+<div class="container mt-5 ">
+<div class="row bgRules">
+  <div class="col-12 col-md-6">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <img src="/assets/logos/LIGA INDIGO_LOGO.png" alt="img-fluid">
+       <span>Garantizamos la confidencialidad de tus datos, usados solo para la gestión interna de la Liga Indigo.</span>
+ 
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+      <div class="mt-3">
+        <label for="captainName" class="form-label">Nombre del Capitán que registra:</label>
+        <input type="text" class="form-control" id="captainName" placeholder="Tu nombre completo">
+    </div>
+          <div class="form-check mt-3">
+        <input class="form-check-input" type="checkbox" id="acceptRules">
+        <label class="form-check-label" for="acceptRules">
+            Acepto el reglamento, términos y condiciones
+        </label>
+    </div>
+  
+    <button class="btn btn-primary mt-3" id="continueBtn" disabled>Continuar</button>
+   </div>
+</div>
+</div>
+
+
+
+
+
+<div id="TYC" class="container" style="position: absolute; left: -9999px; top: -9999px; display: block;">
+    <h2 style="text-align: center;">Aceptación del Reglamento y Condiciones - Liga Indigo</h2>
+    <p>Al inscribir a su equipo en la Liga Indigo, cada capitán y todos los jugadores de su roster <b>aceptan de forma automática e incondicional el presente reglamento en su totalidad<b>, así como todas las condiciones y decisiones que la administración del torneo pueda tomar.</p>
+    <p>Entienden y se comprometen a cumplir con:</p>
+    <ul>
+        <li>Las <b>normas de conducta deportiva</b>.</li>
+        <li>Los <b>procedimientos de juego</b>.</li>
+        <li>El <b>sistema de clasificación y puntuación</b>.</li>
+        <li>Las <b>sanciones<b> por incumplimiento.</li>
+        <li>Las <b>políticas de reembolsos y gestión de roster</b>.</li>
+        <li>Las <b>restricciones de nombres y logos</b>.</li>
+        <li>Cualquier otra disposición detallada en este documento.</li>
+    </ul>
+    <h3>Modificaciones al Reglamento</h3>
+    <p>La administración de la Liga Indigo se reserva el derecho de <b>modificar o ajustar este reglamento en cualquier momento</b> durante el transcurso del torneo. Esto puede ocurrir para abordar situaciones imprevistas, garantizar la equidad competitiva o mejorar la experiencia general de la Liga.</p>
+    <p>Cualquier modificación será <b>comunicada de inmediato</b> a todos los equipos participantes a través de los canales oficiales del torneo (ej. grupo de WhatsApp, página web, Discord). Es responsabilidad de los equipos mantenerse informados sobre dichas actualizaciones. La continuidad en la participación del torneo implica la aceptación de cualquier cambio realizado.</p>
+    <p>La participación en la Liga Indigo implica el reconocimiento y la <b>aceptación de que las decisiones de la administración son finales e inapelables</b> en todos los asuntos relacionados con el torneo.</p>
+
+    <div class="signature">
+        <p>Yo, <span id="captainNameSigned"></span>, acepto el reglamento y condiciones para participar en la Liga Indigo.</p>
+        <p class="date">Fecha: <span id="currentDate"></span></p>
+    </div>
+</div>
+
+
+<div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-cham">
+                <h5 class="modal-title" id="rulesModalLabel">Aceptación del Reglamento y Condiciones</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBodyContent">
+                <p style="font-weight: 500;">Al inscribir a su equipo en la Liga Indigo, cada capitán y todos los jugadores de su roster <b>aceptan de forma automática e incondicional el presente reglamento en su totalidad</b>, así como todas las condiciones y decisiones que la administración del torneo pueda tomar.</p>
+                <p style="font-weight: 500;">Entienden y se comprometen a cumplir con:</p>
+                <ul>
+                         <li>Las <b>normas de conducta deportiva</b>.</li>
+        <li style="font-weight: 500;">Los <b>procedimientos de juego</b>.</li>
+        <li style="font-weight: 500;">El <b>sistema de clasificación y puntuación</b>.</li>
+        <li >Las <b>sanciones<b> por incumplimiento.</li>
+        <li>Las <b>políticas de reembolsos y gestión de roster</b>.</li>
+        <li>Las <b>restricciones de nombres y logos</b>.</li>
+        <li>Cualquier otra disposición detallada en este documento.</li>
+                </ul>
+             <h3>Modificaciones al Reglamento</h3>
+    <p style="font-weight: 500;">La administración de la Liga Indigo se reserva el derecho de <b>modificar o ajustar este reglamento en cualquier momento</b> durante el transcurso del torneo. Esto puede ocurrir para abordar situaciones imprevistas, garantizar la equidad competitiva o mejorar la experiencia general de la Liga.</p>
+    <p style="font-weight: 500;">Cualquier modificación será <b>comunicada de inmediato</b> a todos los equipos participantes a través de los canales oficiales del torneo (ej. grupo de WhatsApp, página web, Discord). Es responsabilidad de los equipos mantenerse informados sobre dichas actualizaciones. La continuidad en la participación del torneo implica la aceptación de cualquier cambio realizado.</p>
+    <p style="font-weight: 500;">La participación en la Liga Indigo implica el reconocimiento y la <b>aceptación de que las decisiones de la administración son finales e inapelables</b> en todos los asuntos relacionados con el torneo.</p>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="confirmAcceptance">Aceptar y Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -80,6 +203,101 @@ permalink: /reglamento-liga-indigo.html
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const acceptRulesCheckbox = document.getElementById('acceptRules');
+        const captainNameInput = document.getElementById('captainName');
+        const continueBtn = document.getElementById('continueBtn');
+        const rulesModal = new bootstrap.Modal(document.getElementById('rulesModal'));
+        const confirmAcceptanceBtn = document.getElementById('confirmAcceptance');
+        const captainNameSigned = document.getElementById('captainNameSigned');
+        const currentDateSpan = document.getElementById('currentDate');
+        const tycDiv = document.getElementById('TYC');
+
+        // Función para habilitar/deshabilitar el botón "Continuar"
+        function toggleContinueButton() {
+            if (acceptRulesCheckbox.checked && captainNameInput.value.trim() !== '') {
+                continueBtn.disabled = false;
+            } else {
+                continueBtn.disabled = true;
+            }
+        }
+
+        // Event listener para el checkbox
+        acceptRulesCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                rulesModal.show(); // Mostrar el modal al chequear
+            } else {
+                toggleContinueButton(); // Actualizar estado del botón si se desmarca
+            }
+        });
+
+        // Event listener para el input del nombre del capitán
+        captainNameInput.addEventListener('input', toggleContinueButton);
+
+        // Event listener para el botón "Aceptar y Continuar" del modal
+        confirmAcceptanceBtn.addEventListener('click', function() {
+            rulesModal.hide(); // Cerrar el modal
+            acceptRulesCheckbox.checked = true; // Asegurar que el checkbox esté marcado
+            toggleContinueButton(); // Habilitar el botón de continuar
+        });
+
+        // Event listener para el botón "Continuar" principal
+        continueBtn.addEventListener('click', function() {
+            if (acceptRulesCheckbox.checked && captainNameInput.value.trim() !== '') {
+                // Rellenar el contenido del div oculto con la información del capitán y la fecha
+                captainNameSigned.textContent = captainNameInput.value.trim();
+
+                const today = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                currentDateSpan.textContent = today.toLocaleDateString('es-ES', options);
+
+                // Capturar el div oculto con html2canvas
+                html2canvas(tycDiv, {
+                    scale: 2, // Aumenta la escala para mejor calidad de imagen
+                    logging: false // Deshabilita los logs en consola para producción
+                }).then(canvas => {
+                    // Convertir el canvas a una imagen PNG y descargarla
+                    const link = document.createElement('a');
+                    link.download = `Aceptacion_Reglamento_${captainNameInput.value.trim().replace(/\s/g, '_')}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                });
+            } else {
+                alert('Por favor, acepte el reglamento y complete su nombre para continuar.');
+            }
+        });
+
+        // Asegurar que el modal se muestre si el checkbox ya está marcado al cargar la página
+        // o si el usuario intenta marcarlo.
+        document.getElementById('rulesModal').addEventListener('hide.bs.modal', function () {
+            if (!acceptRulesCheckbox.checked) {
+                // Si el usuario cierra el modal sin aceptar (ej. con el botón de cerrar),
+                // asegúrate de que el checkbox esté desmarcado
+                acceptRulesCheckbox.checked = false;
+                toggleContinueButton();
+            }
+        });
+    });
+</script>
+
+  <script>
+
+  function updateDateTime() {
+            const now = new Date();
+            const optionsDate = { year: 'numeric', month: 'long', day: 'numeric' };
+            const optionsTime = { hour: 'numeric', minute: '2-digit', hour12: false }; 
+            document.getElementById('current-date').textContent = now.toLocaleDateString('es-MX', optionsDate);
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('es-MX', optionsTime);
+        }
+
+        // Actualizar la fecha y hora cada minuto (ya no necesitamos la precisión de segundos)
+        setInterval(updateDateTime, 60000);
+
+        // Inicializar la fecha y hora al cargar la página
+        updateDateTime();
+</script>
 
 </body>
 

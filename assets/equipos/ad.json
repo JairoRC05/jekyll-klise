@@ -2,13 +2,13 @@
     {
         "tag": "FTB",
         "team": "FROSTBITE",
-        "org": "AD GAMING",
+        "org": "",
         "activo": true,
         "capitan": "TUGFAMON",
         "region": "LAN",
         "teamNombreAnterior": "AD GAMING",
         "teamNuevoNombre": "FROSTBITE",
-        "seguro": true,
+        "seguro": false,
         "link": "/equipos/ad-gaming",
         "grupo": "NORTE",
         "partidos": {

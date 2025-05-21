@@ -1580,7 +1580,7 @@
       
 
       .card-round-equipoLocal{
-        width: 100px;
+     
         text-align: right !important;
 
          @media screen and (max-width: 1024px) {
@@ -1598,7 +1598,7 @@
         }
       }
       .card-round-equipoVisitante{
-        width:100px;
+     
         text-align: left !important;
 
          @media screen and (max-width: 1024px) {
@@ -1622,6 +1622,7 @@
 
       .card-round-promo{
         display: grid;
+        width: 50px;
        
         .llave{
           background: rgb(0, 110, 0);
