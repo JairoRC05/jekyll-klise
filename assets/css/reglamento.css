@@ -125,7 +125,7 @@
 
     color: #000000;
     @media screen and (max-width: 472px) {
-        display: none;
+        display: inline;
     }
 
 
