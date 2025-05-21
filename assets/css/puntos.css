@@ -517,7 +517,7 @@
             border-color: #f5c6cb;
             color: #721c24;
         }
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .table-responsive {
                 border: none;
             }
@@ -555,4 +555,4 @@
             .btn-primary {
                 margin-top: 10px;
             }
-        }
+        } */
