@@ -1,107 +1,111 @@
-.DFSPL{
-    background-image: url(/assets/backgrounds/platino.png);
-    background-color: rgb(2, 2, 43);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.DFSPL {
+  background-image: url(/assets/backgrounds/platino.png);
+  background-color: rgb(2, 2, 43);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .DFSRU{
-    background-image: url(/assets/backgrounds/ruby.png);
-    background-color: rgb(2, 2, 43);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.DFSRU {
+  background-image: url(/assets/backgrounds/ruby.png);
+  background-color: rgb(2, 2, 43);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
-  .LIN{
-    background-image: url(/assets/backgrounds/lin.jpg);
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-  } 
+.LIN {
+  background-image: url(/assets/backgrounds/lin.jpg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
 
-  /* .LIN{
+/* .LIN{
     background-color: #F4F2F3;
   } */
 
-  .fire{
-    background-color: rgba(136, 5, 5, 0.678);
-  }
-
-  .ofire{
-    background-color: rgba(83, 4, 4, 0.678);
-  }
-
-
-  .orock {
-    border: 1px solid rgb(83, 83, 83);
+.fire {
+  background-color: rgba(136, 5, 5, 0.678);
 }
 
-.bg-youtube{
-  background: #FF0000;;
+.ofire {
+  background-color: rgba(83, 4, 4, 0.678);
 }
 
 
-.bg-twitch{
+.orock {
+  border: 1px solid rgb(83, 83, 83);
+}
+
+.bg-youtube {
+  background: #FF0000;
+  ;
+}
+
+
+.bg-twitch {
   background: #9146ff;
 
-  &:hover{
+  &:hover {
     background: #6500fe;
   }
 }
 
 
 
-.bg-transparent{
-  background: transparent;;
+.bg-transparent {
+  background: transparent;
+  ;
 }
-.bg-facebook{
+
+.bg-facebook {
   background: #0965fe;
 }
-.bg-discord{
+
+.bg-discord {
   background: #5320fb;
 }
-.bg-telegram{
-  background: 	#24A1DE;
+
+.bg-telegram {
+  background: #24A1DE;
 }
-.bg-instagram{
+
+.bg-instagram {
   background: #833ab4;
-  background: linear-gradient(
-    to right,
-    #833ab4,#fd1d1d,#fcb045
-  );
+  background: linear-gradient(to right,
+      #833ab4, #fd1d1d, #fcb045);
 }
 
 
-.bgDuos{
-  background: rgb(247,244,239);
-  background: linear-gradient(360deg, rgba(247,244,239,1) 10%, rgba(221,233,247,1) 90%);
+.bgDuos {
+  background: rgb(247, 244, 239);
+  background: linear-gradient(360deg, rgba(247, 244, 239, 1) 10%, rgba(221, 233, 247, 1) 90%);
 }
 
-.bgBanner{
+.bgBanner {
   background-color: #FF9F15;
 }
 
 
-.bgBannerLight{
+.bgBannerLight {
   background-color: #8346E5;
 }
 
-.slice{
+.slice {
   clip-path: polygon(0 0, 100% 0, 100% 98%, 0 85%);
   margin-bottom: 20px;
-  
+
   @media screen and (max-width: 768px) {
-   clip-path: none;
+    clip-path: none;
 
   }
- 
-  
+
+
 }
 
-.exo2{
+.exo2 {
   font-family: "Exo 2", sans-serif;
   font-style: italic;
 }
@@ -111,28 +115,28 @@
 
 
 
-.clip-wrapper{
-  filter:drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
+.clip-wrapper {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
 }
 
 /* BACKGROUNDS LIGAS */
-.grOrange{
- background: #f6f6f6;
+.grOrange {
+  background: #f6f6f6;
 }
 
 
 
 
-.bg-indigo{
+.bg-indigo {
   background: rgb(18, 4, 139) !important;
   color: #fff;
 
 }
 
 
-.bgIndigoTop{
-  background: rgb(18,4,139) !important;
-  background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
+.bgIndigoTop {
+  background: rgb(18, 4, 139) !important;
+  background: linear-gradient(90deg, rgba(18, 4, 139, 1) 63%, rgba(17, 17, 146, 0) 100%) !important;
 }
 
 
@@ -140,120 +144,121 @@
 
 
 
-.solid{
+.solid {
   background: rgb(18, 4, 139) !important;
 }
 
-.white{
+.white {
   background: rgb(255, 255, 255);
 }
 
-.red{
+.red {
   /* background: rgb(77,52,191);background: linear-gradient(0deg, rgba(77,52,191,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(50,22,68);background: linear-gradient(0deg, rgba(50,22,68,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(140,57,57);background: linear-gradient(0deg, rgba(140,57,57,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(0,0,0); background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,207,155,1) 100%); */
   /* background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(112,113,120,1) 100%); */
-/* background: rgb(0,0,0);
+  /* background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(102,47,19,1) 100%); */
-background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,162,102,1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(74, 162, 102, 1) 100%);
 }
 
 
-.text-smoke{
+.text-smoke {
   color: #b8b8b8;
 }
 
-.bg-kick{
+.bg-kick {
   background: #52fb18
 }
 
 
-.red-x{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(118,1,1,1) 100%);
+.red-x {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(118, 1, 1, 1) 100%);
 }
 
 
 
-.blue-x{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(8,0,255,1) 100%);
+.blue-x {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(8, 0, 255, 1) 100%);
 }
 
 
-.red{
+.red {
   background: #8b0808 !important
 }
-.grRed{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
+
+.grRed {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(139, 8, 8, 1) 100%);
 }
 
-.purple{
-  background: rgba(87,35,100,1) !important
-}
-
-
-.grPurple{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
+.purple {
+  background: rgba(87, 35, 100, 1) !important
 }
 
 
-.PLAGA{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
+.grPurple {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(87, 35, 100, 1) 100%);
 }
 
 
-.grGreen{
-  background: rgb(0,0,0) !important;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(4,101,70,1) 100%) !important;
+.PLAGA {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(87, 35, 100, 1) 100%);
 }
 
-.green{
-  background: rgba(4,101,70,1) !important;
+
+.grGreen {
+  background: rgb(0, 0, 0) !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(4, 101, 70, 1) 100%) !important;
 }
 
-.blue{
+.green {
+  background: rgba(4, 101, 70, 1) !important;
+}
+
+.blue {
   background-color: rgb(4, 4, 87) !important;
 }
 
-  .grBlue{
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(3,4,86,1) 100%);
-    
-  }
+.grBlue {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(3, 4, 86, 1) 100%);
 
-  .grDark{
-    background: rgb(4,4,87);
-    background: linear-gradient(0deg, rgba(4, 4, 87, 0) 0%, rgba(2,2,43,1) 80%);
-  }
+}
 
-
-  .grRose{
-    background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(172,66,84,1) 100%);
-  }
+.grDark {
+  background: rgb(4, 4, 87);
+  background: linear-gradient(0deg, rgba(4, 4, 87, 0) 0%, rgba(2, 2, 43, 1) 80%);
+}
 
 
-.grBlack{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(15,15,15,1) 100%);
+.grRose {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(172, 66, 84, 1) 100%);
+}
+
+
+.grBlack {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(15, 15, 15, 1) 100%);
 }
 
 
 
-.enigma{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
+.enigma {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(103, 0, 111, 1) 48%, rgba(225, 55, 114, 1) 100%);
 }
 
 
-.erosa{
+.erosa {
   background: #e13772;
 }
 
@@ -264,110 +269,114 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 
 
 
-.DFSPL{
-    background-image: url(/assets/backgrounds/platino.png);
-    background-color: rgb(2, 2, 43);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.DFSPL {
+  background-image: url(/assets/backgrounds/platino.png);
+  background-color: rgb(2, 2, 43);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .DFSRU{
-    background-image: url(/assets/backgrounds/ruby.png);
-    background-color: rgb(2, 2, 43);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.DFSRU {
+  background-image: url(/assets/backgrounds/ruby.png);
+  background-color: rgb(2, 2, 43);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
-  .LIN{
-    background-image: url(/assets/backgrounds/lin.jpg);
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-  } 
+.LIN {
+  background-image: url(/assets/backgrounds/lin.jpg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
 
-  /* .LIN{
+/* .LIN{
     background-color: #F4F2F3;
   } */
 
-  .fire{
-    background-color: rgba(136, 5, 5, 0.678);
-  }
-
-  .ofire{
-    background-color: rgba(83, 4, 4, 0.678);
-  }
-
-
-  .orock {
-    border: 1px solid rgb(83, 83, 83);
+.fire {
+  background-color: rgba(136, 5, 5, 0.678);
 }
 
-.bg-youtube{
-  background: #FF0000;;
+.ofire {
+  background-color: rgba(83, 4, 4, 0.678);
 }
 
 
-.bg-twitch{
+.orock {
+  border: 1px solid rgb(83, 83, 83);
+}
+
+.bg-youtube {
+  background: #FF0000;
+  ;
+}
+
+
+.bg-twitch {
   background: #9146ff;
 
-  &:hover{
+  &:hover {
     background: #6500fe;
   }
 }
 
 
 
-.bg-transparent{
-  background: transparent;;
+.bg-transparent {
+  background: transparent;
+  ;
 }
-.bg-facebook{
+
+.bg-facebook {
   background: #0965fe;
 }
-.bg-discord{
+
+.bg-discord {
   background: #5320fb;
 }
-.bg-telegram{
-  background: 	#24A1DE;
+
+.bg-telegram {
+  background: #24A1DE;
 }
-.bg-instagram{
+
+.bg-instagram {
   background: #833ab4;
-  background: linear-gradient(
-    to right,
-    #833ab4,#fd1d1d,#fcb045
-  );
+  background: linear-gradient(to right,
+      #833ab4, #fd1d1d, #fcb045);
 }
 
 
-.bgDuos{
-  background: rgb(247,244,239);
-  background: linear-gradient(360deg, rgba(247,244,239,1) 10%, rgba(221,233,247,1) 90%);
+.bgDuos {
+  background: rgb(247, 244, 239);
+  background: linear-gradient(360deg, rgba(247, 244, 239, 1) 10%, rgba(221, 233, 247, 1) 90%);
 }
 
-.bgBanner{
+.bgBanner {
   background-color: #FF9F15;
 }
 
 
-.bgBannerLight{
+.bgBannerLight {
   background-color: #8346E5;
 }
 
-.slice{
+.slice {
   clip-path: polygon(0 0, 100% 0, 100% 98%, 0 85%);
   margin-bottom: 20px;
-  
+
   @media screen and (max-width: 768px) {
-   clip-path: none;
+    clip-path: none;
 
   }
- 
-  
+
+
 }
 
-.exo2{
+.exo2 {
   font-family: "Exo 2", sans-serif;
   font-style: italic;
 }
@@ -377,28 +386,28 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 
 
 
-.clip-wrapper{
-  filter:drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
+.clip-wrapper {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
 }
 
 /* BACKGROUNDS LIGAS */
-.grOrange{
- background: #f6f6f6;
+.grOrange {
+  background: #f6f6f6;
 }
 
 
 
 
-.bg-indigo{
+.bg-indigo {
   background: rgb(18, 4, 139) !important;
   color: #fff;
 
 }
 
 
-.bgIndigoTop{
-  background: rgb(18,4,139) !important;
-  background: linear-gradient(90deg, rgba(18,4,139,1) 63%, rgba(17,17,146,0) 100%) !important;
+.bgIndigoTop {
+  background: rgb(18, 4, 139) !important;
+  background: linear-gradient(90deg, rgba(18, 4, 139, 1) 63%, rgba(17, 17, 146, 0) 100%) !important;
 }
 
 
@@ -406,458 +415,504 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rg
 
 
 
-.solid{
+.solid {
   background: rgb(18, 4, 139) !important;
 }
 
-.white{
+.white {
   background: rgb(255, 255, 255);
 }
 
-.redñ{
+.redñ {
   /* background: rgb(77,52,191);background: linear-gradient(0deg, rgba(77,52,191,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(50,22,68);background: linear-gradient(0deg, rgba(50,22,68,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(140,57,57);background: linear-gradient(0deg, rgba(140,57,57,1) 0%, rgba(0,0,0,1) 100%); */
   /* background: rgb(0,0,0); background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(222,207,155,1) 100%); */
   /* background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(112,113,120,1) 100%); */
-/* background: rgb(0,0,0);
+  /* background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(102,47,19,1) 100%); */
-background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,162,102,1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(74, 162, 102, 1) 100%);
 }
 
 
-.text-smoke{
+.text-smoke {
   color: #b8b8b8;
 }
 
-.bg-kick{
+.bg-kick {
   background: #52fb18
 }
 
 
-.red-x{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(118,1,1,1) 100%);
+.red-x {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(118, 1, 1, 1) 100%);
 }
 
 
 
-.blue-x{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(8,0,255,1) 100%);
+.blue-x {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(8, 0, 255, 1) 100%);
 }
 
 
-.red{
+.red {
   background: #8b0808 !important
 }
-.grRed{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(139,8,8,1) 100%);
+
+.grRed {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(139, 8, 8, 1) 100%);
 }
 
-.purple{
-  background: rgba(87,35,100,1) !important
+.purple {
+  background: rgba(87, 35, 100, 1) !important
 }
 
 
-.grPurple{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(87,35,100,1) 100%);
+.grPurple {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(87, 35, 100, 1) 100%);
 }
 
-.grGreen{
-  background: rgb(0,0,0) !important;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(4,101,70,1) 100%) !important;
+.grGreen {
+  background: rgb(0, 0, 0) !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(4, 101, 70, 1) 100%) !important;
 }
 
-.green{
-  background: rgba(4,101,70,1) !important;
+.green {
+  background: rgba(4, 101, 70, 1) !important;
 }
 
-.blue{
+.blue {
   background-color: rgb(4, 4, 87) !important;
 }
 
-  .grBlue{
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(3,4,86,1) 100%);
-    
-  }
+.grBlue {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(3, 4, 86, 1) 100%);
 
-  .grDark{
-    background: rgb(4,4,87);
-    background: linear-gradient(0deg, rgba(4, 4, 87, 0) 0%, rgba(2,2,43,1) 80%);
-  }
+}
 
-
-  .grRose{
-    background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(172,66,84,1) 100%);
-  }
+.grDark {
+  background: rgb(4, 4, 87);
+  background: linear-gradient(0deg, rgba(4, 4, 87, 0) 0%, rgba(2, 2, 43, 1) 80%);
+}
 
 
-.grBlack{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(15,15,15,1) 100%);
+.grRose {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(172, 66, 84, 1) 100%);
+}
+
+
+.grBlack {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(15, 15, 15, 1) 100%);
 }
 
 
 
-.enigma{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 11%, rgba(103,0,111,1) 48%, rgba(225,55,114,1) 100%);
+.enigma {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(103, 0, 111, 1) 48%, rgba(225, 55, 114, 1) 100%);
 }
 
 
-.erosa{
+.erosa {
   background: #e13772;
 }
 
 
-.bg-players{
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(37,117,252,1) 96%);
+.bg-players {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 14%, rgba(37, 117, 252, 1) 96%);
 }
 
 
-.chl{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(5,4,54,1) 50%, rgba(0,0,185,1) 75%, rgba(13,74,238,1) 100%);
+.chl {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(5, 4, 54, 1) 50%, rgba(0, 0, 185, 1) 75%, rgba(13, 74, 238, 1) 100%);
 }
 
 
-.bg-cham{
+.bg-cham {
   /* background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0,0,185,1) 50%, rgba(13,74,238,1) 100%); */
-background: rgb(68,76,247) !important;
-background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) !important;
+  background: rgb(68, 76, 247) !important;
+  background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
 }
 
-.bg-S11{
-  background: rgb(255,0,0) !important;
-  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(89,0,0,1) 100%) !important;
+.bg-S11 {
+  background: rgb(255, 0, 0) !important;
+  background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(89, 0, 0, 1) 100%) !important;
 }
 
 
-.bg-transparent{
+.bg-transparent {
   background: #00000070 !important;
 }
 
 
-.bg-cham-botttom{
+.bg-cham-botttom {
   background: #0d4aee;
 }
-.bg-cham-botttom-ice{
+
+.bg-cham-botttom-ice {
   background: #72C6EF;
 }
 
 
 
 
-.ZN{
+.ZN {
   background: #051f27;
 }
-.DUAT{
+
+.DUAT {
   background: #982f34;
-  border-bottom: 5px solid #6e2226 ;
+  border-bottom: 5px solid #6e2226;
 }
-.WZP{
+
+.WZP {
   background: #1ba452;
-  border-bottom: 5px solid #ffffff ;
+  border-bottom: 5px solid #ffffff;
 }
-.MEI{
+
+.MEI {
   background: #172936;
 }
-.TG{
+
+.TG {
   background: #fcc944;
   border-bottom: 5px solid #f7be2e;
 }
-.CD{
-  background: rgb(94,235,255);
-  background: radial-gradient(circle, rgba(94,235,255,1) 0%, rgba(0,104,255,1) 100%);
+
+.CD {
+  background: rgb(94, 235, 255);
+  background: radial-gradient(circle, rgba(94, 235, 255, 1) 0%, rgba(0, 104, 255, 1) 100%);
 }
-.TA{
-  background: rgb(94,235,255);
-  background: radial-gradient(circle, rgba(94,235,255,1) 0%, rgba(0,104,255,1) 100%);
+
+.TA {
+  background: rgb(94, 235, 255);
+  background: radial-gradient(circle, rgba(94, 235, 255, 1) 0%, rgba(0, 104, 255, 1) 100%);
 }
-.TAE{
+
+.TAE {
   background: #9e8b50;
 }
 
-.SHA{
+.SHA {
   background: #000;
-  border-bottom: 5px solid #daa35c ;
+  border-bottom: 5px solid #daa35c;
 }
 
-.POA{
-  background: rgb(51,51,51);
-  background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+.POA {
+  background: rgb(51, 51, 51);
+  background: radial-gradient(circle, rgba(51, 51, 51, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
-.SHIN{
+
+.SHIN {
   background: #B3282D;
-  border-bottom: 5px solid #0E59A0 ;
+  border-bottom: 5px solid #0E59A0;
 }
 
-.EKW{
+.EKW {
   background: #6077e6;
-  border-bottom: 5px solid #ffffff ;
+  border-bottom: 5px solid #ffffff;
 }
 
-.ASU{
+.ASU {
   background: #000000;
-  border-bottom: 5px solid #ffffff ;
+  border-bottom: 5px solid #ffffff;
 }
 
-.OBS{
-  background: rgb(77,79,77);
-  background: radial-gradient(circle, rgba(77,79,77,1) 0%, rgba(0,0,0,1) 94%);
-}
-.AOS{
-  background: rgb(77,79,77);
-  background: radial-gradient(circle, rgba(77,79,77,1) 0%, rgba(0,0,0,1) 94%);
+.OBS {
+  background: rgb(77, 79, 77);
+  background: radial-gradient(circle, rgba(77, 79, 77, 1) 0%, rgba(0, 0, 0, 1) 94%);
 }
 
-.STMN{
-  background: rgb(24,93,111);
-background: radial-gradient(circle, rgba(24,93,111,1) 0%, rgba(52,115,131,1) 100%);
+.AOS {
+  background: rgb(77, 79, 77);
+  background: radial-gradient(circle, rgba(77, 79, 77, 1) 0%, rgba(0, 0, 0, 1) 94%);
 }
 
-.PLAT{
-  background: rgb(209,0,0);
-background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+.STMN {
+  background: rgb(24, 93, 111);
+  background: radial-gradient(circle, rgba(24, 93, 111, 1) 0%, rgba(52, 115, 131, 1) 100%);
 }
-.PEARL{
-  background: rgb(209,0,0);
-  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+
+.PLAT {
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
 }
-.RUBY{
+
+.PEARL {
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
+}
+
+.RUBY {
   /* background: rgb(98,0,0);
   background: radial-gradient(circle, rgba(98,0,0,1) 0%, rgba(191,0,0,1) 100%); */
-  background: rgb(209,0,0);
-  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
 }
-.DMD{
-  background: rgb(209,0,0);
-background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+
+.DMD {
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
 }
-.AMBER{
-  background: rgb(209,0,0);
-background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+
+.AMBER {
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
 }
-.ENIGMA{
-  background: rgb(61,38,154);
-background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
+
+.ENIGMA {
+  background: rgb(61, 38, 154);
+  background: radial-gradient(circle, rgba(61, 38, 154, 1) 0%, rgba(23, 0, 115, 1) 100%);
 }
-.RNT{
-  background: rgb(61,38,154);
-background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
+
+.RNT {
+  background: rgb(61, 38, 154);
+  background: radial-gradient(circle, rgba(61, 38, 154, 1) 0%, rgba(23, 0, 115, 1) 100%);
 }
-.PE{
-  background: rgb(61,38,154);
-background: radial-gradient(circle, rgba(61,38,154,1) 0%, rgba(23,0,115,1) 100%);
+
+.PE {
+  background: rgb(61, 38, 154);
+  background: radial-gradient(circle, rgba(61, 38, 154, 1) 0%, rgba(23, 0, 115, 1) 100%);
 }
-.TR{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.TR {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.DTY{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.DTY {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.L4O{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.L4O {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.MEXA{
-  background: rgb(0,104,71);
-  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
+
+.MEXA {
+  background: rgb(0, 104, 71);
+  background: radial-gradient(circle, rgba(0, 104, 71, 1) 0%, rgba(3, 36, 25, 1) 100%);
 }
-.ZAFIRO{
-  background: rgb(0,104,71);
-  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
+
+.ZAFIRO {
+  background: rgb(0, 104, 71);
+  background: radial-gradient(circle, rgba(0, 104, 71, 1) 0%, rgba(3, 36, 25, 1) 100%);
 }
-.AMT{
-  background: rgb(0,104,71);
-  background: radial-gradient(circle, rgba(0,104,71,1) 0%, rgba(3,36,25,1) 100%);
+
+.AMT {
+  background: rgb(0, 104, 71);
+  background: radial-gradient(circle, rgba(0, 104, 71, 1) 0%, rgba(3, 36, 25, 1) 100%);
 }
-.HOENN{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.HOENN {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.BNT{
-  background: rgb(209,0,0);
-  background: radial-gradient(circle, rgba(209,0,0,1) 0%, rgba(131,1,1,1) 100%);
+
+.BNT {
+  background: rgb(209, 0, 0);
+  background: radial-gradient(circle, rgba(209, 0, 0, 1) 0%, rgba(131, 1, 1, 1) 100%);
 }
+
 /* DORADO */
-.AD{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+.AD {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.NS{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.NS {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.D2X1500{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.D2X1500 {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.AOGIRI{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.AOGIRI {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.BD{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.BD {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.DBO{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.DBO {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
-.GGG{
-  background: rgb(241,210,128);
-  background: radial-gradient(circle, rgba(241,210,128,1) 0%, rgba(200,145,16,1) 100%);
+
+.GGG {
+  background: rgb(241, 210, 128);
+  background: radial-gradient(circle, rgba(241, 210, 128, 1) 0%, rgba(200, 145, 16, 1) 100%);
 }
 
 /* AMARILLO */
-.PSY{
-  background: rgb(255,196,0);
-  background: radial-gradient(circle, rgba(255,196,0,1) 0%, rgba(230,243,63,1) 100%);
+.PSY {
+  background: rgb(255, 196, 0);
+  background: radial-gradient(circle, rgba(255, 196, 0, 1) 0%, rgba(230, 243, 63, 1) 100%);
 }
-.RNTX{
-  background: rgb(64,64,64);
-  background: radial-gradient(circle, rgba(64,64,64,1) 0%, rgba(19,19,19,1) 100%);
+
+.RNTX {
+  background: rgb(64, 64, 64);
+  background: radial-gradient(circle, rgba(64, 64, 64, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
 
 /* ROSA */
-.S7Z{
-  background: rgb(254,56,144);
-background: radial-gradient(circle, rgba(254,56,144,1) 0%, rgba(210,0,94,1) 100%);
+.S7Z {
+  background: rgb(254, 56, 144);
+  background: radial-gradient(circle, rgba(254, 56, 144, 1) 0%, rgba(210, 0, 94, 1) 100%);
 }
 
-.TSR{
-  background: rgb(240,10,136);
-  background: radial-gradient(circle, rgba(240,10,136,1) 0%, rgba(255,63,168,1) 100%);
+.TSR {
+  background: rgb(240, 10, 136);
+  background: radial-gradient(circle, rgba(240, 10, 136, 1) 0%, rgba(255, 63, 168, 1) 100%);
 }
 
-.SPACE{
+.SPACE {
   background: #AD0D67;
-background: radial-gradient(circle, rgba(173, 13, 103, 1) 0%, rgba(115, 31, 119, 1) 100%);
+  background: radial-gradient(circle, rgba(173, 13, 103, 1) 0%, rgba(115, 31, 119, 1) 100%);
 }
 
 
-.PDC{
+.PDC {
   background: #ecbb09;
-  border-bottom: 5px solid #c4342c ;
+  border-bottom: 5px solid #c4342c;
 }
-.TAD{
+
+.TAD {
 
   background: #ff6f00;
-  background: radial-gradient(circle, rgba(255, 111, 0, 1) 0%, rgba(253, 127, 28, 1) 100%);}
-.ZTG{
-  background: rgb(240,241,128);
-  background: radial-gradient(circle, rgba(240,241,128,1) 0%, rgba(238,240,128,1) 1%, rgba(0,170,142,1) 100%);
+  background: radial-gradient(circle, rgba(255, 111, 0, 1) 0%, rgba(253, 127, 28, 1) 100%);
 }
 
-.MT{
-  background: rgb(240,241,128);
-  background: radial-gradient(circle, rgba(240,241,128,1) 0%, rgba(238,240,128,1) 1%, rgba(0,170,142,1) 100%);
+.ZTG {
+  background: rgb(240, 241, 128);
+  background: radial-gradient(circle, rgba(240, 241, 128, 1) 0%, rgba(238, 240, 128, 1) 1%, rgba(0, 170, 142, 1) 100%);
 }
-.SPH{
+
+.MT {
+  background: rgb(240, 241, 128);
+  background: radial-gradient(circle, rgba(240, 241, 128, 1) 0%, rgba(238, 240, 128, 1) 1%, rgba(0, 170, 142, 1) 100%);
+}
+
+.SPH {
   background: #27241d;
-  border-bottom: 5px solid #eae4d8 ;
-}
-.EVL{
-  background: rgb(255,226,178);
-  background: radial-gradient(circle, rgba(255,226,178,1) 0%, rgba(246,170,40,1) 100%);
+  border-bottom: 5px solid #eae4d8;
 }
 
-.RAP{
+.EVL {
+  background: rgb(255, 226, 178);
+  background: radial-gradient(circle, rgba(255, 226, 178, 1) 0%, rgba(246, 170, 40, 1) 100%);
+}
+
+.RAP {
   background: #F41413;
-  border-bottom: 5px solid #c90404 ;
-}
-.AEP{
-  background: rgb(56,35,4);
-  background: linear-gradient(180deg, rgba(56,35,4,1) 10%, rgba(183,131,21,1) 100%);
+  border-bottom: 5px solid #c90404;
 }
 
-.ETERNAL{
-  background: rgb(26,67,111);
-background: linear-gradient(180deg, rgba(26,67,111,1) 10%, rgba(0,0,0,1) 100%);
+.AEP {
+  background: rgb(56, 35, 4);
+  background: linear-gradient(180deg, rgba(56, 35, 4, 1) 10%, rgba(183, 131, 21, 1) 100%);
+}
+
+.ETERNAL {
+  background: rgb(26, 67, 111);
+  background: linear-gradient(180deg, rgba(26, 67, 111, 1) 10%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* NARANJA */
-.TF{
-  background: rgb(255,167,55); 
-  background: radial-gradient(circle, rgba(255,167,55,1) 0%, rgba(255,143,0,1) 100%);
+.TF {
+  background: rgb(255, 167, 55);
+  background: radial-gradient(circle, rgba(255, 167, 55, 1) 0%, rgba(255, 143, 0, 1) 100%);
 }
 
-.TM{
+.TM {
   background: #202357;
   background: radial-gradient(circle, rgba(32, 35, 87, 1) 0%, rgba(19, 20, 52, 1) 100%);
 }
 
-.SCXF{
+.SCXF {
   background: #303030;
-background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* AZUL */
-.TUT{
-  background: rgb(2,126,222);
-  background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
+.TUT {
+  background: rgb(2, 126, 222);
+  background: radial-gradient(circle, rgba(2, 126, 222, 1) 10%, rgba(0, 144, 255, 1) 90%);
 }
 
-.TUTW{
-  background: rgb(2,126,222);
-  background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
+.TUTW {
+  background: rgb(2, 126, 222);
+  background: radial-gradient(circle, rgba(2, 126, 222, 1) 10%, rgba(0, 144, 255, 1) 90%);
 }
-.CL{
-  background: rgb(2,126,222);
-  background: radial-gradient(circle, rgba(2,126,222,1) 10%, rgba(0,144,255,1) 90%);
+
+.CL {
+  background: rgb(2, 126, 222);
+  background: radial-gradient(circle, rgba(2, 126, 222, 1) 10%, rgba(0, 144, 255, 1) 90%);
 }
-.FNX{
+
+.FNX {
   background: #0c2aa2;
-  border-bottom: 5px solid #000000 ;
-}
-.VNM{
-  background: rgb(0,73,235);
-  background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
-}
-.RK{
-  background: rgb(0,73,235);
-  background: radial-gradient(circle, rgba(0,73,235,1) 10%, rgba(91,138,242,1) 90%);
-}
-.DARK{
-  background: rgb(12,12,134);
-  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
-}
-.GX{
-  background: rgb(12,12,134);
-  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
+  border-bottom: 5px solid #000000;
 }
 
-.NEO{
-  background: rgb(12,12,134);
-  background: radial-gradient(circle, rgba(12,12,134,1) 0%, rgba(0,0,255,1) 100%);
+.VNM {
+  background: rgb(0, 73, 235);
+  background: radial-gradient(circle, rgba(0, 73, 235, 1) 10%, rgba(91, 138, 242, 1) 90%);
 }
 
-.FTB{
-  background: rgb(11,73,96);
-  background: radial-gradient(circle, rgba(11,73,96,1) 0%, rgba(16,105,138,1) 100%);
+.RK {
+  background: rgb(0, 73, 235);
+  background: radial-gradient(circle, rgba(0, 73, 235, 1) 10%, rgba(91, 138, 242, 1) 90%);
+}
+
+.DARK {
+  background: rgb(12, 12, 134);
+  background: radial-gradient(circle, rgba(12, 12, 134, 1) 0%, rgba(0, 0, 255, 1) 100%);
+}
+
+.GX {
+  background: rgb(12, 12, 134);
+  background: radial-gradient(circle, rgba(12, 12, 134, 1) 0%, rgba(0, 0, 255, 1) 100%);
+}
+
+.NEO {
+  background: rgb(12, 12, 134);
+  background: radial-gradient(circle, rgba(12, 12, 134, 1) 0%, rgba(0, 0, 255, 1) 100%);
+}
+
+.FTB {
+  background: rgb(11, 73, 96);
+  background: radial-gradient(circle, rgba(11, 73, 96, 1) 0%, rgba(16, 105, 138, 1) 100%);
 }
 
 
-.EA{
-  background: rgb(11,73,96);
-  background: radial-gradient(circle, rgba(11,73,96,1) 0%, rgba(16,105,138,1) 100%);
+.EA {
+  background: rgb(11, 73, 96);
+  background: radial-gradient(circle, rgba(11, 73, 96, 1) 0%, rgba(16, 105, 138, 1) 100%);
 }
 
-.VOLT{
+.VOLT {
   background: #0c2aa2;
-  border-bottom: 5px solid #000000 ;
+  border-bottom: 5px solid #000000;
 }
 
 /* .COL{
@@ -866,17 +921,18 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
 } */
 
 /* ROJO */
-.SM{
-  background: rgb(150,17,13);
-  background: radial-gradient(circle, rgba(150,17,13,1) 0%, rgba(175,26,21,1) 100%);
+.SM {
+  background: rgb(150, 17, 13);
+  background: radial-gradient(circle, rgba(150, 17, 13, 1) 0%, rgba(175, 26, 21, 1) 100%);
 }
-.OVG{
-  background: rgb(150,17,13);
-  background: radial-gradient(circle, rgba(150,17,13,1) 0%, rgba(175,26,21,1) 100%);
+
+.OVG {
+  background: rgb(150, 17, 13);
+  background: radial-gradient(circle, rgba(150, 17, 13, 1) 0%, rgba(175, 26, 21, 1) 100%);
 }
 
 
-.hielo{
+.hielo {
   background-image: url(/assets/backgrounds/hielo-back.png);
   background-color: rgb(2, 2, 43);
   background-repeat: no-repeat;
@@ -885,12 +941,12 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
 
 
 
-.exo-style{
-  color: #ffffff; 
-  background-image: linear-gradient(180deg, #ffffff 48%, #D7D1EB 60%, #ffffff 84%); 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+.exo-style {
+  color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 48%, #D7D1EB 60%, #ffffff 84%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 900 !important;
 
@@ -898,45 +954,45 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
 
 
 .exo-style-black {
-    color: #000000;
-    background-image: linear-gradient(180deg, #000000 48%, #414141 60%, #000000 84%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: italic;
-    font-weight: 900 !important;
+  color: #000000;
+  background-image: linear-gradient(180deg, #000000 48%, #414141 60%, #000000 84%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 900 !important;
 }
 
-.bg-league-in{
+.bg-league-in {
   background: #0d48ec !important;
 }
 
-.bg-updates{
-  background-image: linear-gradient( 85.2deg,  rgba(33,3,40,1) 7.5%, rgba(65,5,72,1) 88.7% ) !important;
+.bg-updates {
+  background-image: linear-gradient(85.2deg, rgba(33, 3, 40, 1) 7.5%, rgba(65, 5, 72, 1) 88.7%) !important;
 }
 
 
-.bg-home{
-  background:#f2f3f8
+.bg-home {
+  background: #f2f3f8
 }
 
 
 
-.bg-promo{
-background-color: #0000a8;
-opacity: 1;
-background-image: radial-gradient(circle at center center, #444cf7, #0000a8), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 10px, transparent 20px, transparent 10px);
-background-blend-mode: multiply;
+.bg-promo {
+  background-color: #0000a8;
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #444cf7, #0000a8), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
 }
 
 
-.indigo-yellow{
+.indigo-yellow {
   background: #ffbe00;
 
 }
 
 
-.poster{
+.poster {
   background-image: url(/assets/backgrounds/pokemon-unite-.jpg);
   background-color: #f8b119;
 
@@ -947,136 +1003,143 @@ background-blend-mode: multiply;
 
 
 
-.bg-play-match{
-  background: rgb(0,255,8) !important;
-background: radial-gradient(circle, rgba(0,255,8,1) 0%, rgba(0,112,45,1) 100%) !important;
-color: #ffffff !important;
+.bg-play-match {
+  background: rgb(0, 255, 8) !important;
+  background: radial-gradient(circle, rgba(0, 255, 8, 1) 0%, rgba(0, 112, 45, 1) 100%) !important;
+  color: #ffffff !important;
 }
 
-.bg-noplay-match{
-  background: rgb(255,0,0) !important;
-background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(89,0,0,1) 100%) !important;
-color: #ffffff !important;
+.bg-noplay-match {
+  background: rgb(255, 0, 0) !important;
+  background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(89, 0, 0, 1) 100%) !important;
+  color: #ffffff !important;
 }
 
 
-.sup{
+.sup {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%) !important;
-color: #fff;
+  color: #fff;
 
-  }
-  .win{
+}
+
+.win {
   background: green !important;
   color: white !important;
   border: none !important;
-  }
-  .loss{
+}
+
+.loss {
   background: red !important;
   color: white !important;
   border: none !important;
-  }
-  .one{
-  background:yellow !important;
+}
+
+.one {
+  background: yellow !important;
   color: #000 !important;
   border: none !important;
-  }
-  
-  .des{
-  background:rgb(255, 0, 195) !important;
+}
+
+.des {
+  background: rgb(255, 0, 195) !important;
   color: #ffffff !important;
   border: none !important;
-  }
-  
-  .rea{
-      background:rgb(0, 0, 0) !important;
-      color: white !important;
-      border: none !important;
-  }
+}
 
-  .LIGA-INDIGO{
-    background: rgb(68,76,247);
-background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%);
-  }
+.rea {
+  background: rgb(0, 0, 0) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.LIGA-INDIGO {
+  background: rgb(68, 76, 247);
+  background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%);
+}
 
 
 
-  .LG{  
-   border: 5px solid rgb(68,76,247);
-   @media screen and (max-width: 472px) {
-    border: 3px solid rgb(68,76,247);
-   } 
+.LG {
+  border: 5px solid rgb(68, 76, 247);
 
-  }
-  .CXF{
-   border: 5px solid orange; 
-   
-   @media screen and (max-width: 472px) {
-    border: 3px solid orange; 
-   }
+  @media screen and (max-width: 472px) {
+    border: 3px solid rgb(68, 76, 247);
   }
 
-  .CS{
-    border-top: 5px solid #fa450e;
-    border-left: 5px solid #fa450e;
-    border-right: 5px solid #8846ab;
-    border-bottom: 5px solid #8846ab;
+}
 
+.CXF {
+  border: 5px solid orange;
 
-    @media screen and (max-width: 472px) {
-      border-top: 3px solid #fa450e;
-      border-left: 3px solid #fa450e;
-      border-right: 3px solid #8846ab;
-      border-bottom: 3px solid #8846ab;
-   }
+  @media screen and (max-width: 472px) {
+    border: 3px solid orange;
   }
+}
+
+.CS {
+  border-top: 5px solid #fa450e;
+  border-left: 5px solid #fa450e;
+  border-right: 5px solid #8846ab;
+  border-bottom: 5px solid #8846ab;
 
 
-
-
-  .drop-white{
-    filter: drop-shadow(0px 0px 6px #ffffff);
+  @media screen and (max-width: 472px) {
+    border-top: 3px solid #fa450e;
+    border-left: 3px solid #fa450e;
+    border-right: 3px solid #8846ab;
+    border-bottom: 3px solid #8846ab;
   }
-
-
-
-  .AGIL{
-    background: #29a5e3;
-  }
-  .EQUILIBRADO{
-    background: #ce5fd3;
-  }
-
-  .OFENSIVO{
-    background: #f16c38
-  }
+}
 
 
 
 
-  .black-dark{
-    background: #000 !important;
-    color: white !important;
-  }
+.drop-white {
+  filter: drop-shadow(0px 0px 6px #ffffff);
+}
 
-  .yellow-dark{
-    background: #fedc08 !important;
-    color: white !important;
-  }
 
-  .bg-flyz{
-    background: #ad0051;
-    background: radial-gradient(circle, rgba(173, 0, 81, 1) 0%, rgba(216, 49, 127, 1) 100%);
-  }
 
-  .bgCXF{
+.AGIL {
+  background: #29a5e3;
+}
+
+.EQUILIBRADO {
+  background: #ce5fd3;
+}
+
+.OFENSIVO {
+  background: #f16c38
+}
+
+
+
+
+.black-dark {
+  background: #000 !important;
+  color: white !important;
+}
+
+.yellow-dark {
+  background: #fedc08 !important;
+  color: white !important;
+}
+
+.bg-flyz {
+  background: #ad0051;
+  background: radial-gradient(circle, rgba(173, 0, 81, 1) 0%, rgba(216, 49, 127, 1) 100%);
+}
+
+.bgCXF {
   background: #ffa74a;
-background: radial-gradient(circle, rgba(255, 167, 74, 1) 0%, rgba(235, 121, 0, 1) 100%);
-  }
+  background: radial-gradient(circle, rgba(255, 167, 74, 1) 0%, rgba(235, 121, 0, 1) 100%);
+}
 
-  .bgRules{
-    background: rgb(68,76,247) !important;
-background: radial-gradient(circle, rgba(68,76,247,1) 10%, rgba(0,0,168,1) 90%) !important;
-color: #fff;
-    padding: 20px 0 10px 0;
-    margin: 50px 0;
-  }
+.bgRules {
+  background: rgb(68, 76, 247) !important;
+  background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
+  color: #fff;
+  padding: 20px 0 10px 0;
+  margin: 50px 0;
+  border-radius: 10px;
+}
