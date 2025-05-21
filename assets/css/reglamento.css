@@ -42,6 +42,7 @@
         color: #2e2e2e;
         left: 10px;
         margin: 0;
+        width: 96%;
 
         @media screen and (max-width: 472px) {
             font-size: 12px;
@@ -123,10 +124,28 @@
 
 .nav-link.active .tab-text {
 
-    color: #000000;
     @media screen and (max-width: 472px) {
         display: inline;
     }
 
 
+}
+
+
+.high{
+
+    height: 250px;
+
+     @media screen and (max-width: 1024px) {
+      height: 270px !important;
+    }
+   
+    @media screen and (max-width: 768px) {
+      height: 310px !important;
+    }
+
+     @media screen and (max-width: 472px) {
+      height: 335px !important;
+    }
+    
 }

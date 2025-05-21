@@ -88,11 +88,14 @@
                             data: null,
                             render: function (data, type, row) {
                                 return `
-                                    <button class="btn btn-sm btn-warning btn-editar" data-id="${equipos.indexOf(row)}"><i class="ti ti-shield-code"></i></button>
+                                <div class="d-flex justify-content-center align-items-center">
+                                   <button class="btn btn-sm btn-warning btn-editar" data-id="${equipos.indexOf(row)}"><i class="ti ti-shield-code"></i></button>
                                     <button class="btn btn-sm btn-toggle-activo ${row.activo ? 'btn-danger' : 'btn-success'}" data-id="${equipos.indexOf(row)}">
                                         ${row.activo ? '<i class="ti ti-shield-lock"></i>' : '<i class="ti ti-shield-lock-filled"></i>'}
                                     </button>
                                      <button class="btn btn-sm btn-info btn-descargar-equipo" data-id="${equipos.indexOf(row)}"><i class="ti ti-shield-down"></i></button>
+                               
+                                </div> 
                                 `;
                             }
                         }

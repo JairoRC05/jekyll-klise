@@ -987,8 +987,23 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
 
 
 .indigo-yellow {
-  background: #ffbe00;
+background: #ffbe00 !important;
+color: rgb(255, 255, 255) !important;
+}
 
+.btn-indigo-yellow {
+background: #ffbe00 !important;
+padding: 0 10px;
+color: rgb(255, 255, 255) !important;
+border-radius: 10px;
+border: none;
+}
+.btn-indigo-yellow:disabled {
+background: #ffdd75 !important;
+padding: 0 10px;
+color: rgb(255, 255, 255) !important;
+border-radius: 10px;
+border: none;
 }
 
 
@@ -1143,3 +1158,4 @@ background: radial-gradient(circle, rgba(71,17,121,1) 0%, rgba(26,3,47,1) 100%);
   margin: 50px 0;
   border-radius: 10px;
 }
+
