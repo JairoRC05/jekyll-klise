@@ -1,0 +1,289 @@
+{
+  "encuentros": [
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "DBO",
+      "mvpsLocal": [
+        {
+          "nombre": "STMN・Pachy",
+          "equipo": "STMN",
+          "genero": "male1"
+        },
+        {
+          "nombre": "STMN・Regi",
+          "equipo": "STMN",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Muertin木火",
+          "equipo": "DBO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "ttvStarbae01",
+          "equipo": "DBO",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "PE",
+      "equipoVisitante": "ZAFIRO",
+      "mvpsLocal": [
+        {
+          "nombre": "JDA • 从ortem",
+          "equipo": "PE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "PL・么quario",
+          "equipo": "PE",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa • Cuatzo",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "FTB",
+      "equipoVisitante": "RK",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "TM",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・Suo力",
+          "equipo": "NEO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・Luffy12",
+          "equipo": "NEO",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "SoyYasuッ",
+          "equipo": "TM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "cristoff",
+          "equipo": "TM",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "DTY",
+      "equipoVisitante": "SM",
+      "mvpsLocal": [
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "$M • Perron",
+          "equipo": "SM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "$M・Finn",
+          "equipo": "SM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "$M・Finn",
+          "equipo": "SM",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "PLAGA",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "TUT",
+      "equipoVisitante": "CL",
+      "mvpsLocal": [
+        {
+          "nombre": "Akane秋",
+          "equipo": "TUT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TuT • Bren",
+          "equipo": "TUT",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Jedm愛",
+          "equipo": "CL",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "TUTW",
+      "equipoVisitante": "AMT",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "ENIGMA",
+      "equipoVisitante": "RNTX",
+      "mvpsLocal": [
+        {
+          "nombre": "SPC・Lolfe教",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SPC・May",
+          "equipo": "ENIGMA",
+          "genero": "female1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Lewxen愛",
+          "equipo": "RNTX",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Latios才",
+          "equipo": "RNTX",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "OBS",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        {
+          "nombre": "MeXa・Quique",
+          "equipo": "OBS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・SoUriS",
+          "equipo": "OBS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・SoUriS",
+          "equipo": "OBS",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ムlixendカモ",
+          "equipo": "TAD",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Kaldnese氷",
+          "equipo": "TAD",
+          "genero": "female1"
+        },
+        {
+          "nombre": "ムlixendカモ",
+          "equipo": "TAD",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "NS",
+      "equipoVisitante": "SPACE",
+      "mvpsLocal": [
+        {
+          "nombre": "IAMTOKITO",
+          "equipo": "NS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Hades地獄",
+          "equipo": "NS",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Golditto.TTV",
+          "equipo": "SPACE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "宙V・Hungry",
+          "equipo": "SPACE",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "AOGIRI",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・ČryptoX",
+          "equipo": "GX",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・ČryptoX",
+          "equipo": "GX",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "NekiusTTV",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Hammerfall9",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        }
+      ]
+    }
+  ]
+}

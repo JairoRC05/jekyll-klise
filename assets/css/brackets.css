@@ -1291,6 +1291,7 @@
 
       .card-round-promo{
         display: grid;
+        width: 40px;
        
         .llave{
           background: rgb(0, 110, 0);
@@ -1729,3 +1730,4 @@
 
   
   }
+

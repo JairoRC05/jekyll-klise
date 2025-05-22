@@ -1,0 +1,892 @@
+---
+layout:
+permalink: /generador-de-tickets.html
+title: Tickets | LIGA INDIGO
+---
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Inscripciones a Torneos de Esports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <style>
+        /* Fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Estilo para el ticket */
+        .ticket-container {
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 400px; /* Ancho máximo para el ticket */
+            margin-bottom: 20px;
+        }
+
+        .ticket-header {
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+            padding: 1.5rem; /* p-6 */
+            text-align: center;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        .ticket-body {
+            padding: 1.5rem; /* p-6 */
+        }
+
+        .ticket-footer {
+            background-color: #e0e7ff; /* indigo-100 */
+            padding: 1rem; /* p-4 */
+            text-align: center;
+            font-size: 0.875rem; /* text-sm */
+            color: #4f46e5; /* indigo-600 */
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        /* Línea perforada */
+        .perforated-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(90deg, #e5e7eb 0, #e5e7eb 5px, transparent 5px, transparent 10px); /* gray-200 */
+            margin-top: -5px; /* Ajuste para centrar */
+        }
+        .perforated-top {
+            top: 25%; /* Ajusta la posición de la línea superior */
+        }
+        .perforated-bottom {
+            bottom: 25%; /* Ajusta la posición de la línea inferior */
+        }
+
+        /* Estilos para los círculos de la perforación */
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #f0f2f5; /* Color de fondo del body */
+            border-radius: 50%;
+            top: 25%; /* Misma altura que la línea perforada */
+            transform: translateY(-50%);
+        }
+        .circle-left {
+            left: -10px;
+        }
+        .circle-right {
+            right: -10px;
+        }
+        .circle-bottom-left {
+            bottom: 25%;
+            left: -10px;
+            transform: translateY(50%);
+        }
+        .circle-bottom-right {
+            bottom: 25%;
+            right: -10px;
+            transform: translateY(50%);
+        }
+
+        /* Estilo para el contenedor principal de la aplicación */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* gap-8 */
+            width: 100%;
+            max-width: 900px; /* Ancho máximo para el contenedor de la aplicación */
+            background-color: #ffffff;
+            padding: 2rem; /* p-8 */
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); /* shadow-2xl */
+        }
+
+        @media (min-width: 768px) { /* md: breakpoint */
+            .app-container {
+                flex-direction: row;
+            }
+            .input-section {
+                flex: 1;
+            }
+            .preview-section {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /* Estilos para DataTables */
+        #registrationTable_wrapper {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        #registrationTable {
+            width: 100% !important; /* Importante para que DataTables ajuste el ancho */
+        }
+        #registrationTable th, #registrationTable td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
+        }
+        #registrationTable th {
+            background-color: #f9fafb; /* gray-50 */
+            font-weight: 600;
+            color: #4b5563; /* gray-700 */
+        }
+        #registrationTable tr:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        .dataTables_filter input {
+            border: 1px solid #d1d5db; /* gray-300 */
+            border-radius: 0.375rem; /* rounded-md */
+            padding: 0.5rem 0.75rem;
+            margin-left: 0.5rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .dataTables_length select {
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            margin-left: 0.5rem;
+        }
+        .dataTables_info, .dataTables_paginate {
+            margin-top: 1rem;
+            color: #6b7280; /* gray-500 */
+        }
+        .dataTables_paginate .paginate_button {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            margin-left: 0.25rem;
+            cursor: pointer;
+        }
+        .dataTables_paginate .paginate_button.current,
+        .dataTables_paginate .paginate_button:hover {
+            background-color: #4f46e5; /* indigo-600 */
+            color: white !important;
+            border-color: #4f46e5;
+        }
+        .dataTables_paginate .paginate_button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+   <div class="container">
+     <div class="app-container">
+        <div class="input-section flex-1 p-6 bg-white rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Inscripción/Reinscripción a Torneo de Esports</h2>
+            <div class="mb-4">
+                <label for="receiptID" class="block text-sm font-medium text-gray-700 mb-1">ID de Comprobante</label>
+                <input type="text" id="receiptID" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. #2024-001" readonly>
+            </div>
+            <div class="mb-4">
+                <label for="tournamentName" class="block text-sm font-medium text-gray-700 mb-1">Nombre del Torneo <span class="text-red-500">*</span></label>
+                <input type="text" id="tournamentName" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Torneo de Valorant">
+            </div>
+            
+            <div class="mb-4 flex items-center">
+                <input type="checkbox" id="enableGamePlatform" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                <label for="enableGamePlatform" class="ml-2 block text-sm font-medium text-gray-700">Incluir Juego y Plataforma</label>
+            </div>
+
+            <div class="mb-4" id="gameTitleGroup">
+                <label for="gameTitle" class="block text-sm font-medium text-gray-700 mb-1">Juego</label>
+                <input type="text" id="gameTitle" list="gameOptions" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. Valorant, League of Legends" disabled>
+                <datalist id="gameOptions">
+                    <option value="Valorant"></option>
+                    <option value="League of Legends"></option>
+                    <option value="Counter-Strike 2"></option>
+                    <option value="Dota 2"></option>
+                    <option value="Overwatch 2"></option>
+                    <option value="Apex Legends"></option>
+                    <option value="Fortnite"></option>
+                    <option value="Rocket League"></option>
+                    <option value="Call of Duty"></option>
+                    <option value="Rainbow Six Siege"></option>
+                    <option value="StarCraft II"></option>
+                    <option value="Hearthstone"></option>
+                    <option value="Mobile Legends: Bang Bang"></option>
+                    <option value="PUBG Mobile"></option>
+                    <option value="Free Fire"></option>
+                </datalist>
+            </div>
+            <div class="mb-4" id="platformGroup">
+                <label for="platform" class="block text-sm font-medium text-gray-700 mb-1">Plataforma</label>
+                <input type="text" id="platform" list="platformOptions" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. PC, PS5, Móvil" disabled>
+                <datalist id="platformOptions">
+                    <option value="PC"></option>
+                    <option value="PlayStation 5"></option>
+                    <option value="Xbox Series X/S"></option>
+                    <option value="Nintendo Switch"></option>
+                    <option value="Móvil (Android/iOS)"></option>
+                </datalist>
+            </div>
+
+            <div class="mb-4">
+                <label for="registrationType" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Inscripción <span class="text-red-500">*</span></label>
+                <select id="registrationType" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                    <option value="Inscripción">Inscripción</option>
+                    <option value="Reinscripción">Reinscripción</option>
+                    <option value="Pago de Premio">Pago de Premio</option>
+                    <option value="Reembolso">Reembolso</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="registrationFee" class="block text-sm font-medium text-gray-700 mb-1">Cuota de Inscripción</label>
+                <input type="text" id="registrationFee" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="$15.00 USD">
+            </div>
+            <div class="mb-4">
+                <label for="playerTeamID" class="block text-sm font-medium text-gray-700 mb-1">ID de Jugador/Equipo <span class="text-red-500">*</span></label>
+                <input type="text" id="playerTeamID" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="GamerTag / Nombre del Equipo">
+            </div>
+            
+            <div class="mb-4 flex items-center">
+                <input type="checkbox" id="enableTournamentDateTime" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                <label for="enableTournamentDateTime" class="ml-2 block text-sm font-medium text-gray-700">Incluir Fecha y Hora del Torneo</label>
+            </div>
+
+            <div class="mb-4" id="tournamentDateGroup">
+                <label for="tournamentDate" class="block text-sm font-medium text-gray-700 mb-1">Fecha del Torneo</label>
+                <input type="date" id="tournamentDate" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" disabled>
+            </div>
+            <div class="mb-4" id="tournamentTimeGroup">
+                <label for="tournamentTime" class="block text-sm font-medium text-gray-700 mb-1">Hora del Torneo</label>
+                <input type="time" id="tournamentTime" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" disabled>
+            </div>
+
+            <div class="mb-4">
+                <label for="organizerContact" class="block text-sm font-medium text-gray-700 mb-1">Contacto del Organizador</label>
+                <input type="text" id="organizerContact" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="ej. discord.gg/torneo, email@ejemplo.com">
+            </div>
+            <div class="mb-6">
+                <label for="registrationNotes" class="block text-sm font-medium text-gray-700 mb-1">Notas Importantes</label>
+                <textarea id="registrationNotes" rows="3" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Reglas de conducta, avisos importantes"></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label for="headerColorInput" class="block text-sm font-medium text-gray-700 mb-1">Color del Encabezado del Ticket</label>
+                <input type="color" id="headerColorInput" class="w-full h-10 border border-gray-300 rounded-md cursor-pointer" value="#4f46e5">
+            </div>
+
+            <button id="downloadTicketBtn" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                Guardar y Descargar Comprobante
+            </button>
+        </div>
+
+        <div class="preview-section flex-1 flex items-center justify-center p-6">
+            <div id="ticketPreview" class="ticket-container">
+                <div class="ticket-header">
+                    <h3 class="text-2xl font-bold" id="previewTournamentName">Nombre del Torneo</h3>
+                </div>
+                <div class="perforated-line perforated-top"></div>
+                <div class="circle circle-left"></div>
+                <div class="circle circle-right"></div>
+
+                <div class="ticket-body text-gray-800">
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">ID Comprobante:</p>
+                        <p class="text-lg font-semibold" id="previewReceiptID">ID de Comprobante</p>
+                    </div>
+                    
+                    <div class="mb-3" id="previewGameTitleGroup">
+                        <p class="text-xs text-gray-500">Juego:</p>
+                        <p class="text-lg font-semibold" id="previewGameTitle">Juego</p>
+                    </div>
+                    <div class="mb-3" id="previewPlatformGroup">
+                        <p class="text-xs text-gray-500">Plataforma:</p>
+                        <p class="text-lg font-semibold" id="previewPlatform">Plataforma</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Tipo de Inscripción:</p>
+                        <p class="text-lg font-semibold" id="previewRegistrationType">Tipo de Inscripción</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Cuota:</p>
+                        <p class="text-lg font-semibold" id="previewRegistrationFee">Cuota de Inscripción</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">ID Jugador/Equipo:</p>
+                        <p class="text-lg font-semibold" id="previewPlayerTeamID">ID de Jugador/Equipo</p>
+                    </div>
+                    
+                    <div class="mb-3" id="previewTournamentDateGroup">
+                        <p class="text-xs text-gray-500">Fecha Torneo:</p>
+                        <p class="text-lg font-semibold" id="previewTournamentDate">Fecha del Torneo</p>
+                    </div>
+                    <div class="mb-3" id="previewTournamentTimeGroup">
+                        <p class="text-xs text-gray-500">Hora Torneo:</p>
+                        <p class="text-lg font-semibold" id="previewTournamentTime">Hora del Torneo</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Contacto Organizador:</p>
+                        <p class="text-lg font-semibold" id="previewOrganizerContact">Contacto del Organizador</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Notas:</p>
+                        <p class="text-base" id="previewRegistrationNotes">Notas Importantes</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200 text-center">
+                        <p class="text-xs text-gray-500">Fecha y Hora de Emisión:</p>
+                        <p class="text-sm font-medium" id="previewDateTime">--/--/---- --:--:--</p>
+                    </div>
+                </div>
+
+                <div class="perforated-line perforated-bottom"></div>
+                <div class="circle circle-bottom-left"></div>
+                <div class="circle circle-bottom-right"></div>
+
+                <div class="ticket-footer">
+                    <p>¡Mucha suerte en el torneo!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+    <div class="w-full max-w-4xl mx-auto mt-8 p-6 bg-white rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Registros de Comprobantes</h2>
+        <div class="flex flex-wrap gap-4 mb-4">
+            <button id="exportJsonBtn" class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                Descargar Datos (JSON)
+            </button>
+            <button id="importJsonBtn" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                Importar Datos (JSON)
+            </button>
+            <input type="file" id="importFileInput" accept=".json" class="hidden">
+        </div>
+        <div class="overflow-x-auto">
+            <table id="registrationTable" class="display min-w-full">
+                <thead>
+                    <tr>
+                        <th>ID Comprobante</th>
+                        <th>Torneo</th>
+                        <th>Juego</th>
+                        <th>Plataforma</th>
+                        <th>Tipo</th>
+                        <th>Cuota</th>
+                        <th>Jugador/Equipo</th>
+                        <th>Fecha Torneo</th>
+                        <th>Hora Torneo</th>
+                        <th>Contacto</th>
+                        <th>Notas</th>
+                        <th>Fecha Emisión</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
+            <h3 class="text-lg font-bold mb-4">Confirmar Eliminación</h3>
+            <p class="mb-6">¿Estás seguro de que quieres eliminar este registro?</p>
+            <div class="flex justify-end space-x-4">
+                <button id="cancelDeleteBtn" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancelar</button>
+                <button id="confirmDeleteBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script>
+        // Obtener referencias a los elementos del DOM
+        const receiptIDInput = document.getElementById('receiptID');
+        const tournamentNameInput = document.getElementById('tournamentName');
+        const enableGamePlatformCheckbox = document.getElementById('enableGamePlatform');
+        const gameTitleGroup = document.getElementById('gameTitleGroup');
+        const platformGroup = document.getElementById('platformGroup');
+        const gameTitleInput = document.getElementById('gameTitle');
+        const platformInput = document.getElementById('platform');
+        const registrationTypeSelect = document.getElementById('registrationType');
+        const registrationFeeInput = document.getElementById('registrationFee');
+        const playerTeamIDInput = document.getElementById('playerTeamID');
+        const enableTournamentDateTimeCheckbox = document.getElementById('enableTournamentDateTime');
+        const tournamentDateGroup = document.getElementById('tournamentDateGroup');
+        const tournamentTimeGroup = document.getElementById('tournamentTimeGroup');
+        const tournamentDateInput = document.getElementById('tournamentDate');
+        const tournamentTimeInput = document.getElementById('tournamentTime');
+        const organizerContactInput = document.getElementById('organizerContact');
+        const registrationNotesInput = document.getElementById('registrationNotes');
+        const headerColorInput = document.getElementById('headerColorInput');
+        const downloadTicketBtn = document.getElementById('downloadTicketBtn');
+        const exportJsonBtn = document.getElementById('exportJsonBtn');
+        const importJsonBtn = document.getElementById('importJsonBtn'); // Nuevo botón de importar
+        const importFileInput = document.getElementById('importFileInput'); // Nuevo input de archivo
+
+        const previewReceiptID = document.getElementById('previewReceiptID');
+        const previewTournamentName = document.getElementById('previewTournamentName');
+        const previewGameTitleGroup = document.getElementById('previewGameTitleGroup');
+        const previewPlatformGroup = document.getElementById('previewPlatformGroup');
+        const previewGameTitle = document.getElementById('previewGameTitle');
+        const previewPlatform = document.getElementById('previewPlatform');
+        const previewRegistrationType = document.getElementById('previewRegistrationType');
+        const previewRegistrationFee = document.getElementById('previewRegistrationFee');
+        const previewPlayerTeamID = document.getElementById('previewPlayerTeamID');
+        const previewTournamentDateGroup = document.getElementById('previewTournamentDateGroup');
+        const previewTournamentTimeGroup = document.getElementById('previewTournamentTimeGroup');
+        const previewTournamentDate = document.getElementById('previewTournamentDate');
+        const previewTournamentTime = document.getElementById('previewTournamentTime');
+        const previewOrganizerContact = document.getElementById('previewOrganizerContact');
+        const previewRegistrationNotes = document.getElementById('previewRegistrationNotes');
+        const previewDateTime = document.getElementById('previewDateTime');
+        const ticketPreviewContainer = document.getElementById('ticketPreview');
+        const ticketHeader = document.querySelector('.ticket-header');
+
+        const confirmationModal = document.getElementById('confirmationModal');
+        const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+        let rowToDelete = null;
+
+        let dataTable;
+        let allRegistrations = [];
+
+        function generateUniqueId() {
+            return 'COMP-' + Date.now().toString().slice(-6) + Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+        }
+
+        function toggleGamePlatformFields() {
+            const isEnabled = enableGamePlatformCheckbox.checked;
+            gameTitleInput.disabled = !isEnabled;
+            platformInput.disabled = !isEnabled;
+
+            if (isEnabled) {
+                gameTitleGroup.classList.remove('hidden');
+                platformGroup.classList.remove('hidden');
+            } else {
+                gameTitleGroup.classList.add('hidden');
+                platformGroup.classList.add('hidden');
+                gameTitleInput.value = '';
+                platformInput.value = '';
+            }
+            updateTicketPreview();
+        }
+
+        function toggleTournamentDateTimeFields() {
+            const isEnabled = enableTournamentDateTimeCheckbox.checked;
+            tournamentDateInput.disabled = !isEnabled;
+            tournamentTimeInput.disabled = !isEnabled;
+
+            if (isEnabled) {
+                tournamentDateGroup.classList.remove('hidden');
+                tournamentTimeGroup.classList.remove('hidden');
+            } else {
+                tournamentDateGroup.classList.add('hidden');
+                tournamentTimeGroup.classList.add('hidden');
+                tournamentDateInput.value = '';
+                tournamentTimeInput.value = '';
+            }
+            updateTicketPreview();
+        }
+
+        function clearForm() {
+            receiptIDInput.value = generateUniqueId();
+            tournamentNameInput.value = '';
+            registrationTypeSelect.value = 'Inscripción';
+            registrationFeeInput.value = '';
+            playerTeamIDInput.value = '';
+            organizerContactInput.value = '';
+            registrationNotesInput.value = '';
+            
+            // Cargar la última preferencia de color del encabezado o el valor por defecto
+            headerColorInput.value = localStorage.getItem('lastHeaderColor') || '#4f46e5'; 
+            
+            previewDateTime.textContent = '--/--/---- --:--:--';
+
+            enableGamePlatformCheckbox.checked = false;
+            toggleGamePlatformFields();
+            gameTitleInput.value = '';
+            platformInput.value = '';
+
+            enableTournamentDateTimeCheckbox.checked = false;
+            toggleTournamentDateTimeFields();
+            tournamentDateInput.value = '';
+            tournamentTimeInput.value = '';
+            
+            updateTicketPreview();
+        }
+
+        function loadRegistrations() {
+            try {
+                const storedData = localStorage.getItem('esportsRegistrations');
+                if (storedData) {
+                    allRegistrations = JSON.parse(storedData);
+                }
+                if (dataTable) {
+                    dataTable.destroy();
+                }
+                dataTable = $('#registrationTable').DataTable({
+                    data: allRegistrations,
+                    columns: [
+                        { data: 'receiptID' },
+                        { data: 'tournamentName' },
+                        { data: 'gameTitle' },
+                        { data: 'platform' },
+                        { data: 'registrationType' },
+                        { data: 'registrationFee' },
+                        { data: 'playerTeamID' },
+                        { data: 'tournamentDate' },
+                        { data: 'tournamentTime' },
+                        { data: 'organizerContact' },
+                        { data: 'registrationNotes' },
+                        { data: 'emissionDateTime' },
+                        {
+                            data: null,
+                            defaultContent: '<button class="edit-btn bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-sm mr-2">Editar</button><button class="delete-btn bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">Eliminar</button>',
+                            orderable: false
+                        }
+                    ],
+                    responsive: true
+                });
+
+                $('#registrationTable tbody').on('click', '.edit-btn', function () {
+                    const data = dataTable.row($(this).parents('tr')).data();
+                    populateFormForEdit(data);
+                });
+
+                $('#registrationTable tbody').on('click', '.delete-btn', function () {
+                    rowToDelete = dataTable.row($(this).parents('tr'));
+                    confirmationModal.classList.remove('hidden');
+                });
+
+            } catch (e) {
+                console.error("Error al cargar los datos de localStorage o inicializar DataTables:", e);
+                dataTable = $('#registrationTable').DataTable({
+                    data: [],
+                    columns: [
+                        { data: 'receiptID' },
+                        { data: 'tournamentName' },
+                        { data: 'gameTitle' },
+                        { data: 'platform' },
+                        { data: 'registrationType' },
+                        { data: 'registrationFee' },
+                        { data: 'playerTeamID' },
+                        { data: 'tournamentDate' },
+                        { data: 'tournamentTime' },
+                        { data: 'organizerContact' },
+                        { data: 'registrationNotes' },
+                        { data: 'emissionDateTime' },
+                        { data: null, defaultContent: '', orderable: false }
+                    ],
+                    responsive: true
+                });
+            }
+        }
+
+        function saveRegistrations() {
+            try {
+                localStorage.setItem('esportsRegistrations', JSON.stringify(allRegistrations));
+                // Guardar la última preferencia de color del encabezado
+                localStorage.setItem('lastHeaderColor', headerColorInput.value);
+            } catch (e) {
+                console.error("Error al guardar los datos en localStorage:", e);
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Error al guardar los datos localmente. Es posible que el almacenamiento esté lleno.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+            }
+        }
+
+        function populateFormForEdit(data) {
+            receiptIDInput.value = data.receiptID;
+            tournamentNameInput.value = data.tournamentName;
+            registrationTypeSelect.value = data.registrationType;
+            registrationFeeInput.value = data.registrationFee;
+            playerTeamIDInput.value = data.playerTeamID;
+            organizerContactInput.value = data.organizerContact;
+            registrationNotesInput.value = data.registrationNotes;
+            headerColorInput.value = data.headerColor || localStorage.getItem('lastHeaderColor') || '#4f46e5'; // Cargar color del encabezado
+
+            if (data.gameTitle || data.platform) {
+                enableGamePlatformCheckbox.checked = true;
+                gameTitleInput.value = data.gameTitle || '';
+                platformInput.value = data.platform || '';
+            } else {
+                enableGamePlatformCheckbox.checked = false;
+            }
+            toggleGamePlatformFields();
+
+            if (data.tournamentDate && data.tournamentTime) {
+                enableTournamentDateTimeCheckbox.checked = true;
+                tournamentDateInput.value = data.tournamentDate;
+                tournamentTimeInput.value = data.tournamentTime;
+            } else {
+                enableTournamentDateTimeCheckbox.checked = false;
+            }
+            toggleTournamentDateTimeFields();
+            updateTicketPreview();
+        }
+
+        function updateTicketPreview() {
+            previewReceiptID.textContent = receiptIDInput.value || 'ID de Comprobante';
+            previewTournamentName.textContent = tournamentNameInput.value || 'Nombre del Torneo';
+            previewRegistrationType.textContent = registrationTypeSelect.value;
+            previewRegistrationFee.textContent = registrationFeeInput.value || 'Cuota de Inscripción';
+            previewPlayerTeamID.textContent = playerTeamIDInput.value || 'ID de Jugador/Equipo';
+            previewOrganizerContact.textContent = organizerContactInput.value || 'Contacto del Organizador';
+            previewRegistrationNotes.textContent = registrationNotesInput.value || 'Notas Importantes';
+
+            ticketHeader.style.backgroundColor = headerColorInput.value;
+
+            if (enableGamePlatformCheckbox.checked && (gameTitleInput.value || platformInput.value)) {
+                previewGameTitleGroup.classList.remove('hidden');
+                previewPlatformGroup.classList.remove('hidden');
+                previewGameTitle.textContent = gameTitleInput.value || 'Juego';
+                previewPlatform.textContent = platformInput.value || 'Plataforma';
+            } else {
+                previewGameTitleGroup.classList.add('hidden');
+                previewPlatformGroup.classList.add('hidden');
+                previewGameTitle.textContent = 'Juego';
+                previewPlatform.textContent = 'Plataforma';
+            }
+
+            if (enableTournamentDateTimeCheckbox.checked && tournamentDateInput.value && tournamentTimeInput.value) {
+                previewTournamentDateGroup.classList.remove('hidden');
+                previewTournamentTimeGroup.classList.remove('hidden');
+                previewTournamentDate.textContent = new Date(tournamentDateInput.value).toLocaleDateString('es-ES');
+                previewTournamentTime.textContent = tournamentTimeInput.value;
+            } else {
+                previewTournamentDateGroup.classList.add('hidden');
+                previewTournamentTimeGroup.classList.add('hidden');
+                previewTournamentDate.textContent = 'Fecha del Torneo';
+                previewTournamentTime.textContent = 'Hora del Torneo';
+            }
+        }
+
+        // Añadir listeners a todos los inputs y al select para actualizar la previsualización en tiempo real
+        receiptIDInput.addEventListener('input', updateTicketPreview);
+        tournamentNameInput.addEventListener('input', updateTicketPreview);
+        enableGamePlatformCheckbox.addEventListener('change', toggleGamePlatformFields);
+        gameTitleInput.addEventListener('input', updateTicketPreview);
+        platformInput.addEventListener('input', updateTicketPreview);
+        registrationTypeSelect.addEventListener('change', updateTicketPreview);
+        registrationFeeInput.addEventListener('input', updateTicketPreview);
+        playerTeamIDInput.addEventListener('input', updateTicketPreview);
+        enableTournamentDateTimeCheckbox.addEventListener('change', toggleTournamentDateTimeFields);
+        tournamentDateInput.addEventListener('input', updateTicketPreview);
+        tournamentTimeInput.addEventListener('input', updateTicketPreview);
+        organizerContactInput.addEventListener('input', updateTicketPreview);
+        registrationNotesInput.addEventListener('input', updateTicketPreview);
+        headerColorInput.addEventListener('input', updateTicketPreview);
+
+        // Event listeners para el modal de confirmación de eliminación
+        cancelDeleteBtn.addEventListener('click', () => {
+            confirmationModal.classList.add('hidden');
+            rowToDelete = null;
+        });
+
+        confirmDeleteBtn.addEventListener('click', () => {
+            if (rowToDelete) {
+                const data = rowToDelete.data();
+                allRegistrations = allRegistrations.filter(reg => reg.receiptID !== data.receiptID);
+                rowToDelete.remove().draw();
+                saveRegistrations();
+                confirmationModal.classList.add('hidden');
+                rowToDelete = null;
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Registro eliminado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            }
+        });
+
+        // Función para guardar/actualizar el ticket y descargar la imagen
+        downloadTicketBtn.addEventListener('click', () => {
+            // Validación de campos obligatorios
+            if (!tournamentNameInput.value.trim() || !playerTeamIDInput.value.trim() || !registrationTypeSelect.value.trim()) {
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Por favor, completa los campos obligatorios (Nombre del Torneo, ID Jugador/Equipo, Tipo de Inscripción).';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+                return; // Detener la ejecución si la validación falla
+            }
+
+            const currentReceiptID = receiptIDInput.value;
+            const now = new Date();
+            const emissionDateTimeString = now.toLocaleString('es-ES', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            previewDateTime.textContent = emissionDateTimeString;
+
+            const newRegistrationData = {
+                receiptID: currentReceiptID,
+                tournamentName: tournamentNameInput.value.trim() || '',
+                gameTitle: enableGamePlatformCheckbox.checked ? gameTitleInput.value.trim() || '' : '',
+                platform: enableGamePlatformCheckbox.checked ? platformInput.value.trim() || '' : '',
+                registrationType: registrationTypeSelect.value.trim() || '',
+                registrationFee: registrationFeeInput.value.trim() || '',
+                playerTeamID: playerTeamIDInput.value.trim() || '',
+                tournamentDate: enableTournamentDateTimeCheckbox.checked ? tournamentDateInput.value : '',
+                tournamentTime: enableTournamentDateTimeCheckbox.checked ? tournamentTimeInput.value : '',
+                organizerContact: organizerContactInput.value.trim() || '',
+                registrationNotes: registrationNotesInput.value.trim() || '',
+                headerColor: headerColorInput.value,
+                emissionDateTime: emissionDateTimeString
+            };
+
+            let isUpdating = false;
+            let dtRowToUpdate = null;
+
+            dataTable.rows().every(function() {
+                const rowData = this.data();
+                if (rowData.receiptID === currentReceiptID) {
+                    isUpdating = true;
+                    dtRowToUpdate = this;
+                    return false;
+                }
+                return true;
+            });
+
+            if (isUpdating) {
+                const indexInArray = allRegistrations.findIndex(reg => reg.receiptID === currentReceiptID);
+                if (indexInArray !== -1) {
+                    allRegistrations[indexInArray] = newRegistrationData;
+                }
+                if (dtRowToUpdate) {
+                    dtRowToUpdate.data(newRegistrationData).draw();
+                }
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Comprobante actualizado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            } else {
+                allRegistrations.push(newRegistrationData);
+                dataTable.row.add(newRegistrationData).draw();
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Comprobante guardado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            }
+
+            saveRegistrations();
+
+            downloadTicketBtn.style.display = 'none';
+
+            html2canvas(ticketPreviewContainer, {
+                scale: 2,
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `comprobante_${newRegistrationData.receiptID || 'sin_id'}.png`;
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                downloadTicketBtn.style.display = 'block';
+                clearForm();
+            }).catch(error => {
+                console.error('Error al generar el comprobante:', error);
+                downloadTicketBtn.style.display = 'block';
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Hubo un error al descargar el comprobante. Por favor, inténtalo de nuevo.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+            });
+        });
+
+        // Función para exportar los datos a JSON
+        exportJsonBtn.addEventListener('click', () => {
+            const dataStr = JSON.stringify(allRegistrations, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'registros_esports.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Event listener para el botón de importar JSON
+        importJsonBtn.addEventListener('click', () => {
+            importFileInput.click(); // Simular clic en el input de tipo file
+        });
+
+        // Event listener para cuando se selecciona un archivo en el input de tipo file
+        importFileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (!file) {
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    // Validación básica de la estructura de los datos importados
+                    if (Array.isArray(importedData) && importedData.every(item => typeof item === 'object' && item !== null && 'receiptID' in item)) {
+                        allRegistrations = importedData;
+                        dataTable.clear().rows.add(allRegistrations).draw();
+                        saveRegistrations(); // Guardar los datos importados en localStorage
+                        const successMessage = document.createElement('div');
+                        successMessage.textContent = 'Datos importados exitosamente.';
+                        successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                        document.body.appendChild(successMessage);
+                        setTimeout(() => successMessage.remove(), 3000);
+                    } else {
+                        throw new Error('Formato de archivo JSON inválido. Se espera un array de objetos con un "receiptID".');
+                    }
+                } catch (error) {
+                    console.error('Error al importar datos JSON:', error);
+                    const errorMessage = document.createElement('div');
+                    errorMessage.textContent = `Error al importar datos: ${error.message}`;
+                    errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                    document.body.appendChild(errorMessage);
+                    setTimeout(() => errorMessage.remove(), 5000);
+                } finally {
+                    // Limpiar el valor del input de archivo para permitir la selección del mismo archivo de nuevo
+                    importFileInput.value = '';
+                }
+            };
+            reader.readAsText(file);
+        });
+
+
+        // Inicializar la aplicación al cargar el DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRegistrations();
+            receiptIDInput.readOnly = true;
+            clearForm(); // Esto también llamará a toggleGamePlatformFields y toggleTournamentDateTimeFields
+        });
+    </script>
+</body>
+</html>
