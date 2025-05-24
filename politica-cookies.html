@@ -1,0 +1,134 @@
+---
+layout:
+permalink: /politica-cookies
+title: POLÍTICA DE COOKIES | NACIÓN UNITE
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+
+
+ <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="/"><span class="navbar-brand mb-0 h1 text-white"><b>POLÍTICA DE COOKIES</b></span></a>
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/" class="text-white">INICIO</a></span>
+  
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+<div class="container-fluid banner poster">
+    <div class="container bannerPromo d-flex justify-content-start align-items-center">
+      <a href="/assets/logos/LRDU.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LRDU.webp" class="drop img-fluid" alt="" ">
+            </a>
+            <div class=" bannerText">
+        <h3 class="exo-style text-white">NACIÓN UNITE</h3>
+        <span>POLÍTICA DE COOKIES</span>
+    </div>
+  </div>
+</div>
+
+   <main class="container py-4">
+        <p class="lead mb-4">Este sitio web, {{site.title}}, utiliza cookies para mejorar tu experiencia de usuario y para analizar el uso del sitio.</p>
+
+        
+            <h2 class="h3 mb-3">1. ¿Qué son las Cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas casi cualquier página web. Su utilidad es que la web sea capaz de recordar tu visita cuando vuelvas a navegar por esa página. Las cookies suelen almacenar información de carácter técnico, preferencias personales, personalización de contenidos, estadísticas de uso, enlaces a redes sociales, acceso a cuentas de usuario, etc. El objetivo de la cookie es adaptar el contenido de la web a tu perfil y necesidades. Sin cookies los servicios ofrecidos por cualquier página se verían mermados notablemente.</p>
+        
+
+        
+            <h2 class="h3 mb-3">2. Tipos de Cookies Utilizadas en Este Sitio</h2>
+            <ul>
+                <li><strong>Cookies Propias:</strong> Son aquellas que se envían a tu equipo desde nuestros propios equipos o dominios y desde los que prestamos el servicio que nos solicitas.
+                    <ul>
+                        <li>**Cookies Técnicas:** Esenciales para el funcionamiento básico del sitio web, permitiendo la navegación y el uso de las diferentes opciones o servicios. (Ej. mantener la sesión, recordar preferencias de idioma).</li>
+                    </ul>
+                </li>
+                <li><strong>Cookies de Terceros:</strong> Son aquellas que se envían a tu equipo desde un equipo o dominio que no es gestionado por nosotros, sino por otra entidad que trata los datos obtenidos a través de las cookies.
+                    <ul>
+                        <li>**Cookies de Análisis (Google Analytics):** Nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza tu navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que te ofrecemos. La información recopilada por Google Analytics es anónima y no se utiliza para identificar personalmente a los usuarios. Puedes consultar la política de privacidad de Google en este enlace: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+                        </ul>
+                </li>
+            </ul>
+        
+
+        
+            <h2 class="h3 mb-3">3. Gestión de Cookies (Cómo deshabilitarlas o eliminarlas)</h2>
+            <p>Puedes restringir, bloquear o borrar las cookies de cualquier sitio web, utilizando tu navegador. En cada navegador la operativa es diferente, la función de “Ayuda” te mostrará cómo hacerlo.</p>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">Configuración de cookies para Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener noreferrer">Configuración de cookies para Mozilla Firefox</a></li>
+                <li><a href="https://support.microsoft.com/es-es/topic/eliminar-y-administrar-cookies-16104e76-47e0-4749-d379-99bbcf5f7457" target="_blank" rel="noopener noreferrer">Configuración de cookies para Microsoft Edge</a></li>
+                <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Configuración de cookies para Safari</a></li>
+            </ul>
+            <p>Ten en cuenta que al deshabilitar las cookies, algunas funcionalidades de la página podrían no funcionar correctamente o la calidad de tu experiencia de usuario podría verse afectada.</p>
+        
+
+        
+            <h2 class="h3 mb-3">4. Consentimiento de Cookies</h2>
+            <p>Al continuar navegando por nuestro sitio web, consideramos que aceptas el uso de las cookies descritas en esta política.</p>
+            <p>Es recomendable que implementes un banner de consentimiento de cookies visible la primera vez que un usuario visita tu sitio, especialmente si estás en una jurisdicción con leyes de privacidad estrictas (como la UE o México).</p>
+        
+
+        
+            <h2 class="h3 mb-3">5. Cambios en la Política de Cookies</h2>
+            <p>Podemos actualizar nuestra Política de Cookies en cualquier momento. Te notificaremos cualquier cambio publicando la nueva Política de Cookies en esta página. Te recomendamos revisar esta Política de Cookies periódicamente para cualquier cambio.</p>
+        
+    </main>
+
+
+  {% include footer-license.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+{% include g-analytics.html %}
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -64,45 +64,11 @@
     ]
   },
   {
-    "tag": "RNTES",
-    "team": "RNT ETERNAL STARLIGHT",
-    "org": "RANKED TEAM",
-    "activo": true,
-    "capitan": "BAIKAL",
-    "region": "LAN",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": false,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
     "tag": "QUARTZ",
     "team": "DFS QUARTZ",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "Cros",
     "region": "LAN",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -170,7 +136,7 @@
     "team": "DFS SAPPHIRE",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "Trevor",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -204,42 +170,8 @@
     "team": "DFS AMATHYST",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "Rous",
     "region": "LAN",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "RUBY",
-    "team": "DFS RUBY",
-    "org": "",
-    "activo": true,
-    "capitan": "CHARMANBETH",
-    "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
     "seguro": true,
@@ -272,7 +204,7 @@
     "team": "IM OBSIDIANA",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "Quique",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -306,7 +238,7 @@
     "team": "IM AMATISTA",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "Tory",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -340,7 +272,7 @@
     "team": "IM ZAFIRO",
     "org": "",
     "activo": true,
-    "capitan": "",
+    "capitan": "David",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -409,40 +341,6 @@
     "org": "",
     "activo": true,
     "capitan": "PREMIUM",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "ENIGMA",
-    "team": "SPC ENIGMA",
-    "org": "",
-    "activo": true,
-    "capitan": "RODMAN",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -574,147 +472,11 @@
     ]
   },
   {
-    "tag": "TUT",
-    "team": "THE UNOWN TEAM",
-    "org": "",
-    "activo": true,
-    "capitan": "BREN",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "FROSTBITE",
-    "team": "FTB",
-    "org": "",
-    "activo": true,
-    "capitan": "TUGFAMON",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "NS",
-    "team": "NO SMITES",
-    "org": "",
-    "activo": true,
-    "capitan": "TOKITO",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
     "tag": "PLAGA",
     "team": "PLAGA VILLANOS",
     "org": "",
     "activo": true,
     "capitan": "TEXAS",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "DBO",
-    "team": "DINAMITA BUENA",
-    "org": "",
-    "activo": true,
-    "capitan": "NEWT",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -778,80 +540,114 @@
     ]
   },
   {
-    "tag": "AEP",
-    "team": "ALEPH RAGNAROK",
-    "org": "",
-    "activo": true,
-    "capitan": "JOHAN",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
-    "tag": "POR DEFINIR",
-    "team": "POR DEFINIR",
-    "org": "",
-    "activo": true,
-    "capitan": "DEMOLI",
-    "region": "",
-    "teamNombreAnterior": "",
-    "teamNuevoNombre": "",
-    "seguro": true,
-    "link": "",
-    "grupo": "",
-    "partidos": {
-      "M1": "",
-      "M2": "",
-      "M3": "",
-      "M4": "",
-      "M5": "",
-      "M6": "",
-      "M7": "",
-      "M8": "",
-      "M9": "",
-      "M10": "",
-      "M11": "",
-      "M12": ""
-    },
-    "jugadores": [
-      {
-        "nickname": "",
-        "ID": "",
-        "avatar": ""
-      }
-    ]
-  },
-  {
     "tag": "TR",
     "team": "TEAM ROCKET",
     "org": "",
     "activo": true,
     "capitan": "WALO",
     "region": "",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "PKR",
+    "team": "POKERANGERS ",
+    "org": "",
+    "activo": true,
+    "capitan": "MIPoJhon",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "DG",
+    "team": "DRAKAR GAMING",
+    "org": "",
+    "activo": true,
+    "capitan": "R2D2",
+    "region": "LAS",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "POA",
+    "team": "PHOBIUS AURA ",
+    "org": "",
+    "activo": true,
+    "capitan": "MOZTAZA",
+    "region": "LAS",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
     "seguro": true,
