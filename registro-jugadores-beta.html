@@ -1,0 +1,787 @@
+---
+layout:
+permalink: /registro-jugadores-beta.html
+title: JR BETA | LIGA INDIGO
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Equipo de Esports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <style>
+        /* Fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Estilo para el contenedor de registro del equipo */
+        .registration-container {
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 400px; /* Ancho máximo para el registro */
+            margin-bottom: 20px;
+        }
+
+        .registration-header {
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+            padding: 1.5rem; /* p-6 */
+            text-align: center;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        .registration-body {
+            padding: 1.5rem; /* p-6 */
+        }
+
+        .registration-footer {
+            background-color: #e0e7ff; /* indigo-100 */
+            padding: 1rem; /* p-4 */
+            text-align: center;
+            font-size: 0.875rem; /* text-sm */
+            color: #4f46e5; /* indigo-600 */
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        /* Línea decorativa */
+        .decorative-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(90deg, #e5e7eb 0, #e5e7eb 5px, transparent 5px, transparent 10px); /* gray-200 */
+            margin-top: -5px; /* Ajuste para centrar */
+        }
+        .decorative-top {
+            top: 25%; /* Ajusta la posición de la línea superior */
+        }
+        .decorative-bottom {
+            bottom: 25%; /* Ajusta la posición de la línea inferior */
+        }
+
+        /* Estilos para los círculos decorativos */
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #f0f2f5; /* Color de fondo del body */
+            border-radius: 50%;
+            top: 25%; /* Misma altura que la línea decorativa */
+            transform: translateY(-50%);
+        }
+        .circle-left {
+            left: -10px;
+        }
+        .circle-right {
+            right: -10px;
+        }
+        .circle-bottom-left {
+            bottom: 25%;
+            left: -10px;
+            transform: translateY(50%);
+        }
+        .circle-bottom-right {
+            bottom: 25%;
+            right: -10px;
+            transform: translateY(50%);
+        }
+
+        /* Estilo para el contenedor principal de la aplicación */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* gap-8 */
+            width: 100%;
+            max-width: 900px; /* Ancho máximo para el contenedor de la aplicación */
+            background-color: #ffffff;
+            padding: 2rem; /* p-8 */
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); /* shadow-2xl */
+        }
+
+        @media (min-width: 768px) { /* md: breakpoint */
+            .app-container {
+                flex-direction: row;
+            }
+            .input-section {
+                flex: 1;
+            }
+            .preview-section {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /* Estilos para DataTables */
+        #teamRegistrationTable_wrapper {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        #teamRegistrationTable {
+            width: 100% !important; /* Importante para que DataTables ajuste el ancho */
+        }
+        #teamRegistrationTable th, #teamRegistrationTable td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
+        }
+        #teamRegistrationTable th {
+            background-color: #f9fafb; /* gray-50 */
+            font-weight: 600;
+            color: #4b5563; /* gray-700 */
+        }
+        #teamRegistrationTable tr:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        .dataTables_filter input {
+            border: 1px solid #d1d5db; /* gray-300 */
+            border-radius: 0.375rem; /* rounded-md */
+            padding: 0.5rem 0.75rem;
+            margin-left: 0.5rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .dataTables_length select {
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            margin-left: 0.5rem;
+        }
+        .dataTables_info, .dataTables_paginate {
+            margin-top: 1rem;
+            color: #6b7280; /* gray-500 */
+        }
+        .dataTables_paginate .paginate_button {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            margin-left: 0.25rem;
+            cursor: pointer;
+        }
+        .dataTables_paginate .paginate_button.current,
+        .dataTables_paginate .paginate_button:hover {
+            background-color: #4f46e5; /* indigo-600 */
+            color: white !important;
+            border-color: #4f46e5;
+        }
+        .dataTables_paginate .paginate_button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="app-container">
+        <div class="input-section flex-1 p-6 bg-white rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Registro de Equipo de Esports</h2>
+            <div class="mb-4">
+                <label for="teamName" class="block text-sm font-medium text-gray-700 mb-1">Nombre del Equipo <span class="text-red-500">*</span> (Máx. 20 caracteres)</label>
+                <input type="text" id="teamName" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. Los Vengadores" maxlength="20">
+            </div>
+            <div class="mb-4">
+                <label for="teamTag" class="block text-sm font-medium text-gray-700 mb-1">TAG del Equipo <span class="text-red-500">*</span> (Máx. 5 caracteres)</label>
+                <input type="text" id="teamTag" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. VNG" maxlength="5">
+            </div>
+            <div class="mb-4">
+                <label for="organization" class="block text-sm font-medium text-gray-700 mb-1">Organización</label>
+                <input type="text" id="organization" class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Ej. Liga MX Esports">
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 mt-6">Jugadores (Máx. 8)</h3>
+            <div id="playersContainer">
+                </div>
+            <button id="addPlayerBtn" class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-150 ease-in-out mt-4">
+                Añadir Jugador
+            </button>
+
+            <div class="mb-6 mt-8">
+                <label for="headerColorInput" class="block text-sm font-medium text-gray-700 mb-1">Color del Encabezado del Registro</label>
+                <input type="color" id="headerColorInput" class="w-full h-10 border border-gray-300 rounded-md cursor-pointer" value="#4f46e5">
+            </div>
+
+            <button id="saveDownloadBtn" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                Guardar y Descargar Registro
+            </button>
+        </div>
+
+        <div class="preview-section flex-1 flex items-center justify-center p-6">
+            <div id="teamRegistrationPreview" class="registration-container">
+                <div class="registration-header">
+                    <h3 class="text-2xl font-bold" id="previewTeamName">Nombre del Equipo</h3>
+                    <p class="text-lg font-medium" id="previewTeamTag">TAG</p>
+                </div>
+                <div class="decorative-line decorative-top"></div>
+                <div class="circle circle-left"></div>
+                <div class="circle circle-right"></div>
+
+                <div class="registration-body text-gray-800">
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Organización:</p>
+                        <p class="text-lg font-semibold" id="previewOrganization">Organización</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-xs text-gray-500">Jugadores Registrados:</p>
+                        <ul id="previewPlayersList" class="list-disc list-inside text-lg font-semibold pl-4">
+                            </ul>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200 text-center">
+                        <p class="text-xs text-gray-500">Fecha y Hora de Emisión:</p>
+                        <p class="text-sm font-medium" id="previewEmissionDateTime">--/--/---- --:--:--</p>
+                    </div>
+                </div>
+
+                <div class="decorative-line decorative-bottom"></div>
+                <div class="circle circle-bottom-left"></div>
+                <div class="circle circle-bottom-right"></div>
+
+                <div class="registration-footer">
+                    <p>¡Registro de equipo exitoso!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full max-w-4xl mx-auto mt-8 p-6 bg-white rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Equipos Registrados</h2>
+        <div class="flex flex-wrap gap-4 mb-4">
+            <button id="exportCsvBtn" class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                Descargar Datos (CSV)
+            </button>
+            </div>
+        <div class="overflow-x-auto">
+            <table id="teamRegistrationTable" class="display min-w-full">
+                <thead>
+                    <tr>
+                        <th>ID Registro</th>
+                        <th>Nombre Equipo</th>
+                        <th>TAG Equipo</th>
+                        <th>Organización</th>
+                        <th>Jugador 1 (Gamertag)</th>
+                        <th>Jugador 1 (ID)</th>
+                        <th>Jugador 2 (Gamertag)</th>
+                        <th>Jugador 2 (ID)</th>
+                        <th>Jugador 3 (Gamertag)</th>
+                        <th>Jugador 3 (ID)</th>
+                        <th>Jugador 4 (Gamertag)</th>
+                        <th>Jugador 4 (ID)</th>
+                        <th>Jugador 5 (Gamertag)</th>
+                        <th>Jugador 5 (ID)</th>
+                        <th>Jugador 6 (Gamertag)</th>
+                        <th>Jugador 6 (ID)</th>
+                        <th>Jugador 7 (Gamertag)</th>
+                        <th>Jugador 7 (ID)</th>
+                        <th>Jugador 8 (Gamertag)</th>
+                        <th>Jugador 8 (ID)</th>
+                        <th>Fecha Emisión</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
+            <h3 class="text-lg font-bold mb-4">Confirmar Eliminación</h3>
+            <p class="mb-6">¿Estás seguro de que quieres eliminar este registro?</p>
+            <div class="flex justify-end space-x-4">
+                <button id="cancelDeleteBtn" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancelar</button>
+                <button id="confirmDeleteBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script>
+        // Obtener referencias a los elementos del DOM
+        const teamNameInput = document.getElementById('teamName');
+        const teamTagInput = document.getElementById('teamTag');
+        const organizationInput = document.getElementById('organization');
+        const playersContainer = document.getElementById('playersContainer');
+        const addPlayerBtn = document.getElementById('addPlayerBtn');
+        const headerColorInput = document.getElementById('headerColorInput');
+        const saveDownloadBtn = document.getElementById('saveDownloadBtn');
+        const exportCsvBtn = document.getElementById('exportCsvBtn'); // Cambiado a CSV
+
+        const previewTeamName = document.getElementById('previewTeamName');
+        const previewTeamTag = document.getElementById('previewTeamTag');
+        const previewOrganization = document.getElementById('previewOrganization');
+        const previewPlayersList = document.getElementById('previewPlayersList');
+        const previewEmissionDateTime = document.getElementById('previewEmissionDateTime');
+        const teamRegistrationPreviewContainer = document.getElementById('teamRegistrationPreview');
+        const registrationHeader = document.querySelector('.registration-header');
+
+        const confirmationModal = document.getElementById('confirmationModal');
+        const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+        let rowToDelete = null;
+
+        let dataTable;
+        let allTeamRegistrations = []; // Array para almacenar todos los registros de equipo
+
+        // Función para generar un ID único para el registro de equipo
+        function generateUniqueTeamId() {
+            // Genera un ID basado en la marca de tiempo y un número aleatorio corto
+            return 'TEAM-' + Date.now().toString().slice(-6) + Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+        }
+
+        // Función para añadir una fila de input para un jugador
+        function addPlayerRow(gamertag = '', id = '') {
+            if (playersContainer.children.length >= 8) {
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Máximo 8 jugadores por equipo.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-yellow-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 3000);
+                return;
+            }
+
+            const playerDiv = document.createElement('div');
+            playerDiv.className = 'player-row bg-gray-50 p-3 rounded-md mb-3 flex flex-wrap gap-2 items-end';
+            playerDiv.innerHTML = `
+                <div class="flex-1 min-w-[120px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Gamertag <span class="text-red-500">*</span></label>
+                    <input type="text" class="player-gamertag w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Gamertag" value="${gamertag}">
+                </div>
+                <div class="flex-1 min-w-[100px]">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">ID <span class="text-red-500">*</span></label>
+                    <input type="text" class="player-id w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="ID Jugador" value="${id}">
+                </div>
+                <button type="button" class="remove-player-btn bg-red-500 text-white p-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                    &times;
+                </button>
+            `;
+            playersContainer.appendChild(playerDiv);
+
+            playerDiv.querySelector('.remove-player-btn').addEventListener('click', () => {
+                playersContainer.removeChild(playerDiv);
+                updateTeamRegistrationPreview();
+            });
+
+            // Añadir listeners a los inputs de jugador para actualizar la previsualización en tiempo real
+            playerDiv.querySelector('.player-gamertag').addEventListener('input', updateTeamRegistrationPreview);
+            playerDiv.querySelector('.player-id').addEventListener('input', updateTeamRegistrationPreview);
+
+            updateTeamRegistrationPreview(); // Actualizar previsualización inmediatamente después de añadir
+        }
+
+        // Función para limpiar el formulario
+        function clearForm() {
+            teamNameInput.value = '';
+            teamTagInput.value = '';
+            organizationInput.value = '';
+            playersContainer.innerHTML = ''; // Limpiar todos los inputs de jugador
+            addPlayerRow(); // Añadir una fila de jugador por defecto
+            headerColorInput.value = localStorage.getItem('lastTeamHeaderColor') || '#4f46e5';
+            previewEmissionDateTime.textContent = '--/--/---- --:--:--';
+            delete teamNameInput.dataset.editingId; // Eliminar el ID de edición
+            updateTeamRegistrationPreview();
+        }
+
+        // Función para actualizar la previsualización del registro de equipo
+        function updateTeamRegistrationPreview() {
+            previewTeamName.textContent = teamNameInput.value || 'Nombre del Equipo';
+            previewTeamTag.textContent = teamTagInput.value || 'TAG';
+            previewOrganization.textContent = organizationInput.value || 'Organización';
+            registrationHeader.style.backgroundColor = headerColorInput.value;
+
+            previewPlayersList.innerHTML = '';
+            const playerRows = playersContainer.querySelectorAll('.player-row');
+            if (playerRows.length > 0) {
+                playerRows.forEach((row) => {
+                    const gamertag = row.querySelector('.player-gamertag').value;
+                    const id = row.querySelector('.player-id').value;
+                    if (gamertag || id) {
+                        const li = document.createElement('li');
+                        li.textContent = `${gamertag || 'Gamertag'} (${id || 'ID'})`;
+                        previewPlayersList.appendChild(li);
+                    }
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No hay jugadores registrados.';
+                previewPlayersList.appendChild(li);
+            }
+        }
+
+        // Función para cargar los datos desde localStorage
+        function loadTeamRegistrations() {
+            try {
+                const storedData = localStorage.getItem('esportsTeamRegistrations');
+                if (storedData) {
+                    allTeamRegistrations = JSON.parse(storedData);
+                }
+                if (dataTable) {
+                    dataTable.destroy();
+                }
+
+                // Definir columnas para DataTables - hasta 8 jugadores
+                const dtColumns = [
+                    { data: 'teamID', title: 'ID Registro' },
+                    { data: 'teamName', title: 'Nombre Equipo' },
+                    { data: 'teamTag', title: 'TAG Equipo' },
+                    { data: 'organization', title: 'Organización' }
+                ];
+
+                for (let i = 0; i < 8; i++) {
+                    dtColumns.push({
+                        data: `players.${i}.gamertag`,
+                        title: `Jugador ${i + 1} (Gamertag)`,
+                        defaultContent: '', // Manejar casos donde los datos del jugador no existan
+                        render: function(data) {
+                            return data || '';
+                        }
+                    });
+                    dtColumns.push({
+                        data: `players.${i}.id`,
+                        title: `Jugador ${i + 1} (ID)`,
+                        defaultContent: '',
+                        render: function(data) {
+                            return data || '';
+                        }
+                    });
+                }
+                dtColumns.push({ data: 'emissionDateTime', title: 'Fecha Emisión' });
+                dtColumns.push({
+                    data: null,
+                    defaultContent: '<button class="edit-btn bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-sm mr-2">Editar</button><button class="delete-btn bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">Eliminar</button>',
+                    orderable: false,
+                    title: 'Acciones'
+                });
+
+                dataTable = $('#teamRegistrationTable').DataTable({
+                    data: allTeamRegistrations,
+                    columns: dtColumns,
+                    responsive: true,
+                    scrollX: true // Habilitar el desplazamiento horizontal para muchas columnas
+                });
+
+                $('#teamRegistrationTable tbody').on('click', '.edit-btn', function () {
+                    const data = dataTable.row($(this).parents('tr')).data();
+                    populateFormForEdit(data);
+                });
+
+                $('#teamRegistrationTable tbody').on('click', '.delete-btn', function () {
+                    rowToDelete = dataTable.row($(this).parents('tr'));
+                    confirmationModal.classList.remove('hidden');
+                });
+
+            } catch (e) {
+                console.error("Error al cargar los datos de localStorage o inicializar DataTables:", e);
+                // Fallback para la inicialización de DataTables si ocurre un error
+                dataTable = $('#teamRegistrationTable').DataTable({
+                    data: [],
+                    columns: [ // Definir columnas mínimas para el fallback de error
+                        { data: 'teamID', title: 'ID Registro' },
+                        { data: 'teamName', title: 'Nombre Equipo' },
+                        { data: 'teamTag', title: 'TAG Equipo' },
+                        { data: 'organization', title: 'Organización' },
+                        { data: 'emissionDateTime', title: 'Fecha Emisión' },
+                        { data: null, defaultContent: '', orderable: false, title: 'Acciones' }
+                    ],
+                    responsive: true,
+                    scrollX: true
+                });
+            }
+        }
+
+        // Función para guardar los datos en localStorage
+        function saveTeamRegistrations() {
+            try {
+                localStorage.setItem('esportsTeamRegistrations', JSON.stringify(allTeamRegistrations));
+                localStorage.setItem('lastTeamHeaderColor', headerColorInput.value);
+            } catch (e) {
+                console.error("Error al guardar los datos en localStorage:", e);
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Error al guardar los datos localmente. Es posible que el almacenamiento esté lleno.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+            }
+        }
+
+        // Función para poblar el formulario para edición
+        function populateFormForEdit(data) {
+            teamNameInput.value = data.teamName;
+            teamTagInput.value = data.teamTag;
+            organizationInput.value = data.organization;
+            headerColorInput.value = data.headerColor || localStorage.getItem('lastTeamHeaderColor') || '#4f46e5';
+
+            playersContainer.innerHTML = ''; // Limpiar filas de jugador existentes
+            data.players.forEach(player => {
+                addPlayerRow(player.gamertag, player.id);
+            });
+
+            // Almacenar el ID del equipo que se está editando para diferenciarlo de nuevos registros
+            teamNameInput.dataset.editingId = data.teamID; // Usar dataset para almacenamiento temporal
+            updateTeamRegistrationPreview();
+        }
+
+        // Event listeners para el modal de confirmación de eliminación
+        cancelDeleteBtn.addEventListener('click', () => {
+            confirmationModal.classList.add('hidden');
+            rowToDelete = null;
+        });
+
+        confirmDeleteBtn.addEventListener('click', () => {
+            if (rowToDelete) {
+                const data = rowToDelete.data();
+                allTeamRegistrations = allTeamRegistrations.filter(reg => reg.teamID !== data.teamID);
+                rowToDelete.remove().draw();
+                saveTeamRegistrations();
+                confirmationModal.classList.add('hidden');
+                rowToDelete = null;
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Registro de equipo eliminado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            }
+        });
+
+        // Event listener para añadir fila de jugador
+        addPlayerBtn.addEventListener('click', () => {
+            addPlayerRow();
+        });
+
+        // Event listener para guardar/descargar registro
+        saveDownloadBtn.addEventListener('click', () => {
+            const currentTeamName = teamNameInput.value.trim();
+            const currentTeamTag = teamTagInput.value.trim();
+            const currentOrganization = organizationInput.value.trim();
+
+            // Validación básica para campos de equipo
+            if (!currentTeamName || !currentTeamTag) {
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Por favor, completa el Nombre del Equipo y el TAG del Equipo.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+                return;
+            }
+
+            // Obtener datos de jugadores y realizar validación
+            const players = [];
+            const playerIds = new Set();
+            const playerRows = playersContainer.querySelectorAll('.player-row');
+
+            if (playerRows.length === 0) {
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Debes añadir al menos un jugador.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+                return;
+            }
+
+            let hasPlayerValidationError = false;
+            playerRows.forEach((row, index) => {
+                const gamertagInput = row.querySelector('.player-gamertag');
+                const idInput = row.querySelector('.player-id');
+                const gamertag = gamertagInput.value.trim();
+                const id = idInput.value.trim();
+
+                if (!gamertag || !id) {
+                    const errorMessage = document.createElement('div');
+                    errorMessage.textContent = `Por favor, completa el Gamertag y el ID para el Jugador ${index + 1}.`;
+                    errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                    document.body.appendChild(errorMessage);
+                    setTimeout(() => errorMessage.remove(), 5000);
+                    hasPlayerValidationError = true;
+                    return;
+                }
+
+                if (playerIds.has(id)) {
+                    const errorMessage = document.createElement('div');
+                    errorMessage.textContent = `El ID de jugador "${id}" está duplicado dentro de este equipo.`;
+                    errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                    document.body.appendChild(errorMessage);
+                    setTimeout(() => errorMessage.remove(), 5000);
+                    hasPlayerValidationError = true;
+                    return;
+                }
+                playerIds.add(id);
+                players.push({ gamertag, id });
+            });
+
+            // Si alguna validación de jugador falló, detener la ejecución
+            if (hasPlayerValidationError) {
+                return;
+            }
+
+            const now = new Date();
+            const emissionDateTimeString = now.toLocaleString('es-ES', {
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+            previewEmissionDateTime.textContent = emissionDateTimeString;
+
+            let isUpdating = false;
+            let teamID = teamNameInput.dataset.editingId; // Obtener ID si está en modo edición
+
+            if (teamID) {
+                // Estamos en modo edición
+                isUpdating = true;
+            } else {
+                // Nuevo registro: generar nuevo ID y verificar la unicidad del nombre/TAG del equipo
+                teamID = generateUniqueTeamId();
+                if (allTeamRegistrations.some(reg => reg.teamName.toLowerCase() === currentTeamName.toLowerCase() && reg.teamTag.toLowerCase() === currentTeamTag.toLowerCase())) {
+                    const errorMessage = document.createElement('div');
+                    errorMessage.textContent = 'Ya existe un equipo con este Nombre y TAG. Si quieres actualizarlo, edita el registro existente.';
+                    errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                    document.body.appendChild(errorMessage);
+                    setTimeout(() => errorMessage.remove(), 7000);
+                    return;
+                }
+            }
+
+            const newTeamRegistrationData = {
+                teamID: teamID,
+                teamName: currentTeamName,
+                teamTag: currentTeamTag,
+                organization: currentOrganization,
+                players: players,
+                headerColor: headerColorInput.value,
+                emissionDateTime: emissionDateTimeString
+            };
+
+            if (isUpdating) {
+                const indexInArray = allTeamRegistrations.findIndex(reg => reg.teamID === teamID);
+                if (indexInArray !== -1) {
+                    allTeamRegistrations[indexInArray] = newTeamRegistrationData;
+                }
+                // Encontrar la fila de DataTables y actualizarla
+                let dtRowToUpdate = null;
+                dataTable.rows().every(function() {
+                    if (this.data().teamID === teamID) {
+                        dtRowToUpdate = this;
+                        return false;
+                    }
+                    return true;
+                });
+                if (dtRowToUpdate) {
+                    dtRowToUpdate.data(newTeamRegistrationData).draw();
+                }
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Registro de equipo actualizado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            } else {
+                allTeamRegistrations.push(newTeamRegistrationData);
+                dataTable.row.add(newTeamRegistrationData).draw();
+                const successMessage = document.createElement('div');
+                successMessage.textContent = 'Registro de equipo guardado exitosamente.';
+                successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+            }
+
+            saveTeamRegistrations();
+            
+            saveDownloadBtn.style.display = 'none';
+
+            html2canvas(teamRegistrationPreviewContainer, {
+                scale: 2,
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `registro_equipo_${newTeamRegistrationData.teamName.replace(/\s/g, '_')}_${newTeamRegistrationData.teamTag}.png`;
+                link.href = canvas.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                saveDownloadBtn.style.display = 'block';
+                clearForm(); // Limpiar formulario después de guardar/descargar exitosamente
+            }).catch(error => {
+                console.error('Error al generar el registro:', error);
+                saveDownloadBtn.style.display = 'block';
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'Hubo un error al descargar el registro. Por favor, inténtalo de nuevo.';
+                errorMessage.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-md shadow-lg';
+                document.body.appendChild(errorMessage);
+                setTimeout(() => errorMessage.remove(), 5000);
+            });
+        });
+
+        // Event listener para los inputs de nombre de equipo, TAG, organización para actualizar la previsualización
+        teamNameInput.addEventListener('input', updateTeamRegistrationPreview);
+        teamTagInput.addEventListener('input', updateTeamRegistrationPreview);
+        organizationInput.addEventListener('input', updateTeamRegistrationPreview);
+        headerColorInput.addEventListener('input', updateTeamRegistrationPreview);
+
+
+        // Función para exportar los datos a CSV
+        exportCsvBtn.addEventListener('click', () => {
+            let csvContent = "ID Registro,Nombre Equipo,TAG Equipo,Organización,";
+
+            // Añadir encabezados para hasta 8 jugadores dinámicamente
+            for (let i = 1; i <= 8; i++) {
+                csvContent += `Jugador ${i} (Gamertag),Jugador ${i} (ID),`;
+            }
+            csvContent += "Fecha Emisión\n"; // Último encabezado de columna y nueva línea
+
+            allTeamRegistrations.forEach(team => {
+                // Encapsular valores con comillas para manejar comas internas si las hubiera
+                let row = `"${team.teamID}","${team.teamName}","${team.teamTag}","${team.organization}",`;
+                
+                for (let i = 0; i < 8; i++) {
+                    const player = team.players[i];
+                    // Asegurarse de que los valores están encapsulados y las comillas internas escapadas
+                    row += `"${player ? player.gamertag.replace(/"/g, '""') : ''}","${player ? player.id.replace(/"/g, '""') : ''}",`; 
+                }
+                row += `"${team.emissionDateTime}"\n`;
+                csvContent += row;
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'registros_equipos_esports.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Datos exportados a CSV exitosamente.';
+            successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-md shadow-lg';
+            document.body.appendChild(successMessage);
+            setTimeout(() => successMessage.remove(), 3000);
+        });
+
+        // Inicializar la aplicación al cargar el DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTeamRegistrations();
+            clearForm(); // Esto llamará a addPlayerRow() una vez inicialmente
+        });
+    </script>
+</body>
+</html>
+
