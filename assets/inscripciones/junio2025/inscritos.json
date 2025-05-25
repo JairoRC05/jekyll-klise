@@ -472,6 +472,74 @@
     ]
   },
   {
+    "tag": "TUT",
+    "team": "THE UNOWN TEAM",
+    "org": "",
+    "activo": true,
+    "capitan": "BREN",
+    "region": "",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "FROSTBITE",
+    "team": "FTB",
+    "org": "",
+    "activo": true,
+    "capitan": "TUGFAMON",
+    "region": "",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
     "tag": "PLAGA",
     "team": "PLAGA VILLANOS",
     "org": "",
@@ -511,6 +579,40 @@
     "org": "",
     "activo": true,
     "capitan": "DANIVAL",
+    "region": "",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "AEP",
+    "team": "ALEPH RAGNAROK",
+    "org": "",
+    "activo": true,
+    "capitan": "JOHAN",
     "region": "",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -648,6 +750,40 @@
     "activo": true,
     "capitan": "MOZTAZA",
     "region": "LAS",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "TUTW",
+    "team": "TUT WARRIORS",
+    "org": "THE UNOWN TEAM",
+    "activo": true,
+    "capitan": "GERD",
+    "region": "LAN",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
     "seguro": true,
