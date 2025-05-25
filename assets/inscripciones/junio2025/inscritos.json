@@ -64,6 +64,40 @@
     ]
   },
   {
+    "tag": "RNTES",
+    "team": "RNT ETERNAL STARLIGHT",
+    "org": "RANKED TEAM",
+    "activo": true,
+    "capitan": "BAIKAL",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": false,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
     "tag": "QUARTZ",
     "team": "DFS QUARTZ",
     "org": "",
@@ -546,6 +580,40 @@
     "activo": true,
     "capitan": "TEXAS",
     "region": "",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "CD",
+    "team": "CUMBIA DRAGÓN",
+    "org": "",
+    "activo": true,
+    "capitan": "NEWT",
+    "region": "LAN",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
     "seguro": true,
