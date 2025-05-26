@@ -66,9 +66,29 @@ function obtenerNombreImagen(nombreRonda) {
     if (nombreRonda.includes("RONDA 1")) {
         return "scizor";
     } else if (nombreRonda.includes("RONDA 2")) {
-        return "otro_skin";
+        return "scizor";
     } else if (nombreRonda.includes("RONDA 3")) {
-        return "tercer_skin";
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 4")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 5")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 6")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 7")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 8")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 9")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 10")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 11")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 12")) {
+        return "scizor";
+    } else if (nombreRonda.includes("RONDA 13")) {
+        return "scizor";
     } else if (nombreRonda.includes("HOOPA")) {
         return "PORTAL"; // Asumiendo que "PORTAL" es el nombre para Hoopa
     }
@@ -78,15 +98,15 @@ function obtenerNombreImagen(nombreRonda) {
 }
 
 function generarContenidoRonda(rondaData) {
-    
-  function formatearFecha(fechaString) {
-  if (!fechaString) return '';
-  const [year, month, day] = fechaString.split('-');
-  const fechaLocal = new Date(parseInt(year), parseInt(month) - 1, parseInt(day)); // Mes es 0-indexado
-  const dia = fechaLocal.getDate();
-  const mes = new Intl.DateTimeFormat('es-MX', { month: 'long' }).format(fechaLocal);
-  return `${dia} ${mes}`;
-  }
+
+    function formatearFecha(fechaString) {
+        if (!fechaString) return '';
+        const [year, month, day] = fechaString.split('-');
+        const fechaLocal = new Date(parseInt(year), parseInt(month) - 1, parseInt(day)); // Mes es 0-indexado
+        const dia = fechaLocal.getDate();
+        const mes = new Intl.DateTimeFormat('es-MX', { month: 'long' }).format(fechaLocal);
+        return `${dia} ${mes}`;
+    }
 
     let fechaMostrar = '';
 
@@ -119,10 +139,10 @@ function generarContenidoRonda(rondaData) {
           <div class="d-flex justify-content-center align-items-center"
             style="position: relative">
             <div class="bg-cham" style="clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-                z-index: -1000;
-                position: absolute;
-                width: 400px;
-                height: 100%;">
+              z-index: -1000;
+              position: absolute;
+              width: 400px;
+              height: 100%;">
             </div>
             <img
               class="animate__animated animate__pulse animate__slow 2s animate__infinite infinite"
@@ -136,21 +156,29 @@ function generarContenidoRonda(rondaData) {
               style="width: 550px"
             />
             <img src="/assets/gifts/shine.gif" alt="" style="position:
-            absolute; width: 150px; height: 150px"">
+              absolute; width: 150px; height: 150px"">
           </div>
         </div>
         <div class="col-12 col-md-12 col-lg-4 p-0 ">
-          <div class="d-none d-md-block">
+          <div class="">
             <div class="d-flex justify-content-center align-items-center bg-cham bracket-round-list" style="border-radius: 10px;">
               <h1 class="exo-style">${fechaMostrar}</h1>
             </div>
           </div>
           <div class="row team--round mt-2">
-            ${rondaData.partidos.map(partido => `
-              <div class="col-12 col-md-6 col-lg-12">
-                ${generarPartidoHTML(partido)}
-              </div>
-            `).join('')}
+            ${rondaData.partidos.map(partido => {
+                const numeroRonda = parseInt(rondaData.ronda.split(' ')[1]);
+                let partidoModificado = { ...partido };
+                if (numeroRonda % 2 === 0 && partido.equipo2 !== "DES") {
+                    [partidoModificado.equipo1, partidoModificado.equipo2] = [partidoModificado.equipo2, partidoModificado.equipo1];
+                    [partidoModificado.tag1, partidoModificado.tag2] = [partidoModificado.tag2, partidoModificado.tag1];
+                }
+                return `
+                  <div class="col-12 col-md-6 col-lg-12">
+                    ${generarPartidoHTML(partidoModificado)}
+                  </div>
+                `;
+            }).join('')}
           </div>
         </div>
       </div>

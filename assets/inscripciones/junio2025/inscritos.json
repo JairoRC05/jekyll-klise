@@ -812,11 +812,11 @@
     ]
   },
   {
-    "tag": "POA",
+    "tag": "PøĄ",
     "team": "PHOBIUS AURA ",
     "org": "",
     "activo": true,
-    "capitan": "MOZTAZA",
+    "capitan": "MOSTAZA",
     "region": "LAS",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
@@ -851,6 +851,40 @@
     "org": "THE UNOWN TEAM",
     "activo": true,
     "capitan": "GERD",
+    "region": "LAN",
+    "teamNombreAnterior": "",
+    "teamNuevoNombre": "",
+    "seguro": true,
+    "link": "",
+    "grupo": "",
+    "partidos": {
+      "M1": "",
+      "M2": "",
+      "M3": "",
+      "M4": "",
+      "M5": "",
+      "M6": "",
+      "M7": "",
+      "M8": "",
+      "M9": "",
+      "M10": "",
+      "M11": "",
+      "M12": ""
+    },
+    "jugadores": [
+      {
+        "nickname": "",
+        "ID": "",
+        "avatar": ""
+      }
+    ]
+  },
+  {
+    "tag": "LB",
+    "team": "last breath",
+    "org": "",
+    "activo": true,
+    "capitan": "j diaz",
     "region": "LAN",
     "teamNombreAnterior": "",
     "teamNuevoNombre": "",
