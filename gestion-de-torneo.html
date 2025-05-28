@@ -1,0 +1,359 @@
+---
+layout:
+permalink: /gestion-torneo.html
+title: Gestion | Nacion Unite
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Equipos y Jugadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css">
+
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            /* Ajusta según sea necesario */
+        }
+
+        .section-separator {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Estilos para las celdas editables */
+        .editable {
+            cursor: pointer;
+            border-bottom: 1px dashed #007bff;
+            /* Para indicar que es editable */
+        }
+
+        .editable:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Estilo para el campo de conteo de jugadores si es necesario */
+        .player-count-cell {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Estilo para las filas de equipos inactivos */
+        .team-inactive {
+            background-color: #f8d7da !important;
+            /* Rojo claro para indicar inactivo */
+            color: #842029;
+            /* Texto más oscuro */
+        }
+
+        /* Estilo para los jugadores sin equipo */
+        .player-no-team {
+            background-color: #fff3cd !important;
+            /* Amarillo claro para indicar sin equipo */
+            color: #664d03;
+            /* Texto más oscuro */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="mb-4 text-center">Gestor de Equipos y Jugadores</h1>
+
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h4><i class="bi bi-gear-fill"></i> Opciones de Datos Globales</h4>
+            </div>
+            <div class="card-body d-flex justify-content-center align-items-center flex-wrap">
+                <button id="exportAllDataBtn" class="btn btn-dark me-2 mb-2"><i class="bi bi-box-arrow-down"></i>
+                    Exportar Todos los Datos</button>
+                <input type="file" id="importFileInput" accept=".json" style="display: none;">
+                <button id="importAllDataBtn" class="btn btn-dark me-2 mb-2"><i class="bi bi-box-arrow-up"></i> Importar
+                    Datos desde JSON</button>
+                  <input type="file" id="importTeamsFileInput" accept=".json" multiple style="display: none;">
+            <button id="importTeamsBtn" class="btn btn-primary mb-2"><i class="bi bi-folder-plus"></i> Importar Archivos de Equipo (Unir)
+            </button>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h4><i class="bi bi-bar-chart-fill"></i> Estadísticas Globales</h4>
+        </div>
+        <div class="card-body">
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 border rounded shadow-sm bg-light">
+                        <h5>Equipos Totales</h5>
+                        <h3 id="statTotalTeams" class="text-primary">0</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 border rounded shadow-sm bg-light">
+                        <h5>Jugadores Totales</h5>
+                        <h3 id="statTotalPlayers" class="text-info">0</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 border rounded shadow-sm bg-light">
+                        <h5>Equipos Activos</h5>
+                        <h3 id="statActiveTeams" class="text-success">0</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 border rounded shadow-sm bg-light">
+                        <h5>Jugadores Sin Equipo</h5>
+                        <h3 id="statPlayersNoTeam" class="text-warning">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="card mb-5">
+            <div class="card-header bg-primary text-white">
+                <h2>Todos los Jugadores</h2>
+            </div>
+            <div class="card-body">
+                <p>Aquí puedes ver y editar la información de todos los jugadores de la liga. Los jugadores sin equipo
+                    se marcan en amarillo.</p>
+                <p>Añade un nuevo jugador a un equipo existente (máximo 8 jugadores por equipo).</p>
+                <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#addPlayerModal">
+                    <i class="bi bi-person-plus-fill"></i> Añadir Nuevo Jugador
+                </button>
+
+                <div class="table-responsive">
+                    <table id="playersTable" class="table table-striped table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nickname</th>
+                                <th>Avatar</th>
+                                <th>Equipo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-separator">
+
+        <div class="card mb-5">
+            <div class="card-header bg-success text-white">
+                <h2>Gestión de Equipos</h2>
+            </div>
+            <div class="card-body">
+                <p>Gestiona los equipos existentes o crea nuevos. Los equipos inactivos se marcan en rojo claro.</p>
+
+                <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal"
+                    data-bs-target="#newTeamModal">
+                    <i class="bi bi-plus-circle"></i> Crear Nuevo Equipo
+                </button>
+
+                <h4 class="mt-4">Listado de Equipos</h4>
+                <div class="table-responsive">
+                    <table id="teamsTable" class="table table-striped table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Nombre del Equipo</th>
+                                <th>Capitán</th>
+                                <th># Jugadores</th>
+                                <th>Región</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="newTeamModal" tabindex="-1" aria-labelledby="newTeamModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newTeamModalLabel">Crear Nuevo Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="newTeamForm">
+                            <div class="mb-3">
+                                <label for="newTeamTag" class="form-label">Tag del Equipo</label>
+                                <input type="text" class="form-control" id="newTeamTag" required maxlength="7">
+                            </div>
+                            <div class="mb-3">
+                                <label for="newTeamName" class="form-label">Nombre del Equipo</label>
+                                <input type="text" class="form-control" id="newTeamName" required maxlength="25">
+                            </div>
+                            <div class="mb-3">
+                                <label for="newTeamCaptain" class="form-label">Capitán</label>
+                                <input type="text" class="form-control" id="newTeamCaptain" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newTeamRegion" class="form-label">Región</label>
+                                <input type="text" class="form-control" id="newTeamRegion" value="LAN">
+                            </div>
+                            <button type="submit" class="btn btn-success"><i class="bi bi-person-fill-add"></i> Crear
+                                Equipo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addPlayerModal" tabindex="-1" aria-labelledby="addPlayerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPlayerModalLabel">Añadir Nuevo Jugador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPlayerForm">
+                        <div class="mb-3">
+                            <label for="playerNickname" class="form-label">Nickname</label>
+                            <input type="text" class="form-control" id="playerNickname" required maxlength="12">
+                        </div>
+                        <div class="mb-3">
+                            <label for="playerID" class="form-label">ID del Jugador</label>
+                            <input type="text" class="form-control" id="playerID" required maxlength="7">
+                        </div>
+                        <div class="mb-3">
+                            <label for="playerAvatar" class="form-label">Avatar</label>
+                            <input type="text" class="form-control" id="playerAvatar" value="male1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="playerTeamTagInput" class="form-label">Asignar a Equipo</label>
+                            <input class="form-control" list="datalistOptions" id="playerTeamTagInput"
+                                placeholder="Escribe para buscar un equipo..." required>
+                            <datalist id="datalistOptions">
+                            </datalist>
+                        </div>
+                        <button type="submit" class="btn btn-info"><i class="bi bi-person-plus-fill"></i> Añadir
+                            Jugador
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="reassignPlayerModal" tabindex="-1" aria-labelledby="reassignPlayerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reassignPlayerModalLabel">Reasignar Jugador: <span
+                            id="reassignPlayerNickname"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reassignPlayerForm">
+                        <input type="hidden" id="reassignPlayerID">
+                        <div class="mb-3">
+                            <label for="reassignTeamTagInput" class="form-label">Mover a Equipo</label>
+                            <input class="form-control" list="reassignDatalistOptions" id="reassignTeamTagInput"
+                                placeholder="Escribe para buscar un nuevo equipo..." required>
+                            <datalist id="reassignDatalistOptions">
+                            </datalist>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-right-circle-fill"></i>
+                            Reasignar Jugador</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editTeamModal" tabindex="-1" aria-labelledby="editTeamModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editTeamModalLabel">Editar Detalles de Equipo: <span id="editTeamTagSpan"></span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editTeamForm">
+                            <input type="hidden" id="editTeamOriginalTag"> <div class="mb-3">
+                                <label for="editTeamOrg" class="form-label">Organización (Org)</label>
+                                <input type="text" class="form-control" id="editTeamOrg" placeholder="Nombre de la organización">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTeamNombreAnterior" class="form-label">Nombre Anterior del Equipo</label>
+                                <input type="text" class="form-control" id="editTeamNombreAnterior" placeholder="Si aplica">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTeamNuevoNombre" class="form-label">Nuevo Nombre del Equipo (campo no usado)</label>
+                                <input type="text" class="form-control" id="editTeamNuevoNombre" placeholder="Este campo se actualiza con el nombre actual" disabled>
+                                <div class="form-text">Este campo es informativo y se actualiza automáticamente con el nombre actual del equipo.</div>
+                            </div>
+                             <div class="mb-3">
+                                <label for="editTeamSeguro" class="form-label">¿Seguro?</label>
+                                <select class="form-select" id="editTeamSeguro">
+                                    <option value="true">Sí</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTeamLink" class="form-label">Enlace Personalizado</label>
+                                <input type="text" class="form-control" id="editTeamLink" placeholder="/equipos/nombre-equipo">
+                                <div class="form-text">Ej: /equipos/nombre-equipo (se genera automáticamente con el nombre del equipo, pero se puede sobrescribir)</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTeamGrupo" class="form-label">Grupo Asignado</label>
+                                <input type="text" class="form-control" id="editTeamGrupo" placeholder="SIN ASIGNAR">
+                            </div>
+                             <div class="mb-3">
+                                <label for="editTeamPosicionDesempate" class="form-label">Posición Desempate</label>
+                                <select class="form-select" id="editTeamPosicionDesempate">
+                                    <option value="true">Sí</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+   
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+   |<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="gestion-torneo.js"></script>
+
+</body>
+
+</html>

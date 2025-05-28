@@ -1,0 +1,334 @@
+/* Variables CSS (en lugar de SCSS) */
+:root {
+    --meter-bg-color: white;
+    --ring-size: 3.5%;
+    --ring-color: #333;
+    --grad-font-size: 1.25rem;
+    --grad-font-size-big: 2rem;
+    --grad-color: #555;
+    --tick-color: var(--grad-color);
+    --needle-width: 5px;
+    --needle-side-width: 3px;
+    --needle-height: 140px;
+    --needle-color: #e30;
+    --needle-shading: 5%;
+    --needle-axle-bg-color: var(--ring-color);
+    --needle-axle-color: #eee;
+    --needle-axle-size: 15%;
+    --needle-axle-size-big: 37.5%;
+    --label-color: var(--grad-color);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Coda:400|Roboto+Mono:400,400italic);
+
+* {
+	box-sizing: border-box;
+    /* Comentamos la transición global para controlarla en JS */
+    /* transition: all 0.2s ease-in-out; */
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.head, .help {
+    padding: 1rem;
+    color: #888;
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+}
+
+.help {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.head {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.selection-panel {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.selection-panel label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.selection-panel select, .selection-panel button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.selection-panel button {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.selection-panel button:hover {
+    background-color: #0056b3;
+}
+
+
+.dashboard {
+	display: flex; /* Cambiado a flex para alinear los medidores */
+	padding: 2rem;
+    justify-content: center; /* Centrar los medidores */
+	font-family: 'Coda', cursive;
+}
+
+.meter {
+	display: inline-block;
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	background-color: var(--meter-bg-color);
+	border-radius: 50%;
+	margin: 0 0.5rem;
+	box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23); /* Equivalent to @include shadow(2, true); */
+	
+	&:before { /* Pseudo-elemento para el anillo exterior */
+		content: "";
+		display: block;
+		position: absolute;
+		width: calc(100% + var(--ring-size) * 2);
+		left: calc( -1 * var(--ring-size));
+		top: calc( -1 * var(--ring-size));
+		bottom: calc( -1 * var(--ring-size));
+		border-radius: 50%;
+		background: var(--ring-color);
+		z-index: -1;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); /* Equivalent to @include shadow(3); */
+	}
+}
+
+.label {
+	position: absolute;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	text-align: center;
+	color: var(--label-color);
+
+	&.label-value {
+		color: var(--needle-axle-color);
+	}
+	
+	span {
+		text-transform: uppercase;
+	}
+}
+
+.label-unit {
+	top: 82.5%;
+	
+	div {
+		font-size: 1rem;
+
+		.meter--big-label & {
+			font-size: 0;
+		}
+	}
+}
+
+.label-value {
+	top: 50%;
+	line-height: 1.25;
+	
+	div, span {
+		font-size: 0;
+
+		.meter--big-label & {
+			font-size: 2.5rem;
+		}
+	}
+	
+	div {
+		font-family: 'Roboto Mono', monospace;
+		font-style: italic;
+	}
+	
+	span {
+		.meter--big-label & {
+			font-size: 1rem;
+		}
+	}
+	
+	span {
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+.needle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: var(--needle-width);
+	height: var(--needle-height);
+	transform: translate3d(-50%, 0, 0);
+	transform-origin: 50% 0;
+	background-color: var(--needle-color);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); /* Equivalent to @include shadow(1); */
+    /* transition: transform 0.5s ease-out; Animación de la aguja */
+
+	&:before,
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+	}
+	
+	&:before {
+		left: calc(-1 * var(--needle-side-width));
+		border-width: 0 var(--needle-side-width) var(--needle-height) 0;
+		border-color: transparent color-mix(in srgb, var(--needle-color) var(--needle-shading) * 2, white) transparent transparent; /* Lighter color */
+	}
+	
+	&:after {
+		right: calc(-1 * var(--needle-side-width));
+		border-width: var(--needle-height) var(--needle-side-width) 0 0;
+		border-color: color-mix(in srgb, var(--needle-color) var(--needle-shading), black) transparent transparent transparent; /* Darker color */
+	}
+}
+
+.needle-axle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: var(--needle-axle-size);
+	height: var(--needle-axle-size);
+	transform: translate3d(-50%, -50%, 0);
+	border-radius: 50%;
+	background-color: var(--needle-axle-bg-color);
+	color: var(--needle-axle-color);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* Equivalent to @include shadow(2); */
+	cursor: pointer;
+	
+	&:hover {
+		background-color: color-mix(in srgb, var(--needle-axle-bg-color) 20%, black); /* Darken color */
+	}
+	
+	.meter--big-label & {
+		width: var(--needle-axle-size-big);
+		height: var(--needle-axle-size-big);
+	}
+}
+
+.grad {
+	position: absolute;
+	display: inline-block;
+	font-size: var(--grad-font-size);
+	line-height: 1;
+	color: var(--grad-color);
+	transform: translate3d(-50%, -50%, 0);
+	font-weight: bold;
+	
+	&.redzone {
+		color: var(--needle-color);
+	}
+
+	.meter--team1 & {
+		font-size: var(--grad-font-size-big);
+	}
+}
+
+.grad-tick,
+.grad-tick--half,
+.grad-tick--quarter {
+
+	&.redzone {
+		background-color: var(--needle-color);
+	}
+}
+
+.grad-tick {
+	position: absolute;
+	display: block;
+	width: 4px;
+	height: 0.75em;
+	transform-origin: 50% 0;
+	background-color: var(--tick-color);
+}
+
+.grad-tick--half {
+	width: 2px;
+	height: 0.5em;
+}
+
+.grad-tick--quarter {
+	width: 2px;
+	height: 0.25em;
+}
+
+/* Medidor VS (central) */
+.meter--vs {
+	width: 5rem;
+	height: 5rem;
+	margin: 0;
+	margin-left: -2rem;
+	margin-right: -2rem;
+	box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23); /* Equivalent to @include shadow(2, true); */
+
+	&:before {
+		width: calc(100% + var(--ring-size) * 4 * 2);
+		height: calc(100% + var(--ring-size) * 4 * 2);
+		left: calc(-1 * var(--ring-size) * 4);
+		top: calc(-1 * var(--ring-size) * 4);
+		bottom: calc(-1 * var(--ring-size) * 4);
+	}
+
+	div {
+		font-size: 2.5rem;
+		text-align: center;
+		line-height: 5rem;
+		font-family: 'Roboto Mono', monospace;
+		font-style: italic;
+		font-weight: bold;
+		color: var(--grad-color);
+	}
+}
+
+
+.selection-panel button.stop-button {
+    background-color: #dc3545; /* Rojo para el botón de detener */
+    border-color: #dc3545;
+    margin-left: 15px; /* Espacio con el botón de comparar */
+}
+
+.selection-panel button.stop-button:hover {
+    background-color: #c82333;
+}

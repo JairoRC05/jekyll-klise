@@ -1,0 +1,70 @@
+[
+    {
+        "tag": "FTB",
+        "team": "FROSTBITE",
+        "org": "",
+        "activo": true,
+        "capitan": "TUGFAMON",
+        "region": "LAN",
+        "teamNombreAnterior": "AD GAMING",
+        "teamNuevoNombre": "FROSTBITE",
+        "seguro": false,
+        "link": "/equipos/ad-gaming",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "AÐ・Efesto",
+                "ID": "7QT4YAA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・KION",
+                "ID": "C3EG7EF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Icer",
+                "ID": "Y39HPAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・DrMarioZ",
+                "ID": "GGA8QFL"
+            },
+            {
+                "nickname": "AÐ・Criska",
+                "ID": "2A0PAYQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・PikaBro",
+                "ID": "668H1XE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Pikinツ",
+                "ID": "LY3YYX3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "太ㅤGoomㅤ會",
+                "ID": "NFN0FN",
+                "avatar": "male1"
+            }
+            ]
+        }
+    ]

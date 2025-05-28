@@ -45,7 +45,7 @@ permalink:
   </div>
 
  <div class="d-flex justify-content-center align-items-center">
-   <button id="descargarTodo" class="btn btn-primary mt-3">Descargar Calendario Footer</button>
+   <button id="descargarTodo" class="btn btn-primary mt-3">Descargar Calendario</button>
  </div>
 
 <div id="equipo-perfil-roster" class="mb-5">
@@ -127,7 +127,7 @@ permalink:
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     const pageID = "{{ page.ID }}";
-    const jsonURL = `/assets/equipos/${pageID.toLowerCase()}.json`;
+    const jsonURL = `/assets/temporadas/junio2025/${pageID.toLowerCase()}.json`;
 
 
     const descargarTodoBtn = document.getElementById('descargarTodo');

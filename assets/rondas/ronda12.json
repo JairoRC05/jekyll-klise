@@ -1,0 +1,294 @@
+{
+  "encuentros": [
+    {
+      "equipoLocal": "PE",
+      "equipoVisitante": "CL",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "PLAGA",
+      "equipoVisitante": "TUT",
+      "mvpsLocal": [
+        {
+          "nombre": "7Froy",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TexasLuna[:",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TexasLuna[:",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Akane秋",
+          "equipo": "TUT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TuT狩DownURL",
+          "equipo": "TUT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TuT狩DownURL",
+          "equipo": "TUT",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "DBO",
+      "equipoVisitante": "RNTX",
+      "mvpsLocal": [
+        {
+          "nombre": "Muertin木火",
+          "equipo": "DBO",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ÆP·(xEDCI",
+          "equipo": "RNTX",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "NEO",
+      "equipoVisitante": "SPACE",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・TVPablo",
+          "equipo": "NEO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・Luffy12",
+          "equipo": "NEO",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "宙VTonyVal",
+          "equipo": "SPACE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "宙VTonyVal",
+          "equipo": "SPACE",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "AMT",
+      "equipoVisitante": "FTB",
+      "mvpsLocal": [
+        {
+          "nombre": "MeXa・Chaq鋼",
+          "equipo": "AMT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Chaq鋼",
+          "equipo": "AMT",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "AÐ・DrMarioZ",
+          "equipo": "FTB",
+          "genero": "unknown"
+        },
+        {
+          "nombre": "AÐ・Criska",
+          "equipo": "FTB",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "RK",
+      "equipoVisitante": "TAD",
+      "mvpsLocal": [
+        {
+          "nombre": "ЯK・chaos",
+          "equipo": "RK",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Jøhanfr38",
+          "equipo": "RK",
+          "genero": "male1"
+        },
+        {
+          "nombre": "andarna_",
+          "equipo": "RK",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ムlixendカモ",
+          "equipo": "TAD",
+          "genero": "male1"
+        },
+        {
+          "nombre": "ムlixendカモ",
+          "equipo": "TAD",
+          "genero": "male1"
+        },
+        {
+          "nombre": "CHC・CHIPIS",
+          "equipo": "TAD",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "OBS",
+      "equipoVisitante": "OVG",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "NS",
+      "equipoVisitante": "ZAFIRO",
+      "mvpsLocal": [
+        {
+          "nombre": "Bellvii",
+          "equipo": "NS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "IAMTOKITO",
+          "equipo": "NS",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "GX",
+      "equipoVisitante": "TM",
+      "mvpsLocal": [
+        {
+          "nombre": "RNT・Zulo銀",
+          "equipo": "GX",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・ČryptoX",
+          "equipo": "GX",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "zenkichi",
+          "equipo": "TM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "zenkichi",
+          "equipo": "TM",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "AOGIRI",
+      "equipoVisitante": "SM",
+      "mvpsLocal": [
+        {
+          "nombre": "Hammerfall9",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        },
+        {
+          "nombre": "NekiusTTV",
+          "equipo": "AOGIRI",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "・Winters・",
+          "equipo": "SM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "$M • Perron",
+          "equipo": "SM",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "TUTW",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "DTY",
+      "equipoVisitante": "ENIGMA",
+      "mvpsLocal": [
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Light光",
+          "equipo": "DTY",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "SPC・Lolfe教",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SPC・Lolfe教",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SPC・Kyoru空",
+          "equipo": "ENIGMA",
+          "genero": "male1"
+        }
+      ]
+    }
+  ]
+}

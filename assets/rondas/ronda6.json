@@ -60,8 +60,30 @@
     {
       "equipoLocal": "PLAGA",
       "equipoVisitante": "DBO",
-      "mvpsLocal": [],
-      "mvpsVisitante": []
+      "mvpsLocal": [
+        {
+          "nombre": "DønLux",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "BLK-luis205",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "Jønasシ",
+          "equipo": "DBO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "・Yata・",
+          "equipo": "DBO",
+          "genero": "male1"
+        }
+      ]
     },
     {
       "equipoLocal": "SM",
@@ -71,9 +93,31 @@
     },
     {
       "equipoLocal": "DTY",
-      "equipoVisitante": "AD",
-      "mvpsLocal": [],
-      "mvpsVisitante": []
+      "equipoVisitante": "FTB",
+      "mvpsLocal": [
+        {
+          "nombre": "龍・Ji9star",
+          "equipo": "DTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DTY",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "AÐ・Pikinツ",
+          "equipo": "FTB",
+          "genero": "male1"
+        },
+        {
+          "nombre": "太ㅤGoomㅤ會",
+          "equipo": "FTB",
+          "genero": "male1"
+        }
+      ]
     },
     {
       "equipoLocal": "GX",

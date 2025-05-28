@@ -1,0 +1,42 @@
+---
+layout:
+permalink: /gasolina.html
+title: IDS | LIGA INDIGO
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Equipos - Medidor Animado</title>
+    <link rel="stylesheet" href="css/meter.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Comparador de Equipos</h1>
+    </div>
+
+    <div class="selection-panel">
+        <label for="team1-select">Equipo 1:</label>
+        <select id="team1-select"></select>
+
+        <label for="team2-select">Equipo 2:</label>
+        <select id="team2-select"></select>
+
+        <button id="compare-btn">Comparar</button>
+        <button id="stop-btn" class="stop-button">Detener y Reiniciar</button> </div>
+
+    <div class="dashboard">
+        <div class="meter meter--team1 meter--big-label"></div>
+        <div class="meter meter--vs"><div>VS</div></div>
+        <div class="meter meter--team2"></div>
+    </div>
+
+    <div class="help">
+        Selecciona dos equipos y haz clic en "Comparar". Usa "Detener y Reiniciar" para volver a 0.
+    </div>
+
+    <script src="js/gasolina.js"></script>
+</body>
+</html>
