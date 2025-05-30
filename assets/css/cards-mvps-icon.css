@@ -134,8 +134,8 @@
   padding: 10px;
   min-width: 500px;
   /* Ajusta según necesites */
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   position: relative;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;

@@ -1,0 +1,2359 @@
+[
+    {
+        "tag": "FTB",
+        "team": "FROSTBITE",
+        "org": "",
+        "activo": true,
+        "capitan": "TUGFAMON",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "FROSTBITE",
+        "seguro": false,
+        "link": "/equipos/frostbite",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "ZTG・Broken",
+                "ID": "MHAP9RC",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Pikinだよ",
+                "ID": "LY3YYX3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Icer",
+                "ID": "Y39HPAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・MerGs",
+                "ID": "C3EG7EF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Tugfamon",
+                "ID": "LGAGE2Y",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "§Efesto§",
+                "ID": "7QT4YAA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Perro乡",
+                "ID": "KFCPP44",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ČryptoX",
+                "ID": "A2AG7X1",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "SIN_EQUIPO",
+        "team": "Sin Equipo",
+        "org": "",
+        "activo": true,
+        "capitan": "N/A",
+        "region": "N/A",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "Sin Equipo",
+        "seguro": false,
+        "link": "/equipos/sin-equipo",
+        "grupo": "N/A",
+        "partidos": {},
+        "jugadores": [
+            {
+                "nickname": "ʚJacoɞ",
+                "ID": "NHTN88E",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "KĘNsąsąki",
+                "ID": "T87QRC8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ŠaṭʊяиọĞr",
+                "ID": "R10QTME",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Hammerfall9",
+                "ID": "R3L165C",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ア・Ękkō",
+                "ID": "63MMNM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Ɗʝ・ƓaʀyOak",
+                "ID": "YN5YCY2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "NekiusTTV",
+                "ID": "RM72RE0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MysticRLWolf",
+                "ID": "3XG9P67",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Nishi-Chan",
+                "ID": "6MH6P69",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Rhzeta",
+                "ID": "MT42FC1",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m1": 1
+            },
+            {
+                "nickname": "Bellvii",
+                "ID": "18Q9TAH",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Uzuimonroll^",
+                "ID": "MRA5GPT",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Jedm愛",
+                "ID": "YAK4AAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Kyōツ",
+                "ID": "YT7R2HR",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Prof.Serna",
+                "ID": "22F41MF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Yukƙie",
+                "ID": "63PGCF",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "Lumina心",
+                "ID": "97Y0RG3",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "SPC・Lolfe教",
+                "ID": "F942677",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m1": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "SPC・Frice",
+                "ID": "HR3X0NP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SPC・Kyoru空",
+                "ID": "2L72Q89",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "GamaMx1%",
+                "ID": "Q56X4K5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "x7Fxst100%",
+                "ID": "TPK7R51",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Kid.",
+                "ID": "CX0P57X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ElyLover愛",
+                "ID": "H6X00LK",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "タTaquito",
+                "ID": "RQ6HFMP",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "ムlixendカモ",
+                "ID": "5F9X6LC",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Kaldnese氷",
+                "ID": "F425CK",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "CarlaConC",
+                "ID": "4C5771N",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "smurfDWanaba",
+                "ID": "KKME1H5",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "EL_CHEETO",
+                "ID": "1LFHA28",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "CHC・CHIPIS",
+                "ID": "TL498K9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "EK・Ikal",
+                "ID": "TMRR3XN",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M*SaBroso",
+                "ID": "87YFMQA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Alndingo",
+                "ID": "GCLK510",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Stimpy",
+                "ID": "HEQCNTP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "• Solstice",
+                "ID": "FHREPPG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "• Raziel",
+                "ID": "KP3MGGK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・DrFix銀",
+                "ID": "EFE5E97",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Shoyo銀",
+                "ID": "2CFC54X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Pikito",
+                "ID": "2NKE093",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Valdez.",
+                "ID": "ENX6670",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Luffy12",
+                "ID": "MKCA597",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m3": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "RNT・Kaine十",
+                "ID": "RQ2PF50",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m2": 1
+            },
+            {
+                "nickname": "Pablo",
+                "ID": "843A4E0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Memew",
+                "ID": "N2EAENF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・ʝʊคɳƙค",
+                "ID": "1GQ494T",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Myyn母鹿",
+                "ID": "4MYGCXL",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "i'm.McLovin",
+                "ID": "9KNN1KA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TESLA科学",
+                "ID": "50L82YG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "差Seruhio歩",
+                "ID": "2HX0X8C",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ZEILAZ_ttv",
+                "ID": "Y9HYL8G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "マキレツクス",
+                "ID": "T6Q62NX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "EK・Mich",
+                "ID": "64MY9H3",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DemoliZM",
+                "ID": "L92XH05",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Xapu",
+                "ID": "QEMX34",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Lewxen愛",
+                "ID": "PNR52M1",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ElJavizzTTV",
+                "ID": "1H3AL5L",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・SAE",
+                "ID": "M53P4YX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Niwatøri",
+                "ID": "6R3EH5G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Latios才",
+                "ID": "LFNKXF1",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ÆP·(xEDCI",
+                "ID": "4X89CRA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "¡caos",
+                "ID": "Q4NRL96",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SoyYasuッ",
+                "ID": "LYP1195",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Arlukii",
+                "ID": "H445QXX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "danonino",
+                "ID": "7QXNLHK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "cristoff",
+                "ID": "GM5E987",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Holmes",
+                "ID": "R47MG87",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "zenkichi",
+                "ID": "7YC23GC",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・Sol",
+                "ID": "CLN0GPX",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "ЯK・Belz돈",
+                "ID": "58EAE21",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "нореи'т",
+                "ID": "LNTHXGT",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・chaos",
+                "ID": "4CNKGAX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・ㅋKarma",
+                "ID": "KE4PTR9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "andarna_",
+                "ID": "EQQC61T",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "PLAGA",
+        "team": "PLAGA VILLANOS",
+        "org": "PLAGA/VILLANOS E-SPORTS",
+        "activo": true,
+        "capitan": "TEXAS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/plaga",
+        "grupo": "NORTE",
+        "posicionDesempate": true,
+        "partidos": {
+            "M1": "2",
+            "M2": "3",
+            "M3": "3",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "3",
+            "M9": "2",
+            "M10": "3",
+            "M11": "2",
+            "M12": "2"
+        },
+        "jugadores": [
+            {
+                "nickname": "TexasLuna[:",
+                "ID": "A0829K4",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Fersaw",
+                "ID": "916CTAR",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "7Froy",
+                "ID": "KX010TK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DønLux",
+                "ID": "MAL0Q6H",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "BLK-luis205",
+                "ID": "GM9M2YN",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TTVXileKira",
+                "ID": "H7YC4XP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TTV.JuanEury",
+                "ID": "YCTP26Q",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SPC・May",
+                "ID": "X556TRH",
+                "avatar": "female1"
+            }
+        ]
+    },
+    {
+        "tag": "AMT",
+        "team": "IMPERIO MEXA AMT",
+        "org": "XF05 ESPORTS",
+        "activo": true,
+        "capitan": "CHAQS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/imperio-mexa/--amatista",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "3",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "MeXa・Cage",
+                "ID": "YT150XU",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・Chaq鋼",
+                "ID": "4H2XNPY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Black",
+                "ID": "TXG338A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "真kikurihime",
+                "ID": "L4G70NX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "寂・NuzuLi",
+                "ID": "Y7FCTPQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "JuancaMissi",
+                "ID": "EMTNC13",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "R3JON",
+                "ID": "NQE5NG3",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "AOGIRI",
+        "team": "AOGIRI",
+        "org": null,
+        "activo": false,
+        "capitan": "JACO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/aogiri",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "1",
+            "M2": "0",
+            "M3": "2",
+            "M4": "1",
+            "M5": "0",
+            "M6": "3",
+            "M7": "3",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "1",
+            "M12": "3"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "CL",
+        "team": "CHRONOS LEGION",
+        "org": null,
+        "activo": false,
+        "capitan": "JEDM",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/chronos-legion",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "1",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "3",
+            "M11": "3",
+            "M12": "0"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "CD",
+        "team": "CUMBIA DRAGÓN",
+        "org": null,
+        "activo": true,
+        "capitan": "NEW",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/dinamita-buena-onda",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "3",
+            "M2": "0",
+            "M3": "1",
+            "M4": "0",
+            "M5": "3",
+            "M6": "0",
+            "M7": "3",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "3",
+            "M12": "3"
+        },
+        "jugadores": [
+            {
+                "nickname": "ttvNewt_ez",
+                "ID": "XAMMFEP",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "Jønasシ",
+                "ID": "R5FX423",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1,
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "・Yata・",
+                "ID": "7X4C0CK",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "ttvStarbae01",
+                "ID": "NA9QXAT",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m4": 1,
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "Muertin木火",
+                "ID": "5TR8K9T",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "T-ki",
+                "ID": "6EA8CT7",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "DINASTY",
+        "team": "DINASTY",
+        "org": "XF05 eSports",
+        "activo": true,
+        "capitan": "TORO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DINASTY",
+        "seguro": true,
+        "link": "/equipos/dinasty",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "1",
+            "M2": "1",
+            "M3": "2",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "2",
+            "M9": "3",
+            "M10": "3",
+            "M11": "3",
+            "M12": "2"
+        },
+        "jugadores": [
+            {
+                "nickname": "龍・Toro",
+                "ID": "RNCXGAK",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Light光",
+                "ID": "43LKYHQ",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Kraft",
+                "ID": "2NNA9P4",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Vicleo",
+                "ID": "446HY4X",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Ji9star",
+                "ID": "83AFR37",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "Amailu",
+                "ID": "95R97RL",
+                "avatar": "female1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "Máx・獅",
+                "ID": "CY9PT5",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            }
+        ],
+        "posicionDesempate": false
+    },
+    {
+        "tag": "ENIGMA",
+        "team": "SPC ENIGMA",
+        "org": "SPC E-SPORTS",
+        "activo": false,
+        "capitan": "RODMAN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/spc-e-sports--enigma",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "3",
+            "M2": "3",
+            "M3": "3",
+            "M4": "3",
+            "M5": "3",
+            "M6": "0",
+            "M7": "3",
+            "M8": "3",
+            "M9": "3",
+            "M10": "3",
+            "M11": "3",
+            "M12": "1"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "GX",
+        "team": "RNT GALÁCTICOS",
+        "org": "RANKED TEAM",
+        "activo": false,
+        "capitan": "DR. FIX",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ranked-team--galacticos",
+        "grupo": "SUR",
+        "posicionDesempate": false,
+        "partidos": {
+            "M1": "3",
+            "M2": "3",
+            "M3": "0",
+            "M4": "3",
+            "M5": "3",
+            "M6": "0",
+            "M7": "0",
+            "M8": "3",
+            "M9": "0",
+            "M10": "3",
+            "M11": "3",
+            "M12": "3"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "NEO",
+        "team": "RNT NEO STARS",
+        "org": "RANKED TEAM",
+        "activo": false,
+        "capitan": "LUFFY",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ranked-team--neo-stars",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "2",
+            "M3": "0",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "1",
+            "M8": "3",
+            "M9": "3",
+            "M10": "3",
+            "M11": "3",
+            "M12": "3"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "NS",
+        "team": "NO SMITES",
+        "org": null,
+        "activo": false,
+        "capitan": "TOKITO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/no-smites",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "3",
+            "M2": "3",
+            "M3": "3",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "3",
+            "M9": "3",
+            "M10": "3",
+            "M11": "0",
+            "M12": "3"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "OVG",
+        "team": "OVERHEAT",
+        "org": "OVERHEAT",
+        "activo": false,
+        "capitan": "ELIOT",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/overheat",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "1",
+            "M2": "3",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "OBS",
+        "team": "IMPERIO MEXA OBSIDIANA",
+        "org": "XF05 ESPORTS",
+        "activo": true,
+        "capitan": "Quique",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/imperio-mexa/--obsidiana",
+        "posicionDesempate": true,
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "2",
+            "M2": "0",
+            "M3": "0",
+            "M4": "2",
+            "M5": "3",
+            "M6": "2",
+            "M7": "0",
+            "M8": "2",
+            "M9": "3",
+            "M10": "0",
+            "M11": "0",
+            "M12": "3"
+        },
+        "jugadores": [
+            {
+                "nickname": "MeXa・Quique",
+                "ID": "5HHKX53",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa·Ranphy",
+                "ID": "8Y586PC",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m4": 1
+            },
+            {
+                "nickname": "MeXa・Kory",
+                "ID": "7K4TY1F",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・SoUriS",
+                "ID": "57HAL9Y",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・Tony",
+                "ID": "301CYX8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa°Atenea",
+                "ID": "CKCHQ1L",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "MeXa • Salie",
+                "ID": "AX09NA2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Sigva",
+                "ID": "9Q199FC",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "PL",
+        "team": "PRESTACIONES DE LEY HG",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "BENNY",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--prestaciones-de-ley",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "3",
+            "M3": "3",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "3",
+            "M9": "1",
+            "M10": "0",
+            "M11": "2",
+            "M12": "3"
+        },
+        "jugadores": [
+            {
+                "nickname": "PL • TNMortem",
+                "ID": "FQTLQT6",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1,
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "¶ZinX¶",
+                "ID": "56T8G09",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "Vamp_Lut.TTv",
+                "ID": "8XTYF12",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "PL • Payan",
+                "ID": "HXNG3M",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "PL • Payan",
+                "ID": "F6TL275",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "RK",
+        "team": "RAGNAROK YMIR",
+        "org": "CLUB RAGNAROK",
+        "activo": false,
+        "capitan": "JOHAN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/club-ragnarok--ymir",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "2",
+            "M2": "0",
+            "M3": "1",
+            "M4": "0",
+            "M5": "0",
+            "M6": "3",
+            "M7": "3",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "2"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "SM",
+        "team": "HG SALARIO MINIMO",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "FINN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--salario-minimo",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "3",
+            "M2": "1",
+            "M3": "2",
+            "M4": "0",
+            "M5": "0",
+            "M6": "3",
+            "M7": "0",
+            "M8": "1",
+            "M9": "0",
+            "M10": "3",
+            "M11": "3",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "$M・Finn",
+                "ID": "GF9L4M8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Krosty",
+                "ID": "KE5NP22",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PL・么quario",
+                "ID": "8XTYF12",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "$M-Nono",
+                "ID": "FFGKK82",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SuFurrito坐",
+                "ID": "F2Y485N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PL• At-Gc",
+                "ID": "1X39A0A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Diegorpg05",
+                "ID": "4LN63PF",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "RNTX",
+        "team": "RNT XAPULOVERS",
+        "org": "RANKED TEAM",
+        "activo": false,
+        "capitan": "XAPU",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/ranked-team--xapulovers",
+        "grupo": "SUR",
+        "posicionDesempate": true,
+        "partidos": {
+            "M1": "0",
+            "M2": "3",
+            "M3": "1",
+            "M4": "1",
+            "M5": "0",
+            "M6": "3",
+            "M7": "0",
+            "M8": "0",
+            "M9": "3",
+            "M10": "3",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "TM",
+        "team": "TEAM MANICOMIO",
+        "org": null,
+        "activo": false,
+        "capitan": "YASU",
+        "region": "LAN",
+        "teamNombreAnterior": "BROKEN DREAMS",
+        "teamNuevoNombre": "TEAM MANICOMIO",
+        "seguro": false,
+        "link": "/equipos/team-manicomio",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "1",
+            "M4": "3",
+            "M5": "3",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "3",
+            "M10": "3",
+            "M11": "1",
+            "M12": "0"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "SPACE",
+        "team": "SPACE VAL",
+        "org": "SPACE RACOONS",
+        "activo": true,
+        "capitan": "DaniVal",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/space-racoons--space-val",
+        "grupo": "SUR",
+        "posicionDesempate": true,
+        "partidos": {
+            "M1": "3",
+            "M2": "3",
+            "M3": "3",
+            "M4": "0",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "0",
+            "M9": "3",
+            "M10": "3",
+            "M11": "3",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "宙V・DaniVal",
+                "ID": "CT23992",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "宙VTonyVal",
+                "ID": "RMEPEEA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Golditto.TTV",
+                "ID": "E7ERYF9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Troncio",
+                "ID": "9RP17PY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "宙V・Hungry",
+                "ID": "F3TEE13",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "宙V・CLazo",
+                "ID": "A6RASMX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Sorcière.",
+                "ID": "LQ4G524",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "SPC・Rodman",
+                "ID": "A6YE7LQ",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m1": "HG"
+            }
+        ]
+    },
+    {
+        "tag": "STMN",
+        "team": "STAMINA E-SPORTS",
+        "org": "STAMINA E-SPORTS",
+        "activo": true,
+        "capitan": "RANMA",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/stamina-e-sports",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "3",
+            "M2": "3",
+            "M3": "3",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "3",
+            "M9": "3",
+            "M10": "0",
+            "M11": "0",
+            "M12": "3"
+        },
+        "jugadores": [
+            {
+                "nickname": "STMN・Ranma",
+                "ID": "A38905X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Regi",
+                "ID": "E9ENLYE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Holmes",
+                "ID": "L1G1GF2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Pachy",
+                "ID": "Q3HCM3A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN • Frank",
+                "ID": "6990CYH",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN • Tokito",
+                "ID": "820R14M",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m4": 2
+            },
+            {
+                "nickname": "Frank4ever",
+                "ID": "EKYTQ9H",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "TAD",
+        "team": "TAQUITOS A LA DIABLA",
+        "org": "",
+        "activo": false,
+        "capitan": "TAQUITO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/taquitos-a-la-diabla",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "3",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "1",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "1"
+        },
+        "jugadores": []
+    },
+    {
+        "tag": "TUT",
+        "team": "THE UNOWN TEAM",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "BREN",
+        "region": "LAN",
+        "teamNombreAnterior": "2X1500",
+        "teamNuevoNombre": "THE UNOWN TEAM",
+        "seguro": false,
+        "link": "/equipos/theunownteam",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "2",
+            "M5": "3",
+            "M6": "1",
+            "M7": "3",
+            "M8": "3",
+            "M9": "0",
+            "M10": "0",
+            "M11": "2",
+            "M12": "1"
+        },
+        "jugadores": [
+            {
+                "nickname": "TuT • Bren10",
+                "ID": "2XX1PF0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "炊・Ashura",
+                "ID": "140PENG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "BeniManitas?",
+                "ID": "229QRAM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT • 7Ibu",
+                "ID": "21QE8M2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Akane秋",
+                "ID": "FYF3MC8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT狩DownURL",
+                "ID": "XH4P03E",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT-Bernylml",
+                "ID": "RH49KXK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Hades地獄",
+                "ID": "C5C89CK",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m3": 2
+            }
+        ]
+    },
+    {
+        "tag": "TUTW",
+        "team": "TUT WARRIORS",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "GERD",
+        "region": "LAN",
+        "teamNombreAnterior": "LA ONE COIN",
+        "teamNuevoNombre": "TUT WARRIORS",
+        "seguro": false,
+        "link": "/equipos/theunownteam--warriors",
+        "grupo": "SUR",
+        "posicionDesempate": true,
+        "partidos": {
+            "M1": "0",
+            "M2": "3",
+            "M3": "2",
+            "M4": "3",
+            "M5": "1",
+            "M6": "3",
+            "M7": "3",
+            "M8": "3",
+            "M9": "3",
+            "M10": "1",
+            "M11": "2",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "Raydemort",
+                "ID": "H8Y27LQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "GerardAC",
+                "ID": "A9390CX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "WK・Metal",
+                "ID": "MR027NE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "friedefan",
+                "ID": "501AN2N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Liкoジ",
+                "ID": "XYLMNNE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Zulo銀",
+                "ID": "7759CK5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "LilRaccoon.",
+                "ID": "P5QLYGK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "きkenji",
+                "ID": "4F1X6AH",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "ZAFIRO",
+        "team": "IMPERIO MEXA ZAFIRO",
+        "org": "XF05 ESPORTS",
+        "activo": true,
+        "capitan": "Tory",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/imperio-mexa/--zafiro",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "MeXa • Frost",
+                "ID": "T30862L",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Magnus",
+                "ID": "89CTXY4",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Nadir",
+                "ID": "M3LXQGP",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "MeXa・Masaru",
+                "ID": "AGM28R9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Ismael",
+                "ID": "TP5EPHQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Cuatzo",
+                "ID": "1XTK4H9",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・Tory",
+                "ID": "THMG76A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Cøwbøyメ",
+                "ID": "M9FHRL7",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "AEP",
+        "team": "ALEPH RAGNAROK",
+        "org": "",
+        "activo": true,
+        "capitan": "JOHAN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "ALEPH RAGNAROK",
+        "seguro": false,
+        "link": "/equipos/aleph-ragnarok",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "COMEMANGO",
+                "ID": "F6KNR2G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ЯK・Widder亗",
+                "ID": "AK5XG4N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "~ Rygar ~",
+                "ID": "PF6688A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Jøhanfr38",
+                "ID": "CK7KNQ7",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ØdinTV93",
+                "ID": "CA018FT",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "FloppaTrash",
+                "ID": "NP03QT",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Dairos",
+                "ID": "H0R6MF8",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "AMET",
+        "team": "DFS AMETHYST",
+        "org": "",
+        "activo": true,
+        "capitan": "ROUSS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DFS AMETHYST",
+        "seguro": false,
+        "link": "/equipos/dfs-amethyst",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "DFs・Rousヅ",
+                "ID": "KYL8718",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Allie",
+                "ID": "M7KRKE3",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Göndul",
+                "ID": "N3C2HQ",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Shüji",
+                "ID": "373QLY6",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Amari",
+                "ID": "FGPFK86",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs・Charbet",
+                "ID": "EG449ML",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs・Raven",
+                "ID": "2M6N77K",
+                "avatar": "female1"
+            }
+        ]
+    },
+    {
+        "tag": "PLATINO",
+        "team": "DFS PLATINUM",
+        "org": "",
+        "activo": true,
+        "capitan": "ALEX TRIANA",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DFS PLATINUM",
+        "seguro": false,
+        "link": "/equipos/dfs-platinum",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "DFs・AlexT",
+                "ID": "3FX577Q",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Otger",
+                "ID": "9QRY308",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Яalek",
+                "ID": "PFG5F6H",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Perron",
+                "ID": "74HHH8H",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Forti",
+                "ID": "FKH2R49",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Winter",
+                "ID": "KT2ARX2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "yiroo.xo",
+                "ID": "N2CMGNR",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Cypix悲",
+                "ID": "YP6FYTA",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "QUARTZ",
+        "team": "DFS QUARTZ",
+        "org": "",
+        "activo": true,
+        "capitan": "CROSS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DFS QUARTZ",
+        "seguro": false,
+        "link": "/equipos/dfs-quartz",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "DFs・Cros",
+                "ID": "7TE1K80",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・DoPa",
+                "ID": "HHX3CAP",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・HaKuna",
+                "ID": "CM30NA3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Sísifo",
+                "ID": "4AY0P1E",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "La_Lujuria",
+                "ID": "G7YF5FG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Poshiヅ",
+                "ID": "H984G0F",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・RaDahN",
+                "ID": "P1MM782",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "SAPPHIR",
+        "team": "DFS SAPPHIRE",
+        "org": "",
+        "activo": true,
+        "capitan": "TREVOR",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DFS SAPPHIRE",
+        "seguro": false,
+        "link": "/equipos/dfs-sapphire",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "DFs・Trevor",
+                "ID": "6NC11M4",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・arepa",
+                "ID": "HM0FQ75",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Mudkip",
+                "ID": "17ANET6",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・TheBaez",
+                "ID": "XYGHX92",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・OrcoBC",
+                "ID": "XRTEN8E",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Squid*Ink",
+                "ID": "NH0PRCL",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "TAE",
+        "team": "TEAM AETHER",
+        "org": "",
+        "activo": true,
+        "capitan": "MATI",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "TEAM AETHER",
+        "seguro": false,
+        "link": "/equipos/team-aether",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "Summ£r",
+                "ID": "TYLMP54",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "WorstOne_uwu",
+                "ID": "PQA1LX0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Zukopham",
+                "ID": "AFNKN5X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TheRaYMoNz",
+                "ID": "FFNN7FM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "§TachyonTTV®",
+                "ID": "XHAQ5YM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DarkyriaX",
+                "ID": "GNC462K",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "MAGMA",
+        "team": "TEAM MAGMA",
+        "org": "",
+        "activo": true,
+        "capitan": "BOWLETH",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "TEAM MAGMA",
+        "seguro": false,
+        "link": "/equipos/team-magma",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "EVL.Bowleth.",
+                "ID": "H34374A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "天竜•Trenin",
+                "ID": "NX7T7A5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "EVL•Dop",
+                "ID": "LQ0R79Q",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "天竜•Areth",
+                "ID": "RNEQNX3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "KingAttacus",
+                "ID": "81HK4NM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "天竜-Banjo",
+                "ID": "HT14T4F",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "TRR",
+        "team": "TEAM ROCKET",
+        "org": "",
+        "activo": true,
+        "capitan": "WALO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "TEAM ROCKET",
+        "seguro": false,
+        "link": "/equipos/team-rocket",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "虹・Walo光",
+                "ID": "4MF2M0G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "虹・Eř0X悪夢",
+                "ID": "H8G17CX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "虹・Nebulaる",
+                "ID": "19CHRG4",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "虹・Hakariる",
+                "ID": "41NREGX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "虹・WillyAHR",
+                "ID": "C20KFAQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DômDâ°ê",
+                "ID": "9LGQXQ2",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "DG",
+        "team": "DRAKAR GAMING",
+        "org": "",
+        "activo": true,
+        "capitan": "R2D2",
+        "region": "LAS-LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DRAKAR GAMING",
+        "seguro": false,
+        "link": "/equipos/drakar-gaming",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": ".R2D2.",
+                "ID": "84F246G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AvrilLanvign",
+                "ID": "60PCK13",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "ĐҜ҉MrArthur",
+                "ID": "MRK217R",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "6R|NCH",
+                "ID": "5PR10G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ByNovAshTTV",
+                "ID": "MM7PYR8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Nakomu",
+                "ID": "A5A3CLY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ĐҜ҉šøkïï",
+                "ID": "AKM5P02",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "PØĄ",
+        "team": "PHOBIUS AURA",
+        "org": "",
+        "activo": true,
+        "capitan": "Mostaza",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "Phobius Aura",
+        "seguro": false,
+        "link": "/equipos/phobius-aura",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "PøĄ°Møstązą",
+                "ID": "REYM7Q3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PøĄ°Doni",
+                "ID": "8GYY47G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PøĄ°Jumper",
+                "ID": "HGQ3G2K",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PøĄ°Kev",
+                "ID": "G80T3A2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PøĄ°Gąbøsøre",
+                "ID": "HFPNNKK",
+                "avatar": "male1"
+            }
+        ]
+    },
+    {
+        "tag": "PKR",
+        "team": "POKERANGERS",
+        "org": "",
+        "activo": true,
+        "capitan": "JFPRIME",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "POKERANGERS",
+        "seguro": false,
+        "link": "/equipos/pokerangers",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "WladySpecwar",
+                "ID": "M1THK9N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DœkōTTV",
+                "ID": "9MRCM46",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ErizaSpecwar",
+                "ID": "X01FEAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MIPoJhonMIPo",
+                "ID": "HNYFCLG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Truenō¿",
+                "ID": "R22M468",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Tinį",
+                "ID": "HXXTPTN",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "XileTiesaTTV",
+                "ID": "N98MHHG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Prometeo95",
+                "ID": "NC2LMY8",
+                "avatar": "male1"
+            }
+        ],
+        "posicionDesempate": false
+    },
+    {
+        "tag": "LB",
+        "team": "LAST BREATH",
+        "org": "",
+        "activo": true,
+        "capitan": "JDIAZ",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "LAST BREATH",
+        "seguro": false,
+        "link": "/equipos/last-breath",
+        "grupo": "SIN ASIGNAR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "IamNaranja謝",
+                "ID": "HC6526",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TTVJDiazpros",
+                "ID": "59MX9CR",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "CapitanRoots",
+                "ID": "NPM70M4",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Frants|",
+                "ID": "K6GHMN6",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "NG・Witch",
+                "ID": "54KN95",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DannGP",
+                "ID": "77GCPT4",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Polarま",
+                "ID": "NQLR6GC",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

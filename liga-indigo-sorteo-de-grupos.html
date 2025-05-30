@@ -176,7 +176,7 @@ title: DRAFT | LIGA INDIGO
 
   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const contenedorInicial = document.getElementById('contenedor-inicial');
@@ -262,26 +262,26 @@ title: DRAFT | LIGA INDIGO
 
       const sonidoGirar = new Audio('/assets/sounds/ruleta_girando.mp3'); // Reemplaza con la ruta a tu archivo
       const sonidoEliminar = new Audio('/assets/sounds/equipo_eliminado.mp3'); // Reemplaza con la ruta a tu archivo
-       const sonidoGanador = new Audio('/assets/sounds/ganador.mp3'); // Reemp
+      const sonidoGanador = new Audio('/assets/sounds/ganador.mp3'); // Reemplazar
 
       // Lista de frases para la leyenda
       const frasesSorteo = [
-      "Órbita asegurada. Nivel completado.",
-"¡Alcanzando nuevas galaxias! Nuevo Nivel en la Indigo DESBLOQUEADO.",
-"Precisión láser en el campo de asteroides. ¡Liberen a Inteleon!",
-"Recursos recolectados en el planeta desconocido. ¡A la base del Sector11!",
-"Enemigo detectado en el radar estelar. ¡Fuego a discreción!",
-"Warp drive activado. Próxima parada: Planeta SPC.",
-"Construyendo una temporada de la Liga Indigo, pixel a pixel.",
-"La gravedad no es rival para mi salto espacial.",
-"Explorando el universo. Cada planeta es un nuevo mapa.",
-"Otra Dimension encontrada, ¡Cuidado!",
-"Stamina ES esta aquí ¡Llego el Campeón!",
-"Cuidado con los agujeros negros, ¡son trampas de nivel avanzado!",
-"Activando el escudo de energía. ¡AD Gaming en la misión!",
-"Desbloqueando nuevos sistemas solares. ¡El DLC cósmico!",
-"¿Game Over? ¡Nunca! Respawn en la nebulosa.",
-"Mi puntuación más alta: explorar cada rincón del cosmos."
+        "Órbita asegurada. Nivel completado.",
+        "¡Alcanzando nuevas galaxias! Nuevo Nivel en la Indigo DESBLOQUEADO.",
+        "Precisión láser en el campo de asteroides. ¡Liberen a Inteleon!",
+        "Recursos recolectados en el planeta desconocido. ¡A la base del Sector11!",
+        "Enemigo detectado en el radar estelar. ¡Fuego a discreción!",
+        "Warp drive activado. Próxima parada: Planeta SPC.",
+        "Construyendo una temporada de la Liga Indigo, pixel a pixel.",
+        "La gravedad no es rival para mi salto espacial.",
+        "Explorando el universo. Cada planeta es un nuevo mapa.",
+        "Otra Dimension encontrada, ¡Cuidado!",
+        "Stamina ES esta aquí ¡Llego el Campeón!",
+        "Cuidado con los agujeros negros, ¡son trampas de nivel avanzado!",
+        "Activando el escudo de energía. ¡AD Gaming en la misión!",
+        "Desbloqueando nuevos sistemas solares. ¡El DLC cósmico!",
+        "¿Game Over? ¡Nunca! Respawn en la nebulosa.",
+        "Mi puntuación más alta: explorar cada rincón del cosmos."
       ];
 
       function obtenerFraseAleatoria() {
@@ -375,40 +375,40 @@ title: DRAFT | LIGA INDIGO
       }
 
       function eliminarEquipoAleatorio() {
-  const jsConfetti = new JSConfetti(); // Inicializa js-confetti aquí para poder usarlo en ambos casos
+        const jsConfetti = new JSConfetti(); // Inicializa js-confetti aquí para poder usarlo en ambos casos
 
-  if (equiposRestantes.length <= 1) {
-    if (equiposRestantes.length === 1) {
-      resultadoDiv.textContent = `¡El equipo final es: ${equiposRestantes[0].tag || equiposRestantes[0].team || 'Equipo'}!`;
-      botonGirar.disabled = true;
-      girando = false;
-      jsConfetti.generateConfetti(); // Disparar confetti cuando queda el equipo final
-      if (sonidoGanador) {
-        sonidoGanador.play();
+        if (equiposRestantes.length <= 1) {
+          if (equiposRestantes.length === 1) {
+            resultadoDiv.textContent = `¡El equipo final es: ${equiposRestantes[0].tag || equiposRestantes[0].team || 'Equipo'}!`;
+            botonGirar.disabled = true;
+            girando = false;
+            jsConfetti.generateConfetti(); // Disparar confetti cuando queda el equipo final
+            if (sonidoGanador) {
+              sonidoGanador.play();
+            }
+          } else {
+            resultadoDiv.textContent = "¡No quedan equipos!";
+            botonGirar.disabled = true;
+            girando = false;
+          }
+          return;
+        }
+
+        const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
+        const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
+
+        resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.tag || equipoEliminado.team || 'Equipo'}`;
+        mostrarEquiposInicial();
+        actualizarEquiposRestantes();
+        botonGirar.disabled = false;
+        girando = false;
+        jsConfetti.generateConfetti(); // Disparar confetti después de cada eliminación
+        if (sonidoEliminar) {
+          sonidoEliminar.play();
+        }
       }
-    } else {
-      resultadoDiv.textContent = "¡No quedan equipos!";
-      botonGirar.disabled = true;
-      girando = false;
-    }
-    return;
-  }
 
-  const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
-  const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
 
-  resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.tag || equipoEliminado.team || 'Equipo'}`;
-  mostrarEquiposInicial();
-  actualizarEquiposRestantes();
-  botonGirar.disabled = false;
-  girando = false;
-  jsConfetti.generateConfetti(); // Disparar confetti después de cada eliminación
-  if (sonidoEliminar) {
-    sonidoEliminar.play();
-  }
-}
-   
-   
       function actualizarEquiposRestantes() {
         equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
       }

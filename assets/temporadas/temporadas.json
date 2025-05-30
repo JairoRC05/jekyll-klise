@@ -7,13 +7,13 @@
             "febrero": "2300",
             "marzo": "2300",
             "abril": "0",
-            "mayo": "0",
+            "mayo": "2200",
             "junio": "0"
         },
         {
             "nombre": "LOS PAPULOVERS",
             "tag": "LVR",
-            "enero": "2100",
+            "enero": "2000",
             "febrero": "0",
             "marzo": "0",
             "abril": "0",
@@ -63,7 +63,7 @@
         {
             "nombre": "DFS PLATINUM",
             "tag": "PLAT",
-            "enero": "0",
+            "enero": "1900",
             "febrero": "2100",
             "marzo": "1600",
             "abril": "0",
@@ -147,28 +147,28 @@
             "febrero":"1600",
             "marzo":"2000",
             "abril":"0",
-            "mayo":"0",
+            "mayo":"1900",
             "junio":"0"
             },
        
         {
             "nombre": "SPC ENIGMA",
             "tag": "E",
-            "enero": "2400",
+            "enero": "2200",
             "febrero": "2200",
             "marzo": "2200",
             "abril": "0",
-            "mayo": "0",
+            "mayo": "2300",
             "junio": "0"
         },
         {
             "nombre": "STAMINA ES",
             "tag": "STMN",
-            "enero": "2300",
+            "enero": "2100",
             "febrero": "2400",
             "marzo": "2400",
             "abril": "0",
-            "mayo": "0",
+            "mayo": "2400",
             "junio": "0"
         },
         {

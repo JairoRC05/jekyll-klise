@@ -1159,3 +1159,164 @@ border: none;
   border-radius: 10px;
 }
 
+.label-hoopa{
+  background: #0000a8;
+  color: white;
+  padding: 0 20px;
+  border-radius: 15px;
+}
+
+
+
+/* From Uiverse.io by JsGrisales */ 
+.buttonFX {
+  min-height: 53px;
+  min-width: 166px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(-12.74%, rgba(110, 239, 255, 0.5)),
+    color-stop(56.76%, rgba(106, 224, 255, 0.271))
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(110, 239, 255, 0.5) -12.74%,
+    rgba(106, 224, 255, 0.271) 56.76%
+  );
+  border: 2px solid #acf7ff;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+.buttonFX {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.buttonFX::before,
+.buttonFX::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.buttonFX::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.buttonFX::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.buttonFX:active,
+.buttonFX:focus {
+  outline: none;
+}
+
+.buttonFX:active::before,
+.buttonFX:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.buttonFX:active::before {
+  top: 3px;
+}
+
+.buttonFX:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.buttonFX:hover {
+  color: #0f1923;
+}
+
+.buttonFX:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.buttonFX:hover .button_lg::after {
+  background-color: #fff;
+}
+

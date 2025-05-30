@@ -103,14 +103,19 @@ title: ESPECIAL | LIGA INDIGO
     <h1>RADAR INDIGO</h1>
 
     <div id="contenedor-sorteo">
-      <img src="/assets/logos/LIGA-INDIGO.webp" alt="Logo Sorteo" >
+      <img src="/assets/logos/LIGA-INDIGO.webp" alt="Logo Sorteo">
       <span>Sorteando equipos...</span>
     </div>
 
     <div id="contenedor-ruleta">
     </div>
 
-    <button id="boton-girar" class="btn">BUSCAR EN LA GALAXIA</button>
+    <button class="buttonFX" id="boton-girar">
+      <span class="button_lg">
+        <span class="button_sl"></span>
+        <span class="button_text">Buscar ahora</span>
+      </span>
+    </button>
 
     <div id="resultado"></div>
     <div id="equipos-restantes"></div>
@@ -121,15 +126,15 @@ title: ESPECIAL | LIGA INDIGO
     <h1>RONDA PORTAL DIMENSIONAL</h1>
 
     <div class="container mt-2">
-        <div class="row">
-            <div class="col-md-4 encuentros-col-1">
-            </div>
-            <div class="col-md-4 ">
-              <img src="/assets/skins/hoppa.png" alt="" style="filter: drop-shadow(5px 15px 8px #000000);">
-            </div>
-            <div class="col-md-4 encuentros-col-2">
-            </div>
+      <div class="row">
+        <div class="col-md-4 encuentros-col-1">
         </div>
+        <div class="col-md-4 ">
+          <img src="/assets/skins/hop.png" alt="" style="filter: drop-shadow(5px 15px 8px #000000);">
+        </div>
+        <div class="col-md-4 encuentros-col-2">
+        </div>
+      </div>
     </div>
 
     <h2 class="mt-5">EQUIPOS</h2>
@@ -137,9 +142,9 @@ title: ESPECIAL | LIGA INDIGO
       <div class="equipos-container">
       </div>
     </div>
-</div>
+  </div>
 
- 
+
 
 
 
@@ -178,244 +183,318 @@ title: ESPECIAL | LIGA INDIGO
 
 
 
-<script>
- document.addEventListener('DOMContentLoaded', function() {
-  const contenedorRuleta = document.getElementById('contenedor-ruleta');
-  const contenedorSorteo = document.getElementById('contenedor-sorteo');
-  const botonGirar = document.getElementById('boton-girar');
-  const resultadoDiv = document.getElementById('resultado');
-  const equiposRestantesDiv = document.getElementById('equipos-restantes');
-  let equiposData = [];
-  let equiposRestantes = [];
-  let girando = false;
-  const duracionGiro = 3000; // Duración del efecto de "sorteo" en ms
-  let progressBar;
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const contenedorRuleta = document.getElementById('contenedor-ruleta');
+      const contenedorSorteo = document.getElementById('contenedor-sorteo');
+      const botonGirar = document.getElementById('boton-girar');
+      const resultadoDiv = document.getElementById('resultado');
+      const equiposRestantesDiv = document.getElementById('equipos-restantes');
+      let equiposData = [];
+      let equiposRestantes = [];
+      let girando = false;
+      const duracionGiro = 3000; // Duración del efecto de "sorteo" en ms
+      let progressBar;
 
-  fetch('/assets/sorteo/sorteo.json')
-    .then(response => response.json())
-    .then(data => {
-      equiposData = data;
-      equiposRestantes = [...equiposData];
-      mostrarEquiposInicial();
-      actualizarEquiposRestantes();
-    })
-    .catch(error => console.error('Error al cargar el JSON:', error));
+      fetch('/assets/inscripciones/junio2025/inscritos.json')
+        .then(response => response.json())
+        .then(data => {
+          equiposData = data;
+          equiposRestantes = [...equiposData];
+          mostrarEquiposInicial();
+          actualizarEquiposRestantes();
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
 
-  function mostrarEquiposInicial() {
-    contenedorRuleta.innerHTML = '';
-    contenedorRuleta.style.transform = `translateX(0px)`;
-    equiposRestantes.forEach((equipo) => {
-      const tarjeta = crearTarjetaEquipo(equipo);
-      contenedorRuleta.appendChild(tarjeta);
-    });
-  }
-
-  function crearTarjetaEquipo(equipo) {
-    const tarjeta = document.createElement('div');
-    tarjeta.classList.add('tarjeta-equipo');
-    const textoEquipo = document.createElement('span');
-    textoEquipo.textContent = equipo.nombre_de_equipo || equipo.tag || 'Equipo';
-    tarjeta.appendChild(textoEquipo);
-    return tarjeta;
-  }
-
-  function girarRuleta() {
-    if (girando || equiposRestantes.length <= 1) return;
-    girando = true;
-    resultadoDiv.textContent = '¡Más allá de las estrellas!';
-    botonGirar.disabled = true;
-
-    // Establecer la altura de contenedorSorteo igual a contenedorRuleta
-    contenedorSorteo.style.height = contenedorRuleta.offsetHeight + 'px';
-
-    // Limpiar cualquier contenido previo
-    contenedorSorteo.innerHTML = '';
-
-    // Crear la barra de progreso
-    const progressBarContainer = document.createElement('div');
-    progressBarContainer.classList.add('progress-bar-container');
-    progressBar = document.createElement('div');
-    progressBar.classList.add('progress-bar');
-    progressBarContainer.appendChild(progressBar);
-    contenedorSorteo.appendChild(progressBarContainer);
-
-    // Crear la leyenda
-    const leyendaSorteo = document.createElement('span');
-    leyendaSorteo.textContent = 'Buscando equipo en la Galaxia más cercana...';
-    contenedorSorteo.appendChild(leyendaSorteo);
-
-    // Mostrar el contenedor de sorteo y ocultar la ruleta
-    contenedorRuleta.style.opacity = 0;
-    contenedorSorteo.style.opacity = 1;
-
-    // Animar la barra de progreso
-    animateProgressBar();
-
-    contenedorRuleta.style.transform = `translateX(-50px)`;
-    setTimeout(() => {
-      contenedorRuleta.style.transform = `translateX(0px)`;
-      contenedorRuleta.style.opacity = 1;
-      contenedorSorteo.style.opacity = 0;
-      botonGirar.disabled = false;
-      girando = false;
-      setTimeout(eliminarEquipoAleatorio, 500);
-    }, duracionGiro);
-  }
-
-  function animateProgressBar() {
-    let width = 0;
-    const interval = 50;
-    const increment = 100 / (duracionGiro / interval);
-    const animationInterval = setInterval(() => {
-      width += increment;
-      progressBar.style.width = width + '%';
-      if (width >= 100) {
-        clearInterval(animationInterval);
+      function mostrarEquiposInicial() {
+        contenedorRuleta.innerHTML = '';
+        contenedorRuleta.style.transform = `translateX(0px)`;
+        equiposRestantes.forEach((equipo) => {
+          const tarjeta = crearTarjetaEquipo(equipo);
+          contenedorRuleta.appendChild(tarjeta);
+        });
       }
-    }, interval);
-  }
 
-  function eliminarEquipoAleatorio() {
-    if (equiposRestantes.length <= 1) {
-      if (equiposRestantes.length === 1) {
-        resultadoDiv.textContent = `¡: ${equiposRestantes[0].nombre_de_equipo || equiposRestantes[0].tag || 'Equipo'}!`;
-      } else {
-        resultadoDiv.textContent = "¡No quedan equipos en la Galaxia!";
+      function crearTarjetaEquipo(equipo) {
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('tarjeta-equipo');
+        const textoEquipo = document.createElement('span');
+        textoEquipo.textContent = equipo.nombre_de_equipo || equipo.tag || 'Equipo';
+        tarjeta.appendChild(textoEquipo);
+        return tarjeta;
       }
-      botonGirar.disabled = true;
-      girando = false;
-      return;
-    }
 
-    const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
-    const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
+      function girarRuleta() {
+        if (girando || equiposRestantes.length <= 1) return;
+        girando = true;
+        resultadoDiv.textContent = '¡Más allá de las estrellas!';
+        botonGirar.disabled = true;
 
-    resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.nombre_de_equipo || equipoEliminado.tag || 'Equipo'}`;
-    mostrarEquiposInicial();
-    actualizarEquiposRestantes();
-    botonGirar.disabled = false;
-    girando = false;
-  }
+        // Establecer la altura de contenedorSorteo igual a contenedorRuleta
+        contenedorSorteo.style.height = contenedorRuleta.offsetHeight + 'px';
 
-  function actualizarEquiposRestantes() {
-    equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
-  }
+        // Limpiar cualquier contenido previo
+        contenedorSorteo.innerHTML = '';
 
-  setTimeout(() => {
-    if (equiposRestantes.length > 0 && contenedorRuleta.offsetWidth > 0) {
-      const primeraTarjeta = document.querySelector('.tarjeta-equipo');
-      if (primeraTarjeta) {
-        anchoTarjetaConMargen = primeraTarjeta.offsetWidth + 10;
-        numTarjetasVisibles = Math.ceil(contenedorRuleta.offsetWidth / anchoTarjetaConMargen);
+        // Crear la barra de progreso
+        const progressBarContainer = document.createElement('div');
+        progressBarContainer.classList.add('progress-bar-container');
+        progressBar = document.createElement('div');
+        progressBar.classList.add('progress-bar');
+        progressBarContainer.appendChild(progressBar);
+        contenedorSorteo.appendChild(progressBarContainer);
+
+        // Crear la leyenda
+        const leyendaSorteo = document.createElement('span');
+        leyendaSorteo.textContent = 'Buscando equipo en la Galaxia más cercana...';
+        contenedorSorteo.appendChild(leyendaSorteo);
+
+        // Mostrar el contenedor de sorteo y ocultar la ruleta
+        contenedorRuleta.style.opacity = 0;
+        contenedorSorteo.style.opacity = 1;
+
+        // Animar la barra de progreso
+        animateProgressBar();
+
+        contenedorRuleta.style.transform = `translateX(-50px)`;
+        setTimeout(() => {
+          contenedorRuleta.style.transform = `translateX(0px)`;
+          contenedorRuleta.style.opacity = 1;
+          contenedorSorteo.style.opacity = 0;
+          botonGirar.disabled = false;
+          girando = false;
+          setTimeout(eliminarEquipoAleatorio, 500);
+        }, duracionGiro);
+      }
+
+      function animateProgressBar() {
+        let width = 0;
+        const interval = 50;
+        const increment = 100 / (duracionGiro / interval);
+        const animationInterval = setInterval(() => {
+          width += increment;
+          progressBar.style.width = width + '%';
+          if (width >= 100) {
+            clearInterval(animationInterval);
+          }
+        }, interval);
+      }
+
+      function eliminarEquipoAleatorio() {
+        if (equiposRestantes.length <= 1) {
+          if (equiposRestantes.length === 1) {
+            resultadoDiv.textContent = `¡: ${equiposRestantes[0].nombre_de_equipo || equiposRestantes[0].tag || 'Equipo'}!`;
+          } else {
+            resultadoDiv.textContent = "¡No quedan equipos en la Galaxia!";
+          }
+          botonGirar.disabled = true;
+          girando = false;
+          return;
+        }
+
+        const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
+        const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
+
+        resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.nombre_de_equipo || equipoEliminado.tag || 'Equipo'}`;
         mostrarEquiposInicial();
-        contenedorRuleta.style.width = `${equiposRestantes.length * anchoTarjetaConMargen}px`;
+        actualizarEquiposRestantes();
+        botonGirar.disabled = false;
+        girando = false;
       }
-    }
-  }, 100);
 
-  botonGirar.addEventListener('click', girarRuleta);
-});
-</script>
+      function actualizarEquiposRestantes() {
+        equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
+      }
+
+      setTimeout(() => {
+        if (equiposRestantes.length > 0 && contenedorRuleta.offsetWidth > 0) {
+          const primeraTarjeta = document.querySelector('.tarjeta-equipo');
+          if (primeraTarjeta) {
+            anchoTarjetaConMargen = primeraTarjeta.offsetWidth + 10;
+            numTarjetasVisibles = Math.ceil(contenedorRuleta.offsetWidth / anchoTarjetaConMargen);
+            mostrarEquiposInicial();
+            contenedorRuleta.style.width = `${equiposRestantes.length * anchoTarjetaConMargen}px`;
+          }
+        }
+      }, 100);
+
+      botonGirar.addEventListener('click', girarRuleta);
+    });
+  </script>
 
 
 
-<script>
-   const encuentrosCol1 = document.querySelector('.encuentros-col-1');
+
+  <script>
+    const encuentrosCol1 = document.querySelector('.encuentros-col-1');
     const encuentrosCol2 = document.querySelector('.encuentros-col-2');
     const equiposContainer = document.querySelector('.equipos-container');
-    const numEncuentros = 12;
+    const numEncuentros = 13;
+
+    // Fetch JSON data
+    fetch('/assets/inscripciones/junio2025/inscritos.json')
+      .then(response => response.json())
+      .then(jsonData => {
+        // Crear los elementos arrastrables de los equipos
+        jsonData.forEach(equipo => {
+          const equipoDiv = document.createElement('div');
+          equipoDiv.classList.add('draggable', 'label-hoopa');
+          equipoDiv.textContent = equipo.tag;
+          equipoDiv.dataset.tag = equipo.tag;
+          equipoDiv.draggable = true;
+          equipoDiv.addEventListener('dragstart', handleDragStart);
+          equiposContainer.appendChild(equipoDiv);
+        });
+      })
+      .catch(error => console.error('Error al cargar el JSON:', error));
+
+    // Función para crear un elemento de equipo arrastrable
+    function createDraggableEquipo(equipoTag) {
+      const equipoDiv = document.createElement('div');
+      equipoDiv.classList.add('draggable', 'label-hoopa'); // Clases de estilo
+      equipoDiv.textContent = equipoTag;
+      equipoDiv.dataset.tag = equipoTag; // Usamos el tag como data
+      equipoDiv.draggable = true;
+      equipoDiv.addEventListener('dragstart', handleDragStart);
+      return equipoDiv;
+    }
 
     // Crear los contenedores de los encuentros y distribuirlos en columnas
     for (let i = 0; i < numEncuentros; i++) {
-        const encuentroDiv = document.createElement('div');
-        encuentroDiv.classList.add('encuentro');
+      const encuentroDiv = document.createElement('div');
+      encuentroDiv.classList.add('encuentro');
 
-        const contenedor1 = document.createElement('div');
-        contenedor1.classList.add('contenedor');
-        contenedor1.dataset.encuentro = i + 1;
-        contenedor1.dataset.slot = 1;
-        contenedor1.addEventListener('dragover', allowDrop);
-        contenedor1.addEventListener('drop', handleDrop);
+      const contenedor1 = document.createElement('div');
+      contenedor1.classList.add('contenedor');
+      contenedor1.dataset.encuentro = i + 1;
+      contenedor1.dataset.slot = 1;
+      contenedor1.addEventListener('dragover', allowDrop);
+      contenedor1.addEventListener('dragleave', handleDragLeave); // Nuevo
+      contenedor1.addEventListener('drop', handleDrop);
 
-        const vs = document.createElement('span');
-        vs.textContent = 'vs';
-        vs.style.margin = '0 10px';
+      const vs = document.createElement('span');
+      vs.textContent = 'vs';
+      vs.style.margin = '0 10px';
 
-        const contenedor2 = document.createElement('div');
-        contenedor2.classList.add('contenedor');
-        contenedor2.dataset.encuentro = i + 1;
-        contenedor2.dataset.slot = 2;
-        contenedor2.addEventListener('dragover', allowDrop);
-        contenedor2.addEventListener('drop', handleDrop);
+      const contenedor2 = document.createElement('div');
+      contenedor2.classList.add('contenedor');
+      contenedor2.dataset.encuentro = i + 1;
+      contenedor2.dataset.slot = 2;
+      contenedor2.addEventListener('dragover', allowDrop);
+      contenedor2.addEventListener('dragleave', handleDragLeave); // Nuevo
+      contenedor2.addEventListener('drop', handleDrop);
 
-        encuentroDiv.appendChild(contenedor1);
-        encuentroDiv.appendChild(vs);
-        encuentroDiv.appendChild(contenedor2);
+      encuentroDiv.appendChild(contenedor1);
+      encuentroDiv.appendChild(vs);
+      encuentroDiv.appendChild(contenedor2);
 
-        // Distribuir los encuentros en las dos columnas
-        if (i < 6) {
-            encuentrosCol1.appendChild(encuentroDiv);
-        } else {
-            encuentrosCol2.appendChild(encuentroDiv);
-        }
+      if (i < 6) { // Ejemplo de distribución
+        encuentrosCol1.appendChild(encuentroDiv);
+      } else {
+        encuentrosCol2.appendChild(encuentroDiv);
+      }
     }
 
+    // Variable global para el elemento que se está arrastrando
     let draggedElement = null;
 
     function handleDragStart(event) {
-        draggedElement = event.target;
-        event.dataTransfer.setData('text/plain', event.target.dataset.tag);
+      draggedElement = event.target;
+      // Solo queremos el texto del tag, no la clase 'draggable'
+      event.dataTransfer.setData('text/plain', event.target.dataset.tag);
+      // Añadir una clase para dar feedback visual
+      event.target.classList.add('dragging');
     }
 
     function allowDrop(event) {
-        event.preventDefault();
+      event.preventDefault(); // Permitir el drop
+      // Resaltar el contenedor al que se está arrastrando
+      if (event.target.classList.contains('contenedor') || event.target.classList.contains('equipos-container')) {
+        event.target.classList.add('drag-over');
+      }
+    }
+
+    function handleDragLeave(event) {
+      // Quitar el resaltado cuando el elemento sale del contenedor
+      if (event.target.classList.contains('contenedor') || event.target.classList.contains('equipos-container')) {
+        event.target.classList.remove('drag-over');
+      }
     }
 
     function handleDrop(event) {
-        event.preventDefault();
-        const targetContainer = event.target;
+      event.preventDefault();
+      // Remover la clase de resaltado
+      event.target.classList.remove('drag-over');
 
-        // Asegurarse de que el target es un contenedor vacío
-        if (targetContainer.classList.contains('contenedor') && targetContainer.children.length === 0) {
-            const draggedTag = event.dataTransfer.getData('text/plain');
-            const newElement = document.createElement('span');
-            newElement.textContent = draggedTag;
-            targetContainer.appendChild(newElement);
+      // Si el drop no es en un contenedor válido, no hacemos nada
+      if (!event.target.classList.contains('contenedor') && !event.target.classList.contains('equipos-container')) {
+        return;
+      }
 
-            // Opcional: Eliminar el elemento arrastrado de su ubicación original
-            if (draggedElement && draggedElement.parentNode === equiposContainer) {
-                draggedElement.remove();
-            } else if (draggedElement && draggedElement.parentNode.classList.contains('contenedor')) {
-                draggedElement.parentNode.textContent = ''; // Limpiar el contenedor anterior
-                targetContainer.appendChild(draggedElement);
-            }
-            draggedElement = null; // Resetear el elemento arrastrado
+      // Si el elemento arrastrado es nulo o no se ha iniciado bien el drag, salir
+      if (!draggedElement) {
+        return;
+      }
+
+      const targetContainer = event.target.closest('.contenedor') || event.target.closest('.equipos-container'); // Encuentra el contenedor padre
+
+      if (!targetContainer) { // Si no es un contenedor válido, salir
+        return;
+      }
+
+      // Si el destino es un contenedor de encuentro y ya tiene un elemento, no permitir drop
+      if (targetContainer.classList.contains('contenedor') && targetContainer.children.length > 0) {
+        // Si el elemento que se está arrastrando ya está en este contenedor, permitir "drop" (para reordenar o soltar en el mismo sitio)
+        if (targetContainer.contains(draggedElement)) {
+          // Si el arrastre es sobre sí mismo, no hacer nada o quitar clase dragging
+          draggedElement.classList.remove('dragging');
+          draggedElement = null;
+          return;
         }
+        alert('¡Este espacio ya está ocupado!'); // Mensaje de advertencia
+        draggedElement.classList.remove('dragging');
+        draggedElement = null;
+        return;
+      }
+
+
+      // Mover el elemento arrastrado al nuevo contenedor
+      targetContainer.appendChild(draggedElement);
+
+      // Limpiar la clase de arrastre
+      draggedElement.classList.remove('dragging');
+      draggedElement = null; // Reiniciar para el siguiente arrastre
+
+      // Opcional: Guardar el estado en LocalStorage si lo necesitas para persistencia
+      // saveLayoutToLocalStorage();
     }
 
-    // Fetch JSON data
-    fetch('/assets/sorteo/sorteo.json')
-        .then(response => response.json())
-        .then(jsonData => {
-            // Crear los elementos arrastrables de los equipos
-            jsonData.forEach(equipo => {
-                const equipoDiv = document.createElement('div');
-                equipoDiv.classList.add('draggable');
-                equipoDiv.textContent = equipo.tag;
-                equipoDiv.dataset.tag = equipo.tag;
-                equipoDiv.draggable = true;
-                equipoDiv.addEventListener('dragstart', handleDragStart);
-                equiposContainer.appendChild(equipoDiv);
-            });
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    // Asegurarse de que el equiposContainer también es un droppable target
+    equiposContainer.addEventListener('dragover', allowDrop);
+    equiposContainer.addEventListener('dragleave', handleDragLeave);
+    equiposContainer.addEventListener('drop', handleDrop);
 
 
+    // Cargar los equipos desde el JSON
+    function loadEquipos() {
+      // Nota: Aquí se usa el jsonData hardcodeado para la prueba.
+      // Si tu JSON está en un archivo, usa `fetch` como en tu código original.
+      jsonData.forEach(equipo => {
+        const equipoDiv = createDraggableEquipo(equipo.tag);
+        equiposContainer.appendChild(equipoDiv);
+      });
+    }
 
-{% include g-analytics.html %}
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', loadEquipos);
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+
+  {% include g-analytics.html %}
 
 
 

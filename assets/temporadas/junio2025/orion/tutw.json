@@ -1,0 +1,72 @@
+[
+    {
+        "tag": "TUTW",
+        "team": "TUT WARRIORS",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "GERD",
+        "region": "LAN",
+        "teamNombreAnterior": "LA ONE COIN",
+        "teamNuevoNombre": "TUT WARRIORS",
+        "seguro": false,
+        "link": "/equipos/theunownteam--warriors",
+        "grupo": "NORTE",
+        "posicionDesempate": true,
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "Raydemort",
+                "ID": "H8Y27LQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "GerardAC",
+                "ID": "A9390CX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "WK・Metal",
+                "ID": "MR027NE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "friedefan",
+                "ID": "501AN2N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Liкoジ",
+                "ID": "XYLMNNE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNT・Zulo銀",
+                "ID": "7759CK5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "LilRaccoon.",
+                "ID": "P5QLYGK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "きkenji",
+                "ID": "4F1X6AH",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

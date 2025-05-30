@@ -1,0 +1,74 @@
+[
+    {
+        "tag": "TUT",
+        "team": "THE UNOWN TEAM",
+        "org": "THE UNOWN TEAM",
+        "activo": true,
+        "capitan": "BREN",
+        "region": "LAN",
+        "teamNombreAnterior": "2X1500",
+        "teamNuevoNombre": "THE UNOWN TEAM",
+        "seguro": false,
+        "link": "/equipos/theunownteam",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "TuT • Bren10",
+                "ID": "2XX1PF0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "炊・Ashura",
+                "ID": "140PENG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "BeniManitas?",
+                "ID": "229QRAM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT • 7Ibu",
+                "ID": "21QE8M2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Akane秋",
+                "ID": "FYF3MC8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT狩DownURL",
+                "ID": "XH4P03E",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TuT-Bernylml",
+                "ID": "RH49KXK",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Hades地獄",
+                "ID": "C5C89CK",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m3": 2
+            }
+        ]
+    }
+]

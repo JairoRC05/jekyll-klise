@@ -1,0 +1,66 @@
+[
+    {
+        "tag": "AMET",
+        "team": "DFS AMETHYST",
+        "org": "",
+        "activo": true,
+        "capitan": "ROUSS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DFS AMETHYST",
+        "seguro": false,
+        "link": "/equipos/dfs-amethyst",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "DFs・Rousヅ",
+                "ID": "KYL8718",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・Allie",
+                "ID": "M7KRKE3",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Göndul",
+                "ID": "N3C2HQ",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Shüji",
+                "ID": "373QLY6",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs • Amari",
+                "ID": "FGPFK86",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs・Charbet",
+                "ID": "EG449ML",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "DFs・Raven",
+                "ID": "2M6N77K",
+                "avatar": "female1"
+            }
+        ]
+    }
+]

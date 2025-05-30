@@ -1,0 +1,66 @@
+[
+    {
+        "tag": "AMT",
+        "team": "IMPERIO MEXA AMT",
+        "org": "XF05 ESPORTS",
+        "activo": true,
+        "capitan": "CHAQS",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/imperio-mexa/--amatista",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "MeXa・Cage",
+                "ID": "YT150XU",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa・Chaq鋼",
+                "ID": "4H2XNPY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "MeXa • Black",
+                "ID": "TXG338A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "真kikurihime",
+                "ID": "L4G70NX",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "寂・NuzuLi",
+                "ID": "Y7FCTPQ",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "JuancaMissi",
+                "ID": "EMTNC13",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "R3JON",
+                "ID": "NQE5NG3",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

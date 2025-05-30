@@ -1,0 +1,64 @@
+[
+    {
+        "tag": "PL",
+        "team": "PRESTACIONES DE LEY HG",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "BENNY",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--prestaciones-de-ley",
+        "grupo": "NORTE",
+         "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "PL • TNMortem",
+                "ID": "FQTLQT6",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1,
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "¶ZinX¶",
+                "ID": "56T8G09",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "Vamp_Lut.TTv",
+                "ID": "8XTYF12",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "PL • Payan",
+                "ID": "HXNG3M",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "PL • Payan",
+                "ID": "F6TL275",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

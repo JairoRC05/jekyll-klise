@@ -1,0 +1,73 @@
+[
+    {
+        "tag": "CD",
+        "team": "CUMBIA DRAGÓN",
+        "org": null,
+        "activo": true,
+        "capitan": "NEW",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/dinamita-buena-onda",
+        "grupo": "SUR",
+        "partidos": {
+                "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "ttvNewt_ez",
+                "ID": "XAMMFEP",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "Jønasシ",
+                "ID": "R5FX423",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 3,
+                "m2": 2,
+                "m3": 1,
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "・Yata・",
+                "ID": "7X4C0CK",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "ttvStarbae01",
+                "ID": "NA9QXAT",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 1,
+                "m4": 1,
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "Muertin木火",
+                "ID": "5TR8K9T",
+                "avatar": "male1",
+                "teamTag": "CD"
+            },
+            {
+                "nickname": "T-ki",
+                "ID": "6EA8CT7",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

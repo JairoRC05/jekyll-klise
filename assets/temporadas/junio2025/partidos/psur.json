@@ -20,8 +20,8 @@
           "match_number": 1
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "HG SALARIO MINIMO",
           "tag2": "SM",
           "resultado": "VS",
@@ -57,7 +57,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "CUMBIA DRAGÓN",
           "tag2": "CD",
           "resultado": "VS",
@@ -69,7 +69,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "PHOBIUS AURA",
           "tag2": "PØĄ",
           "resultado": "VS",
@@ -100,8 +100,8 @@
           "match_number": 1
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "FROSTBITE",
           "tag2": "FTB",
           "resultado": "VS",
@@ -137,7 +137,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "DRAKAR GAMING",
           "tag2": "DG",
           "resultado": "VS",
@@ -149,7 +149,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "CUMBIA DRAGÓN",
           "tag2": "CD",
           "resultado": "VS",
@@ -170,8 +170,8 @@
         {
           "equipo1": "RNTES",
           "tag1": "RNTES",
-          "tag1": "AMETHYST",
-          "tag2": "AMET",
+          "equipo2": "AMATHYST",
+          "tag2": "AMATHYST",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -205,7 +205,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "PLAGA VILLANOS",
           "tag2": "PLAGA",
           "resultado": "VS",
@@ -217,7 +217,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "DRAKAR GAMING",
           "tag2": "DG",
           "resultado": "VS",
@@ -262,8 +262,8 @@
         {
           "equipo1": "DINASTY",
           "tag1": "DINASTY",
-          "tag1": "AMETHYST",
-          "tag2": "AMET",
+          "equipo2": "AMATHYST",
+          "tag2": "AMATHYST",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -285,7 +285,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "HG SALARIO MINIMO",
           "tag2": "SM",
           "resultado": "VS",
@@ -297,7 +297,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "PLAGA VILLANOS",
           "tag2": "PLAGA",
           "resultado": "VS",
@@ -353,7 +353,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "FROSTBITE",
           "tag2": "FTB",
           "resultado": "VS",
@@ -365,7 +365,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "HG SALARIO MINIMO",
           "tag2": "SM",
           "resultado": "VS",
@@ -411,7 +411,7 @@
           "equipo1": "RNTES",
           "tag1": "RNTES",
           "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
+          "tag2": "PLATINUM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -432,8 +432,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "SPACE VAL",
           "tag2": "SPACE",
           "resultado": "VS",
@@ -445,7 +445,7 @@
         },
         {
           "equipo1": "TEAM ROCKET",
-          "tag1": "TRR",
+          "tag1": "TR",
           "equipo2": "FROSTBITE",
           "tag2": "FTB",
           "resultado": "VS",
@@ -491,7 +491,7 @@
           "equipo1": "RNTES",
           "tag1": "RNTES",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -503,7 +503,7 @@
           "equipo1": "DINASTY",
           "tag1": "DINASTY",
           "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
+          "tag2": "PLATINUM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -512,8 +512,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "IM ZAFIRO",
           "tag2": "ZAFIRO",
           "resultado": "VS",
@@ -583,7 +583,7 @@
           "equipo1": "DINASTY",
           "tag1": "DINASTY",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -592,10 +592,10 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
+          "tag2": "PLATINUM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -672,10 +672,10 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -687,7 +687,7 @@
           "equipo1": "SPACE VAL",
           "tag1": "SPACE",
           "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
+          "tag2": "PLATINUM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -752,8 +752,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "PHOBIUS AURA",
           "tag2": "PØĄ",
           "resultado": "VS",
@@ -767,7 +767,7 @@
           "equipo1": "SPACE VAL",
           "tag1": "SPACE",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -779,7 +779,7 @@
           "equipo1": "IM ZAFIRO",
           "tag1": "ZAFIRO",
           "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
+          "tag2": "PLATINUM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -832,8 +832,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "CUMBIA DRAGÓN",
           "tag2": "CD",
           "resultado": "VS",
@@ -859,7 +859,7 @@
           "equipo1": "IM ZAFIRO",
           "tag1": "ZAFIRO",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -912,8 +912,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "DRAKAR GAMING",
           "tag2": "DG",
           "resultado": "VS",
@@ -949,9 +949,9 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "TEAM ROCKET",
-          "tag2": "TRR",
+          "tag2": "TR",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -992,8 +992,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
-          "tag1": "AMET",
+          "equipo1": "AMATHYST",
+          "tag1": "AMATHYST",
           "equipo2": "PLAGA VILLANOS",
           "tag2": "PLAGA",
           "resultado": "VS",
@@ -1029,7 +1029,7 @@
         },
         {
           "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
+          "tag1": "PLATINUM",
           "equipo2": "PHOBIUS AURA",
           "tag2": "PØĄ",
           "resultado": "VS",

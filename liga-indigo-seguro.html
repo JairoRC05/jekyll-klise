@@ -172,10 +172,31 @@ title: ESTATUS | LIGA INDIGO
 
 
 
-
-
-
-  {% include navbar-league.html %}
+ <div class="d-block d-md-none ">
+    <nav class="navbar fixed-bottom navbar-light bg-cham">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="item-bar">  
+          <a href="/liga-indigo-orion-ranking-junio2025" >
+             <i class="bi bi-rocket-takeoff-fill"></i>
+            <span>ORION</span>
+            </a>
+          </div>
+            <div class="item-bar">  
+          <a href="/reglamento-liga-indigo" >
+             <i class="bi bi-book-half"></i>
+            <span>REGLAS</span>
+            </a>
+          </div>
+     
+           <div class="item-bar">  
+          <a href="/liga-indigo-hydra-ranking-junio2025" >
+             <i class="bi bi-rocket-takeoff-fill"></i>
+            <span>HYDRA</span>
+            </a>
+          </div>
+        </div>
+    </nav>
+</div>
 
 
 
@@ -195,237 +216,165 @@ title: ESTATUS | LIGA INDIGO
 
 
 <script>
-  $(document).ready(function() {
-  let jugadoresData = []; // Usamos un nombre diferente para los datos de esta tabla
-  let redesData = [];
-  const teamFiles = [
-    'assets/equipos/ad.json',
-    'assets/equipos/amt.json',
-    'assets/equipos/aogiri.json',
-    'assets/equipos/cl.json',
-    'assets/equipos/dbo.json',
-    'assets/equipos/dty.json',
-    'assets/equipos/enigma.json',
-    'assets/equipos/gx.json',
-    'assets/equipos/neo.json',
-    'assets/equipos/ns.json',
-    'assets/equipos/obs.json',
-    'assets/equipos/ovg.json',
-    'assets/equipos/pe.json',
-    'assets/equipos/plaga.json',
-    'assets/equipos/rk.json',
-    'assets/equipos/rntx.json',
-    'assets/equipos/sm.json',
-    'assets/equipos/space.json',
-    'assets/equipos/stmn.json',
-    'assets/equipos/tad.json',
-    'assets/equipos/tm.json',
-    'assets/equipos/tut.json',
-    'assets/equipos/tutw.json',
-    'assets/equipos/zafiro.json'
-  ];
+$(document).ready(function() {
+    let jugadoresData = [];
+    let redesData = [];
+    let equiposData = [];
 
-  // Función para obtener los datos de los jugadores de cada equipo
-  async function cargarDatosJugadores() {
-    const promises = teamFiles.map(async (file) => {
-      const response = await fetch(file);
-      if (!response.ok) {
-        console.error(`Error al cargar ${file}: ${response.status}`);
-        return [];
-      }
-      const data = await response.json();
-      return data.flatMap(equipo =>
-        equipo.jugadores.map(jugador => ({
-          team: equipo.team,
-          nickname: jugador.nickname,
-          id: jugador.ID
-        }))
-      );
-    });
+    // Ahora solo necesitamos cargar un único archivo
+    const singleTeamFile = 'assets/base/baseLigaIndigo.json';
 
-    const allJugadoresData = await Promise.all(promises);
-    jugadoresData = allJugadoresData.flat();
-    inicializarTablaJugadores();
-  }
+    async function cargarTodosLosDatos() {
+        try {
+            const response = await fetch(singleTeamFile);
+            if (!response.ok) {
+                console.error(`Error al cargar ${singleTeamFile}: ${response.status}`);
+                return; // Salir si hay un error en la carga
+            }
+            const allTeamsRawData = await response.json();
 
-  function inicializarTablaJugadores() {
-    $('#equiposTablaID').DataTable({
-      data: jugadoresData,
-      columns: [
-        { data: 'team', title: 'Equipo' },
-        { data: 'nickname', title: 'Nickname' },
-        { data: 'id', title: 'ID' }
-      ],
-      pageLength: 25,
-      responsive: true,
-      language: {
-        "decimal": "",
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "Mostrar _MENU_ Entradas",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-          "first": "<",
-          "last": ">",
-          "next": ">>",
-          "previous": "<<"
+            // Aquí, 'allTeamsRawData' ya es el array completo de equipos
+            equiposData = allTeamsRawData;
+
+            // Procesar los datos para jugadores
+            jugadoresData = allTeamsRawData.flatMap(equipo =>
+                equipo.jugadores.map(jugador => ({
+                    team: equipo.team,
+                    nickname: jugador.nickname,
+                    id: jugador.ID
+                }))
+            );
+
+            // Procesar los datos para redes sociales
+            redesData = allTeamsRawData.map(equipo => ({
+                team: equipo.team,
+                facebook: equipo.redes?.facebook || '',
+                x: equipo.redes?.x || '',
+                instagram: equipo.redes?.instagram || ''
+            }));
+
+            // Inicializar todas las tablas después de cargar y procesar los datos
+            inicializarTablaEquipos();
+            inicializarTablaJugadores();
+            inicializarTablaRedesSociales();
+
+        } catch (error) {
+            console.error(`Error de red o parseo al cargar ${singleTeamFile}:`, error);
         }
-      }
-    });
-  }
+    }
 
+    // --- Funciones de inicialización de DataTables (sin cambios) ---
 
-  let equiposData = [];
-  async function cargarEquipos() {
-    const promises = teamFiles.map(async (file) => {
-      const response = await fetch(file);
-      if (!response.ok) {
-        console.error(`Error al cargar ${file}: ${response.status}`);
-        return [];
-      }
-      const data = await response.json();
-      equiposData = equiposData.concat(data);
-    });
-    await Promise.all(promises);
-    inicializarTablaEquipos();
-  }
+    function inicializarTablaJugadores() {
+        $('#equiposTablaID').DataTable({
+            data: jugadoresData,
+            columns: [
+                { data: 'team', title: 'Equipo' },
+                { data: 'nickname', title: 'Nickname' },
+                { data: 'id', title: 'ID' }
+            ],
+            pageLength: 25,
+            responsive: true,
+            language: {
+                "decimal": "", "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas", "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)", "infoPostFix": "",
+                "thousands": ",", "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...", "processing": "Procesando...",
+                "search": "", "zeroRecords": "Sin resultados encontrados",
+                "paginate": { "first": "<", "last": ">", "next": ">>", "previous": "<<" }
+            }
+        });
+        $('div.dataTables_filter input').attr('placeholder', 'Buscar...');
+    }
 
-  function inicializarTablaEquipos() {
-    $('#equiposTabla').DataTable({
-      data: equiposData,
-      columns: [
-        { data: 'team', title: 'Equipo' },
-        { data: 'capitan', title: 'Capitán' },
-        { data: 'org', title: 'Organización' },
-        { data: 'teamNombreAnterior', title: 'Nombre Anterior' },
-        {
-          data: 'seguro',
-          render: function(data, type, row) {
-            return data ? '<i class="ti ti-circle-check-filled text-success"></i>' : '<i class="ti ti-circle-x-filled text-danger"></i>';
-          }
-        },
-        {
-          data: 'link',
-          render: function(data, type, row) {
-            return `<a href="${data}"><i class="ti ti-world-code"></i></a>`;
-          }
-        },
-        {
-          data: 'jugadores',
-          render: function(data, type, row) {
-            return data.length;
-          }
-        }
-      ],
-      pageLength: 25,
-      responsive: true,
-      language: {
-        "decimal": "",
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "Mostrar _MENU_ Entradas",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-          "first": "<",
-          "last": ">",
-          "next": ">>",
-          "previous": "<<"
-        }
-      }
-    });
-  }
+    function inicializarTablaEquipos() {
+        $('#equiposTabla').DataTable({
+            data: equiposData,
+            columns: [
+                { data: 'team', title: 'Equipo' },
+                { data: 'capitan', title: 'Capitán' },
+                { data: 'org', title: 'Organización' },
+                { data: 'teamNombreAnterior', title: 'Nombre Anterior' },
+                {
+                    data: 'seguro',
+                    render: function(data, type, row) {
+                        return data ? '<i class="ti ti-circle-check-filled text-success"></i>' : '<i class="ti ti-circle-x-filled text-danger"></i>';
+                    }
+                },
+                {
+                    data: 'link',
+                    render: function(data, type, row) {
+                        return `<a href="${data}"><i class="ti ti-world-code"></i></a>`;
+                    }
+                },
+                {
+                    data: 'jugadores',
+                    render: function(data, type, row) {
+                        return data.length;
+                    }
+                }
+            ],
+            pageLength: 25,
+            responsive: true,
+            language: {
+                "decimal": "", "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas", "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)", "infoPostFix": "",
+                "thousands": ",", "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...", "processing": "Procesando...",
+                "search": "", "zeroRecords": "Sin resultados encontrados",
+                "paginate": { "first": "<", "last": ">", "next": ">>", "previous": "<<" }
+            }
+        });
+        $('div.dataTables_filter input').attr('placeholder', 'Buscar...');
+    }
 
-  async function cargarRedesSociales() {
-    const promises = teamFiles.map(async (file) => {
-      const response = await fetch(file);
-      if (!response.ok) {
-        console.error(`Error al cargar ${file}: ${response.status}`);
-        return [];
-      }
-      const data = await response.json();
-      return data.map(equipo => ({
-        team: equipo.team,
-        facebook: equipo.redes?.facebook || '',
-        x: equipo.redes?.x || '',
-        instagram: equipo.redes?.instagram || ''
-      }));
-    });
-    const allRedesData = await Promise.all(promises);
-    redesData = allRedesData.flat();
-    inicializarTablaRedesSociales();
-  }
+    function inicializarTablaRedesSociales() {
+        $('#redesTabla').DataTable({
+            data: redesData,
+            columns: [
+                { data: 'team', title: 'Equipo' },
+                {
+                    data: 'facebook',
+                    title: 'Facebook',
+                    render: function(data, type, row) {
+                        return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-facebook"></i></a>` : '';
+                    }
+                },
+                {
+                    data: 'x',
+                    title: 'X (Twitter)',
+                    render: function(data, type, row) {
+                        return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-x"></i></a>` : '';
+                    }
+                },
+                {
+                    data: 'instagram',
+                    title: 'Instagram',
+                    render: function(data, type, row) {
+                        return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-instagram"></i></a>` : '';
+                    }
+                }
+            ],
+            pageLength: 25,
+            responsive: true,
+            language: {
+                "decimal": "", "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas", "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)", "infoPostFix": "",
+                "thousands": ",", "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...", "processing": "Procesando...",
+                "search": "", "zeroRecords": "Sin resultados encontrados",
+                "paginate": { "first": "<", "last": ">", "next": ">>", "previous": "<<" }
+            }
+        });
+        $('div.dataTables_filter input').attr('placeholder', 'Buscar...');
+    }
 
-  function inicializarTablaRedesSociales() {
-    $('#redesTabla').DataTable({
-      data: redesData,
-      columns: [
-        { data: 'team', title: 'Equipo' },
-        {
-          data: 'facebook',
-          title: 'Facebook',
-          render: function(data, type, row) {
-            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-facebook"></i></a>` : '';
-          }
-        },
-        {
-          data: 'x',
-          title: 'X (Twitter)',
-          render: function(data, type, row) {
-            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-x"></i></a>` : '';
-          }
-        },
-        {
-          data: 'instagram',
-          title: 'Instagram',
-          render: function(data, type, row) {
-            return data ? `<a href="${data}" target="_blank"><i class="ti ti-brand-instagram"></i></a>` : '';
-          }
-        }
-      ],
-      pageLength: 25,
-      responsive: true,
-      language: {
-        "decimal": "",
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "Mostrar _MENU_ Entradas",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-          "first": "<",
-          "last": ">",
-          "next": ">>",
-          "previous": "<<"
-        }
-      }
-    });
-  }
-
-  cargarDatosJugadores();
-  cargarEquipos(); 
-  cargarRedesSociales();
+    // Inicia el proceso de carga de datos optimizado
+    cargarTodosLosDatos();
 });
-
 </script>
 
 

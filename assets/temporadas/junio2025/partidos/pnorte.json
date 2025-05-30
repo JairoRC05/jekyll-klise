@@ -1,0 +1,1046 @@
+[
+  {
+    "rondas": [
+      {
+        "ronda": "RONDA 1",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 1
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 2
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 3
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 4
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 5
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 2",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "AEP",
+            "tag2": "AEP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 1
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 2
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 3
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 4
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 5
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 3",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "TUTW",
+            "tag2": "TUTW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 1
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 2
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 3
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 4
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TUT",
+            "tag1": "TUT",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 4",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "LB",
+            "tag2": "LB",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "TUTW",
+            "tag2": "TUTW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 2
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 3
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 4
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TUT",
+            "tag1": "TUT",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 5",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "MAGMA",
+            "tag2": "MAGMA",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "LB",
+            "tag2": "LB",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 2
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 3
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TUT",
+            "tag1": "TUT",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TAE",
+            "tag1": "TAE",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 6",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "PKR",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "MAGMA",
+            "tag2": "MAGMA",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "LB",
+            "tag2": "LB",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 3
+          },
+          {
+            "equipo1": "SAPPHIRE",
+            "tag1": "SAPPHIRE",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TUT",
+            "tag1": "TUT",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TAE",
+            "tag1": "TAE",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 7",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "PKR",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "MAGMA",
+            "tag2": "MAGMA",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 3
+          },
+          {
+            "equipo1": "TUT",
+            "tag1": "TUT",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TAE",
+            "tag1": "TAE",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PL",
+            "tag1": "PL",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 8",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "PKR",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "MAGMA",
+            "tag2": "MAGMA",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TAE",
+            "tag1": "TAE",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PL",
+            "tag1": "PL",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 9",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "PKR",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 4
+          },
+          {
+            "equipo1": "PL",
+            "tag1": "PL",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 5
+          },
+          {
+            "equipo1": "AMT",
+            "tag1": "AMT",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 10",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 4
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "PKR",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 5
+          },
+          {
+            "equipo1": "AMT",
+            "tag1": "AMT",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 11",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 4
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 5
+          },
+          {
+            "equipo1": "QUARTZ",
+            "tag1": "QUARTZ",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 12",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 4
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "SAPPHIRE",
+            "tag2": "SAPPHIRE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 12,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 13",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "STMN",
+            "tag1": "STMN",
+            "equipo2": "OBS",
+            "tag2": "OBS",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 1
+          },
+          {
+            "equipo1": "AEP",
+            "tag1": "AEP",
+            "equipo2": "QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUTW",
+            "tag1": "TUTW",
+            "equipo2": "AMT",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 3
+          },
+          {
+            "equipo1": "LB",
+            "tag1": "LB",
+            "equipo2": "PL",
+            "tag2": "PL",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 4
+          },
+          {
+            "equipo1": "MAGMA",
+            "tag1": "MAGMA",
+            "equipo2": "TAE",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PKR",
+            "tag1": "PKR",
+            "equipo2": "TUT",
+            "tag2": "TUT",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 13,
+            "match_number": 6
+          }
+        ]
+      }
+    ]
+  }
+]

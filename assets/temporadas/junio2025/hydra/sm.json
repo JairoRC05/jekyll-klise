@@ -1,0 +1,67 @@
+[
+    {
+        "tag": "SM",
+        "team": "HG SALARIO MINIMO",
+        "org": "HOUSE OF GHOST",
+        "activo": true,
+        "capitan": "FINN",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/house-of-ghost--salario-minimo",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "$M・Finn",
+                "ID": "GF9L4M8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "$M・Krosty",
+                "ID": "KE5NP22",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PL・么quario",
+                "ID": "8XTYF12",
+                "avatar": "male1",
+                "teamTag": "PL"
+            },
+            {
+                "nickname": "$M-Nono",
+                "ID": "FFGKK82",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "SuFurrito坐",
+                "ID": "F2Y485N",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PL• At-Gc",
+                "ID": "1X39A0A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Diegorpg05",
+                "ID": "4LN63PF",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

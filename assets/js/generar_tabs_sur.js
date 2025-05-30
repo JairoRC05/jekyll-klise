@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'scizor' },
         { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'scizor' },
         { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'scizor' },
+        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduckSuperheroe' },
         { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'scizor' },
         { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'scizor' },
         { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'scizor' },

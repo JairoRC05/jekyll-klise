@@ -1,0 +1,69 @@
+[
+    {
+        "tag": "STMN",
+        "team": "STAMINA E-SPORTS",
+        "org": "STAMINA E-SPORTS",
+        "activo": true,
+        "capitan": "RANMA",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "",
+        "seguro": true,
+        "link": "/equipos/stamina-e-sports",
+        "grupo": "NORTE",
+       "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "STMN・Ranma",
+                "ID": "A38905X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Regi",
+                "ID": "E9ENLYE",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Holmes",
+                "ID": "L1G1GF2",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN・Pachy",
+                "ID": "Q3HCM3A",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN • Frank",
+                "ID": "6990CYH",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "STMN • Tokito",
+                "ID": "820R14M",
+                "avatar": "male1",
+                "mvp": true,
+                "numero": 2,
+                "m4": 2
+            },
+            {
+                "nickname": "Frank4ever",
+                "ID": "EKYTQ9H",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

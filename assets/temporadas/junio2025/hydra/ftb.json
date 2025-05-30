@@ -1,0 +1,71 @@
+[
+    {
+        "tag": "FTB",
+        "team": "FROSTBITE",
+        "org": "",
+        "activo": true,
+        "capitan": "TUGFAMON",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "FROSTBITE",
+        "seguro": false,
+        "link": "/equipos/frostbite",
+        "grupo": "SUR",
+        "partidos": {
+               "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "ZTG・Broken",
+                "ID": "MHAP9RC",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Pikinだよ",
+                "ID": "LY3YYX3",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・Icer",
+                "ID": "Y39HPAF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AÐ・MerGs",
+                "ID": "C3EG7EF",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Tugfamon",
+                "ID": "LGAGE2Y",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "§Efesto§",
+                "ID": "7QT4YAA",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Perro乡",
+                "ID": "KFCPP44",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ČryptoX",
+                "ID": "A2AG7X1",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

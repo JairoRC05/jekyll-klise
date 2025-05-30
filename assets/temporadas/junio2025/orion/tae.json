@@ -1,0 +1,61 @@
+[
+    {
+        "tag": "TAE",
+        "team": "TEAM AETHER",
+        "org": "",
+        "activo": true,
+        "capitan": "MATI",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "TEAM AETHER",
+        "seguro": false,
+        "link": "/equipos/team-aether",
+        "grupo": "NORTE",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "Summ£r",
+                "ID": "TYLMP54",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "WorstOne_uwu",
+                "ID": "PQA1LX0",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Zukopham",
+                "ID": "AFNKN5X",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "TheRaYMoNz",
+                "ID": "FFNN7FM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "§TachyonTTV®",
+                "ID": "XHAQ5YM",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DarkyriaX",
+                "ID": "GNC462K",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

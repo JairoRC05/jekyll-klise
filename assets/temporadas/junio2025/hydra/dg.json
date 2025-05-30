@@ -1,0 +1,66 @@
+[
+    {
+        "tag": "DG",
+        "team": "DRAKAR GAMING",
+        "org": "",
+        "activo": true,
+        "capitan": "R2D2",
+        "region": "LAS-LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DRAKAR GAMING",
+        "seguro": false,
+        "link": "/equipos/drakar-gaming",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": ".R2D2.",
+                "ID": "84F246G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AvrilLanvign",
+                "ID": "60PCK13",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "ĐҜ҉MrArthur",
+                "ID": "MRK217R",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "6R|NCH",
+                "ID": "5PR10G",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ByNovAshTTV",
+                "ID": "MM7PYR8",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Nakomu",
+                "ID": "A5A3CLY",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "ĐҜ҉šøkïï",
+                "ID": "AKM5P02",
+                "avatar": "male1"
+            }
+        ]
+    }
+]

@@ -1,0 +1,342 @@
+---
+layout:
+permalink: /super-copa-xforce-edit.html
+title: SUPER COPA-XFORCE
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Equipos - Liga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .table-responsive {
+            margin-top: 20px;
+        }
+        .btn-action {
+            margin-right: 5px;
+        }
+
+
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">Gestión de Equipos Liga</h1>
+
+        <div class="d-flex justify-content-between mb-3">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createEditModal" id="addNewBtn">
+                ➕ Añadir Nuevo Equipo
+            </button>
+            <button class="btn btn-info text-white" id="downloadJsonBtn">
+                ⬇️ Descargar JSON
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table id="equiposTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tag</th>
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>
+                        <th>Abril</th>
+                        <th>Mayo</th>
+                        <th>Junio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="createEditModal" tabindex="-1" aria-labelledby="createEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createEditModalLabel">Añadir/Editar Equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="equipoForm">
+                        <input type="hidden" id="equipoIndex">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tag" class="form-label">Tag</label>
+                            <input type="text" class="form-control" id="tag" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="enero" class="form-label">Enero</label>
+                            <input type="number" class="form-control" id="enero" value="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="febrero" class="form-label">Febrero</label>
+                            <input type="number" class="form-control" id="febrero" value="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="marzo" class="form-label">Marzo</label>
+                            <input type="number" class="form-control" id="marzo" value="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="abril" class="form-label">Abril</label>
+                            <input type="number" class="form-control" id="abril" value="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mayo" class="form-label">Mayo</label>
+                            <input type="number" class="form-control" id="mayo" value="0">
+                        </div>
+                        <div class="mb-3">
+                            <label for="junio" class="form-label">Junio</label>
+                            <input type="number" class="form-control" id="junio" value="0">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <div class="container">
+ <table border="1" style="width:100%; border-collapse: collapse; text-align: center;">
+    <thead>
+        <tr>
+            <th>Posición</th>
+            <th>Puntos</th>
+            <th>Posición</th>
+            <th>Puntos</th>
+            <th>Posición</th>
+            <th>Puntos</th>
+            <th>Posición</th>
+            <th>Puntos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>3200</td><td>9</td><td>2400</td><td>17</td><td>1600</td><td>25</td><td>800</td></tr>
+        <tr><td>2</td><td>3100</td><td>10</td><td>2300</td><td>18</td><td>1500</td><td>26</td><td>700</td></tr>
+        <tr><td>3</td><td>3000</td><td>11</td><td>2200</td><td>19</td><td>1400</td><td>27</td><td>600</td></tr>
+        <tr><td>4</td><td>2900</td><td>12</td><td>2100</td><td>20</td><td>1300</td><td>28</td><td>500</td></tr>
+        <tr><td>5</td><td>2800</td><td>13</td><td>2000</td><td>21</td><td>1200</td><td>29</td><td>400</td></tr>
+        <tr><td>6</td><td>2700</td><td>14</td><td>1900</td><td>22</td><td>1100</td><td>30</td><td>300</td></tr>
+        <tr><td>7</td><td>2600</td><td>15</td><td>1800</td><td>23</td><td>1000</td><td>31</td><td>200</td></tr>
+        <tr><td>8</td><td>2500</td><td>16</td><td>1700</td><td>24</td><td>900</td><td>32</td><td>100</td></tr>
+    </tbody>
+</table>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+    <script>
+        const LOCAL_STORAGE_KEY = 'equiposData';
+        let equipos = [];
+        let table; // Variable para almacenar la instancia de DataTables
+
+        // Datos iniciales si no hay nada en localStorage
+        const initialData = {
+            "equipos": [
+                { "nombre": "7Z ES", "tag": "7Z", "enero": "0", "febrero": "2300", "marzo": "2300", "abril": "0", "mayo": "2200", "junio": "0" },
+                { "nombre": "LOS PAPULOVERS", "tag": "LVR", "enero": "2000", "febrero": "0", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "AD DORADAS", "tag": "AD", "enero": "0", "febrero": "1500", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "AD GAMING", "tag": "ADG", "enero": "0", "febrero": "2000", "marzo": "1500", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "ALEPH RAGNAROK", "tag": "AEP", "enero": "0", "febrero": "1200", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "DFS AMBER", "tag": "AMB", "enero": "0", "febrero": "1000", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "DFS PLATINUM", "tag": "PLAT", "enero": "1900", "febrero": "2100", "marzo": "1600", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "DFS RUBY", "tag": "PLAT", "enero": "0", "febrero": "900", "marzo": "600", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "EEVEEVOLUTION", "tag": "EVL", "enero": "0", "febrero": "800", "marzo": "800", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "GOOD AS GOLD", "tag": "GG", "enero": "0", "febrero": "700", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "HG SALARIO MINIMO", "tag": "SM", "enero": "0", "febrero": "1100", "marzo": "1800", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "PLAGA VILLANOS", "tag": "SM", "enero": "0", "febrero": "0", "marzo": "2100", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "RNT ETERNAL ASCENSION", "tag": "EA", "enero": "0", "febrero": "1100", "marzo": "700", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "RNT GALACTICOS", "tag": "GX", "enero": "0", "febrero": "1400", "marzo": "1700", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "RNT NEO STARS", "tag": "NEO", "enero": "0", "febrero": "1600", "marzo": "2000", "abril": "0", "mayo": "1900", "junio": "0" },
+                { "nombre": "SPC ENIGMA", "tag": "E", "enero": "2200", "febrero": "2200", "marzo": "2200", "abril": "0", "mayo": "2300", "junio": "0" },
+                { "nombre": "STAMINA ES", "tag": "STMN", "enero": "2100", "febrero": "2400", "marzo": "2400", "abril": "0", "mayo": "2400", "junio": "0" },
+                { "nombre": "TAQUITOS A LA DIABLA", "tag": "TAD", "enero": "0", "febrero": "1500", "marzo": "1400", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "TEAM AETHER", "tag": "TAE", "enero": "0", "febrero": "1800", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "TEAM FLARE", "tag": "TF", "enero": "0", "febrero": "1700", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "TEAM ROCKET", "tag": "TR", "enero": "0", "febrero": "1400", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "TEAM STAR", "tag": "TSR", "enero": "0", "febrero": "1900", "marzo": "0", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "OVERHEAT", "tag": "OVG", "enero": "0", "febrero": "1300", "marzo": "1000", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "THE UNOWN TEAM", "tag": "TUT", "enero": "0", "febrero": "1600", "marzo": "1900", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "RAGNAROK YMIR", "tag": "RK", "enero": "0", "febrero": "0", "marzo": "1300", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "PHOBIUS AURA", "tag": "POA", "enero": "0", "febrero": "0", "marzo": "1300", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "COLSPIRIT", "tag": "COL", "enero": "0", "febrero": "0", "marzo": "1200", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "DFS DIAMOND", "tag": "DMD", "enero": "0", "febrero": "0", "marzo": "1100", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "IMPERIO MEXA OBS", "tag": "OBS", "enero": "0", "febrero": "0", "marzo": "900", "abril": "0", "mayo": "0", "junio": "0" },
+                { "nombre": "DFS PEARL", "tag": "PEARL", "enero": "0", "febrero": "0", "marzo": "700", "abril": "0", "mayo": "0", "junio": "0" }
+            ]
+        };
+
+        // Cargar datos desde LocalStorage o usar datos iniciales
+        function loadEquipos() {
+            const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+            if (storedData) {
+                equipos = JSON.parse(storedData).equipos;
+            } else {
+                equipos = initialData.equipos;
+                saveEquipos(); // Guardar los datos iniciales en LocalStorage
+            }
+        }
+
+        // Guardar datos en LocalStorage
+        function saveEquipos() {
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({ equipos: equipos }));
+        }
+
+        // Inicializar DataTables
+        function initDataTable() {
+            if (table) {
+                table.destroy(); // Destruir la instancia existente si hay una
+            }
+            table = $('#equiposTable').DataTable({
+                data: equipos,
+                columns: [
+                    { data: 'nombre' },
+                    { data: 'tag' },
+                    { data: 'enero' },
+                    { data: 'febrero' },
+                    { data: 'marzo' },
+                    { data: 'abril' },
+                    { data: 'mayo' },
+                    { data: 'junio' },
+                    {
+                        // Columna de acciones (Editar, Eliminar)
+                        data: null,
+                        render: function (data, type, row, meta) {
+                            return `
+                                <button class="btn btn-warning btn-sm btn-action edit-btn" data-index="${meta.row}">✏️ Editar</button>
+                                <button class="btn btn-danger btn-sm btn-action delete-btn" data-index="${meta.row}">🗑️ Eliminar</button>
+                            `;
+                        }
+                    }
+                ],
+                // Opciones de DataTables para paginación, búsqueda, etc.
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/2.0.8/i18n/es-ES.json' // Idioma español
+                }
+            });
+        }
+
+        // Manejar el formulario para añadir/editar equipos
+        $('#equipoForm').on('submit', function (e) {
+            e.preventDefault();
+            const index = $('#equipoIndex').val();
+            const newEquipo = {
+                nombre: $('#nombre').val(),
+                tag: $('#tag').val(),
+                enero: $('#enero').val(),
+                febrero: $('#febrero').val(),
+                marzo: $('#marzo').val(),
+                abril: $('#abril').val(),
+                mayo: $('#mayo').val(),
+                junio: $('#junio').val()
+            };
+
+            if (index === '') { // Añadir nuevo equipo
+                equipos.push(newEquipo);
+            } else { // Editar equipo existente
+                equipos[parseInt(index)] = newEquipo;
+            }
+
+            saveEquipos();
+            initDataTable(); // Recargar la tabla con los datos actualizados
+            $('#createEditModal').modal('hide'); // Cerrar el modal
+        });
+
+        // Botón "Añadir Nuevo Equipo"
+        $('#addNewBtn').on('click', function() {
+            $('#equipoForm')[0].reset(); // Limpiar el formulario
+            $('#equipoIndex').val(''); // Limpiar el índice
+            $('#createEditModalLabel').text('Añadir Nuevo Equipo');
+        });
+
+        // Evento para editar un equipo (delegado para elementos dinámicos)
+        $('#equiposTable').on('click', '.edit-btn', function () {
+            const index = $(this).data('index');
+            const equipo = equipos[index];
+
+            $('#equipoIndex').val(index);
+            $('#nombre').val(equipo.nombre);
+            $('#tag').val(equipo.tag);
+            $('#enero').val(equipo.enero);
+            $('#febrero').val(equipo.febrero);
+            $('#marzo').val(equipo.marzo);
+            $('#abril').val(equipo.abril);
+            $('#mayo').val(equipo.mayo);
+            $('#junio').val(equipo.junio);
+
+            $('#createEditModalLabel').text('Editar Equipo');
+            const modal = new bootstrap.Modal(document.getElementById('createEditModal'));
+            modal.show();
+        });
+
+        // Evento para eliminar un equipo (delegado para elementos dinámicos)
+        $('#equiposTable').on('click', '.delete-btn', function () {
+            const index = $(this).data('index');
+            if (confirm(`¿Estás seguro de que quieres eliminar a "${equipos[index].nombre}"?`)) {
+                equipos.splice(index, 1); // Eliminar el equipo del array
+                saveEquipos();
+                initDataTable(); // Recargar la tabla
+            }
+        });
+
+        // Botón para descargar JSON
+        $('#downloadJsonBtn').on('click', function () {
+            const dataStr = JSON.stringify({ equipos: equipos }, null, 4); // Formateado con indentación
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'equipos_actualizados.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Cargar datos e inicializar la tabla cuando el DOM esté listo
+        $(document).ready(function () {
+            loadEquipos();
+            initDataTable();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+    {
+        "tag": "DINASTY",
+        "team": "DINASTY",
+        "org": "XF05 eSports",
+        "activo": true,
+        "capitan": "TORO",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "DINASTY",
+        "seguro": true,
+        "link": "/equipos/dinasty",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "龍・Toro",
+                "ID": "RNCXGAK",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Light光",
+                "ID": "43LKYHQ",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Kraft",
+                "ID": "2NNA9P4",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Vicleo",
+                "ID": "446HY4X",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "龍・Ji9star",
+                "ID": "83AFR37",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "Amailu",
+                "ID": "95R97RL",
+                "avatar": "female1",
+                "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "Máx・獅",
+                "ID": "CY9PT5",
+                "avatar": "male1",
+                "teamTag": "DINASTY"
+            }
+        ],
+        "posicionDesempate": false
+    }
+]

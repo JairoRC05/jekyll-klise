@@ -1,15 +1,15 @@
 [
     {
-        "tag": "FTB",
-        "team": "FROSTBITE",
+        "tag": "PKR",
+        "team": "POKERANGERS",
         "org": "",
         "activo": true,
-        "capitan": "TUGFAMON",
+        "capitan": "JFPRIME",
         "region": "LAN",
-        "teamNombreAnterior": "AD GAMING",
-        "teamNuevoNombre": "FROSTBITE",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "POKERANGERS",
         "seguro": false,
-        "link": "/equipos/ad-gaming",
+        "link": "/equipos/pokerangers",
         "grupo": "NORTE",
         "partidos": {
             "M1": "0",
@@ -27,44 +27,46 @@
         },
         "jugadores": [
             {
-                "nickname": "AÐ・Efesto",
-                "ID": "7QT4YAA",
+                "nickname": "WladySpecwar",
+                "ID": "M1THK9N",
                 "avatar": "male1"
             },
             {
-                "nickname": "AÐ・KION",
-                "ID": "C3EG7EF",
+                "nickname": "DœkōTTV",
+                "ID": "9MRCM46",
                 "avatar": "male1"
             },
             {
-                "nickname": "AÐ・Icer",
-                "ID": "Y39HPAF",
+                "nickname": "ErizaSpecwar",
+                "ID": "X01FEAF",
                 "avatar": "male1"
             },
             {
-                "nickname": "AÐ・DrMarioZ",
-                "ID": "GGA8QFL"
-            },
-            {
-                "nickname": "AÐ・Criska",
-                "ID": "2A0PAYQ",
+                "nickname": "MIPoJhonMIPo",
+                "ID": "HNYFCLG",
                 "avatar": "male1"
             },
             {
-                "nickname": "RNT・PikaBro",
-                "ID": "668H1XE",
+                "nickname": "Truenō¿",
+                "ID": "R22M468",
                 "avatar": "male1"
             },
             {
-                "nickname": "AÐ・Pikinツ",
-                "ID": "LY3YYX3",
+                "nickname": "Tinį",
+                "ID": "HXXTPTN",
                 "avatar": "male1"
             },
             {
-                "nickname": "太ㅤGoomㅤ會",
-                "ID": "NFN0FN",
+                "nickname": "XileTiesaTTV",
+                "ID": "N98MHHG",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Prometeo95",
+                "ID": "NC2LMY8",
                 "avatar": "male1"
             }
-            ]
-        }
-    ]
+        ],
+        "posicionDesempate": false
+    }
+]
