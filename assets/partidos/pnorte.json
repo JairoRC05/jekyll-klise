@@ -12,24 +12,26 @@
             "tag1": "AEP",
             "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 1,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
             "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 1,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "LAST BREATH",
@@ -48,36 +50,39 @@
             "tag1": "MAGMA",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 1,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "POKERANGERS",
             "tag1": "PKR",
             "equipo2": "TEAM AETHER",
             "tag2": "TAE",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 1,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "DFS SAPPHIRE",
             "tag1": "SAPPHIR",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 1,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -92,24 +97,26 @@
             "tag1": "STMN",
             "equipo2": "RAGNAROK ALEPH",
             "tag2": "AEP",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
             "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "LAST BREATH",
@@ -128,36 +135,39 @@
             "tag1": "MAGMA",
             "equipo2": "IM AMATISTA",
             "tag2": "AMT",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "POKERANGERS",
             "tag1": "PKR",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "DFS SAPPHIRE",
             "tag1": "SAPPHIR",
             "equipo2": "TEAM AETHER",
             "tag2": "TAE",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },

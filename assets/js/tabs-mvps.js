@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const roundTabs = document.getElementById('roundTabs');
   const roundTabsContent = document.getElementById('roundTabsContent');
   const assetsFolder = 'assets/rondas/';
-  const numRondas = 12;
+  const numRondas = 13;
 
   async function leerJSON(nombreArchivo) {
     try {

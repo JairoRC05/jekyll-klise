@@ -11,9 +11,9 @@
         "seguro": true,
         "link": "/equipos/house-of-ghost--prestaciones-de-ley",
         "grupo": "NORTE",
-           "partidos": {
-            "M1": "0",
-            "M2": "0",
+        "partidos": {
+            "M1": "3",
+            "M2": "1",
             "M3": "0",
             "M4": "0",
             "M5": "0",

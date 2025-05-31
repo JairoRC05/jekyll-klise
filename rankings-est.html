@@ -1,0 +1,251 @@
+---
+layout:
+permalink: /estadisticas.html
+title: RONDAS | LIGA INDIGO
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos y Marcadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .table-responsive {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">Gestión de Equipos y Marcadores</h1>
+
+        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#equipoModal" id="btnAgregarEquipo">
+            Agregar Equipo
+        </button>
+
+        <div class="table-responsive">
+            <table id="equiposTable" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Marcador</th>
+                        <th>Puntos a Favor</th>
+                        <th>Puntos en Contra</th>
+                        <th>Diferencia Puntos</th> <th>Ronda</th>
+                        <th>Equipo Rival</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="equipoModal" tabindex="-1" aria-labelledby="equipoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="equipoModalLabel">Agregar Nuevo Equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="equipoForm">
+                        <input type="hidden" id="equipoIndex">
+                        <div class="mb-3">
+                            <label for="nombreEquipo" class="form-label">Nombre del Equipo</label>
+                            <input type="text" class="form-control" id="nombreEquipo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="marcador" class="form-label">Marcador (Ej: 3-2)</label>
+                            <input type="text" class="form-control" id="marcador" pattern="[0-9]+-[0-9]+" placeholder="Ej: 3-2" required>
+                            <small class="form-text text-muted">Formato: PuntosEquipo-PuntosRival (Ej: 3-2)</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="puntosFavor" class="form-label">Puntos a Favor</label>
+                            <input type="number" class="form-control" id="puntosFavor" min="0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="puntosContra" class="form-label">Puntos en Contra</label>
+                            <input type="number" class="form-control" id="puntosContra" min="0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ronda" class="form-label">Ronda</label>
+                            <input type="text" class="form-control" id="ronda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="equipoRival" class="form-label">Equipo Rival</label>
+                            <input type="text" class="form-control" id="equipoRival" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" form="equipoForm" id="guardarEquipoBtn">Guardar Equipo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        let equipos = [];
+        let tablaEquipos; // Variable para almacenar la instancia de DataTables
+
+        // Función para cargar los equipos desde localStorage
+        function cargarEquipos() {
+            const equiposGuardados = localStorage.getItem('equipos');
+            if (equiposGuardados) {
+                equipos = JSON.parse(equiposGuardados);
+                // Asegurarse de que la diferenciaPuntos exista para datos antiguos
+                equipos.forEach(equipo => {
+                    if (typeof equipo.diferenciaPuntos === 'undefined') {
+                        equipo.diferenciaPuntos = equipo.puntosFavor - equipo.puntosContra;
+                    }
+                });
+            } else {
+                equipos = []; // Inicializar si no hay datos
+            }
+        }
+
+        // Función para guardar los equipos en localStorage
+        function guardarEquipos() {
+            localStorage.setItem('equipos', JSON.stringify(equipos));
+        }
+
+        // Función para renderizar la tabla con los datos actuales
+        function renderizarTabla() {
+            if (tablaEquipos) {
+                tablaEquipos.destroy(); // Destruir la instancia existente si la hay
+            }
+
+            tablaEquipos = $('#equiposTable').DataTable({
+                data: equipos,
+                columns: [
+                    { data: 'nombre' },
+                    { data: 'marcador' },
+                    { data: 'puntosFavor' },
+                    { data: 'puntosContra' },
+                    { data: 'diferenciaPuntos' }, // Nueva columna de DataTables
+                    { data: 'ronda' },
+                    { data: 'equipoRival' },
+                    {
+                        data: null,
+                        render: function (data, type, row, meta) {
+                            return `
+                                <button class="btn btn-warning btn-sm editar-btn" data-index="${meta.row}">Editar</button>
+                                <button class="btn btn-danger btn-sm eliminar-btn" data-index="${meta.row}">Eliminar</button>
+                            `;
+                        },
+                        orderable: false
+                    }
+                ],
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json" // Idioma español
+                }
+            });
+        }
+
+        // Event listener para el formulario del modal
+        document.getElementById('equipoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombreEquipo').value;
+            const marcador = document.getElementById('marcador').value;
+            const puntosFavor = parseInt(document.getElementById('puntosFavor').value);
+            const puntosContra = parseInt(document.getElementById('puntosContra').value);
+            const ronda = document.getElementById('ronda').value;
+            const equipoRival = document.getElementById('equipoRival').value;
+
+            // Calcular la diferencia de puntos
+            const diferenciaPuntos = puntosFavor - puntosContra;
+
+            const index = document.getElementById('equipoIndex').value;
+
+            const nuevoEquipo = {
+                nombre,
+                marcador,
+                puntosFavor,
+                puntosContra,
+                diferenciaPuntos, // Agregar la diferencia de puntos
+                ronda,
+                equipoRival
+            };
+
+            if (index === "") {
+                // Agregar nuevo equipo
+                equipos.push(nuevoEquipo);
+            } else {
+                // Editar equipo existente
+                equipos[parseInt(index)] = nuevoEquipo;
+            }
+
+            guardarEquipos();
+            renderizarTabla();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('equipoModal'));
+            modal.hide();
+        });
+
+        // Event listener para el botón "Agregar Equipo" (para limpiar el modal)
+        document.getElementById('btnAgregarEquipo').addEventListener('click', function() {
+            document.getElementById('equipoForm').reset();
+            document.getElementById('equipoIndex').value = "";
+            document.getElementById('equipoModalLabel').innerText = "Agregar Nuevo Equipo";
+            document.getElementById('guardarEquipoBtn').innerText = "Guardar Equipo";
+        });
+
+        // Event listener para los botones de Editar y Eliminar (delegación de eventos)
+        $('#equiposTable tbody').on('click', '.editar-btn', function() {
+            const index = $(this).data('index');
+            const equipo = equipos[index];
+
+            document.getElementById('nombreEquipo').value = equipo.nombre;
+            document.getElementById('marcador').value = equipo.marcador;
+            document.getElementById('puntosFavor').value = equipo.puntosFavor;
+            document.getElementById('puntosContra').value = equipo.puntosContra;
+            document.getElementById('ronda').value = equipo.ronda;
+            document.getElementById('equipoRival').value = equipo.equipoRival;
+            document.getElementById('equipoIndex').value = index;
+
+            document.getElementById('equipoModalLabel').innerText = "Editar Equipo";
+            document.getElementById('guardarEquipoBtn').innerText = "Actualizar Equipo";
+
+            const equipoModal = new bootstrap.Modal(document.getElementById('equipoModal'));
+            equipoModal.show();
+        });
+
+        $('#equiposTable tbody').on('click', '.eliminar-btn', function() {
+            const index = $(this).data('index');
+            if (confirm('¿Estás seguro de que quieres eliminar este equipo?')) {
+                equipos.splice(index, 1);
+                guardarEquipos();
+                renderizarTabla();
+            }
+        });
+
+        // Inicializar al cargar la página
+        $(document).ready(function() {
+            cargarEquipos();
+            renderizarTabla();
+        });
+    </script>
+</body>
+</html>
