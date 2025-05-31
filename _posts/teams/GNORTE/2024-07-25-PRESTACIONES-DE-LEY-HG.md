@@ -6,7 +6,7 @@ team: PRESTACIONES DE LEY HG
 maincover: /assets/logos/SM.png
 date: 2020-08-29 10:29:20 +0700
 title: PRESTACIONES DE LEY HG
-ID: PE
+ID: PL
 temporada: SI
 rango: PLATA
 region: LAN

@@ -4,10 +4,10 @@ permalink: /equipos/dinamita-buena-onda
 categories: TEAM GNORTE
 liga: LIGA INDIGO
 date: 2020-08-29 10:29:20 +0700
-title: DINAMITA BUENA ONDA
+title: CUMBIA DRAGON
 sector: 
-team: DINAMITA BUENA ONDA
-ID: DBO
+team: CUMBIA DRAGON
+ID: CD
 region: LAN
 pais: mx
 ligas: 

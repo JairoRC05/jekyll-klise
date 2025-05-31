@@ -1,15 +1,15 @@
 [
     {
-        "tag": "SAPPHIR",
-        "team": "DFS SAPPHIRE",
+        "tag": "QUARTZ",
+        "team": "DFS QUARTZ",
         "org": "",
         "activo": true,
-        "capitan": "TREVOR",
+        "capitan": "CROSS",
         "region": "LAN",
         "teamNombreAnterior": "",
-        "teamNuevoNombre": "DFS SAPPHIRE",
+        "teamNuevoNombre": "DFS QUARTZ",
         "seguro": false,
-        "link": "/equipos/dfs-sapphire",
+        "link": "/equipos/dragon-flies-gaming--quartz",
         "grupo": "NORTE",
         "partidos": {
             "M1": "0",
@@ -27,35 +27,41 @@
         },
         "jugadores": [
             {
-                "nickname": "DFs・Trevor",
-                "ID": "6NC11M4",
+                "nickname": "DFs・Cros",
+                "ID": "7TE1K80",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・arepa",
-                "ID": "HM0FQ75",
+                "nickname": "DFs・DoPa",
+                "ID": "HHX3CAP",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・Mudkip",
-                "ID": "17ANET6",
+                "nickname": "DFs・HaKuna",
+                "ID": "CM30NA3",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・TheBaez",
-                "ID": "XYGHX92",
+                "nickname": "DFs・Sísifo",
+                "ID": "4AY0P1E",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・OrcoBC",
-                "ID": "XRTEN8E",
+                "nickname": "La_Lujuria",
+                "ID": "G7YF5FG",
                 "avatar": "male1"
             },
             {
-                "nickname": "Squid*Ink",
-                "ID": "NH0PRCL",
+                "nickname": "DFs・Poshiヅ",
+                "ID": "H984G0F",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "DFs・RaDahN",
+                "ID": "P1MM782",
                 "avatar": "male1"
             }
-        ]
+        ],
+        "posicionDesempate": false
     }
 ]

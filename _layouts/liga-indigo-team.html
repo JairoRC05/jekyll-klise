@@ -125,301 +125,353 @@ permalink:
     {% include g-analytics.html %}
 
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const pageID = "{{ page.ID }}";
     const jsonURL = `/assets/temporadas/junio2025/${pageID.toLowerCase()}.json`;
-
 
     const descargarTodoBtn = document.getElementById('descargarTodo');
     const equipoPerfil = document.getElementById('equipo-perfil');
     const equipoPartidos = document.getElementById('equipo-perfil-partidos');
     const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`; // HTML del footer
-    
+
+    // La constante roundSpecificData es la fuente de verdad para las fechas de las rondas
+    const roundSpecificData = [
+        { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28' },
+        { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30' },
+        { ronda: 'RONDA 3', fecha: '2025-06-02' },
+        { ronda: 'RONDA 4', fecha: '2025-06-03' },
+        { ronda: 'RONDA 5', fecha: '2025-06-04' },
+        { ronda: 'RONDA 6', fecha: '2025-06-05' },
+        { ronda: 'RONDA 7', fecha: '2025-06-06' },
+        { ronda: 'RONDA 8', fecha: '2025-06-09' },
+        { ronda: 'RONDA 9', fecha: '2025-06-10' },
+        { ronda: 'RONDA 10', fecha: '2025-06-11' },
+        { ronda: 'RONDA 11', fecha: '2025-06-12' },
+        { ronda: 'RONDA 12', fecha: '2025-06-13' },
+        { ronda: 'RONDA 13', fecha: '2025-06-16' },
+        { ronda: 'HOOPA', fecha: '2025-09-10' },
+    ];
+
     if (descargarTodoBtn && equipoPerfil && equipoPartidos) {
-    descargarTodoBtn.addEventListener('click', function() {
-      const bannerHTML = equipoPerfil.outerHTML; // Obtener el HTML del banner
-      const partidosHTML = equipoPartidos.outerHTML; // Obtener el HTML de los partidos
+        descargarTodoBtn.addEventListener('click', function() {
+            const bannerHTML = equipoPerfil.outerHTML;
+            const partidosHTML = equipoPartidos.outerHTML;
 
-      // Crear un contenedor temporal
-      const tempDescargaDiv = document.createElement('div');
-      tempDescargaDiv.style.position = 'absolute'; // Para que no afecte el layout
-      tempDescargaDiv.style.top = '-9999px';
-      tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
+            const tempDescargaDiv = document.createElement('div');
+            tempDescargaDiv.style.position = 'absolute';
+            tempDescargaDiv.style.top = '-9999px';
+            tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
 
-      document.body.appendChild(tempDescargaDiv);
+            document.body.appendChild(tempDescargaDiv);
 
-      html2canvas(tempDescargaDiv).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
-        link.href = canvas.toDataURL();
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+            html2canvas(tempDescargaDiv).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
+                link.href = canvas.toDataURL();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
 
-        // Eliminar el contenedor temporal
-        document.body.removeChild(tempDescargaDiv);
-      });
-    });
-  }
+                document.body.removeChild(tempDescargaDiv);
+            });
+        });
+    }
 
     fetch(jsonURL)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (data && data.length > 0) {
-          const equipo = data[0];
-          renderBanner(equipo, 'equipo-perfil'); // Especificamos el contenedor para el banner
-          renderRoster(equipo, 'equipo-perfil-roster'); // Especificamos el contenedor para el roster
-          renderMatchInfo(equipo, 'equipo-perfil-partidos'); // Especificamos el contenedor para los partidos
-        } else {
-          document.getElementById('equipo-perfil').innerText = 'No se encontraron datos para este equipo.';
-          document.getElementById('equipo-perfil-roster').innerText = '';
-          document.getElementById('equipo-perfil-partidos').innerText = '';
-        }
-      })
-      .catch(error => {
-        console.error('Error al cargar o procesar el archivo JSON:', error);
-        document.getElementById('equipo-perfil').innerText = 'Error al cargar los datos del equipo.';
-        document.getElementById('equipo-perfil-roster').innerText = '';
-        document.getElementById('equipo-perfil-partidos').innerText = '';
-      });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data && data.length > 0) {
+                const equipo = data[0];
+                renderBanner(equipo, 'equipo-perfil');
+                renderRoster(equipo, 'equipo-perfil-roster');
+
+                // Pasar roundSpecificData a renderMatchInfo
+                renderMatchInfo(equipo, 'equipo-perfil-partidos', roundSpecificData);
+            } else {
+                document.getElementById('equipo-perfil').innerText = 'No se encontraron datos para este equipo.';
+                document.getElementById('equipo-perfil-roster').innerText = '';
+                document.getElementById('equipo-perfil-partidos').innerText = '';
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar o procesar el archivo JSON:', error);
+            document.getElementById('equipo-perfil').innerText = 'Error al cargar los datos del equipo.';
+            document.getElementById('equipo-perfil-roster').innerText = '';
+            document.getElementById('equipo-perfil-partidos').innerText = '';
+        });
 
     function calcularSumaPartidos(partidos) {
-      let suma = 0;
-      for (const key in partidos) {
-        const valor = partidos[key];
-        if (valor !== "" && !isNaN(parseInt(valor))) {
-          suma += parseInt(valor);
+        let suma = 0;
+        for (const key in partidos) {
+            const valor = partidos[key];
+            if (valor !== "" && !isNaN(parseInt(valor))) {
+                suma += parseInt(valor);
+            }
         }
-      }
-      return suma;
+        return suma;
     }
 
     function renderBanner(equipo, containerId) {
-      let partidosBannerHTML = '<div class="card-round-title"><div class="card-round-record">';
-      for (const partidoKey in equipo.partidos) {
-        const resultado = equipo.partidos[partidoKey];
-        let classRecord = '';
-        let textoResultado = '';
+        let partidosBannerHTML = '<div class="card-round-title"><div class="card-round-record">';
+        for (const partidoKey in equipo.partidos) {
+            const resultado = equipo.partidos[partidoKey];
+            let classRecord = '';
+            let textoResultado = '';
 
-   if (resultado === "3") {
-          classRecord = 'sup';
-          textoResultado = '3';
-        } else if (resultado === "2") {
-          classRecord = 'win';
-          textoResultado = '2';
-        } else if (resultado === "1") {
-          classRecord = 'one';
-          textoResultado = '1';
-        } else if (resultado === "R") {
-          classRecord = 'rea';
-          textoResultado = 'R';
-        } else if (resultado === "Z") {
-          classRecord = 'des';
-          textoResultado = 'Z';
-        } else if (resultado === "0") {
-          classRecord = 'loss';
-          textoResultado = '0';
-    }
-        
-        partidosBannerHTML += `<span class="record ${classRecord}">${textoResultado}</span>`;
-      }
-      partidosBannerHTML += '</div></div>';
+            if (resultado === "3") {
+                classRecord = 'sup';
+                textoResultado = '3';
+            } else if (resultado === "2") {
+                classRecord = 'win';
+                textoResultado = '2';
+            } else if (resultado === "1") {
+                classRecord = 'one';
+                textoResultado = '1';
+            } else if (resultado === "R") {
+                classRecord = 'rea';
+                textoResultado = 'R';
+            } else if (resultado === "Z") {
+                classRecord = 'des';
+                textoResultado = 'Z';
+            } else if (resultado === "0") {
+                classRecord = 'loss';
+                textoResultado = '0';
+            }
 
-      const bannerHTML = `
-        <div class="banner_bg_team bg-cham">
-          <div class="container banner_team">
-            <a href="/assets/logos/${equipo.tag}.png" role="button" download="${equipo.team.replace(/ /g, '-')}.png">
-              <img src="/assets/logos/${equipo.tag}.webp" class="drop img-fluid" alt="${equipo.team}">
-            </a>
-            <div class="bannerText">
-              <div class="record-line">
-                ${equipo.ligas && equipo.ligas.length === 1 ? `
-                  <div class="trofeos">
-                    <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
-                    <span>${equipo.ligas[0]}</span>
-                  </div>
-                ` : ''}
-                ${equipo.cxf && equipo.cxf.length === 1 ? `
-                  <div class="trofeos ms-2">
-                    <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
-                    <span>${equipo.cxf[0]}</span>
-                  </div>
-                ` : ''}
-                ${equipo.cham && equipo.cham.length === 1 ? `
-                  <div class="trofeos ms-2">
-                    <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
-                    <span>${equipo.cham[0]}</span>
-                  </div>
-                ` : ''}
-              </div>
-              <h1 class="exo-style d-none d-md-block">${equipo.team}</h1>
-              <span class="exo d-none d-md-block">${equipo.tag} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
-              <div class="region">
-                <div class="localization">
-                  <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}">
-                  <span class="ms-2"> ${equipo.region}</span>
+            partidosBannerHTML += `<span class="record ${classRecord}">${textoResultado}</span>`;
+        }
+        partidosBannerHTML += '</div></div>';
+
+        const bannerHTML = `
+            <div class="banner_bg_team bg-cham">
+                <div class="container banner_team">
+                    <a href="/assets/logos/${equipo.tag}.png" role="button" download="${equipo.team.replace(/ /g, '-')}.png">
+                        <img src="/assets/logos/${equipo.tag}.webp" class="drop img-fluid" alt="${equipo.team}">
+                    </a>
+                    <div class="bannerText">
+                        <div class="record-line">
+                            ${equipo.ligas && equipo.ligas.length === 1 ? `
+                                <div class="trofeos">
+                                    <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+                                    <span>${equipo.ligas[0]}</span>
+                                </div>
+                            ` : ''}
+                            ${equipo.cxf && equipo.cxf.length === 1 ? `
+                                <div class="trofeos ms-2">
+                                    <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
+                                    <span>${equipo.cxf[0]}</span>
+                                </div>
+                            ` : ''}
+                            ${equipo.cham && equipo.cham.length === 1 ? `
+                                <div class="trofeos ms-2">
+                                    <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
+                                    <span>${equipo.cham[0]}</span>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <h1 class="exo-style d-none d-md-block">${equipo.team}</h1>
+                        <span class="exo d-none d-md-block">${equipo.tag} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
+                        <div class="region">
+                            <div class="localization">
+                                <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}">
+                                <span class="ms-2"> ${equipo.region}</span>
+                            </div>
+                            ${partidosBannerHTML}
+                        </div>
+                    </div>
                 </div>
-                ${partidosBannerHTML}
-              </div>
+                <div class="container banner-info d-block d-sm-none p-0">
+                    <h1 class="exo-style">${equipo.team}</h1>
+                    <span class="exo">${equipo.ID} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
+                    <div class="region">
+                        <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}" class="flag">
+                        <span class="ms-2"> ${equipo.region}</span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="container banner-info d-block d-sm-none p-0">
-            <h1 class="exo-style">${equipo.team}</h1>
-            <span class="exo">${equipo.ID} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
-            <div class="region">
-              <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}" class="flag">
-              <span class="ms-2"> ${equipo.region}</span>
+            <div class="container-fluid bg-cham d-block d-md-none">
+                <div class="container record-mobile bbt">
+                    ${partidosBannerHTML}
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="container-fluid bg-cham d-block d-md-none">
-    <div class="container record-mobile bbt">
-     ${partidosBannerHTML}
-  </div>
-  </div>
-      `;
-      document.getElementById(containerId).innerHTML = bannerHTML;
+        `;
+        document.getElementById(containerId).innerHTML = bannerHTML;
     }
 
 
     function renderRoster(equipo, containerId) {
-      let rosterHTML = '<h2>ROSTER DEL EQUIPO</h2><div class="row">';
-      equipo.jugadores.forEach(jugador => {
-        rosterHTML += `
-          <div class="col-md-6 col-lg-3 col-xl-2">
-            <div class="card-round-roster">
-              <div class="card-round-team">
-                <a href="#"> <img src="/assets/avatars/${jugador.avatar}.webp" alt="${jugador.nickname}" class="img-fluid">
-                </a>
-              </div>
-              <div class="card-round-title">
-                <h2>${truncateString(jugador.nickname, 15)}</h2>
-                <span>${jugador.ID}</span>
-              </div>
-              <div class="card-back">
-                <div class="card-color-left ${pageID === '7Z' ? 'S7Z' : pageID}"></div>
-                <div class="card-color-right bg-cham"></div>
-                <div class="card-color-logo">
-                  <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+        let rosterHTML = '<h2>ROSTER DEL EQUIPO</h2><div class="row">';
+        equipo.jugadores.forEach(jugador => {
+            rosterHTML += `
+                <div class="col-md-6 col-lg-3 col-xl-2">
+                    <div class="card-round-roster">
+                        <div class="card-round-team">
+                            <a href="#"> <img src="/assets/avatars/${jugador.avatar}.webp" alt="${jugador.nickname}" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="card-round-title">
+                            <h2>${truncateString(jugador.nickname, 15)}</h2>
+                            <span>${jugador.ID}</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-color-left ${pageID === '7Z' ? 'S7Z' : pageID}"></div>
+                            <div class="card-color-right bg-cham"></div>
+                            <div class="card-color-logo">
+                                <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        `;
-      });
-      rosterHTML += '</div>';
-      // Obtén el elemento container dentro de equipo-perfil-roster
-      const rosterContainer = document.querySelector(`#${containerId} .container`);
-      if (rosterContainer) {
-        rosterContainer.innerHTML = rosterHTML;
-      } else {
-        console.error(`No se encontró el contenedor con la clase 'container' dentro de #${containerId}`);
-        document.getElementById(containerId).innerHTML = rosterHTML; // Fallback si no se encuentra el container
-      }
-    }
-
-    function renderMatchInfo(equipo, containerId) {
-      const teamTag = equipo.tag;
-      let partidosHTML = '<div class="container"><h2>CALENDARIO</h2><div class="row">';
-
-      Promise.all([
-        fetch('/assets/partidos/pnorte.json').then(response => response.json()),
-        fetch('/assets/partidos/psur.json').then(response => response.json()),
-        fetch('/assets/partidos/cruces.json').then(response => response.json())
-      ])
-      .then(allData => {
-        allData.forEach(data => {
-          if (data && data.length > 0 && data[0].rondas) {
-            data[0].rondas.forEach(ronda => {
-              if (ronda.partidos && ronda.partidos.length > 0) {
-                ronda.partidos.forEach(partido => {
-                  if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
-                       const equipo1T = truncateString(partido.equipo1, 10);
-                    const equipo2T = truncateString(partido.equipo2, 10);
-                    partidosHTML += `
-                      <div class="col-12 col-md-6 col-lg-6 col-xl-4">
-                        ${partido.equipo2 === "DES" ? `
-                          <div class="bracket-round-list-zzz">
-                            <div class="card-round-promo">
-                              <h3>DESCANSO</h3>
-                            </div>
-                            <div class="bracket-round-team">
-                              <a href="/teams/${partido.equipo1}">
-                                <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                              </a>
-                            </div>
-                            <div class="card-round-promo-left">
-                              <span>${ronda.ronda}</span>
-                            </div>
-                            <div class="card-round-promo-right">
-                              <span>${ronda.fecha}</span>
-                            </div>
-                            <div class="card-back">
-                              <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
-                              <div class="card-color-right bg-cham"></div>
-                            </div>
-                          </div>
-                        ` : `
-                          <div class="bracket-round-list">
-                            <div class="bracket-round-team">
-                              <a href="/teams/${partido.tag1}">
-                                <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                              </a>
-                            </div>
-                            <div class="round-titles">
-                              <div class="card-round-promo left">
-                                <h6>${equipo1T}</h6>
-                              </div>
-                              <div class="card-round-promo mx-2">
-                                <span>${ronda.ronda}</span>
-                                <h6>${partido.resultado}</h6>
-                                <span>${ronda.fecha}</span>
-                              </div>
-                              <div class="card-round-promo right">
-                                <h6>${equipo2T}</h6>
-                              </div>
-                            </div>
-                            <div class="bracket-round-team-right">
-                              <a href="/teams/${partido.tag2}">
-                                <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
-                              </a>
-                            </div>
-                            <div class="card-back">
-                              <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
-                              <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
-                            </div>
-                          </div>
-                        `}
-                      </div>
-                    `;
-                  }
-                });
-              }
-            });
-          }
+            `;
         });
-        partidosHTML += '</div></div>'; 
-        document.getElementById(containerId).innerHTML = partidosHTML;
-      })
-      .catch(error => {
-        console.error('Error al cargar los archivos de partidos:', error);
-        document.getElementById(containerId).innerText = 'Error al cargar la información de los partidos.';
-      });
+        rosterHTML += '</div>';
+        const rosterContainer = document.querySelector(`#${containerId} .container`);
+        if (rosterContainer) {
+            rosterContainer.innerHTML = rosterHTML;
+        } else {
+            console.error(`No se encontró el contenedor con la clase 'container' dentro de #${containerId}`);
+            document.getElementById(containerId).innerHTML = rosterHTML; // Fallback si no se encuentra el container
+        }
     }
-  
+
+   
+    function renderMatchInfo(equipo, containerId, roundsDatesFromScript) {
+        const teamTag = equipo.tag;
+        let partidosHTML = '<div class="container"><h2>CALENDARIO</h2><div class="row">';
+
+        // Crear un mapa para buscar las fechas de las rondas rápidamente
+        const roundDatesMap = new Map();
+        roundsDatesFromScript.forEach(r => {
+            const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
+            roundDatesMap.set(r.ronda, fechaStr);
+        });
+
+        Promise.all([
+            fetch('/assets/partidos/pnorte.json').then(response => response.json()),
+            fetch('/assets/partidos/psur.json').then(response => response.json()),
+            fetch('/assets/partidos/cruces.json').then(response => response.json())
+        ])
+        .then(allData => {
+            // Recopilar todos los partidos relevantes y sus rondas
+            const allRelevantMatches = [];
+
+            allData.forEach(data => {
+                if (data && data.length > 0 && data[0].rondas) {
+                    data[0].rondas.forEach(ronda => {
+                        if (ronda.partidos && ronda.partidos.length > 0) {
+                            ronda.partidos.forEach(partido => {
+                                // Solo incluir partidos si el equipo actual participa
+                                if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
+                                    // Añadir el nombre de la ronda al objeto partido para futuras referencias
+                                    allRelevantMatches.push({
+                                        ...partido,
+                                        rondaNombre: ronda.ronda // Almacenamos el nombre de la ronda del JSON de partidos
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+
+            // Ordenar los partidos por el orden de las rondas definidas en roundSpecificData
+            // y luego por alguna otra métrica si es necesario (ej. orden dentro de la ronda)
+            allRelevantMatches.sort((a, b) => {
+                const indexA = roundsDatesFromScript.findIndex(r => r.ronda === a.rondaNombre);
+                const indexB = roundsDatesFromScript.findIndex(r => r.ronda === b.rondaNombre);
+                return indexA - indexB;
+            });
+
+
+            if (allRelevantMatches.length > 0) {
+                allRelevantMatches.forEach(partido => {
+                    // Obtener la fecha de la ronda desde roundDatesMap
+                    const rondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
+                    const equipo1T = truncateString(partido.equipo1, 10);
+                    const equipo2T = truncateString(partido.equipo2, 10);
+
+                    partidosHTML += `
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+                            ${partido.equipo2 === "DES" ? `
+                                <div class="bracket-round-list-zzz">
+                                    <div class="card-round-promo">
+                                        <h3>DESCANSO</h3>
+                                    </div>
+                                    <div class="bracket-round-team">
+                                        <a href="/teams/${partido.equipo1}">
+                                            <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="card-round-promo-left">
+                                        <span>${partido.rondaNombre}</span>
+                                    </div>
+                                    <div class="card-round-promo-right">
+                                        <span>${rondaFecha}</span>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
+                                        <div class="card-color-right bg-cham"></div>
+                                    </div>
+                                </div>
+                            ` : `
+                                <div class="bracket-round-list">
+                                    <div class="bracket-round-team">
+                                        <a href="/teams/${partido.tag1}">
+                                            <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="round-titles">
+                                        <div class="card-round-promo left">
+                                            <h6>${equipo1T}</h6>
+                                        </div>
+                                        <div class="card-round-promo mx-2">
+                                            <span>${partido.rondaNombre}</span>
+                                            <h6>${partido.resultado}</h6>
+                                            <span>${rondaFecha}</span>
+                                        </div>
+                                        <div class="card-round-promo right">
+                                            <h6>${equipo2T}</h6>
+                                        </div>
+                                    </div>
+                                    <div class="bracket-round-team-right">
+                                        <a href="/teams/${partido.tag2}">
+                                            <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
+                                        <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
+                                    </div>
+                                </div>
+                            `}
+                        </div>
+                    `;
+                });
+            } else {
+                partidosHTML += '<p>No se encontraron partidos para este equipo en las rondas definidas.</p>';
+            }
+
+            partidosHTML += '</div></div>';
+            document.getElementById(containerId).innerHTML = partidosHTML;
+        })
+        .catch(error => {
+            console.error('Error al cargar los archivos de partidos:', error);
+            document.getElementById(containerId).innerText = 'Error al cargar la información de los partidos.';
+        });
+    }
 
     function truncateString(str, maxLength) {
-      if (str.length > maxLength) {
-        return str.substring(0, maxLength) + '...';
-      }
-      return str;
+        if (str.length > maxLength) {
+            return str.substring(0, maxLength) + '...';
+        }
+        return str;
     }
-  });
+});
 </script>
   
   

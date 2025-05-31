@@ -1,16 +1,16 @@
 [
     {
-        "tag": "QUARTZ",
-        "team": "DFS QUARTZ",
+        "tag": "SAPPHIR",
+        "team": "DFS SAPPHIRE",
         "org": "",
         "activo": true,
-        "capitan": "CROSS",
+        "capitan": "TREVOR",
         "region": "LAN",
         "teamNombreAnterior": "",
-        "teamNuevoNombre": "DFS QUARTZ",
+        "teamNuevoNombre": "DFS SAPPHIRE",
         "seguro": false,
-        "link": "/equipos/dfs-quartz",
-        "grupo": "NORTE",
+        "link": "/equipos/dfs-sapphire",
+        "grupo": "SIN ASIGNAR",
         "partidos": {
             "M1": "0",
             "M2": "0",
@@ -27,39 +27,39 @@
         },
         "jugadores": [
             {
-                "nickname": "DFs・Cros",
-                "ID": "7TE1K80",
+                "nickname": "DFs・Trevor",
+                "ID": "6NC11M4",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・DoPa",
-                "ID": "HHX3CAP",
+                "nickname": "DFs・arepa",
+                "ID": "HM0FQ75",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・HaKuna",
-                "ID": "CM30NA3",
+                "nickname": "DFs・Mudkip",
+                "ID": "17ANET6",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・Sísifo",
-                "ID": "4AY0P1E",
+                "nickname": "DFs・TheBaez",
+                "ID": "XYGHX92",
                 "avatar": "male1"
             },
             {
-                "nickname": "La_Lujuria",
-                "ID": "G7YF5FG",
+                "nickname": "DFs・OrcoBC",
+                "ID": "XRTEN8E",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・Poshiヅ",
-                "ID": "H984G0F",
+                "nickname": "Squid*Ink",
+                "ID": "NH0PRCL",
                 "avatar": "male1"
             },
             {
-                "nickname": "DFs・RaDahN",
-                "ID": "P1MM782",
-                "avatar": "male1"
+                "nickname": "ॢDFs神Marツ",
+                "ID": "GCNQ65E",
+                "avatar": "female1"
             }
         ]
     }

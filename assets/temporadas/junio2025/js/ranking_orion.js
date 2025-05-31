@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const grupoNorteDiv = document.getElementById('grupoNorte');
   const equiposDataNorte = [];
   const teamFilesNorte = [
-    'assets/temporadas/junio2025/orion/aep.json',
-    'assets/temporadas/junio2025/orion/amt.json',
-    'assets/temporadas/junio2025/orion/lb.json',
-    'assets/temporadas/junio2025/orion/magma.json',
-    'assets/temporadas/junio2025/orion/obs.json',
-    'assets/temporadas/junio2025/orion/pkr.json',
-    'assets/temporadas/junio2025/orion/pl.json',
-    'assets/temporadas/junio2025/orion/quartz.json',
-    'assets/temporadas/junio2025/orion/sapphire.json',
-    'assets/temporadas/junio2025/orion/stmn.json',
-    'assets/temporadas/junio2025/orion/tae.json',
-    'assets/temporadas/junio2025/orion/tut.json',
-    'assets/temporadas/junio2025/orion/tutw.json'
+    'assets/temporadas/junio2025/aep.json',
+    'assets/temporadas/junio2025/amt.json',
+    'assets/temporadas/junio2025/lb.json',
+    'assets/temporadas/junio2025/magma.json',
+    'assets/temporadas/junio2025/obs.json',
+    'assets/temporadas/junio2025/pkr.json',
+    'assets/temporadas/junio2025/pl.json',
+    'assets/temporadas/junio2025/quartz.json',
+    'assets/temporadas/junio2025/sapphire.json',
+    'assets/temporadas/junio2025/stmn.json',
+    'assets/temporadas/junio2025/tae.json',
+    'assets/temporadas/junio2025/tut.json',
+    'assets/temporadas/junio2025/tutw.json'
 
   ];
 

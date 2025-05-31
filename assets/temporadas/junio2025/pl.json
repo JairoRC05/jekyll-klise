@@ -11,7 +11,7 @@
         "seguro": true,
         "link": "/equipos/house-of-ghost--prestaciones-de-ley",
         "grupo": "NORTE",
-         "partidos": {
+           "partidos": {
             "M1": "0",
             "M2": "0",
             "M3": "0",
@@ -49,7 +49,7 @@
                 "teamTag": "PL"
             },
             {
-                "nickname": "PL • Payan",
+                "nickname": "PL • Benny",
                 "ID": "HXNG3M",
                 "avatar": "male1",
                 "teamTag": "PL"

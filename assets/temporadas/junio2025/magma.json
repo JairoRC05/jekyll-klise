@@ -1,15 +1,15 @@
 [
     {
-        "tag": "AEP",
-        "team": "ALEPH RAGNAROK",
+        "tag": "MAGMA",
+        "team": "TEAM MAGMA",
         "org": "",
         "activo": true,
-        "capitan": "JOHAN",
+        "capitan": "BOWLETH",
         "region": "LAN",
         "teamNombreAnterior": "",
-        "teamNuevoNombre": "ALEPH RAGNAROK",
+        "teamNuevoNombre": "TEAM MAGMA",
         "seguro": false,
-        "link": "/equipos/aleph-ragnarok",
+        "link": "/equipos/villanos-esports--team-magma",
         "grupo": "NORTE",
         "partidos": {
             "M1": "0",
@@ -27,40 +27,36 @@
         },
         "jugadores": [
             {
-                "nickname": "COMEMANGO",
-                "ID": "F6KNR2G",
+                "nickname": "EVL.Bowleth.",
+                "ID": "H34374A",
                 "avatar": "male1"
             },
             {
-                "nickname": "ЯK・Widder亗",
-                "ID": "AK5XG4N",
+                "nickname": "天竜•Trenin",
+                "ID": "NX7T7A5",
                 "avatar": "male1"
             },
             {
-                "nickname": "~ Rygar ~",
-                "ID": "PF6688A",
+                "nickname": "EVL•Dop",
+                "ID": "LQ0R79Q",
                 "avatar": "male1"
             },
             {
-                "nickname": "Jøhanfr38",
-                "ID": "CK7KNQ7",
+                "nickname": "天竜•Areth",
+                "ID": "RNEQNX3",
                 "avatar": "male1"
             },
             {
-                "nickname": "ØdinTV93",
-                "ID": "CA018FT",
+                "nickname": "KingAttacus",
+                "ID": "81HK4NM",
                 "avatar": "male1"
             },
             {
-                "nickname": "FloppaTrash",
-                "ID": "NP03QT",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Dairos",
-                "ID": "H0R6MF8",
+                "nickname": "天竜-Banjo",
+                "ID": "HT14T4F",
                 "avatar": "male1"
             }
-        ]
+        ],
+        "posicionDesempate": false
     }
 ]

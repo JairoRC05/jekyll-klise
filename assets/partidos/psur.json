@@ -20,7 +20,7 @@
           "match_number": 1
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "HG SALARIO MINIMO",
           "tag2": "SM",
@@ -100,7 +100,7 @@
           "match_number": 1
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "FROSTBITE",
           "tag2": "FTB",
@@ -170,7 +170,7 @@
         {
           "equipo1": "RNTES",
           "tag1": "RNTES",
-          "tag1": "AMETHYST",
+          "equipo2": "DFS AMETHYST",
           "tag2": "AMET",
           "resultado": "VS",
           "stream": false,
@@ -262,7 +262,7 @@
         {
           "equipo1": "DINASTY",
           "tag1": "DINASTY",
-          "tag1": "AMETHYST",
+          "equipo2": "DFS AMETHYST",
           "tag2": "AMET",
           "resultado": "VS",
           "stream": false,
@@ -432,7 +432,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "SPACE VAL",
           "tag2": "SPACE",
@@ -512,7 +512,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "IM ZAFIRO",
           "tag2": "ZAFIRO",
@@ -592,7 +592,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "DFS PLATINUM",
           "tag2": "PLATINO",
@@ -672,7 +672,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "TEAM ROCKET",
           "tag2": "TRR",
@@ -752,7 +752,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "PHOBIUS AURA",
           "tag2": "PØĄ",
@@ -832,7 +832,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "CUMBIA DRAGÓN",
           "tag2": "CD",
@@ -912,7 +912,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "DRAKAR GAMING",
           "tag2": "DG",
@@ -992,7 +992,7 @@
           "match_number": 2
         },
         {
-          "equipo1": "AMETHYST",
+          "equipo1": "DFS AMETHYST",
           "tag1": "AMET",
           "equipo2": "PLAGA VILLANOS",
           "tag2": "PLAGA",

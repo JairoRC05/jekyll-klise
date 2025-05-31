@@ -6,10 +6,10 @@ let currentStreamMatch = null; // Variable para el partido actualmente en el str
 // Función para cargar los datos de los partidos
 async function loadMatchData() {
     try {
-        const responseNorte = await fetch('/assets/temporadas/junio2025/partidos/pnorte.json');
+        const responseNorte = await fetch('/assets/partidos/pnorte.json');
         const dataNorte = await responseNorte.json();
 
-        const responseSur = await fetch('/assets/temporadas/junio2025/partidos/psur.json');
+        const responseSur = await fetch('/assets/partidos/psur.json');
         const dataSur = await responseSur.json();
 
         const rondasNorte = dataNorte[0]?.rondas || [];
@@ -98,8 +98,8 @@ function updateStreamMatchDisplay(match) {
         return;
     }
 
-    const logo1Path = match.tag1 ? `/assets/logos/${match.tag1}.png` : 'placeholder.png';
-    const logo2Path = match.tag2 ? `/assets/logos/${match.tag2}.png` : 'placeholder.png';
+    const logo1Path = match.tag1 ? `/assets/logos/${match.tag1}.webp` : 'placeholder.png';
+    const logo2Path = match.tag2 ? `/assets/logos/${match.tag2}.webp` : 'placeholder.png';
 
     $('#stream-local-logo').attr('src', logo1Path);
     $('#stream-local-name').text(match.equipo1 || 'Equipo Local');
@@ -157,8 +157,8 @@ function updateRoundMatchesContainer(excludeMatchIndex = -1) {
     }
 
     currentRoundMatches.forEach((match, index) => {
-        const logo1Path = match.tag1 ? `/assets/logos/${match.tag1}.png` : 'placeholder.png';
-        const logo2Path = match.tag2 ? `/assets/logos/${match.tag2}.png` : 'placeholder.png';
+        const logo1Path = match.tag1 ? `/assets/logos/${match.tag1}.webp` : 'placeholder.png';
+        const logo2Path = match.tag2 ? `/assets/logos/${match.tag2}.webp` : 'placeholder.png';
 
         const matchHtml = `
             <div class="round match-mini-card">

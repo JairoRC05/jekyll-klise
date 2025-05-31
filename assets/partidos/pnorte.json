@@ -8,9 +8,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -20,9 +20,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -32,9 +32,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -44,9 +44,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -56,9 +56,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -68,9 +68,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "TUT",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -88,9 +88,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "AEP",
+            "equipo2": "RAGNAROK ALEPH",
             "tag2": "AEP",
             "resultado": "VS",
             "stream": false,
@@ -100,9 +100,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -112,9 +112,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -124,9 +124,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -136,9 +136,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -148,9 +148,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "TAE",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -168,9 +168,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "TUTW",
+            "equipo2": "TUT WARRRIOS",
             "tag2": "TUTW",
             "resultado": "VS",
             "stream": false,
@@ -180,9 +180,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -192,9 +192,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -204,9 +204,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -216,9 +216,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "PL",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -228,9 +228,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "TUT",
+            "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -248,9 +248,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "LB",
+            "equipo2": "LAST BREATH",
             "tag2": "LB",
             "resultado": "VS",
             "stream": false,
@@ -260,9 +260,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "TUTW",
+            "equipo2": "TUT WARRRIOS",
             "tag2": "TUTW",
             "resultado": "VS",
             "stream": false,
@@ -272,9 +272,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -284,9 +284,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -296,9 +296,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "AMT",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -308,9 +308,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "TUT",
+            "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -328,9 +328,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "MAGMA",
+            "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
             "resultado": "VS",
             "stream": false,
@@ -340,9 +340,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "LB",
+            "equipo2": "LAST BREATH",
             "tag2": "LB",
             "resultado": "VS",
             "stream": false,
@@ -352,9 +352,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -364,9 +364,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "QUARTZ",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -376,9 +376,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "TUT",
+            "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -388,9 +388,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "TAE",
+            "equipo1": "TEAM AETHER",
             "tag1": "TAE",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -408,9 +408,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "PKR",
+            "equipo2": "POKERANGERS",
             "tag2": "PKR",
             "resultado": "VS",
             "stream": false,
@@ -420,9 +420,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "MAGMA",
+            "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
             "resultado": "VS",
             "stream": false,
@@ -432,9 +432,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "LB",
+            "equipo2": "LAST BREATH",
             "tag2": "LB",
             "resultado": "VS",
             "stream": false,
@@ -444,9 +444,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "SAPPHIRE",
-            "tag1": "SAPPHIRE",
-            "equipo2": "OBS",
+            "equipo1": "DFS SAPPHIRE",
+            "tag1": "SAPPHIR",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -456,9 +456,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "TUT",
+            "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -468,9 +468,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "TAE",
+            "equipo1": "TEAM AETHER",
             "tag1": "TAE",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -488,10 +488,10 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -500,9 +500,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "PKR",
+            "equipo2": "POKERANGERS",
             "tag2": "PKR",
             "resultado": "VS",
             "stream": false,
@@ -512,9 +512,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "MAGMA",
+            "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
             "resultado": "VS",
             "stream": false,
@@ -524,9 +524,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "TUT",
+            "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -536,9 +536,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "TAE",
+            "equipo1": "TEAM AETHER",
             "tag1": "TAE",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -548,9 +548,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "PL",
+            "equipo1": "PRESTACIONES DE LEY HG",
             "tag1": "PL",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -568,9 +568,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -580,10 +580,10 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -592,9 +592,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "PKR",
+            "equipo2": "POKERANGERS",
             "tag2": "PKR",
             "resultado": "VS",
             "stream": false,
@@ -604,9 +604,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "MAGMA",
+            "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
             "resultado": "VS",
             "stream": false,
@@ -616,9 +616,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "TAE",
+            "equipo1": "TEAM AETHER",
             "tag1": "TAE",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -628,9 +628,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "PL",
+            "equipo1": "PRESTACIONES DE LEY HG",
             "tag1": "PL",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -648,9 +648,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -660,9 +660,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -672,10 +672,10 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -684,9 +684,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "PKR",
+            "equipo2": "POKERANGERS",
             "tag2": "PKR",
             "resultado": "VS",
             "stream": false,
@@ -696,9 +696,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "PL",
+            "equipo1": "PRESTACIONES DE LEY HG",
             "tag1": "PL",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -708,9 +708,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "AMT",
+            "equipo1": "IM AMATISTA",
             "tag1": "AMT",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -728,9 +728,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -740,9 +740,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -752,9 +752,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -764,10 +764,10 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -776,9 +776,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "PKR",
+            "equipo2": "POKERANGERS",
             "tag2": "PKR",
             "resultado": "VS",
             "stream": false,
@@ -788,9 +788,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "AMT",
+            "equipo1": "IM AMATISTA",
             "tag1": "AMT",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -808,9 +808,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -820,9 +820,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -832,9 +832,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -844,9 +844,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -856,10 +856,10 @@
             "match_number": 4
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -870,7 +870,7 @@
           {
             "equipo1": "QUARTZ",
             "tag1": "QUARTZ",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -888,9 +888,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -900,9 +900,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -912,9 +912,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -924,9 +924,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -936,9 +936,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,
@@ -948,10 +948,10 @@
             "match_number": 5
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "SAPPHIRE",
-            "tag2": "SAPPHIRE",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
             "resultado": "VS",
             "stream": false,
             "hora": null,
@@ -968,9 +968,9 @@
         "hora": "",
         "partidos": [
           {
-            "equipo1": "STMN",
+            "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "OBS",
+            "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
             "resultado": "VS",
             "stream": false,
@@ -980,9 +980,9 @@
             "match_number": 1
           },
           {
-            "equipo1": "AEP",
+            "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "QUARTZ",
+            "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
             "resultado": "VS",
             "stream": false,
@@ -992,9 +992,9 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUTW",
+            "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
-            "equipo2": "AMT",
+            "equipo2": "IM AMATISTA",
             "tag2": "AMT",
             "resultado": "VS",
             "stream": false,
@@ -1004,9 +1004,9 @@
             "match_number": 3
           },
           {
-            "equipo1": "LB",
+            "equipo1": "LAST BREATH",
             "tag1": "LB",
-            "equipo2": "PL",
+            "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
             "resultado": "VS",
             "stream": false,
@@ -1016,9 +1016,9 @@
             "match_number": 4
           },
           {
-            "equipo1": "MAGMA",
+            "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
-            "equipo2": "TAE",
+            "equipo2": "TEAM AETHER",
             "tag2": "TAE",
             "resultado": "VS",
             "stream": false,
@@ -1028,9 +1028,9 @@
             "match_number": 5
           },
           {
-            "equipo1": "PKR",
+            "equipo1": "POKERANGERS",
             "tag1": "PKR",
-            "equipo2": "TUT",
+            "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
             "resultado": "VS",
             "stream": false,

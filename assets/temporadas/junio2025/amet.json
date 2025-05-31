@@ -9,7 +9,7 @@
         "teamNombreAnterior": "",
         "teamNuevoNombre": "DFS AMETHYST",
         "seguro": false,
-        "link": "/equipos/dfs-amethyst",
+        "link": "/equipos/dragon-flies-gaming--amethyst",
         "grupo": "SUR",
         "partidos": {
             "M1": "0",
@@ -61,6 +61,7 @@
                 "ID": "2M6N77K",
                 "avatar": "female1"
             }
-        ]
+        ],
+        "posicionDesempate": false
     }
 ]

@@ -1,16 +1,16 @@
 [
     {
-        "tag": "MAGMA",
-        "team": "TEAM MAGMA",
+        "tag": "TRR",
+        "team": "TEAM ROCKET",
         "org": "",
         "activo": true,
-        "capitan": "BOWLETH",
+        "capitan": "WALO",
         "region": "LAN",
         "teamNombreAnterior": "",
-        "teamNuevoNombre": "TEAM MAGMA",
+        "teamNuevoNombre": "TEAM ROCKET",
         "seguro": false,
-        "link": "/equipos/team-magma",
-        "grupo": "NORTE",
+        "link": "/equipos/villanos-esports--team-rocket",
+        "grupo": "SUR",
         "partidos": {
             "M1": "0",
             "M2": "0",
@@ -27,35 +27,36 @@
         },
         "jugadores": [
             {
-                "nickname": "EVL.Bowleth.",
-                "ID": "H34374A",
+                "nickname": "虹・Walo光",
+                "ID": "4MF2M0G",
                 "avatar": "male1"
             },
             {
-                "nickname": "天竜•Trenin",
-                "ID": "NX7T7A5",
+                "nickname": "虹・Eř0X悪夢",
+                "ID": "H8G17CX",
                 "avatar": "male1"
             },
             {
-                "nickname": "EVL•Dop",
-                "ID": "LQ0R79Q",
+                "nickname": "虹・Nebulaる",
+                "ID": "19CHRG4",
+                "avatar": "female1"
+            },
+            {
+                "nickname": "虹・Hakariる",
+                "ID": "41NREGX",
                 "avatar": "male1"
             },
             {
-                "nickname": "天竜•Areth",
-                "ID": "RNEQNX3",
+                "nickname": "虹・WillyAHR",
+                "ID": "C20KFAQ",
                 "avatar": "male1"
             },
             {
-                "nickname": "KingAttacus",
-                "ID": "81HK4NM",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "天竜-Banjo",
-                "ID": "HT14T4F",
+                "nickname": "DômDâ°ê",
+                "ID": "9LGQXQ2",
                 "avatar": "male1"
             }
-        ]
+        ],
+        "posicionDesempate": false
     }
 ]

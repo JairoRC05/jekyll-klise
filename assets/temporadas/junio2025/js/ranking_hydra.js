@@ -4,18 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const grupoSurDiv = document.getElementById('grupoSur');
   const equiposDataSur = [];
   const teamFilesSur = [
-    '/assets/temporadas/junio2025/hydra/amet.json',
-    '/assets/temporadas/junio2025/hydra/cd.json',
-    '/assets/temporadas/junio2025/hydra/dg.json',
-    '/assets/temporadas/junio2025/hydra/dinasty.json',
-    '/assets/temporadas/junio2025/hydra/ftb.json',
-    '/assets/temporadas/junio2025/hydra/plaga.json',
-    '/assets/temporadas/junio2025/hydra/platino.json',
-    '/assets/temporadas/junio2025/hydra/poa.json',
-    '/assets/temporadas/junio2025/hydra/sm.json',
-    '/assets/temporadas/junio2025/hydra/space.json',
-    '/assets/temporadas/junio2025/hydra/trr.json',
-    '/assets/temporadas/junio2025/hydra/zafiro.json'
+    '/assets/temporadas/junio2025/amet.json',
+    '/assets/temporadas/junio2025/cd.json',
+    '/assets/temporadas/junio2025/dg.json',
+    '/assets/temporadas/junio2025/dinasty.json',
+    '/assets/temporadas/junio2025/ftb.json',
+    '/assets/temporadas/junio2025/plaga.json',
+    '/assets/temporadas/junio2025/platino.json',
+    '/assets/temporadas/junio2025/poa.json',
+    '/assets/temporadas/junio2025/sm.json',
+    '/assets/temporadas/junio2025/space.json',
+    '/assets/temporadas/junio2025/trr.json',
+    '/assets/temporadas/junio2025/zafiro.json'
   ];
 
   const fetchPromisesSur = teamFilesSur.map(file =>

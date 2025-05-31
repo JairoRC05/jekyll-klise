@@ -10,20 +10,20 @@
         "teamNuevoNombre": "DINASTY",
         "seguro": true,
         "link": "/equipos/dinasty",
-        "grupo": "SUR",
+        "grupo": "NORTE",
         "partidos": {
-            "M1": "0",
-            "M2": "0",
-            "M3": "0",
-            "M4": "0",
-            "M5": "0",
-            "M6": "0",
-            "M7": "0",
-            "M8": "0",
-            "M9": "0",
-            "M10": "0",
-            "M11": "0",
-            "M12": "0"
+            "M1": "1",
+            "M2": "1",
+            "M3": "2",
+            "M4": "3",
+            "M5": "3",
+            "M6": "3",
+            "M7": "3",
+            "M8": "2",
+            "M9": "3",
+            "M10": "3",
+            "M11": "3",
+            "M12": "2"
         },
         "jugadores": [
             {
@@ -67,6 +67,11 @@
                 "ID": "CY9PT5",
                 "avatar": "male1",
                 "teamTag": "DINASTY"
+            },
+            {
+                "nickname": "RNT・TVPablo",
+                "ID": "843A4E0",
+                "avatar": "male1"
             }
         ],
         "posicionDesempate": false

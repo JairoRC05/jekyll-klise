@@ -9,7 +9,7 @@
         "teamNombreAnterior": "",
         "teamNuevoNombre": "DFS PLATINUM",
         "seguro": false,
-        "link": "/equipos/dfs-platinum",
+        "link": "/equipos/dragon-flies-gaming--platinum",
         "grupo": "SUR",
         "partidos": {
             "M1": "0",
@@ -66,6 +66,7 @@
                 "ID": "YP6FYTA",
                 "avatar": "male1"
             }
-        ]
+        ],
+        "posicionDesempate": false
     }
 ]
