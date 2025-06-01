@@ -172,6 +172,12 @@ function generarContenidoRonda(rondaData) {
                 if (numeroRonda % 2 === 0 && partido.equipo2 !== "DES") {
                     [partidoModificado.equipo1, partidoModificado.equipo2] = [partidoModificado.equipo2, partidoModificado.equipo1];
                     [partidoModificado.tag1, partidoModificado.tag2] = [partidoModificado.tag2, partidoModificado.tag1];
+
+                    // Aquí se invierte el resultado
+                    if (partidoModificado.resultado && partidoModificado.resultado.includes('-')) {
+                        const [score1, score2] = partidoModificado.resultado.split('-');
+                        partidoModificado.resultado = `${score2}-${score1}`;
+                    }
                 }
                 return `
                   <div class="col-12 col-md-6 col-lg-12">

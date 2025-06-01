@@ -24,8 +24,9 @@ title: RONDAS HYDRA | LIGA INDIGO
 
   <nav class="navbar top sticky-top bg-cham">
     <div class="container d-flex justify-content-between align-items-center text-white ">
-      <a class="navbar-brand" href="#">
-        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+       <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO SPC" style="width: 40px; height: 40px;">
+        <span class="indigo">LIGA INDIGO SPC</span>
       </a>
 
       <div class="d-none d-md-block text-white">
@@ -60,13 +61,13 @@ title: RONDAS HYDRA | LIGA INDIGO
 
 
 
- <div class="container-fluid banner bg-cham d-none d-lg-block">
+ <div class="container-fluid banner bg-cham">
     <div class="container bannerPromo">
       <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
         <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
       </a>
       <div class="bannerText">
-        <h1 class="indigo">LIGA INDIGO</h1>
+        <h1 class="indigo">RONDAS</h1>
         <span class="indigo">HYDRA</span>
       </div>
     </div>
@@ -76,17 +77,17 @@ title: RONDAS HYDRA | LIGA INDIGO
   
 
   
+  
+  
+  <div class="container mb-2">
 
-  <div class="container mt-5">
-
-    <div class="section-title">
+    <div class="section-title d-none d-md-block">
         <h1 class="exo-style-black">RONDAS</h1>
         <span class="exo"></span>
-            </div>
-    <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
-      </ul>
-    <div id="rondas-league-container">
-      </div>
+    </div>
+
+
+    <div id="rondas-league-container" ></div>
 
   </div>
 
@@ -94,9 +95,9 @@ title: RONDAS HYDRA | LIGA INDIGO
 
 
 
-  <div class="container-fluid my-5">
+  <div class="container-fluid my-5 d-none d-md-none">
     <div class="container teams-table">
-      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      <h1 class="teams-title text-center">SPONSORS</h1>
       {% include sponsors.html %}
     </div>
   </div>
@@ -105,11 +106,16 @@ title: RONDAS HYDRA | LIGA INDIGO
 
 
 
+<div class="container-fluid bg-cham">
+  <div class="container">
+    <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist"></ul>
+  </div>
+</div>
 
 
 
  <div class="d-block d-md-none ">
-    <nav class="navbar fixed-bottom navbar-light bg-cham">
+    <nav class="navbar navbar-light bg-cham ">
         <div class="container d-flex justify-content-center align-items-center">
           <div class="item-bar">  
           <a href="/liga-indigo-orion-ranking-junio2025" >
