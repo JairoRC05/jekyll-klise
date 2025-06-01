@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '/assets/temporadas/junio2025/plaga.json',
     '/assets/temporadas/junio2025/platino.json',
     '/assets/temporadas/junio2025/poa.json',
+    '/assets/temporadas/junio2025/rntes.json',
     '/assets/temporadas/junio2025/sm.json',
     '/assets/temporadas/junio2025/space.json',
     '/assets/temporadas/junio2025/trr.json',

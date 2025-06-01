@@ -1,0 +1,67 @@
+[
+    {
+        "tag": "RNTES",
+        "team": "RNT STARLIGHT",
+        "org": "",
+        "activo": true,
+        "capitan": "BAIKAL",
+        "region": "LAN",
+        "teamNombreAnterior": "",
+        "teamNuevoNombre": "RNT STARLIGHT",
+        "seguro": false,
+        "link": "/equipos/ranked-team--starlight",
+        "grupo": "SUR",
+        "partidos": {
+            "M1": "0",
+            "M2": "0",
+            "M3": "0",
+            "M4": "0",
+            "M5": "0",
+            "M6": "0",
+            "M7": "0",
+            "M8": "0",
+            "M9": "0",
+            "M10": "0",
+            "M11": "0",
+            "M12": "0"
+        },
+        "jugadores": [
+            {
+                "nickname": "Arlequin",
+                "ID": "19ANLLC",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "Valterius",
+                "ID": "3RLFAKL",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "BaikaL",
+                "ID": "FXP86H",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "teso24",
+                "ID": "NLE31M5",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "AKAZA",
+                "ID": "C6TMH18",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "PsychoX115",
+                "ID": "LCQCH3F",
+                "avatar": "male1"
+            },
+            {
+                "nickname": "RNTDiegoMP21",
+                "ID": "465CX1G",
+                "avatar": "male1"
+            }
+        ],
+        "posicionDesempate": false
+    }
+]
