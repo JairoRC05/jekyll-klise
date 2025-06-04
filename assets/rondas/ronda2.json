@@ -1,0 +1,306 @@
+{
+  "encuentros": [
+    {
+      "equipoLocal": "TUTW",
+      "equipoVisitante": "OBS",
+      "mvpsLocal": [
+        {
+          "nombre": "ČryptoX",
+          "equipo": "TUTW",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNT・Zulo銀",
+          "equipo": "TUTW",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "MeXa • Salie",
+          "equipo": "OBS",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・SoUriS",
+          "equipo": "OBS",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "TAE",
+      "equipoVisitante": "SAPPHIR",
+      "mvpsLocal": [
+        {
+          "nombre": "TheRaYMoNz",
+          "equipo": "TAE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "TheRaYMoNz",
+          "equipo": "TAE",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "DFs・Mudkip",
+          "equipo": "SAPPHIR",
+          "genero": "male1"
+        },
+        {
+          "nombre": "DFs・Mudkip",
+          "equipo": "SAPPHIR",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "STMN",
+      "equipoVisitante": "AEP",
+      "mvpsLocal": [
+        {
+          "nombre": "STMN • Frank",
+          "equipo": "STMN",
+          "genero": "male1"
+        },
+        {
+          "nombre": "STMN • Frank",
+          "equipo": "STMN",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "COMEMANGO",
+          "equipo": "AEP",
+          "genero": "male1"
+        },
+        {
+          "nombre": "COMEMANGO",
+          "equipo": "AEP",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "AMT",
+      "equipoVisitante": "MAGMA",
+      "mvpsLocal": [
+        {
+          "nombre": "MeXa・Cage",
+          "equipo": "AMT",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Cage",
+          "equipo": "AMT",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "EVL•Dop",
+          "equipo": "MAGMA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "天竜-Banjo",
+          "equipo": "MAGMA",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "SPACE",
+      "equipoVisitante": "SM",
+      "mvpsLocal": [
+        {
+          "nombre": "宙V・CLazo",
+          "equipo": "SPACE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "宙V・CLazo",
+          "equipo": "SPACE",
+          "genero": "male1"
+        },
+        {
+          "nombre": "宙V・CLazo",
+          "equipo": "SPACE",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "SuFurrito坐",
+          "equipo": "SM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SuFurrito坐",
+          "equipo": "SM",
+          "genero": "male1"
+        },
+        {
+          "nombre": "SuFurrito坐",
+          "equipo": "SM",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "DINASTY",
+      "equipoVisitante": "RNTES",
+      "mvpsLocal": [
+        {
+          "nombre": "龍・Kraft",
+          "equipo": "DINASTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Toro",
+          "equipo": "DINASTY",
+          "genero": "male1"
+        },
+        {
+          "nombre": "龍・Light光",
+          "equipo": "DINASTY",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "teso24",
+          "equipo": "RNTES",
+          "genero": "male1"
+        },
+        {
+          "nombre": "teso24",
+          "equipo": "RNTES",
+          "genero": "male1"
+        },
+        {
+          "nombre": "RNTDiegoMP21",
+          "equipo": "RNTES",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "FTB",
+      "equipoVisitante": "AMET",
+      "mvpsLocal": [
+        {
+          "nombre": "Tugfamon",
+          "equipo": "FTB",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Tugfamon",
+          "equipo": "FTB",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "DFs・Charbet",
+          "equipo": "AMET",
+          "genero": "female1"
+        },
+        {
+          "nombre": "DFs • Shüji",
+          "equipo": "AMET",
+          "genero": "female1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "PLATINO",
+      "equipoVisitante": "DG",
+      "mvpsLocal": [
+        {
+          "nombre": "DFs・Perron",
+          "equipo": "PLATINO",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ByNovAshTTV",
+          "equipo": "DG",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "PLAGA",
+      "equipoVisitante": "ZAFIRO",
+      "mvpsLocal": [
+        {
+          "nombre": "DønLux",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        },
+        {
+          "nombre": "DønLux",
+          "equipo": "PLAGA",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        },
+        {
+          "nombre": "MeXa・Masaru",
+          "equipo": "ZAFIRO",
+          "genero": "male1"
+        }
+      ]
+    },
+    {
+      "equipoLocal": "LB",
+      "equipoVisitante": "QUARTZ",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "CD",
+      "equipoVisitante": "TRR",
+      "mvpsLocal": [],
+      "mvpsVisitante": []
+    },
+    {
+      "equipoLocal": "PL",
+      "equipoVisitante": "PKR",
+      "mvpsLocal": [
+        {
+          "nombre": "PL • TNMortem",
+          "equipo": "PL",
+          "genero": "male1"
+        },
+        {
+          "nombre": "PL • Benny",
+          "equipo": "PL",
+          "genero": "male1"
+        }
+      ],
+      "mvpsVisitante": [
+        {
+          "nombre": "ErizaSpecwar",
+          "equipo": "PKR",
+          "genero": "male1"
+        },
+        {
+          "nombre": "Truenō¿",
+          "equipo": "PKR",
+          "genero": "male1"
+        }
+      ]
+    }
+  ]
+}
