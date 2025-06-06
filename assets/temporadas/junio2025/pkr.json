@@ -1,72 +1,72 @@
-[
+{
+  "tag": "PKR",
+  "team": "POKERANGERS",
+  "org": "",
+  "activo": true,
+  "capitan": "JFPRIME",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "POKERANGERS",
+  "seguro": true,
+  "link": "/equipos/pokerangers",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "2",
+    "M3": "3",
+    "M4": "R",
+    "M5": "2",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "D",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "PKR",
-        "team": "POKERANGERS",
-        "org": "",
-        "activo": true,
-        "capitan": "JFPRIME",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "POKERANGERS",
-        "seguro": false,
-        "link": "/equipos/pokerangers",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "3",
-            "M2": "2",
-            "M3": "3",
-            "M4": "0",
-            "M5": "0",
-            "M6": "0",
-            "M7": "0",
-            "M8": "0",
-            "M9": "0",
-            "M10": "0",
-            "M11": "0",
-            "M12": "0"
-        },
-        "jugadores": [
-            {
-                "nickname": "WladySpecwar",
-                "ID": "M1THK9N",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DœkōTTV",
-                "ID": "9MRCM46",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "ErizaSpecwar",
-                "ID": "X01FEAF",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MIPoJhonMIPo",
-                "ID": "HNYFCLG",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Truenō¿",
-                "ID": "R22M468",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Tinį",
-                "ID": "HXXTPTN",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "XileTiesaTTV",
-                "ID": "N98MHHG",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Prometeo95",
-                "ID": "NC2LMY8",
-                "avatar": "male1"
-            }
-        ],
-        "posicionDesempate": false
+      "nickname": "DœkōTTV",
+      "ID": "9MRCM46",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ErizaSpecwar",
+      "ID": "X01FEAF",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MIPoJhonMIPo",
+      "ID": "HNYFCLG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Truenō¿",
+      "ID": "R22M468",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Tinį",
+      "ID": "HXXTPTN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "XileTiesaTTV",
+      "ID": "N98MHHG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Prometeo95",
+      "ID": "NC2LMY8",
+      "avatar": "male1"
     }
-]
+  ],
+  "posicionDesempate": false,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

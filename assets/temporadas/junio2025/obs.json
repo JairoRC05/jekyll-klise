@@ -1,75 +1,80 @@
-[
+{
+  "tag": "OBS",
+  "team": "IMPERIO MEXA OBSIDIANA",
+  "org": "XF05 ESPORTS",
+  "activo": true,
+  "capitan": "Quique",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "IMPERIO MEXA OBSIDIANA",
+  "seguro": "true",
+  "link": "/imperio-mexa/--obsidiana",
+  "posicionDesempate": 0,
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "R",
+    "M4": "1",
+    "M5": "1",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "D",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "OBS",
-        "team": "IMPERIO MEXA OBSIDIANA",
-        "org": "XF05 ESPORTS",
-        "activo": true,
-        "capitan": "Quique",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "",
-        "seguro": true,
-        "link": "/imperio-mexa/--obsidiana",
-        "posicionDesempate": true,
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "0",
-            "M2": "0",
-            "M3": "0",
-            "M4": "0",
-            "M5": "0",
-            "M6": "0",
-            "M7": "0",
-            "M8": "0",
-            "M9": "0",
-            "M10": "0",
-            "M11": "0",
-            "M12": "0"
-        },
-        "jugadores": [
-            {
-                "nickname": "MeXa・Quique",
-                "ID": "5HHKX53",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa·Ranphy",
-                "ID": "8Y586PC",
-                "avatar": "male1",
-                "mvp": true,
-                "numero": 1,
-                "m4": 1
-            },
-            {
-                "nickname": "MeXa・Kory",
-                "ID": "7K4TY1F",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa・SoUriS",
-                "ID": "57HAL9Y",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa・Tony",
-                "ID": "301CYX8",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa°Atenea",
-                "ID": "CKCHQ1L",
-                "avatar": "female1"
-            },
-            {
-                "nickname": "MeXa • Salie",
-                "ID": "AX09NA2",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa • Sigva",
-                "ID": "9Q199FC",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "MeXa・Quique",
+      "ID": "5HHKX53",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa·Ranphy",
+      "ID": "8Y586PC",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 1,
+      "m4": 1
+    },
+    {
+      "nickname": "MeXa・Kory",
+      "ID": "7K4TY1F",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa・SoUriS",
+      "ID": "57HAL9Y",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa・Tony",
+      "ID": "301CYX8",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa°Atenea",
+      "ID": "CKCHQ1L",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "MeXa • Salie",
+      "ID": "AX09NA2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Sigva",
+      "ID": "9Q199FC",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

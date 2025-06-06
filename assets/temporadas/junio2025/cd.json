@@ -1,66 +1,79 @@
-[
+{
+  "tag": "CD",
+  "team": "CUMBIA DRAGÓN",
+  "org": "",
+  "activo": true,
+  "capitan": "NEW",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "CUMBIA DRAGÓN",
+  "seguro": "true",
+  "link": "/equipos/dinamita-buena-onda",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "3",
+    "M3": "0",
+    "M4": "D",
+    "M5": "1",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "DG",
-        "team": "DRAKAR GAMING",
-        "org": "",
-        "activo": true,
-        "capitan": "R2D2",
-        "region": "LAS-LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "DRAKAR GAMING",
-        "seguro": false,
-        "link": "/equipos/drakar-gaming",
-        "grupo": "SUR",
-        "partidos": {
-            "M1": "2",
-            "M2": "0",
-            "M3": "1",
-            "M4": "0",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": ".R2D2.",
-                "ID": "84F246G",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "AvrilLanvign",
-                "ID": "60PCK13",
-                "avatar": "female1"
-            },
-            {
-                "nickname": "ĐҜ҉MrArthur",
-                "ID": "MRK217R",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "6R|NCH",
-                "ID": "5PR10G",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "ByNovAshTTV",
-                "ID": "MM7PYR8",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Nakomu",
-                "ID": "A5A3CLY",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "ĐҜ҉šøkïï",
-                "ID": "AKM5P02",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "ttvNewt_ez",
+      "ID": "XAMMFEP",
+      "avatar": "male1",
+      "teamTag": "CD"
+    },
+    {
+      "nickname": "Jønasシ",
+      "ID": "R5FX423",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 3,
+      "m2": 2,
+      "m3": 1,
+      "teamTag": "CD"
+    },
+    {
+      "nickname": "・Yata・",
+      "ID": "7X4C0CK",
+      "avatar": "male1",
+      "teamTag": "CD"
+    },
+    {
+      "nickname": "ttvStarbae01",
+      "ID": "NA9QXAT",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 1,
+      "m4": 1,
+      "teamTag": "CD"
+    },
+    {
+      "nickname": "Muertin木火",
+      "ID": "5TR8K9T",
+      "avatar": "male1",
+      "teamTag": "CD"
+    },
+    {
+      "nickname": "T-ki",
+      "ID": "6EA8CT7",
+      "avatar": "male1"
     }
-]
+  ],
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

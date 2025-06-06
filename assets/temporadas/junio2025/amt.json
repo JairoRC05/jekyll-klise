@@ -1,66 +1,72 @@
-[
+{
+  "tag": "AMT",
+  "team": "IMPERIO MEXA AMT",
+  "org": "XF05 ESPORTS",
+  "activo": true,
+  "capitan": "CHAQS",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "IMPERIO MEXA AMT",
+  "seguro": "true",
+  "link": "/imperio-mexa/--amatista",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "1",
+    "M2": "3",
+    "M3": "0",
+    "M4": "0",
+    "M5": "R",
+    "M6": "0",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "AMT",
-        "team": "IMPERIO MEXA AMT",
-        "org": "XF05 ESPORTS",
-        "activo": true,
-        "capitan": "CHAQS",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "",
-        "seguro": true,
-        "link": "/imperio-mexa/--amatista",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "1",
-            "M2": "3",
-            "M3": "0",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "MeXa・Cage",
-                "ID": "YT150XU",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa・Chaq鋼",
-                "ID": "4H2XNPY",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "MeXa • Black",
-                "ID": "TXG338A",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "真kikurihime",
-                "ID": "L4G70NX",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "寂・NuzuLi",
-                "ID": "Y7FCTPQ",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "JuancaMissi",
-                "ID": "EMTNC13",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "R3JON",
-                "ID": "NQE5NG3",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "MeXa・Cage",
+      "ID": "YT150XU",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa・Chaq鋼",
+      "ID": "4H2XNPY",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Black",
+      "ID": "TXG338A",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "真kikurihime",
+      "ID": "L4G70NX",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "寂・NuzuLi",
+      "ID": "Y7FCTPQ",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "JuancaMissi",
+      "ID": "EMTNC13",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuFurrita坐",
+      "ID": "NQE5NG3",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}

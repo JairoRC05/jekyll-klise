@@ -8,6 +8,55 @@ let teamsDataTable;
 
 // --- Funciones de Utilidad ---
 
+async function loadExternalMatchData() {
+    const filePaths = ['/assets/partidos/pnorte.json', '/assets/partidos/psur.json', '/assets/partidos/cruces.json'];
+    const fetchPromises = filePaths.map(path =>
+        fetch(path)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} for ${path}`);
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error(`Error al cargar ${path}:`, error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de Carga',
+                    text: `No se pudo cargar el archivo de partidos: ${path}. Asegúrate de que existe y es accesible.`,
+                    confirmButtonText: 'Entendido'
+                });
+                return null; // Devuelve null para que Promise.all no falle por un archivo
+            })
+    );
+
+    try {
+        const results = await Promise.all(fetchPromises);
+        allExternalMatches = []; // Limpiar antes de poblar
+        results.forEach((data, index) => {
+            if (data && Array.isArray(data)) {
+                const sourceFile = filePaths[index].split('/').pop(); // Obtener el nombre del archivo (e.g., pnorte.json)
+                data.forEach(group => {
+                    if (group.rondas && Array.isArray(group.rondas)) {
+                        group.rondas.forEach(ronda => {
+                            if (ronda.partidos && Array.isArray(ronda.partidos)) {
+                                ronda.partidos.forEach(partido => {
+                                    // Añade una referencia al archivo de origen para depuración/información
+                                    partido.sourceFile = sourceFile;
+                                    allExternalMatches.push(partido);
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        console.log('Partidos externos cargados:', allExternalMatches.length, 'partidos.');
+    } catch (error) {
+        console.error('Error general al procesar archivos de partidos:', error);
+    }
+}
+
 /**
  * Guarda el array allTeamData en localStorage.
  */
@@ -160,7 +209,7 @@ function importAllData(file) {
 
     const reader = new FileReader();
 
-    reader.onload = function(event) {
+    reader.onload = function (event) {
         try {
             const importedData = JSON.parse(event.target.result);
 
@@ -211,7 +260,7 @@ function importAllData(file) {
         }
     };
 
-    reader.onerror = function() {
+    reader.onerror = function () {
         Swal.fire({
             icon: 'error',
             title: 'Error de lectura',
@@ -290,15 +339,15 @@ function refreshTables() {
     if (teamsDataTable) {
         teamsDataTable.clear().rows.add(allTeamData).draw();
     }
-    
+
     // Vuelve a poblar los datalists
     populateTeamDatalist();
     // populateReassignTeamDatalist() se llamará al abrir el modal específico
-    
-    // Limpiar clases de validación en todos los formularios modales
-   // Limpiar clases de validación en todos los formularios modales
-    $('#newTeamForm .form-control, #addPlayerForm .form-control, #reassignPlayerForm .form-control, #editTeamForm .form-control, #editTeamForm .form-select').removeClass('is-valid is-invalid');
 
+    // Limpiar clases de validación en todos los formularios modales
+    // Limpiar clases de validación en todos los formularios modales
+    $('#newTeamForm .form-control, #addPlayerForm .form-control, #reassignPlayerForm .form-control, #editTeamForm .form-control, #editTeamForm .form-select').removeClass('is-valid is-invalid');
+    initializeTeamsTable();
     // NUEVO: Actualizar estadísticas cada vez que los datos cambian
     updateGlobalStats();
 
@@ -309,37 +358,28 @@ function refreshTables() {
  * @param {string} teamTag - El tag del equipo a descargar.
  */
 function downloadTeamJson(teamTag) {
-    const teamToDownload = allTeamData.find(team => team.tag === teamTag);
+    const team = allTeamData.find(t => t.tag === teamTag);
+    if (team) {
+        console.log('--- En downloadTeamJson ---');
+        console.log('Equipo que se va a descargar:', JSON.parse(JSON.stringify(team))); // Verifica los datos justo antes de descargar
 
-    if (!teamToDownload) {
+        const teamJson = JSON.stringify(team, null, 2); // Indentado para legibilidad
+        const blob = new Blob([teamJson], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${team.team.replace(/\s/g, '_')}_${team.tag}_data.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    } else {
         Swal.fire({
             icon: 'error',
-            title: 'Error de Descarga',
-            text: `No se encontró el equipo con el tag: ${teamTag}`,
+            title: 'Error',
+            text: 'Equipo no encontrado para descargar.',
         });
-        return;
     }
-
-    const dataStr = JSON.stringify([teamToDownload], null, 4); // El '4' es para una indentación bonita
-    const blob = new Blob([dataStr], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    // Nombre del archivo: NOMBRE_DEL_EQUIPO_TAG.json
-    a.download = `${teamToDownload.team.replace(/\s/g, '_')}_${teamTag}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url); // Libera la URL del objeto
-
-    Swal.fire({
-        icon: 'success',
-        title: 'Descarga Exitosa',
-        text: `El JSON de "${teamToDownload.team}" ha sido descargado.`,
-        timer: 2000,
-        showConfirmButton: false
-    });
 }
 
 /**
@@ -397,7 +437,7 @@ function movePlayerToNoTeam(playerID) {
                     };
                     allTeamData.push(noTeam);
                 }
-                
+
                 // Asignar el jugador al equipo "SIN_EQUIPO"
                 // No asignar el teamTag al jugador directamente, se manejará en getFlatPlayersData
                 noTeam.jugadores.push(playerObj);
@@ -503,8 +543,6 @@ function toggleTeamStatus(teamTag) {
 
 // --- Lógica Principal (cuando el DOM esté listo) ---
 
-
-
 /**
  * Valida la longitud de un campo de texto.
  * @param {string} value El valor del campo.
@@ -531,9 +569,6 @@ function applyValidationClass(element, isValid) {
     }
 }
 
-
-
-
 /**
  * NUEVO: Procesa múltiples archivos JSON, cada uno representando un equipo, y los une a allTeamData.
  * Maneja duplicados de tags de equipo y IDs de jugadores.
@@ -557,7 +592,7 @@ async function importMultipleTeams(files) {
     const readPromises = Array.from(files).map(file => {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
-            reader.onload = function(event) {
+            reader.onload = function (event) {
                 try {
                     const fileContent = JSON.parse(event.target.result);
                     // Los JSON de equipo están en un array con un solo objeto de equipo
@@ -623,7 +658,7 @@ async function importMultipleTeams(files) {
         if (existingTeamIndex !== -1) {
             // Equipo ya existe, preguntar si desea reemplazar o fusionar jugadores
             duplicatedTags.push(importedTeam.tag);
-            
+
             // Decidamos aquí la estrategia: no fusionar jugadores si el tag del equipo es duplicado.
             // Para simplificar, si el tag ya existe, no importamos ese equipo.
             // Si queremos fusionar o reemplazar, la lógica sería más compleja y requeriría otro modal.
@@ -682,7 +717,6 @@ async function importMultipleTeams(files) {
 }
 
 
-
 /**
  * Genera un reporte PDF de los jugadores de un equipo específico.
  * @param {string} teamTag El tag del equipo.
@@ -739,7 +773,7 @@ function generateTeamPlayersPdf(teamTag) {
         }
     });
 
-    const filename = `Reporte_${team.tag}_Jugadores_${new Date().toISOString().slice(0,10)}.pdf`;
+    const filename = `Reporte_${team.tag}_Jugadores_${new Date().toISOString().slice(0, 10)}.pdf`;
     doc.save(filename);
 
     Swal.fire({
@@ -783,7 +817,7 @@ function generateTeamPlayersCsv(teamTag) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    const filename = `Reporte_${team.tag}_Jugadores_${new Date().toISOString().slice(0,10)}.csv`;
+    const filename = `Reporte_${team.tag}_Jugadores_${new Date().toISOString().slice(0, 10)}.csv`;
     a.download = filename;
     document.body.appendChild(a);
     a.click();
@@ -799,9 +833,250 @@ function generateTeamPlayersCsv(teamTag) {
     });
 }
 
+/**
+ * Inicializa y configura la tabla de equipos usando DataTables.
+ * Los datos se cargan desde allTeamData.
+ */
+function initializeTeamsTable() {
+    if (teamsDataTable) {
+        teamsDataTable.destroy(); // Destruye la instancia existente para reinicializar
+    }
 
-$(document).ready(function() {
-    
+    const activeTeams = allTeamData.filter(team => team.activo);
+
+    teamsDataTable = $('#teamsTable').DataTable({
+        data: activeTeams,
+        columns: [
+            { data: 'tag', title: 'Tag' },
+            { data: 'team', title: 'Nombre Equipo' },
+            {
+                data: 'activo',
+                title: 'Activo',
+                render: function (data) {
+                    return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
+                }
+            },
+            { data: 'capitan', title: 'Capitán' },
+            { data: 'region', title: 'Región' },
+            {
+                data: 'seguro',
+                title: 'Seguro',
+                render: function (data) {
+                    return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
+                }
+            },
+            { data: 'grupo', title: 'Grupo' },
+            { // **NUEVA COLUMNA PARA "Partidos"**
+                data: null,
+                title: 'Partidos',
+                render: function (data, type, row) {
+                    return `<button class="btn btn-info btn-sm view-matches-btn" data-tag="${row.tag}"><i class="bi bi-eye"></i></button>`;
+                },
+                orderable: false,
+                searchable: false // Agregado para que no se pueda buscar en esta columna
+            },
+            { // **COLUMNA DE "Acciones" (asegúrate de que esté correcta y al final)**
+                data: null,
+                title: 'Acciones',
+                render: function (data, type, row) {
+                    const statusButton = row.activo ?
+                        `<button class="btn btn-sm btn-warning me-1" onclick="toggleTeamStatus('${row.tag}')" title="Desactivar Equipo"><i class="bi bi-toggle-off"></i></button>` :
+                        `<button class="btn btn-sm btn-success me-1" onclick="toggleTeamStatus('${row.tag}')" title="Activar Equipo"><i class="bi bi-toggle-on"></i></button>`;
+
+                    const downloadButton = `<button class="btn btn-sm btn-outline-primary me-1" onclick="downloadTeamJson('${row.tag}')" title="Descargar JSON del Equipo"><i class="bi bi-download"></i></button>`;
+
+                    const editDetailsButton = `<button class="btn btn-sm btn-info me-1" onclick="openEditTeamModal('${row.tag}')" title="Editar Detalles Avanzados"><i class="bi bi-pencil-square"></i></button>`;
+
+                    // NUEVO: Botones para reportes
+                    const reportPdfButton = `<button class="btn btn-sm btn-danger me-1" onclick="generateTeamPlayersPdf('${row.tag}')" title="Generar Reporte PDF de Jugadores"><i class="bi bi-file-earmark-pdf"></i></button>`;
+                    const reportCsvButton = `<button class="btn btn-sm btn-success" onclick="generateTeamPlayersCsv('${row.tag}')" title="Generar Reporte CSV de Jugadores"><i class="bi bi-file-earmark-spreadsheet"></i></button>`;
+
+                    // Deshabilitar el botón de estado y edición para el equipo "SIN_EQUIPO"
+                    if (row.tag === 'SIN_EQUIPO') {
+                        return `<button class="btn btn-sm btn-secondary me-1" disabled title="No se puede desactivar"><i class="bi bi-slash-circle"></i></button>` + downloadButton;
+                    }
+
+                    return statusButton + downloadButton + editDetailsButton + reportPdfButton + reportCsvButton;
+                },
+                orderable: false,
+                searchable: false
+            }
+        ],
+        responsive: true,
+        autoWidth: false,
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
+    // Event listener for "Ver Partidos" button
+    // IMPORTANT: This event listener needs to be inside initializeTeamsTable()
+    // or called after the table is initialized, but ensure it's not duplicated
+    // if initializeTeamsTable() is called multiple times without destroying previous listeners.
+    $('#teamsTable tbody').off('click', '.view-matches-btn').on('click', '.view-matches-btn', function () {
+        const teamTag = $(this).data('tag');
+        showMatchesModal(teamTag);
+    });
+
+
+    // Existing event listeners for edit and delete buttons...
+    $('#teamsTable tbody').off('click', '.edit-team-btn').on('click', '.edit-team-btn', function () {
+        const teamTag = $(this).data('tag');
+        openEditTeamModal(teamTag);
+    });
+
+    $('#teamsTable tbody').off('click', '.delete-team-btn').on('click', '.delete-team-btn', function () {
+        const teamTag = $(this).data('tag');
+        deleteTeam(teamTag);
+    });
+}
+
+/**
+ * Muestra un modal con los detalles de los partidos de un equipo y permite editarlos.
+ * También muestra partidos encontrados en archivos externos para referencia.
+ * @param {string} teamTag - El tag del equipo cuyos partidos se van a mostrar.
+ */
+function showMatchesModal(teamTag) {
+    const team = allTeamData.find(t => t.tag === teamTag);
+
+    if (team && team.partidos) {
+        $('#matchesTeamName').text(team.team); // Establece el título del modal con el nombre del equipo
+        $('#editMatchesTeamTag').val(team.tag); // Guarda el tag del equipo en el campo oculto
+
+        const matchesInputList = $('#matchesInputList');
+        matchesInputList.empty(); // Limpia el contenido anterior de la edición manual
+
+        // Genera dinámicamente campos de entrada para cada partido de la edición manual
+         const matchKeys = Object.keys(team.partidos).sort((a, b) => {
+            const numA = parseInt(a.replace('M', ''), 10);
+            const numB = parseInt(b.replace('M', ''), 10);
+            return numA - numB;
+        });
+
+        matchKeys.forEach(matchKey => {
+            // Obtenemos el valor tal cual está guardado.
+            // Si es null o undefined, lo convertimos a una cadena vacía para facilitar la comparación.
+            const matchValue = team.partidos[matchKey] === null || team.partidos[matchKey] === undefined ? '' : String(team.partidos[matchKey]);
+
+            let displayValue = '';
+            // Si matchValue NO es una cadena vacía, entonces construimos el texto del input.
+            // Si es una cadena vacía, displayValue se queda como "", lo que dejará el input en blanco.
+            if (matchValue !== '') {
+                displayValue = `${matchValue}`;
+            }
+
+            matchesInputList.append(`
+                <div class="col-md-4 mb-3">
+                    <label for="match-${matchKey}" class="form-label">${matchKey}</label>
+                    <input type="text" class="form-control" id="match-${matchKey}" data-match-key="${matchKey}" value="${displayValue}">
+                </div>
+            `);
+        });
+
+        // --- Novedad: Mostrar Partidos Encontrados en Archivos Externos ---
+        const externalMatchesList = $('#externalMatchesList');
+        externalMatchesList.empty(); // Limpia el contenido anterior
+
+        // Filtra los partidos externos que involucran al equipo actual
+        const teamExternalMatches = allExternalMatches.filter(match =>
+            match.tag1 === teamTag || match.tag2 === teamTag
+        );
+
+        if (teamExternalMatches.length > 0) {
+            // Ordenar los partidos externos por número de ronda y número de partido para una mejor visualización
+            teamExternalMatches.sort((a, b) => {
+                if (a.round_number !== b.round_number) {
+                    return a.round_number - b.round_number;
+                }
+                return a.match_number - b.match_number;
+            });
+
+            teamExternalMatches.forEach(match => {
+                const isTeam1 = match.tag1 === teamTag;
+                const teamName1 = isTeam1 ? `<strong>${match.equipo1}</strong>` : match.equipo1;
+                const teamName2 = !isTeam1 ? `<strong>${match.equipo2}</strong>` : match.equipo2;
+                const matchResult = match.resultado === "VS" ? "VS" : `Resultado: ${match.resultado}`; // Muestra "VS" si no hay resultado
+
+                externalMatchesList.append(`
+                    <div class="card mb-2">
+                        <div class="card-body py-2">
+                            <h6 class="card-title mb-1">Ronda ${match.round_number} - Partido ${match.match_number}</h6>
+                            <p class="card-text mb-1">
+                                ${teamName1} vs ${teamName2} 
+                            </p>
+                            <p class="card-text mb-0">
+                                <small class="text-muted">
+                                    ${matchResult}
+                                </small>
+                            </p>
+                            <small class="text-secondary">Origen: ${match.sourceFile}</small>
+                        </div>
+                    </div>
+                `);
+            });
+        } else {
+            externalMatchesList.append('<p class="text-muted">No se encontraron partidos para este equipo en los archivos externos.</p>');
+        }
+
+        const viewMatchesModal = new bootstrap.Modal(document.getElementById('viewMatchesModal'));
+        viewMatchesModal.show();
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'No se encontraron datos de partidos para este equipo.',
+        });
+    }
+}
+
+function saveMatchesChanges() {
+    const teamTag = $('#editMatchesTeamTag').val();
+    const teamToUpdate = allTeamData.find(t => t.tag === teamTag);
+
+    if (teamToUpdate) {
+        console.log('--- Antes de guardar cambios de partidos ---');
+        console.log('Equipo actual (antes de actualizar):', JSON.parse(JSON.stringify(teamToUpdate))); // Copia profunda para ver el estado antes
+
+        // Recorre todos los inputs con data-match-key y actualiza los valores
+        $('#matchesInputList input[data-match-key]').each(function () {
+            const matchKey = $(this).data('matchKey');
+            const newMatchValue = $(this).val().trim();
+            teamToUpdate.partidos[matchKey] = newMatchValue;
+        });
+
+        console.log('--- Después de actualizar en memoria ---');
+        console.log('Equipo actualizado en memoria:', JSON.parse(JSON.stringify(teamToUpdate))); // Ve el estado después de la actualización en memoria
+
+        saveAllTeamData(); // Guarda los cambios en localStorage
+        console.log('Datos guardados en localStorage.');
+
+        const viewMatchesModal = bootstrap.Modal.getInstance(document.getElementById('viewMatchesModal'));
+        if (viewMatchesModal) {
+            viewMatchesModal.hide(); // Oculta el modal
+        }
+
+        Swal.fire({
+            icon: 'success',
+            title: '¡Partidos Actualizados!',
+            text: `Los partidos de "${teamToUpdate.team}" han sido guardados.`,
+            timer: 2000,
+            showConfirmButton: false
+        });
+
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error al guardar',
+            text: 'No se pudo encontrar el equipo para actualizar los partidos.',
+        });
+    }
+}
+
+
+$(document).ready(function () {
+
+    loadExternalMatchData();
     // 1. Inicializar DataTable de Jugadores
     playersDataTable = $('#playersTable').DataTable({
         data: getFlatPlayersData(),
@@ -811,10 +1086,10 @@ $(document).ready(function() {
             { data: 'avatar', title: 'Avatar', searchable: false, className: 'editable' },
             { data: 'teamTag', title: 'Equipo', searchable: true },
             {
-               // Columna de acciones para jugador
+                // Columna de acciones para jugador
                 data: null,
                 title: 'Acciones',
-                render: function(data, type, row) {
+                render: function (data, type, row) {
                     const moveNoTeamButton = row.teamTag && row.teamTag !== 'SIN_EQUIPO' ?
                         `<button class="btn btn-sm btn-outline-danger me-1" onclick="movePlayerToNoTeam('${row.ID}')" title="Mover a Sin Equipo"><i class="bi bi-person-x-fill"></i></button>` :
                         ''; // No mostrar si ya está sin equipo
@@ -829,7 +1104,7 @@ $(document).ready(function() {
             }
         ],
         // Añadir una clase a la fila si el jugador no tiene equipo
-        rowCallback: function(row, data) {
+        rowCallback: function (row, data) {
             if (data.teamTag === 'SIN_EQUIPO') {
                 $(row).addClass('player-no-team');
             } else {
@@ -839,7 +1114,7 @@ $(document).ready(function() {
     });
 
     // 2. Manejo de edición en línea para la tabla de jugadores
-    $('#playersTable').on('click', '.editable', function() {
+    $('#playersTable').on('click', '.editable', function () {
         const cell = $(this);
         const originalValue = cell.text();
         const column = playersDataTable.column(cell.index()).dataSrc();
@@ -849,7 +1124,7 @@ $(document).ready(function() {
 
         // No permitir edición de jugadores en el equipo "SIN_EQUIPO" directamente desde aquí
         if (playerTeamTag === 'SIN_EQUIPO') {
-             Swal.fire({
+            Swal.fire({
                 icon: 'info',
                 title: 'Edición Restringida',
                 text: 'Los jugadores en el estado "Sin Equipo" no se pueden editar directamente. Debes reasignarlos a un equipo para modificarlos.',
@@ -861,7 +1136,7 @@ $(document).ready(function() {
         cell.html(input);
         input.focus();
 
-        const blurHandler = function() {
+        const blurHandler = function () {
             const newValue = input.val().trim();
             if (newValue !== originalValue) {
                 let playerFound = false;
@@ -900,7 +1175,7 @@ $(document).ready(function() {
         };
 
         input.on('blur', blurHandler);
-        input.on('keydown', function(e) {
+        input.on('keydown', function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 input.blur(); // Forzar el blur para activar el guardado
@@ -909,32 +1184,41 @@ $(document).ready(function() {
     });
 
     // 3. Inicializar DataTable de Equipos
-          teamsDataTable = $('#teamsTable').DataTable({
+    teamsDataTable = $('#teamsTable').DataTable({
         data: allTeamData,
         columns: [
             { data: 'tag', title: 'Tag', className: 'editable-team' },
-            { data: 'team', title: 'Nombre del Equipo', className: 'editable-team' },
-            { data: 'capitan', title: 'Capitán', className: 'editable-team' },
-            {
-                data: null,
-                title: '# Jugadores',
-                className: 'player-count-cell',
-                render: function(data, type, row) {
-                    return row.jugadores ? row.jugadores.length : 0;
-                }
-            },
-            { data: 'region', title: 'Región', className: 'editable-team' },
+            { data: 'team', title: 'Nombre Equipo', className: 'editable-team' },
             {
                 data: 'activo',
-                title: 'Estado',
-                render: function(data, type, row) {
-                    return data ? '<span class="badge bg-success"><i class="bi bi-check-circle-fill"></i> Activo</span>' : '<span class="badge bg-danger"><i class="bi bi-x-circle-fill"></i> Inactivo</span>';
+                title: 'Activo',
+                render: function (data) {
+                    return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
                 }
             },
+            { data: 'capitan', title: 'Capitán', className: 'editable-team' },
+            { data: 'region', title: 'Región', className: 'editable-team' },
             {
+                data: 'seguro',
+                title: 'Seguro',
+                render: function (data) {
+                    return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
+                }
+            },
+            { data: 'grupo', title: 'Grupo' },
+            { 
+                data: null,
+                title: 'Partidos',
+                render: function (data, type, row) {
+                    return `<button class="btn btn-info btn-sm view-matches-btn" data-tag="${row.tag}"><i class="bi bi-eye"></i></button>`;
+                },
+                orderable: false,
+                searchable: false
+            },
+            { 
                 data: null,
                 title: 'Acciones',
-                render: function(data, type, row) {
+                render: function (data, type, row) {
                     const statusButton = row.activo ?
                         `<button class="btn btn-sm btn-warning me-1" onclick="toggleTeamStatus('${row.tag}')" title="Desactivar Equipo"><i class="bi bi-toggle-off"></i></button>` :
                         `<button class="btn btn-sm btn-success me-1" onclick="toggleTeamStatus('${row.tag}')" title="Activar Equipo"><i class="bi bi-toggle-on"></i></button>`;
@@ -943,12 +1227,9 @@ $(document).ready(function() {
 
                     const editDetailsButton = `<button class="btn btn-sm btn-info me-1" onclick="openEditTeamModal('${row.tag}')" title="Editar Detalles Avanzados"><i class="bi bi-pencil-square"></i></button>`;
 
-                    // NUEVO: Botones para reportes
                     const reportPdfButton = `<button class="btn btn-sm btn-danger me-1" onclick="generateTeamPlayersPdf('${row.tag}')" title="Generar Reporte PDF de Jugadores"><i class="bi bi-file-earmark-pdf"></i></button>`;
                     const reportCsvButton = `<button class="btn btn-sm btn-success" onclick="generateTeamPlayersCsv('${row.tag}')" title="Generar Reporte CSV de Jugadores"><i class="bi bi-file-earmark-spreadsheet"></i></button>`;
 
-
-                    // Deshabilitar el botón de estado y edición para el equipo "SIN_EQUIPO"
                     if (row.tag === 'SIN_EQUIPO') {
                         return `<button class="btn btn-sm btn-secondary me-1" disabled title="No se puede desactivar"><i class="bi bi-slash-circle"></i></button>` + downloadButton;
                     }
@@ -960,7 +1241,7 @@ $(document).ready(function() {
 
             }
         ],
-        rowCallback: function(row, data) {
+        rowCallback: function (row, data) {
             if (!data.activo) {
                 $(row).addClass('team-inactive');
             } else {
@@ -969,16 +1250,16 @@ $(document).ready(function() {
         }
     });
 
-    $('#teamsTable').on('click', '.editable-team', function() {
+    $('#teamsTable').on('click', '.editable-team', function () {
         const cell = $(this);
         const originalValue = cell.text();
         const column = teamsDataTable.column(cell.index()).dataSrc();
         const rowData = teamsDataTable.row(cell.parent()).data();
         const currentTeamTag = rowData.tag; // El tag original del equipo
-        
+
         // No permitir edición si el equipo está inactivo o es el equipo "SIN_EQUIPO"
         if (!rowData.activo || currentTeamTag === 'SIN_EQUIPO') {
-             Swal.fire({
+            Swal.fire({
                 icon: 'info',
                 title: 'Edición Restringida',
                 text: 'No se puede editar equipos inactivos o el equipo "Sin Equipo" directamente desde aquí. Primero activa el equipo si lo deseas editar.',
@@ -990,13 +1271,13 @@ $(document).ready(function() {
         cell.html(input);
         input.focus();
 
-        const blurHandler = function() {
+        const blurHandler = function () {
             const newValue = input.val().trim();
             if (newValue !== originalValue) {
                 // Si la columna que se edita es el 'tag'
                 if (column === 'tag') {
                     const newTag = newValue.toUpperCase(); // Convertir a mayúsculas para tags
-                    
+
                     // Validar que el nuevo tag no esté vacío
                     if (!newTag) {
                         Swal.fire({
@@ -1020,7 +1301,7 @@ $(document).ready(function() {
                     }
 
                     // Validar unicidad del nuevo tag (excluyendo el equipo actual)
-                    const isTagDuplicate = allTeamData.some(team => 
+                    const isTagDuplicate = allTeamData.some(team =>
                         team.tag === newTag && team.tag !== currentTeamTag
                     );
                     if (isTagDuplicate) {
@@ -1078,7 +1359,7 @@ $(document).ready(function() {
 
                 } else { // Si la columna no es 'tag' (es 'team', 'capitan', 'region')
                     const teamToUpdate = allTeamData.find(team => team.tag === currentTeamTag);
-                    
+
                     if (teamToUpdate) {
                         teamToUpdate[column] = newValue; // Actualizar la propiedad específica
                         saveAllTeamData();
@@ -1106,7 +1387,7 @@ $(document).ready(function() {
         };
 
         input.on('blur', blurHandler);
-        input.on('keydown', function(e) {
+        input.on('keydown', function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 input.blur();
@@ -1114,9 +1395,54 @@ $(document).ready(function() {
         });
     });
 
+    $(document).ready(function () {
+        refreshTables();
+        populateTeamDatalist();
+
+        // Event listeners para los formularios
+        $('#addTeamForm').on('submit', function (e) {
+            e.preventDefault();
+            addTeam();
+        });
+
+        $('#editTeamForm').on('submit', function (e) {
+            e.preventDefault();
+        });
+
+        $('#addPlayerForm').on('submit', function (e) {
+            e.preventDefault();
+            addPlayer();
+        });
+
+        $('#editPlayerForm').on('submit', function (e) {
+            e.preventDefault();
+        });
+
+        // ¡NUEVO! Event listener para el formulario de edición de partidos
+        $('#editMatchesForm').on('submit', function (e) {
+            e.preventDefault();
+            saveMatchesChanges();
+        });
+
+        // Event listener para los clicks en las pestañas
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+            const targetTab = $(e.target).attr('data-bs-target');
+            if (targetTab === '#teamsTab') {
+                if (teamsDataTable) {
+                    teamsDataTable.columns.adjust().responsive.recalc();
+                }
+            } else if (targetTab === '#playersTab') {
+                if (playersDataTable) {
+                    playersDataTable.columns.adjust().responsive.recalc();
+                }
+            }
+        });
+
+    });
+
 
     // 4. Manejo del formulario para Crear Nuevo Equipo (dentro del modal)
-  $('#newTeamForm').on('submit', function(e) {
+    $('#newTeamForm').on('submit', function (e) {
         e.preventDefault();
 
         const newTeamTagInput = $('#newTeamTag');
@@ -1232,7 +1558,7 @@ $(document).ready(function() {
     });
 
     // 5. Manejo del formulario para Añadir Jugador (dentro del modal)
-     $('#addPlayerForm').on('submit', function(e) {
+    $('#addPlayerForm').on('submit', function (e) {
         e.preventDefault();
 
         const playerNicknameInput = $('#playerNickname');
@@ -1265,8 +1591,8 @@ $(document).ready(function() {
 
         // Validación Avatar (solo no vacío, si hay un valor por defecto no es estrictamente necesario)
         if (!playerAvatar) {
-             applyValidationClass(playerAvatarInput, false);
-             isValidForm = false;
+            applyValidationClass(playerAvatarInput, false);
+            isValidForm = false;
         } else {
             applyValidationClass(playerAvatarInput, true);
         }
@@ -1355,7 +1681,7 @@ $(document).ready(function() {
         });
     });
 
-     $('#newTeamTag, #newTeamName, #newTeamCaptain, #newTeamRegion').on('input', function() {
+    $('#newTeamTag, #newTeamName, #newTeamCaptain, #newTeamRegion').on('input', function () {
         const inputElement = $(this);
         const value = inputElement.val().trim();
         const id = inputElement.attr('id');
@@ -1369,13 +1695,13 @@ $(document).ready(function() {
         } else if (id === 'newTeamCaptain' || id === 'newTeamRegion') {
             isValid = value.length > 0;
         }
-        
+
         // Aquí no podemos validar unicidad o tags reservados en tiempo real con solo 'input'
         // Esas validaciones se hacen en el submit.
         applyValidationClass(inputElement, isValid);
     });
 
-    $('#playerNickname, #playerID, #playerAvatar, #playerTeamTagInput').on('input', function() {
+    $('#playerNickname, #playerID, #playerAvatar, #playerTeamTagInput').on('input', function () {
         const inputElement = $(this);
         const value = inputElement.val().trim();
         const id = inputElement.attr('id');
@@ -1388,15 +1714,15 @@ $(document).ready(function() {
         } else if (id === 'playerAvatar') {
             isValid = value.length > 0;
         } else if (id === 'playerTeamTagInput') {
-             isValid = value.length > 0; // Solo valida que no esté vacío, la existencia del equipo se valida en submit
+            isValid = value.length > 0; // Solo valida que no esté vacío, la existencia del equipo se valida en submit
         }
         applyValidationClass(inputElement, isValid);
     });
 
     // 6. Carga inicial de datos al iniciar la página
 
-     // NUEVO: 7. Manejo del formulario para Reasignar Jugador (dentro del modal)
-    $('#reassignPlayerForm').on('submit', function(e) {
+    // NUEVO: 7. Manejo del formulario para Reasignar Jugador (dentro del modal)
+    $('#reassignPlayerForm').on('submit', function (e) {
         e.preventDefault();
 
         const playerIDToReassign = $('#reassignPlayerID').val();
@@ -1502,24 +1828,24 @@ $(document).ready(function() {
         });
     });
 
-      // Actualizar listeners para validación en tiempo real (solo para el nuevo input del modal)
-    $('#reassignTeamTagInput').on('input', function() {
+    // Actualizar listeners para validación en tiempo real (solo para el nuevo input del modal)
+    $('#reassignTeamTagInput').on('input', function () {
         const inputElement = $(this);
         const value = inputElement.val().trim();
         let isValid = value.length > 0;
         applyValidationClass(inputElement, isValid);
     });
 
-     // NUEVO: Manejo de botones de Exportar/Importar
-    $('#exportAllDataBtn').on('click', function() {
+    // NUEVO: Manejo de botones de Exportar/Importar
+    $('#exportAllDataBtn').on('click', function () {
         exportAllData();
     });
 
-    $('#importAllDataBtn').on('click', function() {
+    $('#importAllDataBtn').on('click', function () {
         $('#importFileInput').click(); // Simula un clic en el input de tipo archivo
     });
 
-    $('#importFileInput').on('change', function(event) {
+    $('#importFileInput').on('change', function (event) {
         const file = event.target.files[0];
         if (file) {
             importAllData(file);
@@ -1529,12 +1855,12 @@ $(document).ready(function() {
         $(this).val('');
     });
 
-      // NUEVO: Manejo de botón y input para importar múltiples archivos de equipo
-    $('#importTeamsBtn').on('click', function() {
+    // NUEVO: Manejo de botón y input para importar múltiples archivos de equipo
+    $('#importTeamsBtn').on('click', function () {
         $('#importTeamsFileInput').click(); // Simula un clic en el input de tipo archivo múltiple
     });
 
-    $('#importTeamsFileInput').on('change', async function(event) {
+    $('#importTeamsFileInput').on('change', async function (event) {
         const files = event.target.files;
         if (files.length > 0) {
             await importMultipleTeams(files); // Llama a la nueva función asíncrona
@@ -1544,8 +1870,8 @@ $(document).ready(function() {
     });
 
 
-     // NUEVO: Manejo del formulario para Edición Avanzada de Equipo
-    $('#editTeamForm').on('submit', function(e) {
+    // NUEVO: Manejo del formulario para Edición Avanzada de Equipo
+    $('#editTeamForm').on('submit', function (e) {
         e.preventDefault();
 
         const originalTag = $('#editTeamOriginalTag').val();
@@ -1578,7 +1904,7 @@ $(document).ready(function() {
         }
         // Repite validaciones para otros campos si es necesario
         // Por ahora, asumimos que si no es crítico, solo se guardan los valores.
-        
+
         if (!isValidForm) {
             Swal.fire({
                 icon: 'warning',
@@ -1598,7 +1924,7 @@ $(document).ready(function() {
         teamToUpdate.org = newOrg;
         teamToUpdate.teamNombreAnterior = newNombreAnterior;
         // teamNuevoNombre se actualiza con el nombre actual del equipo, no con un input
-        teamToUpdate.teamNuevoNombre = teamToUpdate.team; 
+        teamToUpdate.teamNuevoNombre = teamToUpdate.team;
         teamToUpdate.seguro = newSeguro;
         teamToUpdate.link = newLink;
         teamToUpdate.grupo = newGrupo;

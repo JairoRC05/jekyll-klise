@@ -1,69 +1,75 @@
-[
+{
+  "tag": "STMN",
+  "team": "STAMINA E-SPORTS",
+  "org": "STAMINA E-SPORTS",
+  "activo": true,
+  "capitan": "RANMA",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "STAMINA E-SPORTS",
+  "seguro": "true",
+  "link": "/equipos/stamina-e-sports",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "D",
+    "M2": "3",
+    "M3": "3",
+    "M4": "R",
+    "M5": "R",
+    "M6": "R",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "0",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "STMN",
-        "team": "STAMINA E-SPORTS",
-        "org": "STAMINA E-SPORTS",
-        "activo": true,
-        "capitan": "RANMA",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "",
-        "seguro": true,
-        "link": "/equipos/stamina-e-sports",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "3",
-            "M2": "3",
-            "M3": "",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "STMN・Ranma",
-                "ID": "A38905X",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "STMN・Regi",
-                "ID": "E9ENLYE",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "STMN・Holmes",
-                "ID": "L1G1GF2",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "STMN・Pachy",
-                "ID": "Q3HCM3A",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "STMN • Frank",
-                "ID": "6990CYH",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "STMN • Tokito",
-                "ID": "820R14M",
-                "avatar": "male1",
-                "mvp": true,
-                "numero": 2,
-                "m4": 2
-            },
-            {
-                "nickname": "Frank4ever",
-                "ID": "EKYTQ9H",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "STMN・Ranma",
+      "ID": "A38905X",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "STMN・Regi",
+      "ID": "E9ENLYE",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "STMN・Holmes",
+      "ID": "L1G1GF2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "STMN・Pachy",
+      "ID": "Q3HCM3A",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "STMN • Frank",
+      "ID": "6990CYH",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "STMN • Tokito",
+      "ID": "820R14M",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m4": 2
+    },
+    {
+      "nickname": "Frank4ever",
+      "ID": "EKYTQ9H",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}

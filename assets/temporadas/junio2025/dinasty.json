@@ -1,79 +1,84 @@
-[
+{
+  "tag": "DINASTY",
+  "team": "DINASTY",
+  "org": "XF05 eSports",
+  "activo": true,
+  "capitan": "TORO",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DINASTY",
+  "seguro": "true",
+  "link": "/equipos/dinasty",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "2",
+    "M3": "D",
+    "M4": "3",
+    "M5": "2",
+    "M6": "3",
+    "M7": "2",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "DINASTY",
-        "team": "DINASTY",
-        "org": "XF05 eSports",
-        "activo": true,
-        "capitan": "TORO",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "DINASTY",
-        "seguro": true,
-        "link": "/equipos/dinasty",
-        "grupo": "SUR",
-        "partidos": {
-            "M1": "0",
-            "M2": "2",
-            "M3": "3",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "龍・Toro",
-                "ID": "RNCXGAK",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "龍・Light光",
-                "ID": "43LKYHQ",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "龍・Kraft",
-                "ID": "2NNA9P4",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "龍・Vicleo",
-                "ID": "446HY4X",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "龍・Ji9star",
-                "ID": "83AFR37",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "Amailu",
-                "ID": "95R97RL",
-                "avatar": "female1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "Máx・獅",
-                "ID": "CY9PT5",
-                "avatar": "male1",
-                "teamTag": "DINASTY"
-            },
-            {
-                "nickname": "RNT・TVPablo",
-                "ID": "843A4E0",
-                "avatar": "male1"
-            }
-        ],
-        "posicionDesempate": false
+      "nickname": "龍・Toro",
+      "ID": "RNCXGAK",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "龍・Light光",
+      "ID": "43LKYHQ",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "龍・Kraft",
+      "ID": "2NNA9P4",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "龍・Vicleo",
+      "ID": "446HY4X",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "龍・Ji9star",
+      "ID": "83AFR37",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "Amailu",
+      "ID": "95R97RL",
+      "avatar": "female1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "Máx・獅",
+      "ID": "CY9PT5",
+      "avatar": "male1",
+      "teamTag": "DINASTY"
+    },
+    {
+      "nickname": "RNT・TVPablo",
+      "ID": "843A4E0",
+      "avatar": "male1"
     }
-]
+  ],
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

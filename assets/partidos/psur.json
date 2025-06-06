@@ -366,60 +366,65 @@
             "tag1": "DINASTY",
             "equipo2": "SPACE VAL",
             "tag2": "SPACE",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS PLATINUM",
             "tag1": "PLATINO",
             "equipo2": "FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "TEAM ROCKET",
             "tag1": "TRR",
             "equipo2": "HG SALARIO MINIMO",
             "tag2": "SM",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "PHOBIUS AURA",
             "tag1": "PØĄ",
             "equipo2": "PLAGA VILLANOS",
             "tag2": "PLAGA",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "CUMBIA DRAGÓN",
             "tag1": "CD",
             "equipo2": "DRAKAR GAMING",
             "tag2": "DG",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -446,12 +451,13 @@
             "tag1": "DINASTY",
             "equipo2": "IM ZAFIRO",
             "tag2": "ZAFIRO",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 6,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS AMETHYST",
@@ -470,12 +476,13 @@
             "tag1": "TRR",
             "equipo2": "FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 6,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "PHOBIUS AURA",
@@ -526,12 +533,13 @@
             "tag1": "DINASTY",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLATINO",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 7,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS AMETHYST",

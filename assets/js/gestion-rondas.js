@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const archivoSelector = document.getElementById('archivo-selector');
     const gestionRondasDiv = document.getElementById('gestion-rondas');
-     console.log("gestionRondasDiv (dentro DOMContentLoaded):", gestionRondasDiv);
+    console.log("gestionRondasDiv (dentro DOMContentLoaded):", gestionRondasDiv);
     const formularioEdicion = document.getElementById('formulario-edicion-partido');
     const equipo1InputEdit = document.getElementById('equipo1-edit');
     const equipo2InputEdit = document.getElementById('equipo2-edit');
@@ -17,38 +17,38 @@ document.addEventListener('DOMContentLoaded', () => {
     let partidosData = {};
     let partidoSeleccionado = null; // Para almacenar el partido que se está editando
     let archivoActual = archivoSelector.value; // Para saber qué archivo se está mostrando
+    let activeTabId = null; // Variable para almacenar el ID de la pestaña activa
 
-
- function descargarJSONModificado() {
-    console.log("Archivo actual al descargar:", archivoActual);
-    console.log("Contenido de partidosData al descargar:", partidosData);
-    const dataParaDescargar = [{ "rondas": partidosData[archivoActual]?.rondas || [] }]; // Creamos un array con un objeto que tiene la propiedad "rondas"
-    console.log("Datos para descargar:", dataParaDescargar);
-    const jsonString = JSON.stringify(dataParaDescargar, null, 2);
-    const blob = new Blob([jsonString], { type: 'application/json' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `${archivoActual}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
- }
+    function descargarJSONModificado() {
+        console.log("Archivo actual al descargar:", archivoActual);
+        console.log("Contenido de partidosData al descargar:", partidosData);
+        const dataParaDescargar = [{ "rondas": partidosData[archivoActual]?.rondas || [] }]; // Creamos un array con un objeto que tiene la propiedad "rondas"
+        console.log("Datos para descargar:", dataParaDescargar);
+        const jsonString = JSON.stringify(dataParaDescargar, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `${archivoActual}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
 
     archivoSelector.addEventListener('change', async (event) => {
         archivoActual = event.target.value;
         const data = await cargarPartidos(archivoActual);
         if (data) {
+            // Cuando se carga un nuevo archivo, reiniciamos la pestaña activa
+            activeTabId = null;
             mostrarRondas(data);
         }
     });
 
     descargarJsonBtn.addEventListener('click', descargarJSONModificado);
 
-    
-
     async function cargarPartidos(archivo) {
         try {
-       const response = await fetch(`assets/partidos/${archivo}.json`);
+            const response = await fetch(`assets/partidos/${archivo}.json`);
             if (!response.ok) {
                 console.error(`Error al cargar ${archivo}: ${response.status} ${response.statusText}`);
                 return null;
@@ -67,169 +67,171 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-   function mostrarRondas(data) {
-    gestionRondasDiv.innerHTML = ''; // Limpiar el contenedor de rondas
-    if (!data || !data.rondas || data.rondas.length === 0) {
-        gestionRondasDiv.innerHTML = '<p>No hay rondas disponibles para este archivo.</p>';
-                
-        return;
-    }
-
-    const navTabs = document.createElement('ul');
-    navTabs.classList.add('nav', 'nav-tabs');
-    navTabs.setAttribute('role', 'tablist');
-    console.log("Se creó navTabs:", navTabs);
-
-    const tabContent = document.createElement('div');
-    tabContent.classList.add('tab-content');
-    console.log("Se creó tabContent:", tabContent);
-
-    data.rondas.forEach((ronda, index) => {
-        console.log(`Iterando ronda ${index}:`, ronda);
-        const tabId = `ronda-${index}`;
-        const isActive = index === 0;
-
-        // Crear la pestaña (li)
-        const listItem = document.createElement('li');
-        listItem.classList.add('nav-item');
-        listItem.setAttribute('role', 'presentation');
-        console.log(`Ronda ${index}: Se creó listItem:`, listItem);
-
-        const button = document.createElement('button');
-        button.classList.add('nav-link');
-        if (isActive) {
-            button.classList.add('active');
+    function mostrarRondas(data) {
+        gestionRondasDiv.innerHTML = ''; // Limpiar el contenedor de rondas
+        if (!data || !data.rondas || data.rondas.length === 0) {
+            gestionRondasDiv.innerHTML = '<p>No hay rondas disponibles para este archivo.</p>';
+            return;
         }
-        button.setAttribute('id', `${tabId}-tab`);
-        button.setAttribute('data-bs-toggle', 'tab');
-        button.setAttribute('data-bs-target', `#${tabId}`);
-        button.setAttribute('type', 'button');
-        button.setAttribute('role', 'tab');
-        button.setAttribute('aria-controls', tabId);
-        button.setAttribute('aria-selected', isActive);
-        button.textContent = ronda.ronda;
 
-        listItem.appendChild(button);
-        navTabs.appendChild(listItem);
-        console.log(`Ronda ${index}: Se creó botón:`, button);
-        console.log(`Ronda ${index}: navTabs después de appendChild:`, navTabs);
+        const navTabs = document.createElement('ul');
+        navTabs.classList.add('nav', 'nav-tabs');
+        navTabs.setAttribute('role', 'tablist');
+        console.log("Se creó navTabs:", navTabs);
 
-        // Crear el contenido de la pestaña (div)
-        const tabPane = document.createElement('div');
-        tabPane.classList.add('tab-pane', 'fade');
-        if (isActive) {
-            tabPane.classList.add('show', 'active');
-        }
-        tabPane.setAttribute('id', tabId);
-        tabPane.setAttribute('role', 'tabpanel');
-        tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
+        const tabContent = document.createElement('div');
+        tabContent.classList.add('tab-content');
+        console.log("Se creó tabContent:", tabContent);
 
-        // Crear el contenedor de la fila para los partidos
-        const partidosRow = document.createElement('div');
-        partidosRow.classList.add('row', 'mt-3');
+        data.rondas.forEach((ronda, index) => {
+            console.log(`Iterando ronda ${index}:`, ronda);
+            const tabId = `ronda-${index}`;
+            // Determinar si esta pestaña debe estar activa
+            const isActive = activeTabId ? (tabId === activeTabId) : (index === 0);
 
-        ronda.partidos.forEach((partido, partidoIndex) => {
-            // Crear el contenedor de cada partido (col-lg-4)
-            const partidoCol = document.createElement('div');
-            partidoCol.classList.add('col-lg-4', 'mb-3', 'partido-card'); // Añadí mb-3 para un poco de margen inferior
-            partidoCol.dataset.rondaIndex = index; // Guardamos el índice de la ronda
-            partidoCol.dataset.partidoIndex = partidoIndex; // Guardamos el índice del partido
+            // Crear la pestaña (li)
+            const listItem = document.createElement('li');
+            listItem.classList.add('nav-item');
+            listItem.setAttribute('role', 'presentation');
+            console.log(`Ronda ${index}: Se creó listItem:`, listItem);
 
-            // Construir el HTML para cada partido
-            partidoCol.innerHTML = `
-            <div class="bracket-round-list  ">
-                <div class="bracket-round-team">
-                    <a href="/teams/${partido.equipo1}">
-                        <img src="/assets/logos/${partido.tag1}.webp" alt="" class="img-fluid">
-                    </a>
-                </div>
-                <div class="round-titles">
-                    <div class="card-round-promo left">
-                        <h6>${partido.equipo1.substring(0, 12)}</h6>
+            const button = document.createElement('button');
+            button.classList.add('nav-link');
+            if (isActive) {
+                button.classList.add('active');
+            }
+            button.setAttribute('id', `${tabId}-tab`);
+            button.setAttribute('data-bs-toggle', 'tab');
+            button.setAttribute('data-bs-target', `#${tabId}`);
+            button.setAttribute('type', 'button');
+            button.setAttribute('role', 'tab');
+            button.setAttribute('aria-controls', tabId);
+            button.setAttribute('aria-selected', isActive);
+            button.textContent = ronda.ronda;
+
+            listItem.appendChild(button);
+            navTabs.appendChild(listItem);
+            console.log(`Ronda ${index}: Se creó botón:`, button);
+            console.log(`Ronda ${index}: navTabs después de appendChild:`, navTabs);
+
+            // Crear el contenido de la pestaña (div)
+            const tabPane = document.createElement('div');
+            tabPane.classList.add('tab-pane', 'fade');
+            if (isActive) {
+                tabPane.classList.add('show', 'active');
+            }
+            tabPane.setAttribute('id', tabId);
+            tabPane.setAttribute('role', 'tabpanel');
+            tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
+
+            // Crear el contenedor de la fila para los partidos
+            const partidosRow = document.createElement('div');
+            partidosRow.classList.add('row', 'mt-3');
+
+            ronda.partidos.forEach((partido, partidoIndex) => {
+                // Crear el contenedor de cada partido (col-lg-4)
+                const partidoCol = document.createElement('div');
+                partidoCol.classList.add('col-lg-4', 'mb-3', 'partido-card'); // Añadí mb-3 para un poco de margen inferior
+                partidoCol.dataset.rondaIndex = index; // Guardamos el índice de la ronda
+                partidoCol.dataset.partidoIndex = partidoIndex; // Guardamos el índice del partido
+                // Añadimos el ID de la pestaña a la tarjeta para recuperarlo fácilmente
+                partidoCol.dataset.tabId = tabId; 
+
+                // Construir el HTML para cada partido
+                partidoCol.innerHTML = `
+                    <div class="bracket-round-list">
+                        <div class="bracket-round-team">
+                            <a href="/teams/${partido.equipo1}">
+                                <img src="/assets/logos/${partido.tag1}.webp" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="round-titles">
+                            <div class="card-round-promo left">
+                                <h6>${partido.equipo1.substring(0, 12)}</h6>
+                            </div>
+                            <div class="card-round-promo mx-2">
+                                ${partido.stream ? `
+                                    <span>TWITCH</span>
+                                    <h6>${partido.resultado || ''}</h6>
+                                    <span>${partido.fecha || ''}</span>
+                                    <span>${partido.hora === "SI" ? '21:40' : (partido.hora === "NO" ? '22:20' : partido.hora || '')}</span>
+                                ` : (partido.special ? `
+                                    <span>TWITCH</span>
+                                    <h6>${partido.resultado || ''}</h6>
+                                    <span>${partido.hora || ''}</span>
+                                ` : `
+                                    <h6>${partido.resultado || ''}</h6>
+                                `)}
+                            </div>
+                            <div class="card-round-promo right">
+                                <h6>${partido.equipo2.substring(0, 12)}</h6>
+                            </div>
+                        </div>
+                        <div class="bracket-round-team-right">
+                            <a href="/teams/${partido.equipo2}">
+                                <img src="/assets/logos/${partido.tag2}.webp" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-color-left ${partido.equipo1 === "7Z" ? 'S7Z' : partido.tag1}"></div>
+                            <div class="card-color-right ${partido.equipo2 === "7Z" ? 'S7Z' : partido.tag2}"></div>
+                        </div>
                     </div>
-                    <div class="card-round-promo mx-2">
-                        ${partido.stream ? `
-                            <span>TWITCH</span>
-                            <h6>${partido.resultado || ''}</h6>
-                            <span>${partido.fecha || ''}</span>
-                            <span>${partido.hora === "SI" ? '21:40' : (partido.hora === "NO" ? '22:20' : partido.hora || '')}</span>
-                        ` : (partido.special ? `
-                            <span>TWITCH</span>
-                            <h6>${partido.resultado || ''}</h6>
-                            <span>${partido.hora || ''}</span>
-                        ` : `
-                            <h6>${partido.resultado || ''}</h6>
-                        `)}
-                    </div>
-                    <div class="card-round-promo right">
-                        <h6>${partido.equipo2.substring(0, 12)}</h6>
-                    </div>
-                </div>
-                <div class="bracket-round-team-right">
-                    <a href="/teams/${partido.equipo2}">
-                        <img src="/assets/logos/${partido.tag2}.webp" alt="" class="img-fluid">
-                    </a>
-                </div>
-                <div class="card-back">
-                    <div class="card-color-left ${partido.equipo1 === "7Z" ? 'S7Z' : partido.tag1}"></div>
-                    <div class="card-color-right ${partido.equipo2 === "7Z" ? 'S7Z' : partido.tag2}"></div>
-                </div>
-            </div>
-            `;
+                `;
 
-            partidosRow.appendChild(partidoCol);
+                partidosRow.appendChild(partidoCol);
+            });
+
+            tabPane.appendChild(partidosRow);
+            tabContent.appendChild(tabPane);
+            console.log(`Ronda ${index}: Se creó tabPane:`, tabPane);
+            console.log(`Ronda ${index}: tabContent después de appendChild:`, tabContent);
         });
 
-        tabPane.appendChild(partidosRow);
-        tabContent.appendChild(tabPane);
-         console.log(`Ronda ${index}: Se creó tabPane:`, tabPane);
-    console.log(`Ronda ${index}: tabContent después de appendChild:`, tabContent);
-    });
+        gestionRondasDiv.appendChild(navTabs);
+        gestionRondasDiv.appendChild(tabContent);
+        console.log("gestionRondasDiv después de agregar navTabs:", gestionRondasDiv);
+        console.log("gestionRondasDiv después de agregar tabContent:", gestionRondasDiv);
 
-    gestionRondasDiv.appendChild(navTabs);
-    gestionRondasDiv.appendChild(tabContent);
-    console.log("gestionRondasDiv después de agregar navTabs:", gestionRondasDiv);
-    console.log("gestionRondasDiv después de agregar tabContent:", gestionRondasDiv);
-
-
-     const tarjetasPartido = document.querySelectorAll('.partido-card');
+        const tarjetasPartido = document.querySelectorAll('.partido-card');
         tarjetasPartido.forEach(tarjeta => {
             tarjeta.addEventListener('click', mostrarFormularioEdicion);
         });
-
-
-}
+    }
 
     function mostrarFormularioEdicion(event) {
-    console.log('Se mostro una tarjeta de partido');
-    const tarjetaPartido = event.currentTarget;
-    console.log('tarjetaPartido:', tarjetaPartido);
-    const rondaIndex = parseInt(tarjetaPartido.dataset.rondaIndex);
-    console.log('rondaIndex:', rondaIndex);
-    const partidoIndex = parseInt(tarjetaPartido.dataset.partidoIndex);
-    console.log('partidoIndex:', partidoIndex);
+        console.log('Se mostro una tarjeta de partido');
+        const tarjetaPartido = event.currentTarget;
+        console.log('tarjetaPartido:', tarjetaPartido);
+        const rondaIndex = parseInt(tarjetaPartido.dataset.rondaIndex);
+        console.log('rondaIndex:', rondaIndex);
+        const partidoIndex = parseInt(tarjetaPartido.dataset.partidoIndex);
+        console.log('partidoIndex:', partidoIndex);
 
-    if (partidosData[archivoActual] && partidosData[archivoActual].rondas && partidosData[archivoActual].rondas[rondaIndex] && partidosData[archivoActual].rondas[rondaIndex].partidos && partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex]) {
-        partidoSeleccionado = partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex];
-        console.log('partidoSeleccionado:', partidoSeleccionado);
+        // Almacenar el ID de la pestaña actual
+        activeTabId = tarjetaPartido.dataset.tabId; 
+        console.log('activeTabId al mostrar formulario:', activeTabId);
 
-        // Precargar los datos en el formulario
-        equipo1InputEdit.value = partidoSeleccionado.equipo1;
-        equipo2InputEdit.value = partidoSeleccionado.equipo2;
-        streamSelectEdit.value = partidoSeleccionado.stream ? 'true' : 'false';
-        resultadoSelectEdit.value = partidoSeleccionado.resultado || 'VS';
-        fechaInputEdit.value = partidoSeleccionado.fecha || '';
-        horaInputEdit.value = partidoSeleccionado.hora === "SI" ? '21:40' : (partidoSeleccionado.hora === "NO" ? '22:20' : partidoSeleccionado.hora || '');
-        logoLocalEdit.src = `/assets/logos/${partidoSeleccionado.tag1}.webp`;
-        logoVisitanteEdit.src = `/assets/logos/${partidoSeleccionado.tag2}.webp`;
+        if (partidosData[archivoActual] && partidosData[archivoActual].rondas && partidosData[archivoActual].rondas[rondaIndex] && partidosData[archivoActual].rondas[rondaIndex].partidos && partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex]) {
+            partidoSeleccionado = partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex];
+            console.log('partidoSeleccionado:', partidoSeleccionado);
 
-        formularioEdicion.style.display = 'block';
-        console.log('formularioEdicion.style.display:', formularioEdicion.style.display);
-    } else {
-        console.error('No se pudo encontrar el partido seleccionado en los datos.');
+            // Precargar los datos en el formulario
+            equipo1InputEdit.value = partidoSeleccionado.equipo1;
+            equipo2InputEdit.value = partidoSeleccionado.equipo2;
+            streamSelectEdit.value = partidoSeleccionado.stream ? 'true' : 'false';
+            resultadoSelectEdit.value = partidoSeleccionado.resultado || 'VS';
+            fechaInputEdit.value = partidoSeleccionado.fecha || '';
+            horaInputEdit.value = partidoSeleccionado.hora === "SI" ? '21:40' : (partidoSeleccionado.hora === "NO" ? '22:20' : partidoSeleccionado.hora || '');
+            logoLocalEdit.src = `/assets/logos/${partidoSeleccionado.tag1}.webp`;
+            logoVisitanteEdit.src = `/assets/logos/${partidoSeleccionado.tag2}.webp`;
+
+            formularioEdicion.style.display = 'block';
+            console.log('formularioEdicion.style.display:', formularioEdicion.style.display);
+        } else {
+            console.error('No se pudo encontrar el partido seleccionado en los datos.');
+        }
     }
-   }
-
 
     function guardarEdicionPartido() {
         if (partidoSeleccionado) {
@@ -244,21 +246,37 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarRondas(partidosData[archivoActual]);
             formularioEdicion.style.display = 'none';
             partidoSeleccionado = null;
+
+            // Reactivar la pestaña que estaba activa
+            if (activeTabId) {
+                const tabButton = document.getElementById(`${activeTabId}-tab`);
+                if (tabButton) {
+                    tabButton.click(); // Simula un clic en el botón de la pestaña para activarla
+                }
+            }
         }
     }
 
     function cancelarEdicionPartido() {
         formularioEdicion.style.display = 'none';
         partidoSeleccionado = null;
+        // Si cancela, también queremos volver a la pestaña anterior
+        if (activeTabId) {
+            const tabButton = document.getElementById(`${activeTabId}-tab`);
+            if (tabButton) {
+                tabButton.click();
+            }
+        }
     }
 
-    archivoSelector.addEventListener('change', async (event) => {
-        archivoActual = event.target.value;
-        const data = await cargarPartidos(archivoActual);
-        if (data) {
-            mostrarRondas(data);
-        }
-    });
+    // El evento change del selector de archivo ya lo tenías
+    // archivoSelector.addEventListener('change', async (event) => {
+    //     archivoActual = event.target.value;
+    //     const data = await cargarPartidos(archivoActual);
+    //     if (data) {
+    //         mostrarRondas(data);
+    //     }
+    // });
 
     guardarEdicionBtn.addEventListener('click', guardarEdicionPartido);
     cancelarEdicionBtn.addEventListener('click', cancelarEdicionPartido);
@@ -269,5 +287,4 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarRondas(data);
         }
     });
-
 });

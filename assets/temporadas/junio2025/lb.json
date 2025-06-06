@@ -1,66 +1,72 @@
-[
+{
+  "tag": "LB",
+  "team": "LAST BREATH",
+  "org": "",
+  "activo": true,
+  "capitan": "JDIAZ",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "LAST BREATH",
+  "seguro": "",
+  "link": "/equipos/last-breath",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "2",
+    "M2": "R",
+    "M3": "R",
+    "M4": "R",
+    "M5": "R",
+    "M6": "0",
+    "M7": "D",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "LB",
-        "team": "LAST BREATH",
-        "org": "",
-        "activo": true,
-        "capitan": "JDIAZ",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "LAST BREATH",
-        "seguro": false,
-        "link": "/equipos/last-breath",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "2",
-            "M2": "",
-            "M3": "",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "IamNaranja謝",
-                "ID": "HC6526",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "TTVJDiazpros",
-                "ID": "59MX9CR",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "CapitanRoots",
-                "ID": "NPM70M4",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Frants|",
-                "ID": "K6GHMN6",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "NG・Witch",
-                "ID": "54KN95",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DannGP",
-                "ID": "77GCPT4",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Polarま",
-                "ID": "NQLR6GC",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "IamNaranja謝",
+      "ID": "HC6526",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TTVJDiazpros",
+      "ID": "59MX9CR",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "CapitanRoots",
+      "ID": "NPM70M4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Frants|",
+      "ID": "K6GHMN6",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "NG・Witch",
+      "ID": "54KN95",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DannGP",
+      "ID": "77GCPT4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Polarま",
+      "ID": "NQLR6GC",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}

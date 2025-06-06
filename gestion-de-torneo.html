@@ -82,44 +82,45 @@ title: Gestion | Nacion Unite
                 <input type="file" id="importFileInput" accept=".json" style="display: none;">
                 <button id="importAllDataBtn" class="btn btn-dark me-2 mb-2"><i class="bi bi-box-arrow-up"></i> Importar
                     Datos desde JSON</button>
-                  <input type="file" id="importTeamsFileInput" accept=".json" multiple style="display: none;">
-            <button id="importTeamsBtn" class="btn btn-primary mb-2"><i class="bi bi-folder-plus"></i> Importar Archivos de Equipo (Unir)
-            </button>
+                <input type="file" id="importTeamsFileInput" accept=".json" multiple style="display: none;">
+                <button id="importTeamsBtn" class="btn btn-primary mb-2"><i class="bi bi-folder-plus"></i> Importar
+                    Archivos de Equipo (Unir)
+                </button>
             </div>
         </div>
 
         <div class="card mb-4">
-        <div class="card-header bg-success text-white">
-            <h4><i class="bi bi-bar-chart-fill"></i> Estadísticas Globales</h4>
-        </div>
-        <div class="card-body">
-            <div class="row text-center">
-                <div class="col-md-3 mb-3">
-                    <div class="p-3 border rounded shadow-sm bg-light">
-                        <h5>Equipos Totales</h5>
-                        <h3 id="statTotalTeams" class="text-primary">0</h3>
+            <div class="card-header bg-success text-white">
+                <h4><i class="bi bi-bar-chart-fill"></i> Estadísticas Globales</h4>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 border rounded shadow-sm bg-light">
+                            <h5>Equipos Totales</h5>
+                            <h3 id="statTotalTeams" class="text-primary">0</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="p-3 border rounded shadow-sm bg-light">
-                        <h5>Jugadores Totales</h5>
-                        <h3 id="statTotalPlayers" class="text-info">0</h3>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 border rounded shadow-sm bg-light">
+                            <h5>Jugadores Totales</h5>
+                            <h3 id="statTotalPlayers" class="text-info">0</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="p-3 border rounded shadow-sm bg-light">
-                        <h5>Equipos Activos</h5>
-                        <h3 id="statActiveTeams" class="text-success">0</h3>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 border rounded shadow-sm bg-light">
+                            <h5>Equipos Activos</h5>
+                            <h3 id="statActiveTeams" class="text-success">0</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="p-3 border rounded shadow-sm bg-light">
-                        <h5>Jugadores Sin Equipo</h5>
-                        <h3 id="statPlayersNoTeam" class="text-warning">0</h3>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 border rounded shadow-sm bg-light">
+                            <h5>Jugadores Sin Equipo</h5>
+                            <h3 id="statPlayersNoTeam" class="text-warning">0</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <div class="card mb-5">
@@ -172,11 +173,16 @@ title: Gestion | Nacion Unite
                         <thead>
                             <tr>
                                 <th>Tag</th>
-                                <th>Nombre del Equipo</th>
+                                <th>Nombre Equipo</th>
+                    
+                                <th>Activo</th>
                                 <th>Capitán</th>
-                                <th># Jugadores</th>
                                 <th>Región</th>
-                                <th>Estado</th>
+                                <th>Seguro</th>
+         
+                                <th>Grupo</th>
+                        
+                                <th>Partidos</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -287,112 +293,99 @@ title: Gestion | Nacion Unite
     </div>
 
     <div class="modal fade" id="editTeamModal" tabindex="-1" aria-labelledby="editTeamModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editTeamModalLabel">Editar Detalles de Equipo: <span id="editTeamTagSpan"></span></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="editTeamForm">
-                            <input type="hidden" id="editTeamOriginalTag"> <div class="mb-3">
-                                <label for="editTeamOrg" class="form-label">Organización (Org)</label>
-                                <input type="text" class="form-control" id="editTeamOrg" placeholder="Nombre de la organización">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editTeamNombreAnterior" class="form-label">Nombre Anterior del Equipo</label>
-                                <input type="text" class="form-control" id="editTeamNombreAnterior" placeholder="Si aplica">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editTeamNuevoNombre" class="form-label">Nuevo Nombre del Equipo (campo no usado)</label>
-                                <input type="text" class="form-control" id="editTeamNuevoNombre" placeholder="Este campo se actualiza con el nombre actual" disabled>
-                                <div class="form-text">Este campo es informativo y se actualiza automáticamente con el nombre actual del equipo.</div>
-                            </div>
-                             <div class="mb-3">
-                                <label for="editTeamSeguro" class="form-label">¿Seguro?</label>
-                                <select class="form-select" id="editTeamSeguro">
-                                    <option value="true">Sí</option>
-                                    <option value="false">No</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editTeamLink" class="form-label">Enlace Personalizado</label>
-                                <input type="text" class="form-control" id="editTeamLink" placeholder="/equipos/nombre-equipo">
-                                <div class="form-text">Ej: /equipos/nombre-equipo (se genera automáticamente con el nombre del equipo, pero se puede sobrescribir)</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="editTeamGrupo" class="form-label">Grupo Asignado</label>
-                                <input type="text" class="form-control" id="editTeamGrupo" placeholder="SIN ASIGNAR">
-                            </div>
-                             <div class="mb-3">
-                                <label for="editTeamPosicionDesempate" class="form-label">Posición Desempate</label>
-                                <select class="form-select" id="editTeamPosicionDesempate">
-                                    <option value="true">Sí</option>
-                                    <option value="false">No</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Guardar Cambios</button>
-                        </form>
-                    </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTeamModalLabel">Editar Detalles de Equipo: <span
+                            id="editTeamTagSpan"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editTeamForm">
+                        <input type="hidden" id="editTeamOriginalTag">
+                        <div class="mb-3">
+                            <label for="editTeamOrg" class="form-label">Organización (Org)</label>
+                            <input type="text" class="form-control" id="editTeamOrg"
+                                placeholder="Nombre de la organización">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamNombreAnterior" class="form-label">Nombre Anterior del Equipo</label>
+                            <input type="text" class="form-control" id="editTeamNombreAnterior" placeholder="Si aplica">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamNuevoNombre" class="form-label">Nuevo Nombre del Equipo (campo no
+                                usado)</label>
+                            <input type="text" class="form-control" id="editTeamNuevoNombre"
+                                placeholder="Este campo se actualiza con el nombre actual" disabled>
+                            <div class="form-text">Este campo es informativo y se actualiza automáticamente con el
+                                nombre actual del equipo.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamSeguro" class="form-label">¿Seguro?</label>
+                            <select class="form-select" id="editTeamSeguro">
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamLink" class="form-label">Enlace Personalizado</label>
+                            <input type="text" class="form-control" id="editTeamLink"
+                                placeholder="/equipos/nombre-equipo">
+                            <div class="form-text">Ej: /equipos/nombre-equipo (se genera automáticamente con el nombre
+                                del equipo, pero se puede sobrescribir)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamGrupo" class="form-label">Grupo Asignado</label>
+                            <input type="text" class="form-control" id="editTeamGrupo" placeholder="SIN ASIGNAR">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTeamPosicionDesempate" class="form-label">Posición Desempate</label>
+                            <select class="form-select" id="editTeamPosicionDesempate">
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Guardar
+                            Cambios</button>
+                    </form>
                 </div>
             </div>
+        </div>
     </div>
 
-   
-      <div class="container mt-5">
-        <hr class="my-5">
 
-        <div class="card mb-5">
-            <div class="card-header bg-dark text-white">
-                <h2>Gestión de Puntos por Partidos</h2>
-            </div>
-            <div class="card-body">
-                <p>Aquí puedes ajustar los puntos de cada partido para los equipos de cada grupo. Los cambios se guardarán al hacer clic en el botón.</p>
-                
-                <div class="mb-4">
-                    <h3>Grupo Norte</h3>
-                    <div class="table-responsive">
-                        <table id="tablaGrupoNorte" class="table table-striped table-bordered w-100 compact cell-border">
-                            <thead>
-                                <tr>
-                                    <th>Nombre Equipo</th>
-                                    <th>Tag</th>
-                                    <th>Puntos Totales</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                </tbody>
-                        </table>
+    <div class="modal fade" id="viewMatchesModal" tabindex="-1" aria-labelledby="viewMatchesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewMatchesModalLabel">Partidos de <span id="matchesTeamName"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Partidos del Equipo (Edición Manual)</h6>
+                    <form id="editMatchesForm">
+                        <input type="hidden" id="editMatchesTeamTag">
+                        <div id="matchesInputList" class="row">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-save"></i> Guardar Cambios
+                            Manuales</button>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <h6>Partidos Encontrados en Archivos Externos</h6>
+                    <div id="externalMatchesList">
+                        <p class="text-muted">Cargando partidos externos...</p>
                     </div>
                 </div>
-
-                <div class="mb-4">
-                    <h3>Grupo Sur</h3>
-                    <div class="table-responsive">
-                        <table id="tablaGrupoSur" class="table table-striped table-bordered w-100 compact cell-border">
-                            <thead>
-                                <tr>
-                                    <th>Nombre Equipo</th>
-                                    <th>Tag</th>
-                                    <th>Puntos Totales</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="text-end">
-                    <button id="guardarTodosMarcadores" class="btn btn-primary btn-lg">
-                        <i class="bi bi-save"></i> Guardar Todos los Marcadores
-                    </button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
-        </div>
-
-
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -401,7 +394,8 @@ title: Gestion | Nacion Unite
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
-   |<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    |
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <script src="gestion-torneo.js"></script>
 

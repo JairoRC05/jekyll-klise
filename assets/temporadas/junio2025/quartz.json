@@ -1,67 +1,72 @@
-[
+{
+  "tag": "QUARTZ",
+  "team": "DFS QUARTZ",
+  "org": "",
+  "activo": true,
+  "capitan": "CROSS",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DFS QUARTZ",
+  "seguro": "",
+  "link": "/equipos/dragon-flies-gaming--quartz",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "R",
+    "M3": "0",
+    "M4": "R",
+    "M5": "1",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "D",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "QUARTZ",
-        "team": "DFS QUARTZ",
-        "org": "",
-        "activo": true,
-        "capitan": "CROSS",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "DFS QUARTZ",
-        "seguro": false,
-        "link": "/equipos/dragon-flies-gaming--quartz",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "0",
-            "M2": "",
-            "M3": "0",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "DFs・Cros",
-                "ID": "7TE1K80",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DFs・DoPa",
-                "ID": "HHX3CAP",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DFs・HaKuna",
-                "ID": "CM30NA3",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DFs・Sísifo",
-                "ID": "4AY0P1E",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "La_Lujuria",
-                "ID": "G7YF5FG",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DFs・Poshiヅ",
-                "ID": "H984G0F",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DFs・RaDahN",
-                "ID": "P1MM782",
-                "avatar": "male1"
-            }
-        ],
-        "posicionDesempate": false
+      "nickname": "DFs・Cros",
+      "ID": "7TE1K80",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・DoPa",
+      "ID": "HHX3CAP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Sísifo",
+      "ID": "4AY0P1E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "La_Lujuria",
+      "ID": "G7YF5FG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Poshiヅ",
+      "ID": "H984G0F",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ムlixendカモ",
+      "ID": "5F9X6LC",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "刃Daaaan",
+      "ID": "43CHANR",
+      "avatar": "male1"
     }
-]
+  ],
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

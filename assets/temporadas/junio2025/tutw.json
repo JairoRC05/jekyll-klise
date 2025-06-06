@@ -1,72 +1,88 @@
-[
+{
+  "tag": "TUTW",
+  "team": "TUT ONECOIN",
+  "org": "THE UNOWN TEAM",
+  "activo": true,
+  "capitan": "GERD",
+  "region": "LAN",
+  "teamNombreAnterior": "TUT WARRIORS",
+  "teamNuevoNombre": "TUT ONECOIN",
+  "seguro": "true",
+  "link": "/equipos/theunownteam--warriors",
+  "grupo": "NORTH",
+  "posicionDesempate": 0,
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "0",
+    "M4": "3",
+    "M5": "D",
+    "M6": "3",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "TUTW",
-        "team": "TUT WARRIORS",
-        "org": "THE UNOWN TEAM",
-        "activo": true,
-        "capitan": "GERD",
-        "region": "LAN",
-        "teamNombreAnterior": "LA ONE COIN",
-        "teamNuevoNombre": "TUT WARRIORS",
-        "seguro": false,
-        "link": "/equipos/theunownteam--warriors",
-        "grupo": "NORTE",
-        "posicionDesempate": true,
-        "partidos": {
-            "M1": "3",
-            "M2": "3",
-            "M3": "0",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "Raydemort",
-                "ID": "H8Y27LQ",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "GerardAC",
-                "ID": "A9390CX",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "WK・Metal",
-                "ID": "MR027NE",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "friedefan",
-                "ID": "501AN2N",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Liкoジ",
-                "ID": "XYLMNNE",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "RNT・Zulo銀",
-                "ID": "7759CK5",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "きkenji",
-                "ID": "4F1X6AH",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "ČryptoX",
-                "ID": "A2AG7X1",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "Raydemort",
+      "ID": "H8Y27LQ",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "GerardAC",
+      "ID": "A9390CX",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "WK・Metal",
+      "ID": "MR027NE",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "friedefan",
+      "ID": "501AN2N",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "Liкoジ",
+      "ID": "XYLMNNE",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "きkenji",
+      "ID": "4F1X6AH",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "ČryptoX",
+      "ID": "A2AG7X1",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "RNT・Luffy12",
+      "ID": "MKCA597",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m3": 1,
+      "m4": 1
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

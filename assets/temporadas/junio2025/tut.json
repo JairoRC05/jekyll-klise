@@ -1,74 +1,80 @@
-[
+{
+  "tag": "TUT",
+  "team": "THE UNOWN TEAM",
+  "org": "THE UNOWN TEAM",
+  "activo": true,
+  "capitan": "BREN",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "THE UNOWN TEAM",
+  "seguro": "true",
+  "link": "/equipos/theunownteam",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "D",
+    "M3": "3",
+    "M4": "3",
+    "M5": "R",
+    "M6": "R",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "TUT",
-        "team": "THE UNOWN TEAM",
-        "org": "THE UNOWN TEAM",
-        "activo": true,
-        "capitan": "BREN",
-        "region": "LAN",
-        "teamNombreAnterior": "2X1500",
-        "teamNuevoNombre": "THE UNOWN TEAM",
-        "seguro": false,
-        "link": "/equipos/theunownteam",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "3",
-            "M2": "",
-            "M3": "",
-            "M4": "",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "TuT • Bren10",
-                "ID": "2XX1PF0",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "炊・Ashura",
-                "ID": "140PENG",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "BeniManitas?",
-                "ID": "229QRAM",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "TuT • 7Ibu",
-                "ID": "21QE8M2",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Akane秋",
-                "ID": "FYF3MC8",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "TuT狩DownURL",
-                "ID": "XH4P03E",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "TuT-Bernylml",
-                "ID": "RH49KXK",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Hades地獄",
-                "ID": "C5C89CK",
-                "avatar": "male1",
-                "mvp": true,
-                "numero": 2,
-                "m3": 2
-            }
-        ]
+      "nickname": "TuT • Bren10",
+      "ID": "2XX1PF0",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "炊・Ashura",
+      "ID": "140PENG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "BeniManitas?",
+      "ID": "229QRAM",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT • 7Ibu",
+      "ID": "21QE8M2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Akane秋",
+      "ID": "FYF3MC8",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT狩DownURL",
+      "ID": "XH4P03E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT-Bernylml",
+      "ID": "RH49KXK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Hades地獄",
+      "ID": "C5C89CK",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m3": 2
     }
-]
+  ],
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

@@ -1,61 +1,67 @@
-[
+{
+  "tag": "TAE",
+  "team": "TEAM AETHER",
+  "org": "",
+  "activo": true,
+  "capitan": "MATI",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "TEAM AETHER",
+  "seguro": true,
+  "link": "/equipos//villanos-esports--team-aether",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "3",
+    "M3": "0",
+    "M4": "D",
+    "M5": "3",
+    "M6": "3",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "TAE",
-        "team": "TEAM AETHER",
-        "org": "",
-        "activo": true,
-        "capitan": "MATI",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "TEAM AETHER",
-        "seguro": false,
-        "link": "/equipos/villanos-esports--team-aether",
-        "grupo": "NORTE",
-        "partidos": {
-            "M1": "0",
-            "M2": "3",
-            "M3": "0",
-            "M4": "0",
-            "M5": "0",
-            "M6": "0",
-            "M7": "0",
-            "M8": "0",
-            "M9": "0",
-            "M10": "0",
-            "M11": "0",
-            "M12": "0"
-        },
-        "jugadores": [
-            {
-                "nickname": "Summ£r",
-                "ID": "TYLMP54",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "WorstOne_uwu",
-                "ID": "PQA1LX0",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Zukopham",
-                "ID": "AFNKN5X",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "TheRaYMoNz",
-                "ID": "FFNN7FM",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "§TachyonTTV®",
-                "ID": "XHAQ5YM",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "DarkyriaX",
-                "ID": "GNC462K",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "Summ£r",
+      "ID": "TYLMP54",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "WorstOne_uwu",
+      "ID": "PQA1LX0",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Zukopham",
+      "ID": "AFNKN5X",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TheRaYMoNz",
+      "ID": "FFNN7FM",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "§TachyonTTV®",
+      "ID": "XHAQ5YM",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DarkyriaX",
+      "ID": "GNC462K",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": false
+}

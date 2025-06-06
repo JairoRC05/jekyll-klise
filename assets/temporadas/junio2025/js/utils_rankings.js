@@ -29,7 +29,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
         let grupoDeEquipos = equiposPorPuntos[puntos];
 
         // Desempate por enfrentamiento directo
-        console.log(`Equipos con ${puntos} puntos:`, grupoDeEquipos.map(equipo => `${equipo.team} (${equipo.tag})`));
+        // console.log(`Equipos con ${puntos} puntos:`, grupoDeEquipos.map(equipo => `${equipo.team} (${equipo.tag})`));
         if (grupoDeEquipos.length > 1) {
             grupoDeEquipos.sort((equipoA, equipoB) => {
                 // Primero, verifica la propiedad posicionDesempate
@@ -51,6 +51,9 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
         grupoDeEquipos.forEach(equipo => {
             const colDiv = document.createElement('div');
             colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6','col-xl-4');
+            // Añadir el tag como un data-attribute para fácil referencia
+            colDiv.dataset.teamTag = equipo.tag; 
+
             const cardRoundListDiv = document.createElement('div');
             cardRoundListDiv.classList.add('card-round-list');
             const cardRoundTeamDiv = document.createElement('div');
@@ -71,7 +74,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
             if (mostrarIconos) {
                 if (overallIndex < 4) {
                     const vipLogo = document.createElement('i');
-                    vipLogo.classList.add('bi', 'bi-trophy');
+                    vipLogo.classList.add('bi', 'bi-trophy-fill');
                     vipLogo.style.color = 'blue';
                     titleH2.appendChild(document.createTextNode(' '));
                     titleH2.appendChild(vipLogo);
@@ -146,7 +149,6 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
     }
 }
 
-
 async function buscarResultadosDirectos(equipoTagA, equipoTagB, grupo) {
     console.log(`Buscando resultados directos entre ${equipoTagA} y ${equipoTagB} del grupo ${grupo}`);
     const resultados = { victorias: 0, derrotas: 0 };
@@ -210,77 +212,129 @@ function invertirResultado(resultado) {
 }
 
 
-
-function compararRankings(rankingAnterior, equiposData, contenedorGrupo) {
+function compararProgresoEquipos(previousTeamPoints, currentEquiposData, contenedorGrupo) {
     if (!contenedorGrupo) return;
-    const equiposOrdenados = Array.from(contenedorGrupo.querySelectorAll('.card-round-list'));
-    const rankingAnteriorMap = new Map(rankingAnterior.map(equipo => [equipo.tag, equipo.posicion]));
 
-    equiposOrdenados.forEach((cardElement, index) => {
-        const equipoTag = cardElement.querySelector('.card-color-left').classList[1];
-        const posicionActual = index + 1;
-        const posicionAnterior = rankingAnteriorMap.get(equipoTag);
+    // Obtener los elementos de las tarjetas que ya fueron renderizadas en el DOM
+    // Ahora usamos el data-team-tag en el colDiv para identificar el equipo
+    const equipoElements = Array.from(contenedorGrupo.querySelectorAll('.col-12[data-team-tag]'));
 
-        if (posicionAnterior !== undefined) {
-            const cambio = posicionAnterior - posicionActual;
-            let indicador = '';
-            let claseIcono = '';
+    equipoElements.forEach(colDivElement => {
+        const equipoTag = colDivElement.dataset.teamTag;
+        const cardRoundRecordDiv = colDivElement.querySelector('.card-round-record');
+        
+        // Encontrar los datos actuales de este equipo
+        const currentEquipo = currentEquiposData.find(eq => eq.tag === equipoTag);
+
+        if (!currentEquipo) {
+            console.warn(`No se encontró data actual para el equipo ${equipoTag}.`);
+            return;
+        }
+
+        const currentSuma = currentEquipo.suma;
+        const previousSuma = previousTeamPoints[equipoTag];
+
+        let indicador = '';
+        let claseIcono = '';
+
+        if (previousSuma !== undefined) { // Si el equipo ya tenía puntos registrados
+            const cambio = currentSuma - previousSuma; // Cambio en la suma de puntos
 
             if (cambio > 0) {
-                indicador = 'SUBE';
-                claseIcono = 'fas fa-caret-up text-success';
+                indicador = '';
+                claseIcono = 'bi bi-arrow-up-circle-fill';
             } else if (cambio < 0) {
-                indicador = 'BAJA';
-                claseIcono = 'fas fa-caret-down text-danger';
+                indicador = '';
+                claseIcono = 'bi bi-arrow-down-circle-fill';
             } else {
-                indicador = 'MANTIENE';
-                claseIcono = 'fa-solid fa-equals text-primary';
-            }
-
-            const cambioSpan = document.createElement('span');
-            cambioSpan.classList.add('cambio-posicion');
-            cambioSpan.innerHTML = `<i class="${claseIcono}"></i>`;
-            const cardRoundRecordDiv = cardElement.querySelector('.card-round-record');
-            if (cardRoundRecordDiv) {
-                cardRoundRecordDiv.appendChild(document.createTextNode(' '));
-                cardRoundRecordDiv.appendChild(cambioSpan);
+                indicador = '';
+                claseIcono = 'bi bi-arrow-down-up';
             }
         } else {
-            const nuevoSpan = document.createElement('span');
-            nuevoSpan.classList.add('cambio-posicion', 'text-info');
-            nuevoSpan.innerHTML = '<i class="fas fa-star"></i> NUEVO';
-            const cardRoundRecordDiv = cardElement.querySelector('.card-round-record');
-            if (cardRoundRecordDiv) {
-                cardRoundRecordDiv.appendChild(document.createTextNode(' '));
-                cardRoundRecordDiv.appendChild(nuevoSpan);
+            // El equipo es "nuevo" en el registro de puntos, o es la primera carga.
+            indicador = '';
+            claseIcono = 'bi bi-star-fill text-info';
+        }
+
+        // Crear y añadir el span para el indicador de progreso
+        const progresoSpan = document.createElement('span');
+        progresoSpan.classList.add('progreso-individual');
+        progresoSpan.innerHTML = `<i class="${claseIcono}"></i> ${indicador}`;
+        
+        // Añadirlo al div de records, justo después de los spans de los partidos
+        if (cardRoundRecordDiv) {
+            // Puedes decidir si quieres un espacio o un separador visual
+            const existingSpans = cardRoundRecordDiv.querySelectorAll('span.record');
+            if (existingSpans.length > 0) {
+                 // Añadir un separador visual, por ejemplo una barra vertical
+                const separator = document.createElement('span');
+                separator.textContent = ' '; // O '&nbsp;&nbsp;'
+                cardRoundRecordDiv.appendChild(separator);
             }
+            cardRoundRecordDiv.appendChild(progresoSpan);
         }
     });
 }
 
-function descargarRanking(equiposDataNorte, equiposDataSur) {
-    const rankingActual = {
-        norte: equiposDataNorte.map((equipo, index) => ({
-            tag: equipo.tag,
-            team: equipo.team,
-            posicion: index + 1,
-            suma: equipo.suma
-        })),
-        sur: equiposDataSur.map((equipo, index) => ({
-            tag: equipo.tag,
-            team: equipo.team,
-            posicion: index + 1,
-            suma: equipo.suma
-        }))
-    };
-    const json = JSON.stringify(rankingActual, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'ranking_actual.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+
+// **NUEVA FUNCIÓN GENÉRICA PARA CARGAR Y MOSTRAR RANKING**
+async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
+    const grupoDiv = document.getElementById(grupoDivId);
+    const equiposData = [];
+
+     const fetchPromises = teamFiles.map(file =>
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} for ${file}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // *** CAMBIO CRUCIAL AQUÍ ***
+                // Ahora 'data' es el objeto directo del equipo, no un array que lo contiene.
+                // Verificamos que 'data' exista y que su propiedad 'grupo' coincida.
+                if (data && data.grupo === grupoNombre) { // <--- MODIFICADO
+                    const equipo = data; // <--- 'equipo' ahora es el objeto 'data' directamente
+                    let suma = 0;
+                    if (equipo.partidos) {
+                        for (const partido in equipo.partidos) {
+                            suma += parseInt(equipo.partidos[partido]) || 0;
+                        }
+                    }
+                    equiposData.push({ ...equipo, suma: suma });
+                }
+            })
+            .catch(error => console.error(`Error fetching ${file}:`, error))
+    );
+
+    await Promise.all(fetchPromises);
+
+    equiposData.sort((a, b) => b.suma - a.suma);
+    console.log(`equiposData ${grupoNombre}:`, equiposData);
+
+    // Cargar el ranking anterior (puntos) específico para este grupo
+    const localStorageKey = `rankingAnteriorPuntos${grupoNombre}`; // Key única por grupo
+    const rankingAnteriorPuntos = localStorage.getItem(localStorageKey);
+    let previousTeamPoints = {};
+    if (rankingAnteriorPuntos) {
+        previousTeamPoints = JSON.parse(rankingAnteriorPuntos);
+        console.log(`Ranking anterior (${grupoNombre}) cargado desde localStorage:`, previousTeamPoints);
+    } else {
+        console.log(`No se encontró ranking anterior de puntos para ${grupoNombre} en localStorage.`);
+    }
+
+    // Mostrar equipos y aplicar la comparación de progreso
+    if (grupoDiv) {
+        await mostrarEquipos(equiposData, grupoDiv, grupoNombre); // Esperamos a que se rendericen
+        compararProgresoEquipos(previousTeamPoints, equiposData, grupoDiv);
+    }
+    
+    // Guardar el ranking actual de puntos para la próxima comparación de este grupo
+    const currentTeamPoints = {};
+    equiposData.forEach(equipo => {
+        currentTeamPoints[equipo.tag] = equipo.suma;
+    });
+    localStorage.setItem(localStorageKey, JSON.stringify(currentTeamPoints));
+    console.log(`Ranking actual de puntos para ${grupoNombre} guardado en localStorage.`);
 }

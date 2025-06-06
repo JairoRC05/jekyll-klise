@@ -1,67 +1,68 @@
-[
+{
+  "tag": "SM",
+  "team": "HG SALARIO MINIMO",
+  "org": "HOUSE OF GHOST",
+  "activo": true,
+  "capitan": "FINN",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "HG SALARIO MINIMO",
+  "seguro": "true",
+  "link": "/equipos/house-of-ghost--salario-minimo",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "D",
+    "M2": "3",
+    "M3": "1",
+    "M4": "0",
+    "M5": "3",
+    "M6": "0",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
     {
-        "tag": "SM",
-        "team": "HG SALARIO MINIMO",
-        "org": "HOUSE OF GHOST",
-        "activo": true,
-        "capitan": "FINN",
-        "region": "LAN",
-        "teamNombreAnterior": "",
-        "teamNuevoNombre": "",
-        "seguro": true,
-        "link": "/equipos/house-of-ghost--salario-minimo",
-        "grupo": "SUR",
-        "partidos": {
-            "M1": "3",
-            "M2": "1",
-            "M3": "2",
-            "M4": "0",
-            "M5": "",
-            "M6": "",
-            "M7": "",
-            "M8": "",
-            "M9": "",
-            "M10": "",
-            "M11": "",
-            "M12": ""
-        },
-        "jugadores": [
-            {
-                "nickname": "$M・Finn",
-                "ID": "GF9L4M8",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "$M・Krosty",
-                "ID": "KE5NP22",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "PL・么quario",
-                "ID": "8XTYF12",
-                "avatar": "male1",
-                "teamTag": "PL"
-            },
-            {
-                "nickname": "$M-Nono",
-                "ID": "FFGKK82",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "SuFurrito坐",
-                "ID": "F2Y485N",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "PL• At-Gc",
-                "ID": "1X39A0A",
-                "avatar": "male1"
-            },
-            {
-                "nickname": "Diegorpg05",
-                "ID": "4LN63PF",
-                "avatar": "male1"
-            }
-        ]
+      "nickname": "PL・么quario",
+      "ID": "8XTYF12",
+      "avatar": "male1",
+      "teamTag": "PL"
+    },
+    {
+      "nickname": "((Nono))",
+      "ID": "FFGKK82",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "SuFurrito坐",
+      "ID": "F2Y485N",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PL• At-Gc",
+      "ID": "1X39A0A",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Psiquicuac",
+      "ID": "9G09NXN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Winter",
+      "ID": "KT2ARX2",
+      "avatar": "male1"
     }
-]
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}
