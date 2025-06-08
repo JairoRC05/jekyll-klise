@@ -66,29 +66,29 @@ function obtenerNombreImagen(nombreRonda) {
     if (nombreRonda.includes("RONDA 1")) {
         return "scizor";
     } else if (nombreRonda.includes("RONDA 2")) {
-        return "scizor";
+        return "raichu";
     } else if (nombreRonda.includes("RONDA 3")) {
-        return "scizor";
+        return "goodra";
     } else if (nombreRonda.includes("RONDA 4")) {
-        return "scizor";
+        return "mimikyu";
     } else if (nombreRonda.includes("RONDA 5")) {
-        return "scizor";
+        return "urshifu";
     } else if (nombreRonda.includes("RONDA 6")) {
-        return "scizor";
+        return "gengar";
     } else if (nombreRonda.includes("RONDA 7")) {
-        return "scizor";
+        return "lapras";
     } else if (nombreRonda.includes("RONDA 8")) {
-        return "scizor";
+        return "psyduck";
     } else if (nombreRonda.includes("RONDA 9")) {
-        return "scizor";
+        return "cleafable";
     } else if (nombreRonda.includes("RONDA 10")) {
-        return "scizor";
+        return "espeonEstrella";
     } else if (nombreRonda.includes("RONDA 11")) {
-        return "scizor";
+        return "gyarados";
     } else if (nombreRonda.includes("RONDA 12")) {
-        return "scizor";
+        return "chandelure";
     } else if (nombreRonda.includes("RONDA 13")) {
-        return "scizor";
+        return "blastoise";
     } else if (nombreRonda.includes("HOOPA")) {
         return "PORTAL"; // Asumiendo que "PORTAL" es el nombre para Hoopa
     }

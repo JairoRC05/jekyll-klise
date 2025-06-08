@@ -1,6 +1,5 @@
 let equiposData = {};
 let equipoSeleccionado = null;
-let jugadorEditandoIndex = null;
 const teamFiles = [
   'assets/temporadas/junio2025/aep.json',
     'assets/temporadas/junio2025/amt.json',
@@ -37,12 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const selectEquipo = document.getElementById('equipo-select');
     const equipoDetallesDiv = document.getElementById('equipo-detalles');
-    const listaJugadoresDiv = document.getElementById('lista-jugadores');
 
-    // Asegúrate de que esta línea esté presente y correcta
-    const editarJugadorModalElement = document.getElementById('editarJugadorModal');
-    const editarJugadorModal = new bootstrap.Modal(editarJugadorModalElement);
-    console.log(editarJugadorModalElement);
+
+
 
     let jugadorSeleccionadoParaEditar = null;
 
@@ -64,31 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         equipoDetallesDiv.style.display = 'block';
     }
 
-    // Evento para guardar los cambios realizados en la edición de un jugador
-    document.getElementById('guardar-jugador-editado').addEventListener('click', () => {
-        if (jugadorSeleccionadoParaEditar && equipoSeleccionado !== null && jugadorEditandoIndex !== null) {
-            equiposData[equipoSeleccionado].jugadores[jugadorEditandoIndex].nickname = document.getElementById('edit-modal-nickname').value.trim();
-            equiposData[equipoSeleccionado].jugadores[jugadorEditandoIndex].ID = document.getElementById('edit-modal-id').value.trim();
-            equiposData[equipoSeleccionado].jugadores[jugadorEditandoIndex].avatar = document.getElementById('edit-modal-avatar').value.trim();
-            mostrarDetallesEquipo(equiposData[equipoSeleccionado]);
-            guardarCambios();
-            editarJugadorModal.hide();
-            jugadorSeleccionadoParaEditar = null;
-            jugadorEditandoIndex = null;
-        }
-    });
 
-    // Evento para eliminar un jugador
-    document.getElementById('eliminar-jugador').addEventListener('click', () => {
-        if (jugadorSeleccionadoParaEditar && equipoSeleccionado !== null && jugadorEditandoIndex !== null && confirm('¿Estás seguro de eliminar a este jugador?')) {
-            equiposData[equipoSeleccionado].jugadores.splice(jugadorEditandoIndex, 1);
-            mostrarDetallesEquipo(equiposData[equipoSeleccionado]);
-            guardarCambios();
-            editarJugadorModal.hide();
-            jugadorSeleccionadoParaEditar = null;
-            jugadorEditandoIndex = null;
-        }
-    });
 });
 
 

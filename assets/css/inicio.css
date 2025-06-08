@@ -1,0 +1,22 @@
+.homeBanner{
+  height: 90vh;
+  background-color: rgba(29, 29, 29, 0.496);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .homeLogo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+    img{
+        width: 130px;
+        margin-right: 10px;
+    }
+
+    h3{
+        font-size: 130px;
+    }
+  }
+}

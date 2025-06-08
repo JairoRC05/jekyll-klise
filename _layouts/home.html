@@ -41,144 +41,23 @@ title: INICIO | NACIÓN UNITE
   </script>
 
 
-<div class="container-fluid banner poster">
-    <div class="container bannerPromo d-flex justify-content-start align-items-center">
-      <a href="/assets/logos/LRDU.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/LRDU.webp" class="drop img-fluid" alt="" ">
-            </a>
-            <div class=" bannerText">
-        <h3 class="exo-style text-white">NACIÓN UNITE</h3>
-        <span>TORNEOS, BUILDS Y MÁS</span>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- <div class="container-fluid banner {{page.gradiente}}">
-  <div class="container bannerPromo">
-    <a href="/assets/logos/LFT.png" role="button" download="{{ page.title | escape }}.png">
-      <img src="/assets/logos/LFT.png" class="drop img-fluid" alt="" ">
-    </a>
-    <div class="bannerText">
-      <span class="exo">CAMPEONES LIGA INDIGO NOV-DIC</span>
-      <h1 class="exo-style">LEFTLOVERS</h1>
-      <span class="exo">IBU • TRONCIO • BADJUNGLE • BREN • BERNY </span>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-<div class="container-fluid mt-5" id="liga">
-  <div class="container teams-table">
-    <h1 class="teams-title">LIGA INDIGO</h1>
-  </div>
-</div>
-<div class="container-fluid banner-home"  >
-  <div class="container banner bg-cham"">
-    <div class="banner-grupo">
-      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-      {%- for post in norte-%}
-    <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
-
-
-    <div class="banner-logo">
-      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
-      </a>
-      <div class="d-flex justify-content-center align-items-center">
-       
-        <a href="/liga-indigo-norte" class="button-space d-block d-md-none">
-          <span class="main-text">VER MÁS
-            <span> 
-             <span>⫸</span> 
-            </span>
-          </span></a>
-        
-          <a href="/liga-indigo-dashboard" class="button-space d-none d-md-block">
-          <span class="main-text">VER MÁS
-            <span> 
-             <span>⫸</span> 
-            </span>
-          </span></a>
+<div class="container-fluid">
+    <div class="container homeBanner">
+      <div class="homeLogo">
+        <img src="/assets/logos/LRDU.webp" class="drop img-fluid" alt="Logo Nación Unite" >
+        <h3 class="exo-style">NACIÓN UNITE</h3>
       </div>
-
-    </div>
-
-    <div class="banner-grupo">
-      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-      {%- for post in norte-%}
-      <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
-
   </div>
 </div>
 
-
-<div class="container-fluid mt-5" id="liga">
-  <div class="container teams-table">
-    <h1 class="teams-title">EQUIPOS DEL SECTOR11</h1>
+<div class="container-fluid bg-cham" style="height: 650px;">
+  <div class="d-flex justify-content-center align-items-center">
+    <h1 class="indigo mt-5">LIGA INDIGO SPC</h1>
   </div>
+  <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA-INDIGO" style="height: 320px; width: 320px;">
+
 </div>
-<div class="container-fluid banner-home"  >
-  <div class="container banner bg-S11"">
-    <div class="banner-grupo">
-      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-      {%- for post in norte-%}
-    <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
 
-
-    <div class="banner-logo">
-      <a href="/assets/logos/S11.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/S11.png" class="drop img-fluid" alt="" ">
-      </a>
-      <div class="d-flex justify-content-center align-items-center">
-       
-        <a href="/equipos-del-sector11" class="button-space d-block d-md-none">
-          <span class="main-text">VER MÁS
-            <span> 
-             <span>⫸</span> 
-            </span>
-          </span></a>
-        
-          <a href="/equipos-del-sector11" class="button-space d-none d-md-block">
-          <span class="main-text">VER MÁS
-            <span> 
-             <span>⫸</span> 
-            </span>
-          </span></a>
-      </div>
-
-    </div>
-
-    <div class="banner-grupo">
-      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-      {%- for post in norte-%}
-      <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
-
-  </div>
-</div>
 
 
 {% include footer-license.html %}
@@ -187,48 +66,7 @@ title: INICIO | NACIÓN UNITE
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-    <script>
-      var splide = new Splide('.splide', {
-        type: 'loop',
-        autoplay: true,
-        interval: '7000',
-        perPage: 4,
-        pagination: false,
-        arrows: false,
-        gap: '.7rem',
-        rewind: true,
-        height: '10rem',
-        breakpoints: {
-          1200: {
-            perPage: 1,
-            gap: '.7rem',
-            height: '35rem',
-          },
-          992: {
-            perPage: 1,
-            gap: '.7rem',
-            height: '25rem',
-          },
-          768: {
-            perPage: 1,
-            gap: '.7rem',
-            height: '20rem',
-          },
-          576: {
-            perPage: 1,
-            gap: '.7rem',
-            height: '12rem',
-          },
-          480: {
-            perPage: 1,
-            gap: '.1em',
-            trimSpace: false,
-            height: '10rem',
-          },
-        },
-      });
-      splide.mount();
-    </script>
+
     {% include g-analytics.html %}
  
 
