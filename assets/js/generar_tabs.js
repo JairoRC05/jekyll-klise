@@ -6,19 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const rondaEspecialContainer = document.getElementById('rondaEspecial');
 
     const roundSpecificData = [
-        { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduckSuperheroe' },
-        { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'scizor' },
+   { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
+        { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30', nombreImagen: 'raichu' }, // <-- Cambia a raichu
+        { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'goodra' }, // <-- Cambia a goodra
+        { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
+        { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
+        { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'gengar' }, // <-- Cambia a gengar
+        { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'lapras' }, // <-- Cambia a lapras
+        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
+        { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
+        { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'espeonEstrella' }, // <-- ¡CAMBIA ESTO!
+        { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'gyarados' }, // <-- ¡CAMBIA ESTO!
+        { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'chandelure' }, // <-- ¡CAMBIA ESTO!
+        { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, // <-- ¡CAMBIA ESTO!
+        // ... el resto de tu array ...
         // Ejemplo para una ronda de un solo día
         // { ronda: 'RONDA EXTRA', fecha: '2025-09-05', nombreImagen: 'skin_ronda_EXTRA' },
         { ronda: 'HOOPA', fecha: '2025-09-10', nombreImagen: 'PORTAL' },
