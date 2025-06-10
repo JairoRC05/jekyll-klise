@@ -132,6 +132,8 @@ function generarContenidoRonda(rondaData) {
         fechaMostrar = formatearFecha(rondaData.fecha);
     }
 
+      const nombreImagenFinal = rondaData.nombreImagen || obtenerNombreImagen(rondaData.ronda);
+
     let html = `
     <div class="container mt-2">
       <div class="row">
@@ -151,8 +153,7 @@ function generarContenidoRonda(rondaData) {
               style="position: absolute; width: 100%; z-index: -999"
             />
             <img
-              src="/assets/skins/${obtenerNombreImagen(rondaData.ronda)}.webp"
-              alt=""
+              src="/assets/skins/${nombreImagenFinal}.webp" alt=""
               style="width: 550px"
             />
             <img src="/assets/gifts/shine.gif" alt="" style="position:
