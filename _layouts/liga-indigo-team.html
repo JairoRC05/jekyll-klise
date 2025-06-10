@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
-            if (data && data.length > 0) {
-                const equipo = data[0];
+            if (data) {
+                const equipo = data;
                 renderBanner(equipo, 'equipo-perfil');
                 renderRoster(equipo, 'equipo-perfil-roster');
 
