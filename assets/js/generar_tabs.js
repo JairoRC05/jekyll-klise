@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const rondaEspecialContainer = document.getElementById('rondaEspecial');
 
     const roundSpecificData = [
-   { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
+        { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
         { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30', nombreImagen: 'raichu' }, // <-- Cambia a raichu
         { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'goodra' }, // <-- Cambia a goodra
         { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, // <-- ¡CAMBIA ESTO!
         // ... el resto de tu array ...
         // Ejemplo para una ronda de un solo día
-        // { ronda: 'RONDA EXTRA', fecha: '2025-09-05', nombreImagen: 'skin_ronda_EXTRA' },
-        { ronda: 'HOOPA', fecha: '2025-09-10', nombreImagen: 'PORTAL' },
+        // { ronda: 'RONDA EXTRA', fecha: '2025-06-18', nombreImagen: 'skin_ronda_EXTRA' },
+        { ronda: 'HOOPA', fecha: '2025-06-18', nombreImagen: 'PORTAL' },
         // ... más rondas si es necesario
     ];
 

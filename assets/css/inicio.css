@@ -1,6 +1,10 @@
-.homeBanner{
+.home{
+  /* background: url('/assets/videos/intro.mp4'); */
+
+
+  .homeBanner{
   height: 90vh;
-  background-color: rgba(29, 29, 29, 0.496);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,4 +23,5 @@
         font-size: 130px;
     }
   }
+}
 }

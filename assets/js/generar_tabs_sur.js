@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'chandelure' }, // <-- ¡CAMBIA ESTO!
         { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, // <-- ¡CAMBIA ESTO!
         // ... el resto de tu array ...
-        // { ronda: 'RONDA EXTRA', fecha: '2025-09-05', nombreImagen: 'skin_ronda_EXTRA' },
-        { ronda: 'HOOPA', fecha: '2025-09-10', nombreImagen: 'PORTAL' },
+        // { ronda: 'RONDA EXTRA', fecha: '2025-06-18', nombreImagen: 'skin_ronda_EXTRA' },
+        { ronda: 'HOOPA', fecha: '2025-06-18', nombreImagen: 'PORTAL' },
         // ... más rondas si es necesario
     ];
 
