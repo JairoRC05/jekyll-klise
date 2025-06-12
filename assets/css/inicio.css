@@ -1,27 +1,42 @@
-.home{
-  /* background: url('/assets/videos/intro.mp4'); */
+.home {
+  position: relative; /* Essential for positioning the video absolutely within it */
+  overflow: hidden; /* Hides any overflow from the video */
+}
 
+#backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Puts the video behind your content */
+  transform: translate(-50%, -50%); /* Centers the video */
+  object-fit: cover; /* Ensures the video covers the entire container without distortion */
+}
 
-  .homeBanner{
+/* Your existing styles for .homeBanner and .homeLogo should remain the same */
+.homeBanner {
   height: 90vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .homeLogo{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    
-    img{
-        width: 130px;
-        margin-right: 10px;
-    }
-
-    h3{
-        font-size: 130px;
-    }
-  }
+  position: relative; /* Ensure homeBanner content is above the video */
+  z-index: 1; /* Make sure homeBanner content is above the video */
 }
+
+.homeLogo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.homeLogo img {
+  width: 130px;
+  margin-right: 10px;
+}
+
+.homeLogo h3 {
+  font-size: 130px;
 }
