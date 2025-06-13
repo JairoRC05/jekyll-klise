@@ -1,6 +1,7 @@
 .home {
   position: relative; /* Essential for positioning the video absolutely within it */
   overflow: hidden; /* Hides any overflow from the video */
+  padding: 0;
 }
 
 #backgroundVideo {
@@ -11,7 +12,7 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1; /* Puts the video behind your content */
+  z-index: 1; /* Puts the video behind your content */
   transform: translate(-50%, -50%); /* Centers the video */
   object-fit: cover; /* Ensures the video covers the entire container without distortion */
 }
@@ -20,6 +21,7 @@
 .homeBanner {
   height: 90vh;
   display: flex;
+  background: #000000c3;
   justify-content: center;
   align-items: center;
   position: relative; /* Ensure homeBanner content is above the video */
@@ -39,4 +41,27 @@
 
 .homeLogo h3 {
   font-size: 130px;
+}
+
+.clip-left{
+  clip-path: polygon(0 0, 80% 1%, 100% 100%, 0% 100%);
+  width: 25%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  background: #000DFF;
+  left: 0;
+  z-index: 1;
+
+}
+.clip-right{
+clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 25%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  background: #000DFF;
+  right: 0;
+  z-index: 1;
+
 }

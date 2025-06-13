@@ -10,6 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.1.0"
 
+gem "puma"
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -30,7 +32,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1" if Gem.win_platform?
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
 
 gem "storyblok"
 

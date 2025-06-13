@@ -547,10 +547,16 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(102,47,19,1) 100%); *
 
 .bg-cham {
   /* background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0,0,185,1) 50%, rgba(13,74,238,1) 100%); */
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,4,54,1) 10%, rgba(0,0,185,1) 50%, rgba(13,74,238,1) 100%); */
   background: rgb(68, 76, 247) !important;
   background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
 }
+
+.indigo-bg{
+background: #000dff;
+background: linear-gradient(180deg, rgba(0, 13, 255, 1) 0%, rgba(68, 76, 247, 1) 100%);
+}
+
 
 .bg-S11 {
   background: rgb(255, 0, 0) !important;
@@ -1366,3 +1372,6 @@ border: none;
   background-color: #fff;
 }
 
+.blackBG{
+  background: #000;
+}

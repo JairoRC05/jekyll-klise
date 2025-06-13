@@ -1,0 +1,216 @@
+---
+layout:
+permalink: /liga-indigo-eventos.html
+title: EVENTOS | LIGA INDIGO
+---
+
+
+<html lang="{{ page.lang | default: site.lang | default: " es " }}">
+{% include header.html %}
+
+
+<body class="bg-home">
+
+
+
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50" height="44">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <!-- <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-norte" class="text-white">GALAXIA NORTE</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-sur" class="text-white">GALAXIA SUR</a></span> -->
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Transition effect for navbar 
+      $(window).scroll(function () {
+        // checks if window is scrolled more than 500px, adds/removes solid class
+        if ($(this).scrollTop() > 30) {
+          $('.top').addClass('white');
+        } else {
+          $('.top').removeClass('white');
+        }
+      });
+    });
+  </script>
+
+
+
+  <div class="container-fluid banner bg-cham d-none d-lg-block">
+    <div class="container bannerPromo">
+      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
+        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
+      </a>
+      <div class=" bannerText">
+        <h1 class="indigo">LIGA INDIGO</h1>
+        <span class="indigo">ORIÓN</span>
+    </div>
+  </div>
+  </div>
+
+  <div class="container calendar-container">
+        <!-- Encabezado del calendario: Mes y botones de navegación -->
+        <div class="calendar-header">
+            <div class="calendar-nav">
+                <button class="btn btn-primary me-2"><i class="fas fa-chevron-left"></i> Anterior</button>
+            </div>
+            <h2>Junio 2025</h2> <!-- Este texto se actualizaría con JavaScript -->
+            <div class="calendar-nav">
+                <button class="btn btn-primary">Siguiente <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Cuerpo del calendario: Días de la semana y días del mes -->
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de días del mes actual (Junio 2025 empieza en Domingo) -->
+                <tr>
+                    <td><span class="day-number">1</span></td> <!-- 1 de Junio (Domingo) -->
+                    <td><span class="day-number">2</span></td>
+                    <td><span class="day-number">3</span></td>
+                    <td><span class="day-number">4</span></td>
+                    <td><span class="day-number">5</span></td>
+                    <td><span class="day-number">6</span></td>
+                    <td><span class="day-number">7</span></td>
+                </tr>
+                <tr>
+                    <td><span class="day-number">8</span></td>
+                    <td><span class="day-number">9</span></td>
+                    <td><span class="day-number">10</span></td>
+                    <td><span class="day-number">11</span></td>
+                    <td><span class="day-number">12</span></td>
+                    <td><span class="day-number">13</span></td>
+                    <td><span class="day-number">14</span></td>
+                </tr>
+                <tr>
+                    <td><span class="day-number">15</span></td>
+                    <td><span class="day-number">16</span></td>
+                    <td class="has-event-danger">
+                        <span class="day-number">17</span>
+                        <div class="event-info">PARTIDOS PENDIENTES</div>
+                    </td>
+                    <td class="has-event-spc">
+                      <span class="day-number">18</span>
+                      <div class="event-info">RONDA HOPPA</div>
+                    </td>
+                    <td><span class="day-number">19</span></td>
+                    <td class="has-event">
+                      <span class="day-number">20</span>
+                      <div class="event-info">COPA XFORCE</div>
+                    </td>
+                    <td><span class="day-number">21</span></td>
+                </tr>
+                <tr>
+                    <td><span class="day-number">22</span></td>
+                    <td class="has-event">
+                        <span class="day-number">23</span>
+                        <div class="event-info">COPA XFORCE</div>
+                    </td>
+                    <td class="has-event"><span class="day-number">24</span> <div class="event-info">COPA XFORCE</div></td>
+                    <td class="has-event"><span class="day-number">25</span> <div class="event-info">COPA XFORCE / INS LI JULIO</div></td>
+                    <td class="has-event"><span class="day-number">26</span> <div class="event-info">COPA XFORCE</div></td>
+                    <td class="has-event-li"><span class="day-number">27</span> <div class="event-info">LI 4TOS DE FINAL</div></td>
+                    <td><span class="day-number">28</span></td>
+                </tr>
+                <tr>
+                    <td><span class="day-number">29</span></td>
+                    <td class="has-event-li"><span class="day-number">30</span> <div class="event-info">LI 4TOS DE FINAL</div></td>
+                    <td class="has-event-li"><span class="day-number">1</span> <div class="event-info">LI SEMIFINAL/FINAL</div> </td> <!-- 1 de Julio -->
+                    <td class="day-outside-month"><span class="day-number">2</span></td>
+                    <td class="day-outside-month"><span class="day-number">3</span></td>
+                    <td class="day-outside-month"><span class="day-number">4</span></td>
+                    <td class="day-outside-month"><span class="day-number">5</span></td>
+                </tr>
+                <!-- Puede haber más días de Julio si el calendario lo requiere -->
+                <tr>
+                    <td class="day-outside-month"><span class="day-number">6</span></td>
+                    <td class="day-outside-month"><span class="day-number">7</span></td>
+                    <td class="day-outside-month"><span class="day-number">8</span></td>
+                    <td class="day-outside-month"><span class="day-number">9</span></td>
+                    <td class="has-event-li"><span class="day-number">10</span> <div class="event-info">LI JULIO</div></td>
+                    <td class="day-outside-month"><span class="day-number">11</span></td>
+                    <td class="day-outside-month"><span class="day-number">12</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+  <div class="container-fluid my-5">
+    <div class="container teams-table">
+      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+      {% include sponsors.html %}
+    </div>
+  </div>
+
+
+
+
+
+
+  {% include footer-transparent.html %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+  {% include g-analytics.html %}
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684685955796848"
+    crossorigin="anonymous"></script>
+
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/generar_tabs.js"></script>
+  <script src="/assets/js/utils_rankings.js"></script>
+  <script src="/assets/js/ranking_orion.js"></script>
+  <script src="/assets/js/bracket.js"></script>
+
+
+
+</body>
+
+</html>

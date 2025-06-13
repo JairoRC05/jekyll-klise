@@ -1,0 +1,218 @@
+  .calendar-container {
+      margin: 50px auto;
+      /* Centrar en la página con margen superior e inferior */
+      padding: 30px;
+      /* Espaciado interno */
+      background-color: #ffffff;
+      /* Fondo blanco para el calendario */
+      border-radius: 12px;
+      /* Esquinas redondeadas */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      /* Sombra suave */
+  }
+
+  .calendar-header {
+      display: flex;
+      /* Usar flexbox para alinear elementos */
+      justify-content: space-between;
+      /* Espaciar el contenido */
+      align-items: center;
+      /* Alinear verticalmente */
+      margin-bottom: 25px;
+      /* Margen inferior */
+      padding-bottom: 15px;
+      /* Relleno inferior */
+      border-bottom: 1px solid #e9ecef;
+      /* Línea separadora */
+  }
+
+  .calendar-header h2 {
+      font-size: 2.2rem;
+      /* Tamaño del texto del mes/año */
+      font-weight: 700;
+      /* Negrita */
+      color: #343a40;
+      /* Color oscuro para el texto */
+  }
+
+  .calendar-nav button {
+      background-color: #007bff;
+      /* Color azul de Bootstrap para los botones */
+      border-color: #007bff;
+      /* Borde del mismo color */
+      border-radius: 8px;
+      /* Esquinas redondeadas para botones */
+      padding: 10px 18px;
+      /* Relleno para botones */
+      font-size: 1rem;
+      /* Tamaño de fuente */
+      transition: background-color 0.3s ease;
+      /* Transición suave al pasar el ratón */
+  }
+
+  .calendar-nav button:hover {
+      background-color: #0056b3;
+      /* Color más oscuro al pasar el ratón */
+      border-color: #0056b3;
+  }
+
+  .calendar-table {
+      width: 100% !important;
+      /* La tabla ocupa todo el ancho disponible */
+      border-collapse: separate;
+      /* Permite bordes redondeados en las celdas */
+      border-spacing: 5px;
+      /* Espacio entre las celdas */
+      table-layout: fixed;
+      /* Asegura que todas las celdas tengan el mismo ancho */
+  }
+
+  .calendar-table th,
+  .calendar-table td {
+      width: calc(100% / 7);
+      /* Divide el ancho total entre los 7 días */
+      text-align: center;
+      /* Centrar el texto en los encabezados (días de la semana) */
+      padding: 15px 0;
+      /* Relleno superior e inferior */
+      font-weight: 600;
+      /* Semi-negrita */
+      color: #6c757d;
+      /* Color gris para los días de la semana */
+      font-size: 1.1rem;
+      /* Tamaño de fuente */
+  }
+
+  .calendar-table td {
+      padding: 15px;
+      /* Relleno de las celdas */
+      height: 100px;
+      /* Altura fija para cada celda de día */
+      vertical-align: top;
+      /* Alinear el contenido a la parte superior de la celda */
+      border: 1px solid #dee2e6;
+      /* Borde de cada celda */
+      border-radius: 8px;
+      /* Esquinas redondeadas para las celdas */
+      background-color: #f0f0f0;
+      /* Color de fondo predeterminado para las celdas */
+      position: relative;
+      /* Para posicionar elementos dentro de la celda */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      /* Transición para efectos de hover */
+  }
+
+  .calendar-table td:hover {
+      background-color: #e2e6ea;
+      /* Color de fondo al pasar el ratón */
+      border-color: #b0c2d3;
+      /* Borde al pasar el ratón */
+  }
+
+  .day-number {
+      font-size: 1.5rem;
+      /* Tamaño del número del día */
+      font-weight: 700;
+      /* Negrita */
+      color: #495057;
+      /* Color oscuro para el número del día */
+      margin-bottom: 5px;
+      /* Margen inferior */
+      display: block;
+      /* Para que ocupe su propia línea */
+  }
+
+  .day-outside-month {
+      background-color: #fdfdfe !important;
+      /* Fondo más claro para días fuera del mes actual */
+      color: #adb5bd;
+      /* Color gris más claro para días fuera del mes */
+      border-color: #f5f6f7 !important;
+      /* Borde más claro */
+  }
+
+  .today {
+      background-color: #cce5ff !important;
+      /* Fondo azul claro para el día actual */
+      border-color: #007bff !important;
+      /* Borde azul de Bootstrap para el día actual */
+      color: #004085 !important;
+      /* Texto azul oscuro para el día actual */
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+      /* Sombra para el día actual */
+  }
+
+  .has-event {
+      background-color: #ffcd50 !important;
+      /* Fondo verde claro para días con eventos */
+      border-color: #fff127 !important;
+      /* Borde verde de Bootstrap */
+      color: #b4cc00 !important;
+      /* Texto verde oscuro */
+  }
+
+  .has-event-danger {
+      background-color: #ff8d8d !important;
+      /* Fondo verde claro para días con eventos */
+      border-color: #ff2020 !important;
+      /* Borde verde de Bootstrap */
+      color: #701414 !important;
+      /* Texto verde oscuro */
+  }
+
+  .has-event-spc {
+      background-color: #edff92 !important;
+      /* Fondo verde claro para días con eventos */
+      border-color: #e5ff20 !important;
+      /* Borde verde de Bootstrap */
+      color: #6b7014 !important;
+      /* Texto verde oscuro */
+  }
+
+  .has-event-li {
+      background-color: #8d8dfa !important;
+      /* Fondo verde claro para días con eventos */
+      border-color: #2020ff !important;
+      /* Borde verde de Bootstrap */
+      color: #251470 !important;
+      /* Texto verde oscuro */
+  }
+
+  .event-info {
+      font-size: 0.85rem;
+      /* Tamaño de fuente para la información del evento */
+      color: #495057;
+      /* Color oscuro */
+      margin-top: 5px;
+      /* Margen superior */
+      line-height: 1.3;
+      /* Espaciado entre líneas */
+      word-wrap: break-word;
+      /* Para que el texto se ajuste si es muy largo */
+  }
+
+  /* Responsividad básica para pantallas pequeñas */
+  @media (max-width: 768px) {
+      .calendar-header h2 {
+          font-size: 1.8rem;
+      }
+
+      .calendar-nav button {
+          padding: 8px 14px;
+          font-size: 0.9rem;
+      }
+
+      .calendar-table td {
+          height: 80px;
+          /* Menor altura en dispositivos móviles */
+          padding: 10px;
+      }
+
+      .day-number {
+          font-size: 1.2rem;
+      }
+
+      .event-info {
+          font-size: 0.75rem;
+      }
+  }
