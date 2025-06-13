@@ -174,14 +174,14 @@ title: Gestion | Nacion Unite
                             <tr>
                                 <th>Tag</th>
                                 <th>Nombre Equipo</th>
-                    
+
                                 <th>Activo</th>
                                 <th>Capitán</th>
                                 <th>Región</th>
                                 <th>Seguro</th>
-         
+
                                 <th>Grupo</th>
-                        
+
                                 <th>Partidos</th>
                                 <th>Acciones</th>
                             </tr>
@@ -364,21 +364,25 @@ title: Gestion | Nacion Unite
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Partidos del Equipo (Edición Manual)</h6>
-                    <form id="editMatchesForm">
-                        <input type="hidden" id="editMatchesTeamTag">
-                        <div id="matchesInputList" class="row">
+
+                    <div class="row">
+                        <div class="col-8">
+                            <div id="externalMatchesList">
+                                <p class="text-muted">Cargando partidos externos...</p>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-save"></i> Guardar Cambios
-                            Manuales</button>
-                    </form>
-
-                    <hr class="my-4">
-
-                    <h6>Partidos Encontrados en Archivos Externos</h6>
-                    <div id="externalMatchesList">
-                        <p class="text-muted">Cargando partidos externos...</p>
+                        <div class="col-4">
+                            <form id="editMatchesForm">
+                                <input type="hidden" id="editMatchesTeamTag">
+                                <div id="matchesInputList" class="row">
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-save"></i> Guardar
+                                    Cambios
+                                    Manuales</button>
+                            </form>
+                        </div>
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -967,7 +967,7 @@ function showMatchesModal(teamTag) {
             }
 
             matchesInputList.append(`
-                <div class="col-md-4 mb-3">
+                <div class="col-md-12">
                     <label for="match-${matchKey}" class="form-label">${matchKey}</label>
                     <input type="text" class="form-control" id="match-${matchKey}" data-match-key="${matchKey}" value="${displayValue}">
                 </div>
@@ -996,21 +996,15 @@ function showMatchesModal(teamTag) {
                 const isTeam1 = match.tag1 === teamTag;
                 const teamName1 = isTeam1 ? `<strong>${match.equipo1}</strong>` : match.equipo1;
                 const teamName2 = !isTeam1 ? `<strong>${match.equipo2}</strong>` : match.equipo2;
-                const matchResult = match.resultado === "VS" ? "VS" : `Resultado: ${match.resultado}`; // Muestra "VS" si no hay resultado
+                const matchResult = match.resultado === "VS" ? "VS" : ` ${match.resultado}`; // Muestra "VS" si no hay resultado
 
                 externalMatchesList.append(`
                     <div class="card mb-2">
                         <div class="card-body py-2">
                             <h6 class="card-title mb-1">Ronda ${match.round_number} - Partido ${match.match_number}</h6>
                             <p class="card-text mb-1">
-                                ${teamName1} vs ${teamName2} 
+                                ${teamName1}  ${matchResult} ${teamName2} 
                             </p>
-                            <p class="card-text mb-0">
-                                <small class="text-muted">
-                                    ${matchResult}
-                                </small>
-                            </p>
-                            <small class="text-secondary">Origen: ${match.sourceFile}</small>
                         </div>
                     </div>
                 `);

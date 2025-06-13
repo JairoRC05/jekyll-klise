@@ -141,7 +141,7 @@ permalink:
     {% include g-analytics.html %}
 
   <script>
-document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
     const pageID = "{{ page.ID }}";
     const jsonURL = `/assets/temporadas/junio2025/${pageID.toLowerCase()}.json`;
 
@@ -251,9 +251,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (resultado === "R") {
                 classRecord = 'rea';
                 textoResultado = 'R';
-            } else if (resultado === "Z") {
+            } else if (resultado === "D") {
                 classRecord = 'des';
-                textoResultado = 'Z';
+                textoResultado = 'D';
             } else if (resultado === "0") {
                 classRecord = 'loss';
                 textoResultado = '0';
@@ -355,7 +355,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-   
+    /**
+     * Formatea una cadena de fecha YYYY-MM-DD a DD MES (ej. 28 MAY).
+     * Si la fecha incluye un rango (ej. YYYY-MM-DD - YYYY-MM-DD), formatea el rango.
+     * @param {string} dateString La cadena de fecha a formatear.
+     * @returns {string} La fecha formateada.
+     */
+    function formatDateToDayMonth(dateString) {
+        const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+        if (dateString.includes(' - ')) {
+            const [startDateStr, endDateStr] = dateString.split(' - ');
+            const startDate = new Date(startDateStr + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
+            const endDate = new Date(endDateStr + 'T00:00:00');
+
+            const startDay = startDate.getDate();
+            const startMonth = months[startDate.getMonth()];
+            const endDay = endDate.getDate();
+            const endMonth = months[endDate.getMonth()];
+
+            if (startDate.getMonth() === endDate.getMonth()) {
+                return `${startDay}-${endDay} ${startMonth}`;
+            } else {
+                return `${startDay} ${startMonth} - ${endDay} ${endMonth}`;
+            }
+        } else if (dateString === 'Fecha no definida') {
+            return 'Fecha no definida';
+        } else {
+            const date = new Date(dateString + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
+            const day = date.getDate();
+            const month = months[date.getMonth()];
+            return `${day} ${month}`;
+        }
+    }
+
+
     function renderMatchInfo(equipo, containerId, roundsDatesFromScript) {
         const teamTag = equipo.tag;
         let partidosHTML = '<div class="container"><h2>CALENDARIO</h2><div class="row">';
@@ -407,7 +441,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (allRelevantMatches.length > 0) {
                 allRelevantMatches.forEach(partido => {
                     // Obtener la fecha de la ronda desde roundDatesMap
-                    const rondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
+                    const originalRondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
+                    // Formatear la fecha aquí
+                    const formattedRondaFecha = formatDateToDayMonth(originalRondaFecha);
+
                     const equipo1T = truncateString(partido.equipo1, 10);
                     const equipo2T = truncateString(partido.equipo2, 10);
 
@@ -427,7 +464,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <span>${partido.rondaNombre}</span>
                                     </div>
                                     <div class="card-round-promo-right">
-                                        <span>${rondaFecha}</span>
+                                        <span>${formattedRondaFecha}</span>
                                     </div>
                                     <div class="card-back">
                                         <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
@@ -448,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <div class="card-round-promo mx-2">
                                             <span>${partido.rondaNombre}</span>
                                             <h6>${partido.resultado}</h6>
-                                            <span>${rondaFecha}</span>
+                                            <span>${formattedRondaFecha}</span>
                                         </div>
                                         <div class="card-round-promo right">
                                             <h6>${equipo2T}</h6>
@@ -488,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return str;
     }
 });
-</script>
+ </script>
   
   
 

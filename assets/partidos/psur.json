@@ -782,24 +782,26 @@
             "tag1": "RNTES",
             "equipo2": "DRAKAR GAMING",
             "tag2": "DG",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 10,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "CUMBIA DRAGÓN",
             "tag2": "CD",
-            "resultado": "VS",
+            "resultado": "PEN",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 10,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS AMETHYST",
@@ -913,24 +915,26 @@
             "tag1": "ZAFIRO",
             "equipo2": "TEAM ROCKET",
             "tag2": "TRR",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 11,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "HG SALARIO MINIMO",
             "tag1": "SM",
             "equipo2": "FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 11,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },

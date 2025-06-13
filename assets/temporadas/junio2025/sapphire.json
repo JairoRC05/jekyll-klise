@@ -7,8 +7,8 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "DFS SAPPHIRE",
-  "seguro": "",
-  "link": "/equipos/dfs-sapphire",
+  "seguro": false,
+  "link": "/equipos/dragon-flies-gaming--sapphire",
   "grupo": "NORTH",
   "partidos": {
     "M1": "0",
@@ -19,8 +19,8 @@
     "M6": "0",
     "M7": "0",
     "M8": "1",
-    "M9": "",
-    "M10": "",
+    "M9": "0",
+    "M10": "3",
     "M11": "",
     "M12": "",
     "M13": "D",
@@ -68,5 +68,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": 0
+  "posicionDesempate": false
 }

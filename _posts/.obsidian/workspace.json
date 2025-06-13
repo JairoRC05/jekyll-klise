@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teams/GNORTE/2021-07-21-DINAMITA BUENA ONDA.md",
+                "file": "teams/GNORTE/2021-07-21-DINASTY.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-DINAMITA BUENA ONDA"
+              "title": "2021-07-21-DINASTY"
             }
           }
         ],
@@ -110,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LEX",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -218,6 +218,7 @@
   },
   "active": "f1c67932c7abea45",
   "lastOpenFiles": [
+    "teams/GNORTE/2021-07-21-DINAMITA BUENA ONDA.md",
     "teams/GSUR/2021-07-21-pokerangers.md",
     "teams/GNORTE/2024-07-25-PRESTACIONES-DE-LEY-HG.md",
     "teams/GNORTE/Sin título.md",
@@ -244,7 +245,6 @@
     "teams/GNORTE/2024-04-05-STAMINA.md",
     "teams/GNORTE/2021-07-21-TEAM MANICOMIO.md",
     "teams/GNORTE/2021-07-21-OVERHEAT.md",
-    "teams/GNORTE/2021-07-21-L4O.md",
     "MVP/L4O",
     "MVP/DFS/AMBER",
     "MVP/HG SALARIO MINIMO",
