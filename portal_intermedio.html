@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL</title>
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background: rgb(0, 0, 168) !important;
+    color: #333;
+    flex-direction: column;
+}
+
+.portal-icon {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    border-radius: 50%;
+      background: radial-gradient(circle, #2a003f 0%, #0d001a 100%);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.7),
+        0 0 30px rgba(0, 200, 255, 0.5),
+        0 0 45px rgba(0, 200, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: haloPulse 3s infinite alternate;
+     animation: fadeInScale 1.5s ease-out forwards;
+}
+
+.portal-icon:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9),
+        0 0 40px rgba(0, 255, 255, 0.7),
+        0 0 60px rgba(0, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.portal-inner {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: rgb(68, 76, 247) !important;
+    background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
+    position: absolute;
+    animation: portalPulse 2s infinite alternate, portalRotate 8s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes portalPulse {
+    0% {
+        transform: scale(0.8);
+        box-shadow: 0 0 5px rgb(255, 225, 0);
+    }
+
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgb(199, 217, 2);
+    }
+
+    100% {
+        transform: scale(0.8);
+        box-shadow: 0 0 5px rgb(251, 251, 2);
+    }
+}
+
+@keyframes portalRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes haloPulse {
+    0% { box-shadow: 0 0 10px 5px rgba(255, 200, 0, 0.5); }
+    50% { box-shadow: 0 0 25px 15px rgba(255, 200, 0, 0.8); }
+    100% { box-shadow: 0 0 10px 5px rgba(255, 200, 0, 0.5); }
+}
+
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    /* background-color: rgba(0, 255, 0, 0.1); /* Para depuración */
+}
+
+
+.star {
+    position: absolute;
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+    background: transparent; 
+    display: block; 
+}
+
+.star::before,
+.star::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(204, 255, 0); /* Color de la estrella */
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7); /* Brillo */
+}
+
+.star::before {
+    width: 100%; /* El ancho del rectángulo vertical */
+    height: 100%; /* La altura del rectángulo vertical */
+    top: 0;
+    left: 0;
+}
+
+.star::after {
+    width: 100%; /* El ancho del rectángulo horizontal */
+    height: 100%; /* La altura del rectángulo horizontal */
+    top: 0;
+    left: 0;
+    transform: rotate(90deg); 
+}
+
+
+.star-1 {
+    width: 8px; 
+    height: 8px; 
+    top: 8%;
+    left: 70%;
+    animation: twinkle-sparkle 1.5s infinite alternate;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 1%;
+    animation: twinkle-sparkle 1.8s infinite alternate;
+    animation-delay: 0.5s;
+}
+
+.star-3 {
+    width: 10px;
+    height: 10px;
+    top: 95%;
+    left: 40%;
+    animation: twinkle-sparkle 1.2s infinite alternate;
+    animation-delay: 1s;
+}
+
+
+@keyframes twinkle-sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg); 
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.9);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(0.9) rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(135deg); 
+    }
+}
+
+
+ .portal-icon.exit-animation {
+        animation: fadeOutShrink 1s ease-out forwards; /* Duración de la animación de salida */
+    }
+
+    @keyframes fadeOutShrink {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+</style>
+
+<body>
+
+<div class="portal-icon" id="myPortal">
+    <div class="portal-inner"></div>
+    <div class="star-container">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+    </div>
+</div>
+   <script>
+        document.addEventListener('DOMContentLoaded', function() { 
+            const portalIcon = document.getElementById('myPortal');
+            const redirectDelay = 7000; 
+            const exitAnimationDuration = 1000; 
+
+     
+            setTimeout(function() {
+                if (portalIcon) { 
+                    portalIcon.classList.add('exit-animation'); 
+                }
+
+                // Después de que termine la animación, redirige
+                setTimeout(function() {
+                    window.location.href = 'liga-indigo-ronda-hoppa.html'; 
+                }, exitAnimationDuration); 
+                
+            }, redirectDelay - exitAnimationDuration); 
+        });
+    </script>
+
+</body>
+
+</html>

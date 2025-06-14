@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const archivoSelector = document.getElementById('archivo-selector');
     const gestionRondasDiv = document.getElementById('gestion-rondas');
-    console.log("gestionRondasDiv (dentro DOMContentLoaded):", gestionRondasDiv);
-    const formularioEdicion = document.getElementById('formulario-edicion-partido');
+    const formularioEdicionModal = new bootstrap.Modal(document.getElementById('formulario-edicion-partido')); // Instancia del modal
     const equipo1InputEdit = document.getElementById('equipo1-edit');
     const equipo2InputEdit = document.getElementById('equipo2-edit');
+    const tag1InputEdit = document.getElementById('tag1-edit'); // Nuevo: input para tag1
+    const tag2InputEdit = document.getElementById('tag2-edit'); // Nuevo: input para tag2
     const streamSelectEdit = document.getElementById('stream-edit');
     const resultadoSelectEdit = document.getElementById('resultado-edit');
     const fechaInputEdit = document.getElementById('fecha-edit');
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function descargarJSONModificado() {
         console.log("Archivo actual al descargar:", archivoActual);
         console.log("Contenido de partidosData al descargar:", partidosData);
-        const dataParaDescargar = [{ "rondas": partidosData[archivoActual]?.rondas || [] }]; // Creamos un array con un objeto que tiene la propiedad "rondas"
+        const dataParaDescargar = [{ "rondas": partidosData[archivoActual]?.rondas || [] }];
         console.log("Datos para descargar:", dataParaDescargar);
         const jsonString = JSON.stringify(dataParaDescargar, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json' });
@@ -38,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         archivoActual = event.target.value;
         const data = await cargarPartidos(archivoActual);
         if (data) {
-            // Cuando se carga un nuevo archivo, reiniciamos la pestaña activa
             activeTabId = null;
             mostrarRondas(data);
         }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function mostrarRondas(data) {
-        gestionRondasDiv.innerHTML = ''; // Limpiar el contenedor de rondas
+        gestionRondasDiv.innerHTML = '';
         if (!data || !data.rondas || data.rondas.length === 0) {
             gestionRondasDiv.innerHTML = '<p>No hay rondas disponibles para este archivo.</p>';
             return;
@@ -77,23 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const navTabs = document.createElement('ul');
         navTabs.classList.add('nav', 'nav-tabs');
         navTabs.setAttribute('role', 'tablist');
-        console.log("Se creó navTabs:", navTabs);
 
         const tabContent = document.createElement('div');
         tabContent.classList.add('tab-content');
-        console.log("Se creó tabContent:", tabContent);
 
         data.rondas.forEach((ronda, index) => {
-            console.log(`Iterando ronda ${index}:`, ronda);
             const tabId = `ronda-${index}`;
-            // Determinar si esta pestaña debe estar activa
             const isActive = activeTabId ? (tabId === activeTabId) : (index === 0);
 
-            // Crear la pestaña (li)
             const listItem = document.createElement('li');
             listItem.classList.add('nav-item');
             listItem.setAttribute('role', 'presentation');
-            console.log(`Ronda ${index}: Se creó listItem:`, listItem);
 
             const button = document.createElement('button');
             button.classList.add('nav-link');
@@ -111,10 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             listItem.appendChild(button);
             navTabs.appendChild(listItem);
-            console.log(`Ronda ${index}: Se creó botón:`, button);
-            console.log(`Ronda ${index}: navTabs después de appendChild:`, navTabs);
 
-            // Crear el contenido de la pestaña (div)
             const tabPane = document.createElement('div');
             tabPane.classList.add('tab-pane', 'fade');
             if (isActive) {
@@ -124,20 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
             tabPane.setAttribute('role', 'tabpanel');
             tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
 
-            // Crear el contenedor de la fila para los partidos
             const partidosRow = document.createElement('div');
             partidosRow.classList.add('row', 'mt-3');
 
             ronda.partidos.forEach((partido, partidoIndex) => {
-                // Crear el contenedor de cada partido (col-lg-4)
                 const partidoCol = document.createElement('div');
-                partidoCol.classList.add('col-lg-4', 'mb-3', 'partido-card'); // Añadí mb-3 para un poco de margen inferior
-                partidoCol.dataset.rondaIndex = index; // Guardamos el índice de la ronda
-                partidoCol.dataset.partidoIndex = partidoIndex; // Guardamos el índice del partido
-                // Añadimos el ID de la pestaña a la tarjeta para recuperarlo fácilmente
-                partidoCol.dataset.tabId = tabId; 
+                partidoCol.classList.add('col-lg-4', 'mb-3', 'partido-card');
+                partidoCol.dataset.rondaIndex = index;
+                partidoCol.dataset.partidoIndex = partidoIndex;
+                partidoCol.dataset.tabId = tabId;
 
-                // Construir el HTML para cada partido
                 partidoCol.innerHTML = `
                     <div class="bracket-round-list">
                         <div class="bracket-round-team">
@@ -178,20 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 `;
-
                 partidosRow.appendChild(partidoCol);
             });
 
             tabPane.appendChild(partidosRow);
             tabContent.appendChild(tabPane);
-            console.log(`Ronda ${index}: Se creó tabPane:`, tabPane);
-            console.log(`Ronda ${index}: tabContent después de appendChild:`, tabContent);
         });
 
         gestionRondasDiv.appendChild(navTabs);
         gestionRondasDiv.appendChild(tabContent);
-        console.log("gestionRondasDiv después de agregar navTabs:", gestionRondasDiv);
-        console.log("gestionRondasDiv después de agregar tabContent:", gestionRondasDiv);
 
         const tarjetasPartido = document.querySelectorAll('.partido-card');
         tarjetasPartido.forEach(tarjeta => {
@@ -200,25 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function mostrarFormularioEdicion(event) {
-        console.log('Se mostro una tarjeta de partido');
         const tarjetaPartido = event.currentTarget;
-        console.log('tarjetaPartido:', tarjetaPartido);
         const rondaIndex = parseInt(tarjetaPartido.dataset.rondaIndex);
-        console.log('rondaIndex:', rondaIndex);
         const partidoIndex = parseInt(tarjetaPartido.dataset.partidoIndex);
-        console.log('partidoIndex:', partidoIndex);
 
-        // Almacenar el ID de la pestaña actual
-        activeTabId = tarjetaPartido.dataset.tabId; 
-        console.log('activeTabId al mostrar formulario:', activeTabId);
+        activeTabId = tarjetaPartido.dataset.tabId;
 
         if (partidosData[archivoActual] && partidosData[archivoActual].rondas && partidosData[archivoActual].rondas[rondaIndex] && partidosData[archivoActual].rondas[rondaIndex].partidos && partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex]) {
             partidoSeleccionado = partidosData[archivoActual].rondas[rondaIndex].partidos[partidoIndex];
-            console.log('partidoSeleccionado:', partidoSeleccionado);
 
             // Precargar los datos en el formulario
             equipo1InputEdit.value = partidoSeleccionado.equipo1;
+            tag1InputEdit.value = partidoSeleccionado.tag1; // Nuevo: precargar tag1
             equipo2InputEdit.value = partidoSeleccionado.equipo2;
+            tag2InputEdit.value = partidoSeleccionado.tag2; // Nuevo: precargar tag2
             streamSelectEdit.value = partidoSeleccionado.stream ? 'true' : 'false';
             resultadoSelectEdit.value = partidoSeleccionado.resultado || 'VS';
             fechaInputEdit.value = partidoSeleccionado.fecha || '';
@@ -226,8 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logoLocalEdit.src = `/assets/logos/${partidoSeleccionado.tag1}.webp`;
             logoVisitanteEdit.src = `/assets/logos/${partidoSeleccionado.tag2}.webp`;
 
-            formularioEdicion.style.display = 'block';
-            console.log('formularioEdicion.style.display:', formularioEdicion.style.display);
+            formularioEdicionModal.show(); // Mostrar el modal
         } else {
             console.error('No se pudo encontrar el partido seleccionado en los datos.');
         }
@@ -236,7 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function guardarEdicionPartido() {
         if (partidoSeleccionado) {
             partidoSeleccionado.equipo1 = equipo1InputEdit.value;
+            partidoSeleccionado.tag1 = tag1InputEdit.value; // Nuevo: guardar tag1
             partidoSeleccionado.equipo2 = equipo2InputEdit.value;
+            partidoSeleccionado.tag2 = tag2InputEdit.value; // Nuevo: guardar tag2
             partidoSeleccionado.stream = streamSelectEdit.value === 'true';
             partidoSeleccionado.resultado = resultadoSelectEdit.value;
             partidoSeleccionado.fecha = fechaInputEdit.value;
@@ -244,23 +222,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Volver a renderizar las rondas para mostrar los cambios
             mostrarRondas(partidosData[archivoActual]);
-            formularioEdicion.style.display = 'none';
+            formularioEdicionModal.hide(); // Ocultar el modal
             partidoSeleccionado = null;
 
             // Reactivar la pestaña que estaba activa
             if (activeTabId) {
                 const tabButton = document.getElementById(`${activeTabId}-tab`);
                 if (tabButton) {
-                    tabButton.click(); // Simula un clic en el botón de la pestaña para activarla
+                    tabButton.click();
                 }
             }
         }
     }
 
     function cancelarEdicionPartido() {
-        formularioEdicion.style.display = 'none';
+        formularioEdicionModal.hide(); // Ocultar el modal
         partidoSeleccionado = null;
-        // Si cancela, también queremos volver a la pestaña anterior
         if (activeTabId) {
             const tabButton = document.getElementById(`${activeTabId}-tab`);
             if (tabButton) {
@@ -269,19 +246,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // El evento change del selector de archivo ya lo tenías
-    // archivoSelector.addEventListener('change', async (event) => {
-    //     archivoActual = event.target.value;
-    //     const data = await cargarPartidos(archivoActual);
-    //     if (data) {
-    //         mostrarRondas(data);
-    //     }
-    // });
-
     guardarEdicionBtn.addEventListener('click', guardarEdicionPartido);
     cancelarEdicionBtn.addEventListener('click', cancelarEdicionPartido);
 
-    // Cargar el primer archivo por defecto al cargar la página
     cargarPartidos(archivoSelector.value).then(data => {
         if (data) {
             mostrarRondas(data);

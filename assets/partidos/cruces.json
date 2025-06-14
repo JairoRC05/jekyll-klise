@@ -3,16 +3,26 @@
     "rondas": [
       {
         "ronda": "RONDA HOOPA",
-        "fecha_inicio": "2025-05-06",
-        "fecha_fin": "2025-05-06",
+        "fecha_inicio": "2025-06-18",
+        "fecha_fin": "2025-06-18",
         "hora": "19:00",
         "partidos": [
           {
-            "equipo1": "IM AMATISTA",
-            "tag1": "AMT",
-            "equipo2": "AD GAMING",
-            "tag2": "AD",
-            "resultado": "0-2",
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "IM AMATISTA",
+            "tag2": "AMT",
+            "resultado": "VS",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "PLAGA VILLANOS",
+            "tag1": "PLAGA",
+            "equipo2": "PRESTACIONES DE LEY HG",
+            "tag2": "PL",
+            "resultado": "VS",
             "stream": false,
             "fecha": "",
             "hora": ""
@@ -20,19 +30,9 @@
           {
             "equipo1": "IM ZAFIRO",
             "tag1": "ZAFIRO",
-            "equipo2": "NO SMITES",
-            "tag2": "NS",
-            "resultado": "0-2",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "CHRONOS LEGION",
-            "tag1": "CL",
-            "equipo2": "PRESTACIONES DE LEY HG",
-            "tag2": "PE",
-            "resultado": "0-2",
+            "equipo2": "DFS SAPPHIRE",
+            "tag2": "SAPPHIR",
+            "resultado": "VS",
             "stream": false,
             "fecha": "",
             "hora": ""
@@ -40,92 +40,103 @@
           {
             "equipo1": "HG SALARIO MINIMO",
             "tag1": "SM",
-            "equipo2": "AOGIRI",
-            "tag2": "AOGIRI",
+            "equipo2": "DFS QUARTZ",
+            "tag2": "QUARTZ",
+            "resultado": "VS",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "DFS AMETHYST",
+            "tag1": "AMET",
+            "equipo2": "LAST BREATH",
+            "tag2": "LB",
+            "resultado": "2-0",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "SPACE VAL",
+            "tag1": "SPACE",
+            "equipo2": "TEAM MAGMA",
+            "tag2": "MAGMA",
+            "resultado": "VS",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "RNT STARLIGHT",
+            "tag1": "RNTES",
+            "equipo2": "THE UNOWN TEAM",
+            "tag2": "TUT",
             "resultado": "0-2",
             "stream": false,
             "fecha": "",
             "hora": ""
           },
           {
-            "equipo1": "RNT GALÁCTICOS",
-            "tag1": "GX",
-            "equipo2": "TEAM MANICOMIO",
-            "tag2": "TM",
-            "resultado": "2-0",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "RNT NEO STARS",
-            "tag1": "NEO",
-            "equipo2": "SPACE VAL",
-            "tag2": "SPACE",
-            "resultado": "2-0",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "RK YMIR",
-            "tag1": "RK",
-            "equipo2": "TAQUITOS A LA DIABLA",
-            "tag2": "TAD",
-            "resultado": "2-1",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "RNT XAPULOVERS",
-            "tag1": "RNTX",
-            "equipo2": "DINAMITA BUENA ONDA",
-            "tag2": "DBO",
-            "resultado": "0-2",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "IM OBSIDIANA",
-            "tag1": "OBS",
-            "equipo2": "OVERHEAT",
-            "tag2": "OVG",
-            "resultado": "2-0",
-            "stream": false,
-            "fecha": "",
-            "hora": ""
-          },
-          {
-            "equipo1": "SPC ENIGMA",
-            "tag1": "ENIGMA",
-            "equipo2": "DINASTY",
-            "tag2": "DTY",
-            "resultado": "1-2",
-            "special": true,
-            "hora": "",
-            "stream": false,
-            "fecha": ""
-          },
-          {
-            "equipo1": "STAMINA E-SPORTS",
-            "tag1": "STMN",
-            "equipo2": "TUT WARRIORS",
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "TUT ONECOIN",
             "tag2": "TUTW",
-            "resultado": "2-0",
+            "resultado": "VS",
+            "stream": true,
+            "fecha": "",
+            "hora": "21:50"
+          },
+          {
+            "equipo1": "DRAKAR GAMING ",
+            "tag1": "DG",
+            "equipo2": "POKERANGERS",
+            "tag2": "PKR",
+            "resultado": "VS",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "RAGNAROK ALEPH",
+            "tag2": "AEP",
+            "resultado": "VS",
             "special": true,
             "hora": "",
             "stream": false,
             "fecha": ""
           },
           {
-            "equipo1": "THE UNOWN TEAM",
-            "tag1": "TUT",
-            "equipo2": "PLAGA VILLANOS",
-            "tag2": "PLAGA",
-            "resultado": "1-2",
+            "equipo1": "TEAM ROCKET",
+            "tag1": "TRR",
+            "equipo2": "IM OBSIDIANA",
+            "tag2": "OBS",
+            "resultado": "VS",
             "special": true,
+            "hora": "21:00",
+            "stream": true,
+            "fecha": ""
+          },
+          {
+            "equipo1": "STAMINA ES",
+            "tag1": "STMN",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "special": true,
+            "hora": "22:30",
+            "stream": true,
+            "fecha": ""
+          },
+          {
+            "equipo1": "CUMBIA DRAGÓN ",
+            "tag1": "CD",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "special": false,
             "hora": "",
             "stream": false,
             "fecha": ""

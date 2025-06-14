@@ -1,0 +1,137 @@
+[
+  {
+    "rondas": [
+      {
+        "ronda": "RONDA HOOPA",
+        "fecha_inicio": "2025-05-06",
+        "fecha_fin": "2025-05-06",
+        "hora": "19:00",
+        "partidos": [
+          {
+            "equipo1": "IM AMATISTA",
+            "tag1": "AMT",
+            "equipo2": "AD GAMING",
+            "tag2": "AD",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "IM ZAFIRO",
+            "tag1": "ZAFIRO",
+            "equipo2": "NO SMITES",
+            "tag2": "NS",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "CHRONOS LEGION",
+            "tag1": "CL",
+            "equipo2": "PRESTACIONES DE LEY HG",
+            "tag2": "PE",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "AOGIRI",
+            "tag2": "AOGIRI",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "RNT GALÁCTICOS",
+            "tag1": "GX",
+            "equipo2": "TEAM MANICOMIO",
+            "tag2": "TM",
+            "resultado": "2-0",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "RNT NEO STARS",
+            "tag1": "NEO",
+            "equipo2": "SPACE VAL",
+            "tag2": "SPACE",
+            "resultado": "2-0",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "RK YMIR",
+            "tag1": "RK",
+            "equipo2": "TAQUITOS A LA DIABLA",
+            "tag2": "TAD",
+            "resultado": "2-1",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "RNT XAPULOVERS",
+            "tag1": "RNTX",
+            "equipo2": "DINAMITA BUENA ONDA",
+            "tag2": "DBO",
+            "resultado": "0-2",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "IM OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "OVERHEAT",
+            "tag2": "OVG",
+            "resultado": "2-0",
+            "stream": false,
+            "fecha": "",
+            "hora": ""
+          },
+          {
+            "equipo1": "SPC ENIGMA",
+            "tag1": "ENIGMA",
+            "equipo2": "DINASTY",
+            "tag2": "DTY",
+            "resultado": "1-2",
+            "special": true,
+            "hora": "",
+            "stream": false,
+            "fecha": ""
+          },
+          {
+            "equipo1": "STAMINA E-SPORTS",
+            "tag1": "STMN",
+            "equipo2": "TUT WARRIORS",
+            "tag2": "TUTW",
+            "resultado": "2-0",
+            "special": true,
+            "hora": "",
+            "stream": false,
+            "fecha": ""
+          },
+          {
+            "equipo1": "THE UNOWN TEAM",
+            "tag1": "TUT",
+            "equipo2": "PLAGA VILLANOS",
+            "tag2": "PLAGA",
+            "resultado": "1-2",
+            "special": true,
+            "hora": "",
+            "stream": false,
+            "fecha": ""
+          }
+        ]
+      }
+    ]
+  }
+]

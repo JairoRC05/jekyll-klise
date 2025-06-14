@@ -113,48 +113,6 @@ title: RONDAS | LIGA INDIGO
       </div>
 
       
-<div id="formulario-edicion-partido" class="mt-3" style="display: none;">
-    <div class="row mb-3">
-        <div class="col-lg-10">
-            <div class="admin-card-match">
-                <div class="admin-card-team">
-                    <img src="/assets/logos/default.webp" alt="" id="logo-local-edit">
-                    <input class="form-control" type="text" id="equipo1-edit" placeholder="EQUIPO LOCAL (equipo1)" aria-label="equipo local">
-                </div>
-                <div class="admin-card-status">
-                    <label for="stream-edit" class="form-label">STREAM</label>
-                    <select class="form-select" id="stream-edit">
-                        <option value="true">SI</option>
-                        <option value="false">NO</option>
-                    </select>
-                    <label for="resultado-edit" class="form-label">MARCADOR</label>
-                    <select class="form-select" id="resultado-edit">
-                        <option value="VS">VS</option>
-                        <option value="2-0">2-0</option>
-                        <option value="2-1">2-1</option>
-                        <option value="0-2">0-2</option>
-                        <option value="1-2">1-2</option>
-                        <option value="0-0">0-0</option>
-                        <option value="PEN">PEN</option>
-                        <option value="DES">DES</option>
-                    </select>
-        
-                    <input class="form-control" type="date" id="fecha-edit"/>
-           
-                    <input class="form-control" type="time" id="hora-edit"/>
-                </div>
-                <div class="admin-card-team">
-                    <img src="/assets/logos/default.webp" alt="" id="logo-visitante-edit">
-                    <input class="form-control" type="text" id="equipo2-edit" placeholder="EQUIPO VISITANTE (equipo2)" aria-label="equipo visitante">
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2">
-            <button class="btn btn-primary btn-sm" id="guardar-edicion-btn">Guardar</button>
-            <button class="btn btn-secondary btn-sm" id="cancelar-edicion-btn">Cancelar</button>
-        </div>
-    </div>
-</div>
 
 
 
@@ -166,6 +124,58 @@ title: RONDAS | LIGA INDIGO
 
   </div>
 
+  <div class="modal fade" id="formulario-edicion-partido" tabindex="-1" aria-labelledby="editarPartidoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-cham">
+                <h5 class="modal-title" id="editarPartidoModalLabel">Editar Partido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-lg-12">
+                        <div class="admin-card-match">
+                            <div class="admin-card-team">
+                                <img src="/assets/logos/default.webp" alt="" id="logo-local-edit">
+                                <input class="form-control" type="text" id="equipo1-edit" placeholder="EQUIPO LOCAL (equipo1)" aria-label="equipo local">
+                                <input class="form-control mt-2" type="text" id="tag1-edit" placeholder="TAG LOCAL (tag1)" aria-label="tag local">
+                            </div>
+                            <div class="admin-card-status">
+                                <label for="stream-edit" class="form-label">STREAM</label>
+                                <select class="form-select" id="stream-edit">
+                                    <option value="true">SI</option>
+                                    <option value="false">NO</option>
+                                </select>
+                                <label for="resultado-edit" class="form-label">MARCADOR</label>
+                                <select class="form-select" id="resultado-edit">
+                                    <option value="VS">VS</option>
+                                    <option value="2-0">2-0</option>
+                                    <option value="2-1">2-1</option>
+                                    <option value="0-2">0-2</option>
+                                    <option value="1-2">1-2</option>
+                                    <option value="0-0">0-0</option>
+                                    <option value="PEN">PEN</option>
+                                    <option value="DES">DES</option>
+                                </select>
+                                <input class="form-control" type="date" id="fecha-edit"/>
+                                <input class="form-control" type="time" id="hora-edit"/>
+                            </div>
+                            <div class="admin-card-team">
+                                <img src="/assets/logos/default.webp" alt="" id="logo-visitante-edit">
+                                <input class="form-control" type="text" id="equipo2-edit" placeholder="EQUIPO VISITANTE (equipo2)" aria-label="equipo visitante">
+                                <input class="form-control mt-2" type="text" id="tag2-edit" placeholder="TAG VISITANTE (tag2)" aria-label="tag visitante">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-bs-dismiss="modal" id="cancelar-edicion-btn">Cancelar</button>
+                <button type="button" class="btn " id="guardar-edicion-btn">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

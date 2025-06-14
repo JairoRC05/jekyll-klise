@@ -2,6 +2,7 @@
 layout:
 permalink: /liga-indigo-hydra-ranking-junio2025.html
 title: HYDRA | LIGA INDIGO
+grupo: HYDRA
 ---
 
 
@@ -22,25 +23,7 @@ title: HYDRA | LIGA INDIGO
     </div>
   </nav>
 
-  <nav class="navbar top sticky-top bg-cham">
-    <div class="container d-flex justify-content-between align-items-center text-white ">
-      <a class="navbar-brand" href="#">
-        <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO SPC" style="width: 40px; height: 40px;">
-        <span class="indigo">LIGA INDIGO SPC</span>
-      </a>
-
-      <div class="d-none d-md-block text-white">
-
-        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-orion-ranking-junio2025"
-            class="text-white">ORION</a></span>
-        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-estatus" class="text-white">ESTATUS</a></span>
-        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
-
-      </div>
-
-    </div>
-
-  </nav>
+ {% include navBarLeague.html %}
 
 
 
@@ -62,22 +45,12 @@ title: HYDRA | LIGA INDIGO
 
 
 
-  <div class="container-fluid banner bg-cham">
-    <div class="container bannerPromo">
-      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/LIGA-INDIGO.png" class="drop img-fluid" alt="" ">
-      </a>
-      <div class=" bannerText">
-        <h1 class="indigo">LIGA INDIGO SPC</h1>
-        <span class="indigo">HYDRA</span>
-    </div>
-  </div>
-  </div>
+{% include grupoBanner.html %}
 
   <div class="container">
 
     <div class="section-title">
-      <h1 class="exo-style-black">CAMPEONATO</h1>
+      <h1 class="exo-style-black">RANKING</h1>
       <span class="exo"></span>
     </div>
     <div class="row" id="grupoSur">
@@ -101,6 +74,8 @@ title: HYDRA | LIGA INDIGO
 
   </div>
 
+  <div id="rondaEspecial" ></div>
+  
 
   <div class="container-fluid p-0 mt-5">
     <img src="/assets//backgrounds/MVPS.png" alt="MVPS BANNER" class="img-fluid">

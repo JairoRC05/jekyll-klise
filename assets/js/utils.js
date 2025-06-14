@@ -35,7 +35,7 @@ function generarPartidoHTML(partido) {
               <span>TWITCH</span>
               <h6>${partido.resultado}</h6>
               <span>${partido.fecha}</span>
-              <span>${partido.hora === 'SI' ? '21:40' : partido.hora === null ? '' : '22:20'}</span>
+              <span>${partido.hora}</span>
             ` : partido.special ? `
               <span>TWITCH</span>
               <h6>${partido.resultado}</h6>
@@ -220,7 +220,7 @@ function generarRondaEspecialHTML(rondaEspecialData) {
   
             <div class="section-title">
               <h1 class="exo-style-black">${rondaHoopa.ronda}</h1>
-        <span class="exo">${rondaHoopa.fecha}</span>
+        <span class="exo-style-black">${rondaHoopa.fecha}</span>
             </div>
        
         

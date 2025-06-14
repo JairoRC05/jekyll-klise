@@ -1,0 +1,58 @@
+  .portal-icon {
+            width: 35px; /* Ajusta el tamaño aquí */
+            height: 35px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #000;
+            box-shadow: 0 0 15px rgba(0, 200, 255, 0.7),
+                        0 0 30px rgba(0, 200, 255, 0.5),
+                        0 0 45px rgba(0, 200, 255, 0.3);
+            cursor: pointer; /* Para indicar que es interactivo */
+            transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+        }
+
+        .portal-icon:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), /* Resplandor más intenso al pasar el ratón */
+                        0 0 40px rgba(0, 255, 255, 0.7),
+                        0 0 60px rgba(0, 255, 255, 0.5);
+            transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+        }
+
+
+        .portal-inner {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: radial-gradient(circle, #2a003f 0%, #0d001a 100%);
+            position: absolute;
+            animation: portalPulse 2s infinite alternate, portalRotate 8s linear infinite;
+            transform-origin: center center;
+        }
+
+        @keyframes portalPulse {
+            0% {
+                transform: scale(0.8);
+                box-shadow: 0 0 5px rgb(255, 225, 0);
+            }
+            50% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(198, 215, 2, 0.7);
+            }
+            100% {
+                transform: scale(0.8);
+                box-shadow: 0 0 5px rgba(237, 246, 3, 0.3);
+            }
+        }
+
+        @keyframes portalRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
