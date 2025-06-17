@@ -355,12 +355,13 @@
             "tag1": "STMN",
             "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "RAGNAROK ALEPH",
@@ -453,12 +454,13 @@
             "tag1": "AEP",
             "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 6,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "TUT WARRRIOS",
@@ -832,12 +834,13 @@
             "tag1": "MAGMA",
             "equipo2": "POKERANGERS",
             "tag2": "PKR",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 10,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "IM AMATISTA",
@@ -962,24 +965,26 @@
             "tag1": "AEP",
             "equipo2": "IM AMATISTA",
             "tag2": "AMT",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 12,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "TUT WARRRIOS",
             "tag1": "TUTW",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 12,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "LAST BREATH",
@@ -999,24 +1004,26 @@
             "tag1": "MAGMA",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 12,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "POKERANGERS",
             "tag1": "PKR",
             "equipo2": "DFS SAPPHIRE",
             "tag2": "SAPPHIR",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 12,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -1055,48 +1062,52 @@
             "tag1": "TUTW",
             "equipo2": "IM AMATISTA",
             "tag2": "AMT",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 13,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "LAST BREATH",
             "tag1": "LB",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 13,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "TEAM MAGMA",
             "tag1": "MAGMA",
             "equipo2": "TEAM AETHER",
             "tag2": "TAE",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 13,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "POKERANGERS",
             "tag1": "PKR",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 13,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       }

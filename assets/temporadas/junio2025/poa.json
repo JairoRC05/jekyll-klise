@@ -21,9 +21,9 @@
     "M8": "3",
     "M9": "3",
     "M10": "3",
-    "M11": "R",
-    "M12": "",
-    "M13": "",
+    "M11": "1",
+    "M12": "2",
+    "M13": "3",
     "M14": ""
   },
   "jugadores": [
@@ -58,5 +58,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": false
+  "posicionDesempate": true
 }
