@@ -98,7 +98,7 @@
             "tag1": "RNTES",
             "equipo2": "DINASTY",
             "tag2": "DINASTY",
-            "resultado": "1-2",
+            "resultado": "0-2",
             "stream": false,
             "hora": "",
             "dia": "",
@@ -184,12 +184,13 @@
             "tag1": "RNTES",
             "equipo2": "DFS AMETHYST",
             "tag2": "AMET",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 3,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "SPACE VAL",
@@ -269,7 +270,7 @@
             "tag1": "RNTES",
             "equipo2": "SPACE VAL",
             "tag2": "SPACE",
-            "resultado": "1-2",
+            "resultado": "0-2",
             "stream": false,
             "hora": "",
             "dia": "",
@@ -355,12 +356,13 @@
             "tag1": "RNTES",
             "equipo2": "IM ZAFIRO",
             "tag2": "ZAFIRO",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 5,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
@@ -526,7 +528,7 @@
             "tag1": "RNTES",
             "equipo2": "TEAM ROCKET",
             "tag2": "TRR",
-            "resultado": "1-2",
+            "resultado": "0-2",
             "stream": false,
             "hora": "",
             "dia": "",
@@ -867,12 +869,13 @@
             "tag1": "RNTES",
             "equipo2": "PLAGA VILLANOS",
             "tag2": "PLAGA",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 11,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
@@ -949,12 +952,13 @@
             "tag1": "RNTES",
             "equipo2": "HG SALARIO MINIMO",
             "tag2": "SM",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 12,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
