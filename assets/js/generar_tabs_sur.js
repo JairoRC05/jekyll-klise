@@ -4,21 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabsContainer = document.getElementById('pills-tab');
     const contentContainer = document.getElementById('rondas-league-container');
     const rondaEspecialContainer = document.getElementById('rondaEspecial');
-
+    const ultimosResultadosContainer = document.getElementById('ultimos-resultados-container'); 
+    
     const roundSpecificData = [
     { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
         { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30', nombreImagen: 'raichu' }, // <-- Cambia a raichu
-        { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'goodra' }, // <-- Cambia a goodra
-        { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
-        { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
-        { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'gengar' }, // <-- Cambia a gengar
-        { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'lapras' }, // <-- Cambia a lapras
-        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
-        { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
-        { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'espeonEstrella' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'gyarados' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'chandelure' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, // <-- ¡CAMBIA ESTO!
+        { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'goodra' }, 
+        { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'mimikyu' }, 
+        { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'urshifu' }, 
+        { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'gengar' }, 
+        { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'lapras' }, 
+        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduck' }, 
+        { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'cleafable' }, 
+        { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'espeonEstrella' }, 
+        { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'gyarados' }, 
+        { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'chandelure' }, 
+        { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, 
         // ... el resto de tu array ...
         // { ronda: 'RONDA EXTRA', fecha: '2025-06-18', nombreImagen: 'skin_ronda_EXTRA' },
         { ronda: 'HOOPA', fecha: '2025-06-18', nombreImagen: 'PORTAL' },
@@ -135,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.error('Error al cargar cruces.json para la Ronda Hoopa:', error);
                         rondaEspecialContainer.innerHTML = '<p>Error al cargar la Ronda Hoopa.</p>';
                     });
+            }
+
+           if (ultimosResultadosContainer) {
+                ultimosResultadosContainer.innerHTML = generarPartidosPendientesHTML(data[0].rondas);
             }
         })
         .catch(error => {

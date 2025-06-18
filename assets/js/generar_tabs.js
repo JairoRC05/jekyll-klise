@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabsContainer = document.getElementById('pills-tab');
     const contentContainer = document.getElementById('rondas-league-container');
     const rondaEspecialContainer = document.getElementById('rondaEspecial');
+    const ultimosResultadosContainer = document.getElementById('ultimos-resultados-container'); 
+    
 
     const roundSpecificData = [
         { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
@@ -137,6 +139,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         rondaEspecialContainer.innerHTML = '<p>Error al cargar la Ronda Hoopa.</p>';
                     });
             }
+
+        
+
+             if (ultimosResultadosContainer) {
+                ultimosResultadosContainer.innerHTML = generarPartidosPendientesHTML(data[0].rondas);
+            }
+
         })
         .catch(error => {
             console.error('Error al cargar pnorte.json:', error);

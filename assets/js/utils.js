@@ -28,7 +28,7 @@ function generarPartidoHTML(partido) {
         </div>
         <div class="round-titles">
           <div class="card-round-promo left">
-            <h6>${partido.equipo1.substring(0, 15)}</h6>
+            <h6>${partido.equipo1.substring(0, 12)}</h6>
           </div>
           <div class="card-round-promo mx-2">
             ${partido.stream ? `
@@ -45,7 +45,7 @@ function generarPartidoHTML(partido) {
             `}
           </div>
           <div class="card-round-promo right">
-            <h6>${partido.equipo2.substring(0, 15)}</h6>
+            <h6>${partido.equipo2.substring(0, 12)}</h6>
           </div>
         </div>
         <div class="bracket-round-team-right">
@@ -278,3 +278,47 @@ function generarRondaEspecialHTML(rondaEspecialData) {
     return html;
 }
 
+
+
+
+
+function generarPartidosPendientesHTML(rondasData) {
+    let partidosPendientesHTML = '';
+    // let partidosEncontrados = 0; 
+    // Obtener la fecha actual
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    rondasData.forEach(ronda => {
+        ronda.partidos.forEach(partido => {
+            const partidoFecha = partido.fecha ? new Date(partido.fecha) : null;
+            if (partidoFecha) {
+                partidoFecha.setHours(0, 0, 0, 0);
+            }
+
+            // Elimina '&& partidosEncontrados < 5' de la condición
+            if (partido.resultado && partido.resultado.toLowerCase() === 'vs' && (partidoFecha === null || partidoFecha >= today)) {
+                partidosPendientesHTML += `
+                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                        ${generarPartidoHTML(partido)}
+                    </div>
+                `;
+                // No incrementes partidosEncontrados si ya no lo usas para el límite
+                // partidosEncontrados++;
+            }
+        });
+    });
+
+    if (partidosPendientesHTML === '') {
+        return '<p class="text-center">No hay partidos pendientes próximos.</p>';
+    }
+
+    return `
+        <div class="container mt-4">
+           <div class="section-title"> <h2 class="exo-style-black mb-3">PRÓXIMOS PARTIDOS</h2></div>
+            <div class="row">
+                ${partidosPendientesHTML}
+            </div>
+        </div>
+    `;
+}
