@@ -50,9 +50,9 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
 
         grupoDeEquipos.forEach(equipo => {
             const colDiv = document.createElement('div');
-            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6','col-xl-4');
+            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6', 'col-xl-4');
             // Añadir el tag como un data-attribute para fácil referencia
-            colDiv.dataset.teamTag = equipo.tag; 
+            colDiv.dataset.teamTag = equipo.tag;
 
             const cardRoundListDiv = document.createElement('div');
             cardRoundListDiv.classList.add('card-round-list');
@@ -73,16 +73,22 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
 
             if (mostrarIconos) {
                 if (overallIndex < 4) {
-                    const vipLogo = document.createElement('i');
-                    vipLogo.classList.add('bi', 'bi-trophy-fill');
-                    vipLogo.style.color = 'blue';
+                    const indigoLogo = document.createElement('img');
+                    indigoLogo.src = '/assets/logos/LIGA-INDIGO.svg'; 
+                    indigoLogo.alt = 'Escudo de seguridad'; 
+                    indigoLogo.style.width = '20px'; 
+                    indigoLogo.style.height = '20px'; 
+                    indigoLogo.style.marginBottom = '3px'
                     titleH2.appendChild(document.createTextNode(' '));
-                    titleH2.appendChild(vipLogo);
+                    titleH2.appendChild(indigoLogo);
                 }
                 if (overallIndex < 8) {
-                    const shieldLogo = document.createElement('i');
-                    shieldLogo.classList.add('ti');
-                    shieldLogo.style.color = 'orange';
+                    const shieldLogo = document.createElement('img');
+                    shieldLogo.src = '/assets/logos/COPA XFORCE.svg'; 
+                    shieldLogo.alt = 'Escudo de seguridad'; 
+                    shieldLogo.style.width = '20px'; 
+                    shieldLogo.style.height = '20px'; 
+                    shieldLogo.style.marginBottom = '3px'
                     titleH2.appendChild(document.createTextNode(' '));
                     titleH2.appendChild(shieldLogo);
                 }
@@ -222,7 +228,7 @@ function compararProgresoEquipos(previousTeamPoints, currentEquiposData, contene
     equipoElements.forEach(colDivElement => {
         const equipoTag = colDivElement.dataset.teamTag;
         const cardRoundRecordDiv = colDivElement.querySelector('.card-round-record');
-        
+
         // Encontrar los datos actuales de este equipo
         const currentEquipo = currentEquiposData.find(eq => eq.tag === equipoTag);
 
@@ -260,13 +266,13 @@ function compararProgresoEquipos(previousTeamPoints, currentEquiposData, contene
         const progresoSpan = document.createElement('span');
         progresoSpan.classList.add('progreso-individual');
         progresoSpan.innerHTML = `<i class="${claseIcono}"></i> ${indicador}`;
-        
+
         // Añadirlo al div de records, justo después de los spans de los partidos
         if (cardRoundRecordDiv) {
             // Puedes decidir si quieres un espacio o un separador visual
             const existingSpans = cardRoundRecordDiv.querySelectorAll('span.record');
             if (existingSpans.length > 0) {
-                 // Añadir un separador visual, por ejemplo una barra vertical
+                // Añadir un separador visual, por ejemplo una barra vertical
                 const separator = document.createElement('span');
                 separator.textContent = ' '; // O '&nbsp;&nbsp;'
                 cardRoundRecordDiv.appendChild(separator);
@@ -282,7 +288,7 @@ async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
     const grupoDiv = document.getElementById(grupoDivId);
     const equiposData = [];
 
-     const fetchPromises = teamFiles.map(file =>
+    const fetchPromises = teamFiles.map(file =>
         fetch(file)
             .then(response => {
                 if (!response.ok) {
@@ -329,7 +335,7 @@ async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
         await mostrarEquipos(equiposData, grupoDiv, grupoNombre); // Esperamos a que se rendericen
         compararProgresoEquipos(previousTeamPoints, equiposData, grupoDiv);
     }
-    
+
     // Guardar el ranking actual de puntos para la próxima comparación de este grupo
     const currentTeamPoints = {};
     equiposData.forEach(equipo => {

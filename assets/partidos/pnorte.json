@@ -21,7 +21,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "DFS QUARTZ",
             "tag2": "QUARTZ",
@@ -107,7 +107,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "IM OBSIDIANA",
             "tag2": "OBS",
@@ -182,7 +182,7 @@
           {
             "equipo1": "STAMINA ES",
             "tag1": "STMN",
-            "equipo2": "TUT WARRRIOS",
+            "equipo2": "TUT ONECOIN",
             "tag2": "TUTW",
             "resultado": "2-0",
             "stream": false,
@@ -281,7 +281,7 @@
           {
             "equipo1": "RAGNAROK ALEPH",
             "tag1": "AEP",
-            "equipo2": "TUT WARRRIOS",
+            "equipo2": "TUT ONECOIN",
             "tag2": "TUTW",
             "resultado": "0-2",
             "stream": false,
@@ -464,7 +464,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "LAST BREATH",
             "tag2": "LB",
@@ -550,7 +550,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "TEAM MAGMA",
             "tag2": "MAGMA",
@@ -593,12 +593,13 @@
             "tag1": "PL",
             "equipo2": "IM AMATISTA",
             "tag2": "AMT",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 7,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -635,7 +636,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "POKERANGERS",
             "tag2": "PKR",
@@ -721,7 +722,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "DFS SAPPHIRE",
             "tag2": "SAPPHIR",
@@ -807,7 +808,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
@@ -892,7 +893,7 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "TEAM AETHER",
             "tag2": "TAE",
@@ -978,7 +979,7 @@
             "fecha": ""
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
@@ -1063,7 +1064,7 @@
             "match_number": 2
           },
           {
-            "equipo1": "TUT WARRRIOS",
+            "equipo1": "TUT ONECOIN",
             "tag1": "TUTW",
             "equipo2": "IM AMATISTA",
             "tag2": "AMT",
