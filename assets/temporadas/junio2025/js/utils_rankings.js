@@ -283,7 +283,53 @@ function compararProgresoEquipos(previousTeamPoints, currentEquiposData, contene
 }
 
 
-// **NUEVA FUNCIÓN GENÉRICA PARA CARGAR Y MOSTRAR RANKING**
+function aplicarDesempate(equipos) {
+    const equiposCopiados = [...equipos]; 
+
+    const equiposPorPuntos = equiposCopiados.reduce((acc, equipo) => {
+        acc[equipo.suma] = acc[equipo.suma] || [];
+        acc[equipo.suma].push(equipo);
+        return acc;
+    }, {});
+
+    const puntosOrdenados = Object.keys(equiposPorPuntos)
+        .map(Number)
+        .sort((a, b) => b - a);
+
+    let equiposFinalOrdenados = [];
+
+    for (const puntos of puntosOrdenados) {
+        let grupoDeEquipos = equiposPorPuntos[puntos];
+
+        if (grupoDeEquipos.length > 1) {
+            grupoDeEquipos.sort((equipoA, equipoB) => {
+                // Lógica de desempate por posiciónDesempate
+                if (equipoA.posicionDesempate && !equipoB.posicionDesempate) {
+                    return -1; // equipoA sube
+                }
+                if (!equipoA.posicionDesempate && equipoB.posicionDesempate) {
+                    return 1; // equipoB sube
+                }
+
+              
+                if (equipoA.enfrentamientos && equipoB.enfrentamientos) {
+                    const resultadoDesempate = mostrarResultadosPartidoDesempate(equipoA, equipoB); // Suponiendo que esta función existe y es accesible
+                    if (resultadoDesempate === 1) return -1; // A gana, A sube
+                    if (resultadoDesempate === -1) return 1; // B gana, B sube
+                }
+
+                if (equipoA.desempateAdicional > equipoB.desempateAdicional) return -1;
+                if (equipoA.desempateAdicional < equipoB.desempateAdicional) return 1;
+
+                return 0; // Mantener el orden actual si no hay diferencia
+            });
+        }
+        equiposFinalOrdenados = equiposFinalOrdenados.concat(grupoDeEquipos);
+    }
+    return equiposFinalOrdenados;
+}
+
+
 async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
     const grupoDiv = document.getElementById(grupoDivId);
     const equiposData = [];
@@ -297,11 +343,8 @@ async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
                 return response.json();
             })
             .then(data => {
-                // *** CAMBIO CRUCIAL AQUÍ ***
-                // Ahora 'data' es el objeto directo del equipo, no un array que lo contiene.
-                // Verificamos que 'data' exista y que su propiedad 'grupo' coincida.
-                if (data && data.grupo === grupoNombre) { // <--- MODIFICADO
-                    const equipo = data; // <--- 'equipo' ahora es el objeto 'data' directamente
+                if (data && data.grupo === grupoNombre) {
+                    const equipo = data;
                     let suma = 0;
                     if (equipo.partidos) {
                         for (const partido in equipo.partidos) {
@@ -316,11 +359,16 @@ async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
 
     await Promise.all(fetchPromises);
 
+    // PASO 1: Ordenar por suma de puntos (orden inicial)
     equiposData.sort((a, b) => b.suma - a.suma);
-    console.log(`equiposData ${grupoNombre}:`, equiposData);
+    console.log(`equiposData ${grupoNombre} (después de suma):`, equiposData);
 
-    // Cargar el ranking anterior (puntos) específico para este grupo
-    const localStorageKey = `rankingAnteriorPuntos${grupoNombre}`; // Key única por grupo
+    // PASO 2: Aplicar la lógica de desempate para refinar el orden
+    const equiposRankeadosConDesempate = aplicarDesempate(equiposData);
+    console.log(`equiposData ${grupoNombre} (después de desempate):`, equiposRankeadosConDesempate);
+
+
+    const localStorageKey = `rankingAnteriorPuntos${grupoNombre}`;
     const rankingAnteriorPuntos = localStorage.getItem(localStorageKey);
     let previousTeamPoints = {};
     if (rankingAnteriorPuntos) {
@@ -330,17 +378,21 @@ async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre) {
         console.log(`No se encontró ranking anterior de puntos para ${grupoNombre} en localStorage.`);
     }
 
-    // Mostrar equipos y aplicar la comparación de progreso
     if (grupoDiv) {
-        await mostrarEquipos(equiposData, grupoDiv, grupoNombre); // Esperamos a que se rendericen
-        compararProgresoEquipos(previousTeamPoints, equiposData, grupoDiv);
+        // Usa los equipos ya rankeados para mostrar, sin que mostrarEquipos los reordene
+        // Necesitas asegurarte de que mostrarEquipos no tenga lógica de ordenamiento interna,
+        // o adaptarla para que solo reciba y muestre el array ya ordenado.
+        await mostrarEquipos(equiposRankeadosConDesempate, grupoDiv, grupoNombre);
+        compararProgresoEquipos(previousTeamPoints, equiposRankeadosConDesempate, grupoDiv);
     }
 
-    // Guardar el ranking actual de puntos para la próxima comparación de este grupo
     const currentTeamPoints = {};
-    equiposData.forEach(equipo => {
+    equiposRankeadosConDesempate.forEach(equipo => { // Guardar el ranking final
         currentTeamPoints[equipo.tag] = equipo.suma;
     });
     localStorage.setItem(localStorageKey, JSON.stringify(currentTeamPoints));
     console.log(`Ranking actual de puntos para ${grupoNombre} guardado en localStorage.`);
+
+    // ¡Devolver los equipos FINALMENTE ordenados y desempatados!
+    return equiposRankeadosConDesempate;
 }

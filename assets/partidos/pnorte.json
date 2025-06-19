@@ -885,12 +885,13 @@
             "tag1": "AEP",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 11,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "TUT ONECOIN",
