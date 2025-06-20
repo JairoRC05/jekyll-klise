@@ -9,7 +9,7 @@ title: COPA XFORZE | AD GAMING
 <html lang="{{ page.lang | default: site.lang | default: " es " }}">
 {% include header.html %}
 
-<body>
+<body class="bg-home">
 
 
     <nav class="navbar top sticky-top indigo-yellow">
@@ -24,7 +24,7 @@ title: COPA XFORZE | AD GAMING
     <nav class="navbar top sticky-top AD">
         <div class="container d-flex justify-content-between align-items-center text-white ">
             <div class="d-flex justify-content-center align-items-center text-white">
-                <img src="/assets/logos/COPA XFORCE.webp" alt="COPA XFORCE SPC EDITION" style="width: 50px;">
+                <img src="/assets/logos/COPA XFORCE.webp" alt="COPA XFORCE SPC EDITION" style="width: 30px;">
                 <span style="font-weight: bold;">COPA XFORCE AD GAMING EDITION</span>
             </div>
 
@@ -47,7 +47,7 @@ title: COPA XFORZE | AD GAMING
 
             <div class="banner-grupo">
                 {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-                {%- for post in norte | limit: 8 -%}
+                {%- for post in norte limit:8 -%}
                 <a href="{{post.url}}">
                     <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy"
                         class="leagues--img">
@@ -67,7 +67,7 @@ title: COPA XFORZE | AD GAMING
 
     <div class=" banner-grupo">
                     {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-                    {%- for post in norte | limit: 8 -%}
+                    {%- for post in norte limit:8 -%}
                     <a href="{{post.url}}">
                         <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy"
                             class="leagues--img">
@@ -595,7 +595,7 @@ title: COPA XFORZE | AD GAMING
     <div id="encuentros16avosContainer">
         </div>
 
-  <div class="d-none">
+  <div class="d-block">
       <h1 class="mt-5">Cuartos de Final</h1>
     <div id="encuentrosCuartosContainer">
         </div>

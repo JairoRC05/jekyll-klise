@@ -1202,6 +1202,11 @@ border: none;
   background: radial-gradient(circle, rgba(255, 167, 74, 1) 0%, rgba(235, 121, 0, 1) 100%);
 }
 
+.placeholder {
+  background: #f57f01;
+  background: radial-gradient(circle, rgb(252, 131, 2) 0%, rgb(255, 140, 18) 100%);
+}
+
 .bgRules {
   background: rgb(68, 76, 247) !important;
   background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;

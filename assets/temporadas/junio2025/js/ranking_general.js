@@ -1,6 +1,6 @@
 // ranking_general.js
 
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     const rankingGeneralDiv = document.getElementById('rankingGeneral');
     const equiposDataGeneral = [];
 
@@ -28,15 +28,46 @@ document.addEventListener('DOMContentLoaded', async function() {
         'assets/temporadas/junio2025/quartz.json',
         'assets/temporadas/junio2025/sapphire.json',
         'assets/temporadas/junio2025/stmn.json',
-        'assets/temporadas/junio2025/tae.json', // TAE aquí
-        'assets/temporadas/junio2025/tut.json', // TUT aquí
+        'assets/temporadas/junio2025/tae.json',
+        'assets/temporadas/junio2025/tut.json',
         'assets/temporadas/junio2025/tutw.json'
-    ].filter((value, index, self) => self.indexOf(value) === index); // Filtra duplicados
+    ].filter((value, index, self) => self.indexOf(value) === index);
 
-    const ARCHIVOS_DE_PARTIDOS_GENERALES = [
-        // Ejemplo: '/assets/partidos/partido_semana1.json',
-        // Asegúrate de que estos archivos contengan los datos necesarios para buscarResultadosDirectosGeneral
-    ];
+    const KNOCKOUT_RESULTS_FILE = 'assets/temporadas/junio2025/partidos/knockout_results.json'; // Todavía útil para resultados finales y detalles
+    const KNOCKOUT_PARTICIPANTS_CONFIG_FILE = '/assets/temporadas/junio2025/partidos/knockout_participants_config.json'; // <-- NUEVA CONSTANTE
+
+    let knockoutResults = null;
+    let knockoutParticipantsConfig = null;
+    let allTeamsMap = new Map();
+
+    // Dentro de ranking_general.js, quizás al principio del script
+    class KnockoutParticipant {
+        constructor(type, data) {
+            this.type = type; // 'team' o 'placeholder'
+            this.data = data; // { team: {...}, tag: '...' } o { partidoId: 'Match X' }
+        }
+
+        getDisplayInfo() {
+            if (this.type === 'team') {
+                return {
+                    team: this.data.team,
+                    tag: this.data.tag,
+                    link: this.data.link,
+                    logo: `/assets/logos/${this.data.tag}.webp`
+                };
+            } else {
+                // Placeholder for future match winner
+                return {
+                    team: this.data.partidoId, // e.g., "Ganador R1P1"
+                    tag: 'placeholder', // Special tag for placeholder logo
+                    link: '#',
+                    logo: '/assets/logos/TBD.webp' // A generic "To Be Determined" logo
+                };
+            }
+        }
+    }
+
+
 
     async function obtenerDatosEquipos(file) {
         try {
@@ -97,8 +128,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                 } else if (data && data.rondas) {
                     rondas = data.rondas;
                 } else if (Array.isArray(data)) {
-                     if (data.length > 0 && data[0].tag1 && data[0].tag2) {
-                         rondas = [{ partidos: data }];
+                    if (data.length > 0 && data[0].tag1 && data[0].tag2) {
+                        rondas = [{ partidos: data }];
                     } else {
                         console.warn(`Estructura de array inesperada en ${archivoPartidos}.`);
                         continue;
@@ -190,7 +221,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const currentRank = overallIndex + 1;
 
                 const colDiv = document.createElement('div');
-                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'col-xl-3', 'mb-4');
+                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'col-xl-4', 'mb-2');
                 const cardRoundListDiv = document.createElement('div');
                 cardRoundListDiv.classList.add('card-round-list');
                 const cardRoundTeamDiv = document.createElement('div');
@@ -210,16 +241,22 @@ document.addEventListener('DOMContentLoaded', async function() {
 
                 if (mostrarIconos && tipoRanking === 'GENERAL') {
                     if (currentRank <= 8) {
-                        const vipLogo = document.createElement('i');
-                        vipLogo.classList.add('ti', 'ti-vip');
-                        vipLogo.style.color = 'blue';
+                        const indigoLogo = document.createElement('img');
+                        indigoLogo.src = '/assets/logos/LIGA-INDIGO.svg';
+                        indigoLogo.alt = 'Escudo de seguridad';
+                        indigoLogo.style.width = '20px';
+                        indigoLogo.style.height = '20px';
+                        indigoLogo.style.marginBottom = '3px'
                         titleH2.appendChild(document.createTextNode(' '));
-                        titleH2.appendChild(vipLogo);
+                        titleH2.appendChild(indigoLogo);
                     }
                     if (currentRank <= 16) {
-                        const shieldLogo = document.createElement('i');
-                        shieldLogo.classList.add('ti', 'ti-shield-up');
-                        shieldLogo.style.color = 'orange';
+                        const shieldLogo = document.createElement('img');
+                        shieldLogo.src = '/assets/logos/COPA XFORCE.svg';
+                        shieldLogo.alt = 'Escudo de seguridad';
+                        shieldLogo.style.width = '20px';
+                        shieldLogo.style.height = '20px';
+                        shieldLogo.style.marginBottom = '3px'
                         titleH2.appendChild(document.createTextNode(' '));
                         titleH2.appendChild(shieldLogo);
                     }
@@ -295,25 +332,26 @@ document.addEventListener('DOMContentLoaded', async function() {
         URL.revokeObjectURL(url);
     }
 
-    // --- NUEVAS FUNCIONES PARA GENERAR CRUCES DE ELIMINATORIAS ---
+
 
     function generarEncuentros16avos(ranking) {
         const encuentros = [];
         const mensajesAdvertencia = [];
+        const ganadoresRonda = [];
 
         if (ranking.length < 16) {
             mensajesAdvertencia.push(`Advertencia: Se necesitan al menos 16 equipos para generar los 16avos de final. Se encontraron ${ranking.length}.`);
         }
 
         const datosPartidosSimulados16avos = [
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
-            { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
-            { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
+            { resultado: 'LLAVE 1', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
+            { resultado: 'LLAVE 2', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
+            { resultado: 'LLAVE 3', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
+            { resultado: 'LLAVE 4', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
+            { resultado: 'LLAVE 5', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
+            { resultado: 'LLAVE 6', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
+            { resultado: 'LLAVE 7', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
+            { resultado: 'LLAVE 8', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
         ];
 
         for (let i = 0; i < 8; i++) {
@@ -321,136 +359,243 @@ document.addEventListener('DOMContentLoaded', async function() {
             const equipo2 = ranking[15 - i];
 
             if (equipo1 && equipo2) {
+                const partidoInfo = datosPartidosSimulados16avos[i];
+                const partidoId = `LLAVE ${i + 1}`;
+
+              
+                const participant1 = new KnockoutParticipant('team', equipo1);
+                const participant2 = new KnockoutParticipant('team', equipo2);
+
                 encuentros.push({
-                    equipo1: equipo1,
-                    equipo2: equipo2,
+                    equipo1: participant1.getDisplayInfo(), // Obtiene la info formateada
+                    equipo2: participant2.getDisplayInfo(), // Obtiene la info formateada
                     tipo: `16avos - ${i + 1}`,
-                    partidoInfo: datosPartidosSimulados16avos[i]
+                    partidoInfo: partidoInfo
                 });
+
+              
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: partidoId }));
+
             } else {
                 mensajesAdvertencia.push(`Advertencia: No hay suficientes equipos para el cruce ${i + 1} de 16avos.`);
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador R1P${i + 1} (Faltante)` }));
             }
         }
-        return { encuentros, mensajesAdvertencia };
+        return { encuentros, mensajesAdvertencia, ganadoresRonda };
     }
 
-    function generarEncuentrosCuartos(ganadores16avos) {
+
+    function obtenerParticipantesRonda(rondaKey, participantesAnteriores, allTeamsMap, knockoutParticipantsConfig) {
+        if (knockoutParticipantsConfig && knockoutParticipantsConfig[rondaKey] && knockoutParticipantsConfig[rondaKey].length > 0) {
+            console.log(`Usando participantes configurados para ${rondaKey}.`);
+            return knockoutParticipantsConfig[rondaKey].map(tag => {
+                const team = allTeamsMap.get(tag);
+                return team ? new KnockoutParticipant('team', team) : new KnockoutParticipant('placeholder', { partidoId: `Equipo '${tag}' no encontrado para ${rondaKey}` });
+            });
+        } else {
+            console.log(`No hay participantes configurados para ${rondaKey}, usando los ganadores simulados de la ronda anterior.`);
+            return participantesAnteriores; 
+        }
+    }
+
+
+    function generarEncuentrosCuartos(participantes16avosSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig) { // Añadidos parámetros
         const encuentros = [];
         const mensajesAdvertencia = [];
+        const ganadoresRonda = []; 
 
-        if (ganadores16avos.length < 8) {
-            mensajesAdvertencia.push(`Advertencia: Se necesitan 8 ganadores de 16avos para generar los cuartos de final. Se encontraron ${ganadores16avos.length}.`);
+        // Determina los participantes reales para Cuartos de Final
+        // Si hay una configuración para cuartosDeFinal, la usa. De lo contrario, usa los ganadores simulados de 16avos.
+        const participantesCuartosReales = obtenerParticipantesRonda('cuartosDeFinal', participantes16avosSimulados, allTeamsMap, knockoutParticipantsConfig);
+
+        if (participantesCuartosReales.length < 8) {
+            mensajesAdvertencia.push(`Advertencia: Se necesitan 8 participantes para cuartos de final. Se encontraron ${participantesCuartosReales.length}.`);
         }
 
         const datosPartidosSimuladosCuartos = [
-            { resultado: 'Pendiente', stream: true, fecha: 'Dom 07-JUL', hora: '20:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'Dom 07-JUL', hora: '21:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'Lun 08-JUL', hora: '20:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'Lun 08-JUL', hora: '21:00' }
+            { resultado: 'LLAVE 9', stream: true, fecha: 'MAR 24 JUN', hora: '22:30' },
+            { resultado: 'LLAVE 10', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:00' },
+            { resultado: 'LLAVE 11', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:50' },
+            { resultado: 'LLAVE 12', stream: true, fecha: 'MIÉ 25 JUN', hora: '22:30' }
         ];
 
-        const crucesCuartos = [
-            [ganadores16avos[0], ganadores16avos[7]],
-            [ganadores16avos[1], ganadores16avos[6]],
-            [ganadores16avos[2], ganadores16avos[5]],
-            [ganadores16avos[3], ganadores16avos[4]]
+        // Los índices de cruce SIEMPRE son los mismos, lo que cambia es quiénes son los participantes en esas posiciones
+        const crucesCuartosIndices = [
+            [0, 7], // Participante 1 vs Participante 8
+            [1, 6], // Participante 2 vs Participante 7
+            [2, 5], // Participante 3 vs Participante 6
+            [3, 4]   // Participante 4 vs Participante 5
         ];
 
         let partidoIndex = 0;
-        crucesCuartos.forEach(cruce => {
-            const equipo1 = cruce[0];
-            const equipo2 = cruce[1];
+        crucesCuartosIndices.forEach(cruceIndices => {
+            const equipo1 = participantesCuartosReales[cruceIndices[0]]; 
+            const equipo2 = participantesCuartosReales[cruceIndices[1]];
+            const partidoId = `QFP${partidoIndex + 1}`; // ID único para cada partido de Cuartos
+
             if (equipo1 && equipo2) {
                 encuentros.push({
-                    equipo1: equipo1,
-                    equipo2: equipo2,
+                    equipo1: equipo1.getDisplayInfo(),
+                    equipo2: equipo2.getDisplayInfo(),
                     tipo: `Cuartos - ${partidoIndex + 1}`,
                     partidoInfo: datosPartidosSimuladosCuartos[partidoIndex]
                 });
+
+                // Ganadores para la siguiente ronda (Semifinales)
+                // Aquí, podemos optar por:
+                // 1. Usar el knockout_results.json si ya se jugó el partido de Cuartos
+                // 2. Si no se ha jugado, es un placeholder.
+                let winnerForNextRound = null;
+                if (knockoutResults && knockoutResults.rondas && knockoutResults.rondas['cuartos']) {
+                    const matchResult = knockoutResults.rondas['cuartos'].find(r => r.partidoId === partidoId);
+                    if (matchResult && matchResult.ganadorTag) {
+                        const winningTeamData = allTeamsMap.get(matchResult.ganadorTag);
+                        if (winningTeamData) {
+                            winnerForNextRound = new KnockoutParticipant('team', winningTeamData);
+                        }
+                    }
+                }
+
+                if (winnerForNextRound) {
+                    ganadoresRonda.push(winnerForNextRound);
+                } else {
+                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId}` }));
+                }
             } else {
-                mensajesAdvertencia.push(`Advertencia: No hay suficientes equipos para el cruce de Cuartos ${partidoIndex + 1}.`);
+                mensajesAdvertencia.push(`Advertencia: No hay suficientes participantes para el cruce de Cuartos ${partidoIndex + 1}.`);
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId} (Faltante)` }));
             }
             partidoIndex++;
         });
 
-        return { encuentros, mensajesAdvertencia };
+        return { encuentros, mensajesAdvertencia, ganadoresRonda };
     }
 
-    function generarEncuentrosSemifinales(ganadoresCuartos) {
+    function generarEncuentrosSemifinales(participantesCuartosSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig) { // Añadidos parámetros
         const encuentros = [];
         const mensajesAdvertencia = [];
+        const ganadoresRonda = [];
 
-        if (ganadoresCuartos.length < 4) {
-            mensajesAdvertencia.push(`Advertencia: Se necesitan 4 ganadores de Cuartos de Final para generar las semifinales. Se encontraron ${ganadoresCuartos.length}.`);
+        // Determina los participantes reales para Semifinales
+        const participantesSFSReales = obtenerParticipantesRonda('semifinales', participantesCuartosSimulados, allTeamsMap, knockoutParticipantsConfig);
+
+
+        if (participantesSFSReales.length < 4) {
+            mensajesAdvertencia.push(`Advertencia: Se necesitan 4 participantes de Cuartos de Final para generar las semifinales. Se encontraron ${participantesSFSReales.length}.`);
         }
 
         const datosPartidosSimuladosSF = [
-            { resultado: 'Pendiente', stream: true, fecha: 'Mié 10-JUL', hora: '20:00' },
-            { resultado: 'Pendiente', stream: true, fecha: 'Mié 10-JUL', hora: '21:00' }
+            { resultado: 'LLAVE 13', stream: true, fecha: 'Mié 10-JUL', hora: '20:00' },
+            { resultado: 'LLAVE 14', stream: true, fecha: 'Mié 10-JUL', hora: '21:00' }
         ];
 
-        const crucesSF = [
-            [ganadoresCuartos[0], ganadoresCuartos[3]],
-            [ganadoresCuartos[1], ganadoresCuartos[2]]
+        const crucesSFIndices = [
+            [0, 3], // Ganador QFP1 vs Ganador QFP4
+            [1, 2]  // Ganador QFP2 vs Ganador QFP3
         ];
 
         let partidoIndex = 0;
-        crucesSF.forEach(cruce => {
-            const equipo1 = cruce[0];
-            const equipo2 = cruce[1];
+        crucesSFIndices.forEach(cruceIndices => {
+            const equipo1 = participantesSFSReales[cruceIndices[0]];
+            const equipo2 = participantesSFSReales[cruceIndices[1]];
+            const partidoId = `SFP${partidoIndex + 1}`;
+
             if (equipo1 && equipo2) {
                 encuentros.push({
-                    equipo1: equipo1,
-                    equipo2: equipo2,
+                    equipo1: equipo1.getDisplayInfo(),
+                    equipo2: equipo2.getDisplayInfo(),
                     tipo: `Semifinal - ${partidoIndex + 1}`,
                     partidoInfo: datosPartidosSimuladosSF[partidoIndex]
                 });
+
+                // Ganadores para la final
+                let winnerForNextRound = null;
+                if (knockoutResults && knockoutResults.rondas && knockoutResults.rondas['semifinales']) {
+                    const matchResult = knockoutResults.rondas['semifinales'].find(r => r.partidoId === partidoId);
+                    if (matchResult && matchResult.ganadorTag) {
+                        const winningTeamData = allTeamsMap.get(matchResult.ganadorTag);
+                        if (winningTeamData) {
+                            winnerForNextRound = new KnockoutParticipant('team', winningTeamData);
+                        }
+                    }
+                }
+
+                if (winnerForNextRound) {
+                    ganadoresRonda.push(winnerForNextRound);
+                } else {
+                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId}` }));
+                }
             } else {
-                mensajesAdvertencia.push(`Advertencia: No hay suficientes equipos para el cruce de Semifinal ${partidoIndex + 1}.`);
+                mensajesAdvertencia.push(`Advertencia: No hay suficientes participantes para el cruce de Semifinal ${partidoIndex + 1}.`);
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId} (Faltante)` }));
             }
             partidoIndex++;
         });
 
-        return { encuentros, mensajesAdvertencia };
+        return { encuentros, mensajesAdvertencia, ganadoresRonda };
     }
 
-    function generarEncuentroFinal(ganadoresSF) {
+
+    function generarEncuentroFinal(participantesSFSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig) { // Añadidos parámetros
         const encuentros = [];
         const mensajesAdvertencia = [];
 
-        if (ganadoresSF.length < 2) {
-            mensajesAdvertencia.push(`Advertencia: Se necesitan 2 ganadores de Semifinales para generar la final. Se encontraron ${ganadoresSF.length}.`);
+        // Determina los participantes reales para la Final
+        const participantesFinalReales = obtenerParticipantesRonda('final', participantesSFSimulados, allTeamsMap, knockoutParticipantsConfig);
+
+
+        if (participantesFinalReales.length < 2) {
+            mensajesAdvertencia.push(`Advertencia: Se necesitan 2 participantes de Semifinales para generar la final. Se encontraron ${participantesFinalReales.length}.`);
         }
 
-        const datosPartidoSimuladoFinal = { resultado: 'Gran Final', stream: true, fecha: 'Sáb 13-JUL', hora: '21:00' };
+        const datosPartidoSimuladoFinal = { resultado: 'Pendiente', stream: true, fecha: 'Sáb 13-JUL', hora: '21:00' };
 
-        const equipo1 = ganadoresSF[0];
-        const equipo2 = ganadoresSF[1];
+        const equipo1 = participantesFinalReales[0];
+        const equipo2 = participantesFinalReales[1];
+        const partidoId = `FINAL`;
+
         if (equipo1 && equipo2) {
+            let finalPartidoInfo = { ...datosPartidoSimuladoFinal };
+            // Si la final ya tiene un resultado en knockout_results.json, actualiza el estado
+            if (knockoutResults && knockoutResults.rondas && knockoutResults.rondas['final'] && knockoutResults.rondas['final'].partidoId === partidoId) {
+                const finalResult = knockoutResults.rondas['final'];
+                if (finalResult.ganadorTag) {
+                    const winningTeamData = allTeamsMap.get(finalResult.ganadorTag);
+                    if (winningTeamData) {
+                        finalPartidoInfo.resultado = `${winningTeamData.team} ¡CAMPEÓN!`;
+                    }
+                }
+            }
+
             encuentros.push({
-                equipo1: equipo1,
-                equipo2: equipo2,
+                equipo1: equipo1.getDisplayInfo(),
+                equipo2: equipo2.getDisplayInfo(),
                 tipo: 'Gran Final',
-                partidoInfo: datosPartidoSimuladoFinal
+                partidoInfo: finalPartidoInfo
             });
         } else {
-            mensajesAdvertencia.push("Advertencia: No hay suficientes equipos para la Gran Final.");
+            mensajesAdvertencia.push("Advertencia: No hay suficientes participantes para la Gran Final.");
         }
-
         return { encuentros, mensajesAdvertencia };
     }
 
+
     function createMatchCard(partidoData) {
+        // Asegúrate de que equipo1 y equipo2 tienen la estructura esperada de getDisplayInfo()
+        const equipo1Display = partidoData.equipo1; // Ya viene de getDisplayInfo()
+        const equipo2Display = partidoData.equipo2; // Ya viene de getDisplayInfo()
+
         const bracketRoundListDiv = document.createElement('div');
         bracketRoundListDiv.classList.add('bracket-round-list');
 
+        // Equipo 1
         const bracketRoundTeam1Div = document.createElement('div');
         bracketRoundTeam1Div.classList.add('bracket-round-team');
         const link1 = document.createElement('a');
-        link1.href = `/teams/${partidoData.equipo1.tag}`;
+        link1.href = equipo1Display.link || '#';
         const img1 = document.createElement('img');
-        img1.src = `/assets/logos/${partidoData.equipo1.tag}.webp`;
-        img1.alt = `Logo de ${partidoData.equipo1.team}`;
+        img1.src = equipo1Display.logo; // Usa el logo de display info (TBD.webp si es placeholder)
+        img1.alt = equipo1Display.team;
         img1.classList.add('img-fluid');
         link1.appendChild(img1);
         bracketRoundTeam1Div.appendChild(link1);
@@ -462,26 +607,26 @@ document.addEventListener('DOMContentLoaded', async function() {
         const cardRoundPromoLeftDiv = document.createElement('div');
         cardRoundPromoLeftDiv.classList.add('card-round-promo', 'left');
         const h6_1 = document.createElement('h6');
-        h6_1.textContent = partidoData.equipo1.team.substring(0, 12);
+        h6_1.textContent = equipo1Display.team.substring(0, 12); // Nombre de equipo o "Ganador R1P1"
         cardRoundPromoLeftDiv.appendChild(h6_1);
         roundTitlesDiv.appendChild(cardRoundPromoLeftDiv);
 
         const cardRoundPromoMxDiv = document.createElement('div');
-        cardRoundPromoMxDiv.classList.add('card-round-promo', 'mx-2');
+        cardRoundPromoMxDiv.classList.add('card-round-promo');
 
         const currentPartidoInfo = partidoData.partidoInfo;
 
         let promoContent = '';
         if (currentPartidoInfo.stream) {
             promoContent = `
-                <span>TWITCH</span>
+
                 <h6>${currentPartidoInfo.resultado}</h6>
                 <span>${currentPartidoInfo.fecha}</span>
                 <span>${currentPartidoInfo.hora}</span>
             `;
         } else if (currentPartidoInfo.special) {
             promoContent = `
-                <span>TWITCH</span>
+           
                 <h6>${currentPartidoInfo.resultado}</h6>
                 <span>${currentPartidoInfo.hora}</span>
             `;
@@ -494,19 +639,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         const cardRoundPromoRightDiv = document.createElement('div');
         cardRoundPromoRightDiv.classList.add('card-round-promo', 'right');
         const h6_2 = document.createElement('h6');
-        h6_2.textContent = partidoData.equipo2.team.substring(0, 12);
+        h6_2.textContent = equipo2Display.team.substring(0, 12);
         cardRoundPromoRightDiv.appendChild(h6_2);
         roundTitlesDiv.appendChild(cardRoundPromoRightDiv);
 
         bracketRoundListDiv.appendChild(roundTitlesDiv);
 
+        // Equipo 2
         const bracketRoundTeam2Div = document.createElement('div');
         bracketRoundTeam2Div.classList.add('bracket-round-team-right');
         const link2 = document.createElement('a');
-        link2.href = `/teams/${partidoData.equipo2.tag}`;
+        link2.href = equipo2Display.link || '#';
         const img2 = document.createElement('img');
-        img2.src = `/assets/logos/${partidoData.equipo2.tag}.webp`;
-        img2.alt = `Logo de ${partidoData.equipo2.team}`;
+        img2.src = equipo2Display.logo;
+        img2.alt = equipo2Display.team;
         img2.classList.add('img-fluid');
         link2.appendChild(img2);
         bracketRoundTeam2Div.appendChild(link2);
@@ -515,9 +661,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         const cardBackDiv = document.createElement('div');
         cardBackDiv.classList.add('card-back');
         const cardColorLeftDiv = document.createElement('div');
-        cardColorLeftDiv.classList.add('card-color-left', partidoData.equipo1.tag === '7Z' ? 'S7Z' : partidoData.equipo1.tag);
+        // Usamos el tag real del equipo o 'placeholder' para la clase
+        cardColorLeftDiv.classList.add('card-color-left', equipo1Display.tag === '7Z' ? 'S7Z' : equipo1Display.tag);
         const cardColorRightDiv = document.createElement('div');
-        cardColorRightDiv.classList.add('card-color-right', partidoData.equipo2.tag === '7Z' ? 'S7Z' : partidoData.equipo2.tag);
+        cardColorRightDiv.classList.add('card-color-right', equipo2Display.tag === '7Z' ? 'S7Z' : equipo2Display.tag);
         cardBackDiv.appendChild(cardColorLeftDiv);
         cardBackDiv.appendChild(cardColorRightDiv);
         bracketRoundListDiv.appendChild(cardBackDiv);
@@ -531,15 +678,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         const equiposFiltrados = resultadosObtencionEquipos.filter(equipo => equipo !== null);
         equiposDataGeneral.push(...equiposFiltrados);
 
-        // APLICAR ORDENACIÓN COMPLETA AQUÍ PARA ASEGURAR QUE equipDataGeneral ESTÁ CORRECTAMENTE ORDENADO
         equiposDataGeneral.sort((a, b) => {
-            // 1. Ordenar por puntos (suma) de forma descendente
             if (b.suma !== a.suma) {
                 return b.suma - a.suma;
             }
 
-            // 2. Si los puntos son iguales, usar posicionDesempate
-            // Los equipos con posicionDesempate: true vienen antes que aquellos con false/undefined
             if (a.posicionDesempate && !b.posicionDesempate) {
                 return -1;
             }
@@ -547,14 +690,42 @@ document.addEventListener('DOMContentLoaded', async function() {
                 return 1;
             }
 
-            // 3. Si puntos y posicionDesempate son iguales, ordenar alfabéticamente por nombre del equipo
             return a.team.localeCompare(b.team);
         });
+
+        // Crear el mapa de equipos después de cargar y ordenar equiposDataGeneral
+        allTeamsMap = new Map(equiposDataGeneral.map(team => [team.tag, team]));
+
+        // --- Cargar los resultados de las eliminatorias (para ganadores de partidos) ---
+        try {
+            const responseKnockout = await fetch(KNOCKOUT_RESULTS_FILE);
+            if (responseKnockout.ok) {
+                knockoutResults = await responseKnockout.json();
+                console.log("Resultados de eliminatorias (ganadores de partidos) cargados:", knockoutResults);
+            } else {
+                console.warn("No se pudieron cargar los resultados de eliminatorias. Usando placeholders por defecto.", responseKnockout.status);
+            }
+        } catch (error) {
+            console.error("Error al cargar knockout_results.json:", error);
+        }
+
+        // --- Cargar la configuración de participantes por ronda (para activar las rondas) ---
+        try {
+            const responseKnockoutConfig = await fetch(KNOCKOUT_PARTICIPANTS_CONFIG_FILE);
+            if (responseKnockoutConfig.ok) {
+                knockoutParticipantsConfig = await responseKnockoutConfig.json();
+                console.log("Configuración de participantes de eliminatorias cargada:", knockoutParticipantsConfig);
+            } else {
+                console.warn("No se pudo cargar la configuración de participantes de eliminatorias. Las rondas avanzarán solo con resultados de partidos o con el ranking inicial.", responseKnockoutConfig.status);
+            }
+        } catch (error) {
+            console.error("Error al cargar knockout_participants_config.json:", error);
+        }
+
 
         console.log("Equipos cargados para ranking general (finalmente ordenados para brackets):", equiposDataGeneral);
 
         if (rankingGeneralDiv) {
-            // mostrarEquipos usará el array ya ordenado, y su sort interno actuará como doble verificación
             await mostrarEquipos(equiposDataGeneral, rankingGeneralDiv, 'GENERAL', true);
         }
 
@@ -573,9 +744,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         // --- GENERACIÓN Y RENDERIZADO DE LOS 16AVOS DE FINAL ---
         const encuentros16avosContainer = document.getElementById('encuentros16avosContainer');
+        let participantesParaCuartosSimulados = []; // Estos son los "ganadores" basados puramente en el seeding de 16avos
         if (encuentros16avosContainer) {
             encuentros16avosContainer.innerHTML = '';
-            const { encuentros: misEncuentros16avos, mensajesAdvertencia: advertencias16avos } = generarEncuentros16avos(equiposDataGeneral);
+            // generarEncuentros16avos ya no necesita knockoutResults ni allTeamsMap para sus propios ganadoresRonda
+            // ya que estos son placeholders basados en el seeding inicial.
+            const { encuentros: misEncuentros16avos, mensajesAdvertencia: advertencias16avos, ganadoresRonda: g16avos } = generarEncuentros16avos(equiposDataGeneral);
+            participantesParaCuartosSimulados = g16avos; // Almacenamos los participantes generados
 
             if (advertencias16avos.length > 0) {
                 advertencias16avos.forEach(msg => {
@@ -601,14 +776,16 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
         }
 
-        // --- SIMULACIÓN DE GANADORES PARA LA SIGUIENTE RONDA ---
-        const ganadores16avosSimulados = equiposDataGeneral.slice(0, 8);
-
         // --- GENERACIÓN Y RENDERIZADO DE CUARTOS DE FINAL ---
         const encuentrosCuartosContainer = document.getElementById('encuentrosCuartosContainer');
+        let participantesParaSFSimulados = [];
         if (encuentrosCuartosContainer) {
             encuentrosCuartosContainer.innerHTML = '';
-            const { encuentros: misEncuentrosCuartos, mensajesAdvertencia: advertenciasCuartos } = generarEncuentrosCuartos(ganadores16avosSimulados);
+            // Ahora generamos los Cuartos, y la función internamente usará knockoutParticipantsConfig para decidir si son reales o placeholders
+            const { encuentros: misEncuentrosCuartos, mensajesAdvertencia: advertenciasCuartos, ganadoresRonda: gCuartos } = generarEncuentrosCuartos(
+                participantesParaCuartosSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig // Pasamos la nueva config
+            );
+            participantesParaSFSimulados = gCuartos;
 
             if (advertenciasCuartos.length > 0) {
                 advertenciasCuartos.forEach(msg => {
@@ -624,7 +801,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 encuentrosRowCuartos.classList.add('row', 'justify-content-center');
                 misEncuentrosCuartos.forEach(partidoData => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
+                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-2');
                     colDiv.appendChild(createMatchCard(partidoData));
                     encuentrosRowCuartos.appendChild(colDiv);
                 });
@@ -634,14 +811,15 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
         }
 
-        // --- SIMULACIÓN DE GANADORES PARA SEMIFINALES ---
-        const ganadoresCuartosSimulados = equiposDataGeneral.slice(0, 4);
-
         // --- GENERACIÓN Y RENDERIZADO DE SEMIFINALES ---
         const encuentrosSemifinalesContainer = document.getElementById('encuentrosSemifinalesContainer');
+        let participantesParaFinalSimulados = [];
         if (encuentrosSemifinalesContainer) {
             encuentrosSemifinalesContainer.innerHTML = '';
-            const { encuentros: misEncuentrosSF, mensajesAdvertencia: advertenciasSF } = generarEncuentrosSemifinales(ganadoresCuartosSimulados);
+            const { encuentros: misEncuentrosSF, mensajesAdvertencia: advertenciasSF, ganadoresRonda: gSF } = generarEncuentrosSemifinales(
+                participantesParaSFSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig // Pasamos la nueva config
+            );
+            participantesParaFinalSimulados = gSF;
 
             if (advertenciasSF.length > 0) {
                 advertenciasSF.forEach(msg => {
@@ -667,14 +845,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
         }
 
-        // --- SIMULACIÓN DE GANADORES PARA LA FINAL ---
-        const ganadoresSFSimulados = equiposDataGeneral.slice(0, 2);
-
         // --- GENERACIÓN Y RENDERIZADO DE LA GRAN FINAL ---
         const encuentroFinalContainer = document.getElementById('encuentroFinalContainer');
         if (encuentroFinalContainer) {
             encuentroFinalContainer.innerHTML = '';
-            const { encuentros: misEncuentroFinal, mensajesAdvertencia: advertenciasFinal } = generarEncuentroFinal(ganadoresSFSimulados);
+            const { encuentros: misEncuentroFinal, mensajesAdvertencia: advertenciasFinal } = generarEncuentroFinal(
+                participantesParaFinalSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig // Pasamos la nueva config
+            );
 
             if (advertenciasFinal.length > 0) {
                 advertenciasFinal.forEach(msg => {
@@ -706,4 +883,5 @@ document.addEventListener('DOMContentLoaded', async function() {
             rankingGeneralDiv.innerHTML = `<p class="text-danger">Error al cargar o procesar el ranking general: ${error.message}</p>`;
         }
     }
+
 });
