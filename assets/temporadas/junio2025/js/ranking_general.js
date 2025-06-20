@@ -306,9 +306,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
 
         const datosPartidosSimulados16avos = [
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 19 JUN', hora: '22:30' },
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 19 JUN', hora: '21:50' },
-            { resultado: 'Pendiente', stream: true, fecha: 'VIE 19 JUN', hora: '21:00' },
+            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
+            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
+            { resultado: 'Pendiente', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
             { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
             { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
             { resultado: 'Pendiente', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
