@@ -344,14 +344,14 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimulados16avos = [
-            { resultado: 'LLAVE 1', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
-            { resultado: 'LLAVE 2', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
-            { resultado: 'LLAVE 3', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
-            { resultado: 'LLAVE 4', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
-            { resultado: 'LLAVE 5', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
-            { resultado: 'LLAVE 6', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
-            { resultado: 'LLAVE 7', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
-            { resultado: 'LLAVE 8', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
+            { resultado: 'ROUND 1', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
+            { resultado: 'ROUND 2', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
+            { resultado: 'ROUND 3', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
+            { resultado: 'ROUND 4', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
+            { resultado: 'ROUND 5', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
+            { resultado: 'ROUND 6', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
+            { resultado: 'ROUND 7', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
+            { resultado: 'ROUND 8', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
         ];
 
         for (let i = 0; i < 8; i++) {
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             if (equipo1 && equipo2) {
                 const partidoInfo = datosPartidosSimulados16avos[i];
-                const partidoId = `LLAVE ${i + 1}`;
+                const partidoId = `ROUND ${i + 1}`;
 
               
                 const participant1 = new KnockoutParticipant('team', equipo1);
@@ -413,10 +413,10 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimuladosCuartos = [
-            { resultado: 'LLAVE 9', stream: true, fecha: 'MAR 24 JUN', hora: '22:30' },
-            { resultado: 'LLAVE 10', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:00' },
-            { resultado: 'LLAVE 11', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:50' },
-            { resultado: 'LLAVE 12', stream: true, fecha: 'MIÉ 25 JUN', hora: '22:30' }
+            { resultado: 'QF 1', stream: true, fecha: 'MAR 24 JUN', hora: '22:30' },
+            { resultado: 'QF 2', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:00' },
+            { resultado: 'QF 3', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:50' },
+            { resultado: 'QF 4', stream: true, fecha: 'MIÉ 25 JUN', hora: '22:30' }
         ];
 
         // Los índices de cruce SIEMPRE son los mismos, lo que cambia es quiénes son los participantes en esas posiciones
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         crucesCuartosIndices.forEach(cruceIndices => {
             const equipo1 = participantesCuartosReales[cruceIndices[0]]; 
             const equipo2 = participantesCuartosReales[cruceIndices[1]];
-            const partidoId = `QFP${partidoIndex + 1}`; // ID único para cada partido de Cuartos
+            const partidoId = `QF ${partidoIndex + 1}`; // ID único para cada partido de Cuartos
 
             if (equipo1 && equipo2) {
                 encuentros.push({
@@ -459,11 +459,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 if (winnerForNextRound) {
                     ganadoresRonda.push(winnerForNextRound);
                 } else {
-                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId}` }));
+                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `${partidoId}` }));
                 }
             } else {
                 mensajesAdvertencia.push(`Advertencia: No hay suficientes participantes para el cruce de Cuartos ${partidoIndex + 1}.`);
-                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId} (Faltante)` }));
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `${partidoId} (Faltante)` }));
             }
             partidoIndex++;
         });
@@ -485,8 +485,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimuladosSF = [
-            { resultado: 'LLAVE 13', stream: true, fecha: 'Mié 10-JUL', hora: '20:00' },
-            { resultado: 'LLAVE 14', stream: true, fecha: 'Mié 10-JUL', hora: '21:00' }
+            { resultado: 'SEMIFINAL 1', stream: true, fecha: 'JUE 26 JUN', hora: '21:00' },
+            { resultado: 'SEMIFINAL 2', stream: true, fecha: 'JUE 26 JUN', hora: '21:50' }
         ];
 
         const crucesSFIndices = [
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         crucesSFIndices.forEach(cruceIndices => {
             const equipo1 = participantesSFSReales[cruceIndices[0]];
             const equipo2 = participantesSFSReales[cruceIndices[1]];
-            const partidoId = `SFP${partidoIndex + 1}`;
+            const partidoId = `SEMIFINAL ${partidoIndex + 1}`;
 
             if (equipo1 && equipo2) {
                 encuentros.push({
@@ -523,11 +523,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 if (winnerForNextRound) {
                     ganadoresRonda.push(winnerForNextRound);
                 } else {
-                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId}` }));
+                    ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `${partidoId}` }));
                 }
             } else {
                 mensajesAdvertencia.push(`Advertencia: No hay suficientes participantes para el cruce de Semifinal ${partidoIndex + 1}.`);
-                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `Ganador ${partidoId} (Faltante)` }));
+                ganadoresRonda.push(new KnockoutParticipant('placeholder', { partidoId: `LLAVE ${partidoId} (Faltante)` }));
             }
             partidoIndex++;
         });
@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             mensajesAdvertencia.push(`Advertencia: Se necesitan 2 participantes de Semifinales para generar la final. Se encontraron ${participantesFinalReales.length}.`);
         }
 
-        const datosPartidoSimuladoFinal = { resultado: 'Pendiente', stream: true, fecha: 'Sáb 13-JUL', hora: '21:00' };
+        const datosPartidoSimuladoFinal = { resultado: 'LLAVE 15', stream: true, fecha: 'JUE 26 JUN', hora: '22:30' };
 
         const equipo1 = participantesFinalReales[0];
         const equipo2 = participantesFinalReales[1];
@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const equipo2Display = partidoData.equipo2; // Ya viene de getDisplayInfo()
 
         const bracketRoundListDiv = document.createElement('div');
-        bracketRoundListDiv.classList.add('bracket-round-list');
+        bracketRoundListDiv.classList.add('bracket-round-copa');
 
         // Equipo 1
         const bracketRoundTeam1Div = document.createElement('div');
@@ -766,7 +766,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 encuentrosRow16avos.classList.add('row');
                 misEncuentros16avos.forEach(partidoData => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-4');
+                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-1');
                     colDiv.appendChild(createMatchCard(partidoData));
                     encuentrosRow16avos.appendChild(colDiv);
                 });
@@ -781,7 +781,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         let participantesParaSFSimulados = [];
         if (encuentrosCuartosContainer) {
             encuentrosCuartosContainer.innerHTML = '';
-            // Ahora generamos los Cuartos, y la función internamente usará knockoutParticipantsConfig para decidir si son reales o placeholders
+           
             const { encuentros: misEncuentrosCuartos, mensajesAdvertencia: advertenciasCuartos, ganadoresRonda: gCuartos } = generarEncuentrosCuartos(
                 participantesParaCuartosSimulados, knockoutResults, allTeamsMap, knockoutParticipantsConfig // Pasamos la nueva config
             );
@@ -801,7 +801,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 encuentrosRowCuartos.classList.add('row', 'justify-content-center');
                 misEncuentrosCuartos.forEach(partidoData => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-2');
+                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-12', 'mb-1');
                     colDiv.appendChild(createMatchCard(partidoData));
                     encuentrosRowCuartos.appendChild(colDiv);
                 });
@@ -835,7 +835,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 encuentrosRowSF.classList.add('row', 'justify-content-center');
                 misEncuentrosSF.forEach(partidoData => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
+                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-12', 'mb-1');
                     colDiv.appendChild(createMatchCard(partidoData));
                     encuentrosRowSF.appendChild(colDiv);
                 });
@@ -867,7 +867,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 encuentrosRowFinal.classList.add('row', 'justify-content-center');
                 misEncuentroFinal.forEach(partidoData => {
                     const colDiv = document.createElement('div');
-                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
+                    colDiv.classList.add('col-12', 'col-md-6', 'col-lg-12', 'mb-1');
                     colDiv.appendChild(createMatchCard(partidoData));
                     encuentrosRowFinal.appendChild(colDiv);
                 });

@@ -1,0 +1,436 @@
+.bracket-round-copa {
+    height: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 472px) {
+        padding: 5px 0;
+        justify-content: space-around;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+
+
+    .round-block {
+        display: block;
+
+        p {
+            margin: 0;
+            color: #fff;
+        }
+    }
+
+    .bracket-round-team {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        left: 3%;
+        color: #fff;
+
+
+        @media screen and (max-width: 768px) {
+            left: 2%;
+        }
+
+        a {
+            img {
+                width: 50px;
+
+                @media screen and (max-width: 472px) {
+                    width: 40px;
+                }
+
+            }
+        }
+
+        .card-round-title {
+            display: flex;
+            color: #ffffff;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            margin: 0 0 0 7px;
+
+            h2 {
+                margin: 0;
+                font-size: 20px;
+
+                @media screen and (max-width: 472px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .bracket-round-team-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        right: 3%;
+        color: #fff;
+
+
+        @media screen and (max-width: 768px) {
+            right: 2%;
+        }
+
+        a {
+            img {
+                width: 50px;
+
+                @media screen and (max-width: 472px) {
+                    width: 40px;
+                }
+
+            }
+        }
+
+        .card-round-title {
+            display: flex;
+            color: #000;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            margin: 0 0 0 7px;
+
+            h2 {
+                margin: 0;
+                font-size: 20px;
+
+                @media screen and (max-width: 472px) {
+                    font-size: 14px;
+                }
+
+            }
+
+        }
+    }
+
+
+    .round-titles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .left {
+            width: 100px;
+            text-align: right !important;
+
+        }
+
+        .right {
+            width: 100px;
+            text-align: left !important;
+
+        }
+
+        .card-round-promo {
+            display: grid;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            .llave {
+                background: rgba(0, 110, 0, 0.7);
+                color: #fff !important;
+                padding: 0 5%;
+                width: 100%;
+                border-radius: 5px;
+                font-size: 8px;
+            }
+
+            span {
+                color: #bbff00 !important;
+                font-size: 10px;
+                font-weight: bold;
+            }
+
+
+            h6 {
+                margin: 0;
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 12px;
+
+
+
+            }
+        }
+    }
+
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        /* background: url(/assets/mis/ice-mask-team.png); */
+        /* background-size: cover; */
+        /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
+        border: 1px solid rgb(228, 228, 228);
+        /* border-right: 2px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
+        /* backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(10px); */
+        border-radius: 10px;
+        z-index: -900;
+        overflow: hidden;
+
+        @media screen and (max-width: 472px) {
+            border-bottom: 1px solid rgb(228, 228, 228);
+        }
+    }
+
+
+    .card-color-left {
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        top: -35px;
+        left: -45px;
+        z-index: -1000;
+        transform: rotate(135deg);
+
+
+
+    }
+
+    .card-color-right {
+        position: absolute;
+        width: 60%;
+        height: 70%;
+        top: -35px;
+        right: -45px;
+        z-index: -1000;
+        transform: rotate(45deg);
+
+    }
+
+
+
+}
+
+
+/* Contenedor principal de la animación */
+.background-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    /* Fondo negro para el espacio */
+    overflow: hidden;
+    /* Importante para que las estrellas y la imagen no se salgan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para la imagen de Ho-Oh */
+.glowing-figure {
+    position: relative;
+    z-index: 2;
+    /* Asegúrate de que Ho-Oh esté por encima de las estrellas */
+    max-width: 100%;
+    /* Hace la imagen responsiva */
+    height: auto;
+    /* Aquí está la animación de brillo que sigue la forma de la imagen */
+    animation: glowing-outline 5s infinite alternate ease-in-out;
+    /* Usamos drop-shadow para que el brillo siga la forma de la figura PNG */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    /* Agregamos una transición para que los cambios de tamaño sean suaves en móviles */
+    transition: max-width 0.3s ease;
+}
+
+/* Keyframes para la animación de brillo de Ho-Oh */
+@keyframes glowing-outline {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.9))
+            /* Cian */
+            drop-shadow(0 0 25px rgba(255, 166, 0, 0.746));
+        /* Verde */
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+}
+
+/* ----------------------------------------------------- */
+/* ESTRELLAS - CAPA PRINCIPAL */
+/* ----------------------------------------------------- */
+.stars-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    /* background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); */
+}
+
+/* Estilo base para todas las estrellas */
+.starX {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    /* La animación usa variables CSS para duración y retraso */
+    animation: star-twinkle var(--duration) var(--delay) infinite alternate ease-in-out;
+    /* Añadimos un pequeño brillo a las estrellas mismas */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Keyframes para la animación de centelleo de las estrellas */
+@keyframes star-twinkle {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+/* ----------------------------------------------------- */
+/* NEBULOSA - CAPA DE FONDO SUTIL */
+/* ----------------------------------------------------- */
+.nebula-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Lo más al fondo */
+    pointer-events: none;
+    /* Usamos un gradiente con colores para simular una nebulosa */
+    background: radial-gradient(circle at 20% 80%, rgba(68, 0, 102, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 102, 68, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 51, 102, 0.2) 0%, transparent 50%);
+    background-size: 200% 200%;
+    /* Hacemos el gradiente más grande que el contenedor */
+    animation: nebula-movement 60s linear infinite alternate;
+    /* Movimiento lento y sutil */
+}
+
+@keyframes nebula-movement {
+    0% {
+        background-position: 0% 0%;
+        opacity: 0.7;
+    }
+
+    100% {
+        background-position: 100% 100%;
+        opacity: 0.9;
+    }
+}
+
+/* ----------------------------------------------------- */
+/* ESTRELLAS FUGAZES (CON RASTRO/TRAYECTO) */
+/* ----------------------------------------------------- */
+.shooting-star {
+    position: absolute;
+    /* Esta es la cabeza brillante de la estrella fugaz */
+    width: 5px;
+    /* Tamaño del punto brillante de la cabeza */
+    height: 5px;
+    background-color: #ffffff;
+    /* Color blanco sólido para la cabeza */
+    border-radius: 50%;
+    /* Forma circular para la cabeza */
+    filter: drop-shadow(0 0 10px #ffffff);
+    /* Brillo intenso en la cabeza */
+    opacity: 0;
+    z-index: 3;
+    /* Asegura que la estrella fugaz esté encima de todo */
+    animation: shooting-star-animation var(--duration) linear forwards;
+    /* Animación de movimiento */
+    /* La rotación se aplica al elemento completo, incluyendo su pseudo-elemento (la cola) */
+    transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotation));
+}
+
+/* Pseudo-elemento para crear el rastro/cola de la estrella fugaz */
+.shooting-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Centra verticalmente la cola respecto a la cabeza */
+    left: 0;
+    /* La cola empieza desde el borde izquierdo de la cabeza */
+    width: 50px;
+    /* Longitud de la cola */
+    height: 3px;
+    /* Grosor de la cola */
+    /* Gradiente lineal para que la cola se desvanezca */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+    /* 'to right' significa que la cola es transparente a la izquierda y más sólida hacia la derecha,
+               donde se une a la cabeza de la estrella. */
+
+    /* Traslada la cola a la posición correcta detrás de la cabeza */
+    transform: translate(-100%, -50%);
+    /* Mueve la cola a la izquierda por su ancho, y la centra verticalmente */
+
+    /* Suaviza el final de la cola */
+    border-radius: 0 3px 3px 0;
+    /* Redondea el extremo más lejano de la cola */
+    filter: blur(0.5px);
+    /* Aplica un ligero desenfoque para un efecto más suave */
+    opacity: 0.8;
+    /* Hace la cola ligeramente transparente */
+    z-index: -1;
+    /* Coloca la cola detrás de la cabeza de la estrella */
+}
+
+@keyframes shooting-star-animation {
+    0% {
+        transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotation));
+        opacity: 0;
+    }
+
+    5% {
+        /* Aparece rápido */
+        opacity: 1;
+    }
+
+    95% {
+        /* Mantiene la visibilidad mientras viaja */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) rotate(var(--rotation));
+        opacity: 0;
+    }
+}
