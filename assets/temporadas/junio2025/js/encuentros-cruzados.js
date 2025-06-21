@@ -38,7 +38,33 @@ document.addEventListener('DOMContentLoaded', async function() {
     const rankingSur = await loadAndDisplayRanking('grupoSur', teamFilesSur, 'SOUTH');
 
 
-
+     // --- NUEVO: Cargar el JSON de ganadores simulados ---
+    let ganadoresSimulados = {};
+    try {
+        const response = await fetch('/assets/temporadas/junio2025/partidos/ganadoresIndigo.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        ganadoresSimulados = await response.json();
+    } catch (error) {
+        console.error("Error al cargar ganadores_simulados.json:", error);
+        // Establecer valores por defecto si el archivo no se carga
+        ganadoresSimulados = {
+            cuartos_final: {
+                QF1: { nombre: "Ganador QF1", tag: "TBD" },
+                QF2: { nombre: "Ganador QF2", tag: "TBD" },
+                QF3: { nombre: "Ganador QF3", tag: "TBD" },
+                QF4: { nombre: "Ganador QF4", tag: "TBD" }
+            },
+            semifinales: {
+                SF1: { nombre: "Ganador SF1", tag: "TBD" },
+                SF2: { nombre: "Ganador SF2", tag: "TBD" }
+            },
+            final: {
+                F1: { nombre: "Ganador F1", tag: "TBD" }
+            }
+        };
+    }
 
     function generarEncuentrosCruzados(norte, sur) {
         const encuentros = [];
@@ -59,13 +85,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Si no se genera un cruce (ej. no hay 4to Sur), su objeto partidoSimulado asociado no se usará.
         const datosPartidosSimulados = [
             // Datos para el cruce "1 Norte vs 4 Sur"
-            { resultado: 'Pendiente', stream: true, fecha: 'Jue 27-JUN', hora: '21:15' },
+            { resultado: 'QF1', stream: true, fecha: 'Lun 30-JUN', hora: '21:15' },
             // Datos para el cruce "2 Norte vs 3 Sur"
-            { resultado: 'Pendiente', stream: true, fecha: 'Jue 27-JUN', hora: '22:15' },
+            { resultado: 'QF2', stream: true, fecha: 'Vie 27-JUN', hora: '21:15' },
             // Datos para el cruce "1 Sur vs 4 Norte"
-            { resultado: 'Pendiente', stream: true, fecha: 'Lun 30-JUN', hora: '21:15' }, // Ejemplo sin stream
+            { resultado: 'QF3', stream: true, fecha: 'Lun 30-JUN', hora: '22:15' }, 
             // Datos para el cruce "2 Sur vs 3 Norte"
-            { resultado: 'Pendiente', stream: true, fecha: 'Lun 30-JUN', hora: '22:15' }
+            { resultado: 'QF4', stream: true, fecha: 'Vie 27-JUN', hora: '22:15' }
         ];
 
         let partidoIndex = 0; // Para asignar el dato de partido correcto a cada cruce
@@ -96,47 +122,34 @@ document.addEventListener('DOMContentLoaded', async function() {
     const { encuentros: misEncuentros4tos, mensajesAdvertencia } = generarEncuentrosCruzados(rankingNorte, rankingSur);
 
 
-     // Encuentro de Semifinal 1 (Ganador 1N-4S vs Ganador 2S-3N)
-    const equipoSF1_1 = rankingNorte[0] || { team: 'Ganador QF1', tag: 'GQF1', link: '#' }; // Ejemplo si no hay equipo real
-    const equipoSF1_2 = rankingSur[1] || { team: 'Ganador QF4', tag: 'GQF4', link: '#' };
-
-    // Encuentro de Semifinal 2 (Ganador 2N-3S vs Ganador 1S-4N)
-    const equipoSF2_1 = rankingNorte[1] || { team: 'Ganador QF2', tag: 'GQF2', link: '#' };
-    const equipoSF2_2 = rankingSur[0] || { team: 'Ganador QF3', tag: 'GQF3', link: '#' };
-
 
     const datosPartidosSimuladosSF = [
-        // Semifinal 1
+        // Semifinal 1 (Ganador QF1 vs Ganador QF4)
         {
-            equipo1: equipoSF1_1,
-            equipo2: equipoSF1_2,
-            partidoInfo: { resultado: 'Pendiente', stream: true, fecha: 'Lun 01-JUL', hora: '20:00' },
+            equipo1: { team: ganadoresSimulados.cuartos_final.QF1.nombre, tag: ganadoresSimulados.cuartos_final.QF1.tag, link: '#' },
+            equipo2: { team: ganadoresSimulados.cuartos_final.QF4.nombre, tag: ganadoresSimulados.cuartos_final.QF4.tag, link: '#' },
+            partidoInfo: { resultado: 'SF1', stream: true, fecha: 'MAR 01-JUL', hora: '21:00' },
             tipo: 'Semifinal 1'
         },
-        // Semifinal 2
+        // Semifinal 2 (Ganador QF2 vs Ganador QF3)
         {
-            equipo1: equipoSF2_1,
-            equipo2: equipoSF2_2,
-            partidoInfo: { resultado: 'Pendiente', stream: true, fecha: 'Mar 02-JUL', hora: '20:00' },
+            equipo1: { team: ganadoresSimulados.cuartos_final.QF2.nombre, tag: ganadoresSimulados.cuartos_final.QF2.tag, link: '#' },
+            equipo2: { team: ganadoresSimulados.cuartos_final.QF3.nombre, tag: ganadoresSimulados.cuartos_final.QF3.tag, link: '#' },
+            partidoInfo: { resultado: 'SF2', stream: true, fecha: 'MAR 02-JUL', hora: '21:50' },
             tipo: 'Semifinal 2'
         }
     ];
 
-    // GANADORES SIMULADOS DE SEMIFINAL (puedes ajustar estos nombres/tags)
-    const equipoFinal_1 = equipoSF1_1; // Asumimos que el equipo 1 de la SF1 gana
-    const equipoFinal_2 = equipoSF2_1; // Asumimos que el equipo 1 de la SF2 gana
-
     const datosPartidosSimuladosFinal = [
-        // Gran Final
+        // Gran Final (Ganador SF1 vs Ganador SF2)
         {
-            equipo1: equipoFinal_1,
-            equipo2: equipoFinal_2,
-            partidoInfo: { resultado: 'Gran Final', stream: true, fecha: 'Vie 05-JUL', hora: '21:00' },
+            equipo1: { team: ganadoresSimulados.semifinales.SF1.nombre, tag: ganadoresSimulados.semifinales.SF1.tag, link: '#' },
+            equipo2: { team: ganadoresSimulados.semifinales.SF2.nombre, tag: ganadoresSimulados.semifinales.SF2.tag, link: '#' },
+            partidoInfo: { resultado: 'LAST DANCE', stream: true, fecha: 'MAR 02-JUL', hora: '22:30' },
             tipo: 'Gran Final'
         }
     ];
-
-    // --- FIN NUEVAS DEFINICIONES ---
+    
 
 
     const encuentrosContainer4tos = document.getElementById('encuentrosCruzadosContainer');
@@ -162,7 +175,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             encuentrosRow4tos.classList.add('row');
             misEncuentros4tos.forEach(partidoData => {
                 const colDiv = document.createElement('div');
-                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-3', 'mb-4');
+                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-12', 'mb-1');
                 // Llama a una nueva función para crear la card, para evitar duplicación de código
                 colDiv.appendChild(createMatchCard(partidoData));
                 encuentrosRow4tos.appendChild(colDiv);
@@ -183,7 +196,7 @@ document.addEventListener('DOMContentLoaded', async function() {
              datosPartidosSimuladosSF.forEach(partidoData => {
                 const colDiv = document.createElement('div');
                 // Semifinales son 2 partidos, col-6 para cada uno en pantallas medianas y grandes
-                colDiv.classList.add('col-12', 'col-md-6', 'mb-4');
+                colDiv.classList.add('col-12', 'col-md-12', 'mb-1');
                 colDiv.appendChild(createMatchCard(partidoData));
                 encuentrosRowSF.appendChild(colDiv);
             });
@@ -203,7 +216,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             datosPartidosSimuladosFinal.forEach(partidoData => {
                 const colDiv = document.createElement('div');
                 // La final es 1 partido, col-6 o col-4 para que no sea demasiado ancha
-                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
+                colDiv.classList.add('col-12', 'col-md-6', 'col-lg-12', 'mb-1');
                 colDiv.appendChild(createMatchCard(partidoData));
                 encuentrosRowFinal.appendChild(colDiv);
             });
@@ -216,15 +229,31 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 function createMatchCard(partidoData) {
     const bracketRoundListDiv = document.createElement('div');
-    bracketRoundListDiv.classList.add('bracket-round-list');
+    bracketRoundListDiv.classList.add('bracket-round-copa');
+
+    // Determinar la imagen y el enlace del equipo, con manejo de "TBD"
+    const getTeamImageAndLink = (teamInfo) => {
+        let imgSrc = `/assets/logos/${teamInfo.tag}.webp`;
+        let teamLink = teamInfo.link || '#'; // Enlace por defecto
+
+        // Si el tag es 'TBD', usar la imagen de LIGA-INDIGO y no poner enlace de equipo
+        if (teamInfo.tag === 'TBD') {
+            imgSrc = '/assets/logos/LIGA-INDIGO.webp';
+            teamLink = '#'; // No hay enlace a equipo específico para TBD
+        } else if (!teamInfo.link) {
+            teamLink = `/teams/${teamInfo.tag}`; // Enlace por defecto si no viene en data
+        }
+        return { imgSrc, teamLink };
+    };
 
     // Equipo 1 (Izquierda)
     const bracketRoundTeam1Div = document.createElement('div');
     bracketRoundTeam1Div.classList.add('bracket-round-team');
     const link1 = document.createElement('a');
-    link1.href = `/teams/${partidoData.equipo1.tag}`;
+    const { imgSrc: imgSrc1, teamLink: teamLink1 } = getTeamImageAndLink(partidoData.equipo1);
+    link1.href = teamLink1;
     const img1 = document.createElement('img');
-    img1.src = `/assets/logos/${partidoData.equipo1.tag}.webp`;
+    img1.src = imgSrc1;
     img1.alt = `Logo de ${partidoData.equipo1.team}`;
     img1.classList.add('img-fluid');
     link1.appendChild(img1);
@@ -238,27 +267,27 @@ function createMatchCard(partidoData) {
     const cardRoundPromoLeftDiv = document.createElement('div');
     cardRoundPromoLeftDiv.classList.add('card-round-promo', 'left');
     const h6_1 = document.createElement('h6');
-    h6_1.textContent = partidoData.equipo1.team.substring(0, 12);
+    h6_1.textContent = partidoData.equipo1.team.substring(0, 12); // Mantener el truncado
     cardRoundPromoLeftDiv.appendChild(h6_1);
     roundTitlesDiv.appendChild(cardRoundPromoLeftDiv);
 
     const cardRoundPromoMxDiv = document.createElement('div');
     cardRoundPromoMxDiv.classList.add('card-round-promo', 'mx-2');
 
-    // Uso de partidoData.partidoInfo
     const currentPartidoInfo = partidoData.partidoInfo;
 
     let promoContent = '';
+    // El texto "TBD" ahora viene del nombre del equipo en el JSON, no se genera aquí
     if (currentPartidoInfo.stream) {
         promoContent = `
-            <span>TWITCH</span>
+         
             <h6>${currentPartidoInfo.resultado}</h6>
             <span>${currentPartidoInfo.fecha}</span>
             <span>${currentPartidoInfo.hora}</span>
         `;
     } else if (currentPartidoInfo.special) {
         promoContent = `
-            <span>TWITCH</span>
+         
             <h6>${currentPartidoInfo.resultado}</h6>
             <span>${currentPartidoInfo.hora}</span>
         `;
@@ -271,7 +300,7 @@ function createMatchCard(partidoData) {
     const cardRoundPromoRightDiv = document.createElement('div');
     cardRoundPromoRightDiv.classList.add('card-round-promo', 'right');
     const h6_2 = document.createElement('h6');
-    h6_2.textContent = partidoData.equipo2.team.substring(0, 12);
+    h6_2.textContent = partidoData.equipo2.team.substring(0, 12); // Mantener el truncado
     cardRoundPromoRightDiv.appendChild(h6_2);
     roundTitlesDiv.appendChild(cardRoundPromoRightDiv);
 
@@ -281,22 +310,29 @@ function createMatchCard(partidoData) {
     const bracketRoundTeam2Div = document.createElement('div');
     bracketRoundTeam2Div.classList.add('bracket-round-team-right');
     const link2 = document.createElement('a');
-    link2.href = `/teams/${partidoData.equipo2.tag}`;
+    const { imgSrc: imgSrc2, teamLink: teamLink2 } = getTeamImageAndLink(partidoData.equipo2);
+    link2.href = teamLink2;
     const img2 = document.createElement('img');
-    img2.src = `/assets/logos/${partidoData.equipo2.tag}.webp`;
+    img2.src = imgSrc2;
     img2.alt = `Logo de ${partidoData.equipo2.team}`;
     img2.classList.add('img-fluid');
     link2.appendChild(img2);
     bracketRoundTeam2Div.appendChild(link2);
     bracketRoundListDiv.appendChild(bracketRoundTeam2Div);
 
-    // Card Back (colores de fondo)
+    // Card Back (colores de fondo) - MODIFICADO para TBD
     const cardBackDiv = document.createElement('div');
     cardBackDiv.classList.add('card-back');
+    
+    // Si el equipo es TBD, usamos una clase CSS genérica o un color específico
+    const cardColorLeftClass = partidoData.equipo1.tag === 'TBD' ? 'color-tbd' : (partidoData.equipo1.tag === '7Z' ? 'S7Z' : partidoData.equipo1.tag);
+    const cardColorRightClass = partidoData.equipo2.tag === 'TBD' ? 'color-tbd' : (partidoData.equipo2.tag === '7Z' ? 'S7Z' : partidoData.equipo2.tag);
+
     const cardColorLeftDiv = document.createElement('div');
-    cardColorLeftDiv.classList.add('card-color-left', partidoData.equipo1.tag === '7Z' ? 'S7Z' : partidoData.equipo1.tag);
+    cardColorLeftDiv.classList.add('card-color-left', cardColorLeftClass);
     const cardColorRightDiv = document.createElement('div');
-    cardColorRightDiv.classList.add('card-color-right', partidoData.equipo2.tag === '7Z' ? 'S7Z' : partidoData.equipo2.tag);
+    cardColorRightDiv.classList.add('card-color-right', cardColorRightClass);
+    
     cardBackDiv.appendChild(cardColorLeftDiv);
     cardBackDiv.appendChild(cardColorRightDiv);
     bracketRoundListDiv.appendChild(cardBackDiv);

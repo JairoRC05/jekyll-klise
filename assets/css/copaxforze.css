@@ -434,3 +434,91 @@
         opacity: 0;
     }
 }
+
+
+
+/* PARTICULAS */
+.indigoSpace {
+    overflow: hidden;
+    background-color: #020a1f;
+    /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #00e5ff;
+}
+
+#webgl-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Below UI elements */
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* Above canvas */
+    pointer-events: none;
+    /* Allows clicks to pass through to canvas for camera control */
+}
+
+.ui-element {
+    position: absolute;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    /* Semi-transparent neon border */
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    /* Neon glow */
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.8em;
+    color: #00e5ff;
+    opacity: 0.7;
+}
+
+.ui-element.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.ui-element.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.ui-element.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.ui-element.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 8px;
+    background-color: rgba(0, 229, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    width: 70%;
+    /* Example progress */
+    height: 100%;
+    background-color: #00e5ff;
+    box-shadow: 0 0 5px #00e5ff;
+    border-radius: 4px;
+}
