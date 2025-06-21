@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         {
             equipo1: { team: ganadoresSimulados.cuartos_final.QF2.nombre, tag: ganadoresSimulados.cuartos_final.QF2.tag, link: '#' },
             equipo2: { team: ganadoresSimulados.cuartos_final.QF3.nombre, tag: ganadoresSimulados.cuartos_final.QF3.tag, link: '#' },
-            partidoInfo: { resultado: 'SF2', stream: true, fecha: 'MAR 02-JUL', hora: '21:50' },
+            partidoInfo: { resultado: 'SF2', stream: true, fecha: 'MAR 01-JUL', hora: '21:50' },
             tipo: 'Semifinal 2'
         }
     ];
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         {
             equipo1: { team: ganadoresSimulados.semifinales.SF1.nombre, tag: ganadoresSimulados.semifinales.SF1.tag, link: '#' },
             equipo2: { team: ganadoresSimulados.semifinales.SF2.nombre, tag: ganadoresSimulados.semifinales.SF2.tag, link: '#' },
-            partidoInfo: { resultado: 'LAST DANCE', stream: true, fecha: 'MAR 02-JUL', hora: '22:30' },
+            partidoInfo: { resultado: 'LAST DANCE', stream: true, fecha: 'MAR 01-JUL', hora: '22:30' },
             tipo: 'Gran Final'
         }
     ];
