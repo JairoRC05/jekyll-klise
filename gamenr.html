@@ -1,637 +1,81 @@
 ---
 layout:
 permalink: /game-home
-title: HYDRA | LIGA INDIGO
-grupo: HYDRA
+title: INICIO | NACIÓN UNITE
+indigo: /liga-indigo-orion-ranking-junio2025
+supercxf: /super-copa-xforce
+copa: /copa-xforce-ad-gaming-edition
+sorteos: /sorteo-mensual
+twitch: https://www.twitch.tv/uniteforzestadium
+instagram: https://www.instagram.com/xf05__esports/
+x: https://x.com/XF05eSports
+facebook: https://www.facebook.com/ligaindigo.xf/
+discord: https://discord.gg/MqkeFH4stD
+youtube: https://www.youtube.com/@xforceunite2090
 ---
 
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamerVerse - Dashboard</title>
+    <title>{{page.title}}</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Fuente Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos generales */
-        body {
-            background-color: #1a1a2e; /* Fondo oscuro principal */
-            color: #e0e0e0; /* Color de texto claro */
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            display: flex; /* Usar flexbox para el layout principal (sidebar + content) */
-            min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-            overflow-x: hidden; /* Evitar scroll horizontal */
-        }
-
-        /* Sidebar - Barra de navegación lateral */
-        .sidebar {
-            width: 250px; /* Ancho fijo del sidebar */
-            background-color: #2a2a4a; /* Fondo oscuro del sidebar */
-            padding: 1.5rem 1rem;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2); /* Sombra a la derecha */
-            position: sticky; /* Sidebar pegajoso */
-            top: 0;
-            left: 0;
-            height: 100vh; /* Ocupa toda la altura de la ventana */
-            overflow-y: auto; /* Scroll si el contenido es demasiado largo */
-            flex-shrink: 0; /* Evitar que se encoja */
-        }
-
-        .sidebar .navbar-brand {
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.6rem;
-            margin-bottom: 2rem;
-            text-align: center; /* Centrar el logo */
-        }
-
-        .sidebar .nav-link {
-            color: #c0c0c0;
-            padding: 0.8rem 1rem;
-            border-radius: 8px; /* Bordes redondeados para los elementos del menú */
-            transition: background-color 0.3s ease, color 0.3s ease;
-            display: flex; /* Para alinear ícono y texto */
-            align-items: center;
-        }
-
-        .sidebar .nav-link i {
-            font-size: 1.2rem;
-            margin-right: 10px;
-        }
-
-        .sidebar .nav-link:hover,
-        .sidebar .nav-link.active {
-            background-color: #8a2be2; /* Violeta al pasar el mouse o activo */
-            color: #fff;
-        }
-
-        /* Contenido principal */
-        .main-content {
-            flex-grow: 1; /* Ocupa el espacio restante */
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Top Bar - Barra superior (Búsqueda, Perfil, etc.) */
-        .top-bar {
-            background-color: #2a2a4a; /* Fondo oscuro similar al sidebar */
-            padding: 1rem 1.5rem;
-            border-radius: 12px; /* Bordes redondeados */
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Espaciar elementos */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .top-bar .search-bar {
-            flex-grow: 1; /* Permite que la barra de búsqueda ocupe espacio */
-            max-width: 500px; /* Ancho máximo para la búsqueda */
-            margin-right: 1rem;
-            position: relative; /* Para el ícono de búsqueda */
-        }
-
-        .top-bar .search-bar input {
-            background-color: #1a1a2e; /* Fondo oscuro para el input */
-            border: none;
-            color: #e0e0e0;
-            border-radius: 25px; /* Bordes muy redondeados */
-            padding: 0.7rem 1.5rem 0.7rem 3rem; /* Espacio para el ícono */
-            width: 100%;
-        }
-
-        .top-bar .search-bar input::placeholder {
-            color: #888;
-        }
-
-        .top-bar .search-bar i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #888;
-        }
-
-        .top-bar .profile-section {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-bar .profile-section .profile-info {
-            text-align: right;
-            margin-right: 1rem;
-        }
-
-        .top-bar .profile-section .profile-info strong {
-            display: block;
-            color: #fff;
-        }
-
-        .top-bar .profile-section .profile-info small {
-            color: #c0c0c0;
-        }
-
-        .top-bar .profile-section .avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%; /* Avatar redondo */
-            object-fit: cover;
-            border: 2px solid #8a2be2; /* Borde violeta */
-        }
-
-        .top-bar .top-icons .btn {
-            background: none;
-            border: none;
-            color: #e0e0e0;
-            font-size: 1.3rem;
-            margin-left: 0.5rem;
-            transition: color 0.2s ease;
-        }
-
-        .top-bar .top-icons .btn:hover {
-            color: #8a2be2;
-        }
-
-        /* Banner principal (Juego destacado) */
-        .hero-banner {
-            background-image: url('https://placehold.co/1200x500/2a2a4a/e0e0e0?text=Juego+Destacado'); /* Imagen de fondo para el banner */
-            background-size: cover;
-            background-position: center;
-            height: 450px; /* Altura del banner */
-            border-radius: 15px; /* Bordes redondeados */
-            display: flex;
-            align-items: flex-end; /* Alinear contenido abajo */
-            padding: 2rem;
-            position: relative;
-            margin-bottom: 2rem;
-            overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        .hero-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%); /* Degradado oscuro en la parte inferior */
-            z-index: 0;
-        }
-
-        .hero-banner-content {
-            position: relative;
-            z-index: 1; /* Asegura que el contenido esté sobre el degradado */
-            color: #fff;
-            max-width: 60%; /* Ancho del texto */
-        }
-
-        .hero-banner-content .game-tags span {
-            background-color: rgba(138, 43, 226, 0.7); /* Fondo para las etiquetas */
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            font-weight: 600;
-        }
-
-        .hero-banner-content h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-banner-content p {
-            font-size: 1.1rem;
-            color: #c0c0c0;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-banner-buttons .btn {
-            padding: 0.8rem 1.8rem;
-            font-weight: 600;
-            border-radius: 50px;
-            font-size: 1.05rem;
-            margin-right: 1rem;
-            transition: transform 0.2s ease;
-        }
-
-        .hero-banner-buttons .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-primary-custom {
-            background-color: #8a2be2;
-            border-color: #8a2be2;
-        }
-
-        .btn-primary-custom:hover {
-            background-color: #a052ee;
-            border-color: #a052ee;
-        }
-
-        .btn-outline-light-custom {
-            border-color: #fff;
-            color: #fff;
-        }
-
-        .btn-outline-light-custom:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border-color: #fff;
-        }
-
-        /* Sección de Amigos en línea */
-        .friends-online {
-            width: 280px; /* Ancho fijo para la sección de amigos */
-            background-color: #2a2a4a;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0; /* Evitar que se encoja */
-            margin-left: 1.5rem; /* Margen a la izquierda del contenido principal */
-            height: fit-content; /* Ajustar altura al contenido */
-        }
-
-        .friends-online h5 {
-            color: #fff;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .friend-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .friend-item .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #5cb85c; /* Borde verde para online */
-            margin-right: 0.8rem;
-        }
-
-        .friend-item .friend-info strong {
-            display: block;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        .friend-item .friend-info small {
-            color: #90ee90; /* Verde más claro para "Playing" */
-        }
-
-        .friend-item .join-button {
-            margin-left: auto; /* Empuja el botón a la derecha */
-            background-color: #5cb85c; /* Botón de unirse en verde */
-            border-color: #5cb85c;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            border-radius: 20px;
-        }
-
-        .friend-item .join-button:hover {
-            background-color: #6fdc6f;
-            border-color: #6fdc6f;
-        }
-
-        /* Sección de juegos "Actual Games" y "Recently Played" */
-        .games-section {
-            background-color: #2a2a4a;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 2rem;
-        }
-
-        .games-section h3 {
-            color: #fff;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .games-section .arrow-buttons .btn {
-            background: none;
-            border: 1px solid #8a2be2;
-            color: #8a2be2;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0.5rem;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .games-section .arrow-buttons .btn:hover {
-            background-color: #8a2be2;
-            color: #fff;
-        }
-
-        .game-card {
-            background-color: #1a1a2e; /* Fondo oscuro para las tarjetas de juego */
-            border: none;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative; /* Para el precio */
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        .game-card img {
-            height: 180px; /* Altura fija para las imágenes de juego */
-            object-fit: cover;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-
-        .game-card .card-body {
-            padding: 1rem;
-        }
-
-        .game-card .card-title {
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            white-space: nowrap; /* Evitar que el título se rompa en varias líneas */
-            overflow: hidden;
-            text-overflow: ellipsis; /* Añadir puntos suspensivos si el texto es muy largo */
-        }
-
-        .game-card .price-overlay {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: rgba(138, 43, 226, 0.8);
-            color: #fff;
-            padding: 0.3rem 0.7rem;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .recently-played-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .recently-played-item img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-
-        .recently-played-info strong {
-            display: block;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        .recently-played-info .progress {
-            height: 5px;
-            background-color: #4a4a6e;
-            border-radius: 5px;
-            margin-top: 0.3rem;
-        }
-
-        .recently-played-info .progress-bar {
-            background-color: #8a2be2;
-        }
-
-        /* Sección de descuentos */
-        .discount-banner {
-            background-color: #8a2be2; /* Fondo violeta para el descuento */
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            color: #fff;
-            margin-top: 2rem; /* Margen superior para separarlo */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .discount-banner h4 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .discount-banner p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .discount-banner .btn-light-custom {
-            background-color: #fff;
-            color: #8a2be2;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .discount-banner .btn-light-custom:hover {
-            background-color: #f0f0f0;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-
-        /* Layout principal: Contenido central con sidebar de amigos */
-        .central-content-area {
-            display: flex;
-            gap: 1.5rem; /* Espacio entre el contenido principal y la sección de amigos */
-        }
-
-        .main-content-left {
-            flex-grow: 1; /* Permite que esta sección ocupe el espacio restante */
-        }
-
-        /* Media queries para responsividad */
-        @media (max-width: 992px) {
-            .sidebar {
-                width: 80px; /* Sidebar más pequeño en pantallas medianas */
-                padding: 1rem 0.5rem;
-                align-items: center;
-            }
-            .sidebar .navbar-brand span {
-                display: none; /* Ocultar el texto del logo */
-            }
-            .sidebar .nav-link span {
-                display: none; /* Ocultar el texto de los enlaces */
-            }
-            .sidebar .nav-link i {
-                margin-right: 0; /* Eliminar margen para el ícono */
-                font-size: 1.5rem; /* Aumentar tamaño del ícono */
-            }
-            .sidebar .nav-link {
-                justify-content: center; /* Centrar los íconos */
-            }
-
-            .main-content {
-                padding: 1rem;
-            }
-
-            .top-bar {
-                flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-                justify-content: center;
-                text-align: center;
-            }
-            .top-bar .search-bar {
-                margin-bottom: 1rem;
-                margin-right: 0;
-                width: 100%;
-                max-width: none; /* Sin ancho máximo */
-            }
-            .top-bar .profile-section, .top-bar .top-icons {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-banner {
-                height: 350px;
-            }
-            .hero-banner-content {
-                max-width: 90%;
-                text-align: center;
-            }
-            .hero-banner-content h2 {
-                font-size: 2.5rem;
-            }
-            .hero-banner-content p {
-                font-size: 1rem;
-            }
-            .hero-banner-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            .hero-banner-buttons .btn {
-                margin-right: 0;
-                width: 100%;
-            }
-
-            .central-content-area {
-                flex-direction: column; /* Apilar las secciones en pantallas pequeñas */
-            }
-            .friends-online {
-                width: 100%; /* Ocupar todo el ancho */
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-banner {
-                height: 280px;
-                padding: 1.5rem;
-            }
-            .hero-banner-content h2 {
-                font-size: 2rem;
-            }
-            .hero-banner-content p {
-                font-size: 0.9rem;
-            }
-            .games-section .arrow-buttons {
-                display: none; /* Ocultar botones de flecha en móviles */
-            }
-            .discount-banner h4 {
-                font-size: 1.5rem;
-            }
-            .discount-banner p {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gemunu+Libre:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/nacion.css" />
+    <link rel="stylesheet" href="/assets/css/copaxforze.css" />
+ 
 </head>
+
 <body>
 
     <!-- Sidebar - Barra de navegación lateral -->
     <div class="sidebar">
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
             <i class="bi bi-controller me-2"></i>
-            <span>Nacion Unite</span>
+            <span>UniteZone</span>
         </a>
         <ul class="nav flex-column">
+        
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                    <i class="bi bi-house-door"></i>
-                    <span>Home</span>
+                <a class="nav-link active" href="{{page.indigo}}">
+                    <i class="bi bi-stars"></i>
+                    <span>Liga Indigo</span>
+                </a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{page.copa}}">
+                    <i class="bi bi-trophy"></i>
+                    <span>Copa XForze</span>
+                </a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{page.supercxf}}">
+                    <i class="bi bi-trophy"></i>
+                    <span>Super Copa XForze</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-grid"></i>
-                    <span>Categoría</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-collection"></i>
-                    <span>Biblioteca</span>
+                <a class="nav-link" href="{{page.sorteos}}">
+                    <i class="bi bi-gift"></i>
+                    <span>Sorteos</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-people"></i>
-                    <span>Comunidad</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Amigos <span class="badge bg-danger ms-2">2</span></span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-heart"></i>
-                    <span>Lista de Deseos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-download"></i>
-                    <span>Descargas</span>
-                </a>
-            </li>
-            <li class="nav-item mt-4">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-gear"></i>
-                    <span>Ajustes</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Ayuda</span>
+                    <span>Comunidad (soon)</span>
                 </a>
             </li>
         </ul>
@@ -641,203 +85,97 @@ grupo: HYDRA
     <div class="main-content">
         <!-- Top Bar - Barra Superior -->
         <div class="top-bar">
-            <div class="search-bar">
-                <i class="bi bi-search"></i>
-                <input type="text" class="form-control" placeholder="Buscar">
-            </div>
-            <div class="top-icons d-flex align-items-center me-3">
-                <button class="btn"><i class="bi bi-bell"></i></button>
-                <button class="btn"><i class="bi bi-envelope"></i></button>
-                <button class="btn"><i class="bi bi-gear"></i></button>
-            </div>
-            <div class="profile-section">
-                <div class="profile-info">
-                    <strong>QuantumSpectre55</strong>
-                    <small>quantums@gmail.com</small>
-                </div>
-                <!-- Placeholder image: https://placehold.co/45x45/8a2be2/fff?text=QS -->
-                <img src="https://placehold.co/45x45/8a2be2/fff?text=QS" alt="Avatar de usuario" class="avatar">
+            <h1 class="m-0 exo-style">NACIÓN UNITE</h1>
+            <!-- Espacio flexible para empujar los iconos a la derecha -->
+            <div class="flex-grow-1"></div>
+
+            <div class="top-icons d-flex align-items-center">
+                <!-- <button class="btn"><i class="bi bi-bell"></i></button>
+                <button class="btn"><i class="bi bi-envelope"></i></button> -->
+                <!-- Iconos de redes sociales en lugar del perfil -->
+                <a href="{{page.x}}" target="_blank" class="btn ms-3"><i class="bi bi-twitter"></i></a>
+                <a href="{{page.instagram}}" target="_blank" class="btn"><i class="bi bi-instagram"></i></a>
+                <a href="{{page.youtube}}" target="_blank" class="btn"><i class="bi bi-youtube"></i></a>
+                <a href="{{page.discord}}" target="_blank" class="btn"><i class="bi bi-discord"></i></a>
             </div>
         </div>
 
-        <!-- Área de Contenido Central (Banner principal y Amigos) -->
+        <!-- Área de Contenido Central (Banner principal y Resultados/Partidos) -->
         <div class="central-content-area">
             <div class="main-content-left">
-                <!-- Hero Banner - Juego Destacado -->
-                <div class="hero-banner" style="background-image: url('https://placehold.co/1200x500/2a2a4a/e0e0e0?text=Hogwarts+Legacy');">
+                <!-- Hero Banner - Artículo/Juego Destacado -->
+                <div class="hero-banner"
+                    style="background-image: url('/assets/backgrounds/ADGAMINGCUP.webp');">
                     <div class="hero-banner-content">
                         <div class="game-tags">
-                            <span>Magic</span>
-                            <span>Fantasy</span>
-                            <span>Open World</span>
-                            <span>Adventure</span>
+                            <span>Noticias</span>
+                            <span>Torneos</span>
+                            <span>Esports</span>
                         </div>
-                        <h2>Hogwarts Legacy</h2>
-                        <p>Hogwarts Legacy es un RPG de acción inmersivo de mundo abierto ambientado en el mundo presentado por primera vez en los libros de Harry Potter.</p>
+                        <h2>Copa XForze AD Gaming</h2>
+                        <p>No te pierdas la acción en vivo de los 8vos de final, donde los mejores equipos compiten por la
+                            gloria. ¡Conoce a los finalistas!</p>
                         <div class="hero-banner-buttons">
-                            <button class="btn btn-primary-custom">Comprar Ahora</button>
-                            <button class="btn btn-outline-light-custom"><i class="bi bi-heart"></i></button>
-                            <span class="ms-3 fs-5">$24.00 <s class="text-muted ms-1">$35.99</s></span>
+                            <a class="btn btn-outline-light-custom" href="{{page.copa}}">Ver detalles</a>
+                            <a class="btn btn-outline-light-custom" href="{{page.twitch}}" target="_blank"><i class="bi bi-twitch"></i>
+                                Unite Forze Stadium</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Sección de "Actual Games" (Juegos actuales) -->
                 <div class="games-section">
-                    <h3>
-                        Juegos Actuales
+                    <h3>Licencias UNITE
                         <div class="arrow-buttons">
                             <button class="btn"><i class="bi bi-chevron-left"></i></button>
                             <button class="btn"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </h3>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <div class="col">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-4">
+                        <div class="col-12">
                             <div class="card game-card">
-                                <!-- Placeholder image: https://placehold.co/400x250/1a1a2e/e0e0e0?text=Spider-Man+2 -->
-                                <img src="https://placehold.co/400x250/1a1a2e/e0e0e0?text=Spider-Man+2" class="card-img-top" alt="MARVEL Spider-Man 2">
+                                <img src="/assets/backgrounds/fondo licencia.webp"
+                                    class="card-img-top" alt="Guía Elden Ring">
                                 <div class="card-body">
-                                    <h5 class="card-title">MARVEL Spider-Man 2</h5>
-                                    <div class="price-overlay">$69.00</div>
+                                    <h1 class="card-title exo-style">PRÓXIMAMENTE</h1>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card game-card">
-                                <!-- Placeholder image: https://placehold.co/400x250/1a1a2e/e0e0e0?text=MORTAL+KOMBAT -->
-                                <img src="https://placehold.co/400x250/1a1a2e/e0e0e0?text=MORTAL+KOMBAT" class="card-img-top" alt="MORTAL KOMBAT">
-                                <div class="card-body">
-                                    <h5 class="card-title">MORTAL KOMBAT</h5>
-                                    <div class="price-overlay">$67.99</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card game-card">
-                                <!-- Placeholder image: https://placehold.co/400x250/1a1a2e/e0e0e0?text=FORTNITE -->
-                                <img src="https://placehold.co/400x250/1a1a2e/e0e0e0?text=FORTNITE" class="card-img-top" alt="FORTNITE">
-                                <div class="card-body">
-                                    <h5 class="card-title">FORTNITE</h5>
-                                    <div class="price-overlay">$54.00</div>
-                                </div>
-                            </div>
-                        </div>
+                     
                     </div>
                 </div>
 
-                <!-- Sección de Descuentos -->
+                <!-- Sección de Sorteos / Promociones (repurposing el discount banner) -->
                 <div class="discount-banner text-center">
-                    <h4>50% de descuento</h4>
-                    <p>en los juegos de la selección</p>
-                    <button class="btn btn-light-custom">Ir a la biblioteca <i class="bi bi-arrow-right"></i></button>
+                    <h4>¡Participa en Nuestro Sorteo Mensual!</h4>
+                    <p>En los canales de Twitch</p>
+                    <a class="btn btn-light-custom" href="{{page.sorteos}}">Ver Sorteos Activos 
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Sección de Amigos en línea y Recientemente Jugado -->
-            <div class="friends-online">
-                <h5>Amigos en línea</h5>
-                <div class="friend-list">
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=CT -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=CT" alt="Avatar Crimson Tiger67" class="avatar">
-                        <div class="friend-info">
-                            <strong>Crimson Tiger67</strong>
-                            <small class="text-success">En línea</small>
+            <!-- Sección de Resultados del Día y Partidos de la Ronda Jugada -->
+            <div class="daily-results-section">
+                <h5>Partidos del Día</h5>
+                <div class="results-list">
+                    <div class="match-item">
+                        <div class="teams-info">
+                           
                         </div>
-                        <button class="btn btn-success btn-sm join-button">Unirse a Resident Evil 4</button>
-                    </div>
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=SS -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=SS" alt="Avatar st3alth sniper" class="avatar">
-                        <div class="friend-info">
-                            <strong>st3alth sniper</strong>
-                            <small class="text-success">Jugando Fortnite</small>
-                        </div>
-                    </div>
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=ID -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=ID" alt="Avatar IceDragon" class="avatar">
-                        <div class="friend-info">
-                            <strong>IceDragon</strong>
-                            <small class="text-success">Jugando ROBLOX</small>
-                        </div>
-                    </div>
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=B6 -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=B6" alt="Avatar Blitzkrieg66" class="avatar">
-                        <div class="friend-info">
-                            <strong>Blitzkrieg66</strong>
-                            <small class="text-success">En línea</small>
-                        </div>
-                        <button class="btn btn-success btn-sm join-button">Unirse a EA Sports FC 24</button>
-                    </div>
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=PR -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=PR" alt="Avatar phoenix rising" class="avatar">
-                        <div class="friend-info">
-                            <strong>phoenix rising</strong>
-                            <small class="text-success">Jugando Rocket League</small>
-                        </div>
-                    </div>
-                    <div class="friend-item">
-                        <!-- Placeholder image: https://placehold.co/40x40/5cb85c/fff?text=NN -->
-                        <img src="https://placehold.co/40x40/5cb85c/fff?text=NN" alt="Avatar neonNova" class="avatar">
-                        <div class="friend-info">
-                            <strong>neonNova</strong>
-                            <small class="text-success">Jugando GTA V</small>
-                        </div>
-                    </div>
+                    </div>             
                 </div>
 
-                <h5 class="mt-4">Recientemente jugado</h5>
-                <div class="recently-played-list">
-                    <div class="recently-played-item">
-                        <!-- Placeholder image: https://placehold.co/60x60/1a1a2e/e0e0e0?text=Hitman -->
-                        <img src="https://placehold.co/60x60/1a1a2e/e0e0e0?text=Hitman" alt="Hitman World of Assassination">
-                        <div class="recently-played-info w-100">
-                            <strong>Hitman World of Assassination</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">72%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recently-played-item">
-                        <!-- Placeholder image: https://placehold.co/60x60/1a1a2e/e0e0e0?text=Forza -->
-                        <img src="https://placehold.co/60x60/1a1a2e/e0e0e0?text=Forza" alt="Forza Horizon 5">
-                        <div class="recently-played-info w-100">
-                            <strong>Forza Horizon 5</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 47%;" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recently-played-item">
-                        <!-- Placeholder image: https://placehold.co/60x60/1a1a2e/e0e0e0?text=Witcher -->
-                        <img src="https://placehold.co/60x60/1a1a2e/e0e0e0?text=Witcher" alt="The Witcher 3 Wild Hunt">
-                        <div class="recently-played-info w-100">
-                            <strong>The Witcher 3 Wild Hunt</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 12%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">12%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recently-played-item">
-                        <!-- Placeholder image: https://placehold.co/60x60/1a1a2e/e0e0e0?text=NBA -->
-                        <img src="https://placehold.co/60x60/1a1a2e/e0e0e0?text=NBA" alt="NBA 2K24">
-                        <div class="recently-played-info w-100">
-                            <strong>NBA 2K24</strong>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">96%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5 class="mt-4">Pick-Rate</h5>
+            
             </div>
         </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/assets/today.js"></script>
 
 </body>
+
 </html>
