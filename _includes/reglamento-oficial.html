@@ -96,3 +96,15 @@
 
 
 
+<script>
+function showTab(tabId) {
+    var tabElement = document.getElementById(tabId);
+    if (tabElement) {
+        var bsTab = new bootstrap.Tab(tabElement);
+        bsTab.show();
+
+        // Opcional: Desplazarse al inicio del contenido del tab si es muy largo
+        // tabElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>

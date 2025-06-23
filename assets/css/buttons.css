@@ -2,7 +2,7 @@
 .button-space {
   border: none;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-  color: #004E8F
+  color: #004E8F;
   font-size: 17px;
   font-weight: bold;
   text-transform: capitalize;
@@ -54,4 +54,47 @@
     transform: scale(1);
     box-shadow: none;
   }
+}
+
+
+.btn-inscripciones{
+  background: rgb(6, 181, 6);
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  border: 1px green ;
+  border-radius: 15px;
+}
+
+.btn-inscripciones:hover{
+  background: rgb(4, 116, 4);
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  width: 150px;
+  border: 1px green ;
+  border-radius: 15px;
+}
+
+  .btn-whatsapp{
+  background: #128c7f;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  border: 1px #128c7f ;
+  border-radius: 15px;
+}
+
+.btn-whatsapp:hover{
+  background: #0e6d64;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  width: 150px;
+
+  border-radius: 15px;
 }

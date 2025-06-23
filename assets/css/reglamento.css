@@ -54,6 +54,100 @@
 
 }
 
+.card-rules-extend {
+    position: relative;
+    overflow: hidden; /* Esto es bueno para cualquier contenido que sobresalga, pero puede que no sea necesario con los cambios */
+    width: 100%;
+    /* height: 300px; */ /* ¡ELIMINAR ESTA LÍNEA! La altura debe ser dinámica. */
+    background: #fff;
+    display: flex; /* Esto se mantendrá, pero su rol cambiará. */
+    flex-direction: column; /* Nuevo: Apilar elementos verticalmente. */
+    /* justify-content: center; */ /* Eliminar: Ya no necesitamos centrar todo el contenido verticalmente si es de altura variable. */
+    /* align-items: center; */ /* Eliminar o reevaluar: Esto puede centrar el contenido horizontalmente, lo cual puede que no sea deseable para texto. */
+    margin-bottom: 25px;
+    border-radius: 5px;
+    padding: 15px; /* Añadir padding para que el contenido no pegue a los bordes. */
+    box-sizing: border-box; /* Asegura que el padding no añada al ancho/alto total */
+
+
+    .title-group {
+        position: static; /* Cambiar a static o quitar la posición absoluta */
+        top: initial; /* Reset */
+        left: initial; /* Reset */
+        margin-bottom: 15px; /* Espacio debajo del título principal */
+        color: #2e2e2e;
+        /* left: 10px; */ /* Ya no es necesario si es static */
+    }
+
+    .title-star {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #8e8d8d;
+        margin-bottom: 20px; /* Añadir espacio debajo del "star" */
+
+        a {
+            font-size: 25px;
+        }
+
+        img {
+            width: 85px;
+        }
+
+        /* Si el h1 dentro de title-star es un icono, asegúrate de que se vea bien */
+        h1 {
+             font-size: 3em; /* O el tamaño que desees para el ícono */
+             margin: 0;
+        }
+        span {
+            font-size: 0.9em;
+            text-align: center;
+        }
+    }
+
+    .descrip {
+        position: static; /* ¡CAMBIAR A STATIC! Permitirá que fluya con el contenido. */
+        bottom: initial; /* Resetear el posicionamiento absoluto */
+        left: initial; /* Resetear el posicionamiento absoluto */
+        color: #2e2e2e;
+        margin-bottom: 10px; /* Espacio entre párrafos */
+        width: auto; /* Dejar que ocupe el ancho disponible */
+        padding-left: 0; /* Si antes tenía padding por el "left: 10px" */
+
+
+        @media screen and (max-width: 472px) {
+            font-size: 12px;
+        }
+    }
+
+    /* Nuevas reglas para las subsecciones de la política de registro */
+    .rule-subsection {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #eee; /* Opcional: una línea para separar las secciones */
+
+        h3 {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            font-size: 1.15em;
+        }
+
+        ul {
+            list-style: disc; /* Puntos de lista */
+            margin-left: 20px; /* Indentación de la lista */
+            padding-left: 0; /* Asegura que no haya padding extra */
+            margin-bottom: 10px; /* Espacio debajo de la lista */
+        }
+
+        li {
+            margin-bottom: 8px; /* Espacio entre ítems de la lista */
+            line-height: 1.4; /* Espaciado entre líneas del texto */
+            color: #2e2e2e;
+        }
+    }
+}
+
 
 
 /* Estilos para el div oculto que se convertirá a imagen */
