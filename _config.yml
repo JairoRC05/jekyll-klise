@@ -27,6 +27,22 @@ permalink: /:title/
 google_analytics: G-4M64EKVQ7H # leave it blank if not wish
 fb_appid:
 
+
+# --- Variables de Navegación Globales ---
+links_navegacion:
+  indigo: /liga-indigo-orion-ranking-junio2025
+  supercxf: /super-copa-xforce
+  copa: /copa-xforce-ad-gaming-edition
+  sorteos: /sorteo-mensual
+
+redes_sociales:
+  twitch: https://www.twitch.tv/uniteforzestadium
+  instagram: https://www.instagram.com/xf05__esports/
+  x: https://x.com/XF05eSports
+  facebook: https://www.facebook.com/ligaindigo.xf/
+  discord: https://discord.gg/MqkeFH4stD
+  youtube: https://www.youtube.com/@xforceunite2090
+
 # Collection setting
 collections:
   posts:

@@ -211,7 +211,7 @@
   margin-bottom: 10px;
 }
 
-.btn {
+/* .btn {
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
@@ -221,7 +221,7 @@
   background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
   border: none;
   border-radius: 5px;
-}
+} */
 
 #resultado {
   margin-top: 20px;
