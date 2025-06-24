@@ -344,12 +344,12 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimulados16avos = [
-            { resultado: 'ROUND 1', stream: true, fecha: 'VIE 20 JUN', hora: '22:30' },
-            { resultado: 'ROUND 2', stream: true, fecha: 'VIE 20 JUN', hora: '21:50' },
-            { resultado: 'ROUND 3', stream: true, fecha: 'VIE 20 JUN', hora: '21:00' },
-            { resultado: 'ROUND 4', stream: true, fecha: 'LUN 23 JUN', hora: '22:30' },
-            { resultado: 'ROUND 5', stream: true, fecha: 'LUN 23 JUN', hora: '21:50' },
-            { resultado: 'ROUND 6', stream: true, fecha: 'LUN 23 JUN', hora: '21:00' },
+            { resultado: 'ROUND 1', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 2', stream: true, fecha: '0-2', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 3', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 4', stream: true, fecha: '1-2', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 5', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 6', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
             { resultado: 'ROUND 7', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
             { resultado: 'ROUND 8', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
         ];
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.log(`Usando participantes configurados para ${rondaKey}.`);
             return knockoutParticipantsConfig[rondaKey].map(tag => {
                 const team = allTeamsMap.get(tag);
-                return team ? new KnockoutParticipant('team', team) : new KnockoutParticipant('placeholder', { partidoId: `Equipo '${tag}' no encontrado para ${rondaKey}` });
+                return team ? new KnockoutParticipant('team', team) : new KnockoutParticipant('placeholder', { partidoId: `${tag}` }); // Equipos 8vos
             });
         } else {
             console.log(`No hay participantes configurados para ${rondaKey}, usando los ganadores simulados de la ronda anterior.`);
