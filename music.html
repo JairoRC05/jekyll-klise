@@ -1,32 +1,36 @@
 ---
-layout: 
-permalink: /music-my
+layout:
+permalink: /nuestras-canciones
 ---
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Música Local Mejorado</title>
+    <title>NUESTRAS CANCIONES</title>
     <!-- Enlace a Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Estilos personalizados -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Fallback color */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
-            overflow: hidden; /* Prevent scrollbar if background image is larger than viewport */
+            background-color: rgb(0, 0, 0);
+            /* overflow: hidden; */
+            /* Prevent scrollbar if background image is larger than viewport */
         }
+
         /* New background div for blur effect */
         #blurredBackground {
-            position: fixed; /* Fixed to cover the entire viewport */
+            position: fixed;
+            /* Fixed to cover the entire viewport */
             top: 0;
             left: 0;
             width: 100%;
@@ -35,264 +39,473 @@ permalink: /music-my
             background-position: center;
             background-repeat: no-repeat;
             transition: background-image 0.5s ease-in-out, filter 0.5s ease-in-out;
-            filter: blur(0px); /* Initial blur, will be adjusted by JS */
-            z-index: -1; /* Place it behind all other content */
+            filter: blur(40px);
+            /* Initial blur, will be adjusted by JS */
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+            /* Place it behind all other content */
         }
+
         .music-player-container {
-            background-color: #ffffff;
+            /* background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);  */
+            padding: 20px;
             width: 100%;
-            max-width: 900px; /* Ancho máximo aumentado para las columnas */
+            max-width: 90%;
             text-align: center;
-            border: 1px solid #e0e0e0;
-            z-index: 1; /* Ensure player is above blurred background */
-            position: relative; /* Needed for z-index to work */
+            /* border: 1px solid rgba(255, 255, 255, 0.1);  */
+            z-index: 1;
+            position: relative;
         }
+
+        h1 {
+            color: #ffffff !important;
+            /* White text for title */
+        }
+
+        /* Tab Navigation Styles */
+        .nav-tabs {
+            border-bottom: none;
+            /* Remove default border */
+            margin-bottom: 30px !important;
+            /* background-color: rgba(0, 0, 0, 0.5);  */
+            overflow: hidden;
+            /* Ensures rounded corners apply correctly */
+        }
+
+        .nav-tabs .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            /* Lighter text for inactive tabs */
+            border: none;
+            /* Remove individual tab borders */
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #ffffff;
+            background-color: #00000080;
+            /* Active tab background color */
+            font-weight: bold;
+
+            border-color: transparent;
+        }
+
+        .nav-item:first-child .nav-link {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .nav-item:last-child .nav-link {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+
+        /* Player Controls */
         .player-controls {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Espacio entre botones */
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .player-controls button {
-            border-radius: 8px;
-            padding: 10px 15px;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .player-controls button:hover {
-            transform: translateY(-2px);
-        }
-        .audio-player {
-            width: 100%;
-            margin-top: 20px;
+            gap: 15px;
+            background-color: rgba(255, 255, 255, 0);
+            /* Slightly visible background for controls */
+            padding: 15px 20px;
             border-radius: 10px;
         }
 
-        /* Styles for "Now Playing" section */
+        .player-controls button {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Subtle button background */
+            color: #ffffff;
+            /* White icon color */
+            border: none;
+            border-radius: 50px;
+            /* More rounded buttons */
+            width: 50px;
+            /* Fixed width for consistent circle/oval shape */
+            height: 50px;
+            /* Fixed height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            /* Larger icons */
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-controls button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            /* Slight scale on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .player-controls button.btn-primary {
+            /* Play/Pause button style */
+           background-color: rgba(255, 255, 255, 0.1);
+            /* Stronger blue for primary action */
+            color: white;
+            width: 60px;
+            /* Larger play button */
+            height: 60px;
+            font-size: 2em;
+        }
+
+        .player-controls button.btn-warning {
+            /* Pause button style when active */
+             background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            /* Darker text for warning background */
+        }
+
+        .player-controls button.btn-info {
+            /* Shuffle/Repeat buttons */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Lighter info background */
+            color: #ffffff;
+        }
+
+        .player-controls button.btn-success {
+            /* Active shuffle/repeat */
+            background-color: #28a745;
+            color: white;
+        }
+
+        .mute-button {
+            background-color: rgba(255, 255, 255, 0);
+            /* Subtle button background */
+            color: #ffffff;
+            /* White icon color */
+            border: none;
+            border-radius: 50px;
+            /* More rounded buttons */
+            width: 10px;
+            /* Fixed width for consistent circle/oval shape */
+            height: 10px;
+            /* Fixed height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            /* Larger icons */
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .mute-button.muted {
+            background-color: #dc354600;
+            color: rgba(255, 255, 255, 0.329);
+        }
+
+        /* Now Playing Section */
         .now-playing-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding: 20px;
-            background-color: #f1f3f5;
+            background-color: transparent;
+            /* No specific background, use container's */
             border-radius: 10px;
-            box-shadow: inset 0 1px 5px rgba(0,0,0,0.05);
-            max-width: 300px;
+            box-shadow: none;
+            /* No extra shadow */
+            max-width: 400px;
+            /* Adjust max width for cover and text */
             margin-left: auto;
             margin-right: auto;
         }
+
         .now-playing-cover {
-            width: 180px;
-            height: 180px;
+            width: 450px;
+            /* Larger cover image */
+            height: 450px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .now-playing-title {
-            font-size: 1.4em;
-            font-weight: 700;
-            color: #212529;
-            margin-bottom: 5px;
-        }
-        .now-playing-artist {
-            font-size: 1em;
-            color: #6c757d;
-            margin-bottom: 15px;
-        }
-
-        /* Estilos para las tarjetas de álbum */
-        .album-card {
-            cursor: pointer;
             border-radius: 10px;
-            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-            height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px; /* Ajuste para espacio interno de la tarjeta */
-            text-align: center;
-            border: 1px solid #e0e0e0;
-        }
-        .album-card:hover {
-            background-color: #e9ecef;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-        .album-card.active {
-            background-color: #007bff;
-            color: white;
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-            border-color: #007bff;
-        }
-        .album-card.active .card-title,
-        .album-card.active .card-text {
-            color: white;
-        }
-        .album-card img.card-img-top {
-            width: 100%;
-            max-width: 180px; /* Tamaño ligeramente aumentado para las portadas */
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-            object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
-        }
-        .album-card .card-body {
-            padding: 10px 0 0; /* Ajuste para el padding interno del cuerpo de la tarjeta */
-            width: 100%;
-            flex-grow: 1; /* Permite que el cuerpo ocupe el espacio disponible */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .album-card .card-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #343a40;
-            margin-bottom: 5px;
-            word-break: break-word; /* Rompe palabras largas */
-        }
-        .album-card .card-text {
-            font-size: 0.9em;
-            color: #6c757d;
-            margin-bottom: 10px;
-            word-break: break-word;
-        }
-        .remove-song-btn {
-            margin-top: auto; /* Empuja el botón al final del card-body */
-            padding: 5px 12px;
-            font-size: 0.85em;
-        }
-        .playlist-row {
-            align-items: stretch; /* Alinea los elementos de la fila para igualar alturas */
+            /* Slightly less rounded */
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            /* Stronger shadow for cover */
         }
 
-        /* Estilos para la barra de progreso y volumen */
+        .now-playing-title {
+            font-size: 2.2em;
+            /* Larger title */
+            font-weight: 800;
+            /* Bolder */
+            color: #ffffff;
+            /* White text */
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            /* Text shadow for readability */
+        }
+
+        .now-playing-artist {
+            font-size: 1.2em;
+            /* Larger artist name */
+            color: rgba(255, 255, 255, 0.8);
+            /* Slightly faded white */
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Progress and Volume Bars */
         .progress-container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: 10px;
             margin-top: 15px;
             width: 100%;
+            /* Add padding to match visual of image */
         }
+
         .progress-bar-input {
-            flex-grow: 1;
-            -webkit-appearance: none;
+            height: 2px;
             width: 100%;
-            height: 8px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            transition: opacity .2s;
-            border-radius: 5px;
+            /* Thinner progress bar */
+            background: rgba(255, 255, 255, 0.3);
+            /* Lighter background */
         }
-        .progress-bar-input:hover {
-            opacity: 1;
-        }
+
         .progress-bar-input::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #007bff;
-            cursor: pointer;
+            background: #ffffff;
         }
+
         .progress-bar-input::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #007bff;
-            cursor: pointer;
+            background: #ffffff;
         }
+
         .time-display {
-            font-size: 0.9em;
-            color: #555;
-            min-width: 70px; /* Asegura espacio suficiente */
-            text-align: right;
+            color: rgba(255, 255, 255, 0.8);
+            /* White time display */
         }
 
         .volume-container {
+            width: 100%;
+            /* Add some margin from the edge */
             display: flex;
+            /* Ensure inline elements are aligned */
             align-items: center;
             gap: 5px;
-            margin-left: 10px; /* Espacio para separar de otros controles */
         }
+        
+
         .volume-slider {
-            width: 80px;
-            -webkit-appearance: none;
-            height: 6px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            transition: opacity .2s;
-            border-radius: 5px;
+            width: 100%;
+            /* Wider volume slider */
+            height: 2px;
+            /* Thinner */
+            background: rgba(255, 255, 255, 0);
         }
-        .volume-slider:hover {
+
+        .volume-slider::-webkit-slider-thumb {
+            background: #fcfcfc;
+        }
+
+        .volume-slider::-moz-range-thumb {
+            background: #ffffff;
+        }
+
+
+        .album-card {
+          background-color: #44444466;
+            /* Keep lighter for this tab */
+            border-color: #44444466;
+        }
+
+        .album-card .card-title {
+            color: #9d9d9d;
+        }
+
+        .album-card .card-text {
+            color: #6c757d;
+        }
+
+        /* Ensure active state works well on both tabs */
+        .album-card.active {
+            background-color: #20202066;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border-color: #20202066;
+        }
+
+        .album-card.active .card-title,
+        .album-card.active .card-text {
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .music-player-container {
+                padding: 0px;
+            }
+
+            .now-playing-cover {
+                width: 200px;
+                height: 200px;
+            }
+
+            .now-playing-title {
+                font-size: 1.8em;
+            }
+
+            .now-playing-artist {
+                font-size: 1em;
+            }
+
+            .player-controls {
+                gap: 8px;
+                padding: 10px;
+            }
+
+            .player-controls button {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3em;
+            }
+
+            .player-controls button.btn-primary {
+                width: 55px;
+                height: 55px;
+                font-size: 1.8em;
+            }
+
+            .volume-container {
+                margin-left: 0;
+                /* Reset margin for smaller screens */
+                width: 100%;
+                /* Take full width */
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .volume-slider {
+                width: calc(100% - 60px);
+                /* Adjust width relative to mute button */
+            }
+        }
+
+
+          input[type="range"] {
+            -webkit-appearance: none; /* Removes default WebKit styling */
+            width: 100%; /* Adjust as needed */
+            height: 8px; /* Height of the track */
+            background: #d3d3d3; /* Default color of the track (unfilled portion) */
+            outline: none; /* Remove focus outline */
+            opacity: 0.7; /* Opacity of the track */
+            -webkit-transition: .2s; /* Transition for hover/active states */
+            transition: opacity .2s;
+            border-radius: 5px; /* Rounded corners for the track */
+            /* Ensure the track is always visible even if the thumb covers it */
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Color when hovering over the track */
+        input[type="range"]:hover {
             opacity: 1;
         }
-        .volume-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 15px;
-            height: 15px;
+
+        /* Styling the thumb (the indicator/slider) */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Removes default WebKit styling */
+            width: 20px; /* Width of the thumb */
+            height: 20px; /* Height of the thumb */
+            border-radius: 50%; /* Makes it a circle */
+            background: #ffffff; /* Color of the thumb - Changed to blue for example */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin-top: -6px; /* Adjust to center the thumb vertically with the track */
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5); /* Optional shadow for the thumb */
+            z-index: 2; /* Ensure thumb is above the track */
+            position: relative;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            background: #007bff;
+            background: #ffffff; /* Color of the thumb - Changed to blue for example */
             cursor: pointer;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
         }
-        .volume-slider::-moz-range-thumb {
-            width: 15px;
-            height: 15px;
+
+        input[type="range"]::-ms-thumb {
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            background: #007bff;
+            background: #ffffff; /* Color of the thumb - Changed to blue for example */
             cursor: pointer;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
         }
-        .mute-button {
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.9em;
-            transition: background-color 0.2s ease;
+
+        /* Styling the filled portion of the track (for WebKit browsers like Chrome, Safari, Edge) */
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            /* Dynamic color based on value, first color is filled, second is unfilled */
+            background: linear-gradient(to right, #2196F3 var(--value, 0%), #d3d3d3 var(--value, 0%));
+            border-radius: 5px;
+            /* Note: box-shadow on the track is not common as it can interfere with thumb */
         }
-        .mute-button:hover {
-            background-color: #5a6268;
+
+        /* For Firefox, the track styling is often done on the ::-moz-range-track pseudo-element */
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            /* For Firefox, you might need JavaScript or a polyfill to dynamically color the filled part
+               with a gradient similar to WebKit. Here, it's just the background of the full track. */
+            background: #d3d3d3; /* Background of the full track */
+            border-radius: 5px;
         }
-        .mute-button.muted {
-            background-color: #dc3545; /* Color rojo para muteado */
+
+        /* For IE/Edge (older versions), the track styling */
+        input[type="range"]::-ms-track {
+            width: 100%;
+            height: 8px;
+            background: transparent; /* Needed to make track transparent for custom filling */
+            border-color: transparent;
+            color: transparent; /* Hide the default track color */
+        }
+        input[type="range"]::-ms-fill-lower {
+            background: #ffffff; /* Filled part for IE/Edge */
+            border-radius: 5px;
+        }
+        input[type="range"]::-ms-fill-upper {
+            background: #d3d3d3; /* Unfilled part for IE/Edge */
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
     <!-- New background div for blur effect -->
     <div id="blurredBackground"></div>
 
     <div class="music-player-container">
-        <h1 class="mb-4 text-primary">Mi Reproductor de Música</h1>
-
         <!-- Pestañas de Navegación -->
-        <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-center mt-4 " id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="player-tab" data-bs-toggle="tab" data-bs-target="#player" type="button" role="tab" aria-controls="player" aria-selected="true">Mi Reproductor</button>
+                <button class="nav-link active" id="player-tab" data-bs-toggle="tab" data-bs-target="#player"
+                    type="button" role="tab" aria-controls="player" aria-selected="true">Ahora suena</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="playlist-tab" data-bs-toggle="tab" data-bs-target="#playlist" type="button" role="tab" aria-controls="playlist" aria-selected="false">Mis Canciones</button>
+                <button class="nav-link" id="playlist-tab" data-bs-toggle="tab" data-bs-target="#playlist" type="button"
+                    role="tab" aria-controls="playlist" aria-selected="false">Mis canciones</button>
             </li>
         </ul>
 
@@ -302,50 +515,68 @@ permalink: /music-my
             <div class="tab-pane fade show active" id="player" role="tabpanel" aria-labelledby="player-tab">
                 <!-- Sección de "Reproduciendo Ahora" -->
                 <div id="nowPlayingSection" class="now-playing-section">
-                    <img id="nowPlayingCover" class="now-playing-cover" src="https://placehold.co/180x180/E0E0E0/555555?text=Selecciona+una+canción" alt="Portada de la canción actual">
+                    <img id="nowPlayingCover" class="now-playing-cover"
+                        src="https://placehold.co/180x180/E0E0E0/555555?text=Selecciona+una+canción"
+                        alt="Portada de la canción actual">
+
+                    <div class="progress-container">
+                        <span id="currentTime" class="time-display">0:00</span>
+                        <input type="range" id="progressBar" class="progress-bar-input" value="0" min="0" max="100">
+                        <span id="durationTime" class="time-display">0:00</span>
+                    </div>
                     <div id="nowPlayingTitle" class="now-playing-title">No hay canción seleccionada</div>
                     <div id="nowPlayingArtist" class="now-playing-artist"></div>
+
+                    <div class="player-controls">
+                        <button id="shuffleButton" class="btn btn-info" title="Aleatorio"><i
+                                class="fas fa-random"></i></button>
+                        <button id="prevButton" class="btn btn-secondary" title="Anterior"><i
+                                class="fas fa-backward"></i></button>
+                        <button id="playPauseButton" class="btn btn-primary" title="Reproducir"><i
+                                class="fas fa-play"></i></button>
+                        <button id="nextButton" class="btn btn-secondary" title="Siguiente"><i
+                                class="fas fa-forward"></i></button>
+                        <button id="repeatButton" class="btn btn-info" title="Repetir"><i
+                                class="fas fa-redo-alt"></i></button>
+                    </div>
+                    
+                    <div class="volume-container">
+                        <button id="muteButton" class="mute-button" title="Silenciar">
+                            <i class="fa-solid fa-volume-low"></i>
+                            </button>
+                        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01"
+                            value="1" title="Volumen">
+                    </div>
                 </div>
+
+
 
                 <!-- Elemento de audio -->
                 <audio id="audioPlayer" class="audio-player"></audio>
 
                 <!-- Barra de progreso -->
-                <div class="progress-container">
-                    <span id="currentTime" class="time-display">0:00</span>
-                    <input type="range" id="progressBar" class="progress-bar-input" value="0" min="0" max="100">
-                    <span id="durationTime" class="time-display">0:00</span>
-                </div>
+
 
                 <!-- Controles de reproducción -->
-                <div class="player-controls">
-                    <button id="shuffleButton" class="btn btn-info" title="Aleatorio"><i class="fas fa-random"></i></button>
-                    <button id="prevButton" class="btn btn-secondary" title="Anterior"><i class="fas fa-backward"></i></button>
-                    <button id="playPauseButton" class="btn btn-primary" title="Reproducir"><i class="fas fa-play"></i></button>
-                    <button id="nextButton" class="btn btn-secondary" title="Siguiente"><i class="fas fa-forward"></i></button>
-                    <button id="repeatButton" class="btn btn-info" title="Repetir"><i class="fas fa-redo-alt"></i></button>
-                    
-                    <div class="volume-container">
-                        <button id="muteButton" class="mute-button" title="Silenciar"><i class="fas fa-volume-up"></i></button>
-                        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="1" title="Volumen">
-                    </div>
-                </div>
+
             </div>
 
             <!-- Pestaña Mis Canciones -->
             <div class="tab-pane fade" id="playlist" role="tabpanel" aria-labelledby="playlist-tab">
-                <h3 class="mt-2 mb-3 text-muted">Mis Canciones</h3>
-                <div id="playlistGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 playlist-row">
-                    <!-- Las tarjetas de las canciones se añadirán aquí dinámicamente -->
+                <!-- Adjusted text color for this tab -->
+                <div id="playlistGrid"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3 playlist-row">
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Enlace a Bootstrap JS (Popper y JS bundle) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!-- Font Awesome para iconos -->
-   <script src="https://kit.fontawesome.com/5bc1459e63.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5bc1459e63.js" crossorigin="anonymous"></script>
 
     <script>
         // Global variables for the player
@@ -377,25 +608,205 @@ permalink: /music-my
         const blurredBackground = document.getElementById('blurredBackground');
 
 
-        // Song data in JSON format (Array of objects)
-        // IMPORTANT: For these paths to work, you need to create 'audio' and 'images' folders
-        // in the same directory as this HTML file, and place your files there.
-        // Example structure:
-        // my-music-player/
-        // ├── index.html
-        // ├── audio/
-        // │   ├── song1.mp3
-        // │   └── song2.mp3
-        // └── images/
-        //     ├── cover1.jpg
-        //     └── cover2.jpg
         let playlist = JSON.parse(localStorage.getItem('musicPlaylist')) || [
             {
-                name: "Melodía Calmante",
-                artist: "Compositor Tranquilo",
-                audioSrc: "assets/music/estasganas.mp3", // Ruta local relativa
-                imageSrc: "assets/music/covers/estasganas.jpg" // Ruta local relativa
+                name: "LIMONAR",
+                artist: "GREEICY",
+                audioSrc: "/assets/music/limonar.mp3", 
+                imageSrc: "/assets/music/covers/limonar.jpg" 
+            },
+            {
+                name: "ESTAS GANAS",
+                artist: "GREEICY",
+                audioSrc: "/assets/music/estasganas.mp3", 
+                imageSrc: "/assets/music/covers/estasganas.jpg" 
+            },
+            {
+                name: "ADORO",
+                artist: "BRONCO / JULIETA VENEGAS",
+                audioSrc: "/assets/music/adoro.mp3", 
+                imageSrc: "/assets/music/covers/adoro.jpg" 
+            },
+            {
+                name: "KILÓMETROS",
+                artist: "JISA",
+                audioSrc: "/assets/music/kilometros.mp3", 
+                imageSrc: "/assets/music/covers/kilometros.jpg"
+            },
+            {
+                name: "LO MEJOR DE MI VIDA ERES TÚ",
+                artist: "RICKY MARTIN",
+                audioSrc: "/assets/music/lomejordemividaerestu.mp3", 
+                imageSrc: "/assets/music/covers/lomejordemividaerestu.jpg"
+            },
+            {
+                name: "ENVEJECER CONMIGO",
+                artist: "RANDY",
+                audioSrc: "/assets/music/envejecerconmigo.mp3", 
+                imageSrc: "/assets/music/covers/envejecerconmigo.jpg"
+            },
+            {
+                name: "MILLONES",
+                artist: "CAMILO",
+                audioSrc: "/assets/music/millones.mp3", 
+                imageSrc: "/assets/music/covers/mismanos.jpg"
+            },
+            {
+                name: "ANDALUCÍA",
+                artist: "LUIS FONSI",
+                audioSrc: "/assets/music/andalucía.mp3", 
+                imageSrc: "/assets/music/covers/elviaje.jpg"
             }
+            // {
+            //     name: "MI DÍA FAVORITO",
+            //     artist: "HA-ASH",
+            //     audioSrc: "/assets/music/andalucía.mp3", 
+            //     imageSrc: "/assets/music/covers/elviaje.jpg"
+            // },
+            //      {
+            //     name: "FAVORITO",
+            //     artist: "CAMILO",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            //      {
+            //     name: "QUIERO DECIRTE",
+            //     artist: "SEBASTIAN YATRA",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            //      {
+            //     name: "MAGÍA",
+            //     artist: "ANDRÉS CEPEDA / SEBASTIAN YATRA",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "¿QUÉ HACES?",
+            //     artist: "BECKY G / MANUEL TURIZO",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "¿SABES?",
+            //     artist: "ALEX UBAGO",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "LA BUENA",
+            //     artist: "NACHO",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "NO ENCONTRARÉ",
+            //     artist: "MJ",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "MI REINA",
+            //     artist: "YOTUEL",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "SI ME LO PIDES",
+            //     artist: "SAMDE",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "OTRA COMO TÚ",
+            //     artist: "EROS RAMAZOTTI",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "AVECES A BESOS",
+            //     artist: "GREICY",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "PRITI",
+            //     artist: "DANNY OCEAN / SECH",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "LA MUJER QUE NO SOÑE",
+            //     artist: "RICARDO ARJONA",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "LOS BESOS",
+            //     artist: "GREEICY",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "MI EX TENÍA RAZÓN",
+            //     artist: "KAROL G",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "JAQUEMATE",
+            //     artist: "MAJO",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "UNA VIDA PASADA",
+            //     artist: "CAMILO / CARÍN LEÓN",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "MAR Y BOSQUE",
+            //     artist: "ANDRÉS OBREGÓN",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "SIMPLES CORAZONES",
+            //     artist: "FONSECA",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "LOCO",
+            //     artist: "RICARDO PÉLAEZ",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "Y SI ME ENAMORÓ",
+            //     artist: "DANIEL ELBITTAR / CARLOS BAUTE",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "YO NO SE MAÑANA",
+            //     artist: "LUIS ENRIQUE",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "HASTA ESE DÍA",
+            //     artist: "LUIS ENRIQUE",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // },
+            // {
+            //     name: "CRISTINA",
+            //     artist: "SEBASTIAN YATRA",
+            //     audioSrc: "/assets/music/lomejordemivida.mp3", 
+            //     imageSrc: "/assets/music/covers/mas.jpg"
+            // }
         ];
 
         let currentSongIndex = parseInt(localStorage.getItem('currentSongIndex')) || -1; // Current song index
@@ -455,7 +866,6 @@ permalink: /music-my
                     <div class="card-body">
                         <h5 class="card-title">${song.name}</h5>
                         <p class="card-text">${song.artist}</p>
-                        <button class="btn btn-sm btn-danger rounded-pill remove-song-btn" data-index="${index}"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 `;
 
@@ -492,7 +902,7 @@ permalink: /music-my
 
                 // Update blurred background div with blur effect
                 blurredBackground.style.backgroundImage = `url(${song.imageSrc})`;
-                blurredBackground.style.filter = 'blur(8px)'; /* Adjust blur strength as needed */
+                // blurredBackground.style.filter = 'blur(50px)';
 
                 updatePlayPauseButton(false); // Set button to "Play" visually
                 renderPlaylistGrid(); // Update active state in the grid
@@ -540,8 +950,8 @@ permalink: /music-my
 
             if (audioPlayer.paused) {
                 if (!audioPlayer.src && currentSongIndex === -1) {
-                     currentSongIndex = 0;
-                     loadSong(currentSongIndex);
+                    currentSongIndex = 0;
+                    loadSong(currentSongIndex);
                 }
                 playSong();
             } else {
@@ -570,7 +980,7 @@ permalink: /music-my
         prevButton.addEventListener('click', () => {
             if (playlist.length > 0) {
                 if (isShuffled) {
-                     let newIndex;
+                    let newIndex;
                     do {
                         newIndex = Math.floor(Math.random() * playlist.length);
                     } while (newIndex === currentSongIndex && playlist.length > 1);
@@ -686,7 +1096,7 @@ permalink: /music-my
                 muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
                 muteButton.classList.add('muted');
             } else {
-                muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+                muteButton.innerHTML = '<i class="fas fa-volume-low"></i>';
                 muteButton.classList.remove('muted');
             }
         });
@@ -699,7 +1109,7 @@ permalink: /music-my
                 muteButton.classList.add('muted');
                 volumeSlider.value = 0; // Set slider to 0 visually
             } else {
-                muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+                muteButton.innerHTML = '<i class="fas fa-volume-low"></i>';
                 muteButton.classList.remove('muted');
                 // Restore previous volume if it was muted
                 if (volumeSlider.value == 0) {
@@ -748,7 +1158,7 @@ permalink: /music-my
         } else if (playlist.length > 0) {
             loadSong(0); // Load the first song if no saved index or invalid
         } else {
-             // If playlist is empty, ensure "Now Playing" section is reset
+            // If playlist is empty, ensure "Now Playing" section is reset
             nowPlayingCover.src = "https://placehold.co/180x180/E0E0E0/555555?text=Selecciona+una+canción";
             nowPlayingCover.alt = "Selecciona una canción";
             nowPlayingTitle.textContent = "No hay canción seleccionada";
@@ -769,4 +1179,5 @@ permalink: /music-my
         audioPlayer.volume = volumeSlider.value;
     </script>
 </body>
+
 </html>
