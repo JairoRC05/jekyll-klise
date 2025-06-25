@@ -350,8 +350,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             { resultado: 'ROUND 4', stream: true, fecha: '1-2', hora: 'FINALIZADO' },
             { resultado: 'ROUND 5', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
             { resultado: 'ROUND 6', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
-            { resultado: 'ROUND 7', stream: true, fecha: 'MAR 24 JUN', hora: '21:00' },
-            { resultado: 'ROUND 8', stream: true, fecha: 'MAR 24 JUN', hora: '21:50' }
+            { resultado: 'ROUND 7', stream: true, fecha: '0-2', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 8', stream: true, fecha: '2-0', hora: 'FINALIZADO' }
         ];
 
         for (let i = 0; i < 8; i++) {

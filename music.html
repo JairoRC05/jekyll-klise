@@ -1,0 +1,375 @@
+---
+layout: 
+permalink: /music
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música Local</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .music-player-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 900px; /* Ancho máximo aumentado para las columnas */
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        .player-controls button {
+            margin: 5px;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .player-controls button:hover {
+            transform: translateY(-2px);
+        }
+        .audio-player {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        #currentSongInfo {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #343a40;
+            font-weight: 500;
+        }
+        .file-input-wrapper {
+            margin-bottom: 20px;
+        }
+        .form-control-file {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+        }
+
+        /* Estilos para las portadas */
+        .album-cover-item {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            text-align: center;
+            height: 100%; /* Asegura que todos los elementos de la fila tengan la misma altura */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .album-cover-item:hover {
+            background-color: #e9ecef;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .album-cover-item.active {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        .album-cover-item.active .song-title {
+            color: white;
+        }
+        .album-cover-item img {
+            width: 100%;
+            max-width: 150px; /* Tamaño fijo para las portadas */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .song-title {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #343a40;
+            word-break: break-word; /* Rompe palabras largas */
+        }
+        .remove-song-btn {
+            margin-top: 5px;
+            padding: 3px 8px;
+            font-size: 0.75em;
+        }
+        .playlist-row {
+            align-items: stretch; /* Alinea los elementos de la fila para igualar alturas */
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player-container">
+        <h1 class="mb-4 text-primary">Mi Reproductor de Música</h1>
+
+        <!-- Campo de entrada de archivos -->
+        <div class="file-input-wrapper">
+            <label for="audioFile" class="form-label d-block text-start mb-2">Selecciona archivos de audio:</label>
+            <input type="file" id="audioFile" class="form-control form-control-file" accept="audio/*" multiple>
+        </div>
+
+        <!-- Información de la canción actual -->
+        <div id="currentSongInfo" class="mb-3">
+            No hay canción seleccionada
+        </div>
+
+        <!-- Elemento de audio -->
+        <audio id="audioPlayer" class="audio-player" controls></audio>
+
+        <!-- Controles de reproducción -->
+        <div class="player-controls mt-4">
+            <button id="prevButton" class="btn btn-secondary"><i class="fas fa-backward me-2"></i>Anterior</button>
+            <button id="playPauseButton" class="btn btn-primary"><i class="fas fa-play me-2"></i>Reproducir</button>
+            <button id="nextButton" class="btn btn-secondary">Siguiente<i class="fas fa-forward ms-2"></i></button>
+        </div>
+
+        <!-- Cuadrícula de portadas de canciones -->
+        <h3 class="mt-5 mb-3 text-muted">Mis Canciones</h3>
+        <div id="playlistGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 playlist-row">
+            <!-- Las portadas de las canciones se añadirán aquí dinámicamente -->
+            <div class="col text-center text-muted">
+                <small>No hay canciones en la lista. Selecciona algunos archivos.</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS (Popper y JS bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Variables globales para el reproductor
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioFile = document.getElementById('audioFile');
+        const playPauseButton = document.getElementById('playPauseButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const currentSongInfo = document.getElementById('currentSongInfo');
+        const playlistGrid = document.getElementById('playlistGrid'); // Cambiado de 'playlist' a 'playlistGrid'
+
+        let playlist = []; // Array para almacenar los archivos de audio
+        let currentSongIndex = -1; // Índice de la canción actual
+
+        // Función para cargar los archivos seleccionados por el usuario
+        audioFile.addEventListener('change', (event) => {
+            const files = event.target.files;
+            if (files.length > 0) {
+                // Limpia la playlist actual si se seleccionan nuevos archivos
+                playlist = [];
+                // Añade los nuevos archivos a la playlist
+                for (let i = 0; i < files.length; i++) {
+                    playlist.push(files[i]);
+                }
+                // Actualiza la visualización de la playlist
+                renderPlaylistGrid(); // Llamar a la nueva función de renderizado
+                // Si es la primera vez que se añaden canciones, carga la primera
+                if (currentSongIndex === -1 && playlist.length > 0) {
+                    currentSongIndex = 0;
+                    loadSong(currentSongIndex);
+                } else if (playlist.length > 0) {
+                    // Si ya hay una canción reproduciéndose, no cambia
+                    // Si la playlist se vació y se llenó de nuevo, recarga la primera
+                    if (currentSongIndex >= playlist.length) {
+                        currentSongIndex = 0;
+                        loadSong(currentSongIndex);
+                    }
+                }
+            }
+        });
+
+        // Función para renderizar la lista de reproducción en el DOM como una cuadrícula
+        function renderPlaylistGrid() {
+            playlistGrid.innerHTML = ''; // Limpiar la cuadrícula existente
+            if (playlist.length === 0) {
+                playlistGrid.innerHTML = `
+                    <div class="col text-center text-muted">
+                        <small>No hay canciones en la lista. Selecciona algunos archivos.</small>
+                    </div>
+                `;
+                return;
+            }
+
+            // Añadir cada canción a la cuadrícula
+            playlist.forEach((song, index) => {
+                const colDiv = document.createElement('div');
+                colDiv.classList.add('col'); // Columna para el sistema de cuadrícula de Bootstrap
+
+                const songItem = document.createElement('div');
+                songItem.classList.add('album-cover-item');
+                if (index === currentSongIndex) {
+                    songItem.classList.add('active'); // Marca la canción activa
+                }
+                songItem.dataset.index = index; // Para identificar la canción al hacer clic
+
+                songItem.innerHTML = `
+                    <img src="https://placehold.co/150x150/e0e0e0/555555?text=Portada" alt="Portada de Álbum">
+                    <span class="song-title">${song.name}</span>
+                    <button class="btn btn-sm btn-danger rounded-pill remove-song-btn" data-index="${index}">Eliminar</button>
+                `;
+
+                // Event listener para reproducir la canción al hacer clic en la portada
+                songItem.addEventListener('click', (event) => {
+                    // Si se hace click en el botón de eliminar, lo maneja
+                    if (event.target.tagName === 'BUTTON' && event.target.classList.contains('remove-song-btn')) {
+                        removeSong(parseInt(event.target.dataset.index));
+                    } else {
+                        // Si se hace click en el elemento de la portada (no el botón), la reproduce
+                        loadSong(parseInt(songItem.dataset.index));
+                        playSong();
+                    }
+                });
+
+                colDiv.appendChild(songItem);
+                playlistGrid.appendChild(colDiv);
+            });
+        }
+
+        // Función para cargar una canción en el reproductor
+        function loadSong(index) {
+            if (index >= 0 && index < playlist.length) {
+                currentSongIndex = index;
+                const song = playlist[currentSongIndex];
+                const songURL = URL.createObjectURL(song); // Crea una URL para el archivo local
+                audioPlayer.src = songURL;
+                currentSongInfo.textContent = `Reproduciendo: ${song.name}`;
+                updatePlayPauseButton(false); // Establece el botón en "Reproducir" visualmente
+                renderPlaylistGrid(); // Actualiza el estado activo en la cuadrícula
+            } else {
+                currentSongInfo.textContent = "No hay canción seleccionada";
+                audioPlayer.src = ''; // Limpia el reproductor
+                currentSongIndex = -1;
+                updatePlayPauseButton(false); // Botón a "Reproducir"
+                renderPlaylistGrid(); // Actualiza la cuadrícula
+            }
+        }
+
+        // Función para reproducir la canción
+        function playSong() {
+            if (audioPlayer.src) {
+                audioPlayer.play();
+                updatePlayPauseButton(true); // Cambia el botón a "Pausar"
+            }
+        }
+
+        // Función para pausar la canción
+        function pauseSong() {
+            audioPlayer.pause();
+            updatePlayPauseButton(false); // Cambia el botón a "Reproducir"
+        }
+
+        // Función para alternar entre reproducir y pausar
+        playPauseButton.addEventListener('click', () => {
+            if (playlist.length === 0) {
+                // Muestra un mensaje si no hay canciones
+                currentSongInfo.textContent = "Por favor, selecciona archivos de audio primero.";
+                return;
+            }
+
+            if (audioPlayer.paused) {
+                // Si no hay src o la playlist fue rellenada después de vaciarse
+                if (!audioPlayer.src && currentSongIndex === -1 && playlist.length > 0) {
+                     currentSongIndex = 0;
+                     loadSong(currentSongIndex);
+                }
+                playSong();
+            } else {
+                pauseSong();
+            }
+        });
+
+        // Función para la siguiente canción
+        nextButton.addEventListener('click', () => {
+            if (playlist.length > 0) {
+                currentSongIndex = (currentSongIndex + 1) % playlist.length; // Ciclo a la siguiente canción
+                loadSong(currentSongIndex);
+                playSong();
+            }
+        });
+
+        // Función para la canción anterior
+        prevButton.addEventListener('click', () => {
+            if (playlist.length > 0) {
+                currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length; // Ciclo a la canción anterior
+                loadSong(currentSongIndex);
+                playSong();
+            }
+        });
+
+        // Cuando la canción actual termina, reproduce la siguiente
+        audioPlayer.addEventListener('ended', () => {
+            if (playlist.length > 0) {
+                currentSongIndex = (currentSongIndex + 1) % playlist.length;
+                loadSong(currentSongIndex);
+                playSong();
+            }
+        });
+
+        // Función para actualizar el texto e icono del botón de reproducir/pausar
+        function updatePlayPauseButton(isPlaying) {
+            if (isPlaying) {
+                playPauseButton.innerHTML = '<i class="fas fa-pause me-2"></i>Pausar';
+                playPauseButton.classList.remove('btn-primary');
+                playPauseButton.classList.add('btn-warning');
+            } else {
+                playPauseButton.innerHTML = '<i class="fas fa-play me-2"></i>Reproducir';
+                playPauseButton.classList.remove('btn-warning');
+                playPauseButton.classList.add('btn-primary');
+            }
+        }
+
+        // Función para eliminar una canción de la playlist
+        function removeSong(indexToRemove) {
+            // Detener la reproducción si la canción que se elimina es la actual
+            if (indexToRemove === currentSongIndex) {
+                pauseSong();
+                audioPlayer.src = '';
+                currentSongInfo.textContent = "No hay canción seleccionada";
+                currentSongIndex = -1; // Resetear el índice
+            }
+
+            // Eliminar la canción de la playlist
+            playlist.splice(indexToRemove, 1);
+
+            // Ajustar el índice de la canción actual si es necesario
+            if (currentSongIndex > indexToRemove) {
+                currentSongIndex--;
+            } else if (currentSongIndex === playlist.length && playlist.length > 0) {
+                // Si la última canción fue eliminada y la playlist no está vacía
+                currentSongIndex = playlist.length - 1;
+                loadSong(currentSongIndex);
+            } else if (playlist.length === 0) {
+                // Si la playlist está vacía después de la eliminación
+                currentSongIndex = -1;
+            }
+
+            renderPlaylistGrid(); // Volver a renderizar la cuadrícula de la playlist
+            // Si hay una canción actualmente cargada y no es la que se eliminó, volver a cargarla para actualizar los metadatos.
+            if (currentSongIndex !== -1 && audioPlayer.src) {
+                // No se necesita recargar la canción si ya está correctamente cargada.
+                // Solo renderizar para actualizar el resaltado.
+            }
+        }
+
+
+        // Inicializar la vista de la playlist al cargar
+        renderPlaylistGrid(); // Llamar a la nueva función de renderizado inicial
+    </script>
+</body>
+</html>
