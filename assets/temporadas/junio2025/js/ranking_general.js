@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimuladosCuartos = [
-            { resultado: 'QF 1', stream: true, fecha: 'MAR 24 JUN', hora: '22:30' },
+            { resultado: 'QF 1', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
             { resultado: 'QF 2', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:00' },
             { resultado: 'QF 3', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:50' },
             { resultado: 'QF 4', stream: true, fecha: 'MIÉ 25 JUN', hora: '22:30' }

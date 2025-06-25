@@ -38,6 +38,11 @@ body {
     /* Scroll si el contenido es demasiado largo */
     flex-shrink: 0;
     /* Evitar que se encoja */
+
+  @media screen and (max-width: 472px) {
+    flex-direction:row
+  }
+
 }
 
 .sidebar .navbar-brand {
