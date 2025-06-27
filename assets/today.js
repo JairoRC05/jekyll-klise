@@ -4,41 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": "match1",
             "team1": {
-                "name": "TUT OC",
-                "shortName": "TUTW", // Nuevo campo
-                "link": "/equipos/theunownteam--warriors",
-                "colorClass": "TUTW"
+                "name": "TAE",
+                "shortName": "TAE", // Nuevo campo
+                "link": "/equipos//villanos-esports--team-aether",
+                "colorClass": "TAE"
             },
             "team2": {
-                "name": "IM AMT",
-                "shortName": "AMT", // Nuevo campo
-                "link": "/imperio-mexa/--amatista",
-                "colorClass": "AMT"
-            },
-            "round": "QF",
-            "date": "CXF",
-            "time": "21:00"
-        },
-        {
-            "id": "match2",
-            "team1": {
                 "name": "FTB",
                 "shortName": "FTB", // Nuevo campo
                 "link": "/equipos/frostbite",
                 "colorClass": "FTB"
             },
-            "team2": {
-                "name": "HG SM",
-                "shortName": "SM", // Nuevo campo
-                "link": "/house-of-ghost/--salario-minimo",
-                "colorClass": "SM"
-            },
             "round": "QF",
-            "date": "CXF",
-            "time": "21:50"
+            "date": "LSPC",
+            "time": "21:15"
         },
         {
-            "id": "match3",
+            "id": "match2",
             "team1": {
                 "name": "PØĄ",
                 "shortName": "PØĄ", // Nuevo campo
@@ -47,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             "team2": {
                 "name": "TUT OC",
-                "shortName": "TUT", // Nuevo campo
+                "shortName": "TUTW", // Nuevo campo
                 "link": "/equipos/theunownteam--warriors",
                 "colorClass": "TUTW"
             },
             "round": "QF",
-            "date": "CXF",
+            "date": "LSPC",
             "time": "22:15"
         }
         
