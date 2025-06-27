@@ -30,36 +30,40 @@ title: INICIO | NACIÓN UNITE
 <body>
 
   <div class="sidebar">
-    <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+    <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="#">
       <i class="bi bi-controller me-2"></i>
       <span>UniteZone</span>
     </a>
-    <ul class="nav flex-column">
+    <ul class="nav flex-lg-column flex-md-row">
 
-      <li class="nav-item">
-        <a class="nav-link active" href="{{ site.links_navegacion.indigo }}"> <i class="bi bi-stars"></i>
-          <span>Liga Indigo</span>
+      <li class="nav-item iconContainer">
+        <a class="nav-link active" href="{{ site.links_navegacion.indigo }}"> 
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
+          <span class="ms-1 trunk">Liga Indigo</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.links_navegacion.copa }}"> <i class="bi bi-trophy"></i>
-          <span>Copa XForze</span>
+      <li class="nav-item iconContainer">
+        <a class="nav-link" href="{{ site.links_navegacion.copa }}"> 
+          <img src="/assets/logos/COPA XFORCE-ALT.webp" alt="" class="imgIcon">
+          <span class="ms-1 trunk">Copa XForze</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.links_navegacion.supercxf }}"> <i class="bi bi-trophy"></i>
-          <span>Super Copa XForze</span>
+      <li class="nav-item iconContainer">
+        <a class="nav-link" href="{{ site.links_navegacion.supercxf }}"> 
+          <img src="/assets/logos/SCXF.webp" alt="" class="imgIcon">
+          <span class="ms-1 trunk">Super Copa XF</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.links_navegacion.sorteos }}"> <i class="bi bi-gift"></i>
-          <span>Sorteos</span>
+      <li class="nav-item iconContainer">
+        <a class="nav-link" href="{{ site.links_navegacion.sorteos }}"> 
+          <img src="/assets/logos/icons/sorteos.webp" alt="" class="imgIcon">
+          <span class="ms-1 trunk">Sorteos</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item iconContainer">
         <a class="nav-link" href="#">
-          <i class="bi bi-people"></i>
-          <span>Comunidad (soon)</span>
+          <img src="/assets/logos/icons/comunidad.webp" alt="" class="imgIcon">
+          <span class="ms-1 trunk">Comunidad (soon)</span>
         </a>
       </li>
     </ul>
@@ -136,6 +140,8 @@ title: INICIO | NACIÓN UNITE
       </div>
     </div>
   </div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -39,9 +39,10 @@ body {
     flex-shrink: 0;
     /* Evitar que se encoja */
 
-  @media screen and (max-width: 472px) {
-    flex-direction:row
-  }
+    @media (max-width: 768px) {
+        display: none
+    }
+
 
 }
 
@@ -63,6 +64,7 @@ body {
     display: flex;
     /* Para alinear ícono y texto */
     align-items: center;
+    margin-bottom: 2px;
 }
 
 .sidebar .nav-link i {
@@ -72,11 +74,10 @@ body {
 
 .sidebar .nav-link:hover,
 .sidebar .nav-link.active {
-    background: rgba(255, 255, 255, 0.37);
+    background: rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(15px) saturate(180%);
     -webkit-backdrop-filter: blur(15px) saturate(180%);
-    /* Violeta al pasar el mouse o activo */
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Contenido principal */
@@ -86,6 +87,7 @@ body {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 
 /* Top Bar - Barra superior (Búsqueda, Perfil, etc.) */
@@ -474,34 +476,7 @@ body {
 
 /* Media queries para responsividad */
 @media (max-width: 992px) {
-    .sidebar {
-        width: 80px;
-        /* Sidebar más pequeño en pantallas medianas */
-        padding: 1rem 0.5rem;
-        align-items: center;
-    }
 
-    .sidebar .navbar-brand span {
-        display: none;
-        /* Ocultar el texto del logo */
-    }
-
-    .sidebar .nav-link span {
-        display: none;
-        /* Ocultar el texto de los enlaces */
-    }
-
-    .sidebar .nav-link i {
-        margin-right: 0;
-        /* Eliminar margen para el ícono */
-        font-size: 1.5rem;
-        /* Aumentar tamaño del ícono */
-    }
-
-    .sidebar .nav-link {
-        justify-content: center;
-        /* Centrar los íconos */
-    }
 
     .main-content {
         padding: 1rem;
@@ -596,4 +571,120 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 900 !important;
     font-family: "Exo 2";
+}
+
+
+@media (max-width: 991.98px) {
+
+    /* Bootstrap 'md' breakpoint is < 992px */
+    .sidebar {
+        background: rgba(255, 225, 0, 0.869);
+        backdrop-filter: blur(15px) saturate(180%);
+        -webkit-backdrop-filter: blur(15px) saturate(180%);
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: auto;
+        /* Altura automática */
+        position: fixed;
+        /* Fija en la pantalla */
+        bottom: 0;
+        /* En la parte inferior */
+        left: 0;
+        /* Alineada a la izquierda */
+        top: auto;
+        /* Elimina el 'top: 0' para que no interfiera */
+        flex-direction: row;
+        /* Elementos en fila */
+        justify-content: space-around;
+        /* Espacia los elementos */
+        padding: 0.5rem 1rem;
+        /* Padding reducido */
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        /* Borde superior */
+        border-left: none;
+        /* Elimina borde lateral si existiera */
+        border-right: none;
+        /* Elimina borde lateral si existiera */
+        z-index: 1030;
+        /* Asegura que esté por encima del contenido (como la navbar de Bootstrap) */
+        overflow-y: hidden;
+        /* Evita scroll vertical en la barra inferior */
+        display: flex;
+        /* Asegura que se muestre */
+
+    }
+
+    .sidebar .navbar-brand {
+        display: none;
+        /* Oculta el logo en la barra inferior */
+    }
+
+    .sidebar .nav-link {
+        flex-direction: column;
+        /* Icono y texto apilados */
+        padding: 0.5rem 0.5rem;
+        /* Padding ajustado */
+        font-size: 0.8rem;
+        /* Tamaño de fuente más pequeño */
+        text-align: center;
+        /* Centrar texto */
+    }
+
+    .sidebar .nav-link i {
+        margin-right: 0;
+        /* Elimina margen lateral del icono */
+        margin-bottom: 5px;
+        /* Pequeño margen inferior para separar del texto */
+        font-size: 1.2rem;
+        /* Tamaño del icono ajustado */
+    }
+
+    .sidebar .nav-link span {
+        display: block;
+        /* Muestra el texto */
+    }
+
+    /* Ajuste para el body para evitar que el contenido quede oculto detrás de la sidebar fija */
+    body {
+        padding-bottom: 60px;
+        /* Ajusta este valor según la altura de tu sidebar inferior */
+    }
+
+}
+
+/* La media query que ya tenías para ocultar la sidebar en pantallas más pequeñas (sm) */
+@media (max-width: 767.98px) {
+
+    /* Bootstrap 'sm' breakpoint is < 768px */
+    .sidebar {
+        display: flex;
+        /* Asegura que la sidebar se muestre como barra inferior en sm también */
+        /* Puedes ajustar propiedades específicas para sm si quieres un diseño diferente */
+    }
+}
+
+
+.imgIcon {
+    width: 35px;
+    height: 35px;
+    filter: grayscale(100%) brightness(200%) contrast(100%);
+}
+
+.trunk {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    @media (max-width: 991.98px) {
+            width: 90%;
+    }
+}
+
+.iconContainer{
+   
+
+     @media (max-width: 991.98px) {
+            width: 65px;
+    }
 }

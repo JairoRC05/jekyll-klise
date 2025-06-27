@@ -1,0 +1,1536 @@
+---
+layout: 
+permalink: /puntos-temp
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking Liga Máxima</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para los campos editables cuando están en foco */
+        td[contenteditable]:focus {
+            outline: 2px solid #0d6efd;
+        }
+        /* Estilos generales para un mejor aspecto */
+        body {
+            font-family: 'Inter', sans-serif; /* Usar Inter como fuente */
+        }
+        .container {
+            max-width: 900px; /* Limitar el ancho del contenedor principal */
+        }
+        .btn {
+            border-radius: 0.5rem; /* Botones con esquinas redondeadas */
+        }
+        .form-control, .form-select {
+            border-radius: 0.5rem; /* Inputs y selects con esquinas redondeadas */
+        }
+        .modal-content {
+            border-radius: 0.75rem; /* Modales con esquinas más redondeadas */
+        }
+        .table-dark thead th {
+            border-bottom: 2px solid #495057; /* Separador más visible en el encabezado de la tabla */
+        }
+        /* Color del botón de cerrar en modales para temas oscuros */
+        .btn-close-white {
+            filter: invert(1);
+        }
+        /* Pequeño ajuste para el selector de temporada para evitar CLS */
+        #seasonSelector {
+            min-width: 150px; /* Asegurar un ancho mínimo para evitar saltos */
+        }
+        /* Estilo para la tabla de resumen para permitir desplazamiento horizontal si hay muchas columnas */
+        #summaryTableContainer, #uniqueTeamsTableContainer {
+            overflow-x: auto;
+        }
+        /* Estilo para la columna de total de puntos */
+        .total-points-column {
+            font-weight: bold;
+            background-color: #343a40; /* Un poco más oscuro para destacarse */
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <div class="container py-5">
+        <ul class="nav nav-tabs mb-4" id="rankingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ranking-tab" data-bs-toggle="tab" data-bs-target="#ranking" type="button" role="tab" aria-controls="ranking" aria-selected="true">Ranking</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="season-tab" data-bs-toggle="tab" data-bs-target="#season" type="button" role="tab" aria-controls="season" aria-selected="false">Temporadas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="teams-tab" data-bs-toggle="tab" data-bs-target="#teams" type="button" role="tab" aria-controls="teams" aria-selected="false">Equipos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">Resumen de Puntos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tools-tab" data-bs-toggle="tab" data-bs-target="#tools" type="button" role="tab" aria-controls="tools" aria-selected="false">Herramientas</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="rankingTabsContent">
+            <div class="tab-pane fade show active" id="ranking" role="tabpanel" aria-labelledby="ranking-tab">
+                <h1 class="text-center mb-4">Ranking Liga Máxima - <span id="currentSeasonName">Temporada Actual</span></h1>
+                <select id="seasonSelector" class="form-select mb-3" onchange="switchSeason()">
+                    <option disabled selected value="Selecciona una temporada">Selecciona una temporada</option>
+                </select>
+                <div class="mb-4 row g-2">
+                    <div class="col-md-5">
+                        <label for="teamSelectorToAdd" class="form-label visually-hidden">Seleccionar Equipo</label>
+                        <select id="teamSelectorToAdd" class="form-select" aria-label="Seleccionar equipo para añadir">
+                            <option disabled selected value="">Selecciona un equipo existente</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="position" class="form-label visually-hidden">Posición</label>
+                        <input type="number" id="position" class="form-control" placeholder="Posición" min="1" aria-label="Posición del equipo">
+                    </div>
+                    <div class="col-md-4">
+                        <button onclick="addTeamToSeason()" class="btn btn-primary w-100">Agregar Equipo a Temporada</button>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button onclick="downloadJSON()" class="btn btn-success w-100">Descargar Ranking de Temporada (JSON)</button>
+                    </div>
+                </div>
+                <table class="table table-striped table-dark" id="rankingTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Equipo</th>
+                            <th>Tag</th>
+                            <th>Posición</th>
+                            <th>Puntos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingBody"></tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="season" role="tabpanel" aria-labelledby="season-tab">
+                <h2 class="mb-3">Gestión de Temporadas</h2>
+                <div class="input-group mb-3">
+                    <input type="text" id="newSeasonInput" class="form-control" placeholder="Nombre de la nueva temporada" aria-label="Nombre de la nueva temporada">
+                    <button class="btn btn-outline-light" onclick="createSeason()">Crear Temporada</button>
+                </div>
+                <div class="table-responsive mt-4">
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                            <tr>
+                                <th>Clave</th>
+                                <th>Nombre Visible</th>
+                                <th>Total Equipos Participantes</th>
+                                <th>Mes</th>
+                                <th>Año</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="seasonTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Nueva pestaña de Equipos -->
+            <div class="tab-pane fade" id="teams" role="tabpanel" aria-labelledby="teams-tab">
+                <h2 class="mb-3">Gestión de Equipos</h2>
+                <p class="text-muted">Gestiona tus equipos únicos aquí. Un equipo es una entidad que puede aparecer en múltiples temporadas.</p>
+                <div class="mb-4 row g-2">
+                    <div class="col-md-5">
+                        <input type="text" id="newTeamName" class="form-control" placeholder="Nombre del nuevo equipo" aria-label="Nombre del nuevo equipo">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" id="newTeamTag" class="form-control" placeholder="Tag del nuevo equipo" aria-label="Tag del nuevo equipo">
+                    </div>
+                    <div class="col-md-3">
+                        <button onclick="addUniqueTeam()" class="btn btn-primary w-100">Crear Equipo</button>
+                    </div>
+                </div>
+                <div id="uniqueTeamsTableContainer" class="table-responsive mt-4">
+                    <table class="table table-bordered table-dark table-striped" id="uniqueTeamsTable">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tag</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="uniqueTeamsTableBody">
+                            <!-- Los equipos se cargarán aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pestaña de resumen de puntos -->
+            <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+                <h2 class="mb-3">Resumen de Puntos por Equipo y Temporada</h2>
+                <p class="text-muted">Muestra los puntos finales de cada equipo en las temporadas donde participaron, ordenadas cronológicamente. Los meses y años deben ser numéricos para una correcta visualización.</p>
+                <div class="mb-3">
+                    <button onclick="downloadSummaryCSV()" class="btn btn-success w-100">Descargar Resumen (CSV)</button>
+                </div>
+                <div id="summaryTableContainer" class="table-responsive mt-4">
+                    <table class="table table-bordered table-dark table-striped" id="summaryTable">
+                        <thead>
+                            <tr id="summaryTableHeader">
+                                <!-- Las cabeceras se generarán dinámicamente aquí -->
+                            </tr>
+                        </thead>
+                        <tbody id="summaryTableBody">
+                            <!-- El contenido se generará dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tools" role="tabpanel" aria-labelledby="tools-tab">
+                <h2 class="mb-3">Herramientas</h2>
+
+                <!-- Sección: Duplicar Temporada -->
+                <div class="card bg-secondary text-white mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Duplicar Temporada</h4>
+                        <p class="card-text">Crea una nueva temporada copiando todos los equipos y sus datos de una temporada existente. Los equipos de la nueva temporada serán los mismos equipos únicos.</p>
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-4">
+                                <label for="sourceSeasonToDuplicate" class="form-label">Temporada a copiar:</label>
+                                <select id="sourceSeasonToDuplicate" class="form-select" aria-label="Temporada de origen para duplicar">
+                                    <option disabled selected value="">Selecciona una temporada</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="newDuplicateSeasonName" class="form-label">Nombre de la nueva temporada:</label>
+                                <input type="text" id="newDuplicateSeasonName" class="form-control" placeholder="Ej: Temporada 2025 - Parte 2" aria-label="Nombre de la nueva temporada duplicada">
+                            </div>
+                            <div class="col-md-3">
+                                <button onclick="duplicateSeasonFromTool()" class="btn btn-info w-100">Duplicar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Fusionar Equipos (GLOBAL) -->
+                <div class="card bg-secondary text-white mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Fusionar Equipos (Global)</h4>
+                        <p class="card-text">Combina dos equipos únicos. Todos los registros del equipo "Fuente" en todas las temporadas se reasignarán al equipo "Destino", y el equipo "Fuente" será eliminado permanentemente.</p>
+                        <small class="text-warning d-block mb-3">
+                            ⚠️ Esta acción es irreversible. El equipo "Destino" conservará sus propios datos (nombre, tag) y todos los registros del equipo "Fuente" se le atribuirán.
+                        </small>
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-5">
+                                <label for="teamToMergeSourceGlobal" class="form-label">Equipo Fuente (ID a eliminar):</label>
+                                <select id="teamToMergeSourceGlobal" class="form-select" aria-label="Equipo fuente para la fusión global">
+                                    <option disabled selected value="">Selecciona equipo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="teamToMergeDestinationGlobal" class="form-label">Equipo Destino (ID a conservar):</label>
+                                <select id="teamToMergeDestinationGlobal" class="form-select" aria-label="Equipo destino para la fusión global">
+                                    <option disabled selected value="">Selecciona equipo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button onclick="mergeTeamsGlobal()" class="btn btn-warning w-100">Fusionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Importar Datos (JSON) -->
+                <div class="card bg-secondary text-white mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Importar Datos (JSON)</h4>
+                        <p class="card-text">Carga temporadas y equipos desde un archivo JSON. Este archivo debe tener la estructura exportada por la aplicación para funcionar correctamente.</p>
+                        <small class="text-warning d-block mb-3">
+                            ⚠️ La importación sobrescribirá tus datos actuales si las claves de temporadas o IDs de equipos coinciden.
+                        </small>
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-9">
+                                <label for="importJsonFile" class="form-label">Seleccionar archivo JSON:</label>
+                                <input type="file" id="importJsonFile" class="form-control" accept=".json" aria-label="Archivo JSON a importar">
+                            </div>
+                            <div class="col-md-3">
+                                <button onclick="handleImportJSON()" class="btn btn-info w-100">Importar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Restablecer Datos -->
+                <div class="card bg-secondary text-white mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Restablecer Todos los Datos</h4>
+                        <p class="card-text">Eliminará todas las temporadas y equipos guardados. **Esta acción no se puede deshacer.**</p>
+                        <button onclick="resetAllData()" class="btn btn-danger">Restablecer Todo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div class="modal fade" id="customAlertModal" tabindex="-1" aria-labelledby="customAlertModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="customAlertModalLabel">Aviso</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="customAlertModalBody">
+                    <!-- El mensaje se inyectará aquí -->
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div class="modal fade" id="customConfirmModal" tabindex="-1" aria-labelledby="customConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="customConfirmModalLabel">Confirmación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="customConfirmModalBody">
+                    <!-- El mensaje se inyectará aquí -->
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="customConfirmBtnOk">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Constantes para el cálculo de puntos según la fórmula proporcionada
+        const POINTS_BASE = 2000; // Puntos base por participar
+        const POINTS_SCALER = 50; // Puntos por cada equipo superado
+
+        // Esta variable global almacenará todos los datos de las temporadas
+        let seasons = JSON.parse(localStorage.getItem('liga_maxima_seasons')) || {};
+        // Esta nueva variable global almacenará todos los equipos únicos
+        let teamsDatabase = JSON.parse(localStorage.getItem('liga_maxima_teams')) || {};
+
+        // Variables globales para las instancias de los modales de Bootstrap
+        let customAlertModalInstance;
+        let customConfirmModalInstance;
+        let confirmCallback = null; // Para almacenar la función de callback a ejecutar al confirmar
+
+        // Array para mapear números de mes a nombres de mes en español
+        const monthNames = [
+            "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+            "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+        ];
+
+        /**
+         * Muestra un modal de alerta personalizado en lugar de alert().
+         * @param {string} message El mensaje a mostrar en el modal.
+         */
+        function showCustomAlert(message) {
+            if (!customAlertModalInstance) {
+                const customAlertModalElement = document.getElementById('customAlertModal');
+                customAlertModalInstance = new bootstrap.Modal(customAlertModalElement);
+            }
+            document.getElementById('customAlertModalBody').innerText = message;
+            customAlertModalInstance.show();
+        }
+
+        /**
+         * Muestra un modal de confirmación personalizado en lugar de confirm().
+         * @param {string} message El mensaje de confirmación a mostrar.
+         * @param {function} callback La función a ejecutar si el usuario confirma.
+         */
+        function showCustomConfirm(message, callback) {
+            if (!customConfirmModalInstance) {
+                const customConfirmModalElement = document.getElementById('customConfirmModal');
+                customConfirmModalInstance = new bootstrap.Modal(customConfirmModalElement);
+                // Adjuntar el event listener al botón 'Confirmar' solo una vez
+                document.getElementById('customConfirmBtnOk').addEventListener('click', () => {
+                    if (confirmCallback) {
+                        confirmCallback(); // Ejecutar el callback almacenado
+                    }
+                    customConfirmModalInstance.hide(); // Ocultar el modal
+                });
+            }
+            document.getElementById('customConfirmModalBody').innerText = message;
+            confirmCallback = callback; // Almacenar el callback para usarlo cuando se confirme
+            customConfirmModalInstance.show();
+        }
+
+
+        /**
+         * Rellena el selector de temporadas con las temporadas existentes.
+         * Se asegura de que la opción predeterminada esté configurada correctamente.
+         */
+        function populateSeasonSelector() {
+            const selector = document.getElementById('seasonSelector');
+            selector.innerHTML = '<option disabled selected value="Selecciona una temporada">Selecciona una temporada</option>';
+
+            const seasonKeys = Object.keys(seasons);
+            seasonKeys.forEach(seasonName => {
+                const opt = document.createElement('option');
+                opt.value = seasonName;
+                opt.textContent = seasons[seasonName]._meta && seasons[seasonName]._meta.name ? seasons[seasonName]._meta.name : seasonName;
+                selector.appendChild(opt);
+            });
+
+            const duplicateSeasonSelector = document.getElementById('sourceSeasonToDuplicate');
+            if (duplicateSeasonSelector) {
+                duplicateSeasonSelector.innerHTML = '<option disabled selected value="">Selecciona una temporada</option>';
+                seasonKeys.forEach(seasonName => {
+                    const opt = document.createElement('option');
+                    opt.value = seasonName;
+                    opt.textContent = seasons[seasonName]._meta && seasons[seasonName]._meta.name ? seasons[seasonName]._meta.name : seasonName;
+                    duplicateSeasonSelector.appendChild(opt);
+                });
+            }
+        }
+
+        /**
+         * Rellena el selector de equipos para añadir a una temporada.
+         * Se alimenta de `teamsDatabase`.
+         */
+        function populateTeamSelectors() {
+            const teamSelectorToAdd = document.getElementById('teamSelectorToAdd');
+            if (teamSelectorToAdd) {
+                teamSelectorToAdd.innerHTML = '<option disabled selected value="">Selecciona un equipo existente</option>';
+                for (const teamId in teamsDatabase) {
+                    if (teamsDatabase.hasOwnProperty(teamId)) {
+                        const team = teamsDatabase[teamId];
+                        const opt = document.createElement('option');
+                        opt.value = team.id;
+                        opt.textContent = `${team.name} (${team.tag})`;
+                        teamSelectorToAdd.appendChild(opt);
+                    }
+                }
+            }
+        }
+
+        /**
+         * Rellena los selectores de equipos para la herramienta de fusión global.
+         * Se alimenta de `teamsDatabase`.
+         */
+        function populateMergeTeamSelectorsGlobal() {
+            const teamToMergeSourceGlobal = document.getElementById('teamToMergeSourceGlobal');
+            const teamToMergeDestinationGlobal = document.getElementById('teamToMergeDestinationGlobal');
+
+            if (teamToMergeSourceGlobal) teamToMergeSourceGlobal.innerHTML = '<option disabled selected value="">Selecciona equipo</option>';
+            if (teamToMergeDestinationGlobal) teamToMergeDestinationGlobal.innerHTML = '<option disabled selected value="">Selecciona equipo</option>';
+
+            for (const teamId in teamsDatabase) {
+                if (teamsDatabase.hasOwnProperty(teamId)) {
+                    const team = teamsDatabase[teamId];
+                    const option1 = document.createElement('option');
+                    option1.value = team.id;
+                    option1.textContent = `${team.name} (${team.tag}) (ID: ${team.id.substring(0, 4)}...)`;
+                    if (teamToMergeSourceGlobal) teamToMergeSourceGlobal.appendChild(option1);
+
+                    const option2 = document.createElement('option');
+                    option2.value = team.id;
+                    option2.textContent = `${team.name} (${team.tag}) (ID: ${team.id.substring(0, 4)}...)`;
+                    if (teamToMergeDestinationGlobal) teamToMergeDestinationGlobal.appendChild(option2);
+                }
+            }
+        }
+
+
+        /**
+         * Cambia la temporada actualmente visualizada en la tabla de ranking.
+         * Actualiza el título y la tabla de ranking.
+         */
+        function switchSeason() {
+            const selectedSeasonName = document.getElementById('seasonSelector').value;
+            document.getElementById('currentSeasonName').textContent =
+                seasons[selectedSeasonName]._meta && seasons[selectedSeasonName]._meta.name ? seasons[selectedSeasonName]._meta.name : selectedSeasonName;
+            updateTable();
+        }
+
+        /**
+         * Crea una nueva temporada y la añade a la lista de temporadas.
+         * Valida que el nombre no esté vacío y no exista ya.
+         * Inicializa la nueva temporada con una estructura de datos adecuada.
+         */
+        function createSeason() {
+            const input = document.getElementById('newSeasonInput');
+            const name = input.value.trim();
+
+            if (!name) {
+                showCustomAlert("El nombre de la temporada no puede estar vacío.");
+                return;
+            }
+            if (seasons[name]) {
+                showCustomAlert("¡Esta temporada ya existe! Por favor, elige un nombre diferente.");
+                return;
+            }
+
+            seasons[name] = {
+                teams: [],
+                _meta: {
+                    name: name,
+                    totalParticipants: 0,
+                    month: 0,
+                    year: 0
+                }
+            };
+            localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+            input.value = '';
+
+            populateSeasonSelector();
+            renderSeasonTable();
+            renderSummaryTable();
+
+            document.getElementById('seasonSelector').value = name;
+            switchSeason();
+        }
+
+        /**
+         * Elimina una temporada del almacenamiento.
+         * Pide confirmación al usuario antes de eliminar.
+         * @param {string} seasonName La clave de la temporada a eliminar.
+         */
+        function deleteSeason(seasonName) {
+            showCustomConfirm(`¿Estás seguro de que quieres eliminar la temporada "${seasonName}"? Esto eliminará todos los equipos y datos asociados. Esta acción no se puede deshacer.`, () => {
+                delete seasons[seasonName];
+                localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+
+                populateSeasonSelector();
+                renderSeasonTable();
+                renderSummaryTable();
+
+                const currentSelected = document.getElementById('seasonSelector').value;
+                if (currentSelected === seasonName) {
+                    document.getElementById('seasonSelector').value = "Selecciona una temporada";
+                    document.getElementById('currentSeasonName').textContent = "Temporada Actual";
+                    updateTable();
+                } else if (Object.keys(seasons).length > 0 && currentSelected === "Selecciona una temporada") {
+                    document.getElementById('seasonSelector').value = Object.keys(seasons)[0];
+                    switchSeason();
+                } else {
+                    updateTable();
+                }
+            });
+        }
+
+        /**
+         * Actualiza la tabla de ranking con los equipos de la temporada seleccionada.
+         * Ordena los equipos por puntos de mayor a menor.
+         */
+        function updateTable() {
+            const seasonName = document.getElementById('seasonSelector').value;
+            const tbody = document.getElementById('rankingBody');
+            tbody.innerHTML = '';
+
+            if (seasonName === "Selecciona una temporada" || !seasonName || !seasons[seasonName] || !seasons[seasonName].teams) {
+                return;
+            }
+
+            const teamsInSeason = seasons[seasonName].teams;
+            teamsInSeason.sort((a, b) => b.points - a.points);
+
+            teamsInSeason.forEach((teamInSeason, i) => {
+                const teamData = teamsDatabase[teamInSeason.id]; // Obtener nombre y tag del equipo único
+                if (!teamData) { // Si el equipo único no existe (posible data inconsistente)
+                    console.warn(`Equipo con ID ${teamInSeason.id} no encontrado en teamsDatabase. Mostrando datos parciales.`);
+                }
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td contenteditable onblur="editTeamInSeason('${teamInSeason.id}', 'name', this.innerText)">${teamData ? teamData.name : 'Desconocido'}</td>
+                    <td contenteditable onblur="editTeamInSeason('${teamInSeason.id}', 'tag', this.innerText)">${teamData ? teamData.tag : 'N/A'}</td>
+                    <td contenteditable onblur="editTeamInSeason('${teamInSeason.id}', 'position', this.innerText)">${teamInSeason.position}</td>
+                    <td>${teamInSeason.points}</td>
+                    <td><button class='btn btn-sm btn-outline-danger' onclick='removeTeamFromSeason("${teamInSeason.id}")'>Eliminar</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        /**
+         * Añade un equipo existente de `teamsDatabase` a la temporada actualmente seleccionada.
+         * El nombre y tag se copian desde `teamsDatabase` al momento de añadir.
+         */
+        function addTeamToSeason() {
+            const seasonName = document.getElementById('seasonSelector').value;
+            const teamId = document.getElementById('teamSelectorToAdd').value;
+            const position = parseInt(document.getElementById('position').value);
+
+            if (seasonName === "Selecciona una temporada" || !seasonName || !seasons[seasonName]) {
+                showCustomAlert("Por favor, selecciona una temporada para añadir equipos.");
+                return;
+            }
+            if (!teamId) {
+                showCustomAlert("Por favor, selecciona un equipo existente para añadir.");
+                return;
+            }
+            if (isNaN(position) || position < 1) {
+                showCustomAlert("Por favor, introduce una 'Posición' válida (número mayor o igual a 1).");
+                return;
+            }
+
+            const teamData = teamsDatabase[teamId];
+            if (!teamData) {
+                showCustomAlert("El equipo seleccionado no es válido. Por favor, crea el equipo en la pestaña 'Equipos' si no existe.");
+                return;
+            }
+
+            const totalParticipants = parseInt(seasons[seasonName]._meta.totalParticipants);
+            if (isNaN(totalParticipants) || totalParticipants < 1) {
+                showCustomAlert("Por favor, define el 'Total Equipos Participantes' para esta temporada en la pestaña 'Temporadas'. Debe ser un número mayor o igual a 1.");
+                return;
+            }
+            if (position > totalParticipants) {
+                showCustomAlert(`La posición del equipo (${position}) no puede ser mayor que el 'Total Equipos Participantes' definido para esta temporada (${totalParticipants}).`);
+                return;
+            }
+
+            // Verificar si el equipo ya está en esta temporada
+            const existingTeamInSeason = seasons[seasonName].teams.find(t => t.id === teamId);
+            if (existingTeamInSeason) {
+                showCustomAlert(`El equipo "${teamData.name}" ya está añadido a esta temporada.`);
+                return;
+            }
+
+            const points = POINTS_BASE + ((totalParticipants - position) * POINTS_SCALER);
+            
+            // Almacenamos el ID, y copiamos el nombre/tag desde teamsDatabase.
+            // Esto permite que el nombre/tag en la tabla de ranking se actualice si el equipo principal cambia.
+            const teamForSeason = {
+                id: teamData.id,
+                name: teamData.name, // Copia el nombre actual
+                tag: teamData.tag,   // Copia el tag actual
+                position: position,
+                points: points
+            };
+
+            seasons[seasonName].teams.push(teamForSeason);
+            localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+            updateTable();
+            document.getElementById('teamSelectorToAdd').value = ""; // Limpiar selector
+            document.getElementById('position').value = '';
+            renderSummaryTable();
+        }
+
+        /**
+         * Edita un campo específico de un equipo en una temporada.
+         * Si se edita 'name' o 'tag', actualiza el equipo en `teamsDatabase` y propaga a todas las temporadas.
+         * Si se edita 'position', recalcula los puntos solo para esa temporada.
+         * @param {string} teamId El ID único del equipo a editar.
+         * @param {string} field El nombre del campo a editar ('name', 'tag', 'position').
+         * @param {string} value El nuevo valor para el campo.
+         */
+        function editTeamInSeason(teamId, field, value) {
+            const seasonName = document.getElementById('seasonSelector').value;
+            let dataModified = false;
+
+            if (!teamsDatabase[teamId]) {
+                 console.error(`Error: Equipo con ID ${teamId} no encontrado en teamsDatabase.`);
+                 updateTable(); // Revertir visualmente si hay inconsistencia
+                 return;
+            }
+
+            // Lógica para editar el nombre o tag (afecta a `teamsDatabase` y propaga)
+            if (field === 'name' || field === 'tag') {
+                const trimmedValue = value.trim();
+                if (!trimmedValue) {
+                    showCustomAlert(`El campo '${field}' no puede estar vacío.`);
+                    updateTable();
+                    return;
+                }
+
+                // Validar duplicados en teamsDatabase
+                const isDuplicateInDatabase = Object.values(teamsDatabase).some(team =>
+                    team.id !== teamId && (
+                        (field === 'name' && team.name.toLowerCase() === trimmedValue.toLowerCase()) ||
+                        (field === 'tag' && team.tag.toLowerCase() === trimmedValue.toLowerCase())
+                    )
+                );
+
+                if (isDuplicateInDatabase) {
+                    showCustomAlert(`El ${field} "${trimmedValue}" ya está en uso por otro equipo.`);
+                    updateTable();
+                    return;
+                }
+
+                // Actualizar el equipo en la base de datos de equipos
+                teamsDatabase[teamId][field] = trimmedValue;
+                dataModified = true;
+
+                // Propagar el cambio a todas las instancias de este equipo en todas las temporadas
+                for (const sKey in seasons) {
+                    if (seasons.hasOwnProperty(sKey) && seasons[sKey].teams) {
+                        const teamInSeason = seasons[sKey].teams.find(t => t.id === teamId);
+                        if (teamInSeason) {
+                            teamInSeason[field] = trimmedValue; // Actualizar el nombre/tag en la instancia de la temporada
+                            dataModified = true; // Marca que los datos de temporadas también cambiaron
+                        }
+                    }
+                }
+                localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase)); // Guardar teamsDatabase
+                populateTeamSelectors(); // Actualizar selectores que muestran nombres/tags
+                populateMergeTeamSelectorsGlobal(); // Actualizar selectores de fusión global
+
+            } else if (field === 'position') { // Lógica para editar la posición (solo afecta a la temporada actual)
+                const teamInSeason = seasons[seasonName].teams.find(t => t.id === teamId);
+                if (!teamInSeason) {
+                    console.error("Error: Equipo no encontrado en la temporada actual para edición de posición.");
+                    updateTable();
+                    return;
+                }
+                
+                const pos = parseInt(value);
+                const totalParticipants = parseInt(seasons[seasonName]._meta.totalParticipants);
+
+                if (isNaN(pos) || pos < 1) {
+                    showCustomAlert("La posición debe ser un número válido mayor o igual a 1.");
+                    updateTable();
+                    return;
+                }
+                if (isNaN(totalParticipants) || totalParticipants < 1) {
+                    showCustomAlert("Error: El 'Total Equipos Participantes' para esta temporada no está definido o es inválido. Por favor, corrígelo en la pestaña 'Temporadas'.");
+                    updateTable();
+                    return;
+                }
+                if (pos > totalParticipants) {
+                    showCustomAlert(`Advertencia: La posición ${pos} es mayor que el 'Total Equipos Participantes' definido para esta temporada (${totalParticipants}).`);
+                }
+
+                teamInSeason.position = pos;
+                teamInSeason.points = POINTS_BASE + ((totalParticipants - pos) * POINTS_SCALER);
+                dataModified = true;
+            }
+
+            if (dataModified) {
+                localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons)); // Guardar cambios en temporadas
+                updateTable(); // Re-renderizar la tabla de ranking actual
+                renderSummaryTable(); // Re-renderizar la tabla de resumen
+                renderUniqueTeamsTable(); // Re-renderizar la tabla de equipos si el nombre/tag cambió
+            }
+        }
+
+        /**
+         * Elimina un equipo de la temporada actualmente seleccionada.
+         * @param {string} teamId El ID único del equipo a eliminar de la temporada.
+         */
+        function removeTeamFromSeason(teamId) {
+            const seasonName = document.getElementById('seasonSelector').value;
+
+            if (seasonName === "Selecciona una temporada" || !seasonName) {
+                showCustomAlert("Por favor, selecciona una temporada antes de eliminar equipos.");
+                return;
+            }
+            
+            const teamsInSeason = seasons[seasonName].teams;
+            const teamIndex = teamsInSeason.findIndex(t => t.id === teamId);
+
+            if (teamIndex === -1) {
+                console.error("Error: Equipo no encontrado para eliminación en la temporada actual.");
+                return;
+            }
+
+            const teamData = teamsDatabase[teamId];
+            const teamName = teamData ? teamData.name : 'Desconocido';
+
+            showCustomConfirm(`¿Estás seguro de que quieres eliminar a "${teamName}" de esta temporada?`, () => {
+                teamsInSeason.splice(teamIndex, 1);
+                localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+                updateTable();
+                renderSummaryTable();
+            });
+        }
+
+        /**
+         * Rellena la tabla de la sección "Temporadas" con la información de cada temporada.
+         * Permite la edición en línea de los metadatos de la temporada.
+         */
+        function renderSeasonTable() {
+            const tbody = document.getElementById('seasonTableBody');
+            tbody.innerHTML = '';
+
+            Object.keys(seasons).forEach(seasonName => {
+                if (!seasons[seasonName]._meta) {
+                    seasons[seasonName]._meta = { name: seasonName, totalParticipants: 0, month: 0, year: 0 };
+                    localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+                }
+                const meta = seasons[seasonName]._meta;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${seasonName}</td>
+                    <td contenteditable onblur="editSeasonMeta('${seasonName}', 'name', this.innerText)">${meta.name}</td>
+                    <td contenteditable onblur="editSeasonMeta('${seasonName}', 'totalParticipants', this.innerText)">${meta.totalParticipants}</td>
+                    <td contenteditable onblur="editSeasonMeta('${seasonName}', 'month', this.innerText)">${meta.month || ''}</td>
+                    <td contenteditable onblur="editSeasonMeta('${seasonName}', 'year', this.innerText)">${meta.year || ''}</td>
+                    <td><button class='btn btn-sm btn-danger' onclick='deleteSeason("${seasonName}")'>Eliminar</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        /**
+         * Edita los metadatos de una temporada.
+         * @param {string} seasonName La clave de la temporada.
+         * @param {string} field El campo a editar.
+         * @param {string} value El nuevo valor.
+         */
+        function editSeasonMeta(seasonName, field, value) {
+            if (!seasons[seasonName]) {
+                console.error(`Error: Temporada ${seasonName} no encontrada para editar metadatos.`);
+                return;
+            }
+            if (!seasons[seasonName]._meta) {
+                seasons[seasonName]._meta = {};
+            }
+
+            let valueToSet = value.trim();
+
+            if (field === 'totalParticipants') {
+                const numValue = parseInt(valueToSet);
+                if (isNaN(numValue) || numValue < 1) {
+                    showCustomAlert("El 'Total Equipos Participantes' debe ser un número válido mayor o igual a 1.");
+                    renderSeasonTable();
+                    return;
+                }
+                seasons[seasonName]._meta[field] = numValue;
+                // Recalcular puntos para todos los equipos en esta temporada si totalParticipants cambia
+                if (seasons[seasonName].teams && seasons[seasonName].teams.length > 0) {
+                    seasons[seasonName].teams.forEach(teamInSeason => {
+                        teamInSeason.points = POINTS_BASE + ((seasons[seasonName]._meta.totalParticipants - teamInSeason.position) * POINTS_SCALER);
+                    });
+                }
+                updateTable(); // Actualizar la tabla de ranking (puntos pueden haber cambiado)
+
+            } else if (field === 'month') {
+                const numValue = parseInt(valueToSet);
+                if (isNaN(numValue) || numValue < 1 || numValue > 12) {
+                    showCustomAlert("El 'Mes' debe ser un número entre 1 y 12.");
+                    renderSeasonTable();
+                    return;
+                }
+                seasons[seasonName]._meta[field] = numValue;
+            } else if (field === 'year') {
+                const numValue = parseInt(valueToSet);
+                if (isNaN(numValue) || numValue < 1900 || numValue > 2100) {
+                    showCustomAlert("El 'Año' debe ser un número de 4 dígitos válido.");
+                    renderSeasonTable();
+                    return;
+                }
+                seasons[seasonName]._meta[field] = numValue;
+            } else {
+                seasons[seasonName]._meta[field] = valueToSet;
+            }
+            
+            localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+            populateSeasonSelector();
+            renderSeasonTable();
+            renderSummaryTable();
+
+            if (document.getElementById('seasonSelector').value === seasonName && field === 'name') {
+                document.getElementById('currentSeasonName').textContent = valueToSet;
+            }
+        }
+
+        /**
+         * Descarga los datos de la temporada actualmente seleccionada como un archivo JSON.
+         */
+        function downloadJSON() {
+            const seasonName = document.getElementById('seasonSelector').value;
+            if (seasonName === "Selecciona una temporada" || !seasonName || !seasons[seasonName]) {
+                showCustomAlert("Por favor, selecciona una temporada válida para descargar.");
+                return;
+            }
+
+            const dataToDownload = seasons[seasonName]; 
+            const json = JSON.stringify(dataToDownload, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${seasonName}_ranking_y_meta.json`; 
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        /**
+         * Restablece todos los datos de la aplicación (temporadas y equipos únicos).
+         */
+        function resetAllData() {
+            showCustomConfirm("¿Estás seguro de que quieres restablecer TODOS los datos de la Liga Máxima? Se eliminarán todas las temporadas y equipos. Esta acción no se puede deshacer.", () => {
+                localStorage.removeItem('liga_maxima_seasons');
+                localStorage.removeItem('liga_maxima_teams');
+                seasons = {};
+                teamsDatabase = {};
+
+                populateSeasonSelector();
+                populateTeamSelectors(); // También limpiar y rellenar el selector de equipos
+                populateMergeTeamSelectorsGlobal(); // Limpiar y rellenar los selectores de fusión
+                renderSeasonTable();
+                renderUniqueTeamsTable(); // Limpiar y rellenar la tabla de equipos
+                renderSummaryTable();
+
+                document.getElementById('seasonSelector').value = "Selecciona una temporada";
+                document.getElementById('currentSeasonName').textContent = "Temporada Actual";
+                updateTable();
+                showCustomAlert("Todos los datos han sido restablecidos.");
+            });
+        }
+
+        /**
+         * Duplica una temporada existente creando una nueva.
+         * Los equipos en la nueva temporada mantendrán sus IDs únicos.
+         */
+        function duplicateSeasonFromTool() {
+            const sourceSeasonName = document.getElementById('sourceSeasonToDuplicate').value;
+            const newSeasonNameInput = document.getElementById('newDuplicateSeasonName');
+            const newSeasonName = newSeasonNameInput.value.trim();
+
+            if (!sourceSeasonName) {
+                showCustomAlert("Por favor, selecciona una temporada para copiar.");
+                return;
+            }
+            if (!newSeasonName) {
+                showCustomAlert("Por favor, introduce un nombre para la nueva temporada duplicada.");
+                return;
+            }
+            if (seasons[newSeasonName]) {
+                showCustomAlert(`La temporada "${newSeasonName}" ya existe. Por favor, elige un nombre diferente.`);
+                return;
+            }
+            if (!seasons[sourceSeasonName]) {
+                showCustomAlert("La temporada de origen seleccionada no existe.");
+                return;
+            }
+
+            // Realizar una copia profunda de la temporada de origen
+            // Importante: Los equipos de la nueva temporada referencian los MISMOS IDs de teamsDatabase
+            const sourceSeasonData = JSON.parse(JSON.stringify(seasons[sourceSeasonName]));
+
+            // Crear la nueva temporada
+            seasons[newSeasonName] = {
+                teams: sourceSeasonData.teams.map(team => ({
+                    id: team.id,
+                    name: teamsDatabase[team.id] ? teamsDatabase[team.id].name : team.name, // Usar nombre actual de teamsDatabase si existe
+                    tag: teamsDatabase[team.id] ? teamsDatabase[team.id].tag : team.tag,   // Usar tag actual de teamsDatabase si existe
+                    position: team.position,
+                    points: team.points
+                })),
+                _meta: {
+                    name: newSeasonName,
+                    totalParticipants: sourceSeasonData._meta.totalParticipants || 0,
+                    month: sourceSeasonData._meta.month || 0,
+                    year: sourceSeasonData._meta.year || 0
+                }
+            };
+            
+            if (sourceSeasonData._meta && sourceSeasonData._meta.name) {
+                 seasons[newSeasonName]._meta.name = `${sourceSeasonData._meta.name} (Copia)`;
+            }
+
+            localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+
+            newSeasonNameInput.value = '';
+            document.getElementById('sourceSeasonToDuplicate').value = "";
+
+            populateSeasonSelector();
+            renderSeasonTable();
+            renderSummaryTable();
+
+            showCustomAlert(`Temporada "${sourceSeasonName}" duplicada como "${newSeasonName}" exitosamente.`);
+
+            document.getElementById('seasonSelector').value = newSeasonName;
+            switchSeason();
+        }
+
+        /**
+         * Fusiona dos equipos únicos a nivel global. Todos los registros del equipo "Fuente"
+         * en todas las temporadas se reasignarán al equipo "Destino".
+         */
+        function mergeTeamsGlobal() {
+            const sourceTeamId = document.getElementById('teamToMergeSourceGlobal').value;
+            const destinationTeamId = document.getElementById('teamToMergeDestinationGlobal').value;
+
+            if (!sourceTeamId || !destinationTeamId) {
+                showCustomAlert("Por favor, selecciona ambos equipos (Fuente y Destino) para fusionar.");
+                return;
+            }
+            if (sourceTeamId === destinationTeamId) {
+                showCustomAlert("No puedes fusionar un equipo consigo mismo. Selecciona dos equipos diferentes.");
+                return;
+            }
+
+            const sourceTeam = teamsDatabase[sourceTeamId];
+            const destinationTeam = teamsDatabase[destinationTeamId];
+
+            if (!sourceTeam || !destinationTeam) {
+                showCustomAlert("Uno o ambos equipos seleccionados no son válidos.");
+                return;
+            }
+
+            showCustomConfirm(`¿Estás seguro de que quieres fusionar "${sourceTeam.name} (${sourceTeam.tag})" en "${destinationTeam.name} (${destinationTeam.tag})"?\n\nTodos los registros de ${sourceTeam.name} se reasignarán a ${destinationTeam.name} y ${sourceTeam.name} será ELIMINADO PERMANENTEMENTE. Esta acción no se puede deshacer.`, () => {
+                let seasonsModified = false;
+
+                // 1. Recorrer todas las temporadas y reemplazar el ID del equipo fuente por el ID del equipo destino
+                for (const seasonKey in seasons) {
+                    if (seasons.hasOwnProperty(seasonKey) && seasons[seasonKey].teams) {
+                        // Usar filter para crear un nuevo array sin duplicados (en caso de que el destino ya estuviera)
+                        const updatedTeamsInSeason = [];
+                        const seenTeamIds = new Set();
+                        
+                        seasons[seasonKey].teams.forEach(teamInSeason => {
+                            let currentTeamId = teamInSeason.id;
+                            if (currentTeamId === sourceTeamId) {
+                                currentTeamId = destinationTeamId; // Redirigir el ID
+                                seasonsModified = true;
+                            }
+
+                            if (!seenTeamIds.has(currentTeamId)) {
+                                updatedTeamsInSeason.push({
+                                    id: currentTeamId,
+                                    name: teamsDatabase[currentTeamId].name, // Asegurar nombre del equipo destino
+                                    tag: teamsDatabase[currentTeamId].tag,   // Asegurar tag del equipo destino
+                                    position: teamInSeason.position,
+                                    points: parseFloat(teamInSeason.points) || 0 // Asegurar que los puntos son numéricos
+                                });
+                                seenTeamIds.add(currentTeamId);
+                            } else {
+                                seasonsModified = true; // Un duplicado fue removido
+                            }
+                        });
+                        
+                        if (seasonsModified || updatedTeamsInSeason.length !== seasons[seasonKey].teams.length) {
+                             seasons[seasonKey].teams = updatedTeamsInSeason;
+                             seasonsModified = true;
+                        }
+                    }
+                }
+
+                // 2. Eliminar el equipo fuente de teamsDatabase
+                delete teamsDatabase[sourceTeamId];
+
+                // 3. Guardar todos los cambios
+                if (seasonsModified) {
+                    localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+                }
+                localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+
+                // 4. Actualizar la UI
+                populateSeasonSelector(); 
+                populateTeamSelectors(); 
+                renderUniqueTeamsTable(); 
+                updateTable(); 
+                renderSummaryTable(); 
+
+                // Limpiar los selectores de la herramienta de fusión
+                document.getElementById('teamToMergeSourceGlobal').value = "";
+                document.getElementById('teamToMergeDestinationGlobal').value = "";
+                populateMergeTeamSelectorsGlobal(); 
+
+                showCustomAlert(`Fusión completada: Todos los registros de "${sourceTeam.name} (${sourceTeam.tag})" ahora pertenecen a "${destinationTeam.name} (${destinationTeam.tag})".`);
+            });
+        }
+
+
+        // Funciones para la nueva pestaña "Equipos"
+        /**
+         * Añade un nuevo equipo único a la base de datos de equipos.
+         */
+        function addUniqueTeam() {
+            const nameInput = document.getElementById('newTeamName');
+            const tagInput = document.getElementById('newTeamTag');
+            const name = nameInput.value.trim();
+            const tag = tagInput.value.trim();
+
+            if (!name || !tag) {
+                showCustomAlert("El nombre y el tag del equipo no pueden estar vacíos.");
+                return;
+            }
+
+            // Validar si ya existe un equipo con el mismo nombre o tag
+            const isDuplicate = Object.values(teamsDatabase).some(team => 
+                team.name.toLowerCase() === name.toLowerCase() || 
+                team.tag.toLowerCase() === tag.toLowerCase()
+            );
+
+            if (isDuplicate) {
+                showCustomAlert("Ya existe un equipo con este nombre o tag. Por favor, utiliza valores únicos.");
+                return;
+            }
+
+            const newTeam = {
+                id: crypto.randomUUID(),
+                name: name,
+                tag: tag
+            };
+
+            teamsDatabase[newTeam.id] = newTeam;
+            localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+
+            nameInput.value = '';
+            tagInput.value = '';
+
+            renderUniqueTeamsTable(); // Actualizar la tabla de equipos
+            populateTeamSelectors(); // Actualizar el selector de equipos en la pestaña de Ranking
+            populateMergeTeamSelectorsGlobal(); // Actualizar selectores de fusión
+            showCustomAlert(`Equipo "${name}" creado exitosamente.`);
+        }
+
+        /**
+         * Renderiza la tabla de equipos únicos.
+         */
+        function renderUniqueTeamsTable() {
+            const tbody = document.getElementById('uniqueTeamsTableBody');
+            tbody.innerHTML = '';
+
+            if (Object.keys(teamsDatabase).length === 0) {
+                const row = document.createElement('tr');
+                const td = document.createElement('td');
+                td.colSpan = 3; // Name, Tag, Actions
+                td.textContent = "No hay equipos registrados. Utiliza el formulario superior para crear tu primer equipo.";
+                td.classList.add('text-center', 'py-4');
+                row.appendChild(td);
+                tbody.appendChild(row);
+                return;
+            }
+
+            for (const teamId in teamsDatabase) {
+                if (teamsDatabase.hasOwnProperty(teamId)) {
+                    const team = teamsDatabase[teamId];
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td contenteditable onblur="editUniqueTeam('${team.id}', 'name', this.innerText)">${team.name}</td>
+                        <td contenteditable onblur="editUniqueTeam('${team.id}', 'tag', this.innerText)">${team.tag}</td>
+                        <td>
+                            <button class='btn btn-sm btn-outline-danger' onclick='removeUniqueTeam("${team.id}")'>Eliminar</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            }
+        }
+
+        /**
+         * Edita el nombre o tag de un equipo único y propaga el cambio a todas las temporadas.
+         * @param {string} teamId El ID único del equipo a editar.
+         * @param {string} field El campo a editar ('name' o 'tag').
+         * @param {string} value El nuevo valor.
+         */
+        function editUniqueTeam(teamId, field, value) {
+            if (!teamsDatabase[teamId]) {
+                console.error(`Error: Equipo con ID ${teamId} no encontrado para edición.`);
+                renderUniqueTeamsTable();
+                return;
+            }
+
+            const trimmedValue = value.trim();
+            if (!trimmedValue) {
+                showCustomAlert(`El campo '${field}' no puede estar vacío.`);
+                renderUniqueTeamsTable();
+                return;
+            }
+
+            // Validar duplicados en teamsDatabase (excluyendo el propio equipo que se edita)
+            const isDuplicate = Object.values(teamsDatabase).some(team => 
+                team.id !== teamId && (
+                    (field === 'name' && team.name.toLowerCase() === trimmedValue.toLowerCase()) || 
+                    (field === 'tag' && team.tag.toLowerCase() === trimmedValue.toLowerCase())
+                )
+            );
+
+            if (isDuplicate) {
+                showCustomAlert(`El ${field} "${trimmedValue}" ya está en uso por otro equipo.`);
+                renderUniqueTeamsTable();
+                return;
+            }
+
+            teamsDatabase[teamId][field] = trimmedValue;
+            localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+
+            // Propagar el cambio a todas las instancias de este equipo en todas las temporadas
+            let seasonsModified = false;
+            for (const sKey in seasons) {
+                if (seasons.hasOwnProperty(sKey) && seasons[sKey].teams) {
+                    const teamInSeason = seasons[sKey].teams.find(t => t.id === teamId);
+                    if (teamInSeason) {
+                        teamInSeason[field] = trimmedValue;
+                        seasonsModified = true;
+                    }
+                }
+            }
+            if (seasonsModified) {
+                localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+            }
+
+            renderUniqueTeamsTable(); // Actualizar la tabla de equipos
+            populateTeamSelectors();   // Actualizar selectores
+            populateMergeTeamSelectorsGlobal(); // Actualizar selectores de fusión
+            updateTable();             // Actualizar la tabla de ranking actual
+            renderSummaryTable();      // Actualizar la tabla de resumen
+        }
+
+        /**
+         * Elimina un equipo único y lo remueve de todas las temporadas donde aparece.
+         * Requiere confirmación.
+         * @param {string} teamId El ID único del equipo a eliminar.
+         */
+        function removeUniqueTeam(teamId) {
+            if (!teamsDatabase[teamId]) {
+                console.error(`Error: Equipo con ID ${teamId} no encontrado para eliminar.`);
+                return;
+            }
+
+            const teamName = teamsDatabase[teamId].name;
+
+            showCustomConfirm(`¿Estás seguro de que quieres eliminar al equipo "${teamName}" de forma permanente? Esto lo eliminará de tu lista de equipos y de TODAS las temporadas donde haya participado. Esta acción no se puede deshacer.`, () => {
+                delete teamsDatabase[teamId];
+                localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+
+                // Eliminar todas las instancias de este equipo en todas las temporadas
+                let seasonsModified = false;
+                for (const sKey in seasons) {
+                    if (seasons.hasOwnProperty(sKey) && seasons[sKey].teams) {
+                        const initialLength = seasons[sKey].teams.length;
+                        seasons[sKey].teams = seasons[sKey].teams.filter(t => t.id !== teamId);
+                        if (seasons[sKey].teams.length < initialLength) {
+                            seasonsModified = true;
+                        }
+                    }
+                }
+                if (seasonsModified) {
+                    localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+                }
+
+                renderUniqueTeamsTable();
+                populateTeamSelectors();
+                populateMergeTeamSelectorsGlobal();
+                updateTable(); // Actualizar la tabla de ranking actual (si el equipo estaba en ella)
+                renderSummaryTable();
+                showCustomAlert(`Equipo "${teamName}" eliminado permanentemente.`);
+            });
+        }
+
+
+        /**
+         * Renderiza la tabla de resumen de puntos por equipo y temporada.
+         * Las columnas de temporada se ordenan cronológicamente.
+         */
+        function renderSummaryTable() {
+            const headerRow = document.getElementById('summaryTableHeader');
+            const tbody = document.getElementById('summaryTableBody');
+            headerRow.innerHTML = '';
+            tbody.innerHTML = '';
+
+            if (Object.keys(teamsDatabase).length === 0) {
+                const row = document.createElement('tr');
+                const td = document.createElement('td');
+                td.colSpan = 10; // Un número suficientemente grande para abarcar todas las columnas posibles
+                td.textContent = "No hay equipos registrados. Añade equipos en la pestaña 'Equipos'.";
+                td.classList.add('text-center', 'py-4');
+                row.appendChild(td);
+                tbody.appendChild(row);
+                return;
+            }
+
+            const allTeamPoints = new Map(); // Map<teamId, Map<seasonKey, points>>
+            const seasonColumns = [];        // Array<{key: string, name: string, month: number, year: number}>
+
+            // 1. Recopilar datos de todas las temporadas
+            for (const seasonKey in seasons) {
+                if (seasons.hasOwnProperty(seasonKey)) {
+                    const season = seasons[seasonKey];
+                    const meta = season._meta;
+
+                    const month = parseInt(meta.month);
+                    const year = parseInt(meta.year);
+
+                    // Solo incluir columnas de temporada si tienen mes y año válidos para la ordenación
+                    if (!isNaN(month) && month >= 1 && month <= 12 && !isNaN(year)) {
+                        seasonColumns.push({
+                            key: seasonKey,
+                            name: meta.name || seasonKey,
+                            month: month,
+                            year: year
+                        });
+                    }
+
+                    // Recopilar puntos de equipos para esta temporada
+                    if (season.teams) {
+                        season.teams.forEach(teamInSeason => {
+                            // Asegurarse de que los puntos sean números al recopilarlos para el resumen
+                            const currentPoints = parseFloat(teamInSeason.points) || 0; 
+                            if (!allTeamPoints.has(teamInSeason.id)) {
+                                allTeamPoints.set(teamInSeason.id, new Map());
+                            }
+                            allTeamPoints.get(teamInSeason.id).set(seasonKey, currentPoints);
+                        });
+                    }
+                }
+            }
+
+            // 2. Ordenar las columnas de temporada cronológicamente
+            seasonColumns.sort((a, b) => {
+                if (a.year !== b.year) {
+                    return a.year - b.year;
+                }
+                return a.month - b.month;
+            });
+
+            // 3. Construir el encabezado de la tabla
+            const thEquipo = document.createElement('th');
+            thEquipo.textContent = 'Equipo';
+            headerRow.appendChild(thEquipo);
+
+            seasonColumns.forEach(col => {
+                const th = document.createElement('th');
+                th.textContent = `${monthNames[col.month - 1]} ${col.year}`;
+                th.setAttribute('title', col.name); // Muestra el nombre completo de la temporada al pasar el mouse
+                headerRow.appendChild(th);
+            });
+
+            const thTotal = document.createElement('th');
+            thTotal.textContent = 'Total Puntos';
+            headerRow.appendChild(thTotal);
+
+            // 4. Construir el cuerpo de la tabla
+            for (const teamId in teamsDatabase) { // Iterar sobre teamsDatabase para obtener todos los equipos únicos
+                if (teamsDatabase.hasOwnProperty(teamId)) {
+                    const teamInfo = teamsDatabase[teamId]; // Obtener el nombre/tag actual del equipo único
+                    const row = document.createElement('tr');
+                    const tdTeam = document.createElement('td');
+                    tdTeam.textContent = `${teamInfo.name} (${teamInfo.tag})`;
+                    row.appendChild(tdTeam);
+
+                    let totalPointsForTeam = 0;
+                    const teamPointsInSeasons = allTeamPoints.get(teamId) || new Map(); // Puntos del equipo por temporada
+
+                    seasonColumns.forEach(col => {
+                        const tdPoints = document.createElement('td');
+                        // Obtener los puntos de la temporada específica, ya deberían ser números
+                        const points = teamPointsInSeasons.has(col.key) ? teamPointsInSeasons.get(col.key) : 'N/A';
+                        
+                        tdPoints.textContent = points; // Mostrar 'N/A' o el número
+                        row.appendChild(tdPoints);
+                        
+                        // Sumar al total solo si es un número (debería serlo si la migración y la adición funcionan bien)
+                        if (typeof points === 'number') {
+                            totalPointsForTeam += points;
+                        }
+                    });
+
+                    const tdTotalPoints = document.createElement('td');
+                    tdTotalPoints.textContent = totalPointsForTeam;
+                    tdTotalPoints.classList.add('total-points-column'); // Añadir clase para estilo
+                    row.appendChild(tdTotalPoints);
+
+                    tbody.appendChild(row);
+                }
+            }
+        }
+
+        /**
+         * Descarga la tabla de resumen de puntos como un archivo CSV.
+         */
+        function downloadSummaryCSV() {
+            const table = document.getElementById('summaryTable');
+            let csv = [];
+            
+            // Obtener encabezados
+            const headers = Array.from(table.querySelectorAll('thead th')).map(th => `"${th.textContent.trim()}"`);
+            csv.push(headers.join(','));
+
+            // Obtener filas de datos
+            table.querySelectorAll('tbody tr').forEach(row => {
+                const rowData = Array.from(row.querySelectorAll('td')).map(td => {
+                    let text = td.textContent.trim();
+                    // Escapar comillas dobles y encerrar en comillas si contiene comas o comillas
+                    if (text.includes(',') || text.includes('"')) {
+                        text = `"${text.replace(/"/g, '""')}"`;
+                    }
+                    return text;
+                });
+                csv.push(rowData.join(','));
+            });
+
+            const csvString = csv.join('\n');
+            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'resumen_puntos_liga_maxima.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showCustomAlert("Resumen descargado como 'resumen_puntos_liga_maxima.csv'");
+        }
+
+        /**
+         * Maneja la importación de un archivo JSON que contiene datos de temporadas y equipos.
+         */
+        function handleImportJSON() {
+            const fileInput = document.getElementById('importJsonFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                showCustomAlert("Por favor, selecciona un archivo JSON para importar.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    const importedData = JSON.parse(event.target.result);
+
+                    if (importedData.seasons && importedData.teamsDatabase) {
+                        showCustomConfirm("Se detectaron datos válidos de temporadas y equipos. ¿Estás seguro de que deseas importar estos datos? Esto SOBRESCRIBIRÁ tus datos actuales con los del archivo.", () => {
+                            // Reemplazar los datos globales
+                            seasons = importedData.seasons;
+                            teamsDatabase = importedData.teamsDatabase;
+
+                            // Guardar los nuevos datos en localStorage
+                            localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+                            localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+
+                            // Refrescar toda la UI
+                            populateSeasonSelector();
+                            populateTeamSelectors();
+                            populateMergeTeamSelectorsGlobal();
+                            renderSeasonTable();
+                            renderUniqueTeamsTable();
+                            renderSummaryTable();
+                            
+                            // Seleccionar la primera temporada si hay alguna después de la importación
+                            const seasonKeys = Object.keys(seasons);
+                            if (seasonKeys.length > 0) {
+                                document.getElementById('seasonSelector').value = seasonKeys[0];
+                                switchSeason();
+                            } else {
+                                document.getElementById('seasonSelector').value = "Selecciona una temporada";
+                                document.getElementById('currentSeasonName').textContent = "Temporada Actual";
+                                updateTable();
+                            }
+                            showCustomAlert("¡Datos importados exitosamente!");
+                        });
+                    } else {
+                        showCustomAlert("El archivo JSON no tiene la estructura esperada (debe contener 'seasons' y 'teamsDatabase').");
+                    }
+                } catch (e) {
+                    showCustomAlert("Error al leer o parsear el archivo JSON. Asegúrate de que sea un JSON válido.");
+                    console.error("Error al importar JSON:", e);
+                } finally {
+                    fileInput.value = ''; // Limpiar el input de archivo
+                }
+            };
+            reader.readAsText(file);
+        }
+
+
+        // Evento que se dispara cuando el DOM está completamente cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            let dataChangedInSeasons = false;
+            let dataChangedInTeams = false;
+
+            // 1. Migración y aseguramiento de la estructura de `seasons`
+            // También poblar `teamsDatabase` desde `seasons` si hay datos antiguos.
+            for (const seasonKey in seasons) {
+                if (Object.hasOwnProperty.call(seasons, seasonKey)) {
+                    // Convertir estructura antigua de temporada (array directo) a nueva (objeto con teams y _meta)
+                    if (Array.isArray(seasons[seasonKey])) {
+                        seasons[seasonKey] = {
+                            teams: seasons[seasonKey],
+                            _meta: { name: seasonKey, totalParticipants: 0, month: 0, year: 0 }
+                        };
+                        dataChangedInSeasons = true;
+                    }
+                    // Asegurar que _meta existe
+                    if (!seasons[seasonKey]._meta) {
+                        seasons[seasonKey]._meta = { name: seasonKey, totalParticipants: 0, month: 0, year: 0 };
+                        dataChangedInSeasons = true;
+                    }
+                    // Asegurar que 'teams' array existe
+                    if (!seasons[seasonKey].teams) {
+                        seasons[seasonKey].teams = [];
+                        dataChangedInSeasons = true;
+                    }
+                    // Asegurar que totalParticipants existe en _meta
+                    if (seasons[seasonKey]._meta.totalParticipants === undefined) {
+                        seasons[seasonKey]._meta.totalParticipants = 0;
+                        dataChangedInSeasons = true;
+                    }
+                    // Asegurar que month y year existen y son numéricos en _meta (migración de string a number)
+                    ['month', 'year'].forEach(prop => {
+                        if (typeof seasons[seasonKey]._meta[prop] === 'string') {
+                            seasons[seasonKey]._meta[prop] = parseInt(seasons[seasonKey]._meta[prop]) || 0;
+                            dataChangedInSeasons = true;
+                        }
+                        if (seasons[seasonKey]._meta[prop] === undefined) {
+                            seasons[seasonKey]._meta[prop] = 0;
+                            dataChangedInSeasons = true;
+                        }
+                    });
+
+                    // 2. Poblar teamsDatabase y asignar IDs a equipos existentes en temporadas
+                    seasons[seasonKey].teams.forEach(teamInSeason => {
+                        if (!teamInSeason.id) {
+                            teamInSeason.id = crypto.randomUUID();
+                            dataChangedInSeasons = true;
+                        }
+                        // Asegurarse de que los puntos sean números
+                        if (typeof teamInSeason.points === 'string' || isNaN(teamInSeason.points)) { 
+                            teamInSeason.points = parseFloat(teamInSeason.points) || 0; 
+                            dataChangedInSeasons = true;
+                        }
+
+                        // Si el equipo no está en teamsDatabase, o si el nombre/tag es más reciente, agregarlo/actualizarlo
+                        if (!teamsDatabase[teamInSeason.id] || 
+                            teamsDatabase[teamInSeason.id].name !== teamInSeason.name ||
+                            teamsDatabase[teamInSeason.id].tag !== teamInSeason.tag) 
+                        {
+                            teamsDatabase[teamInSeason.id] = {
+                                id: teamInSeason.id,
+                                name: teamInSeason.name,
+                                tag: teamInSeason.tag
+                            };
+                            dataChangedInTeams = true;
+                        }
+                    });
+                }
+            }
+
+            // Guardar datos migrados si hubo cambios
+            if (dataChangedInSeasons) {
+                localStorage.setItem('liga_maxima_seasons', JSON.stringify(seasons));
+            }
+            if (dataChangedInTeams) {
+                localStorage.setItem('liga_maxima_teams', JSON.stringify(teamsDatabase));
+            }
+
+
+            // Call all population/render functions here
+            populateSeasonSelector();
+            populateTeamSelectors();
+            populateMergeTeamSelectorsGlobal();
+            renderSeasonTable();
+            renderUniqueTeamsTable();
+            renderSummaryTable(); // Ensure this is called after teamsDatabase is potentially populated
+
+            // Si hay temporadas, seleccionar automáticamente la primera
+            const seasonKeys = Object.keys(seasons);
+            if (seasonKeys.length > 0) {
+                document.getElementById('seasonSelector').value = seasonKeys[0];
+                switchSeason();
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
