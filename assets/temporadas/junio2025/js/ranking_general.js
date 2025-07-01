@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const datosPartidosSimulados16avos = [
             { resultado: 'ROUND 1', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
             { resultado: 'ROUND 2', stream: true, fecha: '0-2', hora: 'FINALIZADO' },
-            { resultado: 'ROUND 3', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
+            { resultado: 'ROUND 3', stream: true, fecha: '2-1', hora: 'FINALIZADO' },
             { resultado: 'ROUND 4', stream: true, fecha: '1-2', hora: 'FINALIZADO' },
             { resultado: 'ROUND 5', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
             { resultado: 'ROUND 6', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
@@ -414,9 +414,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         const datosPartidosSimuladosCuartos = [
             { resultado: 'QF 1', stream: true, fecha: '2-0', hora: 'FINALIZADO' },
-            { resultado: 'QF 2', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:00' },
-            { resultado: 'QF 3', stream: true, fecha: 'MIÉ 25 JUN', hora: '21:50' },
-            { resultado: 'QF 4', stream: true, fecha: 'MIÉ 25 JUN', hora: '22:30' }
+            { resultado: 'QF 2', stream: true, fecha: '2-1', hora: 'FINALIZADO' },
+            { resultado: 'QF 3', stream: true, fecha: '0-2', hora: 'FINALIZADO' },
+            { resultado: 'QF 4', stream: true, fecha: '0-2', hora: 'FINALIZADO' }
         ];
 
         // Los índices de cruce SIEMPRE son los mismos, lo que cambia es quiénes son los participantes en esas posiciones
@@ -485,8 +485,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         const datosPartidosSimuladosSF = [
-            { resultado: 'SEMIFINAL 1', stream: true, fecha: 'JUE 26 JUN', hora: '21:00' },
-            { resultado: 'SEMIFINAL 2', stream: true, fecha: 'JUE 26 JUN', hora: '21:50' }
+            { resultado: 'SEMIFINAL 1', stream: true, fecha: '1-2', hora: 'FINALIZADO' },
+            { resultado: 'SEMIFINAL 2', stream: true, fecha: '2-1', hora: 'FINALIZADO' }
         ];
 
         const crucesSFIndices = [
@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             mensajesAdvertencia.push(`Advertencia: Se necesitan 2 participantes de Semifinales para generar la final. Se encontraron ${participantesFinalReales.length}.`);
         }
 
-        const datosPartidoSimuladoFinal = { resultado: 'LLAVE 15', stream: true, fecha: 'JUE 26 JUN', hora: '22:30' };
+        const datosPartidoSimuladoFinal = { resultado: 'LLAVE 15', stream: true, fecha: '0-2', hora: 'FINALIZADO' };
 
         const equipo1 = participantesFinalReales[0];
         const equipo2 = participantesFinalReales[1];

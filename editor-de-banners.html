@@ -1,0 +1,316 @@
+---
+layout:
+permalink: /editor-de-banners.html
+title: BANNERS
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editor de Banners Dinámicos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: #1a1a2e;
+            color: #f0f0f0;
+            padding: 2rem;
+        }
+
+        .hero-banner {
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            min-height: 250px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            z-index: 0;
+        }
+
+        .hero-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .expira-pronto-badge {
+            background-color: #ffc107;
+            color: #000;
+            font-size: 0.9rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            margin-right: 0.5rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        textarea {
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-4">Editor de Banners Dinámicos</h1>
+
+        <div class="container mb-4">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bannerModal">
+                <i class="bi bi-plus-circle"></i> Crear nuevo banner
+            </button>
+        </div>
+
+        <div class="modal fade" id="bannerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Crear/Editar Banner</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="bannerForm" class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Título</label>
+                                <input type="text" class="form-control" id="titulo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Imagen de fondo (URL)</label>
+                                <input type="text" class="form-control" id="imagen" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcion" rows="2" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Texto del botón</label>
+                                <input type="text" class="form-control" id="botonTexto">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">URL del botón</label>
+                                <input type="text" class="form-control" id="botonURL">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Fecha límite</label>
+                                <input type="date" class="form-control" id="fechaLimite">
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="activo" checked>
+                                    <label class="form-check-label">Activo</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success" form="bannerForm">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Tabs para navegación -->
+        <div class="container mb-4">
+            <ul class="nav nav-tabs" id="bannerTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tab-activos" href="#"
+                        onclick="event.preventDefault(); mostrarBanners(true)">Activos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab-inactivos" href="#"
+                        onclick="event.preventDefault(); mostrarBanners(false)">Inactivos</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" id="container-activos"></div>
+        <div class="row d-none" id="container-inactivos"></div>
+
+
+        <div class="mt-4">
+            <button class="btn btn-primary" onclick="exportarJSON()">Exportar JSON</button>
+            <textarea id="outputJSON" class="form-control mt-2" rows="8" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("bannerForm");
+            const outputJSON = document.getElementById("outputJSON");
+            const modal = new bootstrap.Modal(document.getElementById('bannerModal'));
+            let editandoIndex = null;
+
+            function calcularDiasRestantes(fecha) {
+                if (!fecha) return null;
+                const hoy = new Date();
+                const limite = new Date(fecha);
+                const diff = Math.ceil((limite - hoy) / (1000 * 60 * 60 * 24));
+                return diff;
+            }
+
+            function detectarIcono(url) {
+                if (!url) return null;
+                if (url.includes("twitch.tv")) return "bi-twitch";
+                if (url.includes("youtube.com") || url.includes("youtu.be")) return "bi-youtube";
+                return null;
+            }
+
+            function mostrarBanners(activos = true) {
+                const contActivos = document.getElementById("container-activos");
+                const contInactivos = document.getElementById("container-inactivos");
+
+                // alternar pestañas activas
+                document.getElementById("tab-activos").classList.remove("active");
+                document.getElementById("tab-inactivos").classList.remove("active");
+                document.getElementById(activos ? "tab-activos" : "tab-inactivos").classList.add("active");
+
+                // alternar visibilidad de contenedores
+                contActivos.classList.toggle("d-none", !activos);
+                contInactivos.classList.toggle("d-none", activos);
+
+                const banners = JSON.parse(localStorage.getItem("banners") || "[]");
+
+                contActivos.innerHTML = "";
+                contInactivos.innerHTML = "";
+
+                banners.forEach((item, index) => {
+                    const dias = calcularDiasRestantes(item.fechaLimite);
+                    const estaPorExpirar = dias !== null && dias >= 0 && dias <= 3;
+                    const badge = estaPorExpirar && item.activo ? `<span class='expira-pronto-badge'>¡Últimos ${dias} días!</span>` : "";
+                    const icon = detectarIcono(item.boton?.url);
+
+                    const bannerHTML = `
+      <div class="col-md-6">
+        <div class="hero-banner mb-4" style="background-image: url('${item.imagen}')">
+          <div class="hero-banner-content">
+            <h5>${badge}${item.titulo}</h5>
+            <p>${item.descripcion}</p>
+            ${item.boton?.url ? `
+              <a class="btn btn-dark" href="${item.boton.url}" target="_blank">
+                ${icon ? `<i class='bi ${icon}'></i>` : ""} ${item.boton.texto}
+              </a>` : ""}
+            <div class="mt-2">
+              <button class="btn btn-sm btn-warning me-2" onclick="editarBanner(${index})">Editar</button>
+              <button class="btn btn-sm btn-${item.activo ? 'secondary' : 'success'}" onclick="${item.activo ? `desactivarBanner(${index})` : `activarBanner(${index})`}">
+                ${item.activo ? 'Desactivar' : 'Reactivar'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+                    if (item.activo) {
+                        contActivos.innerHTML += bannerHTML;
+                    } else {
+                        contInactivos.innerHTML += bannerHTML;
+                    }
+                });
+            }
+
+
+            function editarBanner(index) {
+                const banners = JSON.parse(localStorage.getItem("banners") || "[]");
+                const item = banners[index];
+                document.getElementById("titulo").value = item.titulo;
+                document.getElementById("descripcion").value = item.descripcion;
+                document.getElementById("imagen").value = item.imagen;
+                document.getElementById("botonTexto").value = item.boton?.texto || "";
+                document.getElementById("botonURL").value = item.boton?.url || "";
+                document.getElementById("fechaLimite").value = item.fechaLimite || "";
+                document.getElementById("activo").checked = item.activo;
+                editandoIndex = index;
+                modal.show();
+            }
+
+            function desactivarBanner(index) {
+                const banners = JSON.parse(localStorage.getItem("banners") || "[]");
+                banners[index].activo = false;
+                localStorage.setItem("banners", JSON.stringify(banners));
+                mostrarBanners(true);
+            }
+
+            function activarBanner(index) {
+                const banners = JSON.parse(localStorage.getItem("banners") || "[]");
+                banners[index].activo = true;
+                localStorage.setItem("banners", JSON.stringify(banners));
+                mostrarBanners(false);
+            }
+
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+
+                const nuevo = {
+                    titulo: document.getElementById("titulo").value,
+                    descripcion: document.getElementById("descripcion").value,
+                    imagen: document.getElementById("imagen").value,
+                    activo: document.getElementById("activo").checked,
+                    fechaLimite: document.getElementById("fechaLimite").value || null,
+                    boton: {
+                        texto: document.getElementById("botonTexto").value,
+                        url: document.getElementById("botonURL").value
+                    }
+                };
+
+                const banners = JSON.parse(localStorage.getItem("banners") || "[]");
+                if (editandoIndex !== null) {
+                    banners[editandoIndex] = nuevo;
+                    editandoIndex = null;
+                } else {
+                    banners.push(nuevo);
+                }
+
+                localStorage.setItem("banners", JSON.stringify(banners));
+                form.reset();
+                modal.hide();
+                mostrarBanners(true);
+            });
+
+            function exportarJSON() {
+                const data = localStorage.getItem("banners") || "[]";
+                const blob = new Blob([data], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "banners.json";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+
+            // Mostrar banners activos por defecto al cargar
+            mostrarBanners(true);
+            window.editarBanner = editarBanner;
+            window.desactivarBanner = desactivarBanner;
+            window.activarBanner = activarBanner;
+            window.mostrarBanners = mostrarBanners;
+            window.exportarJSON = exportarJSON;
+
+        });
+    </script>
+</body>
+
+</html>

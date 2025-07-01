@@ -69,20 +69,20 @@ title: INICIO | NACIÓN UNITE
       </li>
     </ul>
 
-  <ul class="nav flex-column mt-auto sidebar-footer-links d-none d-md-block">
-    <li class="nav-item">
-      <a class="nav-link small" href="/aviso-legal.html">Aviso Legal</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link small" href="/contacto.html">Contacto</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link small" href="/ayuda.html">Ayuda</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link small" href="/creditos.html">Créditos</a>
-    </li>
-  </ul>
+    <ul class="nav flex-column mt-auto sidebar-footer-links d-none d-md-block">
+      <li class="nav-item">
+        <a class="nav-link small" href="/aviso-legal.html">Aviso Legal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link small" href="/contacto.html">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link small" href="/ayuda.html">Ayuda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link small" href="/creditos.html">Créditos</a>
+      </li>
+    </ul>
   </div>
 
   <div class="main-content">
@@ -100,25 +100,19 @@ title: INICIO | NACIÓN UNITE
 
     <div class="central-content-area">
       <div class="main-content-left">
-        <div class="hero-banner" style="background-image: url('/assets/backgrounds/CUMPLEAÑOS.webp');">
-          <div class="hero-banner-content">
-            <div class="game-tags">
-              <span>Noticias</span>
-              <span>Torneos</span>
-              <span>Esports</span>
-            </div>
-            <h2>¡Feliz cumpleaños TEXAS!</h2>
-            <p>Sigue dominando el mapa, controlando el Zapdos y demostrando por qué eres una verdadera leyenda en la
-              arena. Que tu día esté lleno de energía Aeos, tus combos sean perfectos y que ningún equipo rival pueda
-              detenerte. 🕹️⚡</p>
-            <div class="hero-banner-buttons">
-              <a class="btn btn-dark-custom" href="https://www.twitch.tv/texasspecwar" target="_blank">
-                <i class="bi bi-twitch"></i>
-                texasspecwar
-              </a>
-            </div>
+        <div id="hero-slider" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="slider-content">
+            <!-- Slides dinámicas aquí -->
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hero-slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
+
+
         <div class="games-section">
           <h3>Licencias UNITE
             <div class="arrow-buttons">
@@ -183,6 +177,7 @@ title: INICIO | NACIÓN UNITE
     crossorigin="anonymous"></script>
   <script src="/assets/today.js"></script>
   <script src="/assets/js/timer_ins.js"></script>
+  <script src="/assets/js/banners.js"></script>
   {% include g-analytics.html %}
 
 </body>
