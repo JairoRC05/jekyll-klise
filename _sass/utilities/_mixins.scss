@@ -54,7 +54,7 @@
 }
 
 // Botón con transición suave
-@mixin button-transition($hover-bg: #f0f0f0, $hover-color: #000) {
+@mixin button-transition($hover-bg: null, $hover-color: null) {
   transition: background-color 0.3s ease, transform 0.3s ease;
   &:hover {
     background-color: $hover-bg;
@@ -63,7 +63,6 @@
   }
 }
 
-// _mixins.scss
 @mixin hover-raise-effect($hover-bg: null) {
   transition: background-color 0.3s ease, transform 0.3s ease;
 

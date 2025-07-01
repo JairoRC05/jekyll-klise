@@ -21,19 +21,30 @@
     z-index: 0;
   }
 
+  @include respond-to(sm) {
+    height: 280px;
+    padding: 1.5rem;
+  }
+
   .hero-banner-content {
     position: relative;
     z-index: 1;
     color: #fff;
     max-width: 80%;
 
-    .game-tags span {
-      background-color: rgba(0, 0, 0, 0.407);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-right: 0.5rem;
-      font-weight: 600;
+    .game-tags {
+      span {
+        background-color: rgba(0, 0, 0, 0.407);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
+        font-weight: 600;
+
+        @include respond-to(sm) {
+        font-size: 0.7rem;
+      }
+      }
     }
 
     h2 {
@@ -41,49 +52,23 @@
       font-weight: 700;
       margin: 1rem 0 0.5rem;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+      @include respond-to(sm) {
+        font-size: 2rem;
+      }
+
     }
 
     p {
       font-size: 1.1rem;
       color: #c0c0c0;
       margin-bottom: 1.5rem;
-    }
-  }
 
-  .hero-banner-buttons {
-    .btn {
-      padding: 0.8rem 1.8rem;
-      font-weight: 600;
-      border-radius: 50px;
-      font-size: 1.05rem;
-      margin-right: 1rem;
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: translateY(-3px);
+      @include respond-to(sm) {
+        display: none;
       }
     }
   }
-
-
-  @include respond-to(xxl) {
-
-    .hero-banner-content {
-      max-width: 80%;
-    }
-  }
-
-
-  @include respond-to(lg) {
-
-    .hero-banner-content {
-      h2 {
-        font-size: 3rem !important;
-      }
-    }
-
-  }
-
 
 }
 
@@ -93,48 +78,29 @@
 
 
 
-@media (max-width: 992px) {
-  .hero-banner {
-    height: 350px;
+// @media (max-width: 992px) {
+//   .hero-banner {
+//     height: 350px;
 
-    .hero-banner-content {
-      max-width: 90%;
-      text-align: center;
+//     .hero-banner-content {
+//       max-width: 90%;
+//       text-align: center;
 
-      h2 {
-        font-size: 2.5rem;
-      }
 
-      p {
-        font-size: 1rem;
-      }
-    }
 
-    .hero-banner-buttons {
-      flex-direction: column;
-      gap: 0.8rem;
+//       p {
+//         font-size: 1rem;
+//       }
+//     }
 
-      .btn {
-        margin-right: 0;
-        width: 100%;
-      }
-    }
-  }
-}
+//     .hero-banner-buttons {
+//       flex-direction: column;
+//       gap: 0.8rem;
 
-@media (max-width: 576px) {
-  .hero-banner {
-    height: 280px;
-    padding: 1.5rem;
-
-    .hero-banner-content {
-      h2 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-    }
-  }
-}
+//       .btn {
+//         margin-right: 0;
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

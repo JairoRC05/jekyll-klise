@@ -10,10 +10,6 @@
 }
 
 
-
-
-
-// Placeholder común
 %btn-base {
   border: none;
   padding: 0.8rem 2rem;
@@ -30,36 +26,9 @@
 }
 
 
-.btn-primary-custom {
-  background-color: $primary-color;
-  border-color: $primary-color;
-
-  &:hover {
-    background-color: $primary-hover;
-    border-color: $primary-hover;
-  }
-}
-
-// Botón Blanco con texto violeta
-.btn-light-custom {
-  @extend %btn-base;
-  background-color: #fff;
-  color: #8a2be2;
-}
-
-// Botón Oscuro
 .btn-dark-custom {
   @extend %btn-base;
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.407);
   color: #fff;
-  @include hover-raise-effect(#333); // fondo más claro al hacer hover
-}
-
-// Botón Violeta con borde blanco (outline)
-.btn-outline-custom {
-  @extend %btn-base;
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  @include hover-raise-effect(rgba(255, 255, 255, 0.1));
+  @include button-transition(#2a015d, #fff);
 }
