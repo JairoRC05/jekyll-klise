@@ -1,0 +1,65 @@
+// Buttons styles converted to SASS
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+}
+
+
+
+
+
+// Placeholder común
+%btn-base {
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  @include hover-raise-effect(#f0f0f0);
+}
+
+// Botón Amarillo (Warning)
+.btn-warning-custom {
+  @extend %btn-base;
+  background-color: #ffd30e;
+  color: #000000;
+}
+
+
+.btn-primary-custom {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+  }
+}
+
+// Botón Blanco con texto violeta
+.btn-light-custom {
+  @extend %btn-base;
+  background-color: #fff;
+  color: #8a2be2;
+}
+
+// Botón Oscuro
+.btn-dark-custom {
+  @extend %btn-base;
+  background-color: #222;
+  color: #fff;
+  @include hover-raise-effect(#333); // fondo más claro al hacer hover
+}
+
+// Botón Violeta con borde blanco (outline)
+.btn-outline-custom {
+  @extend %btn-base;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  @include hover-raise-effect(rgba(255, 255, 255, 0.1));
+}

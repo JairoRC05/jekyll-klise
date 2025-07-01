@@ -1,0 +1,140 @@
+// Hero banner styles converted to SASS
+.hero-banner {
+  background-image: url('https://placehold.co/1200x500/2a2a4a/e0e0e0?text=Juego+Destacado');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  .hero-banner-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 80%;
+
+    .game-tags span {
+      background-color: rgba(0, 0, 0, 0.407);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 1rem 0 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #c0c0c0;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .hero-banner-buttons {
+    .btn {
+      padding: 0.8rem 1.8rem;
+      font-weight: 600;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      margin-right: 1rem;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+
+  @include respond-to(xxl) {
+
+    .hero-banner-content {
+      max-width: 80%;
+    }
+  }
+
+
+  @include respond-to(lg) {
+
+    .hero-banner-content {
+      h2 {
+        font-size: 3rem !important;
+      }
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .hero-banner {
+    height: 350px;
+
+    .hero-banner-content {
+      max-width: 90%;
+      text-align: center;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .hero-banner-buttons {
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .btn {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 280px;
+    padding: 1.5rem;
+
+    .hero-banner-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

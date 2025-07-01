@@ -1,0 +1,148 @@
+{
+  "rondas": {
+    "1": [
+      {
+        "ronda": "1",
+        "equipoLocal": "FTB",
+        "equipoVisitante": "OBS",
+        "mvpsLocal": [
+          {
+            "nombre": "ZTG・Broken",
+            "equipo": "FTB",
+            "genero": "male1"
+          },
+          {
+            "nombre": "AÐ・Icer",
+            "equipo": "FTB",
+            "genero": "male1"
+          },
+          {
+            "nombre": "Pikinだよ",
+            "equipo": "FTB",
+            "genero": "male1"
+          }
+        ],
+        "mvpsVisitante": [
+          {
+            "nombre": "MeXa・Quique",
+            "equipo": "OBS",
+            "genero": "male1"
+          },
+          {
+            "nombre": "MeXa・SoUriS",
+            "equipo": "OBS",
+            "genero": "male1"
+          },
+          {
+            "nombre": "MeXa・Tony",
+            "equipo": "OBS",
+            "genero": "male1"
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "ronda": "2",
+        "equipoLocal": "CD",
+        "equipoVisitante": "PL",
+        "mvpsLocal": [
+          {
+            "nombre": "ttvNewt_ez",
+            "equipo": "CD",
+            "genero": "male1"
+          },
+          {
+            "nombre": "T-ki",
+            "equipo": "CD",
+            "genero": "male1"
+          },
+          {
+            "nombre": "Jønasシ",
+            "equipo": "CD",
+            "genero": "male1"
+          }
+        ],
+        "mvpsVisitante": [
+          {
+            "nombre": "Vamp_Lut.TTv",
+            "equipo": "PL",
+            "genero": "male1"
+          },
+          {
+            "nombre": "PL • Payan",
+            "equipo": "PL",
+            "genero": "male1"
+          },
+          {
+            "nombre": "PL • Benny",
+            "equipo": "PL",
+            "genero": "male1"
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "ronda": "3",
+        "equipoLocal": "CD",
+        "equipoVisitante": "PL",
+        "mvpsLocal": [
+          {
+            "nombre": "ttvNewt_ez",
+            "equipo": "CD",
+            "genero": "male1"
+          }
+        ],
+        "mvpsVisitante": [
+          {
+            "nombre": "PL • TNMortem",
+            "equipo": "PL",
+            "genero": "male1"
+          }
+        ]
+      }
+    ],
+    "11": [
+      {
+        "ronda": "11",
+        "equipoLocal": "PLAGA",
+        "equipoVisitante": "SM",
+        "mvpsLocal": [
+          {
+            "nombre": "Fersaw",
+            "equipo": "PLAGA",
+            "genero": "male1"
+          },
+          {
+            "nombre": "TexasLuna[:",
+            "equipo": "PLAGA",
+            "genero": "male1"
+          },
+          {
+            "nombre": "DønLux",
+            "equipo": "PLAGA",
+            "genero": "male1"
+          }
+        ],
+        "mvpsVisitante": [
+          {
+            "nombre": "PL• At-Gc",
+            "equipo": "SM",
+            "genero": "male1"
+          },
+          {
+            "nombre": "Psiquicuac",
+            "equipo": "SM",
+            "genero": "male1"
+          },
+          {
+            "nombre": "SuFurrito坐",
+            "equipo": "SM",
+            "genero": "male1"
+          }
+        ]
+      }
+    ]
+  }
+}

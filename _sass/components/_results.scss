@@ -1,0 +1,58 @@
+// Daily results styles converted to SASS
+.daily-results-section {
+  width: 300px;
+  @include glass-effect;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  height: fit-content;
+
+  h5 {
+    color: #000000cf;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.match-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .teams-info {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+
+    strong {
+      display: block;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    small {
+      color: #c0c0c0;
+    }
+  }
+
+  .score {
+    font-weight: 700;
+    color: $primary-color;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .daily-results-section {
+    width: 100%;
+    margin-left: 0;
+  }
+}

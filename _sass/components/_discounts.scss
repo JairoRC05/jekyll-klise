@@ -1,0 +1,32 @@
+.discount-banner {
+  background: url(/assets/backgrounds/sorteo-xf.webp);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+

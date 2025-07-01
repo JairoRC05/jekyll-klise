@@ -1,0 +1,33 @@
+---
+---
+
+* {
+    -webkit-transition: background-color 75ms ease-in, border-color 75ms ease-in;
+    -moz-transition: background-color 75ms ease-in, border-color 75ms ease-in;
+    -ms-transition: background-color 75ms ease-in, border-color 75ms ease-in;
+    -o-transition: background-color 75ms ease-in, border-color 75ms ease-in;
+    transition: background-color 75ms ease-in, border-color 75ms ease-in;
+    font-family: "Exo 2", sans-serif;
+  }
+
+@import'utilities/variables';
+@import'utilities/mixins';
+@import 'utilities/helpers';
+@import 'utilities/_animations';
+
+@import'base/base';
+@import'base/typography';
+
+@import'layout/sidebar';
+@import'layout/header';
+@import'layout/grid';
+@import'layout/daily-results';
+
+
+@import'components/hero-banner';
+@import'components/results';
+@import'components/games';
+@import'components/promo';
+@import'components/buttons';
+@import'components/discounts';
+

@@ -1,0 +1,25 @@
+.central-content-area {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  @include respond-to(lg) {
+   flex-direction: column;
+  }
+}
+
+.main-content-left {
+  flex-grow: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  @media (max-width: 992px) {
+    padding: 1rem;
+  }
+}

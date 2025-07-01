@@ -1,0 +1,170 @@
+---
+layout:
+permalink: /drag-mvps.html
+title: IDS | LIGA INDIGO
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuentros - Integrado al Sistema de Torneo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script defer src="gestion-torneo.js"></script>
+    <style>
+        .jugador {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            margin-bottom: 6px;
+            cursor: grab;
+            position: relative;
+        }
+
+        .jugador.excedido {
+            background-color: #ffe6e6;
+            border-color: red;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 2px;
+            right: 6px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+
+        .mvp-slot {
+            min-height: 60px;
+            border: 2px dashed #adb5bd;
+            border-radius: 6px;
+            padding: 10px;
+            background: #f8f9fa;
+            margin-bottom: 1rem;
+        }
+
+        .bloqueado {
+            opacity: 0.5;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .bloqueado-label {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 4px 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            display: none;
+            z-index: 10;
+        }
+
+        .bloqueado .bloqueado-label {
+            display: block;
+        }
+
+        .reset-highlight {
+            animation: resplandor 1s ease-in-out;
+        }
+
+        @keyframes resplandor {
+            0% {
+                background-color: #d1f7d6;
+            }
+
+            50% {
+                background-color: #b9f0c1;
+            }
+
+            100% {
+                background-color: transparent;
+            }
+        }
+
+        .fila-eliminada {
+            animation: desaparecer 0.4s ease-out forwards;
+        }
+
+        @keyframes desaparecer {
+            from {
+                opacity: 1;
+                height: 48px;
+            }
+
+            to {
+                opacity: 0;
+                height: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container py-4">
+        <h2 class="text-center mb-4">Encuentros - Sistema Integrado</h2>
+        <form id="formulario-encuentro" class="row g-3">
+            <div class="col-md-12">
+                <label for="ronda" class="form-label">Ronda / Fecha</label>
+                <input type="text" id="ronda" class="form-control" placeholder="Ej. Jornada 1, Día 3">
+            </div>
+            <div class="col-4">
+                <label for="equipo-local" class="form-label">Equipo Local</label>
+                <select id="equipo-local" class="form-select"></select>
+                <div id="jugadores-local" class="list-group position-relative mt-2">
+                    <div class="bloqueado-label">Máximo 3 MVPs</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h6 class="text-center mt-3">MVPs Local</h6>
+                <div id="mvp-local" class="mvp-slot"></div>
+                <h6 class="text-center mt-3">MVPs Visitante</h6>
+                <div id="mvp-visitante" class="mvp-slot"></div>
+            </div>
+            <div class="col-4">
+                <label for="equipo-visitante" class="form-label">Equipo Visitante</label>
+                <select id="equipo-visitante" class="form-select"></select>
+                <div id="jugadores-visitante" class="list-group position-relative mt-2">
+                    <div class="bloqueado-label">Máximo 3 MVPs</div>
+                </div>
+            </div>
+
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary" id="btn-guardar">Guardar Encuentro</button>
+                <button type="button" class="btn btn-secondary ms-2" id="cancelar-edicion"
+                    style="display:none">Cancelar</button>
+            </div>
+        </form>
+
+        <hr>
+        <div class="text-center">
+            <button class="btn btn-success mb-2" onclick="descargarJson()">📥 Exportar JSON</button>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center my-3">
+            <ul class="nav nav-tabs" id="tabs-rondas"></ul>
+            <input type="text" id="buscador-jugador" class="form-control w-25" placeholder="Buscar MVP...">
+        </div>
+
+        <div id="contenedor-tablas-por-ronda"></div>
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="gestion-torneo.js"></script>
+    <script src="encuentros-integrados.js"></script>
+
+</body>
+
+</html>

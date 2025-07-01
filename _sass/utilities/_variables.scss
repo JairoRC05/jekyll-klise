@@ -1,0 +1,65 @@
+
+$primary-color: #8a2be2;
+$primary-hover: #a052ee;
+$text-light: #e0e0e0;
+
+
+$white-transparent: rgba(255, 255, 255, 0.099);
+$glass-blur: blur(15px) saturate(180%);
+$color-glass-border: rgba(255, 255, 255, 0.3);
+
+$indigo-transparent: rgba(5, 58, 172, 0.774);
+
+
+
+$dark-overlay: rgba(0, 0, 0, 0.37);
+
+
+// COLORES PRINCIPALES
+$color-bg-dark: #0f0f0f;
+$color-bg-glass: rgba(255, 255, 255, 0.099);
+$color-text-light: #e0e0e0;
+$color-text-muted: #c0c0c0;
+$color-accent-purple: #8a2be2;
+$color-accent-purple-hover: #a052ee;
+$color-accent-yellow: #ffd30e;
+$color-accent-blue: rgba(1, 24, 202, 0.728);
+$color-black-faded: rgba(0, 0, 0, 0.4);
+
+// SOMBRAS
+$box-shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
+$box-shadow-strong: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+// TIPOGRAFÍAS
+$font-main: 'Inter', sans-serif;
+$font-alt: 'Exo 2', sans-serif;
+
+// TAMAÑOS DE FUENTE
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-base: 1rem;
+$font-md: 1.25rem;
+$font-lg: 1.5rem;
+$font-xl: 2rem;
+$font-xxl: 3rem;
+
+// BORDER RADIUS
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-pill: 50px;
+
+// ESPACIADOS
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// BREAKPOINTS
+$breakpoint-xs: 575.98px;
+$breakpoint-sm: 767.98px;
+$breakpoint-md: 991.98px;
+$breakpoint-lg: 1199.98px;
+$breakpoint-xl: 1399.98px;

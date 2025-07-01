@@ -27,26 +27,27 @@ document.addEventListener('DOMContentLoaded', async function () {
     const allMvpPlayers = new Set();
     const equiposSet = new Set(); // Para almacenar todos los equipos
 
-    for (let ronda = 1; ronda <= numRondas; ronda++) {
-      const nombreArchivo = `ronda${ronda}.json`;
-      const jsonData = await leerJSON(nombreArchivo);
+    const jsonData = await leerJSON('mvp-torneo.json');
+    const rondas = jsonData?.rondas || {};
+    
+    for (const ronda in rondas) {
+      const encuentros = rondas[ronda];
+      resultadosPorRonda[ronda] = encuentros;
 
-      if (jsonData && jsonData.encuentros) {
-        resultadosPorRonda[ronda] = jsonData.encuentros;
-        jsonData.encuentros.forEach(encuentro => {
-          encuentro.mvpsLocal.forEach(mvp => {
-            allMvpPlayers.add(mvp.nombre);
-            equiposSet.add(encuentro.equipoLocal);
-          });
-          encuentro.mvpsVisitante.forEach(mvp => {
-            allMvpPlayers.add(mvp.nombre);
-            equiposSet.add(encuentro.equipoVisitante);
-          });
-          encuentro.mvpsLocal.forEach(mvp => allMvpCounts[mvp.nombre] = (allMvpCounts[mvp.nombre] || 0) + 1);
-          encuentro.mvpsVisitante.forEach(mvp => allMvpCounts[mvp.nombre] = (allMvpCounts[mvp.nombre] || 0) + 1);
+      encuentros.forEach(encuentro => {
+        encuentro.mvpsLocal.forEach(mvp => {
+          allMvpPlayers.add(mvp.nombre);
+          equiposSet.add(encuentro.equipoLocal);
         });
-      }
+        encuentro.mvpsVisitante.forEach(mvp => {
+          allMvpPlayers.add(mvp.nombre);
+          equiposSet.add(encuentro.equipoVisitante);
+        });
+        encuentro.mvpsLocal.forEach(mvp => allMvpCounts[mvp.nombre] = (allMvpCounts[mvp.nombre] || 0) + 1);
+        encuentro.mvpsVisitante.forEach(mvp => allMvpCounts[mvp.nombre] = (allMvpCounts[mvp.nombre] || 0) + 1);
+      });
     }
+
     mostrarResultados(resultadosPorRonda, allMvpCounts, Array.from(equiposSet)); // Pasar la lista de equipos
     compararJugadores(resultadosPorRonda, [...allMvpPlayers].sort());
     actualizarBarraEstado();

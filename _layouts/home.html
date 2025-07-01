@@ -5,25 +5,26 @@ title: INICIO | NACIÓN UNITE
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "es" }}">
+<html lang="{{ page.lang | default: site.lang | default: " es" }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Iconos de Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Fuente Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gemunu+Libre:wght@200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/nacion.css" />
-    <link rel="stylesheet" href="/assets/css/copaxforze.css" />
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{page.title}}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gemunu+Libre:wght@200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/copaxforze.css" />
+
 </head>
 
 
@@ -37,25 +38,25 @@ title: INICIO | NACIÓN UNITE
     <ul class="nav flex-lg-column flex-md-row">
 
       <li class="nav-item iconContainer">
-        <a class="nav-link active" href="{{ site.links_navegacion.indigo }}"> 
+        <a class="nav-link active" href="{{ site.links_navegacion.indigo }}">
           <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Liga Indigo</span>
         </a>
       </li>
       <li class="nav-item iconContainer">
-        <a class="nav-link" href="{{ site.links_navegacion.copa }}"> 
+        <a class="nav-link" href="{{ site.links_navegacion.copa }}">
           <img src="/assets/logos/COPA XFORCE-ALT.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Copa XForze</span>
         </a>
       </li>
       <li class="nav-item iconContainer">
-        <a class="nav-link" href="{{ site.links_navegacion.supercxf }}"> 
+        <a class="nav-link" href="{{ site.links_navegacion.supercxf }}">
           <img src="/assets/logos/SCXF.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Super Copa XF</span>
         </a>
       </li>
       <li class="nav-item iconContainer">
-        <a class="nav-link" href="{{ site.links_navegacion.sorteos }}"> 
+        <a class="nav-link" href="{{ site.links_navegacion.sorteos }}">
           <img src="/assets/logos/icons/sorteos.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Sorteos</span>
         </a>
@@ -67,6 +68,21 @@ title: INICIO | NACIÓN UNITE
         </a>
       </li>
     </ul>
+
+  <ul class="nav flex-column mt-auto sidebar-footer-links">
+    <li class="nav-item">
+      <a class="nav-link small" href="/aviso-legal.html">Aviso Legal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link small" href="/contacto.html">Contacto</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link small" href="/ayuda.html">Ayuda</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link small" href="/creditos.html">Créditos</a>
+    </li>
+  </ul>
   </div>
 
   <div class="main-content">
@@ -74,14 +90,17 @@ title: INICIO | NACIÓN UNITE
       <h1 class="m-0 exo-style">{{ page.title | default: "NACIÓN UNITE" }}</h1>
       <div class="flex-grow-1"></div>
 
-      <div class="top-icons d-flex align-items-center">
-        <a href="{{ site.redes_sociales.x }}" target="_blank" class="btn ms-3"><i class="bi bi-twitter"></i></a> <a href="{{ site.redes_sociales.instagram }}" target="_blank" class="btn"><i class="bi bi-instagram"></i></a> <a href="{{ site.redes_sociales.youtube }}" target="_blank" class="btn"><i class="bi bi-youtube"></i></a> <a href="{{ site.redes_sociales.discord }}" target="_blank" class="btn"><i class="bi bi-discord"></i></a> </div>
+      <div class="top-icons d-flex align-items-center d-none d-md-block">
+        <a href="{{ site.redes_sociales.x }}" target="_blank" class="btn ms-3"><i class="bi bi-twitter"></i></a> <a
+          href="{{ site.redes_sociales.instagram }}" target="_blank" class="btn"><i class="bi bi-instagram"></i></a> <a
+          href="{{ site.redes_sociales.youtube }}" target="_blank" class="btn"><i class="bi bi-youtube"></i></a> <a
+          href="{{ site.redes_sociales.discord }}" target="_blank" class="btn"><i class="bi bi-discord"></i></a>
+      </div>
     </div>
 
     <div class="central-content-area">
       <div class="main-content-left">
-        <div class="hero-banner"
-          style="background-image: url('/assets/backgrounds/CUMPLEAÑOS.webp');">
+        <div class="hero-banner" style="background-image: url('/assets/backgrounds/CUMPLEAÑOS.webp');">
           <div class="hero-banner-content">
             <div class="game-tags">
               <span>Noticias</span>
@@ -89,11 +108,15 @@ title: INICIO | NACIÓN UNITE
               <span>Esports</span>
             </div>
             <h2>¡Feliz cumpleaños TEXAS!</h2>
-            <p>Sigue dominando el mapa, controlando el Zapdos y demostrando por qué eres una verdadera leyenda en la arena. Que tu día esté lleno de energía Aeos, tus combos sean perfectos y que ningún equipo rival pueda detenerte. 🕹️⚡</p>
+            <p>Sigue dominando el mapa, controlando el Zapdos y demostrando por qué eres una verdadera leyenda en la
+              arena. Que tu día esté lleno de energía Aeos, tus combos sean perfectos y que ningún equipo rival pueda
+              detenerte. 🕹️⚡</p>
             <div class="hero-banner-buttons">
               <!-- <a class="btn btn-outline-light-custom" href="{{ site.links_navegacion.copa }}">Ver detalles</a>  -->
-              <a class="btn btn-outline-light-custom" href="https://www.twitch.tv/texasspecwar" target="_blank"><i class="bi bi-twitch"></i>
-                texasspecwar</a> </div>
+              <a class="btn btn-outline-light-custom" href="https://www.twitch.tv/texasspecwar" target="_blank"><i
+                  class="bi bi-twitch"></i>
+                texasspecwar</a>
+            </div>
           </div>
         </div>
         <div class="games-section">
@@ -106,14 +129,25 @@ title: INICIO | NACIÓN UNITE
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-4">
             <div class="col-12">
               <div class="card game-card">
-                <img src="/assets/backgrounds/fondo licencia.webp"
-                  class="card-img-top" alt="Guía Elden Ring">
+                <img src="/assets/backgrounds/fondo licencia.webp" class="card-img-top" alt="Guía Elden Ring">
                 <div class="card-body">
                   <h1 class="card-title exo-style">PRÓXIMAMENTE</h1>
                 </div>
               </div>
             </div>
 
+          </div>
+        </div>
+
+
+        <div class="banner-promo-section ">
+          <canvas class="stars" id="starIndigo"></canvas>
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="Imagen decorativa" class="banner-image">
+          <div class="banner-content">
+            <h4>¡Inscripciones Abiertas!</h4>
+            <p class="lead">Liga Indigo - Temporada Julio</p>
+            <div class="timer" id="countdown">Cargando cuenta regresiva...</div>
+            <a href="/reglamento-liga-indigo" class="btn btn-warning-custom mt-4">Inscribirme Ahora</a>
           </div>
         </div>
 
@@ -124,6 +158,7 @@ title: INICIO | NACIÓN UNITE
             <i class="bi bi-arrow-right"></i>
           </a>
         </div>
+
       </div>
 
       <div class="daily-results-section">
@@ -131,7 +166,7 @@ title: INICIO | NACIÓN UNITE
         <div class="results-list">
           <div class="match-item">
             <div class="teams-info">
-              </div>
+            </div>
           </div>
         </div>
 
@@ -147,6 +182,7 @@ title: INICIO | NACIÓN UNITE
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="/assets/today.js"></script>
+  <script src="/assets/js/timer_ins.js"></script>
   {% include g-analytics.html %}
 
 </body>

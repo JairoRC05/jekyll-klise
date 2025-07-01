@@ -571,19 +571,19 @@ title: IDS | LIGA INDIGO
     document.getElementById('mvp-visitante-3')
   ];
   const teamFiles = [
-'assets/temporadas/junio2025/aep.json',
-    'assets/temporadas/junio2025/amt.json',
-    'assets/temporadas/junio2025/lb.json',
-    'assets/temporadas/junio2025/magma.json',
-    'assets/temporadas/junio2025/obs.json',
-    'assets/temporadas/junio2025/pkr.json',
-    'assets/temporadas/junio2025/pl.json',
-    'assets/temporadas/junio2025/quartz.json',
-    'assets/temporadas/junio2025/sapphire.json',
-    'assets/temporadas/junio2025/stmn.json',
-    'assets/temporadas/junio2025/tae.json',
-    'assets/temporadas/junio2025/tut.json',
-    'assets/temporadas/junio2025/tutw.json',   
+'/assets/temporadas/junio2025/aep.json',
+    '/assets/temporadas/junio2025/amt.json',
+    '/assets/temporadas/junio2025/lb.json',
+    '/assets/temporadas/junio2025/magma.json',
+    '/assets/temporadas/junio2025/obs.json',
+    '/assets/temporadas/junio2025/pkr.json',
+    '/assets/temporadas/junio2025/pl.json',
+    '/assets/temporadas/junio2025/quartz.json',
+    '/assets/temporadas/junio2025/sapphire.json',
+    '/assets/temporadas/junio2025/stmn.json',
+    '/assets/temporadas/junio2025/tae.json',
+    '/assets/temporadas/junio2025/tut.json',
+    '/assets/temporadas/junio2025/tutw.json',   
      '/assets/temporadas/junio2025/amet.json',
     '/assets/temporadas/junio2025/cd.json',
     '/assets/temporadas/junio2025/dg.json',
@@ -609,8 +609,8 @@ title: IDS | LIGA INDIGO
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const dataArray = await response.json();
-        if (dataArray && dataArray.length > 0) {
-          const data = dataArray[0];
+        if (dataArray) {
+          const data = dataArray;
           teamsData[data.tag] = data;
         } else {
           console.warn(`El archivo ${file} está vacío o no tiene la estructura esperada.`);
@@ -694,6 +694,7 @@ title: IDS | LIGA INDIGO
           "mvpsVisitante": mvpsVisitante
         });
         actualizarTabla();
+        guardarEnLocalStorage();
         limpiarFormulario();
       } else {
         alert('Por favor, selecciona ambos equipos.');
@@ -799,6 +800,8 @@ title: IDS | LIGA INDIGO
     if (confirm('¿Estás seguro de eliminar este encuentro?')) {
       encuentros.splice(index, 1);
       actualizarTabla();
+      actualizarEncuentro()
+      guardarEnLocalStorage();
     }
   }
 
@@ -868,6 +871,8 @@ title: IDS | LIGA INDIGO
     }
   }
 
+
+
   // Agregar un input de tipo archivo al HTML
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
@@ -876,9 +881,32 @@ title: IDS | LIGA INDIGO
   fileInput.onchange = cargarYMostrarJson;
   formulario.parentNode.insertBefore(fileInput, formulario.nextSibling);
 
+
+  function guardarEnLocalStorage() {
+  localStorage.setItem('encuentros', JSON.stringify(encuentros));
+}
+
+function cargarDesdeLocalStorage() {
+  const data = localStorage.getItem('encuentros');
+  if (data) {
+    try {
+      encuentros = JSON.parse(data);
+      actualizarTabla();
+    } catch (e) {
+      console.error('Error al cargar desde localStorage', e);
+    }
+  }
+}
+
+
   // Cargar la información de los equipos al cargar la página
-  loadTeams();
-  actualizarTabla(); // Inicializar la tabla vacía
+ 
+  loadTeams().then(() => {
+  cargarDesdeLocalStorage(); // ← Aquí se cargan los encuentros guardados
+});
+  actualizarTabla(); 
+
+
 </script>
 
 

@@ -79,11 +79,13 @@ number_of_posts: 5
 # Build settings
 # theme: klise
 sass:
+  sass_dir: _sass
   style: compressed
 
 include:
   - _redirects
   - .htaccess
+  - assets
 
 exclude:
   - CNAME

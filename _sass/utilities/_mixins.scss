@@ -1,0 +1,77 @@
+
+
+
+// Breakpoints responsivos
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 1199.98px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+// Centrado flexible
+@mixin center-flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// Truncar texto con puntos suspensivos
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Estilo glassmorphism
+@mixin glass-effect {
+  background: $white-transparent;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: $color-glass-border
+}
+
+@mixin glass-effect-indigo {
+  background: $indigo-transparent;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Botón con transición suave
+@mixin button-transition($hover-bg: #f0f0f0, $hover-color: #000) {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    transform: translateY(-3px);
+  }
+}
+
+// _mixins.scss
+@mixin hover-raise-effect($hover-bg: null) {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    @if $hover-bg != null {
+      background-color: $hover-bg;
+    }
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
