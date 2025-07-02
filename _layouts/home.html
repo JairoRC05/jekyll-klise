@@ -114,24 +114,21 @@ title: INICIO | NACIÓN UNITE
 
 
         <div class="games-section">
-          <h3>Licencias UNITE
+          <h3>Equipos inscritos
             <div class="arrow-buttons">
-              <button class="btn"><i class="bi bi-chevron-left"></i></button>
-              <button class="btn"><i class="bi bi-chevron-right"></i></button>
+              <button class="btn" id="slide-left"><i class="bi bi-chevron-left"></i></button>
+              <button class="btn" id="slide-right"><i class="bi bi-chevron-right"></i></button>
             </div>
           </h3>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-4">
-            <div class="col-12">
-              <div class="card game-card">
-                <img src="/assets/backgrounds/fondo licencia.webp" class="card-img-top" alt="Guía Elden Ring">
-                <div class="card-body">
-                  <h1 class="card-title exo-style">PRÓXIMAMENTE</h1>
-                </div>
-              </div>
-            </div>
 
+          <!-- Carrusel horizontal -->
+          <div class="cards-carousel-wrapper overflow-hidden">
+            <div class="cards-carousel d-flex flex-nowrap gap-3 px-2" id="contenedor-cards">
+              <!-- Aquí se insertan las tarjetas dinámicas -->
+            </div>
           </div>
         </div>
+
 
 
         <div class="banner-promo-section ">
@@ -178,6 +175,8 @@ title: INICIO | NACIÓN UNITE
   <script src="/assets/today.js"></script>
   <script src="/assets/js/timer_ins.js"></script>
   <script src="/assets/js/banners.js"></script>
+  <script src="/assets/js/cards-team.js"></script>
+  <script src="/assets/js/slider-card.js"></script>
   {% include g-analytics.html %}
 
 </body>
