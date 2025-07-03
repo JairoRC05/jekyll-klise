@@ -208,10 +208,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(102,47,19,1) 100%); *
 }
 
 
-.PLAGA {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 11%, rgba(87, 35, 100, 1) 100%);
-}
+
 
 .MAGMA{
    background: rgb(0, 0, 0);
@@ -663,10 +660,7 @@ background: radial-gradient(circle, rgba(0, 150, 75, 1) 0%, rgba(45, 104, 74, 1)
   background: radial-gradient(circle, rgba(77, 79, 77, 1) 0%, rgba(0, 0, 0, 1) 94%);
 }
 
-.STMN {
-  background: rgb(24, 93, 111);
-  background: radial-gradient(circle, rgba(24, 93, 111, 1) 0%, rgba(52, 115, 131, 1) 100%);
-}
+
 
 .PLATINO {
   background: rgb(209, 0, 0);
@@ -758,10 +752,7 @@ background: radial-gradient(circle, rgba(255, 64, 134, 1) 0%, rgba(255, 0, 94, 1
   background: radial-gradient(circle, rgba(0, 104, 71, 1) 0%, rgba(3, 36, 25, 1) 100%);
 }
 
-.ZAFIRO {
-  background: rgb(0, 104, 71);
-  background: radial-gradient(circle, rgba(0, 104, 71, 1) 0%, rgba(3, 36, 25, 1) 100%);
-}
+
 
 .AMT {
   background: rgb(0, 104, 71);

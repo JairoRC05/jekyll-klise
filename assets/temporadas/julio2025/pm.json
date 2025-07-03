@@ -1,0 +1,28 @@
+{
+  "tag": "PM",
+  "team": "PROYECTO MEW",
+  "org": "",
+  "activo": true,
+  "capitan": "IKAL",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "PROYECTO MEW",
+  "seguro": false,
+  "link": "/equipos/proyecto-mew",
+  "grupo": "SIN ASIGNAR",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": []
+}

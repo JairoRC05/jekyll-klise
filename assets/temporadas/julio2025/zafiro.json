@@ -1,0 +1,77 @@
+{
+  "tag": "ZAFIRO",
+  "team": "IMPERIO MEXA ZAFIRO",
+  "org": "XF05 ESPORTS",
+  "activo": true,
+  "capitan": "Tory",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "IMPERIO MEXA ZAFIRO",
+  "seguro": "true",
+  "link": "/imperio-mexa/--zafiro",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "1",
+    "M2": "0",
+    "M3": "1",
+    "M4": "0",
+    "M5": "3",
+    "M6": "0",
+    "M7": "1",
+    "M8": "0",
+    "M9": "D",
+    "M10": "0",
+    "M11": "3",
+    "M12": "1",
+    "M13": "0",
+    "M14": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "MeXa • Frost",
+      "ID": "T30862L",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Magnus",
+      "ID": "89CTXY4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Nadir",
+      "ID": "M3LXQGP",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "MeXa・Masaru",
+      "ID": "AGM28R9",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Ismael",
+      "ID": "TP5EPHQ",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa • Cuatzo",
+      "ID": "1XTK4H9",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa・Tory",
+      "ID": "THMG76A",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Cøwbøyメ",
+      "ID": "M9FHRL7",
+      "avatar": "male1"
+    }
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}

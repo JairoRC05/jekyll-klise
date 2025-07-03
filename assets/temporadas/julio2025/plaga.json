@@ -1,0 +1,77 @@
+{
+  "tag": "PLAGA",
+  "team": "PLAGA VILLANOS",
+  "org": "PLAGA/VILLANOS E-SPORTS",
+  "activo": true,
+  "capitan": "TEXAS",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "PLAGA VILLANOS",
+  "seguro": "true",
+  "link": "/equipos/plaga",
+  "grupo": "SOUTH",
+  "posicionDesempate": 0,
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "3",
+    "M4": "3",
+    "M5": "2",
+    "M6": "3",
+    "M7": "3",
+    "M8": "D",
+    "M9": "3",
+    "M10": "2",
+    "M11": "3",
+    "M12": "2",
+    "M13": "3",
+    "M14": "2"
+  },
+  "jugadores": [
+    {
+      "nickname": "TexasLuna[:",
+      "ID": "A0829K4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Fersaw",
+      "ID": "916CTAR",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "7Froy",
+      "ID": "KX010TK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DønLux",
+      "ID": "MAL0Q6H",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "BLK-luis205",
+      "ID": "GM9M2YN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TTVXileKira",
+      "ID": "H7YC4XP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "SPC・May",
+      "ID": "X556TRH",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "Bellvii",
+      "ID": "18Q9TAH",
+      "avatar": "male1"
+    }
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}
