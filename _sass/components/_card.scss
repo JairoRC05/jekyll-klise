@@ -9,13 +9,13 @@
   margin-bottom: 20px;
   overflow: hidden;
 
-  @include respond-to(md) {
-    height: 70px;
-  }
+  // @include respond-to(md) {
+  //   height: 70px;
+  // }
 
-  @include respond-to(sm) {
-    height: 50px;
-  }
+  // @include respond-to(sm) {
+  //   height: 50px;
+  // }
 
   &::before {
     content: "";
@@ -36,24 +36,24 @@
     align-items: center;
     color: #fff;
 
-    @include respond-to(md) {
-      position: absolute;
-      bottom: 0;
-      left: 5%;
-    }
+    // @include respond-to(md) {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 5%;
+    // }
 
     a img {
       width: 150px;
       margin-bottom: 30px;
 
-      @include respond-to(md) {
-        width: 70px;
-        margin-bottom: 0;
-      }
+      // @include respond-to(md) {
+      //   width: 70px;
+      //   margin-bottom: 0;
+      // }
 
-      @include respond-to(sm) {
-        width: 50px;
-      }
+      // @include respond-to(sm) {
+      //   width: 50px;
+      // }
     }
   }
 
@@ -72,35 +72,35 @@
         rgba(0, 0, 0, 0.3) 84%,
         rgba(0, 0, 0, 0) 100%);
 
-    @include respond-to(md) {
-      padding: 5px;
-      background: none;
-      bottom: 20%;
-      left: 25%;
-      line-height: 1px;
-    }
+    // @include respond-to(md) {
+    //   padding: 5px;
+    //   background: none;
+    //   bottom: 20%;
+    //   left: 25%;
+    //   line-height: 1px;
+    // }
 
-    @include respond-to(sm) {
-      bottom: 20%;
-      left: 18%;
-    }
+    // @include respond-to(sm) {
+    //   bottom: 20%;
+    //   left: 18%;
+    // }
 
     h2 {
       margin: 0;
       font-size: 18px;
 
-      @include respond-to(sm) {
-        font-size: 16px;
-      }
+      // @include respond-to(sm) {
+      //   font-size: 16px;
+      // }
     }
 
     span {
       margin: 0;
       font-size: 12px;
 
-      @include respond-to(sm) {
-        font-size: 10px;
-      }
+      // @include respond-to(sm) {
+      //   font-size: 10px;
+      // }
     }
   }
 
@@ -127,19 +127,19 @@
     z-index: 900;
     transform: rotate(45deg);
 
-    @include respond-to(md) {
-      width: 65%;
-      height: 65%;
-      top: -10px;
-      right: -75px;
-    }
+    // @include respond-to(md) {
+    //   width: 65%;
+    //   height: 65%;
+    //   top: -10px;
+    //   right: -75px;
+    // }
 
-    @include respond-to(sm) {
-      width: 50%;
-      height: 100%;
-      top: -35px;
-      right: -30px;
-    }
+    // @include respond-to(sm) {
+    //   width: 50%;
+    //   height: 100%;
+    //   top: -35px;
+    //   right: -30px;
+    // }
   }
 
   .card-color-logo {
@@ -150,9 +150,9 @@
     right: 5px;
     z-index: 1000;
 
-    @include respond-to(sm) {
-      right: 5%;
-    }
+    // @include respond-to(sm) {
+    //   right: 5%;
+    // }
 
     img {
       width: 40px;
@@ -179,6 +179,11 @@
   gap: 1rem;
   overflow: hidden;
   max-width: 1200px;
+
+  @include respond-to(sm) {
+       max-width: 300px;
+    }
+
 
   // Asegura que cada tarjeta tenga ancho mínimo
   .card-team {
