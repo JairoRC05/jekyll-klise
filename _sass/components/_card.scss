@@ -167,12 +167,18 @@
   overflow-y: hidden;
   scroll-behavior: smooth;
   padding-bottom: 10px;
-    
+  -ms-overflow-style: none;  // IE/Edge
+  scrollbar-width: none;     // Firefox
+
+  &::-webkit-scrollbar {
+    display: none;           // Chrome/Safari
+  }
 
 }
 
 .cards-carousel {
   display: flex;
+  -webkit-overflow-scrolling: touch;
   flex-wrap: nowrap;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -185,7 +191,7 @@
     }
 
 
-  // Asegura que cada tarjeta tenga ancho mínimo
+
   .card-team {
     min-width: 180px;
     flex: 0 0 auto;
