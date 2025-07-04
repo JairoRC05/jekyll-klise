@@ -1,0 +1,878 @@
+---
+layout:
+home: true
+title: INICIO | NACIÓN UNITE
+permalink: /antojitos-salu
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTOJITOS SALU</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out;
+        }
+        .btn-secondary {
+            @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-200 ease-in-out;
+        }
+        .btn-success {
+            @apply bg-green-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 transition duration-200 ease-in-out;
+        }
+        .btn-warning {
+            @apply bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-200 ease-in-out;
+        }
+        .btn-danger {
+            @apply bg-red-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition duration-200 ease-in-out;
+        }
+        input[type="text"], input[type="number"], select {
+            @apply p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full;
+        }
+        table {
+            @apply w-full text-left border-collapse;
+        }
+        th, td {
+            @apply p-3 border-b border-gray-200;
+        }
+        th {
+            @apply bg-gray-100 font-semibold text-gray-700;
+        }
+        /* Estilos para las pestañas */
+        .tab-button {
+            @apply px-6 py-3 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-200 ease-in-out;
+        }
+        .tab-button.active {
+            @apply text-blue-600 border-blue-600;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Sistema de Cocina Rápida</h1>
+
+        <!-- Tab controls -->
+        <div class="flex border-b border-gray-200 mb-6">
+            <button class="tab-button active" data-tab="products">Gestión de Productos</button>
+            <button class="tab-button" data-tab="orders">Gestión de Pedidos</button>
+            <button class="tab-button" data-tab="reports">Reportes de Ventas</button>
+        </div>
+
+        <!-- Tab content: Product and Category Management -->
+        <div id="products" class="tab-content active card">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Productos y Categorías</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Form to add/edit product -->
+                <div>
+                    <h3 class="text-xl font-medium text-gray-600 mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="productName" class="block text-sm font-medium text-gray-700">Nombre del Producto</label>
+                            <input type="text" id="productName" placeholder="Ej: Hamburguesa Clásica">
+                        </div>
+                        <div>
+                            <label for="productDescription" class="block text-sm font-medium text-gray-700">Descripción</label>
+                            <input type="text" id="productDescription" placeholder="Ej: Carne, lechuga, tomate">
+                        </div>
+                        <div>
+                            <label for="productPrice" class="block text-sm font-medium text-gray-700">Precio</label>
+                            <input type="number" id="productPrice" step="0.01" placeholder="Ej: 85.00">
+                        </div>
+                        <div>
+                            <label for="productCategory" class="block text-sm font-medium text-gray-700">Categoría</label>
+                            <select id="productCategory">
+                                </select>
+                        </div>
+                        <div class="flex gap-2">
+                            <button id="saveProductBtn" class="btn-primary w-full">Agregar Producto</button>
+                            <button id="cancelEditBtn" class="btn-secondary w-full hidden">Cancelar Edición</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form to add category -->
+                <div>
+                    <h3 class="text-xl font-medium text-gray-600 mb-3">Agregar Nueva Categoría</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="categoryName" class="block text-sm font-medium text-gray-700">Nombre de la Categoría</label>
+                            <input type="text" id="categoryName" placeholder="Ej: Bebidas">
+                        </div>
+                        <button id="addCategoryBtn" class="btn-secondary w-full">Agregar Categoría</button>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-600 mb-3 mt-6">Categorías Existentes</h3>
+                    <ul id="categoryList" class="list-disc list-inside text-gray-700">
+                        </ul>
+                </div>
+            </div>
+
+            <!-- Existing products table -->
+            <h3 class="text-xl font-medium text-gray-600 mb-3">Productos Existentes</h3>
+            <div class="overflow-x-auto rounded-lg shadow-sm">
+                <table id="productsTable" class="min-w-full">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tab content: Order Management -->
+        <div id="orders" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Pedidos</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Create New Order -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3">Crear Nuevo Pedido</h3>
+                    <div class="card p-4">
+                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Productos Disponibles</h4>
+                        <div id="availableProducts" class="grid grid-cols-1 gap-4 max-h-60 overflow-y-auto pr-2">
+                            </div>
+                        <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-3">Pedido Actual</h4>
+                        <div id="currentOrderItems" class="space-y-2 max-h-40 overflow-y-auto pr-2 mb-4">
+                            </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-lg font-bold">Total:</span>
+                            <span id="currentOrderTotal" class="text-lg font-bold">$0.00</span>
+                        </div>
+                        <button id="placeOrderBtn" class="btn-success w-full">Realizar Pedido</button>
+                    </div>
+                </div>
+
+                <!-- Pending Orders -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Pendientes</h3>
+                    <div id="pendingOrders" class="space-y-4 max-h-96 overflow-y-auto pr-2">
+                        </div>
+                </div>
+
+                <!-- In Process / Delivered Orders -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3">En Proceso / Entregados</h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">En Proceso</h4>
+                            <div id="inProcessOrders" class="space-y-4 max-h-48 overflow-y-auto pr-2">
+                                </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">Entregados (Pendiente de Cobro)</h4>
+                            <div id="deliveredOrders" class="space-y-4 max-h-48 overflow-y-auto pr-2">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab content: Sales Reports -->
+        <div id="reports" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Reportes de Ventas</h2>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <div>
+                    <label for="reportMonth" class="block text-sm font-medium text-gray-700">Mes</label>
+                    <select id="reportMonth" class="w-full">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="reportYear" class="block text-sm font-medium text-gray-700">Año</label>
+                    <input type="number" id="reportYear" value="2025" class="w-full">
+                </div>
+                <button id="generateReportBtn" class="btn-primary self-end">Generar Reporte</button>
+            </div>
+
+            <!-- Export/Import Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <button id="exportSalesBtn" class="btn-secondary w-full sm:w-auto">Exportar Ventas (JSON)</button>
+                <input type="file" id="importSalesFile" accept=".json" class="hidden">
+                <button id="importSalesBtn" class="btn-secondary w-full sm:w-auto">Importar Ventas (JSON)</button>
+            </div>
+
+            <div id="reportOutput" class="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Resultados del Reporte</h3>
+                <p id="reportTotalSales" class="text-lg font-semibold text-gray-800">Total de Ingresos: $0.00</p>
+                <p id="reportNumSales" class="text-lg font-semibold text-gray-800">Número de Ventas: 0</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Productos Más Vendidos:</h4>
+                <ul id="topProductsList" class="list-disc list-inside text-gray-700">
+                    </ul>
+                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Detalle de Ventas:</h4>
+                <div class="overflow-x-auto rounded-lg shadow-sm">
+                    <table id="salesDetailTable" class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>ID Venta</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>Método Pago</th>
+                                <th>Productos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Global Variables ---
+        let productos = [];
+        let categorias = [];
+        let pedidos = []; // Orders in queue (Pending, In Process, Delivered)
+        let ventas = [];  // Finalized sales for reports
+        let currentOrder = {
+            items: [],
+            total: 0
+        };
+        let editingProductId = null; // To track which product is being edited
+
+        // --- DOM Element Selectors ---
+        // Tab Controls
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Product & Category Management
+        const productFormTitle = document.getElementById('productFormTitle');
+        const productNameInput = document.getElementById('productName');
+        const productDescriptionInput = document.getElementById('productDescription');
+        const productPriceInput = document.getElementById('productPrice');
+        const productCategorySelect = document.getElementById('productCategory');
+        const saveProductBtn = document.getElementById('saveProductBtn'); // Renamed from addProductBtn
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const productsTableBody = document.querySelector('#productsTable tbody');
+
+        const categoryNameInput = document.getElementById('categoryName');
+        const addCategoryBtn = document.getElementById('addCategoryBtn');
+        const categoryListUl = document.getElementById('categoryList');
+
+        // Order Management
+        const availableProductsDiv = document.getElementById('availableProducts');
+        const currentOrderItemsDiv = document.getElementById('currentOrderItems');
+        const currentOrderTotalSpan = document.getElementById('currentOrderTotal');
+        const placeOrderBtn = document.getElementById('placeOrderBtn');
+
+        const pendingOrdersDiv = document.getElementById('pendingOrders');
+        const inProcessOrdersDiv = document.getElementById('inProcessOrders');
+        const deliveredOrdersDiv = document.getElementById('deliveredOrders');
+
+        // Sales Reports
+        const reportMonthSelect = document.getElementById('reportMonth');
+        const reportYearInput = document.getElementById('reportYear');
+        const generateReportBtn = document.getElementById('generateReportBtn');
+        const reportTotalSalesP = document.getElementById('reportTotalSales');
+        const reportNumSalesP = document.getElementById('reportNumSales');
+        const topProductsListUl = document.getElementById('topProductsList');
+        const salesDetailTableBody = document.querySelector('#salesDetailTable tbody');
+
+        // Export/Import elements
+        const exportSalesBtn = document.getElementById('exportSalesBtn');
+        const importSalesFile = document.getElementById('importSalesFile');
+        const importSalesBtn = document.getElementById('importSalesBtn');
+
+
+        // --- Utility Functions for localStorage ---
+        function guardarEnLocalStorage(clave, datos) {
+            try {
+                localStorage.setItem(clave, JSON.stringify(datos));
+            } catch (e) {
+                console.error("Error al guardar en localStorage:", e);
+                alert("Error: No se pudo guardar la información. El almacenamiento local podría estar lleno.");
+            }
+        }
+
+        function obtenerDeLocalStorage(clave) {
+            try {
+                const datos = localStorage.getItem(clave);
+                return datos ? JSON.parse(datos) : [];
+            } catch (e) {
+                console.error("Error al obtener de localStorage:", e);
+                return []; // Return an empty array in case of parsing error
+            }
+        }
+
+        // --- Tab Navigation Functions ---
+        function showTab(tabId) {
+            // Remove 'active' from all buttons and content
+            tabButtons.forEach(button => button.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add 'active' to the selected tab button and content
+            document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            // If the orders or reports tab is activated, ensure data is updated
+            if (tabId === 'orders') {
+                renderAllOrders();
+                renderAvailableProductsForOrder();
+                updateCurrentOrderDisplay(); // Ensure current order is displayed correctly
+            } else if (tabId === 'reports') {
+                // Generate the report automatically when entering the tab if needed,
+                // or let the user click the button.
+                // generateMonthlyReport();
+            }
+        }
+
+        // --- App Initialization ---
+        function initApp() {
+            productos = obtenerDeLocalStorage('productos');
+            categorias = obtenerDeLocalStorage('categorias');
+            pedidos = obtenerDeLocalStorage('pedidos');
+            ventas = obtenerDeLocalStorage('ventas');
+
+            renderCategories();
+            renderProducts();
+            renderAvailableProductsForOrder();
+            renderAllOrders(); // Render initial orders
+
+            // Set current month and year in report selector
+            const today = new Date();
+            reportMonthSelect.value = today.getMonth() + 1;
+            reportYearInput.value = today.getFullYear();
+
+            // Configure event listeners for tabs
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showTab(button.dataset.tab);
+                });
+            });
+
+            // Show products tab by default on load
+            showTab('products');
+        }
+
+        // --- Product and Category Management ---
+
+        function renderCategories() {
+            // Clear list and select
+            categoryListUl.innerHTML = '';
+            productCategorySelect.innerHTML = '<option value="">Selecciona una categoría</option>';
+
+            categorias.forEach(cat => {
+                const li = document.createElement('li');
+                li.textContent = cat.nombre;
+                categoryListUl.appendChild(li);
+
+                const option = document.createElement('option');
+                option.value = cat.id;
+                option.textContent = cat.nombre;
+                productCategorySelect.appendChild(option);
+            });
+        }
+
+        function addCategory() {
+            const name = categoryNameInput.value.trim();
+            if (name) {
+                if (categorias.some(cat => cat.nombre.toLowerCase() === name.toLowerCase())) {
+                    alert('La categoría ya existe.');
+                    return;
+                }
+                const newCategory = {
+                    id: 'cat_' + Date.now(),
+                    nombre: name
+                };
+                categorias.push(newCategory);
+                guardarEnLocalStorage('categorias', categorias);
+                renderCategories();
+                categoryNameInput.value = '';
+            } else {
+                alert('Por favor, ingresa un nombre para la categoría.');
+            }
+        }
+
+        function renderProducts() {
+            productsTableBody.innerHTML = ''; // Clear table
+            productos.forEach(prod => {
+                const row = productsTableBody.insertRow();
+                row.insertCell().textContent = prod.id;
+                row.insertCell().textContent = prod.nombre;
+                row.insertCell().textContent = prod.descripcion;
+                row.insertCell().textContent = `$${prod.precio.toFixed(2)}`;
+                const categoryName = categorias.find(cat => cat.id === prod.categoria)?.nombre || 'Sin categoría';
+                row.insertCell().textContent = categoryName;
+
+                const actionsCell = row.insertCell();
+                const editBtn = document.createElement('button');
+                editBtn.textContent = 'Editar';
+                editBtn.className = 'btn-secondary text-sm py-1 px-2 mr-2';
+                editBtn.onclick = () => editProduct(prod.id);
+                actionsCell.appendChild(editBtn);
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Eliminar';
+                deleteBtn.className = 'btn-danger text-sm py-1 px-2';
+                deleteBtn.onclick = () => deleteProduct(prod.id);
+                actionsCell.appendChild(deleteBtn);
+            });
+        }
+
+        function saveProduct() { // Renamed from addProduct
+            const name = productNameInput.value.trim();
+            const description = productDescriptionInput.value.trim();
+            const price = parseFloat(productPriceInput.value);
+            const categoryId = productCategorySelect.value;
+
+            if (name && description && !isNaN(price) && price > 0 && categoryId) {
+                if (editingProductId) {
+                    // Update existing product
+                    const productIndex = productos.findIndex(p => p.id === editingProductId);
+                    if (productIndex !== -1) {
+                        productos[productIndex].nombre = name;
+                        productos[productIndex].descripcion = description;
+                        productos[productIndex].precio = price;
+                        productos[productIndex].categoria = categoryId;
+                        alert('Producto actualizado exitosamente.');
+                    }
+                    editingProductId = null; // Reset editing state
+                    productFormTitle.textContent = 'Agregar Nuevo Producto';
+                    saveProductBtn.textContent = 'Agregar Producto';
+                    cancelEditBtn.classList.add('hidden');
+                } else {
+                    // Add new product
+                    const newProduct = {
+                        id: 'prod_' + Date.now(),
+                        nombre: name,
+                        descripcion: description,
+                        precio: price,
+                        categoria: categoryId
+                    };
+                    productos.push(newProduct);
+                    alert('Producto agregado exitosamente.');
+                }
+                guardarEnLocalStorage('productos', productos);
+                renderProducts();
+                renderAvailableProductsForOrder(); // Update product list for orders
+                clearProductForm();
+            } else {
+                alert('Por favor, completa todos los campos del producto correctamente.');
+            }
+        }
+
+        function editProduct(id) {
+            const product = productos.find(p => p.id === id);
+            if (product) {
+                productNameInput.value = product.nombre;
+                productDescriptionInput.value = product.descripcion;
+                productPriceInput.value = product.precio;
+                productCategorySelect.value = product.categoria;
+
+                editingProductId = id; // Set the product being edited
+                productFormTitle.textContent = 'Editar Producto';
+                saveProductBtn.textContent = 'Actualizar Producto';
+                cancelEditBtn.classList.remove('hidden');
+            }
+        }
+
+        function cancelEdit() {
+            clearProductForm();
+            editingProductId = null;
+            productFormTitle.textContent = 'Agregar Nuevo Producto';
+            saveProductBtn.textContent = 'Agregar Producto';
+            cancelEditBtn.classList.add('hidden');
+        }
+
+        function clearProductForm() {
+            productNameInput.value = '';
+            productDescriptionInput.value = '';
+            productPriceInput.value = '';
+            productCategorySelect.value = '';
+        }
+
+        function deleteProduct(id) {
+            if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+                productos = productos.filter(prod => prod.id !== id);
+                guardarEnLocalStorage('productos', productos);
+                renderProducts();
+                renderAvailableProductsForOrder();
+                // If the deleted product was being edited, clear the form
+                if (editingProductId === id) {
+                    cancelEdit();
+                }
+            }
+        }
+
+        // --- Order Management ---
+
+        function renderAvailableProductsForOrder() {
+            availableProductsDiv.innerHTML = '';
+            if (productos.length === 0) {
+                availableProductsDiv.innerHTML = '<p class="text-gray-500">No hay productos registrados. Agrega productos en la pestaña "Gestión de Productos".</p>';
+                return;
+            }
+            productos.forEach(prod => {
+                const productCard = document.createElement('div');
+                productCard.className = 'flex justify-between items-center bg-gray-100 p-3 rounded-md shadow-sm';
+                productCard.innerHTML = `
+                    <div>
+                        <p class="font-semibold text-gray-800">${prod.nombre}</p>
+                        <p class="text-sm text-gray-600">$${prod.precio.toFixed(2)}</p>
+                    </div>
+                    <button class="btn-primary text-sm py-1 px-3" data-product-id="${prod.id}">Agregar</button>
+                `;
+                availableProductsDiv.appendChild(productCard);
+            });
+
+            // Add event listeners to "Add" buttons
+            availableProductsDiv.querySelectorAll('button').forEach(button => {
+                button.onclick = (event) => {
+                    const productId = event.target.dataset.productId;
+                    addToOrder(productId);
+                };
+            });
+        }
+
+        function addToOrder(productId) {
+            const product = productos.find(p => p.id === productId);
+            if (product) {
+                const existingItem = currentOrder.items.find(item => item.product.id === productId);
+                if (existingItem) {
+                    existingItem.cantidad++;
+                } else {
+                    currentOrder.items.push({ product: product, cantidad: 1 });
+                }
+                updateCurrentOrderDisplay();
+            }
+        }
+
+        function updateCurrentOrderDisplay() {
+            currentOrderItemsDiv.innerHTML = '';
+            currentOrder.total = 0;
+            if (currentOrder.items.length === 0) {
+                currentOrderItemsDiv.innerHTML = '<p class="text-gray-500">No hay productos en el pedido.</p>';
+                currentOrderTotalSpan.textContent = '$0.00';
+                return;
+            }
+
+            currentOrder.items.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'flex justify-between items-center bg-white p-2 rounded-md shadow-sm';
+                itemDiv.innerHTML = `
+                    <span class="text-gray-700">${item.cantidad}x ${item.product.nombre}</span>
+                    <span class="font-medium text-gray-800">$${(item.cantidad * item.product.precio).toFixed(2)}</span>
+                    <button class="btn-danger text-xs py-0.5 px-1.5 rounded-md" data-index="${index}">X</button>
+                `;
+                currentOrderItemsDiv.appendChild(itemDiv);
+                currentOrder.total += item.cantidad * item.product.precio;
+            });
+            currentOrderTotalSpan.textContent = `$${currentOrder.total.toFixed(2)}`;
+
+            // Add event listeners to remove items from the order
+            currentOrderItemsDiv.querySelectorAll('button').forEach(button => {
+                button.onclick = (event) => {
+                    const indexToRemove = parseInt(event.target.dataset.index);
+                    currentOrder.items.splice(indexToRemove, 1);
+                    updateCurrentOrderDisplay();
+                };
+            });
+        }
+
+        function placeOrder() {
+            if (currentOrder.items.length === 0) {
+                alert('El pedido está vacío. Por favor, agrega productos.');
+                return;
+            }
+
+            const newOrder = {
+                id: 'pedido_' + Date.now(),
+                fecha: new Date().toISOString(),
+                items: JSON.parse(JSON.stringify(currentOrder.items)), // Deep copy
+                total: currentOrder.total,
+                estado: 'Pendiente' // 'Pendiente', 'En Proceso', 'Entregado'
+            };
+
+            pedidos.push(newOrder);
+            guardarEnLocalStorage('pedidos', pedidos);
+            renderAllOrders();
+
+            // Reset current order
+            currentOrder.items = [];
+            currentOrder.total = 0;
+            updateCurrentOrderDisplay();
+            alert(`Pedido #${newOrder.id.split('_')[1]} realizado y en cola.`);
+        }
+
+        function renderAllOrders() {
+            pendingOrdersDiv.innerHTML = '';
+            inProcessOrdersDiv.innerHTML = '';
+            deliveredOrdersDiv.innerHTML = '';
+
+            // Sort orders by date, oldest first
+            const sortedPedidos = [...pedidos].sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+
+            sortedPedidos.forEach(order => {
+                const orderCard = document.createElement('div');
+                orderCard.className = 'card p-4 mb-2';
+                orderCard.innerHTML = `
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Pedido #${order.id.split('_')[1]}</h4>
+                    <p class="text-sm text-gray-600">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mb-2">
+                        ${order.items.map(item => `<li>${item.cantidad}x ${item.product.nombre} ($${(item.cantidad * item.product.precio).toFixed(2)})</li>`).join('')}
+                    </ul>
+                    <p class="font-semibold text-gray-800">Total: $${order.total.toFixed(2)}</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        ${order.estado === 'Pendiente' ?
+                            `<button class="btn-warning text-sm py-1 px-2" onclick="changeOrderStatus('${order.id}', 'En Proceso')">Enviar a Proceso</button>` : ''}
+                        ${order.estado === 'En Proceso' ?
+                            `<button class="btn-success text-sm py-1 px-2" onclick="changeOrderStatus('${order.id}', 'Entregado')">Marcar Entregado</button>` : ''}
+                        ${order.estado === 'Entregado' ?
+                            `<button class="btn-primary text-sm py-1 px-2" onclick="completeSale('${order.id}')">Cobrar y Finalizar</button>` : ''}
+                        <button class="btn-danger text-sm py-1 px-2" onclick="cancelOrder('${order.id}')">Cancelar</button>
+                    </div>
+                `;
+
+                if (order.estado === 'Pendiente') {
+                    pendingOrdersDiv.appendChild(orderCard);
+                } else if (order.estado === 'En Proceso') {
+                    inProcessOrdersDiv.appendChild(orderCard);
+                } else if (order.estado === 'Entregado') {
+                    deliveredOrdersDiv.appendChild(orderCard);
+                }
+            });
+            // Display message if no orders in a section
+            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos pendientes.</p>';
+            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos en proceso.</p>';
+            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos entregados.</p>';
+        }
+
+        function changeOrderStatus(orderId, newStatus) {
+            const orderIndex = pedidos.findIndex(o => o.id === orderId);
+            if (orderIndex !== -1) {
+                pedidos[orderIndex].estado = newStatus;
+                guardarEnLocalStorage('pedidos', pedidos);
+                renderAllOrders();
+            }
+        }
+
+        function completeSale(orderId) {
+            const orderIndex = pedidos.findIndex(o => o.id === orderId);
+            if (orderIndex !== -1) {
+                const completedOrder = pedidos[orderIndex];
+
+                // Simulate payment method selection
+                const metodoPago = prompt("Método de pago (Efectivo/Tarjeta):", "Efectivo");
+                if (!metodoPago) {
+                    alert("Cobro cancelado.");
+                    return;
+                }
+
+                const nuevaVenta = {
+                    id: 'venta_' + Date.now(),
+                    fecha: completedOrder.fecha, // Use original order date
+                    total: completedOrder.total,
+                    metodoPago: metodoPago,
+                    productosVendidos: completedOrder.items.map(item => ({
+                        id: item.product.id,
+                        nombre: item.product.nombre,
+                        cantidad: item.cantidad,
+                        precioUnitario: item.product.precio
+                    }))
+                };
+
+                ventas.push(nuevaVenta);
+                guardarEnLocalStorage('ventas', ventas);
+
+                // Remove the order from the active orders list
+                pedidos.splice(orderIndex, 1);
+                guardarEnLocalStorage('pedidos', pedidos);
+
+                renderAllOrders();
+                alert(`Venta de $${nuevaVenta.total.toFixed(2)} registrada exitosamente.`);
+            }
+        }
+
+        function cancelOrder(orderId) {
+            if (confirm('¿Estás seguro de que quieres cancelar este pedido?')) {
+                pedidos = pedidos.filter(order => order.id !== orderId);
+                guardarEnLocalStorage('pedidos', pedidos);
+                renderAllOrders();
+                alert('Pedido cancelado.');
+            }
+        }
+
+        // --- Sales Reports ---
+
+        function generateMonthlyReport() {
+            const mes = parseInt(reportMonthSelect.value);
+            const anio = parseInt(reportYearInput.value);
+
+            if (isNaN(mes) || isNaN(anio)) {
+                alert('Por favor, selecciona un mes y un año válidos.');
+                return;
+            }
+
+            const todasLasVentas = obtenerDeLocalStorage('ventas');
+            const ventasDelMes = todasLasVentas.filter(venta => {
+                const fechaVenta = new Date(venta.fecha);
+                return fechaVenta.getMonth() + 1 === mes && fechaVenta.getFullYear() === anio;
+            });
+
+            let totalIngresos = 0;
+            let cantidadVentas = ventasDelMes.length;
+            let productosMasVendidos = {}; // { "Product Name": totalQuantitySold }
+
+            ventasDelMes.forEach(venta => {
+                totalIngresos += venta.total;
+                venta.productosVendidos.forEach(item => {
+                    productosMasVendidos[item.nombre] = (productosMasVendidos[item.nombre] || 0) + item.cantidad;
+                });
+            });
+
+            const topProducts = Object.entries(productosMasVendidos)
+                .sort(([, a], [, b]) => b - a) // Sort from highest to lowest quantity
+                .map(([nombre, cantidad]) => ({ nombre, cantidad }));
+
+            renderReport(totalIngresos, cantidadVentas, topProducts, ventasDelMes);
+        }
+
+        function renderReport(totalIngresos, cantidadVentas, topProducts, ventasDetalle) {
+            reportTotalSalesP.textContent = `Total de Ingresos: $${totalIngresos.toFixed(2)}`;
+            reportNumSalesP.textContent = `Número de Ventas: ${cantidadVentas}`;
+
+            topProductsListUl.innerHTML = '';
+            if (topProducts.length > 0) {
+                topProducts.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.nombre}: ${item.cantidad} unidades`;
+                    topProductsListUl.appendChild(li);
+                });
+            } else {
+                topProductsListUl.innerHTML = '<li class="text-gray-500">No hay productos vendidos en este período.</li>';
+            }
+
+
+            salesDetailTableBody.innerHTML = '';
+            if (ventasDetalle.length > 0) {
+                ventasDetalle.forEach(venta => {
+                    const row = salesDetailTableBody.insertRow();
+                    row.insertCell().textContent = venta.id.split('_')[1];
+                    row.insertCell().textContent = new Date(venta.fecha).toLocaleString();
+                    row.insertCell().textContent = `$${venta.total.toFixed(2)}`;
+                    row.insertCell().textContent = venta.metodoPago;
+                    const productosCell = row.insertCell();
+                    productosCell.innerHTML = venta.productosVendidos.map(p => `${p.cantidad}x ${p.nombre}`).join('<br>');
+                });
+            } else {
+                const row = salesDetailTableBody.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 5;
+                cell.textContent = 'No hay ventas registradas para este período.';
+                cell.className = 'text-center text-gray-500 py-4';
+            }
+        }
+
+        // --- Export/Import Functions ---
+        function exportSalesData() {
+            const data = obtenerDeLocalStorage('ventas');
+            if (data.length === 0) {
+                alert('No hay datos de ventas para exportar.');
+                return;
+            }
+            const jsonString = JSON.stringify(data, null, 2); // Pretty print JSON
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ventas_backup_${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            alert('Datos de ventas exportados exitosamente.');
+        }
+
+        function importSalesData(event) {
+            const file = event.target.files[0];
+            if (!file) {
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    if (!Array.isArray(importedData)) {
+                        throw new Error('El archivo JSON no contiene un array válido de ventas.');
+                    }
+                    // Optional: Add more robust validation for the structure of importedData
+                    if (!confirm('¿Estás seguro de que quieres importar estos datos? Esto sobrescribirá tus ventas actuales.')) {
+                        return;
+                    }
+                    ventas = importedData;
+                    guardarEnLocalStorage('ventas', ventas);
+                    alert('Datos de ventas importados exitosamente. Genera un nuevo reporte para ver los cambios.');
+                    // Re-render report with new data
+                    generateMonthlyReport();
+                } catch (error) {
+                    console.error("Error al importar datos:", error);
+                    alert(`Error al importar el archivo: ${error.message}. Asegúrate de que sea un archivo JSON válido.`);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+
+        // --- Event Listeners ---
+        saveProductBtn.addEventListener('click', saveProduct); // Changed from addProductBtn
+        cancelEditBtn.addEventListener('click', cancelEdit);
+        addCategoryBtn.addEventListener('click', addCategory);
+        placeOrderBtn.addEventListener('click', placeOrder);
+        generateReportBtn.addEventListener('click', generateMonthlyReport);
+
+        // Export/Import Event Listeners
+        exportSalesBtn.addEventListener('click', exportSalesData);
+        importSalesBtn.addEventListener('click', () => importSalesFile.click()); // Trigger file input click
+        importSalesFile.addEventListener('change', importSalesData);
+
+        // Initialize the app when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
