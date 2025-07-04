@@ -1,0 +1,34 @@
+// Game card styles converted to SASS
+.content-section {
+  @include glass-effect;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+
+
+  h2 {
+    color: $color-bg-dark;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p{
+    color: $color-gray;
+  }
+
+  .lead{
+    color: $color-bg-dark;
+    font-weight: 600;
+  }
+
+
+  ul{
+    color: $color-gray;
+  }
+
+}

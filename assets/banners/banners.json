@@ -1,1 +1,46 @@
-[{"titulo":"¡Feliz cumpleaños TEXAS!","descripcion":"Que tu día esté lleno de energía Aeos, tus combos sean perfectos y que ningún equipo rival pueda detenerte. 🕹️⚡","imagen":"/assets/backgrounds/CUMPLEAÑOS.webp","activo":false,"fechaLimite":"2025-07-07","boton":{"texto":"texasspecwar","url":"https://www.twitch.tv/texasspecwar"}},{"titulo":"¡Feliz cumpleaños JohanFR38!","descripcion":"🕹️🔥 Hoy tu Unite Move se activa al 100%. ¡Felicidades, crack! A celebrar con estilo y en equipo. 🎉⚡","imagen":"/assets/backgrounds/lucario-cumpleaños-heroe.webp","activo":true,"fechaLimite":"2025-07-07","boton":{"texto":"","url":""}},{"titulo":"¡STAMINA CAMPEÓN!","descripcion":"REGI - YIIINN - RANMA - PACHY - FRANK - TOKITO - FRANK4EVER,\nel escuadrón logró dominar la competencia y dejar huella en el campo de batalla de Pokémon Unite.","imagen":"/assets/backgrounds/stamina-campeon-junio2025.webp","activo":true,"fechaLimite":null,"boton":{"texto":"Copa XF AD Gaming","url":"/copa-xforce-ad-gaming-edition"}},{"titulo":"¡Plaga Campeón!","descripcion":"🔥 Su victoria no solo representa la gloria, sino el nivel élite que caracteriza a los mejores equipos de la escena competitiva.","imagen":"/assets/backgrounds/plaga-campeon-junio2025.webp","activo":true,"fechaLimite":null,"boton":{"texto":"","url":""}}]
+[
+    {
+        "titulo": "¡Feliz cumpleaños TEXAS!",
+        "descripcion": "Que tu día esté lleno de energía Aeos, tus combos sean perfectos y que ningún equipo rival pueda detenerte. 🕹️⚡",
+        "imagen": "/assets/backgrounds/CUMPLEAÑOS.webp",
+        "activo": false,
+        "fechaLimite": "2025-07-07",
+        "boton": {
+            "texto": "texasspecwar",
+            "url": "https://www.twitch.tv/texasspecwar"
+        }
+    },
+    {
+        "titulo": "¡Feliz cumpleaños JohanFR38!",
+        "descripcion": "🕹️🔥 Hoy tu Unite Move se activa al 100%. ¡Felicidades, crack! A celebrar con estilo y en equipo. 🎉⚡",
+        "imagen": "/assets/backgrounds/lucario-cumpleaños-heroe.webp",
+        "activo": true,
+        "fechaLimite": "2025-07-07",
+        "boton": {
+            "texto": "",
+            "url": ""
+        }
+    },
+    {
+        "titulo": "¡STAMINA CAMPEÓN!",
+        "descripcion": "REGI - YIIINN - RANMA - PACHY - FRANK - TOKITO - FRANK4EVER,\nel escuadrón logró dominar la competencia y dejar huella en el campo de batalla de Pokémon Unite.",
+        "imagen": "/assets/backgrounds/stamina-campeon-junio2025.webp",
+        "activo": true,
+        "fechaLimite": null,
+        "boton": {
+            "texto": "Copa XF AD Gaming",
+            "url": "/copa-xforce-ad-gaming-edition"
+        }
+    },
+    {
+        "titulo": "¡Plaga Campeón!",
+        "descripcion": "🔥 Su victoria no solo representa la gloria, sino el nivel élite que caracteriza a los mejores equipos de la escena competitiva.",
+        "imagen": "/assets/backgrounds/plaga-campeon-junio2025.webp",
+        "activo": true,
+        "fechaLimite": null,
+        "boton": {
+            "texto": "",
+            "url": ""
+        }
+    }
+]
