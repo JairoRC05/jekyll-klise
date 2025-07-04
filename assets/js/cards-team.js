@@ -7,7 +7,7 @@ let tarjetas = []; // Reutilizamos las tarjetas cargadas
 let yaCargado = false;
 
 const obtenerGrupoPorAncho = (ancho) => {
-  if (ancho < 576) return 2;    // Móvil
+  if (ancho < 576) return 1;    // Móvil
   if (ancho < 992) return 4;    // Tablet
   return 6;                     // Desktop
 };
@@ -47,7 +47,7 @@ const cargarEquipos = async () => {
       //   continue;
 
       const card = `
-        <div class="col-6 col-md-3 col-lg-2 d-flex justify-content-center">
+        <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center">
           <a href="${equipo.link}">  
         <div class="card-round-roster">
             <div class="card-round-team">
