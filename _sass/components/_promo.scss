@@ -1,6 +1,4 @@
-// Promo banner styles converted to SASS
 .banner-promo-section {
-  @include glass-effect-indigo;
   color: rgba(255, 255, 255, 0.887);
   padding: 3rem 0;
   text-align: center;
@@ -8,7 +6,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   .banner-image {
     position: absolute;

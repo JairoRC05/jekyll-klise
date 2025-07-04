@@ -86,6 +86,7 @@ title: INICIO | NACIÓN UNITE
   </div>
 
   <div class="main-content">
+    
     <div class="top-bar">
       <h1 class="m-0 exo-style">{{ page.title | default: "NACIÓN UNITE" }}</h1>
       <div class="flex-grow-1"></div>
@@ -112,16 +113,22 @@ title: INICIO | NACIÓN UNITE
           </button>
         </div>
 
+        <div class="banner-promo-section indigo">
+          <canvas class="stars" id="starIndigo"></canvas>
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="Imagen decorativa" class="banner-image">
+          <div class="banner-content">
+            <h4>¡Inscripciones Abiertas!</h4>
+            <p class="lead">Liga Indigo - Temporada Julio</p>
+            <div class="timer" id="countdown">Cargando cuenta regresiva...</div>
+            <a href="/reglamento-liga-indigo" class="btn btn-warning-custom mt-4">Inscribirme Ahora</a>
+          </div>
+        </div>
+
 
         <div class="games-section">
-          <h3>Equipos inscritos
-
-          </h3>
-
+          <h3>Equipos inscritos</h3>
           <div id="carouselEquipos" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-            <div class="carousel-inner" id="contenedor-cards">
-   
-            </div>
+            <div class="carousel-inner" id="contenedor-cards"></div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselEquipos" data-bs-slide="prev">
               <span class="carousel-control-prev-icon"></span>
@@ -134,26 +141,13 @@ title: INICIO | NACIÓN UNITE
 
         </div>
 
-
-
-        <div class="banner-promo-section ">
-          <canvas class="stars" id="starIndigo"></canvas>
-          <img src="/assets/logos/LIGA-INDIGO.webp" alt="Imagen decorativa" class="banner-image">
-          <div class="banner-content">
-            <h4>¡Inscripciones Abiertas!</h4>
-            <p class="lead">Liga Indigo - Temporada Julio</p>
-            <div class="timer" id="countdown">Cargando cuenta regresiva...</div>
-            <a href="/reglamento-liga-indigo" class="btn btn-warning-custom mt-4">Inscribirme Ahora</a>
-          </div>
-        </div>
-
-        <div class="discount-banner text-center">
+        <!-- <div class="discount-banner text-center">
           <h4>¡Participa en Nuestro Sorteo Mensual!</h4>
           <p>En los canales de Twitch</p>
           <a class="btn btn-light-custom" href="{{ site.links_navegacion.sorteos }}">Ver Sorteos Activos
             <i class="bi bi-arrow-right"></i>
           </a>
-        </div>
+        </div> -->
 
       </div>
 

@@ -61,10 +61,11 @@
 
 }
 
-// Responsive sidebar (bottom nav)
+
 @media (max-width: 991.98px) {
   .sidebar {
-    background: rgba(255, 225, 0, 0.869);
+    background: none;
+    backdrop-filter: none;
     width: 100%;
     height: auto;
     position: fixed;
@@ -74,14 +75,21 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 0.5rem 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: none;
-    border-right: none;
+    border: none;
     z-index: 1030;
     overflow-y: hidden;
+    box-shadow: none;
 
     .navbar-brand {
       display: none;
+    }
+
+    .nav{
+      background: #fff;
+      backdrop-filter: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 0.5rem 0;
     }
 
     .nav-link {
@@ -96,7 +104,7 @@
       }
 
       span {
-        display: block;
+        display: none;
       }
     }
   }
