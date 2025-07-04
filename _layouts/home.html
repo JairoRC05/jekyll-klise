@@ -115,18 +115,23 @@ title: INICIO | NACIÓN UNITE
 
         <div class="games-section">
           <h3>Equipos inscritos
-            <div class="arrow-buttons">
-              <button class="btn" id="slide-left"><i class="bi bi-chevron-left"></i></button>
-              <button class="btn" id="slide-right"><i class="bi bi-chevron-right"></i></button>
-            </div>
+
           </h3>
 
-          <!-- Carrusel horizontal -->
-          <div class="cards-carousel-wrapper overflow-hidden">
-            <div class="cards-carousel d-flex flex-nowrap gap-3 px-2" id="contenedor-cards">
-             
+          <div id="carouselEquipos" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner" id="contenedor-cards">
+   
             </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEquipos" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEquipos" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
           </div>
+
         </div>
 
 
@@ -152,7 +157,7 @@ title: INICIO | NACIÓN UNITE
 
       </div>
 
-    <div class="daily-results-section">
+      <div class="daily-results-section">
         <h5>Partidos del Día</h5>
         <div class="results-list">
           <div class="match-item">
@@ -163,7 +168,7 @@ title: INICIO | NACIÓN UNITE
 
         <h5 class="mt-4">Pick-Rate</h5>
 
-      </div> 
+      </div>
     </div>
   </div>
 

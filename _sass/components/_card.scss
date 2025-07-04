@@ -42,7 +42,7 @@
     //   left: 5%;
     // }
 
-    a img {
+    img {
       width: 150px;
       margin-bottom: 30px;
 
@@ -65,12 +65,12 @@
     padding: 15px;
     color: #fff !important;
     border-radius: 0 0 10px 10px;
-    background: linear-gradient(0deg,
-        rgba(4, 0, 0, 1) 0%,
-        rgba(2, 0, 0, 1) 43%,
-        rgba(0, 0, 0, 0.8) 64%,
-        rgba(0, 0, 0, 0.3) 84%,
-        rgba(0, 0, 0, 0) 100%);
+    // background: linear-gradient(0deg,
+    //     rgba(4, 0, 0, 1) 0%,
+    //     rgba(2, 0, 0, 1) 43%,
+    //     rgba(0, 0, 0, 0.8) 64%,
+    //     rgba(0, 0, 0, 0.3) 84%,
+    //     rgba(0, 0, 0, 0) 100%);
 
     // @include respond-to(md) {
     //   padding: 5px;
@@ -176,24 +176,7 @@
 
 }
 
-.cards-carousel {
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-  overflow: hidden;
-  max-width: 1200px;
-
-  @include respond-to(sm) {
-       max-width: 300px;
-    }
-
-
-
-  .card-team {
-    min-width: 180px;
-    flex: 0 0 auto;
-  }
+.card-round-roster {
+  max-width: 180px;
+  width: 100%;
 }

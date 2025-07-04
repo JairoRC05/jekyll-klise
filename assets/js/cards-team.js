@@ -1,11 +1,39 @@
 const rutaTemporada = "/assets/temporadas/julio2025";
 
-const truncateString = (str, num) => {
-  return str.length > num ? str.slice(0, num) + "..." : str;
+const truncateString = (str, num) =>
+  str.length > num ? str.slice(0, num) + "..." : str;
+
+let tarjetas = []; // Reutilizamos las tarjetas cargadas
+let yaCargado = false;
+
+const obtenerGrupoPorAncho = (ancho) => {
+  if (ancho < 576) return 2;    // Móvil
+  if (ancho < 992) return 4;    // Tablet
+  return 6;                     // Desktop
+};
+
+const renderizarCarrusel = () => {
+  const contenedor = document.getElementById("contenedor-cards");
+  contenedor.innerHTML = ""; // Limpia slides previos
+
+  const porSlide = obtenerGrupoPorAncho(window.innerWidth);
+
+  for (let i = 0; i < tarjetas.length; i += porSlide) {
+    const grupo = tarjetas.slice(i, i + porSlide).join("");
+    const slide = `
+      <div class="carousel-item ${i === 0 ? "active" : ""}">
+        <div class="row justify-content-center">
+          ${grupo}
+        </div>
+      </div>
+    `;
+    contenedor.insertAdjacentHTML("beforeend", slide);
+  }
 };
 
 const cargarEquipos = async () => {
-  const contenedor = document.getElementById("contenedor-cards");
+  if (yaCargado) return; // Evita recargar desde red
+  yaCargado = true;
 
   try {
     const indexResp = await fetch(`${rutaTemporada}/equipos-index.json`);
@@ -15,15 +43,15 @@ const cargarEquipos = async () => {
       const res = await fetch(`${rutaTemporada}/${archivo}`);
       const equipo = await res.json();
 
-      // if (!Array.isArray(equipo.jugadores) || equipo.jugadores.length === 0) continue;
+      // if (!Array.isArray(equipo.jugadores) || equipo.jugadores.length === 0)
+      //   continue;
 
-      const cardHTML = `
-        <div class="card-team me-3" style="min-width: 180px;">
-          <div class="card-round-roster">
+      const card = `
+        <div class="col-6 col-md-3 col-lg-2 d-flex justify-content-center">
+          <a href="${equipo.link}">  
+        <div class="card-round-roster">
             <div class="card-round-team">
-              <a href="${equipo.link}">
                 <img src="/assets/logos/${equipo.tag}.webp" alt="${equipo.team}" class="img-fluid">
-              </a>
             </div>
             <div class="card-round-title">
               <h2>${truncateString(equipo.team, 12)}</h2>
@@ -37,12 +65,26 @@ const cargarEquipos = async () => {
               </div>
             </div>
           </div>
+         </a>
         </div>
       `;
 
-      contenedor.insertAdjacentHTML("beforeend", cardHTML);
+      tarjetas.push(card);
     }
+
+    renderizarCarrusel();
+
   } catch (error) {
     console.error("Error al cargar equipos:", error);
   }
 };
+
+// Evento inicial
+document.addEventListener("DOMContentLoaded", async () => {
+  await cargarEquipos();
+});
+
+// Reorganiza las tarjetas al redimensionar
+window.addEventListener("resize", () => {
+  renderizarCarrusel();
+});
