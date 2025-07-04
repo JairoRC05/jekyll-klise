@@ -26,3 +26,17 @@
     width: 65px;
   }
 }
+
+.star-active{
+  border-radius: 30px;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  a{
+    img{
+        filter: grayscale(90%) brightness(100%) contrast(100%) !important;
+  }
+    }
+  }
+
