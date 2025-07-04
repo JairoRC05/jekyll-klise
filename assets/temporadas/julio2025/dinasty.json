@@ -70,10 +70,15 @@
       "teamTag": "DINASTY"
     },
     {
-      "nickname": "RNT・TVPablo",
+      "nickname": "龍・TVPablo",
       "ID": "843A4E0",
       "avatar": "male1"
     }
   ],
-  "posicionDesempate": 0
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
 }

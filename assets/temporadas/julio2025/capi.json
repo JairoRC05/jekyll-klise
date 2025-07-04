@@ -24,6 +24,34 @@
     "M11": "0",
     "M12": "0"
   },
-  "jugadores": [],
+  "jugadores": [
+    {
+      "nickname": "RNT・DrFix銀",
+      "ID": "EFE5E97",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "EK・Ikal",
+      "ID": "TMRR3XN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "RNT・Pikito",
+      "ID": "2NKE093",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ČryptoX",
+      "ID": "A2AG7X1",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "RNT・Zulo銀",
+      "ID": "7759CK5",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    }
+  ],
   "posicionDesempate": false
 }

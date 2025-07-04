@@ -24,5 +24,36 @@
     "M11": "0",
     "M12": "0"
   },
-  "jugadores": []
+  "jugadores": [
+    {
+      "nickname": "Elröhir",
+      "ID": "FLM92",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "・Hashi霧・",
+      "ID": "X795T5",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "FayraTTV",
+      "ID": "T646RF",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "Shura.山羊座",
+      "ID": "9KNN1K",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Dēnnis",
+      "ID": "CP31AA",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "rainbowdash",
+      "ID": "6507KQ",
+      "avatar": "male1"
+    }
+  ]
 }
