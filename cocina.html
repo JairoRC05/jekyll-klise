@@ -1,17 +1,12 @@
----
-layout:
-home: true
-title: INICIO | NACIÓN UNITE
-permalink: /antojitos-salu
----
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTOJITOS SALU</title>
+    <title>Sistema de Cocina Rápida (con Pestañas)</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -21,44 +16,44 @@ permalink: /antojitos-salu
         }
         .card {
             background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-            padding: 1.5rem; /* p-6 */
-            margin-bottom: 1.5rem; /* mb-6 */
+            border-radius: 0.75rem; /* rounded */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow */
+            padding: 1.5rem; /* p-4 */
+            margin-bottom: 1.5rem; /* mb-4 */
         }
-        .btn-primary {
-            @apply bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out;
+        .btn btn-primary {
+            @apply bg-primary text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
         }
-        .btn-secondary {
-            @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-md hover:bg-gray-400 transition duration-200 ease-in-out;
+        .btn btn-secondary {
+            @apply bg-gray-300 text-dark px-3 py-2 rounded shadow hover:bg-gray-400 transition duration-200 ease-in-out;
         }
-        .btn-success {
-            @apply bg-green-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 transition duration-200 ease-in-out;
+        .btn btn-success {
+            @apply bg-success text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
         }
-        .btn-warning {
-            @apply bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-200 ease-in-out;
+        .btn btn-warning {
+            @apply bg-warning text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
         }
-        .btn-danger {
-            @apply bg-red-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition duration-200 ease-in-out;
+        .btn btn-danger {
+            @apply bg-danger text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
         }
         input[type="text"], input[type="number"], select {
-            @apply p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full;
+            @apply p-2 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 block w-100;
         }
         table {
-            @apply w-full text-left border-collapse;
+            @apply w-100 text-start border-collapse;
         }
         th, td {
             @apply p-3 border-b border-gray-200;
         }
         th {
-            @apply bg-gray-100 font-semibold text-gray-700;
+            @apply bg-light fw-semibold text-body;
         }
-        /* Estilos para las pestañas */
+        /* Estilos para las pestañas principales */
         .tab-button {
-            @apply px-6 py-3 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition duration-200 ease-in-out;
+            @apply px-6 py-3 fs-5 fw-medium text-body border-b-2 border-transparent hover:text-primary hover:border-blue-600 transition duration-200 ease-in-out;
         }
         .tab-button.active {
-            @apply text-blue-600 border-blue-600;
+            @apply text-primary border-blue-600;
         }
         .tab-content {
             display: none;
@@ -66,17 +61,61 @@ permalink: /antojitos-salu
         .tab-content.active {
             display: block;
         }
+
+        /* Estilos para las pestañas anidadas (dentro de Gestión de Pedidos) */
+        .order-tab-button {
+            @apply px-3 py-2 text-base fw-medium text-muted border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500 transition duration-200 ease-in-out;
+        }
+        .order-tab-button.active {
+            @apply text-blue-500 border-blue-500;
+        }
+        .order-tab-content {
+            display: none;
+        }
+        .order-tab-content.active {
+            display: block;
+        }
         .hidden {
             display: none;
         }
+
+        /* Estilos para las pestañas de categoría de productos dentro de "Crear Nuevo Pedido" */
+        .product-category-tab-button {
+            @apply px-3 py-2 small fw-medium text-muted border-b-2 border-transparent hover:text-success hover:border-green-600 transition duration-200 ease-in-out;
+        }
+        .product-category-tab-button.active {
+            @apply text-success border-green-600;
+        }
+        .product-category-tab-content {
+            display: none;
+        }
+        .product-category-tab-content.active {
+            display: block;
+        }
+        /* Styles for product cards */
+        .product-card {
+            @apply bg-white p-3 rounded shadow d-flex d-flex-column justify-content-between border border-gray-100 hover:shadow-lg transition duration-200 ease-in-out; /* Added border and hover shadow */
+        }
+        .quantity-control {
+            @apply d-flex align-items-center justify-content-center space-x-2 mt-3;
+        }
+        .quantity-btn {
+            @apply bg-gray-200 text-body btn-sm btn-sm rounded-full d-flex align-items-center justify-content-center fs-5 fw-bold hover:bg-gray-300;
+        }
+        .quantity-input {
+            @apply w-16 text-center border border-gray-300 rounded py-1;
+        }
+        .add-to-order-btn-icon {
+            @apply d-flex align-items-center justify-content-center gap-2; /* For icon and text alignment */
+        }
     </style>
 </head>
-<body class="p-4">
-    <div class="container mx-auto">
-        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Sistema de Cocina Rápida</h1>
+<body class="p-3">
+    <div class="container">
+        <h1 class="fs-1 fw-bold text-center text-dark mb-8">Sistema de Cocina Rápida</h1>
 
         <!-- Tab controls -->
-        <div class="flex border-b border-gray-200 mb-6">
+        <div class="d-flex border-b border-gray-200 mb-4">
             <button class="tab-button active" data-tab="products">Gestión de Productos</button>
             <button class="tab-button" data-tab="orders">Gestión de Pedidos</button>
             <button class="tab-button" data-tab="reports">Reportes de Ventas</button>
@@ -84,57 +123,65 @@ permalink: /antojitos-salu
 
         <!-- Tab content: Product and Category Management -->
         <div id="products" class="tab-content active card">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Productos y Categorías</h2>
+            <h2 class="fs-3 fw-semibold text-body mb-3">Gestión de Productos y Categorías</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="row g-4 mb-4">
                 <!-- Form to add/edit product -->
                 <div>
-                    <h3 class="text-xl font-medium text-gray-600 mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
-                    <div class="space-y-4">
+                    <h3 class="fs-4 fw-medium text-muted mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
+                    <div class="mb-3">
                         <div>
-                            <label for="productName" class="block text-sm font-medium text-gray-700">Nombre del Producto</label>
+                            <label for="productName" class="block small fw-medium text-body">Nombre del Producto</label>
                             <input type="text" id="productName" placeholder="Ej: Hamburguesa Clásica">
                         </div>
                         <div>
-                            <label for="productDescription" class="block text-sm font-medium text-gray-700">Descripción</label>
+                            <label for="productDescription" class="block small fw-medium text-body">Descripción</label>
                             <input type="text" id="productDescription" placeholder="Ej: Carne, lechuga, tomate">
                         </div>
                         <div>
-                            <label for="productPrice" class="block text-sm font-medium text-gray-700">Precio</label>
+                            <label for="productPrice" class="block small fw-medium text-body">Precio</label>
                             <input type="number" id="productPrice" step="0.01" placeholder="Ej: 85.00">
                         </div>
                         <div>
-                            <label for="productCategory" class="block text-sm font-medium text-gray-700">Categoría</label>
+                            <label for="productCategory" class="block small fw-medium text-body">Categoría</label>
                             <select id="productCategory">
                                 </select>
                         </div>
-                        <div class="flex gap-2">
-                            <button id="saveProductBtn" class="btn-primary w-full">Agregar Producto</button>
-                            <button id="cancelEditBtn" class="btn-secondary w-full hidden">Cancelar Edición</button>
+                        <div>
+                            <label class="block small fw-medium text-body mt-3">Modificadores (Opcional)</label>
+                            <div id="modifiersContainer" class="space-y-2 border border-gray-200 p-3 rounded bg-light">
+                                <!-- Modifier inputs will be added here dynamically -->
+                                <p id="noModifiersMessage" class="text-secondary small">No hay modificadores. Haz clic en "Agregar Modificador".</p>
+                            </div>
+                            <button id="addModifierInputBtn" class="btn btn-secondary small mt-2">Agregar Modificador</button>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button id="saveProductBtn" class="btn btn-primary w-100">Agregar Producto</button>
+                            <button id="cancelEditBtn" class="btn btn-secondary w-100 hidden">Cancelar Edición</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form to add category -->
                 <div>
-                    <h3 class="text-xl font-medium text-gray-600 mb-3">Agregar Nueva Categoría</h3>
-                    <div class="space-y-4">
+                    <h3 class="fs-4 fw-medium text-muted mb-3">Agregar Nueva Categoría</h3>
+                    <div class="mb-3">
                         <div>
-                            <label for="categoryName" class="block text-sm font-medium text-gray-700">Nombre de la Categoría</label>
+                            <label for="categoryName" class="block small fw-medium text-body">Nombre de la Categoría</label>
                             <input type="text" id="categoryName" placeholder="Ej: Bebidas">
                         </div>
-                        <button id="addCategoryBtn" class="btn-secondary w-full">Agregar Categoría</button>
+                        <button id="addCategoryBtn" class="btn btn-secondary w-100">Agregar Categoría</button>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-600 mb-3 mt-6">Categorías Existentes</h3>
-                    <ul id="categoryList" class="list-disc list-inside text-gray-700">
+                    <h3 class="fs-4 fw-medium text-muted mb-3 mt-4">Categorías Existentes</h3>
+                    <ul id="categoryList" class="list-disc list-inside text-body">
                         </ul>
                 </div>
             </div>
 
             <!-- Existing products table -->
-            <h3 class="text-xl font-medium text-gray-600 mb-3">Productos Existentes</h3>
-            <div class="overflow-x-auto rounded-lg shadow-sm">
-                <table id="productsTable" class="min-w-full">
+            <h3 class="fs-4 fw-medium text-muted mb-3">Productos Existentes</h3>
+            <div class="table-responsive rounded shadow-sm">
+                <table id="productsTable" class="min-w-100">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -153,61 +200,82 @@ permalink: /antojitos-salu
 
         <!-- Tab content: Order Management -->
         <div id="orders" class="tab-content card">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Pedidos</h2>
+            <h2 class="fs-3 fw-semibold text-body mb-3">Gestión de Pedidos</h2>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Create New Order -->
-                <div class="lg:col-span-1">
-                    <h3 class="text-xl font-medium text-gray-600 mb-3">Crear Nuevo Pedido</h3>
-                    <div class="card p-4">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Productos Disponibles</h4>
-                        <div id="availableProducts" class="grid grid-cols-1 gap-4 max-h-60 overflow-y-auto pr-2">
+            <!-- Nested Tab controls for Order Management -->
+            <div class="d-flex border-b border-gray-200 mb-4">
+                <button class="order-tab-button active" data-order-tab="create-order">Crear Nuevo Pedido</button>
+                <button class="order-tab-button" data-order-tab="pending-orders-tab">Pedidos Pendientes</button>
+                <button class="order-tab-button" data-order-tab="in-process-orders-tab">En Proceso</button>
+                <button class="order-tab-button" data-order-tab="delivered-orders-tab">Entregados</button>
+            </div>
+
+            <!-- Nested Tab content: Create New Order -->
+            <div id="create-order" class="order-tab-content active">
+                <div class="d-flex d-flex-column lg:d-flex-row gap-3">
+                    <!-- Productos Disponibles (80%) -->
+                    <div class="lg:w-4/5">
+                        <h3 class="fs-4 fw-medium text-muted mb-3">Productos Disponibles</h3>
+                        <div class="card p-3 h-100 d-flex d-flex-column">
+                            <!-- Product Category Tabs -->
+                            <div id="productCategoryTabs" class="d-flex border-b border-gray-200 mb-3 table-responsive">
+                                <!-- Category buttons will be rendered here -->
                             </div>
-                        <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-3">Pedido Actual</h4>
-                        <div id="currentOrderItems" class="space-y-2 max-h-40 overflow-y-auto pr-2 mb-4">
+                            <!-- Product List per Category -->
+                            <div id="productCategoryContent" class="d-flex-grow overflow-auto pr-2 row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+                                <!-- Products for the active category will be rendered here -->
+                                <p id="noProductsInCategoryMessage" class="text-secondary text-center py-4 hidden col-span-full">No hay productos en esta categoría.</p>
                             </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-lg font-bold">Total:</span>
-                            <span id="currentOrderTotal" class="text-lg font-bold">$0.00</span>
-                        </div>
-                        <button id="placeOrderBtn" class="btn-success w-full">Realizar Pedido</button>
-                    </div>
-                </div>
-
-                <!-- Pending Orders -->
-                <div class="lg:col-span-1">
-                    <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Pendientes</h3>
-                    <div id="pendingOrders" class="space-y-4 max-h-96 overflow-y-auto pr-2">
-                        </div>
-                </div>
-
-                <!-- In Process / Delivered Orders -->
-                <div class="lg:col-span-1">
-                    <h3 class="text-xl font-medium text-gray-600 mb-3">En Proceso / Entregados</h3>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-700 mb-2">En Proceso</h4>
-                            <div id="inProcessOrders" class="space-y-4 max-h-48 overflow-y-auto pr-2">
-                                </div>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-700 mb-2">Entregados (Pendiente de Cobro)</h4>
-                            <div id="deliveredOrders" class="space-y-4 max-h-48 overflow-y-auto pr-2">
-                                </div>
                         </div>
                     </div>
+
+                    <!-- Pedido Actual (20%) -->
+                    <div class="lg:w-1/5">
+                        <h3 class="fs-4 fw-medium text-muted mb-3">Pedido Actual</h3>
+                        <div class="card p-3 h-100 d-flex d-flex-column">
+                            <div id="currentOrderItems" class="space-y-2 d-flex-grow overflow-auto pr-2 mb-3">
+                                <!-- Items del pedido actual se cargarán aquí -->
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 border-t pt-4">
+                                <span class="fs-5 fw-bold">Total:</span>
+                                <span id="currentOrderTotal" class="fs-5 fw-bold">$0.00</span>
+                            </div>
+                            <button id="placeOrderBtn" class="btn btn-success w-100">Realizar Pedido</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Nested Tab content: Pending Orders -->
+            <div id="pending-orders-tab" class="order-tab-content">
+                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos Pendientes</h3>
+                <div id="pendingOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                    </div>
+            </div>
+
+            <!-- Nested Tab content: In Process Orders -->
+            <div id="in-process-orders-tab" class="order-tab-content">
+                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos En Proceso</h3>
+                <div id="inProcessOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                    </div>
+            </div>
+
+            <!-- Nested Tab content: Delivered Orders -->
+            <div id="delivered-orders-tab" class="order-tab-content">
+                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos Entregados (Pendiente de Cobro)</h3>
+                <div id="deliveredOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                    </div>
             </div>
         </div>
 
         <!-- Tab content: Sales Reports -->
         <div id="reports" class="tab-content card">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Reportes de Ventas</h2>
+            <h2 class="fs-3 fw-semibold text-body mb-3">Reportes de Ventas</h2>
 
-            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <div class="d-flex d-flex-column sm:d-flex-row gap-3 mb-4">
                 <div>
-                    <label for="reportMonth" class="block text-sm font-medium text-gray-700">Mes</label>
-                    <select id="reportMonth" class="w-full">
+                    <label for="reportMonth" class="block small fw-medium text-body">Mes</label>
+                    <select id="reportMonth" class="w-100">
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -223,29 +291,29 @@ permalink: /antojitos-salu
                     </select>
                 </div>
                 <div>
-                    <label for="reportYear" class="block text-sm font-medium text-gray-700">Año</label>
-                    <input type="number" id="reportYear" value="2025" class="w-full">
+                    <label for="reportYear" class="block small fw-medium text-body">Año</label>
+                    <input type="number" id="reportYear" value="2025" class="w-100">
                 </div>
-                <button id="generateReportBtn" class="btn-primary self-end">Generar Reporte</button>
+                <button id="generateReportBtn" class="btn btn-primary self-end">Generar Reporte</button>
             </div>
 
             <!-- Export/Import Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                <button id="exportSalesBtn" class="btn-secondary w-full sm:w-auto">Exportar Ventas (JSON)</button>
+            <div class="d-flex d-flex-column sm:d-flex-row gap-3 mb-4">
+                <button id="exportSalesBtn" class="btn btn-secondary w-100 sm:w-auto">Exportar Ventas (JSON)</button>
                 <input type="file" id="importSalesFile" accept=".json" class="hidden">
-                <button id="importSalesBtn" class="btn-secondary w-full sm:w-auto">Importar Ventas (JSON)</button>
+                <button id="importSalesBtn" class="btn btn-secondary w-100 sm:w-auto">Importar Ventas (JSON)</button>
             </div>
 
-            <div id="reportOutput" class="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <h3 class="text-xl font-medium text-gray-600 mb-3">Resultados del Reporte</h3>
-                <p id="reportTotalSales" class="text-lg font-semibold text-gray-800">Total de Ingresos: $0.00</p>
-                <p id="reportNumSales" class="text-lg font-semibold text-gray-800">Número de Ventas: 0</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Productos Más Vendidos:</h4>
-                <ul id="topProductsList" class="list-disc list-inside text-gray-700">
+            <div id="reportOutput" class="mt-3 p-3 bg-light rounded border border-gray-200">
+                <h3 class="fs-4 fw-medium text-muted mb-3">Resultados del Reporte</h3>
+                <p id="reportTotalSales" class="fs-5 fw-semibold text-dark">Total de Ingresos: $0.00</p>
+                <p id="reportNumSales" class="fs-5 fw-semibold text-dark">Número de Ventas: 0</p>
+                <h4 class="fs-5 fw-semibold text-body mt-3 mb-2">Productos Más Vendidos:</h4>
+                <ul id="topProductsList" class="list-disc list-inside text-body">
                     </ul>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Detalle de Ventas:</h4>
-                <div class="overflow-x-auto rounded-lg shadow-sm">
-                    <table id="salesDetailTable" class="min-w-full">
+                <h4 class="fs-5 fw-semibold text-body mt-3 mb-2">Detalle de Ventas:</h4>
+                <div class="table-responsive rounded shadow-sm">
+                    <table id="salesDetailTable" class="min-w-100">
                         <thead>
                             <tr>
                                 <th>ID Venta</th>
@@ -274,9 +342,11 @@ permalink: /antojitos-salu
             total: 0
         };
         let editingProductId = null; // To track which product is being edited
+        let activeProductCategoryId = null; // To track the active category in "Create New Order" tab
+
 
         // --- DOM Element Selectors ---
-        // Tab Controls
+        // Tab Controls (Main)
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -286,7 +356,7 @@ permalink: /antojitos-salu
         const productDescriptionInput = document.getElementById('productDescription');
         const productPriceInput = document.getElementById('productPrice');
         const productCategorySelect = document.getElementById('productCategory');
-        const saveProductBtn = document.getElementById('saveProductBtn'); // Renamed from addProductBtn
+        const saveProductBtn = document.getElementById('saveProductBtn');
         const cancelEditBtn = document.getElementById('cancelEditBtn');
         const productsTableBody = document.querySelector('#productsTable tbody');
 
@@ -294,8 +364,22 @@ permalink: /antojitos-salu
         const addCategoryBtn = document.getElementById('addCategoryBtn');
         const categoryListUl = document.getElementById('categoryList');
 
-        // Order Management
-        const availableProductsDiv = document.getElementById('availableProducts');
+        // Modifiers elements
+        const modifiersContainer = document.getElementById('modifiersContainer');
+        const addModifierInputBtn = document.getElementById('addModifierInputBtn');
+        const noModifiersMessage = document.getElementById('noModifiersMessage');
+
+
+        // Order Management (Nested Tabs)
+        const orderTabButtons = document.querySelectorAll('.order-tab-button');
+        const orderTabContents = document.querySelectorAll('.order-tab-content');
+
+        // Elements within 'Create New Order' tab
+        const productCategoryTabsContainer = document.getElementById('productCategoryTabs');
+        const productCategoryContentDiv = document.getElementById('productCategoryContent');
+        const noProductsInCategoryMessage = document.getElementById('noProductsInCategoryMessage');
+
+        // const availableProductsDiv = document.getElementById('availableProducts'); // This is now productCategoryContentDiv
         const currentOrderItemsDiv = document.getElementById('currentOrderItems');
         const currentOrderTotalSpan = document.getElementById('currentOrderTotal');
         const placeOrderBtn = document.getElementById('placeOrderBtn');
@@ -303,6 +387,7 @@ permalink: /antojitos-salu
         const pendingOrdersDiv = document.getElementById('pendingOrders');
         const inProcessOrdersDiv = document.getElementById('inProcessOrders');
         const deliveredOrdersDiv = document.getElementById('deliveredOrders');
+
 
         // Sales Reports
         const reportMonthSelect = document.getElementById('reportMonth');
@@ -339,27 +424,60 @@ permalink: /antojitos-salu
             }
         }
 
-        // --- Tab Navigation Functions ---
+        // --- Tab Navigation Functions (Main Tabs) ---
         function showTab(tabId) {
-            // Remove 'active' from all buttons and content
+            // Remove 'active' from all main tab buttons and content
             tabButtons.forEach(button => button.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
 
-            // Add 'active' to the selected tab button and content
+            // Add 'active' to the selected main tab button and content
             document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
             document.getElementById(tabId).classList.add('active');
 
-            // If the orders or reports tab is activated, ensure data is updated
+            // Special handling for nested tabs within the 'orders' section
             if (tabId === 'orders') {
-                renderAllOrders();
-                renderAvailableProductsForOrder();
-                updateCurrentOrderDisplay(); // Ensure current order is displayed correctly
+                // Initialize the nested order tabs, showing 'create-order' by default
+                showOrderTab('create-order');
+                renderProductsByCategoryTabs(); // Render category tabs for products
+                renderAllOrders(); // Ensure all order lists are updated
+                updateCurrentOrderDisplay(); // Ensure current order display is updated
             } else if (tabId === 'reports') {
-                // Generate the report automatically when entering the tab if needed,
-                // or let the user click the button.
+                // Optional: Generate the report automatically when entering the tab
                 // generateMonthlyReport();
             }
         }
+
+        // --- Tab Navigation Functions (Nested Order Tabs) ---
+        function showOrderTab(orderTabId) {
+            // Remove 'active' from all nested order tab buttons and content
+            orderTabButtons.forEach(button => button.classList.remove('active'));
+            orderTabContents.forEach(content => content.classList.remove('active'));
+
+            // Add 'active' to the selected nested order tab button and content
+            document.querySelector(`.order-tab-button[data-order-tab="${orderTabId}"]`).classList.add('active');
+            document.getElementById(orderTabId).classList.add('active');
+
+            // Re-render orders when switching between order status tabs
+            if (orderTabId === 'pending-orders-tab' || orderTabId === 'in-process-orders-tab' || orderTabId === 'delivered-orders-tab') {
+                renderAllOrders();
+            } else if (orderTabId === 'create-order') {
+                renderProductsByCategoryTabs(); // Re-render product category tabs if returning to create order
+            }
+        }
+
+        // --- Tab Navigation Functions (Product Category Tabs within Create Order) ---
+        function showProductCategoryTab(categoryId) {
+            // Remove 'active' from all product category tab buttons and content
+            document.querySelectorAll('.product-category-tab-button').forEach(button => button.classList.remove('active'));
+            // Note: We don't have separate content divs for each product category,
+            // instead, we re-render products into productCategoryContentDiv
+
+            // Add 'active' to the selected category tab button
+            document.querySelector(`.product-category-tab-button[data-category-id="${categoryId}"]`).classList.add('active');
+            activeProductCategoryId = categoryId; // Set the active category
+            renderAvailableProductsForOrder(categoryId); // Render products for the selected category
+        }
+
 
         // --- App Initialization ---
         function initApp() {
@@ -370,18 +488,25 @@ permalink: /antojitos-salu
 
             renderCategories();
             renderProducts();
-            renderAvailableProductsForOrder();
-            renderAllOrders(); // Render initial orders
+            // Initial rendering for order section is now handled by showOrderTab('create-order')
+            // when the main 'orders' tab is activated.
 
             // Set current month and year in report selector
             const today = new Date();
             reportMonthSelect.value = today.getMonth() + 1;
             reportYearInput.value = today.getFullYear();
 
-            // Configure event listeners for tabs
+            // Configure event listeners for main tabs
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     showTab(button.dataset.tab);
+                });
+            });
+
+            // Configure event listeners for nested order tabs
+            orderTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showOrderTab(button.dataset.orderTab);
                 });
             });
 
@@ -423,6 +548,7 @@ permalink: /antojitos-salu
                 guardarEnLocalStorage('categorias', categorias);
                 renderCategories();
                 categoryNameInput.value = '';
+                renderProductsByCategoryTabs(); // Update category tabs in order creation
             } else {
                 alert('Por favor, ingresa un nombre para la categoría.');
             }
@@ -442,13 +568,13 @@ permalink: /antojitos-salu
                 const actionsCell = row.insertCell();
                 const editBtn = document.createElement('button');
                 editBtn.textContent = 'Editar';
-                editBtn.className = 'btn-secondary text-sm py-1 px-2 mr-2';
+                editBtn.className = 'btn btn-secondary small py-1 px-2 mr-2';
                 editBtn.onclick = () => editProduct(prod.id);
                 actionsCell.appendChild(editBtn);
 
                 const deleteBtn = document.createElement('button');
                 deleteBtn.textContent = 'Eliminar';
-                deleteBtn.className = 'btn-danger text-sm py-1 px-2';
+                deleteBtn.className = 'btn btn-danger small py-1 px-2';
                 deleteBtn.onclick = () => deleteProduct(prod.id);
                 actionsCell.appendChild(deleteBtn);
             });
@@ -459,6 +585,7 @@ permalink: /antojitos-salu
             const description = productDescriptionInput.value.trim();
             const price = parseFloat(productPriceInput.value);
             const categoryId = productCategorySelect.value;
+            const modifiers = collectModifierInputs(); // Collect modifiers from the form
 
             if (name && description && !isNaN(price) && price > 0 && categoryId) {
                 if (editingProductId) {
@@ -469,6 +596,7 @@ permalink: /antojitos-salu
                         productos[productIndex].descripcion = description;
                         productos[productIndex].precio = price;
                         productos[productIndex].categoria = categoryId;
+                        productos[productIndex].modifiers = modifiers; // Save modifiers
                         alert('Producto actualizado exitosamente.');
                     }
                     editingProductId = null; // Reset editing state
@@ -482,14 +610,15 @@ permalink: /antojitos-salu
                         nombre: name,
                         descripcion: description,
                         precio: price,
-                        categoria: categoryId
+                        categoria: categoryId,
+                        modifiers: modifiers // Save modifiers
                     };
                     productos.push(newProduct);
                     alert('Producto agregado exitosamente.');
                 }
                 guardarEnLocalStorage('productos', productos);
                 renderProducts();
-                renderAvailableProductsForOrder(); // Update product list for orders
+                renderAvailableProductsForOrder(activeProductCategoryId); // Update product list for current category in orders
                 clearProductForm();
             } else {
                 alert('Por favor, completa todos los campos del producto correctamente.');
@@ -503,6 +632,7 @@ permalink: /antojitos-salu
                 productDescriptionInput.value = product.descripcion;
                 productPriceInput.value = product.precio;
                 productCategorySelect.value = product.categoria;
+                renderModifierInputs(product.modifiers || []); // Populate modifiers
 
                 editingProductId = id; // Set the product being edited
                 productFormTitle.textContent = 'Editar Producto';
@@ -524,6 +654,7 @@ permalink: /antojitos-salu
             productDescriptionInput.value = '';
             productPriceInput.value = '';
             productCategorySelect.value = '';
+            renderModifierInputs([]); // Clear modifiers
         }
 
         function deleteProduct(id) {
@@ -531,7 +662,7 @@ permalink: /antojitos-salu
                 productos = productos.filter(prod => prod.id !== id);
                 guardarEnLocalStorage('productos', productos);
                 renderProducts();
-                renderAvailableProductsForOrder();
+                renderAvailableProductsForOrder(activeProductCategoryId); // Update product list for current category in orders
                 // If the deleted product was being edited, clear the form
                 if (editingProductId === id) {
                     cancelEdit();
@@ -539,44 +670,189 @@ permalink: /antojitos-salu
             }
         }
 
+        // --- Modifier Management (Product Form) ---
+        function addModifierInput(name = '', price = '') {
+            noModifiersMessage.classList.add('hidden'); // Hide "No modifiers" message
+
+            const modifierDiv = document.createElement('div');
+            modifierDiv.className = 'd-flex gap-2 align-items-center';
+            modifierDiv.innerHTML = `
+                <input type="text" class="modifier-name p-1 border border-gray-300 rounded d-flex-grow" placeholder="Nombre (Ej: Extra Queso)" value="${name}">
+                <input type="number" class="modifier-price p-1 border border-gray-300 rounded w-24" step="0.01" placeholder="Precio" value="${price}">
+                <button class="btn btn-danger text-xs py-1 px-2 rounded remove-modifier-btn">X</button>
+            `;
+            modifiersContainer.appendChild(modifierDiv);
+
+            // Add event listener to the new remove button
+            modifierDiv.querySelector('.remove-modifier-btn').onclick = (event) => {
+                modifierDiv.remove();
+                if (modifiersContainer.children.length === 0) {
+                    noModifiersMessage.classList.remove('hidden'); // Show message if no modifiers left
+                }
+            };
+        }
+
+        function renderModifierInputs(modifiers) {
+            modifiersContainer.innerHTML = ''; // Clear existing inputs
+            if (modifiers.length > 0) {
+                noModifiersMessage.classList.add('hidden');
+                modifiers.forEach(mod => addModifierInput(mod.name, mod.price));
+            } else {
+                noModifiersMessage.classList.remove('hidden');
+            }
+        }
+
+        function collectModifierInputs() {
+            const collectedModifiers = [];
+            modifiersContainer.querySelectorAll('.d-flex.gap-2.align-items-center').forEach(modifierDiv => {
+                const nameInput = modifierDiv.querySelector('.modifier-name');
+                const priceInput = modifierDiv.querySelector('.modifier-price');
+                const name = nameInput.value.trim();
+                const price = parseFloat(priceInput.value);
+
+                if (name && !isNaN(price)) {
+                    collectedModifiers.push({ name: name, price: price });
+                }
+            });
+            return collectedModifiers;
+        }
+
         // --- Order Management ---
 
-        function renderAvailableProductsForOrder() {
-            availableProductsDiv.innerHTML = '';
-            if (productos.length === 0) {
-                availableProductsDiv.innerHTML = '<p class="text-gray-500">No hay productos registrados. Agrega productos en la pestaña "Gestión de Productos".</p>';
+        function renderProductsByCategoryTabs() {
+            productCategoryTabsContainer.innerHTML = '';
+            productCategoryContentDiv.innerHTML = ''; // Clear existing product list
+
+            if (categorias.length === 0) {
+                productCategoryTabsContainer.innerHTML = '<p class="text-secondary">No hay categorías. Agrega categorías en Gestión de Productos.</p>';
                 return;
             }
-            productos.forEach(prod => {
-                const productCard = document.createElement('div');
-                productCard.className = 'flex justify-between items-center bg-gray-100 p-3 rounded-md shadow-sm';
-                productCard.innerHTML = `
-                    <div>
-                        <p class="font-semibold text-gray-800">${prod.nombre}</p>
-                        <p class="text-sm text-gray-600">$${prod.precio.toFixed(2)}</p>
-                    </div>
-                    <button class="btn-primary text-sm py-1 px-3" data-product-id="${prod.id}">Agregar</button>
-                `;
-                availableProductsDiv.appendChild(productCard);
+
+            // Create "All Products" tab
+            const allProductsTabButton = document.createElement('button');
+            allProductsTabButton.className = 'product-category-tab-button';
+            allProductsTabButton.textContent = 'Todos';
+            allProductsTabButton.dataset.categoryId = 'all';
+            allProductsTabButton.onclick = () => showProductCategoryTab('all');
+            productCategoryTabsContainer.appendChild(allProductsTabButton);
+
+            // Create tabs for each category
+            categorias.forEach(cat => {
+                const button = document.createElement('button');
+                button.className = 'product-category-tab-button';
+                button.textContent = cat.nombre;
+                button.dataset.categoryId = cat.id;
+                button.onclick = () => showProductCategoryTab(cat.id);
+                productCategoryTabsContainer.appendChild(button);
             });
 
-            // Add event listeners to "Add" buttons
-            availableProductsDiv.querySelectorAll('button').forEach(button => {
+            // Activate the first category or "All Products" by default
+            if (activeProductCategoryId) {
+                showProductCategoryTab(activeProductCategoryId);
+            } else if (categorias.length > 0) {
+                showProductCategoryTab('all'); // Default to 'all' if no active category
+            } else {
+                productCategoryContentDiv.innerHTML = '<p class="text-secondary text-center py-4">No hay productos disponibles.</p>';
+            }
+        }
+
+        function renderAvailableProductsForOrder(categoryId) {
+            productCategoryContentDiv.innerHTML = ''; // Clear product list
+            let productsToRender = [];
+
+            if (categoryId === 'all') {
+                productsToRender = productos;
+            } else {
+                productsToRender = productos.filter(prod => prod.categoria === categoryId);
+            }
+
+            if (productsToRender.length === 0) {
+                noProductsInCategoryMessage.classList.remove('hidden');
+                productCategoryContentDiv.appendChild(noProductsInCategoryMessage);
+                return;
+            } else {
+                noProductsInCategoryMessage.classList.add('hidden');
+            }
+
+            productsToRender.forEach(prod => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card'; // Apply new card styling
+                // Placeholder image for the product
+                const imageUrl = `https://placehold.co/150x100/ADD8E6/000000?text=${encodeURIComponent(prod.nombre)}`;
+
+                productCard.innerHTML = `
+                    <div class="d-flex justify-content-center mb-2">
+                        <img src="${imageUrl}" alt="${prod.nombre}" class="rounded object-cover">
+                    </div>
+                    <div class="text-center mb-2">
+                        <p class="fw-semibold fs-5 text-dark">${prod.nombre}</p>
+                        <p class="small text-muted">${prod.descripcion}</p>
+                        <p class="fw-bold fs-4 text-primary mt-1">$${prod.precio.toFixed(2)}</p>
+                    </div>
+                    ${prod.modifiers && prod.modifiers.length > 0 ?
+                        `<div class="text-xs text-secondary text-center mb-2">Modificadores: ${prod.modifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ')}</div>` : ''}
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease" data-product-id="${prod.id}">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" data-product-id="${prod.id}">
+                        <button class="quantity-btn" data-action="increase" data-product-id="${prod.id}">+</button>
+                    </div>
+                    <button class="btn btn-primary w-100 mt-3 add-to-order-btn" data-product-id="${prod.id}">
+                        <span class="add-to-order-btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.75 3.75 0 003.694 2.46l2.559.006zM12 17.25a.75.75 0 00-.75.75.75.75 0 001.5 0 .75.75 0 00-.75-.75zM15 17.25a.75.75 0 00-.75.75.75.75 0 001.5 0 .75.75 0 00-.75-.75zM6.75 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3zM18.75 18a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zM20.25 7.5a.75.75 0 00-.75-.75h-3a.75.75 0 000 1.5h3a.75.75 0 00.75-.75z" />
+                            </svg>
+                            Agregar al Pedido
+                        </span>
+                    </button>
+                `;
+                productCategoryContentDiv.appendChild(productCard);
+            });
+
+            // Add event listeners for quantity controls and "Add to Order" buttons
+            productCategoryContentDiv.querySelectorAll('.quantity-btn').forEach(button => {
                 button.onclick = (event) => {
                     const productId = event.target.dataset.productId;
-                    addToOrder(productId);
+                    const input = productCategoryContentDiv.querySelector(`.quantity-input[data-product-id="${productId}"]`);
+                    let quantity = parseInt(input.value);
+                    if (event.target.dataset.action === 'increase') {
+                        quantity++;
+                    } else if (event.target.dataset.action === 'decrease' && quantity > 1) {
+                        quantity--;
+                    }
+                    input.value = quantity;
+                };
+            });
+
+            productCategoryContentDiv.querySelectorAll('.add-to-order-btn').forEach(button => {
+                button.onclick = (event) => {
+                    const productId = event.target.dataset.productId;
+                    const input = productCategoryContentDiv.querySelector(`.quantity-input[data-product-id="${productId}"]`);
+                    const quantity = parseInt(input.value);
+                    if (quantity > 0) {
+                        addToOrder(productId, quantity);
+                        input.value = 1; // Reset quantity after adding to order
+                    } else {
+                        alert('La cantidad debe ser al menos 1.');
+                    }
                 };
             });
         }
 
-        function addToOrder(productId) {
+        function addToOrder(productId, quantity) {
             const product = productos.find(p => p.id === productId);
             if (product) {
-                const existingItem = currentOrder.items.find(item => item.product.id === productId);
-                if (existingItem) {
-                    existingItem.cantidad++;
+                const existingItemIndex = currentOrder.items.findIndex(item => item.product.id === productId);
+                if (existingItemIndex !== -1) {
+                    // Update quantity if item already exists
+                    currentOrder.items[existingItemIndex].cantidad += quantity;
                 } else {
-                    currentOrder.items.push({ product: product, cantidad: 1 });
+                    // When adding a new product to order, include all its defined modifiers by default
+                    const selectedModifiers = product.modifiers ? JSON.parse(JSON.stringify(product.modifiers)) : [];
+                    currentOrder.items.push({
+                        product: product,
+                        cantidad: quantity,
+                        selectedModifiers: selectedModifiers // Store selected modifiers
+                    });
                 }
                 updateCurrentOrderDisplay();
             }
@@ -586,30 +862,56 @@ permalink: /antojitos-salu
             currentOrderItemsDiv.innerHTML = '';
             currentOrder.total = 0;
             if (currentOrder.items.length === 0) {
-                currentOrderItemsDiv.innerHTML = '<p class="text-gray-500">No hay productos en el pedido.</p>';
+                currentOrderItemsDiv.innerHTML = '<p class="text-secondary">No hay productos en el pedido.</p>';
                 currentOrderTotalSpan.textContent = '$0.00';
                 return;
             }
 
-            currentOrder.items.forEach((item, index) => {
+            currentOrder.items.forEach((item, itemIndex) => {
+                let itemTotalPrice = item.product.precio * item.cantidad;
+                let modifiersDisplay = '';
+
+                if (item.selectedModifiers && item.selectedModifiers.length > 0) {
+                    modifiersDisplay = item.selectedModifiers.map((mod, modIndex) => {
+                        itemTotalPrice += mod.price * item.cantidad; // Add modifier price to item total
+                        return `<span class="text-xs text-muted ml-2">${mod.name} ($${mod.price.toFixed(2)}) <button class="btn btn-danger text-xs py-0 px-0.5 rounded remove-selected-modifier" data-item-index="${itemIndex}" data-mod-index="${modIndex}">x</button></span>`;
+                    }).join('');
+                    modifiersDisplay = `<div class="d-flex d-flex-wrap align-items-center mt-1">${modifiersDisplay}</div>`;
+                }
+
                 const itemDiv = document.createElement('div');
-                itemDiv.className = 'flex justify-between items-center bg-white p-2 rounded-md shadow-sm';
+                itemDiv.className = 'd-flex d-flex-column bg-white p-2 rounded shadow-sm';
                 itemDiv.innerHTML = `
-                    <span class="text-gray-700">${item.cantidad}x ${item.product.nombre}</span>
-                    <span class="font-medium text-gray-800">$${(item.cantidad * item.product.precio).toFixed(2)}</span>
-                    <button class="btn-danger text-xs py-0.5 px-1.5 rounded-md" data-index="${index}">X</button>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-body">${item.cantidad}x ${item.product.nombre}</span>
+                        <span class="fw-medium text-dark">$${itemTotalPrice.toFixed(2)}</span>
+                        <button class="btn btn-danger text-xs py-0.5 px-1.5 rounded remove-order-item-btn" data-index="${itemIndex}">X</button>
+                    </div>
+                    ${modifiersDisplay}
                 `;
                 currentOrderItemsDiv.appendChild(itemDiv);
-                currentOrder.total += item.cantidad * item.product.precio;
+                currentOrder.total += itemTotalPrice; // Add item's total (including modifiers) to order total
             });
             currentOrderTotalSpan.textContent = `$${currentOrder.total.toFixed(2)}`;
 
-            // Add event listeners to remove items from the order
-            currentOrderItemsDiv.querySelectorAll('button').forEach(button => {
+            // Add event listeners for removing items from the order
+            currentOrderItemsDiv.querySelectorAll('.remove-order-item-btn').forEach(button => {
                 button.onclick = (event) => {
                     const indexToRemove = parseInt(event.target.dataset.index);
                     currentOrder.items.splice(indexToRemove, 1);
                     updateCurrentOrderDisplay();
+                };
+            });
+
+            // Add event listeners for removing selected modifiers
+            currentOrderItemsDiv.querySelectorAll('.remove-selected-modifier').forEach(button => {
+                button.onclick = (event) => {
+                    const itemIndex = parseInt(event.target.dataset.itemIndex);
+                    const modIndex = parseInt(event.target.dataset.modIndex);
+                    if (currentOrder.items[itemIndex] && currentOrder.items[itemIndex].selectedModifiers) {
+                        currentOrder.items[itemIndex].selectedModifiers.splice(modIndex, 1);
+                        updateCurrentOrderDisplay();
+                    }
                 };
             });
         }
@@ -623,7 +925,12 @@ permalink: /antojitos-salu
             const newOrder = {
                 id: 'pedido_' + Date.now(),
                 fecha: new Date().toISOString(),
-                items: JSON.parse(JSON.stringify(currentOrder.items)), // Deep copy
+                // Deep copy items and their selectedModifiers
+                items: currentOrder.items.map(item => ({
+                    product: { ...item.product }, // Copy product details
+                    cantidad: item.cantidad,
+                    selectedModifiers: JSON.parse(JSON.stringify(item.selectedModifiers || [])) // Deep copy selected modifiers
+                })),
                 total: currentOrder.total,
                 estado: 'Pendiente' // 'Pendiente', 'En Proceso', 'Entregado'
             };
@@ -640,6 +947,7 @@ permalink: /antojitos-salu
         }
 
         function renderAllOrders() {
+            // Clear all nested order content divs before re-rendering
             pendingOrdersDiv.innerHTML = '';
             inProcessOrdersDiv.innerHTML = '';
             deliveredOrdersDiv.innerHTML = '';
@@ -648,23 +956,41 @@ permalink: /antojitos-salu
             const sortedPedidos = [...pedidos].sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
 
             sortedPedidos.forEach(order => {
+                let orderItemsHtml = '';
+                let orderTotalWithModifiers = 0;
+
+                order.items.forEach(item => {
+                    let itemDisplayPrice = item.product.precio;
+                    let itemModifiersHtml = '';
+                    if (item.selectedModifiers && item.selectedModifiers.length > 0) {
+                        itemModifiersHtml = item.selectedModifiers.map(mod => {
+                            itemDisplayPrice += mod.price;
+                            return `<span class="text-xs text-secondary ml-2">${mod.name} ($${mod.price.toFixed(2)})</span>`;
+                        }).join('');
+                        itemModifiersHtml = `<div class="d-flex d-flex-wrap">${itemModifiersHtml}</div>`;
+                    }
+                    orderItemsHtml += `<li>${item.cantidad}x ${item.product.nombre} ($${(item.cantidad * itemDisplayPrice).toFixed(2)}) ${itemModifiersHtml}</li>`;
+                    orderTotalWithModifiers += (item.cantidad * itemDisplayPrice);
+                });
+
+
                 const orderCard = document.createElement('div');
-                orderCard.className = 'card p-4 mb-2';
+                orderCard.className = 'card p-3 mb-2';
                 orderCard.innerHTML = `
-                    <h4 class="font-bold text-lg text-gray-800 mb-2">Pedido #${order.id.split('_')[1]}</h4>
-                    <p class="text-sm text-gray-600">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
-                    <ul class="list-disc list-inside text-gray-700 text-sm mb-2">
-                        ${order.items.map(item => `<li>${item.cantidad}x ${item.product.nombre} ($${(item.cantidad * item.product.precio).toFixed(2)})</li>`).join('')}
+                    <h4 class="fw-bold fs-5 text-dark mb-2">Pedido #${order.id.split('_')[1]}</h4>
+                    <p class="small text-muted">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
+                    <ul class="list-disc list-inside text-body small mb-2">
+                        ${orderItemsHtml}
                     </ul>
-                    <p class="font-semibold text-gray-800">Total: $${order.total.toFixed(2)}</p>
-                    <div class="mt-3 flex flex-wrap gap-2">
+                    <p class="fw-semibold text-dark">Total: $${orderTotalWithModifiers.toFixed(2)}</p>
+                    <div class="mt-3 d-flex d-flex-wrap gap-2">
                         ${order.estado === 'Pendiente' ?
-                            `<button class="btn-warning text-sm py-1 px-2" onclick="changeOrderStatus('${order.id}', 'En Proceso')">Enviar a Proceso</button>` : ''}
+                            `<button class="btn btn-warning small py-1 px-2" onclick="changeOrderStatus('${order.id}', 'En Proceso')">Enviar a Proceso</button>` : ''}
                         ${order.estado === 'En Proceso' ?
-                            `<button class="btn-success text-sm py-1 px-2" onclick="changeOrderStatus('${order.id}', 'Entregado')">Marcar Entregado</button>` : ''}
+                            `<button class="btn btn-success small py-1 px-2" onclick="changeOrderStatus('${order.id}', 'Entregado')">Marcar Entregado</button>` : ''}
                         ${order.estado === 'Entregado' ?
-                            `<button class="btn-primary text-sm py-1 px-2" onclick="completeSale('${order.id}')">Cobrar y Finalizar</button>` : ''}
-                        <button class="btn-danger text-sm py-1 px-2" onclick="cancelOrder('${order.id}')">Cancelar</button>
+                            `<button class="btn btn-primary small py-1 px-2" onclick="completeSale('${order.id}')">Cobrar y Finalizar</button>` : ''}
+                        <button class="btn btn-danger small py-1 px-2" onclick="cancelOrder('${order.id}')">Cancelar</button>
                     </div>
                 `;
 
@@ -677,9 +1003,9 @@ permalink: /antojitos-salu
                 }
             });
             // Display message if no orders in a section
-            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos pendientes.</p>';
-            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos en proceso.</p>';
-            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos entregados.</p>';
+            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos pendientes.</p>';
+            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos en proceso.</p>';
+            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos entregados.</p>';
         }
 
         function changeOrderStatus(orderId, newStatus) {
@@ -703,17 +1029,33 @@ permalink: /antojitos-salu
                     return;
                 }
 
-                const nuevaVenta = {
-                    id: 'venta_' + Date.now(),
-                    fecha: completedOrder.fecha, // Use original order date
-                    total: completedOrder.total,
-                    metodoPago: metodoPago,
-                    productosVendidos: completedOrder.items.map(item => ({
+                // Recalculate total including modifiers for the final sale record
+                let finalSaleTotal = 0;
+                const productsSoldWithModifiers = completedOrder.items.map(item => {
+                    let itemPriceIncludingModifiers = item.product.precio;
+                    if (item.selectedModifiers && item.selectedModifiers.length > 0) {
+                        item.selectedModifiers.forEach(mod => {
+                            itemPriceIncludingModifiers += mod.price;
+                        });
+                    }
+                    finalSaleTotal += item.cantidad * itemPriceIncludingModifiers;
+
+                    return {
                         id: item.product.id,
                         nombre: item.product.nombre,
                         cantidad: item.cantidad,
-                        precioUnitario: item.product.precio
-                    }))
+                        precioUnitario: item.product.precio, // Base price
+                        selectedModifiers: JSON.parse(JSON.stringify(item.selectedModifiers || [])) // Store selected modifiers
+                    };
+                });
+
+
+                const nuevaVenta = {
+                    id: 'venta_' + Date.now(),
+                    fecha: completedOrder.fecha, // Use original order date
+                    total: finalSaleTotal, // Use the recalculated total
+                    metodoPago: metodoPago,
+                    productosVendidos: productsSoldWithModifiers
                 };
 
                 ventas.push(nuevaVenta);
@@ -759,9 +1101,16 @@ permalink: /antojitos-salu
             let productosMasVendidos = {}; // { "Product Name": totalQuantitySold }
 
             ventasDelMes.forEach(venta => {
-                totalIngresos += venta.total;
+                totalIngresos += venta.total; // Total already includes modifiers
                 venta.productosVendidos.forEach(item => {
+                    // Count base product
                     productosMasVendidos[item.nombre] = (productosMasVendidos[item.nombre] || 0) + item.cantidad;
+                    // Count modifiers as separate items for "most sold" if desired, or just sum their prices
+                    if (item.selectedModifiers) {
+                        item.selectedModifiers.forEach(mod => {
+                            productosMasVendidos[`${item.nombre} (${mod.name})`] = (productosMasVendidos[`${item.nombre} (${mod.name})`] || 0) + item.cantidad;
+                        });
+                    }
                 });
             });
 
@@ -784,7 +1133,7 @@ permalink: /antojitos-salu
                     topProductsListUl.appendChild(li);
                 });
             } else {
-                topProductsListUl.innerHTML = '<li class="text-gray-500">No hay productos vendidos en este período.</li>';
+                topProductsListUl.innerHTML = '<li class="text-secondary">No hay productos vendidos en este período.</li>';
             }
 
 
@@ -796,15 +1145,23 @@ permalink: /antojitos-salu
                     row.insertCell().textContent = new Date(venta.fecha).toLocaleString();
                     row.insertCell().textContent = `$${venta.total.toFixed(2)}`;
                     row.insertCell().textContent = venta.metodoPago;
-                    const productosCell = row.insertCell();
-                    productosCell.innerHTML = venta.productosVendidos.map(p => `${p.cantidad}x ${p.nombre}`).join('<br>');
+                    const productsCell = row.insertCell();
+                    let productsHtml = venta.productosVendidos.map(p => {
+                        let modHtml = '';
+                        if (p.selectedModifiers && p.selectedModifiers.length > 0) {
+                            modHtml = p.selectedModifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ');
+                            modHtml = ` <span class="text-xs text-secondary">(${modHtml})</span>`;
+                        }
+                        return `${p.cantidad}x ${p.nombre}${modHtml}`;
+                    }).join('<br>');
+                    productsCell.innerHTML = productsHtml;
                 });
             } else {
                 const row = salesDetailTableBody.insertRow();
                 const cell = row.insertCell();
                 cell.colSpan = 5;
                 cell.textContent = 'No hay ventas registradas para este período.';
-                cell.className = 'text-center text-gray-500 py-4';
+                cell.className = 'text-center text-secondary py-4';
             }
         }
 
@@ -860,15 +1217,16 @@ permalink: /antojitos-salu
 
 
         // --- Event Listeners ---
-        saveProductBtn.addEventListener('click', saveProduct); // Changed from addProductBtn
+        saveProductBtn.addEventListener('click', saveProduct);
         cancelEditBtn.addEventListener('click', cancelEdit);
         addCategoryBtn.addEventListener('click', addCategory);
+        addModifierInputBtn.addEventListener('click', () => addModifierInput());
         placeOrderBtn.addEventListener('click', placeOrder);
         generateReportBtn.addEventListener('click', generateMonthlyReport);
 
         // Export/Import Event Listeners
         exportSalesBtn.addEventListener('click', exportSalesData);
-        importSalesBtn.addEventListener('click', () => importSalesFile.click()); // Trigger file input click
+        importSalesBtn.addEventListener('click', () => importSalesFile.click());
         importSalesFile.addEventListener('change', importSalesData);
 
         // Initialize the app when the DOM is loaded
