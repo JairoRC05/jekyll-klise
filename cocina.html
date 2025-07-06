@@ -2,6 +2,7 @@
 layout: 
 permalink: /antojitos-salu
 ---
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,6 +15,8 @@ permalink: /antojitos-salu
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -194,6 +197,7 @@ permalink: /antojitos-salu
             justify-content: space-between;
             border: 1px solid #f3f4f6; /* border-gray-100 */
             transition: box-shadow 0.2s ease-in-out;
+            height: 100%; /* Ensure cards in grid are same height */
         }
         .product-card:hover {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
@@ -246,6 +250,11 @@ permalink: /antojitos-salu
             max-height: 400px; /* Adjust as needed */
             overflow-y: auto;
         }
+
+        /* Style for order cards in the status tabs */
+        .order-card-container {
+            padding: 0.5rem; /* Add some padding around each card in the grid */
+        }
     </style>
 </head>
 <body class="p-4">
@@ -259,59 +268,31 @@ permalink: /antojitos-salu
         </div>
 
         <div id="products" class="tab-content active card">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Productos y Categorías</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Productos, Categorías y Modificadores</h2>
 
             <div class="row g-6 mb-6">
-                <div class="col-12 col-md-6">
-                    <h3 class="text-xl font-medium text-gray-600 mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
-                    <div class="space-y-4">
-                        <div class="mb-3">
-                            <label for="productName" class="form-label text-sm font-medium text-gray-700">Nombre del Producto</label>
-                            <input type="text" id="productName" placeholder="Ej: Hamburguesa Clásica" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="productDescription" class="form-label text-sm font-medium text-gray-700">Descripción</label>
-                            <input type="text" id="productDescription" placeholder="Ej: Carne, lechuga, tomate" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="productPrice" class="form-label text-sm font-medium text-gray-700">Precio</label>
-                            <input type="number" id="productPrice" step="0.01" placeholder="Ej: 85.00" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="productCategory" class="form-label text-sm font-medium text-gray-700">Categoría</label>
-                            <select id="productCategory" class="form-select">
-                                </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-sm font-medium text-gray-700 mt-4">Modificadores (Opcional)</label>
-                            <div id="modifiersContainer" class="space-y-2 border border-gray-200 p-3 rounded-md bg-gray-50">
-                                <p id="noModifiersMessage" class="text-gray-500 text-sm">No hay modificadores. Haz clic en "Agregar Modificador".</p>
-                            </div>
-                            <button id="addModifierInputBtn" class="btn btn-secondary btn-sm mt-2"><i class="bi bi-plus-circle me-1"></i> Agregar Modificador</button>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <button id="saveProductBtn" class="btn btn-primary w-100"><i class="bi bi-plus-lg me-1"></i> Agregar Producto</button>
-                            <button id="cancelEditBtn" class="btn btn-secondary w-100 hidden"><i class="bi bi-x-circle me-1"></i> Cancelar Edición</button>
-                        </div>
-                    </div>
+                <!-- Buttons to open Modals -->
+                <div class="col-12 col-md-4">
+                    <button id="openAddProductModalBtn" class="btn btn-primary w-100 h-100 d-flex flex-column align-items-center justify-content-center py-4">
+                        <i class="bi bi-plus-circle display-4 mb-2"></i>
+                        <span class="fs-5 fw-bold">Agregar/Editar Producto</span>
+                    </button>
                 </div>
-
-                <div class="col-12 col-md-6">
-                    <h3 class="text-xl font-medium text-gray-600 mb-3">Agregar Nueva Categoría</h3>
-                    <div class="space-y-4">
-                        <div class="mb-3">
-                            <label for="categoryName" class="form-label text-sm font-medium text-gray-700">Nombre de la Categoría</label>
-                            <input type="text" id="categoryName" placeholder="Ej: Bebidas" class="form-control">
-                        </div>
-                        <button id="addCategoryBtn" class="btn btn-secondary w-100"><i class="bi bi-tags-fill me-1"></i> Agregar Categoría</button>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-600 mb-3 mt-6">Categorías Existentes</h3>
-                    <ul id="categoryList" class="list-disc list-inside text-gray-700">
-                        </ul>
+                <div class="col-12 col-md-4">
+                    <button id="openAddCategoryModalBtn" class="btn btn-secondary w-100 h-100 d-flex flex-column align-items-center justify-content-center py-4">
+                        <i class="bi bi-tags display-4 mb-2"></i>
+                        <span class="fs-5 fw-bold">Agregar Categoría</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4">
+                    <button id="openManageModifiersModalBtn" class="btn btn-warning w-100 h-100 d-flex flex-column align-items-center justify-content-center py-4">
+                        <i class="bi bi-gear display-4 mb-2"></i>
+                        <span class="fs-5 fw-bold">Gestión de Modificadores</span>
+                    </button>
                 </div>
             </div>
 
-            <h3 class="text-xl font-medium text-gray-600 mb-3">Productos Existentes</h3>
+            <h3 class="text-xl font-medium text-gray-600 mb-3 mt-4">Productos Existentes</h3>
             <div class="table-responsive rounded-lg shadow-sm">
                 <table id="productsTable" class="table table-striped min-w-100">
                     <thead>
@@ -328,6 +309,9 @@ permalink: /antojitos-salu
                         </tbody>
                 </table>
             </div>
+            <h3 class="text-xl font-medium text-gray-600 mb-3 mt-6">Categorías Existentes</h3>
+            <ul id="categoryList" class="list-disc list-inside text-gray-700">
+                </ul>
         </div>
 
         <div id="orders" class="tab-content card">
@@ -338,6 +322,7 @@ permalink: /antojitos-salu
                 <button class="order-tab-button" data-order-tab="pending-orders-tab">Pedidos Pendientes</button>
                 <button class="order-tab-button" data-order-tab="in-process-orders-tab">En Proceso</button>
                 <button class="order-tab-button" data-order-tab="delivered-orders-tab">Entregados</button>
+                <button class="order-tab-button" data-order-tab="daily-sales-tab">Venta del Día</button>
             </div>
 
             <div id="create-order" class="order-tab-content active">
@@ -370,21 +355,43 @@ permalink: /antojitos-salu
 
             <div id="pending-orders-tab" class="order-tab-content">
                 <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Pendientes</h3>
-                <div id="pendingOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
+                <div id="pendingOrders" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 overflow-auto" style="max-height: 24rem;">
                     </div>
             </div>
 
             <div id="in-process-orders-tab" class="order-tab-content">
                 <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos En Proceso</h3>
-                <div id="inProcessOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
+                <div id="inProcessOrders" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 overflow-auto" style="max-height: 24rem;">
                     </div>
             </div>
 
             <div id="delivered-orders-tab" class="order-tab-content">
                 <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Entregados (Pendiente de Cobro)</h3>
-                <div id="deliveredOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
+                <div id="deliveredOrders" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 overflow-auto" style="max-height: 24rem;">
                     </div>
             </div>
+
+            <div id="daily-sales-tab" class="order-tab-content">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Ventas del Día</h3>
+                <p class="text-lg font-bold text-gray-800 mb-4">Total del Día: <span id="dailySalesTotal">$0.00</span></p>
+                <div class="table-responsive rounded-lg shadow-sm mb-4">
+                    <table id="dailySalesTable" class="table table-striped min-w-100">
+                        <thead>
+                            <tr>
+                                <th>ID Venta</th>
+                                <th>Hora</th>
+                                <th>Total</th>
+                                <th>Método Pago</th>
+                                <th>Productos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+                <button id="closeDailySalesBtn" class="btn btn-primary w-100"><i class="bi bi-calendar-check me-1"></i> Cerrar Venta del Día</button>
+            </div>
+
         </div>
 
         <div id="reports" class="tab-content card">
@@ -449,64 +456,217 @@ permalink: /antojitos-salu
         </div>
     </div>
 
+    <!-- Modifier Selection Modal (Existing) -->
+    <div class="modal fade" id="modifierModal" tabindex="-1" aria-labelledby="modifierModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modifierModalLabel">Editar Modificadores para <span id="modalProductNameSpan"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalModifiersList" class="space-y-2">
+                        </div>
+                    <p id="noProductModifiersMessage" class="text-gray-500 text-center py-4 hidden">No hay modificadores disponibles para este producto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="saveModifiersBtn">Guardar Modificadores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Add/Edit Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Agregar/Editar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="space-y-4">
+                        <div class="mb-3">
+                            <label for="addProductModalProductNameInput" class="form-label text-sm font-medium text-gray-700">Nombre del Producto</label>
+                            <input type="text" id="addProductModalProductNameInput" placeholder="Ej: Hamburguesa Clásica" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalProductDescription" class="form-label text-sm font-medium text-gray-700">Descripción</label>
+                            <input type="text" id="modalProductDescription" placeholder="Ej: Carne, lechuga, tomate" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalProductPrice" class="form-label text-sm font-medium text-gray-700">Precio</label>
+                            <input type="number" id="modalProductPrice" step="0.01" placeholder="Ej: 85.00" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalProductCategory" class="form-label text-sm font-medium text-gray-700">Categoría</label>
+                            <select id="modalProductCategory" class="form-select">
+                                </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveProductModalBtn">Guardar Producto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Add Category Modal -->
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCategoryModalLabel">Agregar Nueva Categoría</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="modalCategoryName" class="form-label text-sm font-medium text-gray-700">Nombre de la Categoría</label>
+                        <input type="text" id="modalCategoryName" placeholder="Ej: Bebidas" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="addCategoryModalBtn">Agregar Categoría</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Manage Modifiers Modal -->
+    <div class="modal fade" id="manageModifiersModal" tabindex="-1" aria-labelledby="manageModifiersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="manageModifiersModalLabel">Gestión de Modificadores Globales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-md-5">
+                            <label for="modalModifierNameInput" class="form-label text-sm font-medium text-gray-700">Nombre del Modificador</label>
+                            <input type="text" id="modalModifierNameInput" placeholder="Ej: Extra Queso" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="modalModifierPriceInput" class="form-label text-sm font-medium text-gray-700">Precio</label>
+                            <input type="number" id="modalModifierPriceInput" step="0.01" placeholder="Ej: 5.00" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-3 d-flex align-items-end">
+                            <button id="addGlobalModifierModalBtn" class="btn btn-secondary w-100 me-2"><i class="bi bi-plus-circle me-1"></i> Agregar</button>
+                            <button id="cancelEditModifierModalBtn" class="btn btn-secondary w-100 hidden"><i class="bi bi-x-circle me-1"></i> Cancelar</button>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Modificadores Existentes:</h4>
+                    <div class="table-responsive rounded-lg shadow-sm">
+                        <table id="modalGlobalModifiersTable" class="table table-striped min-w-100">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Global modifiers will be rendered here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // --- Global Variables ---
         let productos = [];
         let categorias = [];
-        let pedidos = []; // Orders in queue (Pending, In Process, Delivered)
+        let modificadores = []; // New: Global array for modifiers
+        let pedidos = []; // Orders in queue (Pendiente, En Proceso, Entregado)
         let ventas = [];  // Finalized sales for reports
         let currentOrder = {
             items: [],
             total: 0
         };
         let editingProductId = null; // To track which product is being edited
-        let activeProductCategoryId = null; // To track the active category in "Create New Order" tab
-
+        let editingModifierId = null; // New: To track which global modifier is being edited
+        let activeProductCategoryId = null; // To track the active category in "Crear Nuevo Pedido" tab
+        let currentModifierItemIndex = -1; // To track which item in currentOrder is being modified
 
         // --- DOM Element Selectors ---
         // Tab Controls (Main)
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
 
-        // Product & Category Management
-        const productFormTitle = document.getElementById('productFormTitle');
-        const productNameInput = document.getElementById('productName');
-        const productDescriptionInput = document.getElementById('productDescription');
-        const productPriceInput = document.getElementById('productPrice');
-        const productCategorySelect = document.getElementById('productCategory');
-        const saveProductBtn = document.getElementById('saveProductBtn');
-        const cancelEditBtn = document.getElementById('cancelEditBtn');
-        const productsTableBody = document.querySelector('#productsTable tbody');
+        // Product & Category Management - Main Page Buttons
+        const openAddProductModalBtn = document.getElementById('openAddProductModalBtn');
+        const openAddCategoryModalBtn = document.getElementById('openAddCategoryModalBtn');
+        const openManageModifiersModalBtn = document.getElementById('openManageModifiersModalBtn');
 
-        const categoryNameInput = document.getElementById('categoryName');
-        const addCategoryBtn = document.getElementById('addCategoryBtn');
+        const productsTableBody = document.querySelector('#productsTable tbody');
         const categoryListUl = document.getElementById('categoryList');
 
-        // Modifiers elements
-        const modifiersContainer = document.getElementById('modifiersContainer');
-        const addModifierInputBtn = document.getElementById('addModifierInputBtn');
-        const noModifiersMessage = document.getElementById('noModifiersMessage');
+        // Modals and their internal elements
+        const modifierModal = new bootstrap.Modal(document.getElementById('modifierModal')); // Existing modifier selection modal
+        const modalProductNameSpan = document.getElementById('modalProductNameSpan'); // For modifier selection modal (RENAMED ID)
+        const modalModifiersListDiv = document.getElementById('modalModifiersList'); // For modifier selection modal
+        const noProductModifiersMessage = document.getElementById('noProductModifiersMessage'); // For modifier selection modal
+        const saveModifiersBtn = document.getElementById('saveModifiersBtn'); // For modifier selection modal
+
+        // NEW: Add/Edit Product Modal Elements
+        const addProductModal = new bootstrap.Modal(document.getElementById('addProductModal'));
+        const addProductModalLabel = document.getElementById('addProductModalLabel');
+        const addProductModalProductNameInput = document.getElementById('addProductModalProductNameInput'); // RENAMED ID
+        const modalProductDescriptionInput = document.getElementById('modalProductDescription');
+        const modalProductPriceInput = document.getElementById('modalProductPrice');
+        const modalProductCategorySelect = document.getElementById('modalProductCategory');
+        const saveProductModalBtn = document.getElementById('saveProductModalBtn');
+
+        // NEW: Add Category Modal Elements
+        const addCategoryModal = new bootstrap.Modal(document.getElementById('addCategoryModal'));
+        const modalCategoryNameInput = document.getElementById('modalCategoryName');
+        const addCategoryModalBtn = document.getElementById('addCategoryModalBtn');
+
+        // NEW: Manage Modifiers Modal Elements
+        const manageModifiersModal = new bootstrap.Modal(document.getElementById('manageModifiersModal'));
+        const modalModifierNameInput = document.getElementById('modalModifierNameInput');
+        const modalModifierPriceInput = document.getElementById('modalModifierPriceInput');
+        const addGlobalModifierModalBtn = document.getElementById('addGlobalModifierModalBtn');
+        const cancelEditModifierModalBtn = document.getElementById('cancelEditModifierModalBtn');
+        const modalGlobalModifiersTableBody = document.querySelector('#modalGlobalModifiersTable tbody');
 
 
         // Order Management (Nested Tabs)
         const orderTabButtons = document.querySelectorAll('.order-tab-button');
         const orderTabContents = document.querySelectorAll('.order-tab-content');
 
-        // Elements within 'Create New Order' tab
+        // Elements within 'Crear Nuevo Pedido' tab
         const productCategoryTabsContainer = document.getElementById('productCategoryTabs');
         const productCategoryContentDiv = document.getElementById('productCategoryContent');
-        const noProductsInCategoryMessage = document.getElementById('noProductsInCategoryMessage');
+        const noProductsInCategoryMessageOrders = document.getElementById('noProductsInCategoryMessage'); // Renamed to avoid conflict
 
-        // const availableProductsDiv = document.getElementById('availableProducts'); // This is now productCategoryContentDiv
         const currentOrderItemsDiv = document.getElementById('currentOrderItems');
         const currentOrderTotalSpan = document.getElementById('currentOrderTotal');
         const placeOrderBtn = document.getElementById('placeOrderBtn');
 
+        // Changed these to be `row` containers in HTML
         const pendingOrdersDiv = document.getElementById('pendingOrders');
         const inProcessOrdersDiv = document.getElementById('inProcessOrders');
         const deliveredOrdersDiv = document.getElementById('deliveredOrders');
+
+        // Daily Sales elements
+        const dailySalesTotalSpan = document.getElementById('dailySalesTotal');
+        const dailySalesTableBody = document.querySelector('#dailySalesTable tbody');
+        const closeDailySalesBtn = document.getElementById('closeDailySalesBtn');
 
 
         // Sales Reports
@@ -530,7 +690,11 @@ permalink: /antojitos-salu
                 localStorage.setItem(clave, JSON.stringify(datos));
             } catch (e) {
                 console.error("Error al guardar en localStorage:", e);
-                alert("Error: No se pudo guardar la información. El almacenamiento local podría estar lleno.");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de Almacenamiento',
+                    text: 'No se pudo guardar la información. El almacenamiento local podría estar lleno.',
+                });
             }
         }
 
@@ -540,6 +704,11 @@ permalink: /antojitos-salu
                 return datos ? JSON.parse(datos) : [];
             } catch (e) {
                 console.error("Error al obtener de localStorage:", e);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de Lectura',
+                    text: 'No se pudieron cargar los datos del almacenamiento local.',
+                });
                 return []; // Return an empty array in case of parsing error
             }
         }
@@ -582,6 +751,8 @@ permalink: /antojitos-salu
                 renderAllOrders();
             } else if (orderTabId === 'create-order') {
                 renderProductsByCategoryTabs(); // Re-render product category tabs if returning to create order
+            } else if (orderTabId === 'daily-sales-tab') { // NEW: Render daily sales when this tab is active
+                renderDailySales();
             }
         }
 
@@ -603,13 +774,13 @@ permalink: /antojitos-salu
         function initApp() {
             productos = obtenerDeLocalStorage('productos');
             categorias = obtenerDeLocalStorage('categorias');
+            modificadores = obtenerDeLocalStorage('modificadores'); // Load global modifiers
             pedidos = obtenerDeLocalStorage('pedidos');
             ventas = obtenerDeLocalStorage('ventas');
 
             renderCategories();
             renderProducts();
-            // Initial rendering for order section is now handled by showOrderTab('create-order')
-            // when the main 'orders' tab is activated.
+            renderGlobalModifiers(); // Render global modifiers table (for the modal)
 
             // Set current month and year in report selector
             const today = new Date();
@@ -639,7 +810,7 @@ permalink: /antojitos-salu
         function renderCategories() {
             // Clear list and select
             categoryListUl.innerHTML = '';
-            productCategorySelect.innerHTML = '<option value="">Selecciona una categoría</option>';
+            modalProductCategorySelect.innerHTML = '<option value="">Selecciona una categoría</option>'; // For product modal
 
             categorias.forEach(cat => {
                 const li = document.createElement('li');
@@ -649,15 +820,19 @@ permalink: /antojitos-salu
                 const option = document.createElement('option');
                 option.value = cat.id;
                 option.textContent = cat.nombre;
-                productCategorySelect.appendChild(option);
+                modalProductCategorySelect.appendChild(option); // For product modal
             });
         }
 
-        function addCategory() {
-            const name = categoryNameInput.value.trim();
+        function addCategory() { // Now called by modal button
+            const name = modalCategoryNameInput.value.trim();
             if (name) {
                 if (categorias.some(cat => cat.nombre.toLowerCase() === name.toLowerCase())) {
-                    alert('La categoría ya existe.');
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Categoría Existente',
+                        text: 'La categoría ya existe.',
+                    });
                     return;
                 }
                 const newCategory = {
@@ -667,10 +842,22 @@ permalink: /antojitos-salu
                 categorias.push(newCategory);
                 guardarEnLocalStorage('categorias', categorias);
                 renderCategories();
-                categoryNameInput.value = '';
+                modalCategoryNameInput.value = ''; // Clear modal input
+                addCategoryModal.hide(); // Close modal
                 renderProductsByCategoryTabs(); // Update category tabs in order creation
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Categoría Agregada',
+                    text: 'Categoría agregada exitosamente.',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             } else {
-                alert('Por favor, ingresa un nombre para la categoría.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Campo Vacío',
+                    text: 'Por favor, ingresa un nombre para la categoría.',
+                });
             }
         }
 
@@ -700,12 +887,11 @@ permalink: /antojitos-salu
             });
         }
 
-        function saveProduct() { // Renamed from addProduct
-            const name = productNameInput.value.trim();
-            const description = productDescriptionInput.value.trim();
-            const price = parseFloat(productPriceInput.value);
-            const categoryId = productCategorySelect.value;
-            const modifiers = collectModifierInputs(); // Collect modifiers from the form
+        function saveProduct() { // Now called by modal button
+            const name = addProductModalProductNameInput.value.trim(); // Changed to new ID
+            const description = modalProductDescriptionInput.value.trim();
+            const price = parseFloat(modalProductPriceInput.value);
+            const categoryId = modalProductCategorySelect.value;
 
             if (name && description && !isNaN(price) && price > 0 && categoryId) {
                 if (editingProductId) {
@@ -716,13 +902,14 @@ permalink: /antojitos-salu
                         productos[productIndex].descripcion = description;
                         productos[productIndex].precio = price;
                         productos[productIndex].categoria = categoryId;
-                        productos[productIndex].modifiers = modifiers; // Save modifiers
-                        alert('Producto actualizado exitosamente.');
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Producto Actualizado',
+                            text: 'Producto actualizado exitosamente.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                     }
-                    editingProductId = null; // Reset editing state
-                    productFormTitle.textContent = 'Agregar Nuevo Producto';
-                    saveProductBtn.innerHTML = '<i class="bi bi-plus-lg me-1"></i> Agregar Producto';
-                    cancelEditBtn.classList.add('hidden');
                 } else {
                     // Add new product
                     const newProduct = {
@@ -731,111 +918,211 @@ permalink: /antojitos-salu
                         descripcion: description,
                         precio: price,
                         categoria: categoryId,
-                        modifiers: modifiers // Save modifiers
                     };
                     productos.push(newProduct);
-                    alert('Producto agregado exitosamente.');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Producto Agregado',
+                        text: 'Producto agregado exitosamente.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
                 guardarEnLocalStorage('productos', productos);
                 renderProducts();
                 renderAvailableProductsForOrder(activeProductCategoryId); // Update product list for current category in orders
-                clearProductForm();
+                clearProductFormModal(); // Clear modal form
+                addProductModal.hide(); // Close modal
             } else {
-                alert('Por favor, completa todos los campos del producto correctamente.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Campos Incompletos',
+                    text: 'Por favor, completa todos los campos del producto correctamente (nombre, descripción, precio > 0 y categoría seleccionada).',
+                });
             }
         }
 
         function editProduct(id) {
             const product = productos.find(p => p.id === id);
             if (product) {
-                productNameInput.value = product.nombre;
-                productDescriptionInput.value = product.descripcion;
-                productPriceInput.value = product.precio;
-                productCategorySelect.value = product.categoria;
-                renderModifierInputs(product.modifiers || []); // Populate modifiers
+                addProductModalProductNameInput.value = product.nombre; // Changed to new ID
+                modalProductDescriptionInput.value = product.descripcion;
+                modalProductPriceInput.value = product.precio;
+                modalProductCategorySelect.value = product.categoria;
 
                 editingProductId = id; // Set the product being edited
-                productFormTitle.textContent = 'Editar Producto';
-                saveProductBtn.innerHTML = '<i class="bi bi-pencil-fill me-1"></i> Actualizar Producto';
-                cancelEditBtn.classList.remove('hidden');
+                addProductModalLabel.textContent = 'Editar Producto'; // Update modal title
+                saveProductModalBtn.textContent = 'Actualizar Producto'; // Update modal button text
+                addProductModal.show(); // Show modal
             }
         }
 
-        function cancelEdit() {
-            clearProductForm();
-            editingProductId = null;
-            productFormTitle.textContent = 'Agregar Nuevo Producto';
-            saveProductBtn.innerHTML = '<i class="bi bi-plus-lg me-1"></i> Agregar Producto';
-            cancelEditBtn.classList.add('hidden');
-        }
-
-        function clearProductForm() {
-            productNameInput.value = '';
-            productDescriptionInput.value = '';
-            productPriceInput.value = '';
-            productCategorySelect.value = '';
-            renderModifierInputs([]); // Clear modifiers
+        function clearProductFormModal() {
+            addProductModalProductNameInput.value = ''; // Changed to new ID
+            modalProductDescriptionInput.value = '';
+            modalProductPriceInput.value = '';
+            modalProductCategorySelect.value = '';
+            editingProductId = null; // Reset editing state
+            addProductModalLabel.textContent = 'Agregar Nuevo Producto'; // Reset modal title
+            saveProductModalBtn.textContent = 'Guardar Producto'; // Reset modal button text
         }
 
         function deleteProduct(id) {
-            if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-                productos = productos.filter(prod => prod.id !== id);
-                guardarEnLocalStorage('productos', productos);
-                renderProducts();
-                renderAvailableProductsForOrder(activeProductCategoryId); // Update product list for current category in orders
-                // If the deleted product was being edited, clear the form
-                if (editingProductId === id) {
-                    cancelEdit();
-                }
-            }
-        }
-
-        // --- Modifier Management (Product Form) ---
-        function addModifierInput(name = '', price = '') {
-            noModifiersMessage.classList.add('hidden'); // Hide "No modifiers" message
-
-            const modifierDiv = document.createElement('div');
-            modifierDiv.className = 'd-flex gap-2 align-items-center';
-            modifierDiv.innerHTML = `
-                <input type="text" class="modifier-name form-control form-control-sm flex-grow-1" placeholder="Nombre (Ej: Extra Queso)" value="${name}">
-                <input type="number" class="modifier-price form-control form-control-sm w-25" step="0.01" placeholder="Precio" value="${price}">
-                <button class="btn btn-danger btn-sm remove-modifier-btn"><i class="bi bi-x"></i></button>
-            `;
-            modifiersContainer.appendChild(modifierDiv);
-
-            // Add event listener to the new remove button
-            modifierDiv.querySelector('.remove-modifier-btn').onclick = (event) => {
-                modifierDiv.remove();
-                if (modifiersContainer.children.length === 0) {
-                    noModifiersMessage.classList.remove('hidden'); // Show message if no modifiers left
-                }
-            };
-        }
-
-        function renderModifierInputs(modifiers) {
-            modifiersContainer.innerHTML = ''; // Clear existing inputs
-            if (modifiers.length > 0) {
-                noModifiersMessage.classList.add('hidden');
-                modifiers.forEach(mod => addModifierInput(mod.name, mod.price));
-            } else {
-                noModifiersMessage.classList.remove('hidden');
-            }
-        }
-
-        function collectModifierInputs() {
-            const collectedModifiers = [];
-            modifiersContainer.querySelectorAll('.d-flex.gap-2.align-items-center').forEach(modifierDiv => {
-                const nameInput = modifierDiv.querySelector('.modifier-name');
-                const priceInput = modifierDiv.querySelector('.modifier-price');
-                const name = nameInput.value.trim();
-                const price = parseFloat(priceInput.value);
-
-                if (name && !isNaN(price)) {
-                    collectedModifiers.push({ name: name, price: price });
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc2626',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    productos = productos.filter(prod => prod.id !== id);
+                    guardarEnLocalStorage('productos', productos);
+                    renderProducts();
+                    renderAvailableProductsForOrder(activeProductCategoryId); // Update product list for current category in orders
+                    // If the deleted product was being edited, clear the form
+                    if (editingProductId === id) {
+                        clearProductFormModal();
+                    }
+                    Swal.fire(
+                        '¡Eliminado!',
+                        'El producto ha sido eliminado.',
+                        'success'
+                    );
                 }
             });
-            return collectedModifiers;
         }
+
+        // --- Global Modifier Management ---
+        function renderGlobalModifiers() {
+            modalGlobalModifiersTableBody.innerHTML = ''; // Render into modal table
+            modificadores.forEach(mod => {
+                const row = modalGlobalModifiersTableBody.insertRow();
+                row.insertCell().textContent = mod.id;
+                row.insertCell().textContent = mod.name;
+                row.insertCell().textContent = `$${mod.price.toFixed(2)}`;
+
+                const actionsCell = row.insertCell();
+                const editBtn = document.createElement('button');
+                editBtn.textContent = 'Editar';
+                editBtn.className = 'btn btn-secondary btn-sm me-2';
+                editBtn.onclick = () => editGlobalModifier(mod.id);
+                actionsCell.appendChild(editBtn);
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Eliminar';
+                deleteBtn.className = 'btn btn-danger btn-sm';
+                deleteBtn.onclick = () => deleteGlobalModifier(mod.id);
+                actionsCell.appendChild(deleteBtn);
+            });
+        }
+
+        function addGlobalModifier() { // Now called by modal button
+            const name = modalModifierNameInput.value.trim();
+            const price = parseFloat(modalModifierPriceInput.value);
+
+            if (name && !isNaN(price) && price >= 0) {
+                if (editingModifierId) {
+                    // Update existing modifier
+                    const modifierIndex = modificadores.findIndex(m => m.id === editingModifierId);
+                    if (modifierIndex !== -1) {
+                        modificadores[modifierIndex].name = name;
+                        modificadores[modifierIndex].price = price;
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Modificador Actualizado',
+                            text: 'Modificador actualizado exitosamente.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                } else {
+                    // Add new modifier
+                    if (modificadores.some(mod => mod.name.toLowerCase() === name.toLowerCase())) {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Modificador Existente',
+                            text: 'Ya existe un modificador con ese nombre.',
+                        });
+                        return;
+                    }
+                    const newModifier = {
+                        id: 'mod_' + Date.now(),
+                        name: name,
+                        price: price
+                    };
+                    modificadores.push(newModifier);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Modificador Agregado',
+                        text: 'Modificador agregado exitosamente.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+                guardarEnLocalStorage('modificadores', modificadores);
+                renderGlobalModifiers(); // Re-render table in modal
+                clearModifierFormModal(); // Clear modal form
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Campos Incompletos',
+                    text: 'Por favor, ingresa un nombre y un precio válido para el modificador (precio >= 0).',
+                });
+            }
+        }
+
+        function editGlobalModifier(id) {
+            const modifier = modificadores.find(m => m.id === id);
+            if (modifier) {
+                modalModifierNameInput.value = modifier.name;
+                modalModifierPriceInput.value = modifier.price;
+                editingModifierId = id;
+                addGlobalModifierModalBtn.textContent = 'Actualizar'; // Update modal button text
+                cancelEditModifierModalBtn.classList.remove('hidden');
+            }
+        }
+
+        function clearModifierFormModal() {
+            modalModifierNameInput.value = '';
+            modalModifierPriceInput.value = '';
+            editingModifierId = null;
+            addGlobalModifierModalBtn.textContent = 'Agregar'; // Reset modal button text
+            cancelEditModifierModalBtn.classList.add('hidden');
+        }
+
+        function deleteGlobalModifier(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc2626',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    modificadores = modificadores.filter(mod => mod.id !== id);
+                    guardarEnLocalStorage('modificadores', modificadores);
+                    renderGlobalModifiers(); // Re-render table in modal
+                    // Also, remove this modifier from any existing currentOrder items' selectedModifiers if it was there
+                    currentOrder.items.forEach(item => {
+                        item.selectedModifiers = item.selectedModifiers.filter(selectedMod => selectedMod.id !== id);
+                    });
+                    updateCurrentOrderDisplay();
+                    Swal.fire(
+                        '¡Eliminado!',
+                        'El modificador ha sido eliminado.',
+                        'success'
+                    );
+                }
+            });
+        }
+
 
         // --- Order Management ---
 
@@ -848,7 +1135,7 @@ permalink: /antojitos-salu
                 return;
             }
 
-            // Create "All Products" tab
+            // Create "All Productos" tab
             const allProductsTabButton = document.createElement('button');
             allProductsTabButton.className = 'product-category-tab-button';
             allProductsTabButton.textContent = 'Todos';
@@ -866,13 +1153,14 @@ permalink: /antojitos-salu
                 productCategoryTabsContainer.appendChild(button);
             });
 
-            // Activate the first category or "All Products" by default
+            // Activate the first category or "All Productos" by default
             if (activeProductCategoryId) {
                 showProductCategoryTab(activeProductCategoryId);
             } else if (categorias.length > 0) {
                 showProductCategoryTab('all'); // Default to 'all' if no active category
             } else {
-                productCategoryContentDiv.innerHTML = '<p class="text-gray-500 text-center py-4">No hay productos disponibles.</p>';
+                noProductsInCategoryMessageOrders.classList.remove('hidden'); // Use the correct element
+                productCategoryContentDiv.appendChild(noProductsInCategoryMessageOrders);
             }
         }
 
@@ -890,11 +1178,11 @@ permalink: /antojitos-salu
             productsToRender.sort((a, b) => b.precio - a.precio);
 
             if (productsToRender.length === 0) {
-                noProductsInCategoryMessage.classList.remove('hidden');
-                productCategoryContentDiv.appendChild(noProductsInCategoryMessage);
+                noProductsInCategoryMessageOrders.classList.remove('hidden'); // Use the correct element
+                productCategoryContentDiv.appendChild(noProductsInCategoryMessageOrders);
                 return;
             } else {
-                noProductsInCategoryMessage.classList.add('hidden');
+                noProductsInCategoryMessageOrders.classList.add('hidden'); // Use the correct element
             }
 
             productsToRender.forEach(prod => {
@@ -910,8 +1198,6 @@ permalink: /antojitos-salu
                             <p class="text-sm text-gray-600">${prod.descripcion}</p>
                             <p class="fw-bold fs-4 text-blue-600 mt-1">$${prod.precio.toFixed(2)}</p>
                         </div>
-                        ${prod.modifiers && prod.modifiers.length > 0 ?
-                            `<div class="text-xs text-gray-500 text-center mb-2">Modificadores: ${prod.modifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ')}</div>` : ''}
                         <div class="quantity-control">
                             <button class="quantity-btn" data-action="decrease" data-product-id="${prod.id}"><i class="bi bi-dash"></i></button>
                             <input type="number" class="quantity-input" value="1" min="1" data-product-id="${prod.id}">
@@ -949,7 +1235,11 @@ permalink: /antojitos-salu
                         addToOrder(productId, quantity);
                         input.value = 1; // Reset quantity after adding to order
                     } else {
-                        alert('La cantidad debe ser al menos 1.');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Cantidad Inválida',
+                            text: 'La cantidad debe ser al menos 1.',
+                        });
                     }
                 };
             });
@@ -958,17 +1248,18 @@ permalink: /antojitos-salu
         function addToOrder(productId, quantity) {
             const product = productos.find(p => p.id === productId);
             if (product) {
+                // Check if the product already exists in the current order
                 const existingItemIndex = currentOrder.items.findIndex(item => item.product.id === productId);
+
                 if (existingItemIndex !== -1) {
-                    // Update quantity if item already exists
+                    // If it exists, just update the quantity
                     currentOrder.items[existingItemIndex].cantidad += quantity;
                 } else {
-                    // When adding a new product to order, include all its defined modifiers by default
-                    const selectedModifiers = product.modifiers ? JSON.parse(JSON.stringify(product.modifiers)) : [];
+                    // If it's a new item, add it with selectedModifiers initialized as an empty array
                     currentOrder.items.push({
-                        product: product,
+                        product: { ...product }, // Deep copy product details
                         cantidad: quantity,
-                        selectedModifiers: selectedModifiers // Store selected modifiers
+                        selectedModifiers: [] // Start with no modifiers selected
                     });
                 }
                 updateCurrentOrderDisplay();
@@ -985,13 +1276,13 @@ permalink: /antojitos-salu
             }
 
             currentOrder.items.forEach((item, itemIndex) => {
-                let itemTotalPrice = item.product.precio * item.cantidad;
+                let itemTotalPrice = item.product.precio; // Start with base product price
                 let modifiersDisplay = '';
 
                 if (item.selectedModifiers && item.selectedModifiers.length > 0) {
                     modifiersDisplay = item.selectedModifiers.map((mod, modIndex) => {
-                        itemTotalPrice += mod.price * item.cantidad; // Add modifier price to item total
-                        return `<span class="text-xs text-gray-600 ms-2">${mod.name} ($${mod.price.toFixed(2)}) <button class="btn btn-danger btn-sm remove-selected-modifier" data-item-index="${itemIndex}" data-mod-index="${modIndex}"><i class="bi bi-x"></i></button></span>`;
+                        itemTotalPrice += mod.price; // Add modifier price to item total
+                        return `<span class="badge bg-info text-dark me-1">${mod.name} ($${mod.price.toFixed(2)}) <button class="btn-close btn-close-white ms-1 remove-selected-modifier" type="button" aria-label="Remove" data-item-index="${itemIndex}" data-mod-index="${modIndex}"></button></span>`;
                     }).join('');
                     modifiersDisplay = `<div class="d-flex flex-wrap align-items-center mt-1">${modifiersDisplay}</div>`;
                 }
@@ -1001,13 +1292,16 @@ permalink: /antojitos-salu
                 itemDiv.innerHTML = `
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="text-gray-700">${item.cantidad}x ${item.product.nombre}</span>
-                        <span class="fw-medium text-gray-800">$${itemTotalPrice.toFixed(2)}</span>
-                        <button class="btn btn-danger btn-sm remove-order-item-btn" data-index="${itemIndex}"><i class="bi bi-x"></i></button>
+                        <span class="fw-medium text-gray-800">$${(itemTotalPrice * item.cantidad).toFixed(2)}</span>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-info btn-sm edit-modifiers-btn" data-item-index="${itemIndex}" title="Editar Modificadores"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger btn-sm remove-order-item-btn" data-index="${itemIndex}"><i class="bi bi-x"></i></button>
+                        </div>
                     </div>
                     ${modifiersDisplay}
                 `;
                 currentOrderItemsDiv.appendChild(itemDiv);
-                currentOrder.total += itemTotalPrice; // Add item's total (including modifiers) to order total
+                currentOrder.total += (itemTotalPrice * item.cantidad); // Total of item (base price + modifiers) multiplied by quantity
             });
             currentOrderTotalSpan.textContent = `$${currentOrder.total.toFixed(2)}`;
 
@@ -1020,7 +1314,7 @@ permalink: /antojitos-salu
                 };
             });
 
-            // Add event listeners for removing selected modifiers
+            // Add event listeners for removing selected modifiers (from the badge)
             currentOrderItemsDiv.querySelectorAll('.remove-selected-modifier').forEach(button => {
                 button.onclick = (event) => {
                     const itemIndex = parseInt(event.target.dataset.itemIndex || event.target.closest('button').dataset.itemIndex);
@@ -1031,11 +1325,74 @@ permalink: /antojitos-salu
                     }
                 };
             });
+
+            // Add event listeners for editing modifiers (main button)
+            currentOrderItemsDiv.querySelectorAll('.edit-modifiers-btn').forEach(button => {
+                button.onclick = (event) => {
+                    const itemIndex = parseInt(event.target.dataset.itemIndex || event.target.closest('button').dataset.itemIndex);
+                    openModifierSelectionModal(itemIndex);
+                };
+            });
         }
+
+        function openModifierSelectionModal(itemIndex) {
+            currentModifierItemIndex = itemIndex;
+            const item = currentOrder.items[itemIndex];
+            if (!item || !item.product) {
+                console.error("Item or product not found for modifier selection.");
+                return;
+            }
+
+            modalProductNameSpan.textContent = item.product.nombre;
+            modalModifiersListDiv.innerHTML = ''; // Clear previous modifiers
+
+            const selectedModifiersNames = new Set(item.selectedModifiers.map(mod => mod.name));
+
+            if (modificadores.length === 0) { // Use global modificadores array
+                noProductModifiersMessage.classList.remove('hidden');
+            } else {
+                noProductModifiersMessage.classList.add('hidden');
+                modificadores.forEach(mod => { // Iterate over global modifiers
+                    const isChecked = selectedModifiersNames.has(mod.name);
+                    const div = document.createElement('div');
+                    div.className = 'form-check';
+                    div.innerHTML = `
+                        <input class="form-check-input modifier-checkbox" type="checkbox" value="${mod.id}" id="modifier-${mod.id}" data-modifier-name="${mod.name}" data-modifier-price="${mod.price}" ${isChecked ? 'checked' : ''}>
+                        <label class="form-check-label" for="modifier-${mod.id}">
+                            ${mod.name} ($${mod.price.toFixed(2)})
+                        </label>
+                    `;
+                    modalModifiersListDiv.appendChild(div);
+                });
+            }
+            modifierModal.show();
+        }
+
+        saveModifiersBtn.addEventListener('click', () => {
+            if (currentModifierItemIndex === -1) return;
+
+            const newSelectedModifiers = [];
+            modalModifiersListDiv.querySelectorAll('.modifier-checkbox:checked').forEach(checkbox => {
+                newSelectedModifiers.push({
+                    id: checkbox.value, // Store modifier ID
+                    name: checkbox.dataset.modifierName,
+                    price: parseFloat(checkbox.dataset.modifierPrice)
+                });
+            });
+
+            currentOrder.items[currentModifierItemIndex].selectedModifiers = newSelectedModifiers;
+            updateCurrentOrderDisplay();
+            modifierModal.hide();
+        });
+
 
         function placeOrder() {
             if (currentOrder.items.length === 0) {
-                alert('El pedido está vacío. Por favor, agrega productos.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Pedido Vacío',
+                    text: 'El pedido está vacío. Por favor, agrega productos.',
+                });
                 return;
             }
 
@@ -1060,7 +1417,13 @@ permalink: /antojitos-salu
             currentOrder.items = [];
             currentOrder.total = 0;
             updateCurrentOrderDisplay();
-            alert(`Pedido #${newOrder.id.split('_')[1]} realizado y en cola.`);
+            Swal.fire({
+                icon: 'success',
+                title: 'Pedido Realizado',
+                text: `Pedido #${newOrder.id.split('_')[1]} realizado y en cola.`,
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
 
         function renderAllOrders() {
@@ -1092,7 +1455,7 @@ permalink: /antojitos-salu
 
 
                 const orderCard = document.createElement('div');
-                orderCard.className = 'card p-4 mb-2';
+                orderCard.className = 'card p-4 h-100'; // Added h-100 for consistent height in grid
                 orderCard.innerHTML = `
                     <h4 class="fw-bold text-lg text-gray-800 mb-2">Pedido #${order.id.split('_')[1]}</h4>
                     <p class="text-sm text-gray-600">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
@@ -1111,18 +1474,23 @@ permalink: /antojitos-salu
                     </div>
                 `;
 
+                // Create a column div for the card and append to the respective order div
+                const colDiv = document.createElement('div');
+                colDiv.className = 'col'; // Bootstrap col class
+                colDiv.appendChild(orderCard);
+
                 if (order.estado === 'Pendiente') {
-                    pendingOrdersDiv.appendChild(orderCard);
+                    pendingOrdersDiv.appendChild(colDiv);
                 } else if (order.estado === 'En Proceso') {
-                    inProcessOrdersDiv.appendChild(orderCard);
+                    inProcessOrdersDiv.appendChild(colDiv);
                 } else if (order.estado === 'Entregado') {
-                    deliveredOrdersDiv.appendChild(orderCard);
+                    deliveredOrdersDiv.appendChild(colDiv);
                 }
             });
             // Display message if no orders in a section
-            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos pendientes.</p>';
-            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos en proceso.</p>';
-            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos entregados.</p>';
+            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-gray-500 text-center col-12">No hay pedidos pendientes.</p>';
+            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-gray-500 text-center col-12">No hay pedidos en proceso.</p>';
+            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-gray-500 text-center col-12">No hay pedidos entregados.</p>';
         }
 
         function changeOrderStatus(orderId, newStatus) {
@@ -1131,18 +1499,39 @@ permalink: /antojitos-salu
                 pedidos[orderIndex].estado = newStatus;
                 guardarEnLocalStorage('pedidos', pedidos);
                 renderAllOrders();
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Estado Actualizado',
+                    text: `El pedido #${orderId.split('_')[1]} ha cambiado a "${newStatus}".`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }
         }
 
-        function completeSale(orderId) {
+        async function completeSale(orderId) {
             const orderIndex = pedidos.findIndex(o => o.id === orderId);
             if (orderIndex !== -1) {
                 const completedOrder = pedidos[orderIndex];
 
-                // Simulate payment method selection
-                const metodoPago = prompt("Método de pago (Efectivo/Tarjeta):", "Efectivo");
+                const { value: metodoPago } = await Swal.fire({
+                    title: 'Método de Pago',
+                    input: 'select',
+                    inputOptions: {
+                        'Efectivo': 'Efectivo',
+                        'Tarjeta': 'Tarjeta'
+                    },
+                    inputPlaceholder: 'Selecciona un método de pago',
+                    showCancelButton: true,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'Debes seleccionar un método de pago';
+                        }
+                    }
+                });
+
                 if (!metodoPago) {
-                    alert("Cobro cancelado.");
+                    Swal.fire('Cobro Cancelado', '', 'info');
                     return;
                 }
 
@@ -1184,18 +1573,83 @@ permalink: /antojitos-salu
                 guardarEnLocalStorage('pedidos', pedidos);
 
                 renderAllOrders();
-                alert(`Venta de $${nuevaVenta.total.toFixed(2)} registrada exitosamente.`);
+                renderDailySales(); // NEW: Update daily sales view after a sale is completed
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Venta Registrada',
+                    text: `Venta de $${nuevaVenta.total.toFixed(2)} registrada exitosamente.`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }
         }
 
         function cancelOrder(orderId) {
-            if (confirm('¿Estás seguro de que quieres cancelar este pedido?')) {
-                pedidos = pedidos.filter(order => order.id !== orderId);
-                guardarEnLocalStorage('pedidos', pedidos);
-                renderAllOrders();
-                alert('Pedido cancelado.');
-            }
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡El pedido será cancelado!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc2626',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, cancelar pedido',
+                cancelButtonText: 'No, mantener'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    pedidos = pedidos.filter(order => order.id !== orderId);
+                    guardarEnLocalStorage('pedidos', pedidos);
+                    renderAllOrders();
+                    Swal.fire(
+                        '¡Cancelado!',
+                        'El pedido ha sido cancelado.',
+                        'success'
+                    );
+                }
+            });
         }
+
+        // NEW FUNCTION: Render Daily Sales
+        function renderDailySales() {
+            dailySalesTableBody.innerHTML = '';
+            let totalDailySales = 0;
+            const today = new Date();
+            const todayString = today.toISOString().slice(0, 10); //YYYY-MM-DD
+
+            const salesForToday = ventas.filter(venta => {
+                const ventaDate = new Date(venta.fecha);
+                return ventaDate.toISOString().slice(0, 10) === todayString;
+            });
+
+            if (salesForToday.length === 0) {
+                const row = dailySalesTableBody.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 5;
+                cell.textContent = 'No hay ventas registradas para hoy.';
+                cell.className = 'text-center text-gray-500 py-4';
+            } else {
+                salesForToday.forEach(venta => {
+                    totalDailySales += venta.total;
+
+                    const row = dailySalesTableBody.insertRow();
+                    row.insertCell().textContent = venta.id.split('_')[1];
+                    row.insertCell().textContent = new Date(venta.fecha).toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); // Only time for daily report
+                    row.insertCell().textContent = `$${venta.total.toFixed(2)}`;
+                    row.insertCell().textContent = venta.metodoPago;
+                    const productsCell = row.insertCell();
+                    let productsHtml = venta.productosVendidos.map(p => {
+                        let modHtml = '';
+                        if (p.selectedModifiers && p.selectedModifiers.length > 0) {
+                            modHtml = p.selectedModifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ');
+                            modHtml = ` <span class="text-xs text-gray-500">(${modHtml})</span>`;
+                        }
+                        return `${p.cantidad}x ${p.nombre}${modHtml}`;
+                    }).join('<br>');
+                    productsCell.innerHTML = productsHtml;
+                });
+            }
+            dailySalesTotalSpan.textContent = `$${totalDailySales.toFixed(2)}`;
+        }
+
 
         // --- Sales Reports ---
 
@@ -1204,7 +1658,11 @@ permalink: /antojitos-salu
             const anio = parseInt(reportYearInput.value);
 
             if (isNaN(mes) || isNaN(anio)) {
-                alert('Por favor, selecciona un mes y un año válidos.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Selección Inválida',
+                    text: 'Por favor, selecciona un mes y un año válidos.',
+                });
                 return;
             }
 
@@ -1292,12 +1750,28 @@ permalink: /antojitos-salu
         }
 
         function deleteSale(saleId) {
-            if (confirm('¿Estás seguro de que quieres eliminar esta venta? Esta acción no se puede deshacer.')) {
-                ventas = ventas.filter(venta => venta.id !== saleId);
-                guardarEnLocalStorage('ventas', ventas);
-                generateMonthlyReport(); // Re-render the report after deletion
-                alert('Venta eliminada exitosamente.');
-            }
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡Esta venta será eliminada permanentemente!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#dc2626',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, eliminar venta',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    ventas = ventas.filter(venta => venta.id !== saleId);
+                    guardarEnLocalStorage('ventas', ventas);
+                    generateMonthlyReport(); // Re-render the report after deletion
+                    renderDailySales(); // NEW: Update daily sales view if a sale from today was deleted
+                    Swal.fire(
+                        '¡Eliminada!',
+                        'La venta ha sido eliminada.',
+                        'success'
+                    );
+                }
+            });
         }
 
 
@@ -1305,7 +1779,11 @@ permalink: /antojitos-salu
         function exportSalesData() {
             const data = obtenerDeLocalStorage('ventas');
             if (data.length === 0) {
-                alert('No hay datos de ventas para exportar.');
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Sin Datos',
+                    text: 'No hay datos de ventas para exportar.',
+                });
                 return;
             }
             const jsonString = JSON.stringify(data, null, 2); // Pretty print JSON
@@ -1318,7 +1796,13 @@ permalink: /antojitos-salu
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
-            alert('Datos de ventas exportados exitosamente.');
+            Swal.fire({
+                icon: 'success',
+                title: 'Exportación Exitosa',
+                text: 'Datos de ventas exportados exitosamente.',
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
 
         function importSalesData(event) {
@@ -1328,24 +1812,46 @@ permalink: /antojitos-salu
             }
 
             const reader = new FileReader();
-            reader.onload = (e) => {
+            reader.onload = async (e) => { // Made async to use await with Swal.fire
                 try {
                     const importedData = JSON.parse(e.target.result);
                     if (!Array.isArray(importedData)) {
                         throw new Error('El archivo JSON no contiene un array válido de ventas.');
                     }
-                    // Optional: Add more robust validation for the structure of importedData
-                    if (!confirm('¿Estás seguro de que quieres importar estos datos? Esto sobrescribirá tus ventas actuales.')) {
-                        return;
+                    
+                    const result = await Swal.fire({
+                        title: '¿Importar Datos?',
+                        text: "¡Esto sobrescribirá tus ventas actuales! ¿Estás seguro?",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#2563eb',
+                        cancelButtonColor: '#6b7280',
+                        confirmButtonText: 'Sí, importar',
+                        cancelButtonText: 'Cancelar'
+                    });
+
+                    if (result.isConfirmed) {
+                        ventas = importedData;
+                        guardarEnLocalStorage('ventas', ventas);
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Importación Exitosa',
+                            text: 'Datos de ventas importados exitosamente. Genera un nuevo reporte para ver los cambios.',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+                        generateMonthlyReport();
+                        renderDailySales();
+                    } else {
+                        Swal.fire('Importación Cancelada', '', 'info');
                     }
-                    ventas = importedData;
-                    guardarEnLocalStorage('ventas', ventas);
-                    alert('Datos de ventas importados exitosamente. Genera un nuevo reporte para ver los cambios.');
-                    // Re-render report with new data
-                    generateMonthlyReport();
                 } catch (error) {
                     console.error("Error al importar datos:", error);
-                    alert(`Error al importar el archivo: ${error.message}. Asegúrate de que sea un archivo JSON válido.`);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de Importación',
+                        text: `Error al importar el archivo: ${error.message}. Asegúrate de que sea un archivo JSON válido.`,
+                    });
                 }
             };
             reader.readAsText(file);
@@ -1353,12 +1859,73 @@ permalink: /antojitos-salu
 
 
         // --- Event Listeners ---
-        saveProductBtn.addEventListener('click', saveProduct);
-        cancelEditBtn.addEventListener('click', cancelEdit);
-        addCategoryBtn.addEventListener('click', addCategory);
-        addModifierInputBtn.addEventListener('click', () => addModifierInput());
+        // Main Tab Buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                showTab(button.dataset.tab);
+            });
+        });
+
+        // Order Tab Buttons
+        orderTabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                showOrderTab(button.dataset.orderTab);
+            });
+        });
+
+        // Product Management Modal Triggers
+        openAddProductModalBtn.addEventListener('click', () => {
+            clearProductFormModal(); // Ensure form is clean before opening for new product
+            addProductModal.show();
+        });
+        saveProductModalBtn.addEventListener('click', saveProduct); // Save button inside modal
+
+        // Category Management Modal Triggers
+        openAddCategoryModalBtn.addEventListener('click', () => {
+            modalCategoryNameInput.value = ''; // Clear input before opening
+            addCategoryModal.show();
+        });
+        addCategoryModalBtn.addEventListener('click', addCategory); // Add button inside modal
+
+        // Modifier Management Modal Triggers
+        openManageModifiersModalBtn.addEventListener('click', () => {
+            clearModifierFormModal(); // Ensure form is clean
+            renderGlobalModifiers(); // Render current modifiers in the modal table
+            manageModifiersModal.show();
+        });
+        addGlobalModifierModalBtn.addEventListener('click', addGlobalModifier); // Add/Update button inside modal
+        cancelEditModifierModalBtn.addEventListener('click', clearModifierFormModal); // Cancel button inside modal
+
+        // Order Actions
         placeOrderBtn.addEventListener('click', placeOrder);
+
+        // Report Actions
         generateReportBtn.addEventListener('click', generateMonthlyReport);
+        closeDailySalesBtn.addEventListener('click', () => {
+            Swal.fire({
+                title: '¿Cerrar Venta del Día?',
+                text: "Esto no eliminará los datos, solo confirmará el cierre operacional del día.",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#2563eb',
+                cancelButtonColor: '#6b7280',
+                confirmButtonText: 'Sí, cerrar venta',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Clear the daily sales table and reset the total
+                    dailySalesTableBody.innerHTML = '';
+                    dailySalesTotalSpan.textContent = '$0.00';
+                    
+                    Swal.fire(
+                        '¡Venta Cerrada!',
+                        'Venta del día cerrada exitosamente. Los datos están disponibles en los Reportes de Ventas.',
+                        'success'
+                    );
+                }
+            });
+        });
+
 
         // Export/Import Event Listeners
         exportSalesBtn.addEventListener('click', exportSalesData);
