@@ -1,59 +1,130 @@
+---
+layout: 
+permalink: /antojitos-salu
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Cocina Rápida (con Pestañas)</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
+            background-color: #f3ffef; /* Light green background */
         }
         .card {
             background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow */
-            padding: 1.5rem; /* p-4 */
-            margin-bottom: 1.5rem; /* mb-4 */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
         }
-        .btn btn-primary {
-            @apply bg-primary text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
+        /* Custom button styles to match previous Tailwind aesthetic with Bootstrap base */
+        .btn-primary {
+            background-color: #2563eb; /* blue-600 */
+            color: white;
+            border: none;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
         }
-        .btn btn-secondary {
-            @apply bg-gray-300 text-dark px-3 py-2 rounded shadow hover:bg-gray-400 transition duration-200 ease-in-out;
+        .btn-primary:hover {
+            background-color: #1d4ed8; /* blue-700 */
         }
-        .btn btn-success {
-            @apply bg-success text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
+        .btn-secondary {
+            background-color: #d1d5db; /* gray-300 */
+            color: #374151; /* gray-800 */
+            border: none;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
         }
-        .btn btn-warning {
-            @apply bg-warning text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
+        .btn-secondary:hover {
+            background-color: #9ca3af; /* gray-400 */
         }
-        .btn btn-danger {
-            @apply bg-danger text-white px-3 py-2 rounded shadow  transition duration-200 ease-in-out;
+        .btn-success {
+            background-color: #16a34a; /* green-600 */
+            color: white;
+            border: none;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
         }
+        .btn-success:hover {
+            background-color: #15803d; /* green-700 */
+        }
+        .btn-warning {
+            background-color: #f59e0b; /* yellow-500 */
+            color: white;
+            border: none;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .btn-warning:hover {
+            background-color: #d97706; /* yellow-600 */
+        }
+        .btn-danger {
+            background-color: #dc2626; /* red-600 */
+            color: white;
+            border: none;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .btn-danger:hover {
+            background-color: #b91c1c; /* red-700 */
+        }
+
         input[type="text"], input[type="number"], select {
-            @apply p-2 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 block w-100;
+            padding: 0.5rem; /* p-2 */
+            border: 1px solid #d1d5db; /* border-gray-300 */
+            border-radius: 0.375rem; /* rounded-md */
+            display: block; /* block */
+            width: 100%; /* w-full */
+        }
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #3b82f6; /* focus:border-blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 */
+            outline: none;
         }
         table {
-            @apply w-100 text-start border-collapse;
+            width: 100%; /* w-full */
+            text-align: left; /* text-left */
+            border-collapse: collapse; /* border-collapse */
         }
         th, td {
-            @apply p-3 border-b border-gray-200;
+            padding: 0.75rem; /* p-3 */
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
         }
         th {
-            @apply bg-light fw-semibold text-body;
+            background-color: #f3f4f6; /* bg-gray-100 */
+            font-weight: 600; /* font-semibold */
+            color: #4b5563; /* text-gray-700 */
         }
         /* Estilos para las pestañas principales */
         .tab-button {
-            @apply px-6 py-3 fs-5 fw-medium text-body border-b-2 border-transparent hover:text-primary hover:border-blue-600 transition duration-200 ease-in-out;
+            padding: 0.75rem 1.5rem; /* px-6 py-3 */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* text-gray-700 */
+            border-bottom: 2px solid transparent; /* border-b-2 border-transparent */
+            transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .tab-button:hover {
+            color: #2563eb; /* hover:text-blue-600 */
+            border-color: #2563eb; /* hover:border-blue-600 */
         }
         .tab-button.active {
-            @apply text-primary border-blue-600;
+            color: #2563eb; /* text-blue-600 */
+            border-color: #2563eb; /* border-blue-600 */
         }
         .tab-content {
             display: none;
@@ -64,10 +135,20 @@
 
         /* Estilos para las pestañas anidadas (dentro de Gestión de Pedidos) */
         .order-tab-button {
-            @apply px-3 py-2 text-base fw-medium text-muted border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500 transition duration-200 ease-in-out;
+            padding: 0.5rem 1rem; /* px-4 py-2 */
+            font-size: 1rem; /* text-base */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* text-gray-600 */
+            border-bottom: 2px solid transparent; /* border-b-2 border-transparent */
+            transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .order-tab-button:hover {
+            color: #3b82f6; /* hover:text-blue-500 */
+            border-color: #3b82f6; /* hover:border-blue-500 */
         }
         .order-tab-button.active {
-            @apply text-blue-500 border-blue-500;
+            color: #3b82f6; /* text-blue-500 */
+            border-color: #3b82f6; /* border-blue-500 */
         }
         .order-tab-content {
             display: none;
@@ -81,10 +162,20 @@
 
         /* Estilos para las pestañas de categoría de productos dentro de "Crear Nuevo Pedido" */
         .product-category-tab-button {
-            @apply px-3 py-2 small fw-medium text-muted border-b-2 border-transparent hover:text-success hover:border-green-600 transition duration-200 ease-in-out;
+            padding: 0.5rem 1rem; /* px-4 py-2 */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* text-gray-600 */
+            border-bottom: 2px solid transparent; /* border-b-2 border-transparent */
+            transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .product-category-tab-button:hover {
+            color: #16a34a; /* hover:text-green-600 */
+            border-color: #16a34a; /* hover:border-green-600 */
         }
         .product-category-tab-button.active {
-            @apply text-success border-green-600;
+            color: #16a34a; /* text-green-600 */
+            border-color: #16a34a; /* border-green-600 */
         }
         .product-category-tab-content {
             display: none;
@@ -94,94 +185,135 @@
         }
         /* Styles for product cards */
         .product-card {
-            @apply bg-white p-3 rounded shadow d-flex d-flex-column justify-content-between border border-gray-100 hover:shadow-lg transition duration-200 ease-in-out; /* Added border and hover shadow */
+            background-color: #ffffff;
+            padding: 1rem; /* p-4 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #f3f4f6; /* border-gray-100 */
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
         }
         .quantity-control {
-            @apply d-flex align-items-center justify-content-center space-x-2 mt-3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem; /* space-x-2 */
+            margin-top: 0.75rem; /* mt-3 */
         }
         .quantity-btn {
-            @apply bg-gray-200 text-body btn-sm btn-sm rounded-full d-flex align-items-center justify-content-center fs-5 fw-bold hover:bg-gray-300;
+            background-color: #e5e7eb; /* gray-200 */
+            color: #4b5563; /* gray-700 */
+            width: 2rem; /* w-8 */
+            height: 2rem; /* h-8 */
+            border-radius: 9999px; /* rounded-full */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 700; /* font-bold */
+            transition: background-color 0.2s ease-in-out;
+        }
+        .quantity-btn:hover {
+            background-color: #d1d5db; /* hover:bg-gray-300 */
         }
         .quantity-input {
-            @apply w-16 text-center border border-gray-300 rounded py-1;
+            width: 4rem; /* w-16 */
+            text-align: center;
+            border: 1px solid #d1d5db; /* border-gray-300 */
+            border-radius: 0.375rem; /* rounded-md */
+            padding-top: 0.25rem; /* py-1 */
+            padding-bottom: 0.25rem; /* py-1 */
         }
         .add-to-order-btn-icon {
-            @apply d-flex align-items-center justify-content-center gap-2; /* For icon and text alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem; /* gap-2 */
+        }
+
+        /* Custom styles for scrollable areas */
+        #productCategoryContent {
+            max-height: 500px; /* Adjust as needed */
+            overflow-y: auto;
+        }
+
+        #currentOrderItems {
+            max-height: 400px; /* Adjust as needed */
+            overflow-y: auto;
         }
     </style>
 </head>
-<body class="p-3">
-    <div class="container">
-        <h1 class="fs-1 fw-bold text-center text-dark mb-8">Sistema de Cocina Rápida</h1>
+<body class="p-4">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Sistema de Cocina Rápida</h1>
 
-        <!-- Tab controls -->
-        <div class="d-flex border-b border-gray-200 mb-4">
+        <div class="d-flex border-bottom border-gray-200 mb-6">
             <button class="tab-button active" data-tab="products">Gestión de Productos</button>
             <button class="tab-button" data-tab="orders">Gestión de Pedidos</button>
             <button class="tab-button" data-tab="reports">Reportes de Ventas</button>
         </div>
 
-        <!-- Tab content: Product and Category Management -->
         <div id="products" class="tab-content active card">
-            <h2 class="fs-3 fw-semibold text-body mb-3">Gestión de Productos y Categorías</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Productos y Categorías</h2>
 
-            <div class="row g-4 mb-4">
-                <!-- Form to add/edit product -->
-                <div>
-                    <h3 class="fs-4 fw-medium text-muted mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
-                    <div class="mb-3">
-                        <div>
-                            <label for="productName" class="block small fw-medium text-body">Nombre del Producto</label>
-                            <input type="text" id="productName" placeholder="Ej: Hamburguesa Clásica">
+            <div class="row g-6 mb-6">
+                <div class="col-12 col-md-6">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3" id="productFormTitle">Agregar Nuevo Producto</h3>
+                    <div class="space-y-4">
+                        <div class="mb-3">
+                            <label for="productName" class="form-label text-sm font-medium text-gray-700">Nombre del Producto</label>
+                            <input type="text" id="productName" placeholder="Ej: Hamburguesa Clásica" class="form-control">
                         </div>
-                        <div>
-                            <label for="productDescription" class="block small fw-medium text-body">Descripción</label>
-                            <input type="text" id="productDescription" placeholder="Ej: Carne, lechuga, tomate">
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label text-sm font-medium text-gray-700">Descripción</label>
+                            <input type="text" id="productDescription" placeholder="Ej: Carne, lechuga, tomate" class="form-control">
                         </div>
-                        <div>
-                            <label for="productPrice" class="block small fw-medium text-body">Precio</label>
-                            <input type="number" id="productPrice" step="0.01" placeholder="Ej: 85.00">
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label text-sm font-medium text-gray-700">Precio</label>
+                            <input type="number" id="productPrice" step="0.01" placeholder="Ej: 85.00" class="form-control">
                         </div>
-                        <div>
-                            <label for="productCategory" class="block small fw-medium text-body">Categoría</label>
-                            <select id="productCategory">
+                        <div class="mb-3">
+                            <label for="productCategory" class="form-label text-sm font-medium text-gray-700">Categoría</label>
+                            <select id="productCategory" class="form-select">
                                 </select>
                         </div>
-                        <div>
-                            <label class="block small fw-medium text-body mt-3">Modificadores (Opcional)</label>
-                            <div id="modifiersContainer" class="space-y-2 border border-gray-200 p-3 rounded bg-light">
-                                <!-- Modifier inputs will be added here dynamically -->
-                                <p id="noModifiersMessage" class="text-secondary small">No hay modificadores. Haz clic en "Agregar Modificador".</p>
+                        <div class="mb-3">
+                            <label class="form-label text-sm font-medium text-gray-700 mt-4">Modificadores (Opcional)</label>
+                            <div id="modifiersContainer" class="space-y-2 border border-gray-200 p-3 rounded-md bg-gray-50">
+                                <p id="noModifiersMessage" class="text-gray-500 text-sm">No hay modificadores. Haz clic en "Agregar Modificador".</p>
                             </div>
-                            <button id="addModifierInputBtn" class="btn btn-secondary small mt-2">Agregar Modificador</button>
+                            <button id="addModifierInputBtn" class="btn btn-secondary btn-sm mt-2"><i class="bi bi-plus-circle me-1"></i> Agregar Modificador</button>
                         </div>
                         <div class="d-flex gap-2">
-                            <button id="saveProductBtn" class="btn btn-primary w-100">Agregar Producto</button>
-                            <button id="cancelEditBtn" class="btn btn-secondary w-100 hidden">Cancelar Edición</button>
+                            <button id="saveProductBtn" class="btn btn-primary w-100"><i class="bi bi-plus-lg me-1"></i> Agregar Producto</button>
+                            <button id="cancelEditBtn" class="btn btn-secondary w-100 hidden"><i class="bi bi-x-circle me-1"></i> Cancelar Edición</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Form to add category -->
-                <div>
-                    <h3 class="fs-4 fw-medium text-muted mb-3">Agregar Nueva Categoría</h3>
-                    <div class="mb-3">
-                        <div>
-                            <label for="categoryName" class="block small fw-medium text-body">Nombre de la Categoría</label>
-                            <input type="text" id="categoryName" placeholder="Ej: Bebidas">
+                <div class="col-12 col-md-6">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3">Agregar Nueva Categoría</h3>
+                    <div class="space-y-4">
+                        <div class="mb-3">
+                            <label for="categoryName" class="form-label text-sm font-medium text-gray-700">Nombre de la Categoría</label>
+                            <input type="text" id="categoryName" placeholder="Ej: Bebidas" class="form-control">
                         </div>
-                        <button id="addCategoryBtn" class="btn btn-secondary w-100">Agregar Categoría</button>
+                        <button id="addCategoryBtn" class="btn btn-secondary w-100"><i class="bi bi-tags-fill me-1"></i> Agregar Categoría</button>
                     </div>
-                    <h3 class="fs-4 fw-medium text-muted mb-3 mt-4">Categorías Existentes</h3>
-                    <ul id="categoryList" class="list-disc list-inside text-body">
+                    <h3 class="text-xl font-medium text-gray-600 mb-3 mt-6">Categorías Existentes</h3>
+                    <ul id="categoryList" class="list-disc list-inside text-gray-700">
                         </ul>
                 </div>
             </div>
 
-            <!-- Existing products table -->
-            <h3 class="fs-4 fw-medium text-muted mb-3">Productos Existentes</h3>
-            <div class="table-responsive rounded shadow-sm">
-                <table id="productsTable" class="min-w-100">
+            <h3 class="text-xl font-medium text-gray-600 mb-3">Productos Existentes</h3>
+            <div class="table-responsive rounded-lg shadow-sm">
+                <table id="productsTable" class="table table-striped min-w-100">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -198,84 +330,70 @@
             </div>
         </div>
 
-        <!-- Tab content: Order Management -->
         <div id="orders" class="tab-content card">
-            <h2 class="fs-3 fw-semibold text-body mb-3">Gestión de Pedidos</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestión de Pedidos</h2>
 
-            <!-- Nested Tab controls for Order Management -->
-            <div class="d-flex border-b border-gray-200 mb-4">
+            <div class="d-flex border-bottom border-gray-200 mb-6">
                 <button class="order-tab-button active" data-order-tab="create-order">Crear Nuevo Pedido</button>
                 <button class="order-tab-button" data-order-tab="pending-orders-tab">Pedidos Pendientes</button>
                 <button class="order-tab-button" data-order-tab="in-process-orders-tab">En Proceso</button>
                 <button class="order-tab-button" data-order-tab="delivered-orders-tab">Entregados</button>
             </div>
 
-            <!-- Nested Tab content: Create New Order -->
             <div id="create-order" class="order-tab-content active">
-                <div class="d-flex d-flex-column lg:d-flex-row gap-3">
-                    <!-- Productos Disponibles (80%) -->
-                    <div class="lg:w-4/5">
-                        <h3 class="fs-4 fw-medium text-muted mb-3">Productos Disponibles</h3>
-                        <div class="card p-3 h-100 d-flex d-flex-column">
-                            <!-- Product Category Tabs -->
-                            <div id="productCategoryTabs" class="d-flex border-b border-gray-200 mb-3 table-responsive">
-                                <!-- Category buttons will be rendered here -->
-                            </div>
-                            <!-- Product List per Category -->
-                            <div id="productCategoryContent" class="d-flex-grow overflow-auto pr-2 row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-                                <!-- Products for the active category will be rendered here -->
-                                <p id="noProductsInCategoryMessage" class="text-secondary text-center py-4 hidden col-span-full">No hay productos en esta categoría.</p>
+                <div class="d-flex flex-column flex-lg-row gap-6">
+                    <div class="col-lg-9">
+                        <h3 class="text-xl font-medium text-gray-600 mb-3">Productos Disponibles</h3>
+                        <div class="card p-4 h-100 d-flex flex-column">
+                            <div id="productCategoryTabs" class="d-flex border-bottom border-gray-200 mb-4 overflow-auto">
+                                </div>
+                            <div id="productCategoryContent" class="flex-grow-1 overflow-auto pe-2 row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                <p id="noProductsInCategoryMessage" class="text-gray-500 text-center py-4 hidden col-12">No hay productos en esta categoría.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pedido Actual (20%) -->
-                    <div class="lg:w-1/5">
-                        <h3 class="fs-4 fw-medium text-muted mb-3">Pedido Actual</h3>
-                        <div class="card p-3 h-100 d-flex d-flex-column">
-                            <div id="currentOrderItems" class="space-y-2 d-flex-grow overflow-auto pr-2 mb-3">
-                                <!-- Items del pedido actual se cargarán aquí -->
+                    <div class="col-lg-3">
+                        <h3 class="text-xl font-medium text-gray-600 mb-3">Pedido Actual</h3>
+                        <div class="card p-4 h-100 d-flex flex-column">
+                            <div id="currentOrderItems" class="space-y-2 flex-grow-1 overflow-auto pe-2 mb-4">
+                                </div>
+                            <div class="d-flex justify-content-between align-items-center mb-4 border-top pt-4">
+                                <span class="text-lg font-bold">Total:</span>
+                                <span id="currentOrderTotal" class="text-lg font-bold">$0.00</span>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mb-3 border-t pt-4">
-                                <span class="fs-5 fw-bold">Total:</span>
-                                <span id="currentOrderTotal" class="fs-5 fw-bold">$0.00</span>
-                            </div>
-                            <button id="placeOrderBtn" class="btn btn-success w-100">Realizar Pedido</button>
+                            <button id="placeOrderBtn" class="btn btn-success w-100"><i class="bi bi-cart-check me-1"></i> Realizar Pedido</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Nested Tab content: Pending Orders -->
             <div id="pending-orders-tab" class="order-tab-content">
-                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos Pendientes</h3>
-                <div id="pendingOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Pendientes</h3>
+                <div id="pendingOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
                     </div>
             </div>
 
-            <!-- Nested Tab content: In Process Orders -->
             <div id="in-process-orders-tab" class="order-tab-content">
-                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos En Proceso</h3>
-                <div id="inProcessOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos En Proceso</h3>
+                <div id="inProcessOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
                     </div>
             </div>
 
-            <!-- Nested Tab content: Delivered Orders -->
             <div id="delivered-orders-tab" class="order-tab-content">
-                <h3 class="fs-4 fw-medium text-muted mb-3">Pedidos Entregados (Pendiente de Cobro)</h3>
-                <div id="deliveredOrders" class="mb-3 max-h-96 overflow-auto pr-2">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Pedidos Entregados (Pendiente de Cobro)</h3>
+                <div id="deliveredOrders" class="space-y-4 overflow-auto pe-2" style="max-height: 24rem;">
                     </div>
             </div>
         </div>
 
-        <!-- Tab content: Sales Reports -->
         <div id="reports" class="tab-content card">
-            <h2 class="fs-3 fw-semibold text-body mb-3">Reportes de Ventas</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Reportes de Ventas</h2>
 
-            <div class="d-flex d-flex-column sm:d-flex-row gap-3 mb-4">
-                <div>
-                    <label for="reportMonth" class="block small fw-medium text-body">Mes</label>
-                    <select id="reportMonth" class="w-100">
+            <div class="d-flex flex-column flex-sm-row gap-4 mb-6">
+                <div class="mb-3">
+                    <label for="reportMonth" class="form-label text-sm font-medium text-gray-700">Mes</label>
+                    <select id="reportMonth" class="form-select w-100">
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -290,30 +408,29 @@
                         <option value="12">Diciembre</option>
                     </select>
                 </div>
-                <div>
-                    <label for="reportYear" class="block small fw-medium text-body">Año</label>
-                    <input type="number" id="reportYear" value="2025" class="w-100">
+                <div class="mb-3">
+                    <label for="reportYear" class="form-label text-sm font-medium text-gray-700">Año</label>
+                    <input type="number" id="reportYear" value="2025" class="form-control w-100">
                 </div>
-                <button id="generateReportBtn" class="btn btn-primary self-end">Generar Reporte</button>
+                <button id="generateReportBtn" class="btn btn-primary align-self-end"><i class="bi bi-bar-chart me-1"></i> Generar Reporte</button>
             </div>
 
-            <!-- Export/Import Buttons -->
-            <div class="d-flex d-flex-column sm:d-flex-row gap-3 mb-4">
-                <button id="exportSalesBtn" class="btn btn-secondary w-100 sm:w-auto">Exportar Ventas (JSON)</button>
-                <input type="file" id="importSalesFile" accept=".json" class="hidden">
-                <button id="importSalesBtn" class="btn btn-secondary w-100 sm:w-auto">Importar Ventas (JSON)</button>
+            <div class="d-flex flex-column flex-sm-row gap-4 mb-6">
+                <button id="exportSalesBtn" class="btn btn-secondary w-100 w-sm-auto">Exportar Ventas (JSON)</button>
+                <input type="file" id="importSalesFile" accept=".json" class="d-none">
+                <button id="importSalesBtn" class="btn btn-secondary w-100 w-sm-auto">Importar Ventas (JSON)</button>
             </div>
 
-            <div id="reportOutput" class="mt-3 p-3 bg-light rounded border border-gray-200">
-                <h3 class="fs-4 fw-medium text-muted mb-3">Resultados del Reporte</h3>
-                <p id="reportTotalSales" class="fs-5 fw-semibold text-dark">Total de Ingresos: $0.00</p>
-                <p id="reportNumSales" class="fs-5 fw-semibold text-dark">Número de Ventas: 0</p>
-                <h4 class="fs-5 fw-semibold text-body mt-3 mb-2">Productos Más Vendidos:</h4>
-                <ul id="topProductsList" class="list-disc list-inside text-body">
+            <div id="reportOutput" class="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="text-xl font-medium text-gray-600 mb-3">Resultados del Reporte</h3>
+                <p id="reportTotalSales" class="text-lg font-semibold text-gray-800">Total de Ingresos: $0.00</p>
+                <p id="reportNumSales" class="text-lg font-semibold text-gray-800">Número de Ventas: 0</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Productos Más Vendidos:</h4>
+                <ul id="topProductsList" class="list-disc list-inside text-gray-700">
                     </ul>
-                <h4 class="fs-5 fw-semibold text-body mt-3 mb-2">Detalle de Ventas:</h4>
-                <div class="table-responsive rounded shadow-sm">
-                    <table id="salesDetailTable" class="min-w-100">
+                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">Detalle de Ventas:</h4>
+                <div class="table-responsive rounded-lg shadow-sm">
+                    <table id="salesDetailTable" class="table table-striped min-w-100">
                         <thead>
                             <tr>
                                 <th>ID Venta</th>
@@ -321,6 +438,7 @@
                                 <th>Total</th>
                                 <th>Método Pago</th>
                                 <th>Productos</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -331,6 +449,8 @@
         </div>
     </div>
 
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // --- Global Variables ---
         let productos = [];
@@ -568,13 +688,13 @@
                 const actionsCell = row.insertCell();
                 const editBtn = document.createElement('button');
                 editBtn.textContent = 'Editar';
-                editBtn.className = 'btn btn-secondary small py-1 px-2 mr-2';
+                editBtn.className = 'btn btn-secondary btn-sm me-2';
                 editBtn.onclick = () => editProduct(prod.id);
                 actionsCell.appendChild(editBtn);
 
                 const deleteBtn = document.createElement('button');
                 deleteBtn.textContent = 'Eliminar';
-                deleteBtn.className = 'btn btn-danger small py-1 px-2';
+                deleteBtn.className = 'btn btn-danger btn-sm';
                 deleteBtn.onclick = () => deleteProduct(prod.id);
                 actionsCell.appendChild(deleteBtn);
             });
@@ -601,7 +721,7 @@
                     }
                     editingProductId = null; // Reset editing state
                     productFormTitle.textContent = 'Agregar Nuevo Producto';
-                    saveProductBtn.textContent = 'Agregar Producto';
+                    saveProductBtn.innerHTML = '<i class="bi bi-plus-lg me-1"></i> Agregar Producto';
                     cancelEditBtn.classList.add('hidden');
                 } else {
                     // Add new product
@@ -636,7 +756,7 @@
 
                 editingProductId = id; // Set the product being edited
                 productFormTitle.textContent = 'Editar Producto';
-                saveProductBtn.textContent = 'Actualizar Producto';
+                saveProductBtn.innerHTML = '<i class="bi bi-pencil-fill me-1"></i> Actualizar Producto';
                 cancelEditBtn.classList.remove('hidden');
             }
         }
@@ -645,7 +765,7 @@
             clearProductForm();
             editingProductId = null;
             productFormTitle.textContent = 'Agregar Nuevo Producto';
-            saveProductBtn.textContent = 'Agregar Producto';
+            saveProductBtn.innerHTML = '<i class="bi bi-plus-lg me-1"></i> Agregar Producto';
             cancelEditBtn.classList.add('hidden');
         }
 
@@ -677,9 +797,9 @@
             const modifierDiv = document.createElement('div');
             modifierDiv.className = 'd-flex gap-2 align-items-center';
             modifierDiv.innerHTML = `
-                <input type="text" class="modifier-name p-1 border border-gray-300 rounded d-flex-grow" placeholder="Nombre (Ej: Extra Queso)" value="${name}">
-                <input type="number" class="modifier-price p-1 border border-gray-300 rounded w-24" step="0.01" placeholder="Precio" value="${price}">
-                <button class="btn btn-danger text-xs py-1 px-2 rounded remove-modifier-btn">X</button>
+                <input type="text" class="modifier-name form-control form-control-sm flex-grow-1" placeholder="Nombre (Ej: Extra Queso)" value="${name}">
+                <input type="number" class="modifier-price form-control form-control-sm w-25" step="0.01" placeholder="Precio" value="${price}">
+                <button class="btn btn-danger btn-sm remove-modifier-btn"><i class="bi bi-x"></i></button>
             `;
             modifiersContainer.appendChild(modifierDiv);
 
@@ -724,7 +844,7 @@
             productCategoryContentDiv.innerHTML = ''; // Clear existing product list
 
             if (categorias.length === 0) {
-                productCategoryTabsContainer.innerHTML = '<p class="text-secondary">No hay categorías. Agrega categorías en Gestión de Productos.</p>';
+                productCategoryTabsContainer.innerHTML = '<p class="text-gray-500">No hay categorías. Agrega categorías en Gestión de Productos.</p>';
                 return;
             }
 
@@ -752,7 +872,7 @@
             } else if (categorias.length > 0) {
                 showProductCategoryTab('all'); // Default to 'all' if no active category
             } else {
-                productCategoryContentDiv.innerHTML = '<p class="text-secondary text-center py-4">No hay productos disponibles.</p>';
+                productCategoryContentDiv.innerHTML = '<p class="text-gray-500 text-center py-4">No hay productos disponibles.</p>';
             }
         }
 
@@ -761,10 +881,13 @@
             let productsToRender = [];
 
             if (categoryId === 'all') {
-                productsToRender = productos;
+                productsToRender = [...productos]; // Create a copy to sort
             } else {
-                productsToRender = productos.filter(prod => prod.categoria === categoryId);
+                productsToRender = [...productos.filter(prod => prod.categoria === categoryId)]; // Create a copy to sort
             }
+
+            // Sort products by price from highest to lowest
+            productsToRender.sort((a, b) => b.precio - a.precio);
 
             if (productsToRender.length === 0) {
                 noProductsInCategoryMessage.classList.remove('hidden');
@@ -776,34 +899,28 @@
 
             productsToRender.forEach(prod => {
                 const productCard = document.createElement('div');
-                productCard.className = 'product-card'; // Apply new card styling
-                // Placeholder image for the product
-                const imageUrl = `https://placehold.co/150x100/ADD8E6/000000?text=${encodeURIComponent(prod.nombre)}`;
-
+                productCard.className = 'col'; // Bootstrap column for grid
                 productCard.innerHTML = `
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="${imageUrl}" alt="${prod.nombre}" class="rounded object-cover">
+                    <div class="product-card">
+                        <div class="d-flex justify-content-center mb-2">
+                            <img src="https://placehold.co/150x100/ADD8E6/000000?text=${encodeURIComponent(prod.nombre)}" alt="${prod.nombre}" class="rounded object-fit-cover">
+                        </div>
+                        <div class="text-center mb-2">
+                            <p class="fw-semibold fs-5 text-gray-800">${prod.nombre}</p>
+                            <p class="text-sm text-gray-600">${prod.descripcion}</p>
+                            <p class="fw-bold fs-4 text-blue-600 mt-1">$${prod.precio.toFixed(2)}</p>
+                        </div>
+                        ${prod.modifiers && prod.modifiers.length > 0 ?
+                            `<div class="text-xs text-gray-500 text-center mb-2">Modificadores: ${prod.modifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ')}</div>` : ''}
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease" data-product-id="${prod.id}"><i class="bi bi-dash"></i></button>
+                            <input type="number" class="quantity-input" value="1" min="1" data-product-id="${prod.id}">
+                            <button class="quantity-btn" data-action="increase" data-product-id="${prod.id}"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-3 add-to-order-btn" data-product-id="${prod.id}">
+                            <i class="bi bi-cart-plus me-1"></i> Agregar al Pedido
+                        </button>
                     </div>
-                    <div class="text-center mb-2">
-                        <p class="fw-semibold fs-5 text-dark">${prod.nombre}</p>
-                        <p class="small text-muted">${prod.descripcion}</p>
-                        <p class="fw-bold fs-4 text-primary mt-1">$${prod.precio.toFixed(2)}</p>
-                    </div>
-                    ${prod.modifiers && prod.modifiers.length > 0 ?
-                        `<div class="text-xs text-secondary text-center mb-2">Modificadores: ${prod.modifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ')}</div>` : ''}
-                    <div class="quantity-control">
-                        <button class="quantity-btn" data-action="decrease" data-product-id="${prod.id}">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" data-product-id="${prod.id}">
-                        <button class="quantity-btn" data-action="increase" data-product-id="${prod.id}">+</button>
-                    </div>
-                    <button class="btn btn-primary w-100 mt-3 add-to-order-btn" data-product-id="${prod.id}">
-                        <span class="add-to-order-btn-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.75 3.75 0 003.694 2.46l2.559.006zM12 17.25a.75.75 0 00-.75.75.75.75 0 001.5 0 .75.75 0 00-.75-.75zM15 17.25a.75.75 0 00-.75.75.75.75 0 001.5 0 .75.75 0 00-.75-.75zM6.75 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3zM18.75 18a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zM20.25 7.5a.75.75 0 00-.75-.75h-3a.75.75 0 000 1.5h3a.75.75 0 00.75-.75z" />
-                            </svg>
-                            Agregar al Pedido
-                        </span>
-                    </button>
                 `;
                 productCategoryContentDiv.appendChild(productCard);
             });
@@ -811,12 +928,12 @@
             // Add event listeners for quantity controls and "Add to Order" buttons
             productCategoryContentDiv.querySelectorAll('.quantity-btn').forEach(button => {
                 button.onclick = (event) => {
-                    const productId = event.target.dataset.productId;
+                    const productId = event.target.dataset.productId || event.target.closest('button').dataset.productId; // Handle icon click
                     const input = productCategoryContentDiv.querySelector(`.quantity-input[data-product-id="${productId}"]`);
                     let quantity = parseInt(input.value);
-                    if (event.target.dataset.action === 'increase') {
+                    if (event.target.dataset.action === 'increase' || event.target.closest('button').dataset.action === 'increase') {
                         quantity++;
-                    } else if (event.target.dataset.action === 'decrease' && quantity > 1) {
+                    } else if ((event.target.dataset.action === 'decrease' || event.target.closest('button').dataset.action === 'decrease') && quantity > 1) {
                         quantity--;
                     }
                     input.value = quantity;
@@ -825,7 +942,7 @@
 
             productCategoryContentDiv.querySelectorAll('.add-to-order-btn').forEach(button => {
                 button.onclick = (event) => {
-                    const productId = event.target.dataset.productId;
+                    const productId = event.target.dataset.productId || event.target.closest('button').dataset.productId; // Handle icon click
                     const input = productCategoryContentDiv.querySelector(`.quantity-input[data-product-id="${productId}"]`);
                     const quantity = parseInt(input.value);
                     if (quantity > 0) {
@@ -862,7 +979,7 @@
             currentOrderItemsDiv.innerHTML = '';
             currentOrder.total = 0;
             if (currentOrder.items.length === 0) {
-                currentOrderItemsDiv.innerHTML = '<p class="text-secondary">No hay productos en el pedido.</p>';
+                currentOrderItemsDiv.innerHTML = '<p class="text-gray-500">No hay productos en el pedido.</p>';
                 currentOrderTotalSpan.textContent = '$0.00';
                 return;
             }
@@ -874,18 +991,18 @@
                 if (item.selectedModifiers && item.selectedModifiers.length > 0) {
                     modifiersDisplay = item.selectedModifiers.map((mod, modIndex) => {
                         itemTotalPrice += mod.price * item.cantidad; // Add modifier price to item total
-                        return `<span class="text-xs text-muted ml-2">${mod.name} ($${mod.price.toFixed(2)}) <button class="btn btn-danger text-xs py-0 px-0.5 rounded remove-selected-modifier" data-item-index="${itemIndex}" data-mod-index="${modIndex}">x</button></span>`;
+                        return `<span class="text-xs text-gray-600 ms-2">${mod.name} ($${mod.price.toFixed(2)}) <button class="btn btn-danger btn-sm remove-selected-modifier" data-item-index="${itemIndex}" data-mod-index="${modIndex}"><i class="bi bi-x"></i></button></span>`;
                     }).join('');
-                    modifiersDisplay = `<div class="d-flex d-flex-wrap align-items-center mt-1">${modifiersDisplay}</div>`;
+                    modifiersDisplay = `<div class="d-flex flex-wrap align-items-center mt-1">${modifiersDisplay}</div>`;
                 }
 
                 const itemDiv = document.createElement('div');
-                itemDiv.className = 'd-flex d-flex-column bg-white p-2 rounded shadow-sm';
+                itemDiv.className = 'd-flex flex-column bg-white p-2 rounded shadow-sm';
                 itemDiv.innerHTML = `
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-body">${item.cantidad}x ${item.product.nombre}</span>
-                        <span class="fw-medium text-dark">$${itemTotalPrice.toFixed(2)}</span>
-                        <button class="btn btn-danger text-xs py-0.5 px-1.5 rounded remove-order-item-btn" data-index="${itemIndex}">X</button>
+                        <span class="text-gray-700">${item.cantidad}x ${item.product.nombre}</span>
+                        <span class="fw-medium text-gray-800">$${itemTotalPrice.toFixed(2)}</span>
+                        <button class="btn btn-danger btn-sm remove-order-item-btn" data-index="${itemIndex}"><i class="bi bi-x"></i></button>
                     </div>
                     ${modifiersDisplay}
                 `;
@@ -897,7 +1014,7 @@
             // Add event listeners for removing items from the order
             currentOrderItemsDiv.querySelectorAll('.remove-order-item-btn').forEach(button => {
                 button.onclick = (event) => {
-                    const indexToRemove = parseInt(event.target.dataset.index);
+                    const indexToRemove = parseInt(event.target.dataset.index || event.target.closest('button').dataset.index);
                     currentOrder.items.splice(indexToRemove, 1);
                     updateCurrentOrderDisplay();
                 };
@@ -906,8 +1023,8 @@
             // Add event listeners for removing selected modifiers
             currentOrderItemsDiv.querySelectorAll('.remove-selected-modifier').forEach(button => {
                 button.onclick = (event) => {
-                    const itemIndex = parseInt(event.target.dataset.itemIndex);
-                    const modIndex = parseInt(event.target.dataset.modIndex);
+                    const itemIndex = parseInt(event.target.dataset.itemIndex || event.target.closest('button').dataset.itemIndex);
+                    const modIndex = parseInt(event.target.dataset.modIndex || event.target.closest('button').dataset.modIndex);
                     if (currentOrder.items[itemIndex] && currentOrder.items[itemIndex].selectedModifiers) {
                         currentOrder.items[itemIndex].selectedModifiers.splice(modIndex, 1);
                         updateCurrentOrderDisplay();
@@ -965,9 +1082,9 @@
                     if (item.selectedModifiers && item.selectedModifiers.length > 0) {
                         itemModifiersHtml = item.selectedModifiers.map(mod => {
                             itemDisplayPrice += mod.price;
-                            return `<span class="text-xs text-secondary ml-2">${mod.name} ($${mod.price.toFixed(2)})</span>`;
+                            return `<span class="text-xs text-gray-500 ms-2">${mod.name} ($${mod.price.toFixed(2)})</span>`;
                         }).join('');
-                        itemModifiersHtml = `<div class="d-flex d-flex-wrap">${itemModifiersHtml}</div>`;
+                        itemModifiersHtml = `<div class="d-flex flex-wrap">${itemModifiersHtml}</div>`;
                     }
                     orderItemsHtml += `<li>${item.cantidad}x ${item.product.nombre} ($${(item.cantidad * itemDisplayPrice).toFixed(2)}) ${itemModifiersHtml}</li>`;
                     orderTotalWithModifiers += (item.cantidad * itemDisplayPrice);
@@ -975,22 +1092,22 @@
 
 
                 const orderCard = document.createElement('div');
-                orderCard.className = 'card p-3 mb-2';
+                orderCard.className = 'card p-4 mb-2';
                 orderCard.innerHTML = `
-                    <h4 class="fw-bold fs-5 text-dark mb-2">Pedido #${order.id.split('_')[1]}</h4>
-                    <p class="small text-muted">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
-                    <ul class="list-disc list-inside text-body small mb-2">
+                    <h4 class="fw-bold text-lg text-gray-800 mb-2">Pedido #${order.id.split('_')[1]}</h4>
+                    <p class="text-sm text-gray-600">Fecha: ${new Date(order.fecha).toLocaleString()}</p>
+                    <ul class="list-disc list-inside text-gray-700 text-sm mb-2">
                         ${orderItemsHtml}
                     </ul>
-                    <p class="fw-semibold text-dark">Total: $${orderTotalWithModifiers.toFixed(2)}</p>
-                    <div class="mt-3 d-flex d-flex-wrap gap-2">
+                    <p class="fw-semibold text-gray-800">Total: $${orderTotalWithModifiers.toFixed(2)}</p>
+                    <div class="mt-3 d-flex flex-wrap gap-2">
                         ${order.estado === 'Pendiente' ?
-                            `<button class="btn btn-warning small py-1 px-2" onclick="changeOrderStatus('${order.id}', 'En Proceso')">Enviar a Proceso</button>` : ''}
+                            `<button class="btn btn-warning btn-sm" onclick="changeOrderStatus('${order.id}', 'En Proceso')">Enviar a Proceso</button>` : ''}
                         ${order.estado === 'En Proceso' ?
-                            `<button class="btn btn-success small py-1 px-2" onclick="changeOrderStatus('${order.id}', 'Entregado')">Marcar Entregado</button>` : ''}
+                            `<button class="btn btn-success btn-sm" onclick="changeOrderStatus('${order.id}', 'Entregado')">Marcar Entregado</button>` : ''}
                         ${order.estado === 'Entregado' ?
-                            `<button class="btn btn-primary small py-1 px-2" onclick="completeSale('${order.id}')">Cobrar y Finalizar</button>` : ''}
-                        <button class="btn btn-danger small py-1 px-2" onclick="cancelOrder('${order.id}')">Cancelar</button>
+                            `<button class="btn btn-primary btn-sm" onclick="completeSale('${order.id}')">Cobrar y Finalizar</button>` : ''}
+                        <button class="btn btn-danger btn-sm" onclick="cancelOrder('${order.id}')">Cancelar</button>
                     </div>
                 `;
 
@@ -1003,9 +1120,9 @@
                 }
             });
             // Display message if no orders in a section
-            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos pendientes.</p>';
-            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos en proceso.</p>';
-            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-secondary text-center">No hay pedidos entregados.</p>';
+            if (pendingOrdersDiv.innerHTML === '') pendingOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos pendientes.</p>';
+            if (inProcessOrdersDiv.innerHTML === '') inProcessOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos en proceso.</p>';
+            if (deliveredOrdersDiv.innerHTML === '') deliveredOrdersDiv.innerHTML = '<p class="text-gray-500 text-center">No hay pedidos entregados.</p>';
         }
 
         function changeOrderStatus(orderId, newStatus) {
@@ -1043,6 +1160,7 @@
                     return {
                         id: item.product.id,
                         nombre: item.product.nombre,
+                        descripcion: item.product.descripcion, // Added product description
                         cantidad: item.cantidad,
                         precioUnitario: item.product.precio, // Base price
                         selectedModifiers: JSON.parse(JSON.stringify(item.selectedModifiers || [])) // Store selected modifiers
@@ -1133,7 +1251,7 @@
                     topProductsListUl.appendChild(li);
                 });
             } else {
-                topProductsListUl.innerHTML = '<li class="text-secondary">No hay productos vendidos en este período.</li>';
+                topProductsListUl.innerHTML = '<li class="text-gray-500">No hay productos vendidos en este período.</li>';
             }
 
 
@@ -1150,20 +1268,38 @@
                         let modHtml = '';
                         if (p.selectedModifiers && p.selectedModifiers.length > 0) {
                             modHtml = p.selectedModifiers.map(m => `${m.name} ($${m.price.toFixed(2)})`).join(', ');
-                            modHtml = ` <span class="text-xs text-secondary">(${modHtml})</span>`;
+                            modHtml = ` <span class="text-xs text-gray-500">(${modHtml})</span>`;
                         }
                         return `${p.cantidad}x ${p.nombre}${modHtml}`;
                     }).join('<br>');
                     productsCell.innerHTML = productsHtml;
+
+                    const actionsCell = row.insertCell();
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.className = 'btn btn-danger btn-sm';
+                    deleteBtn.innerHTML = '<i class="bi bi-trash"></i>'; // Bootstrap trash icon
+                    deleteBtn.title = 'Eliminar Venta';
+                    deleteBtn.onclick = () => deleteSale(venta.id);
+                    actionsCell.appendChild(deleteBtn);
                 });
             } else {
                 const row = salesDetailTableBody.insertRow();
                 const cell = row.insertCell();
-                cell.colSpan = 5;
+                cell.colSpan = 6; // Increased colspan to account for new Actions column
                 cell.textContent = 'No hay ventas registradas para este período.';
-                cell.className = 'text-center text-secondary py-4';
+                cell.className = 'text-center text-gray-500 py-4';
             }
         }
+
+        function deleteSale(saleId) {
+            if (confirm('¿Estás seguro de que quieres eliminar esta venta? Esta acción no se puede deshacer.')) {
+                ventas = ventas.filter(venta => venta.id !== saleId);
+                guardarEnLocalStorage('ventas', ventas);
+                generateMonthlyReport(); // Re-render the report after deletion
+                alert('Venta eliminada exitosamente.');
+            }
+        }
+
 
         // --- Export/Import Functions ---
         function exportSalesData() {
