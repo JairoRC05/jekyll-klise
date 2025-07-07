@@ -79,6 +79,12 @@ $radial-backgrounds: (
   'rosa': (#ff5ca7, #b41e69),
   'azul-marino': (#000c3f, #000317),
   'ZAFIRO': (#006847, #032419),
+  'PØĄ': (#000000, #1A1A1A),
+  'TAE': (#ECD9B0, #BCA26B),
+);
+
+
+$radial-backgrounds-colors: (
   'NARANJA_CLÁSICO': (#FFA500, #CC8400),
   'NARANJA_BRILLANTE': (#FF6F00, #B84D00),
   'NARANJA_SUNSET': (#FF914D, #CC6E38),
@@ -199,7 +205,6 @@ $radial-backgrounds: (
   'NEGRO_FRÍO': (#1A1C1E, #2E3033),
   'NEGRO_MATE': (#262626, #121212),
   'NEGRO_TINTA': (#0A0A0A, #1C1C1C),
-  'PØĄ': (#000000, #1A1A1A),
   'DORADO_METÁLICO':(#FFD700, #B8860B),
   'PLATA_METÁLICA': (#C0C0C0, #999999),
   'BRONCE_CLÁSICO': (#CD7F32, #A65E22),
