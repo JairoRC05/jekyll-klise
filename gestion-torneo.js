@@ -866,6 +866,13 @@ function initializeTeamsTable() {
                 }
             },
             { data: 'grupo', title: 'Grupo' },
+            {
+                data: 'jugadores', // Use the 'jugadores' array data
+                title: 'NoJ', // Column title
+                render: function (data) {
+                    return data ? data.length : 0; // Display the length of the 'jugadores' array, or 0 if it's null/undefined
+                }
+            },
             { // **NUEVA COLUMNA PARA "Partidos"**
                 data: null,
                 title: 'Partidos',
@@ -1200,6 +1207,13 @@ $(document).ready(function () {
                 }
             },
             { data: 'grupo', title: 'Grupo' },
+            {
+                data: 'jugadores', // Use the 'jugadores' array data
+                title: 'NoJ', // Column title
+                render: function (data) {
+                    return data ? data.length : 0; // Display the length of the 'jugadores' array, or 0 if it's null/undefined
+                }
+            },
             { 
                 data: null,
                 title: 'Partidos',

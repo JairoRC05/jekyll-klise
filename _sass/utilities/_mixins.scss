@@ -93,8 +93,8 @@
     $end: nth($colors, 2);
 
     .#{$name} {
-      background: $start;
-      background: radial-gradient(circle, #{$start} 0%, #{$end} 100%);
+      background: $start !important;
+      background: radial-gradient(circle, #{$start} 0%, #{$end} 100%) !important;
     }
   }
 }
