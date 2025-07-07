@@ -1,1 +1,5 @@
-Bienvenidos la Liga Índigo de Julio Team Aether https://xforceunite.site/equipos/villanos-esports--team-aether
+Bienvenidos la Liga Índigo de Julio Team Flare
+https://xforceunite.site/equipos/team-flare
+
+Bienvenidos la Liga Índigo de Julio Team Rocket
+https://xforceunite.site/equipos/villanos-esports--team-rocket

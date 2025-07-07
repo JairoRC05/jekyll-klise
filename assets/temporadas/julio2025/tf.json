@@ -8,7 +8,7 @@
   "teamNombreAnterior": "",
   "teamNuevoNombre": "TEAM FLARE",
   "seguro": false,
-  "link": "/equipos/team-flare",
+  "link": "/equipos/villanos-esports--team-flare",
   "grupo": "SIN ASIGNAR",
   "partidos": {
     "M1": "0",
@@ -24,5 +24,6 @@
     "M11": "0",
     "M12": "0"
   },
-  "jugadores": []
+  "jugadores": [],
+  "posicionDesempate": false
 }
