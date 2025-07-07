@@ -1,0 +1,67 @@
+{
+  "tag": "TUT",
+  "team": "THE UNOWN TEAM",
+  "org": "THE UNOWN TEAM",
+  "activo": true,
+  "capitan": "BREN",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "THE UNOWN TEAM",
+  "seguro": true,
+  "link": "/equipos/theunownteam",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "D",
+    "M3": "2",
+    "M4": "3",
+    "M5": "3",
+    "M6": "3",
+    "M7": "2",
+    "M8": "3",
+    "M9": "3",
+    "M10": "2",
+    "M11": "3",
+    "M12": "2",
+    "M13": "2",
+    "M14": "3"
+  },
+  "jugadores": [
+    {
+      "nickname": "TuT • Bren10",
+      "ID": "2XX1PF0",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT • 7Ibu",
+      "ID": "21QE8M2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Akane秋",
+      "ID": "FYF3MC8",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT狩DownURL",
+      "ID": "XH4P03E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT-Bernylml",
+      "ID": "RH49KXK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TuT • Vinx3",
+      "ID": "EY6EKM7",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": true,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}
