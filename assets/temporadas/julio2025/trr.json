@@ -1,0 +1,72 @@
+{
+  "tag": "TRR",
+  "team": "TEAM ROCKET",
+  "org": "",
+  "activo": true,
+  "capitan": "WALO",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "TEAM ROCKET",
+  "seguro": true,
+  "link": "/equipos/villanos-esports--team-rocket",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "1",
+    "M2": "0",
+    "M3": "2",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "2",
+    "M8": "0",
+    "M9": "3",
+    "M10": "1",
+    "M11": "0",
+    "M12": "0",
+    "M13": "D",
+    "M14": "1"
+  },
+  "jugadores": [
+    {
+      "nickname": "虹・Walo光",
+      "ID": "4MF2M0G",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "虹・Eř0X悪夢",
+      "ID": "H8G17CX",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "虹・Nebulaる",
+      "ID": "19CHRG4",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "虹・Hakariる",
+      "ID": "41NREGX",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "虹・WillyAHR",
+      "ID": "C20KFAQ",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DômDâ°ê",
+      "ID": "9LGQXQ2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "・Agupon・",
+      "ID": "3NRF5Q0",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}
