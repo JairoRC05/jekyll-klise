@@ -128,14 +128,6 @@
     "fecha": "2025-07-08"
   },
   {
-    "nickname": "TESLA科学",
-    "id": "50L82YG",
-    "avatar": "male1",
-    "equipo-nuevo": "HGAMT",
-    "equipo-pre": "AMT",
-    "fecha": "2025-07-08"
-  },
-  {
     "nickname": "寂・NuzuLi",
     "id": "Y7FCTPQ",
     "avatar": "male1",
@@ -189,6 +181,38 @@
     "avatar": "male1",
     "equipo-nuevo": "GDEX",
     "equipo-pre": "PKR",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "TESLA科学",
+    "avatar": "female1",
+    "id": "50L82YG",
+    "equipo-pre": "AMET",
+    "equipo-nuevo": "HGAMT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "千RICモ",
+    "avatar": "male1",
+    "id": "HR3X0NP",
+    "equipo-pre": "SPC",
+    "equipo-nuevo": "PLATINO",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "刃Daaaan",
+    "id": "43CHANR",
+    "avatar": "male1",
+    "equipo-nuevo": "PLATINO",
+    "equipo-pre": "QUARTZ",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "DFs・Charbet",
+    "id": "EG449ML",
+    "avatar": "female1",
+    "equipo-nuevo": "PLATINO",
+    "equipo-pre": "AMET",
     "fecha": "2025-07-08"
   }
 ]

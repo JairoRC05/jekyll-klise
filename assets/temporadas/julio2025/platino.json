@@ -1,0 +1,82 @@
+{
+  "tag": "PLATINO",
+  "team": "DFS PLATINUM",
+  "org": "",
+  "activo": true,
+  "capitan": "ALEX TRIANA",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DFS PLATINUM",
+  "seguro": "",
+  "link": "/equipos/dragon-flies-gaming--platinum",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "0",
+    "M4": "3",
+    "M5": "0",
+    "M6": "3",
+    "M7": "1",
+    "M8": "3",
+    "M9": "1",
+    "M10": "3",
+    "M11": "D",
+    "M12": "3",
+    "M13": "0",
+    "M14": ""
+  },
+  "jugadores": [
+    {
+      "nickname": "DFs・AlexT",
+      "ID": "3FX577Q",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Otger",
+      "ID": "9QRY308",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Яalek",
+      "ID": "PFG5F6H",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Perron",
+      "ID": "74HHH8H",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Forti",
+      "ID": "FKH2R49",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "yiroo.xo",
+      "ID": "N2CMGNR",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "刃Daaaan",
+      "ID": "43CHANR",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "SPC・Frice",
+      "ID": "HR3X0NP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Charbet",
+      "ID": "EG449ML",
+      "avatar": "female1"
+    }
+  ],
+  "posicionDesempate": 0,
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": ""
+}

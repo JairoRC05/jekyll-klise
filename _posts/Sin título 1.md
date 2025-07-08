@@ -20,5 +20,8 @@ https://xforceunite.site/equipos/ganbaru-dex
 Bienvenidos la Liga Índigo de Julio Frostbite
 https://xforceunite.site/equipos/frostbite
 
+Bienvenidos la Liga Índigo de Julio HG Amatista
+https://xforceunite.site/equipos/frostbite
+
 
 
