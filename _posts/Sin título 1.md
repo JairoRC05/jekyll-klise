@@ -10,6 +10,6 @@ https://xforceunite.site/equipos/paw-patrol
 Bienvenidos la Liga Índigo de Julio The Unown Team
 https://xforceunite.site/equipos/theunownteam
 
-Bienvenidos la Liga Índigo de Julio The Unown Team
-https://xforceunite.site/equipos/theunownteam
+Bienvenidos la Liga Índigo de Julio Ganbaru Dex
+https://xforceunite.site/equipos/ganbaru-dex
 
