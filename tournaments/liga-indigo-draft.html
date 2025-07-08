@@ -1,0 +1,148 @@
+---
+layout: ligaIndigo
+permalink: /liga-indigo-draft
+title: DRAFT | LIGA INDIGO SPC
+---
+
+<section class="section">
+  <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="altas-tab" data-bs-toggle="tab" data-bs-target="#altas" type="button"
+        role="tab" aria-controls="altas" aria-selected="true">Altas</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="bajas-tab" data-bs-toggle="tab" data-bs-target="#bajas" type="button" role="tab"
+        aria-controls="bajas" aria-selected="false">Bajas</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="modificaciones-tab" data-bs-toggle="tab" data-bs-target="#modificaciones"
+        type="button" role="tab" aria-controls="modificaciones" aria-selected="false">Modificaciones</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="transferencias-tab" data-bs-toggle="tab" data-bs-target="#transferencias"
+        type="button" role="tab" aria-controls="transferencias" aria-selected="false">Transferencias</button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="altas" role="tabpanel" aria-labelledby="altas-tab">
+      <div class="row row-cols-1 row-cols-md-3 g-4 ">
+
+      </div>
+    </div>
+    <div class="tab-pane fade" id="bajas" role="tabpanel" aria-labelledby="bajas-tab">
+      <div class="row row-cols-1 row-cols-md-3 g-4 ">
+
+      </div>
+    </div>
+    <div class="tab-pane fade" id="modificaciones" role="tabpanel" aria-labelledby="modificaciones-tab">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      </div>
+    </div>
+    <div class="tab-pane fade" id="transferencias" role="tabpanel" aria-labelledby="transferencias-tab">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = ['altas', 'bajas', 'modificaciones', 'transferencias'];
+    const tabContents = {
+      altas: document.getElementById('altas'),
+      bajas: document.getElementById('bajas'),
+      modificaciones: document.getElementById('modificaciones'),
+      transferencias: document.getElementById('transferencias')
+    };
+    const jsonRoutes = {
+      altas: '/assets/movimientos/altas.json',
+      bajas: '/assets/movimientos/bajas.json',
+      modificaciones: '/assets/movimientos/modificaciones.json',
+      transferencias: '/assets/movimientos/transferencias.json'
+    };
+
+    function createCard(data, type) {
+      const col = document.createElement('div');
+      col.classList.add('col');
+
+      let cardContent = '';
+      let cardClasses = 'card-round-mvp'; // Aplicamos este estilo a todos ahora
+
+      if (type === 'altas' || type === 'bajas' || type === 'modificaciones') {
+        cardContent = `
+                <div class="card-mvp">
+                    <a href="">
+                        <img src="/assets/avatars/${data.avatar}.webp" alt="">
+                    </a>
+                    <div class="card-mvp-title">
+                        <p class="mvp-title">${data.nickname}</p>
+                        <p>${data.equipo || ''}</p>
+                    </div>
+                </div>
+                <div class="card-mvp-number">
+                    ${type === 'altas' ? '<i class="fas fa-arrow-up"></i>' : ''}
+                    ${type === 'bajas' ? '<i class="fas fa-arrow-down"></i>' : ''}
+                    ${type === 'modificaciones' ? '<i class="fas fa-sync-alt"></i>' : ''}
+                </div>
+                <div class="card-back">
+                    <div class="card-color-left ${data.equipo || ''}"></div>
+                    <div class="card-mvp-team">
+                        <img src="/assets/logos/${data.equipo || 'default'}.webp" alt="MVPS Team: ${data.equipo || ''}">
+                    </div>
+                </div>
+            `;
+      } else if (type === 'transferencias') {
+        cardContent = `
+                <div class="card-mvp">
+                    <a href="">
+                        <img src="/assets/avatars/${data.avatar}.webp" alt="">
+                    </a>
+                    <div class="card-mvp-title">
+                        <p class="mvp-title">${data.nickname}</p>
+                        <p>${data['equipo-nuevo'] || ''}</p>
+                    </div>
+                </div>
+            <div class="card-mvp-number">
+                ${data['equipo-pre'] ? `<img src="/assets/logos/${data['equipo-pre']}.webp" alt="${data['equipo-pre']} Logo" class="equipo-logo-sm">` : ''}
+                <i class="ti ti-arrows-exchange"></i>
+                ${data['equipo-nuevo'] ? `<img src="/assets/logos/${data['equipo-nuevo']}.webp" alt="${data['equipo-nuevo']} Logo" class="equipo-logo-sm">` : ''}
+            </div>
+                <div class="card-back">
+                    <div class="card-color-left ${data['equipo-nuevo'] || ''}"></div>
+                    <div class="card-mvp-team">
+                        <img src="/assets/logos/${data['equipo-nuevo'] || 'default'}.webp" alt="MVPS Team: ${data['equipo-nuevo'] || ''}">
+                    </div>
+                </div>
+            `;
+      }
+
+      const card = document.createElement('div');
+      card.className = cardClasses;
+      card.innerHTML = cardContent;
+      col.appendChild(card);
+      return col;
+    }
+
+    tabs.forEach(tabName => {
+      fetch(jsonRoutes[tabName])
+        .then(response => response.json())
+        .then(data => {
+          const row = document.createElement('div');
+          row.classList.add('row', 'row-cols-1', 'row-cols-md-3', 'g-4');
+          data.forEach(item => {
+            row.appendChild(createCard(item, tabName));
+          });
+          tabContents[tabName].appendChild(row);
+        })
+        .catch(error => {
+          console.error(`Error fetching ${tabName} data:`, error);
+          tabContents[tabName].innerHTML = '<p class="text-danger">Error al cargar los datos.</p>';
+        });
+    });
+  });
+</script>

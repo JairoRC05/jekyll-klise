@@ -1,0 +1,64 @@
+{
+  "tag": "GDEX",
+  "team": "GANBARU DEX",
+  "org": "",
+  "activo": true,
+  "capitan": "MIPoJhon",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "GANBARU DEX",
+  "seguro": false,
+  "link": "/equipos/ganbaru-dex",
+  "grupo": "SIN ASIGNAR",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "ʚDœ",
+      "ID": "3311KF2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ʚPinzita",
+      "ID": "E0N5RKE",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ʚChrisWFttv",
+      "ID": "HNNK9E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ChilindrinO",
+      "ID": "N98MHHG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ŠaṭʊяиọĞr",
+      "ID": "R10QTME",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "・Cristoff・",
+      "ID": "GM5E987",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MIPoJhon",
+      "ID": "HNYFCLG",
+      "avatar": "male1"
+    }
+  ]
+}

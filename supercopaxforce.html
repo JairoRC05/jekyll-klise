@@ -66,15 +66,7 @@ title: SUPER COPA-XFORCE
   <div class="container-fluid banner-home SCXF">
     <div class="container banner">
 
-      <div class="banner-grupo">
-        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-        {%- for post in norte-%}
-        <a href="{{post.url}}">
-          <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-        </a>
-        {%- endfor -%}
-      </div>
-
+  
 
       <div class="banner-logo">
         <a href="/assets/logos/SCXF.webp" role="button" download="{{ page.title | escape }}.png">
@@ -85,14 +77,7 @@ title: SUPER COPA-XFORCE
 
     </div>
 
-    <div class=" banner-grupo">
-          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-          {%- for post in norte-%}
-          <a href="{{post.url}}">
-            <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-          </a>
-          {%- endfor -%}
-      </div>
+   
 
     </div>
   </div>

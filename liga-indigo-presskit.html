@@ -67,33 +67,7 @@ title: INICIO | LIGA INDIGO
 <div class="container-fluid banner-home bg-cham" >
   <div class="container banner">
 
-    <div class="banner-grupo" >
-      {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-      {%- for post in norte-%}
-    <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
-
-
-    <div class="banner-logo">
-      <a href="/assets/logos/LIGA-INDIGO.png" role="button" download="{{ page.title | escape }}.png">
-        <img src="/assets/logos/LIGA-INDIGO.webp" class="drop img-fluid" alt="" ">
-      </a>
-
-   
-
-    </div>
-
-    <div class="banner-grupo" >
-      {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-      {%- for post in norte-%}
-      <a href="{{post.url}}">
-      <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
-    </a>
-      {%- endfor -%} 
-    </div>
+  
 
   </div>
 </div>

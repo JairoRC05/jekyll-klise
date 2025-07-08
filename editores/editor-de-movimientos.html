@@ -1,0 +1,378 @@
+---
+layout:
+permalink: /editor-movimientos.html
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Movimientos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+  <div class="container py-4">
+    <h2 class="mb-4 text-center">Editor de Movimientos</h2>
+
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs" id="movTabs" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+          data-bs-target="#altasTab">Altas</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#bajasTab">Bajas</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+          data-bs-target="#modificacionesTab">Modificaciones</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+          data-bs-target="#transferenciasTab">Transferencias</button></li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3">
+      <!-- Altas -->
+      <div class="tab-pane fade show active" id="altasTab">
+        <form class="mb-3" id="form-altas">
+          <div class="row g-2">
+            <div class="col-md-3"><input class="form-control" placeholder="Nickname" name="nickname" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="Avatar" name="avatar" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="ID" name="id" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="Equipo" name="equipo" required></div>
+          </div>
+          <button class="btn btn-success mt-2" type="submit">Agregar Alta</button>
+        </form>
+        <ul class="list-group" id="lista-altas"></ul>
+      </div>
+
+      <!-- Bajas -->
+      <div class="tab-pane fade" id="bajasTab">
+        <form class="mb-3" id="form-bajas">
+          <div class="row g-2">
+            <div class="col-md-3"><input class="form-control" placeholder="Nickname" name="nickname" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="Avatar" name="avatar" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="ID" name="id" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="Equipo" name="equipo" required></div>
+          </div>
+          <button class="btn btn-danger mt-2" type="submit">Agregar Baja</button>
+        </form>
+        <ul class="list-group" id="lista-bajas"></ul>
+      </div>
+
+      <!-- Modificaciones -->
+      <div class="tab-pane fade" id="modificacionesTab">
+        <form class="mb-3" id="form-modificaciones">
+          <div class="row g-2">
+            <div class="col-md-2"><input class="form-control" placeholder="Nickname Anterior" name="nickname" required>
+            </div>
+            <div class="col-md-2"><input class="form-control" placeholder="Nuevo Nickname" name="nickname-nuevo"></div>
+            <div class="col-md-2"><input class="form-control" placeholder="Avatar" name="avatar" required></div>
+            <div class="col-md-2"><input class="form-control" placeholder="ID" name="id" required></div>
+            <div class="col-md-4"><input class="form-control" placeholder="Equipo" name="equipo" required></div>
+          </div>
+          <button class="btn btn-warning mt-2" type="submit">Agregar Modificación</button>
+        </form>
+        <ul class="list-group" id="lista-modificaciones"></ul>
+      </div>
+
+      <!-- Transferencias -->
+      <div class="tab-pane fade" id="transferenciasTab">
+        <form class="mb-3" id="form-transferencias">
+          <div class="row g-2">
+            <div class="col-md-2"><input class="form-control" placeholder="Nickname" name="nickname" required></div>
+            <div class="col-md-2"><input class="form-control" placeholder="Avatar" name="avatar" required></div>
+            <div class="col-md-2"><input class="form-control" placeholder="ID" name="id" required></div>
+            <div class="col-md-3"><input class="form-control" placeholder="Equipo Previo" name="equipo-pre" required>
+            </div>
+            <div class="col-md-3"><input class="form-control" placeholder="Equipo Nuevo" name="equipo-nuevo" required>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-2" type="submit">Agregar Transferencia</button>
+        </form>
+        <ul class="list-group" id="lista-transferencias"></ul>
+      </div>
+    </div>
+
+    <hr class="my-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <button class="btn btn-secondary me-2" onclick="guardarEnLocal()">💾 Guardar en LocalStorage</button>
+        <button class="btn btn-info" onclick="cargarDeLocal()">📥 Cargar desde LocalStorage</button>
+      </div>
+      <div>
+        <button class="btn btn-success" onclick="exportarJSON()">📤 Exportar Archivos JSON</button>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" onclick="importarEquipoJSON()">📂 Importar equipo completo</button>
+      </div>
+    </div>
+
+    <hr class="my-4">
+    <div id="jugadoresImportadosContainer" class="d-none mt-4">
+      <h5>Jugadores importados</h5>
+      <div class="table-responsive">
+        <table class="table table-sm table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Nickname</th>
+              <th>ID</th>
+              <th>Avatar</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="jugadoresImportadosTabla"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FileSaver.js para exportar archivos -->
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+  <script>
+    const movimientos = {
+      altas: [],
+      bajas: [],
+      modificaciones: [],
+      transferencias: []
+    };
+
+    const listas = {
+      altas: document.getElementById('lista-altas'),
+      bajas: document.getElementById('lista-bajas'),
+      modificaciones: document.getElementById('lista-modificaciones'),
+      transferencias: document.getElementById('lista-transferencias')
+    };
+
+    function agregarMovimiento(tipo, datos) {
+      datos.fecha = new Date().toISOString().split('T')[0];
+      movimientos[tipo].push(datos);
+      renderLista(tipo);
+      guardarEnLocal(); // 🔁 Auto-guardar
+    }
+
+    function renderLista(tipo) {
+      const lista = listas[tipo];
+      lista.innerHTML = '';
+      movimientos[tipo].forEach((mov, i) => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.innerHTML = `
+        <span>${mov.nickname || ''} (${mov.equipo || mov['equipo-nuevo'] || ''}) - ${mov.fecha}</span>
+        <button class="btn btn-sm btn-outline-danger" onclick="eliminarMovimiento('${tipo}', ${i})">
+          <i class="bi bi-trash"></i>
+        </button>
+      `;
+        lista.appendChild(li);
+      });
+    }
+
+    function eliminarMovimiento(tipo, index) {
+      movimientos[tipo].splice(index, 1);
+      renderLista(tipo);
+      guardarEnLocal(); // 🔁 Auto-guardar
+    }
+
+    function guardarEnLocal() {
+      localStorage.setItem('movimientos', JSON.stringify(movimientos));
+    }
+
+    function cargarDeLocal() {
+      const data = localStorage.getItem('movimientos');
+      if (data) {
+        const parsed = JSON.parse(data);
+        Object.keys(movimientos).forEach(tipo => {
+          movimientos[tipo] = parsed[tipo] || [];
+          renderLista(tipo);
+        });
+      }
+    }
+
+    function exportarJSON() {
+      Object.entries(movimientos).forEach(([tipo, datos]) => {
+        const blob = new Blob([JSON.stringify(datos, null, 2)], { type: "application/json" });
+        saveAs(blob, `${tipo}.json`);
+      });
+    }
+
+    // Importar JSON manual
+    function importarJSON(tipo) {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+      input.onchange = e => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = evt => {
+          try {
+            const data = JSON.parse(evt.target.result);
+            if (Array.isArray(data)) {
+              movimientos[tipo] = movimientos[tipo].concat(data);
+              renderLista(tipo);
+              guardarEnLocal();
+              alert(`${data.length} movimientos importados a ${tipo}`);
+            } else {
+              alert('Archivo no válido');
+            }
+          } catch (err) {
+            alert('Error al leer el archivo');
+          }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    }
+
+
+    function importarEquipoJSON() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+
+      input.onchange = e => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = evt => {
+          try {
+            const equipoData = JSON.parse(evt.target.result);
+            if (equipoData.jugadores && Array.isArray(equipoData.jugadores)) {
+              mostrarJugadoresImportados(equipoData);
+            } else {
+              alert('Este archivo no contiene un equipo válido.');
+            }
+          } catch (err) {
+            alert('Archivo JSON inválido.');
+          }
+        };
+        reader.readAsText(file);
+      };
+
+      input.click();
+    }
+
+ 
+    function mostrarJugadoresImportados(equipo) {
+  const tabla = document.getElementById('jugadoresImportadosTabla');
+  const contenedor = document.getElementById('jugadoresImportadosContainer');
+  tabla.innerHTML = '';
+
+  equipo.jugadores.forEach((jugador, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${jugador.nickname}</td>
+      <td>${jugador.ID}</td>
+      <td><img src="/assets/avatars/${jugador.avatar}.webp" alt="" width="30"></td>
+      <td class="text-center">
+        <div class="btn-group btn-group-sm" id="acciones-${index}"></div>
+      </td>
+    `;
+    tabla.appendChild(tr);
+
+    const accionesDiv = tr.querySelector(`#acciones-${index}`);
+
+    ['altas', 'bajas', 'modificaciones', 'transferencias'].forEach(tipo => {
+      const btn = document.createElement('button');
+      btn.className = `btn btn-outline-${colorPorTipo(tipo)}`;
+      btn.textContent = tipo === 'modificaciones' ? 'Mod' : tipo.charAt(0).toUpperCase() + tipo.slice(1);
+
+      btn.addEventListener('click', () => {
+        const jugadorData = {
+          nickname: jugador.nickname,
+          id: jugador.ID,
+          avatar: jugador.avatar
+        };
+
+        if (tipo === 'transferencias') {
+          const previo = prompt(`¿Equipo anterior de ${jugador.nickname}?`, '');
+          jugadorData['equipo-nuevo'] = equipo.tag;
+          jugadorData['equipo-pre'] = previo || '';
+        } else if (tipo === 'modificaciones') {
+          const nuevoNombre = prompt(`Nuevo nombre para ${jugador.nickname}:`, jugador.nickname);
+          if (!nuevoNombre || nuevoNombre.trim() === jugador.nickname) return;
+          jugadorData['nickname-nuevo'] = nuevoNombre.trim();
+          jugadorData.equipo = equipo.tag;
+        } else {
+          jugadorData.equipo = equipo.tag;
+        }
+
+        agregarMovimiento(tipo, jugadorData);
+      });
+
+      accionesDiv.appendChild(btn);
+    });
+  });
+
+  contenedor.classList.remove('d-none');
+}
+
+
+
+    function colorPorTipo(tipo) {
+      return {
+        altas: 'success',
+        bajas: 'danger',
+        modificaciones: 'warning',
+        transferencias: 'primary'
+      }[tipo] || 'secondary';
+    }
+
+
+
+
+    function escapeJugador(jugador, equipoNuevo) {
+      return JSON.stringify({
+        nickname: jugador.nickname,
+        id: jugador.ID,
+        avatar: jugador.avatar,
+        equipo: equipoNuevo
+      }).replace(/"/g, '&quot;');
+    }
+
+    function escapeJugadorTransfer(jugador, equipoNuevo) {
+      return JSON.stringify({
+        nickname: jugador.nickname,
+        id: jugador.ID,
+        avatar: jugador.avatar,
+        'equipo-nuevo': equipoNuevo,
+        'equipo-pre': ''
+      }).replace(/"/g, '&quot;');
+    }
+
+    function agregarDesdeImport(tipo, jugadorData) {
+      const datos = JSON.parse(jugadorData.replace(/&quot;/g, '"'));
+      agregarMovimiento(tipo, datos);
+    }
+
+
+    // Formularios
+    ['altas', 'bajas', 'modificaciones', 'transferencias'].forEach(tipo => {
+      const form = document.getElementById(`form-${tipo}`);
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const datos = Object.fromEntries(new FormData(form).entries());
+        agregarMovimiento(tipo, datos);
+        form.reset();
+      });
+
+      // Botón de importar
+      const importBtn = document.createElement('button');
+      importBtn.className = 'btn btn-outline-secondary btn-sm ms-2';
+      importBtn.textContent = '📂 Importar JSON';
+      importBtn.type = 'button';
+      importBtn.onclick = () => importarJSON(tipo);
+      form.appendChild(importBtn);
+    });
+
+    window.addEventListener('DOMContentLoaded', cargarDeLocal);
+  </script>
+
+
+</body>
+
+</html>

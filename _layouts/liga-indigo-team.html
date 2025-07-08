@@ -270,26 +270,41 @@ permalink:
                         <img src="/assets/logos/${equipo.tag}.webp" class="drop img-fluid" alt="${equipo.team}">
                     </a>
                     <div class="bannerText">
-                        <div class="record-line">
-                            ${equipo.ligas && equipo.ligas.length === 1 ? `
-                                <div class="trofeos">
-                                    <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
-                                    <span>${equipo.ligas[0]}</span>
-                                </div>
-                            ` : ''}
-                            ${equipo.cxf && equipo.cxf.length === 1 ? `
-                                <div class="trofeos ms-2">
-                                    <img src="/assets/smalls/CXF.webp" alt="LIGA INDIGO TROFEO">
-                                    <span>${equipo.cxf[0]}</span>
-                                </div>
-                            ` : ''}
-                            ${equipo.cham && equipo.cham.length === 1 ? `
-                                <div class="trofeos ms-2">
-                                    <img src="/assets/smalls/CHAM.webp" alt="LIGA INDIGO TROFEO">
-                                    <span>${equipo.cham[0]}</span>
-                                </div>
-                            ` : ''}
-                        </div>
+                        {% assign ligas_num = page.ligas | plus: 0 %}
+{% assign cxf_num = page.cxf | plus: 0 %}
+{% assign cham_num = page.cham | plus: 0 %}
+{% assign verified_bool = page.verified %}
+
+<div class="record-line">
+  {% if ligas_num >= 1 %}
+    <div class="trofeos">
+      <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+      <span>x{{ ligas_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if cxf_num >= 1 %}
+    <div class="trofeos ms-2">
+      <img src="/assets/smalls/CXF.webp" alt="COPA CXF TROFEO">
+      <span>x{{ cxf_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if cham_num >= 1 %}
+    <div class="trofeos ms-2">
+      <img src="/assets/smalls/CHAM.webp" alt="CHAMPIONS TROFEO">
+      <span>x{{ cham_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if verified_bool %}
+    <div class="trofeos ms-2">
+        <img src="/assets/smalls/verified.webp" alt="CHAMPIONS TROFEO">
+    </div>
+  {% endif %}
+</div>
+
+
                         <h1 class="exo-style d-none d-md-block">${equipo.team}</h1>
                         <span class="exo d-none d-md-block">${equipo.tag} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
                         <div class="region">

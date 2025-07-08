@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "alinks/2021-07-21-RONDA.md",
+                "file": "Sin título 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2021-07-21-RONDA"
+              "title": "Sin título 1"
             }
           },
           {
@@ -69,7 +69,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sin título 1.md",
+                "file": "updates/Sin título 1.md",
                 "mode": "source",
                 "source": true
               },
@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -216,8 +216,14 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f1c67932c7abea45",
+  "active": "bf70758b55ebb52e",
   "lastOpenFiles": [
+    "Sin título 1.canvas",
+    "Sin título.canvas",
+    "Sin título.md",
+    "alinks/2021-07-21-RONDA.md",
+    "updates/Sin título 1.md",
+    "Sin título 1.md",
     "teams/GNORTE/2021-07-21-DINASTY.md",
     "teams/GNORTE/2021-07-21-DINAMITA BUENA ONDA.md",
     "teams/GSUR/2021-07-21-pokerangers.md",
@@ -225,12 +231,8 @@
     "teams/GNORTE/Sin título.md",
     "teams/GNORTE/2021-07-21-AD-GAMING.md",
     "teams/GSUR/2021-07-21-ENIGMA.md",
-    "Sin título.md",
-    "Sin título.canvas",
     "teams/GSUR/2021-07-21-IMPERIO MEXA AMT.md",
     "teams/GNORTE/2024-07-21-RNT-NEO STAR.md",
-    "Sin título 1.md",
-    "alinks/2021-07-21-RONDA.md",
     "alinks/2024-10-31-CLASIF.md",
     "teams/GSUR/2024-07-21-RNT XAPULOVERS.md",
     "teams/GSUR/2024-07-21-RNT GALÁCTICOS.md",
@@ -243,8 +245,6 @@
     "teams/GSUR/2023-07-21-TUT.md",
     "teams/GSUR/2021-07-21-IMPERIO MEXA OBS.md",
     "teams/GNORTE/2024-07-25-HG-SALARIO-MINIMO.md",
-    "teams/GNORTE/2024-04-05-STAMINA.md",
-    "teams/GNORTE/2021-07-21-TEAM MANICOMIO.md",
     "MVP/L4O",
     "MVP/DFS/AMBER",
     "MVP/HG SALARIO MINIMO",
@@ -255,7 +255,6 @@
     "MVP/7Z",
     "teams/ARCHIVO/plantilla.txt",
     "teams/ARCHIVO",
-    "Sin título 1.canvas",
     "Sin título 6.canvas",
     "Sin título 5.canvas",
     "Sin título 4.canvas",

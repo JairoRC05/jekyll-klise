@@ -1,0 +1,82 @@
+{
+  "tag": "TUTOC",
+  "team": "TUT ONECOIN",
+  "org": "",
+  "activo": true,
+  "capitan": "GERD",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "TUT ONECOIN",
+  "seguro": true,
+  "link": "/equipos/tut-onecoin",
+  "grupo": "SIN ASIGNAR",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "夕мilwåüкєє",
+      "ID": "A9390CX",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "Raydemort",
+      "ID": "H8Y27LQ",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "・BlacKOuT",
+      "ID": "KP3MGGK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Luffym12",
+      "ID": "MKCA597",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m3": 1,
+      "m4": 1
+    },
+    {
+      "nickname": "Dr.Mario(Z)",
+      "ID": "GGA8QFL",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Overtony",
+      "ID": "RMEPEEA",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "OverToñita",
+      "ID": "CT23992",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "Liкoジ",
+      "ID": "XYLMNNE",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "・Yamato・",
+      "ID": "Q631ECP",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

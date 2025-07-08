@@ -67,12 +67,12 @@ title: IDS | LIGA INDIGO
     <div class="container banner">
 
       <div class="banner-grupo">
-        {% assign norte = site.categories.GNORTE | sort: "puntos" %}
-        {%- for post in norte-%}
+
+    
         <a href="{{post.url}}">
           <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
         </a>
-        {%- endfor -%}
+  
       </div>
 
 
@@ -86,12 +86,11 @@ title: IDS | LIGA INDIGO
     </div>
 
     <div class=" banner-grupo">
-          {% assign norte = site.categories.GSUR | sort: "puntos" | reverse %}
-          {%- for post in norte-%}
+      
           <a href="{{post.url}}">
             <img src="/assets/logos/{{post.ID}}.webp" alt="Equipo: {{post.ID}}" loading="lazy" class="leagues--img">
           </a>
-          {%- endfor -%}
+     
       </div>
 
     </div>

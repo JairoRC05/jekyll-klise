@@ -86,14 +86,14 @@ function getFlatPlayersData() {
 
 /**
  * Rellena el datalist de selección de equipo en el formulario "Añadir Jugador".
- * Incluye solo equipos activos y que tengan menos de 8 jugadores, excluyendo el equipo "SIN_EQUIPO".
+ * Incluye solo equipos activos y que tengan menos de 9 jugadores, excluyendo el equipo "SIN_EQUIPO".
  */
 function populateTeamDatalist() {
     const datalistElement = $('#datalistOptions');
     datalistElement.empty();
 
     allTeamData.forEach(team => {
-        if (team.activo && team.tag !== 'SIN_EQUIPO' && team.jugadores.length < 8) {
+        if (team.activo && team.tag !== 'SIN_EQUIPO' && team.jugadores.length < 9) {
             datalistElement.append(`<option value="${team.tag}">${team.team} (${team.tag})</option>`);
         }
     });
@@ -102,7 +102,7 @@ function populateTeamDatalist() {
 
 /**
  * NUEVO: Rellena el datalist de selección de equipo en el modal "Reasignar Jugador".
- * Incluye solo equipos activos y que tengan menos de 8 jugadores, excluyendo el equipo "SIN_EQUIPO"
+ * Incluye solo equipos activos y que tengan menos de 9 jugadores, excluyendo el equipo "SIN_EQUIPO"
  * y el equipo actual del jugador que se está reasignando.
  * @param {string} currentPlayerTeamTag El tag del equipo actual del jugador que se reasigna.
  */
@@ -112,7 +112,7 @@ function populateReassignTeamDatalist(currentPlayerTeamTag) {
 
     allTeamData.forEach(team => {
         // Excluir "SIN_EQUIPO" y el equipo actual del jugador, y solo equipos activos con espacio
-        if (team.activo && team.tag !== 'SIN_EQUIPO' && team.tag !== currentPlayerTeamTag && team.jugadores.length < 8) {
+        if (team.activo && team.tag !== 'SIN_EQUIPO' && team.tag !== currentPlayerTeamTag && team.jugadores.length < 9) {
             datalistElement.append(`<option value="${team.tag}">${team.team} (${team.tag})</option>`);
         }
     });
@@ -1650,12 +1650,12 @@ $(document).ready(function () {
             return;
         }
 
-        if (targetTeam.jugadores.length >= 8) {
+        if (targetTeam.jugadores.length >= 9) {
             applyValidationClass(playerTeamTagInput, false); // Marca el campo de equipo como inválido
             Swal.fire({
                 icon: 'warning',
                 title: 'Equipo Lleno',
-                text: `El equipo "${targetTeam.team}" ya tiene el máximo de 8 jugadores.`,
+                text: `El equipo "${targetTeam.team}" ya tiene el máximo de 9 jugadores.`,
             });
             return;
         }
@@ -1798,7 +1798,7 @@ $(document).ready(function () {
             return;
         }
 
-        if (targetTeam.jugadores.length >= 8) {
+        if (targetTeam.jugadores.length >= 9) {
             applyValidationClass(newTeamTagInput, false);
             // Si el jugador fue movido del equipo original y el nuevo está lleno, devolverlo.
             if (originalTeam && originalTeam.tag !== 'SIN_EQUIPO') {
@@ -1807,7 +1807,7 @@ $(document).ready(function () {
             Swal.fire({
                 icon: 'warning',
                 title: 'Equipo Destino Lleno',
-                text: `El equipo "${targetTeam.team}" ya tiene el máximo de 8 jugadores.`,
+                text: `El equipo "${targetTeam.team}" ya tiene el máximo de 9 jugadores.`,
             });
             return;
         }

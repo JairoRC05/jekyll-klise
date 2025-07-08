@@ -1,0 +1,77 @@
+{
+  "tag": "FTB",
+  "team": "FROSTBITE",
+  "org": "",
+  "activo": true,
+  "capitan": "TUGFAMON",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "FROSTBITE",
+  "seguro": "",
+  "link": "/equipos/frostbite",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "3",
+    "M4": "3",
+    "M5": "3",
+    "M6": "3",
+    "M7": "1",
+    "M8": "3",
+    "M9": "3",
+    "M10": "1",
+    "M11": "0",
+    "M12": "D",
+    "M13": "3",
+    "M14": "3"
+  },
+  "jugadores": [
+    {
+      "nickname": "PikaTrollツ",
+      "ID": "LY3YYX3",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Icɛяツ",
+      "ID": "Y39HPAF",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MerGas",
+      "ID": "C3EG7EF",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Perro乡",
+      "ID": "KFCPP44",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Netherwipeり",
+      "ID": "T5962G0",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ArkNaphistem",
+      "ID": "Y6MGKFG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Tugfamon",
+      "ID": "LGAGE2Y",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Efestroll",
+      "ID": "YGXLGKP",
+      "avatar": "male1"
+    }
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}

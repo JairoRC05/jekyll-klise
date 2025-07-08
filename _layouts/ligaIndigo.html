@@ -7,25 +7,25 @@ layout:
 
 {%- include head.html -%}
 
-<body class="BLANCO_NIEVE">
+<body class="indigo-league">
 
     <div class="sidebar indigo">
-        <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="#">
-            <i class="bi bi-rocket-takeoff-fill me-2"></i>
-            <span>Lobby</span>
+        <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/liga-indigo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
+            <span class="indigoType">Lobby</span>
         </a>
         <ul class="nav flex-lg-column flex-md-row">
 
             <li class="nav-item iconContainer">
                 <a class="nav-link active" href="/">
                     <img src="/assets/logos/LRDU.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Inicio</span>
+                    <span class="ms-1 trunk">Nación Unite</span>
                 </a>
             </li>
             <li class="nav-item iconContainer">
-                <a class="nav-link" href="{{ site.links_navegacion.indigo }}">
-                    <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Liga Indigo</span>
+                <a class="nav-link" href="/liga-indigo-draft">
+                    <img src="/assets/smalls/icon-transfer.webp" alt="" class="imgIcon">
+                    <span class="ms-1 trunk">Draft</span>
                 </a>
             </li>
             <li class="nav-item iconContainer">
@@ -83,7 +83,15 @@ layout:
         </div>
 
         <div class="central-content-area">
-        {{ content }}
+            <div class="main-content-left">
+               
+                {{content}}
+
+                {%- include promo.html -%}
+
+            </div>
+
+            {%- include bans-indigo-league.html -%}
         </div>
     </div>
 

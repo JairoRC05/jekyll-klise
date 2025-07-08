@@ -1,15 +1,30 @@
 [
-    {
-        "nickname": "Carlos",
-        "avatar": "male1",
-        "id": "78901",
-        "equipo": "ABC FC"
-    },
-    {
-        "nickname": "Laura",
-        "avatar": "female1",
-        "id": "23456",
-        "equipo": "XYZ United"
-    }
-  
+  {
+    "nickname": "DarkyriaX",
+    "avatar": "male1",
+    "id": "GNC462K",
+    "equipo": "TAE",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "BeniManitas? ",
+    "avatar": "male1",
+    "id": "229QRAM",
+    "equipo": "TUT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "太ㅤGoomㅤ會",
+    "id": "NFN0FN",
+    "avatar": "male1",
+    "equipo": "FTB",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "ZTG・Broken",
+    "id": "MHAP9RC",
+    "avatar": "male1",
+    "equipo": "FTB",
+    "fecha": "2025-07-08"
+  }
 ]

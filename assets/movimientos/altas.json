@@ -1,15 +1,156 @@
 [
-    {
-        "nickname": "Carlos",
-        "avatar": "male1",
-        "id": "78901",
-        "equipo": "ABC FC"
-    },
-    {
-        "nickname": "Laura",
-        "avatar": "female1",
-        "id": "23456",
-        "equipo": "XYZ United"
-    }
-  
+  {
+    "nickname": "TuT • Vinx3",
+    "avatar": "male1",
+    "id": "EY6EKM7",
+    "equipo": "TUT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "Netherwipeり",
+    "avatar": "male1",
+    "id": "T5962G0",
+    "equipo": "FTB",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "Tugfamon",
+    "id": "LGAGE2Y",
+    "avatar": "male1",
+    "equipo": "FTB",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "Efestroll",
+    "id": "YGXLGKP",
+    "avatar": "male1",
+    "equipo": "FTB",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "PDÇ°ʚĄԃyɞ",
+    "id": "1NT2288",
+    "avatar": "female2",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "PDÇ°Macs",
+    "id": "7NCQ8Y8",
+    "avatar": "male1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "PDÇ°Zaia",
+    "id": "R996TTF",
+    "avatar": "female1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "PDÇ°Crisroy",
+    "id": "G293263",
+    "avatar": "male1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "Zoutto・",
+    "id": "LH54H4A",
+    "avatar": "male1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "mrfunhesman",
+    "id": "2KHC3TL",
+    "avatar": "male1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "JustEvee・恋",
+    "id": "MKGF1L6",
+    "avatar": "male1",
+    "equipo": "PDC",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "・Hashi霧・",
+    "id": "X795T5",
+    "avatar": "male1",
+    "equipo": "PM",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "rainbowdash",
+    "id": "6507KQ",
+    "avatar": "male1",
+    "equipo": "PM",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "Yamada",
+    "id": "EY90CF3",
+    "avatar": "male1",
+    "equipo": "PØĄ",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "INF・Felix",
+    "id": "CNFF5T9",
+    "avatar": "male1",
+    "equipo": "PP",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "INF・Imath",
+    "id": "PA1H8GH",
+    "avatar": "male1",
+    "equipo": "PP",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "・Hollow・",
+    "id": "3H9R8GE",
+    "avatar": "male1",
+    "equipo": "HGAMT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "JohnnyCage~",
+    "id": "HT4QEQK",
+    "avatar": "male1",
+    "equipo": "HGAMT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "/Kev-",
+    "id": "ALFFEHM",
+    "avatar": "male1",
+    "equipo": "HGAMT",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "ʚDœ",
+    "id": "3311KF2",
+    "avatar": "male1",
+    "equipo": "GDEX",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "ʚPinzita",
+    "id": "E0N5RKE",
+    "avatar": "male1",
+    "equipo": "GDEX",
+    "fecha": "2025-07-08"
+  },
+  {
+    "nickname": "ʚChrisWFttv",
+    "id": "HNNK9E",
+    "avatar": "male1",
+    "equipo": "GDEX",
+    "fecha": "2025-07-08"
+  }
 ]

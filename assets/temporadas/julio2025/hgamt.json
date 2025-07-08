@@ -1,0 +1,69 @@
+{
+  "tag": "HGAMT",
+  "team": "HG AMATISTA",
+  "org": "",
+  "activo": true,
+  "capitan": "CHAQ",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "HG AMATISTA",
+  "seguro": false,
+  "link": "/equipos/hg-amatista",
+  "grupo": "SIN ASIGNAR",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "Jinnieminnie",
+      "ID": "EF5HGE6",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "・Hollow・",
+      "ID": "3H9R8GE",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "JohnnyCage~",
+      "ID": "HT4QEQK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TESLA科学",
+      "ID": "50L82YG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "/Kev-",
+      "ID": "ALFFEHM",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "><BlackSun.",
+      "ID": "TXG338A",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "鋼・Chaqジ??",
+      "ID": "4H2XNPY",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "寂・NuzuLi",
+      "ID": "Y7FCTPQ",
+      "avatar": "male1"
+    }
+  ]
+}
