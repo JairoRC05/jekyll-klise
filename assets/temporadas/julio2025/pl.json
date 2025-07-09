@@ -1,0 +1,73 @@
+{
+  "tag": "PL",
+  "team": "PRESTACIONES DE LEY HG",
+  "org": "HOUSE OF GHOST",
+  "activo": true,
+  "capitan": "BENNY",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "PRESTACIONES DE LEY HG",
+  "seguro": "true",
+  "link": "/equipos/house-of-ghost--prestaciones-de-ley",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "3",
+    "M2": "1",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "D",
+    "M7": "2",
+    "M8": "1",
+    "M9": "2",
+    "M10": "3",
+    "M11": "3",
+    "M12": "0",
+    "M13": "3",
+    "M14": "1"
+  },
+  "jugadores": [
+    {
+      "nickname": "PL・MortemYɞ",
+      "ID": "FQTLQT6",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 3,
+      "m2": 2,
+      "m3": 1,
+      "teamTag": "PL"
+    },
+    {
+      "nickname": "PL • Benny",
+      "ID": "HXNG3M",
+      "avatar": "male1",
+      "teamTag": "PL"
+    },
+    {
+      "nickname": "PL • Payan",
+      "ID": "F6TL275",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PL・Vamp_lut",
+      "ID": "GN4N4R",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Radiohead?",
+      "ID": "F8HH86",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PL・YuugiMɞ",
+      "ID": "852758P",
+      "avatar": "male1"
+    }
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": 0
+}
