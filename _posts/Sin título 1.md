@@ -29,6 +29,9 @@ https://xforceunite.site/equipos/dragon-flies-gaming--platinum
 Bienvenidos la Liga Índigo de Julio Prestaciones de Ley HG
 http://xforceunite.site/equipos/house-of-ghost--prestaciones-de-ley
 
+Bienvenidos la Liga Índigo de Julio AD Gaming
+https://xforceunite.site/equipos/ad-gaming
+
 
 
 
