@@ -23,5 +23,7 @@ https://xforceunite.site/equipos/frostbite
 Bienvenidos la Liga Índigo de Julio HG Amatista
 https://xforceunite.site/equipos/frostbite
 
+Bienvenidos la Liga Índigo de Julio DFS Platinum
+https://xforceunite.site/equipos/dragon-flies-gaming--platinum
 
 

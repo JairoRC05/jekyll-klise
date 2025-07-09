@@ -1,14 +1,14 @@
 {
-  "tag": "TF",
-  "team": "TEAM FLARE",
-  "org": "",
+  "tag": "FLOW",
+  "team": "HG FLOW",
+  "org": "HOUSE OF GHOST",
   "activo": true,
-  "capitan": "NETO",
+  "capitan": "VYLER",
   "region": "LAN",
   "teamNombreAnterior": "",
-  "teamNuevoNombre": "TEAM FLARE",
+  "teamNuevoNombre": "HG FLOW",
   "seguro": false,
-  "link": "/equipos/villanos-esports--team-flare",
+  "link": "/equipos/house-of-ghost--flow",
   "grupo": "SIN ASIGNAR",
   "partidos": {
     "M1": "0",
@@ -26,33 +26,38 @@
   },
   "jugadores": [
     {
-      "nickname": "・Agupön2",
-      "ID": "MXY1N1H",
+      "nickname": "Haku",
+      "ID": "EA9XF4C",
       "avatar": "male1"
     },
     {
-      "nickname": "・Agupon・",
-      "ID": "3NRF5Q0",
+      "nickname": "RNT・SAE",
+      "ID": "M53P4YX",
       "avatar": "male1"
     },
     {
-      "nickname": ".크리스티안.",
-      "ID": "F2Y485N",
+      "nickname": "HG•Naruto:)",
+      "ID": "409TA",
       "avatar": "male1"
     },
     {
-      "nickname": "TuFurrita坐",
-      "ID": "NQE5NG3",
+      "nickname": "(xEDCIdjoup",
+      "ID": "752KKT0",
       "avatar": "male1"
     },
     {
-      "nickname": "Pasteヅ",
-      "ID": "9TNGY11",
+      "nickname": "Holding・On",
+      "ID": "PH9R008",
       "avatar": "male1"
     },
     {
-      "nickname": "・Âgupon3・",
-      "ID": "5YQRHLA",
+      "nickname": "z5JOHN",
+      "ID": "95QCNR8",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "RNT・CHAINO",
+      "ID": "PEE148A",
       "avatar": "male1"
     }
   ],
