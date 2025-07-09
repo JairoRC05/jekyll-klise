@@ -26,4 +26,9 @@ https://xforceunite.site/equipos/frostbite
 Bienvenidos la Liga Índigo de Julio DFS Platinum
 https://xforceunite.site/equipos/dragon-flies-gaming--platinum
 
+Bienvenidos la Liga Índigo de Julio Prestaciones de Ley HG
+http://xforceunite.site/equipos/house-of-ghost--prestaciones-de-ley
+
+
+
 

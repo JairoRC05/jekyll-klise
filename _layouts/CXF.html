@@ -20,7 +20,7 @@ layout:
             <img src="{{page.maincover}}" class="drop img-fluid" alt="" ">
         </a>
             <div class="bannerText">
-                <h1 class="exo">{{ page.cxf }}</h1>
+ 
 
                 <span class=" ms-3 ">AGOSTO</span>
 
@@ -32,9 +32,7 @@ layout:
       <div class="row">
 
 
-      {% assign CXF = site.categories.CXF | sort: "puntos"
-      | reverse %}
-      {%- for post in CXF limit:16-%}
+    
       <div class="col-12 col-md-3 col-lg-2">
         <div class="container  roundCard bg-op">
           <a href="{{post.maincover}}" role="button" download="{{post.tean}}">
@@ -43,13 +41,13 @@ layout:
           <div class="round">
             <div class="roundInfo">
 
-              <h2 class="text-white">{{post.team | truncate: 11}}</h2>
+              <h2 class="text-white"></h2>
             </div>
-            <p class="text-white">{{post.liga}}</p>
+            <p class="text-white"></p>
           </div>
         </div>
       </div>
-      {%- endfor -%}
+
     </div>
     </div>
 

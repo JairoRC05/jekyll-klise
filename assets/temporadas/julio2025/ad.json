@@ -1,0 +1,54 @@
+{
+  "tag": "AD",
+  "team": "AD GAMING",
+  "org": "",
+  "activo": true,
+  "capitan": "YASU",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "AD GAMING",
+  "seguro": false,
+  "link": "/equipos/ad-gaming",
+  "grupo": "SIN ASIGNAR",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "ЯK・Belz돈",
+      "ID": "58EAE21",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "SoyYasuッ",
+      "ID": "LYP1195",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ЯK・chaos",
+      "ID": "4CNKGAX",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "77 • MadRose",
+      "ID": "XAA8CC3",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "太ㅤGoomㅤ會",
+      "ID": "NFN0FN",
+      "avatar": "male1"
+    }
+  ]
+}
