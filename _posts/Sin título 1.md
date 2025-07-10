@@ -33,5 +33,8 @@ Bienvenidos la Liga Índigo de Julio AD Gaming
 https://xforceunite.site/equipos/ad-gaming
 
 
+Bienvenidos la Liga Índigo de Julio HG Salario Minimo
+https://xforceunite.site/equipos/house-of-ghost--salario-minimo
 
-
+Bienvenidos la Liga Índigo de Julio Team Flare
+https://xforceunite.site/equipos/villanos-esports--team-flare

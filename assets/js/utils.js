@@ -31,18 +31,18 @@ function generarPartidoHTML(partido) {
             <h6>${partido.equipo1.substring(0, 12)}</h6>
           </div>
           <div class="card-round-promo mx-2">
-            ${partido.stream ? `
-              <span>TWITCH</span>
-              <h6>${partido.resultado}</h6>
-              <span>${partido.fecha}</span>
-              <span>${partido.hora}</span>
-            ` : partido.special ? `
-              <span>TWITCH</span>
-              <h6>${partido.resultado}</h6>
-              <span>${partido.hora}</span>
-            ` : `
-              <h6>${partido.resultado}</h6>
-            `}
+             ${partido.stream ? `
+    ${partido.resultado !== "VS" ? `
+      <h6>${partido.resultado}</h6>
+    ` : `
+      <span>TWITCH</span>
+      <span>${partido.dia}</span>
+      <span>${partido.hora}</span>
+    `}
+  ` : `
+    <span>22:10</span>
+    <h6>${partido.resultado}</h6>
+  `}
           </div>
           <div class="card-round-promo right">
             <h6>${partido.equipo2.substring(0, 12)}</h6>
@@ -162,7 +162,7 @@ function generarContenidoRonda(rondaData) {
         </div>
         <div class="col-12 col-md-12 col-lg-4 p-0 ">
           <div class="">
-            <div class="d-flex justify-content-center align-items-center bg-cham bracket-round-list" style="border-radius: 10px;">
+            <div class="d-flex justify-content-center align-items-center indigo bracket-round-list" style="border-radius: 10px;">
               <h1 class="exo-style">${fechaMostrar}</h1>
             </div>
           </div>

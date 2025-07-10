@@ -1,0 +1,886 @@
+[
+  {
+  "rondas": [
+    {
+      "ronda": "RONDA 1",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 1,
+          "match_number": 1
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PL",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 1,
+          "match_number": 2
+        },
+        {
+          "equipo1": "AD GAMING",
+          "tag1": "AD",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 1,
+          "match_number": 3
+        },
+        {
+          "equipo1": "TEAM FLARE",
+          "tag1": "TF",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-11",
+          "round_number": 1,
+          "match_number": 4
+        },
+        {
+          "equipo1": "HG AMATISTA",
+          "tag1": "HGAMT",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 1,
+          "match_number": 5
+        },
+        {
+          "equipo1": "TEAM ROCKET",
+          "tag1": "TRR",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-14",
+          "round_number": 1,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 2",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-15",
+          "round_number": 2,
+          "match_number": 1
+        },
+        {
+          "equipo1": "LOS CAPI",
+          "tag1": "CAPI",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-15",
+          "round_number": 2,
+          "match_number": 2
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PL",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 2,
+          "match_number": 3
+        },
+        {
+          "equipo1": "AD GAMING",
+          "tag1": "AD",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 2,
+          "match_number": 4
+        },
+        {
+          "equipo1": "TEAM FLARE",
+          "tag1": "TF",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 2,
+          "match_number": 5
+        },
+        {
+          "equipo1": "HG AMATISTA",
+          "tag1": "HGAMT",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 2,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 3",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 3,
+          "match_number": 1
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 3,
+          "match_number": 2
+        },
+        {
+          "equipo1": "LOS CAPI",
+          "tag1": "CAPI",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 3,
+          "match_number": 3
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PL",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 3,
+          "match_number": 4
+        },
+        {
+          "equipo1": "AD GAMING",
+          "tag1": "AD",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-17",
+          "round_number": 3,
+          "match_number": 5
+        },
+        {
+          "equipo1": "TEAM FLARE",
+          "tag1": "TF",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-17",
+          "round_number": 3,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 4",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 1
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 2
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 3
+        },
+        {
+          "equipo1": "LOS CAPI",
+          "tag1": "CAPI",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 4
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PL",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 5
+        },
+        {
+          "equipo1": "AD GAMING",
+          "tag1": "AD",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 5",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-24",
+          "round_number": 5,
+          "match_number": 1
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-24",
+          "round_number": 5,
+          "match_number": 2
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-23",
+          "round_number": 5,
+          "match_number": 3
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-23",
+          "round_number": 5,
+          "match_number": 4
+        },
+        {
+          "equipo1": "LOS CAPI",
+          "tag1": "CAPI",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 5,
+          "match_number": 5
+        },
+        {
+          "equipo1": "PRESTACIONES DE LEY HG",
+          "tag1": "PL",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 5,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 6",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 1
+        },
+        {
+          "equipo1": "PROYECTO MEW",
+          "tag1": "PM",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 2
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 3
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-25",
+          "round_number": 6,
+          "match_number": 4
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 5
+        },
+        {
+          "equipo1": "LOS CAPI",
+          "tag1": "CAPI",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 7",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "TEAM ROCKET",
+          "tag2": "TRR",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-07-28",
+          "round_number": 7,
+          "match_number": 1
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 2
+        },
+        {
+          "equipo1": "PROYECTO MEW",
+          "tag1": "PM",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 3
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 4
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 5
+        },
+        {
+          "equipo1": "IMPERIO MEXA ZAFIRO",
+          "tag1": "ZAFIRO",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 8",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "HG AMATISTA",
+          "tag2": "HGAMT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-29",
+          "round_number": 8,
+          "match_number": 1
+        },
+        {
+          "equipo1": "TEAM ROCKET",
+          "tag1": "TRR",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 2
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 3
+        },
+        {
+          "equipo1": "PROYECTO MEW",
+          "tag1": "PM",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 4
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 5
+        },
+        {
+          "equipo1": "STAMINA E-SPORTS",
+          "tag1": "STMN",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 9",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "TEAM FLARE",
+          "tag2": "TF",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 1
+        },
+        {
+          "equipo1": "HG AMATISTA",
+          "tag1": "HGAMT",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 2
+        },
+        {
+          "equipo1": "TEAM ROCKET",
+          "tag1": "TRR",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 3
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 4
+        },
+        {
+          "equipo1": "PROYECTO MEW",
+          "tag1": "PM",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 5
+        },
+        {
+          "equipo1": "PLAGA VILLANOS",
+          "tag1": "PLAGA",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-07-30",
+          "round_number": 9,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 10",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "AD GAMING",
+          "tag2": "AD",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 10,
+          "match_number": 1
+        },
+        {
+          "equipo1": "TEAM FLARE",
+          "tag1": "TF",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:30",
+          "dia": "2025-08-01",
+          "round_number": 10,
+          "match_number": 2
+        },
+        {
+          "equipo1": "HG AMATISTA",
+          "tag1": "HGAMT",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 10,
+          "match_number": 3
+        },
+        {
+          "equipo1": "TEAM ROCKET",
+          "tag1": "TRR",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 10,
+          "match_number": 4
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-08-01",
+          "round_number": 10,
+          "match_number": 5
+        },
+        {
+          "equipo1": "PROYECTO MEW",
+          "tag1": "PM",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 10,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 11",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "POLLITOS DE COLORES",
+          "tag1": "PDC",
+          "equipo2": "PRESTACIONES DE LEY HG",
+          "tag2": "PL",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 1
+        },
+        {
+          "equipo1": "AD GAMING",
+          "tag1": "AD",
+          "equipo2": "LOS CAPI",
+          "tag2": "CAPI",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 2
+        },
+        {
+          "equipo1": "TEAM FLARE",
+          "tag1": "TF",
+          "equipo2": "IMPERIO MEXA ZAFIRO",
+          "tag2": "ZAFIRO",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 3
+        },
+        {
+          "equipo1": "HG AMATISTA",
+          "tag1": "HGAMT",
+          "equipo2": "STAMINA E-SPORTS",
+          "tag2": "STMN",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 4
+        },
+        {
+          "equipo1": "TEAM ROCKET",
+          "tag1": "TRR",
+          "equipo2": "PLAGA VILLANOS",
+          "tag2": "PLAGA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 5
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "PROYECTO MEW",
+          "tag2": "PM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-08-04",
+          "round_number": 11,
+          "match_number": 6
+        }
+      ]
+    }
+  ]
+}
+]

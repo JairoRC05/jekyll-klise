@@ -14,18 +14,18 @@
   "partidos": {
     "M1": "0",
     "M2": "0",
-    "M3": "3",
-    "M4": "1",
-    "M5": "1",
-    "M6": "3",
-    "M7": "1",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
     "M8": "0",
-    "M9": "1",
-    "M10": "1",
-    "M11": "3",
-    "M12": "D",
-    "M13": "3",
-    "M14": "2"
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0",
+    "M13": "0",
+    "M14": "0"
   },
   "jugadores": [
     {
@@ -42,7 +42,7 @@
       "m4": 1
     },
     {
-      "nickname": "MeXa・Kory",
+      "nickname": "TTVxkoryz",
       "ID": "7K4TY1F",
       "avatar": "male1"
     },
@@ -57,18 +57,23 @@
       "avatar": "male1"
     },
     {
-      "nickname": "MeXa°Atenea",
-      "ID": "CKCHQ1L",
-      "avatar": "female1"
-    },
-    {
       "nickname": "MeXa • Salie",
       "ID": "AX09NA2",
       "avatar": "male1"
     },
     {
-      "nickname": "MeXa • Sigva",
+      "nickname": "MeXa • Sigvat",
       "ID": "9Q199FC",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "XG・Ixchel21",
+      "ID": "ALLGQ5X",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MeXa・Masaru",
+      "ID": "AGM28R9",
       "avatar": "male1"
     }
   ],

@@ -7,9 +7,9 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "DFS PLATINUM",
-  "seguro": "",
+  "seguro": false,
   "link": "/equipos/dragon-flies-gaming--platinum",
-  "grupo": "SOUTH",
+  "grupo": "NORTH",
   "partidos": {
     "M1": "3",
     "M2": "3",
@@ -63,17 +63,17 @@
       "avatar": "male1"
     },
     {
-      "nickname": "SPC・Frice",
-      "ID": "HR3X0NP",
-      "avatar": "male1"
-    },
-    {
       "nickname": "DFs・Charbet",
       "ID": "EG449ML",
       "avatar": "female1"
+    },
+    {
+      "nickname": "Wįntęr",
+      "ID": "KT2ARX2",
+      "avatar": "male1"
     }
   ],
-  "posicionDesempate": 0,
+  "posicionDesempate": false,
   "wins": 0,
   "losses": 0,
   "draws": 0,

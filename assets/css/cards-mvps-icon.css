@@ -187,16 +187,16 @@
 }
 
 .tarjeta-equipo {
-  background: rgb(68, 76, 247) !important;
+  /* background: rgb(68, 76, 247) !important;
   background: radial-gradient(circle, rgba(68, 76, 247, 1) 10%, rgba(0, 0, 168, 1) 90%) !important;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd; */
   padding: 15px;
   margin-right: 10px;
-  min-width: 150px;
+  min-width: 200px;
   /* Asegura un ancho mínimo */
   width: auto;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   user-select: none;
   color: white;
   display: flex;
@@ -206,8 +206,8 @@
 }
 
 .tarjeta-equipo img {
-  max-width: 80%;
-  max-height: 80px;
+  /* max-width: 80%;
+  max-height: 80px; */
   margin-bottom: 10px;
 }
 
@@ -1132,21 +1132,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     .title-group-team{
       font-size: 16px;
       margin-right: 5px;
     }
-    
+
     .img-second-place{
       width: 50px;
       height: 50px;
     }
 
   }
- 
-  
-  
+
+
+
 
 }
 
@@ -1158,7 +1158,7 @@
 }
 
 .list-group {
-  min-height: 50px; 
+  min-height: 50px;
 }
 
 
@@ -1239,7 +1239,7 @@
          align-items: start;
 
          .record{
-              margin: 0 2px 0 0; 
+              margin: 0 2px 0 0;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -1391,3 +1391,20 @@
 #equipos-container { margin-top: 20px; }
 .jugador-item { margin-bottom: 5px; }
 .edit-form { display: none; margin-top: 10px; }
+
+
+
+@keyframes explotar {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.explosion {
+  animation: explotar 600ms ease-out forwards;
+}

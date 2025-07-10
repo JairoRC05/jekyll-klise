@@ -66,7 +66,7 @@ title: DRAFT | LIGA INDIGO
   <div class="container-fluid banner-home bg-cham">
     <div class="container banner">
 
-   
+
 
 
       <div class="banner-logo">
@@ -75,7 +75,7 @@ title: DRAFT | LIGA INDIGO
       </a>
 
    
-
+              
     </div>
 
 
@@ -84,62 +84,69 @@ title: DRAFT | LIGA INDIGO
 
 
 
-  <div class="container body-ruleta">
-    <h1>SORTEO DE GRUPOS</h1>
+  <div class=" container body-ruleta">
 
-    <div id="contenedor-sorteo">
-      <img src="/assets/logos/LIGA-INDIGO.webp" alt="Logo Sorteo">
-      <span>Sorteando equipos...</span>
-    </div>
+          <h1 class="exo-style-black">SORTEO DE GRUPOS</h1>
+          <div id="contenedor-sorteo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="Logo Sorteo">
+            <span>Sorteando equipos...</span>
+          </div>
 
-    <div id="contenedor-ruleta">
-    </div>
+          <div id="contenedor-ruleta">
+          </div>
 
-    <button id="boton-girar" class="btn">BUSCAR</button>
+          <button id="boton-girar" class="btn bg-cham text-white">BUSCAR</button>
 
-    <div id="resultado"></div>
-    <div id="equipos-restantes"></div>
-  </div>
+          
+      </div>
 
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-4">
-        <div class="grupo">
-          <h2>ORION (GRUPO A)</h2>
-          <div id="grupo-a">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-5">
+            <img src="assets/picks/slowbro-profesor.webp" alt="">
+
+          </div>
+          <div class="col-3">
+
+                <div id="resultado"></div>
+          <div id="equipos-restantes"></div>
+          
+            <div id="contenedor-inicial">
+            </div>
+
+
+          </div>
+          <div class="col-4">
+              <div class="grupo">
+              <h2>ORION (GRUPO A)</h2>
+              <div id="grupo-a">
+              </div>
+            </div>
+
+            <div class="grupo">
+              <h2>HYDRA (GRUPO B)</h2>
+              <div id="grupo-b">
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
+
+      <div class="container">
+        <div id="historial" class="row mt-4 g-2"></div>
 
       </div>
-      <div class="col-4">
-        <div id="contenedor-inicial">
+
+
+
+      <div class="container-fluid my-5">
+        <div class="container teams-table">
+          <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
+          {% include sponsors.html %}
         </div>
-
-
       </div>
-      <div class="col-4">
-        <div class="grupo">
-          <h2>HYDRA (GRUPO B)</h2>
-          <div id="grupo-b">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-  <div class="container-fluid my-5">
-    <div class="container teams-table">
-      <h1 class="teams-title text-center">SIGUE A NUESTROS SPONSORS</h1>
-      {% include sponsors.html %}
-    </div>
-  </div>
 
 
 
@@ -148,276 +155,360 @@ title: DRAFT | LIGA INDIGO
 
 
 
-  {% include navbar-league.html %}
+      {% include navbar-league.html %}
 
 
 
-  {% include footer-transparent.html %}
+      {% include footer-transparent.html %}
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-  <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const contenedorInicial = document.getElementById('contenedor-inicial');
-      const grupoA = document.getElementById('grupo-a');
-      const grupoB = document.getElementById('grupo-b');
-      let equiposData = [];
+      <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+          const contenedorInicial = document.getElementById('contenedor-inicial');
+          const grupoA = document.getElementById('grupo-a');
+          const grupoB = document.getElementById('grupo-b');
+          let equiposData = [];
 
-      fetch('/assets/inscripciones/junio2025/inscritos.json')
-        .then(response => response.json())
-        .then(data => {
-          equiposData = data;
-          mostrarEtiquetasIniciales();
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
+          const rutaTemporada = "/assets/temporadas/julio2025";
 
-      function mostrarEtiquetasIniciales() {
-        equiposData.forEach(equipo => {
-          const etiqueta = crearEtiqueta(equipo.tag, contenedorInicial);
-        });
-      }
+          try {
+            const indexResp = await fetch(`${rutaTemporada}/equipos-index.json`);
+            const archivos = await indexResp.json();
 
-      function crearEtiqueta(texto, contenedorPadre) {
-        const etiqueta = document.createElement('span');
-        etiqueta.classList.add('etiqueta');
-        etiqueta.textContent = texto;
-        etiqueta.draggable = true;
-        etiqueta.addEventListener('dragstart', manejarInicioArrastre);
-        contenedorPadre.appendChild(etiqueta);
-        return etiqueta;
-      }
-
-      let elementoArrastrado = null;
-      let contenedorOrigen = null;
-
-      function manejarInicioArrastre(evento) {
-        elementoArrastrado = evento.target;
-        contenedorOrigen = evento.target.parentNode;
-        evento.dataTransfer.setData('text/plain', evento.target.textContent);
-      }
-
-      function manejarSobreArea(evento) {
-        evento.preventDefault();
-      }
-
-      function manejarSoltar(evento, contenedorDestino) {
-        evento.preventDefault();
-        if (elementoArrastrado && contenedorDestino !== contenedorOrigen) {
-          const textoEtiqueta = evento.dataTransfer.getData('text/plain');
-          const nuevaEtiqueta = crearEtiqueta(textoEtiqueta, contenedorDestino);
-          elementoArrastrado.remove();
-          elementoArrastrado = null;
-          contenedorOrigen = null;
-        }
-      }
-
-      // Listeners para el Contenedor Inicial
-      contenedorInicial.addEventListener('dragover', manejarSobreArea);
-      contenedorInicial.addEventListener('drop', (evento) => manejarSoltar(evento, contenedorInicial));
-
-      // Listeners para el Grupo A
-      grupoA.addEventListener('dragover', manejarSobreArea);
-      grupoA.addEventListener('drop', (evento) => manejarSoltar(evento, grupoA));
-
-      // Listeners para el Grupo B
-      grupoB.addEventListener('dragover', manejarSobreArea);
-      grupoB.addEventListener('drop', (evento) => manejarSoltar(evento, grupoB));
-    });
-  </script>
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const contenedorRuleta = document.getElementById('contenedor-ruleta');
-      const contenedorSorteo = document.getElementById('contenedor-sorteo');
-      const botonGirar = document.getElementById('boton-girar');
-      const resultadoDiv = document.getElementById('resultado');
-      const equiposRestantesDiv = document.getElementById('equipos-restantes');
-      let equiposData = [];
-      let equiposRestantes = [];
-      let girando = false;
-      const duracionGiro = 6000; // Duración del efecto de "sorteo" en ms
-      let progressBar;
-
-      const sonidoGirar = new Audio('/assets/sounds/ruleta_girando.mp3'); // Reemplaza con la ruta a tu archivo
-      const sonidoEliminar = new Audio('/assets/sounds/equipo_eliminado.mp3'); // Reemplaza con la ruta a tu archivo
-      const sonidoGanador = new Audio('/assets/sounds/ganador.mp3'); // Reemplazar
-
-      // Lista de frases para la leyenda
-      const frasesSorteo = [
-        "Órbita asegurada. Nivel completado.",
-        "¡Alcanzando nuevas galaxias! Nuevo Nivel en la Indigo DESBLOQUEADO.",
-        "Precisión láser en el campo de asteroides. ¡Liberen a Inteleon!",
-        "Recursos recolectados en el planeta desconocido. ¡A la base del Sector11!",
-        "Enemigo detectado en el radar estelar. ¡Fuego a discreción!",
-        "Warp drive activado. Próxima parada: Planeta SPC.",
-        "Construyendo una temporada de la Liga Indigo, pixel a pixel.",
-        "La gravedad no es rival para mi salto espacial.",
-        "Explorando el universo. Cada planeta es un nuevo mapa.",
-        "Otra Dimension encontrada, ¡Cuidado!",
-        "Stamina ES esta aquí ¡Llego el Campeón!",
-        "Cuidado con los agujeros negros, ¡son trampas de nivel avanzado!",
-        "Activando el escudo de energía. ¡AD Gaming en la misión!",
-        "Desbloqueando nuevos sistemas solares. ¡El DLC cósmico!",
-        "¿Game Over? ¡Nunca! Respawn en la nebulosa.",
-        "Mi puntuación más alta: explorar cada rincón del cosmos."
-      ];
-
-      function obtenerFraseAleatoria() {
-        const indiceAleatorio = Math.floor(Math.random() * frasesSorteo.length);
-        return frasesSorteo[indiceAleatorio];
-      }
-
-      fetch('/assets/inscripciones/junio2025/inscritos.json')
-        .then(response => response.json())
-        .then(data => {
-          equiposData = data;
-          equiposRestantes = [...equiposData];
-          mostrarEquiposInicial();
-          actualizarEquiposRestantes();
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
-
-      function mostrarEquiposInicial() {
-        contenedorRuleta.innerHTML = '';
-        contenedorRuleta.style.transform = `translateX(0px)`;
-        equiposRestantes.forEach((equipo) => {
-          const tarjeta = crearTarjetaEquipo(equipo);
-          contenedorRuleta.appendChild(tarjeta);
-        });
-      }
-
-      function crearTarjetaEquipo(equipo) {
-        const tarjeta = document.createElement('div');
-        tarjeta.classList.add('tarjeta-equipo');
-        const textoEquipo = document.createElement('span');
-        textoEquipo.textContent = equipo.tag || equipo.team || 'Equipo';
-        tarjeta.appendChild(textoEquipo);
-        return tarjeta;
-      }
-
-      function girarRuleta() {
-        sonidoGirar.play();
-        if (girando || equiposRestantes.length <= 1) return;
-        girando = true;
-        resultadoDiv.textContent = 'Buscando en la Galaxia...';
-        botonGirar.disabled = true;
-
-        // Establecer la altura de contenedorSorteo igual a contenedorRuleta
-        contenedorSorteo.style.height = contenedorRuleta.offsetHeight + 'px';
-
-        // Limpiar cualquier contenido previo
-        contenedorSorteo.innerHTML = '';
-
-        // Crear la barra de progreso
-        const progressBarContainer = document.createElement('div');
-        progressBarContainer.classList.add('progress-bar-container');
-        progressBar = document.createElement('div');
-        progressBar.classList.add('progress-bar');
-        progressBarContainer.appendChild(progressBar);
-        contenedorSorteo.appendChild(progressBarContainer);
-
-        // Crear la leyenda con frase aleatoria
-        const leyendaSorteo = document.createElement('span');
-        leyendaSorteo.textContent = obtenerFraseAleatoria(); // Llamar a la función para obtener una frase aleatoria
-        contenedorSorteo.appendChild(leyendaSorteo);
-
-        // Mostrar el contenedor de sorteo y ocultar la ruleta
-        contenedorRuleta.style.opacity = 0;
-        contenedorSorteo.style.opacity = 1;
-
-        // Animar la barra de progreso
-        animateProgressBar();
-
-        contenedorRuleta.style.transform = `translateX(-50px)`;
-        setTimeout(() => {
-          contenedorRuleta.style.transform = `translateX(0px)`;
-          contenedorRuleta.style.opacity = 1;
-          contenedorSorteo.style.opacity = 0;
-          botonGirar.disabled = false;
-          girando = false;
-          setTimeout(eliminarEquipoAleatorio, 500);
-        }, duracionGiro);
-      }
-
-      function animateProgressBar() {
-        let width = 0;
-        const interval = 50;
-        const increment = 100 / (duracionGiro / interval);
-        const animationInterval = setInterval(() => {
-          width += increment;
-          progressBar.style.width = width + '%';
-          if (width >= 100) {
-            clearInterval(animationInterval);
-          }
-        }, interval);
-      }
-
-      function eliminarEquipoAleatorio() {
-        const jsConfetti = new JSConfetti(); // Inicializa js-confetti aquí para poder usarlo en ambos casos
-
-        if (equiposRestantes.length <= 1) {
-          if (equiposRestantes.length === 1) {
-            resultadoDiv.textContent = `¡El equipo final es: ${equiposRestantes[0].tag || equiposRestantes[0].team || 'Equipo'}!`;
-            botonGirar.disabled = true;
-            girando = false;
-            jsConfetti.generateConfetti(); // Disparar confetti cuando queda el equipo final
-            if (sonidoGanador) {
-              sonidoGanador.play();
+            for (const archivo of archivos) {
+              const res = await fetch(`${rutaTemporada}/${archivo}`);
+              const equipo = await res.json();
+              equiposData.push(equipo);
             }
-          } else {
-            resultadoDiv.textContent = "¡No quedan equipos!";
+
+            mostrarEtiquetasIniciales();
+
+          } catch (error) {
+            console.error('Error al cargar los equipos:', error);
+          }
+
+          function mostrarEtiquetasIniciales() {
+            equiposData.forEach(equipo => {
+              crearEtiqueta(equipo.tag, contenedorInicial);
+            });
+          }
+
+          function crearEtiqueta(texto, contenedorPadre) {
+            const etiqueta = document.createElement('span');
+            etiqueta.classList.add('etiqueta');
+            etiqueta.textContent = texto;
+            etiqueta.draggable = true;
+            etiqueta.addEventListener('dragstart', manejarInicioArrastre);
+            contenedorPadre.appendChild(etiqueta);
+            return etiqueta;
+          }
+
+          let elementoArrastrado = null;
+          let contenedorOrigen = null;
+
+          function manejarInicioArrastre(evento) {
+            elementoArrastrado = evento.target;
+            contenedorOrigen = evento.target.parentNode;
+            evento.dataTransfer.setData('text/plain', evento.target.textContent);
+          }
+
+          function manejarSobreArea(evento) {
+            evento.preventDefault();
+          }
+
+          function manejarSoltar(evento, contenedorDestino) {
+            evento.preventDefault();
+            if (elementoArrastrado && contenedorDestino !== contenedorOrigen) {
+              const textoEtiqueta = evento.dataTransfer.getData('text/plain');
+              crearEtiqueta(textoEtiqueta, contenedorDestino);
+              elementoArrastrado.remove();
+              elementoArrastrado = null;
+              contenedorOrigen = null;
+            }
+          }
+
+          // Listeners para arrastrar y soltar
+          contenedorInicial.addEventListener('dragover', manejarSobreArea);
+          contenedorInicial.addEventListener('drop', (evento) => manejarSoltar(evento, contenedorInicial));
+
+          grupoA.addEventListener('dragover', manejarSobreArea);
+          grupoA.addEventListener('drop', (evento) => manejarSoltar(evento, grupoA));
+
+          grupoB.addEventListener('dragover', manejarSobreArea);
+          grupoB.addEventListener('drop', (evento) => manejarSoltar(evento, grupoB));
+        });
+      </script>
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const contenedorRuleta = document.getElementById('contenedor-ruleta');
+          const contenedorSorteo = document.getElementById('contenedor-sorteo');
+          const botonGirar = document.getElementById('boton-girar');
+          const resultadoDiv = document.getElementById('resultado');
+          const equiposRestantesDiv = document.getElementById('equipos-restantes');
+          let equiposData = [];
+          let equiposRestantes = [];
+          let girando = false;
+          const duracionGiro = 4000; // Duración del efecto de "sorteo" en ms
+          let progressBar;
+
+          const sonidoGirar = new Audio('/assets/sounds/ruleta_girando.mp3'); // Reemplaza con la ruta a tu archivo
+          const sonidoEliminar = new Audio('/assets/sounds/equipo_eliminado.mp3'); // Reemplaza con la ruta a tu archivo
+          const sonidoGanador = new Audio('/assets/sounds/ganador.mp3'); // Reemplazar
+          const truncateString = (str, num) =>
+            str.length > num ? str.slice(0, num) + "..." : str;
+
+          // Lista de frases para la leyenda
+          const frasesSorteo = [
+            "Órbita asegurada. Nivel completado.",
+            "¡Alcanzando nuevas galaxias! Nuevo Nivel en la Indigo DESBLOQUEADO.",
+            "Precisión láser en el campo de asteroides. ¡Liberen a Inteleon!",
+            "Recursos recolectados en el planeta desconocido. ¡A la base del Sector11!",
+            "Enemigo detectado en el radar estelar. ¡Fuego a discreción!",
+            "Warp drive activado. Próxima parada: Planeta SPC.",
+            "Construyendo una temporada de la Liga Indigo, pixel a pixel.",
+            "La gravedad no es rival para mi salto espacial.",
+            "Explorando el universo. Cada planeta es un nuevo mapa.",
+            "Otra Dimension encontrada, ¡Cuidado!",
+            "Stamina ES esta aquí ¡Llego el Campeón!",
+            "Cuidado con los agujeros negros, ¡son trampas de nivel avanzado!",
+            "Activando el escudo de energía. ¡AD Gaming en la misión!",
+            "Desbloqueando nuevos sistemas solares. ¡El DLC cósmico!",
+            "¿Game Over? ¡Nunca! Respawn en la nebulosa.",
+            "Mi puntuación más alta: explorar cada rincón del cosmos."
+          ];
+
+          function obtenerFraseAleatoria() {
+            const indiceAleatorio = Math.floor(Math.random() * frasesSorteo.length);
+            return frasesSorteo[indiceAleatorio];
+          }
+
+          const rutaTemporada = "/assets/temporadas/julio2025";
+
+          fetch(`${rutaTemporada}/equipos-index.json`)
+            .then(response => response.json())
+            .then(async (archivos) => {
+              for (const archivo of archivos) {
+                const res = await fetch(`${rutaTemporada}/${archivo}`);
+                const equipo = await res.json();
+                equiposData.push(equipo);
+              }
+              equiposRestantes = [...equiposData];
+              mostrarEquiposInicial();
+              actualizarEquiposRestantes();
+            })
+            .catch(error => console.error('Error al cargar los equipos desde index:', error));
+
+
+          function mostrarEquiposInicial() {
+            contenedorRuleta.innerHTML = '';
+            contenedorRuleta.style.transform = `translateX(0px)`;
+            equiposRestantes.forEach((equipo) => {
+              const tarjeta = crearTarjetaEquipo(equipo);
+              contenedorRuleta.appendChild(tarjeta);
+            });
+          }
+
+          function crearTarjetaEquipo(equipo) {
+            const card = document.createElement('div');
+            card.classList.add('tarjeta-equipo'); // mantiene compatibilidad con el resto del script
+            card.innerHTML = `
+    <a href="${equipo.link}">  
+      <div class="card-round-roster-2">
+        <div class="card-round-team">
+          <img src="/assets/logos/${equipo.tag}.webp" alt="${equipo.team}" class="img-fluid">
+        </div>
+        <div class="card-round-title">
+          <h2>${truncateString(equipo.team, 12)}</h2>
+          <span>${equipo.tag}</span>
+        </div>
+        <div class="card-back">
+          <div class="card-color-left bg-cham"></div>
+          <div class="card-color-right bg-cham"></div>
+          <div class="card-color-logo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+          </div>
+        </div>
+      </div>
+    </a>
+  `;
+            return card;
+          }
+
+
+          function girarRuleta() {
+            sonidoGirar.play();
+            if (girando || equiposRestantes.length <= 1) return;
+            girando = true;
+            resultadoDiv.textContent = 'Buscando en la Galaxia...';
             botonGirar.disabled = true;
-            girando = false;
+
+            // Establecer la altura de contenedorSorteo igual a contenedorRuleta
+            contenedorSorteo.style.height = contenedorRuleta.offsetHeight + 'px';
+
+            // Limpiar cualquier contenido previo
+            contenedorSorteo.innerHTML = '';
+
+            // Crear la barra de progreso
+            const progressBarContainer = document.createElement('div');
+            progressBarContainer.classList.add('progress-bar-container');
+            progressBar = document.createElement('div');
+            progressBar.classList.add('progress-bar');
+            progressBarContainer.appendChild(progressBar);
+            contenedorSorteo.appendChild(progressBarContainer);
+
+            // Crear la leyenda con frase aleatoria
+            const leyendaSorteo = document.createElement('span');
+            leyendaSorteo.textContent = obtenerFraseAleatoria(); // Llamar a la función para obtener una frase aleatoria
+            contenedorSorteo.appendChild(leyendaSorteo);
+
+            // Mostrar el contenedor de sorteo y ocultar la ruleta
+            contenedorRuleta.style.opacity = 0;
+            contenedorSorteo.style.opacity = 1;
+
+            // Animar la barra de progreso
+            animateProgressBar();
+
+            contenedorRuleta.style.transform = `translateX(-50px)`;
+            setTimeout(() => {
+              contenedorRuleta.style.transform = `translateX(0px)`;
+              contenedorRuleta.style.opacity = 1;
+              contenedorSorteo.style.opacity = 0;
+              botonGirar.disabled = false;
+              girando = false;
+              setTimeout(eliminarEquipoAleatorio, 500);
+            }, duracionGiro);
           }
-          return;
-        }
 
-        const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
-        const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
+          function animateProgressBar() {
+            let width = 0;
+            const interval = 50;
+            const increment = 100 / (duracionGiro / interval);
+            const animationInterval = setInterval(() => {
+              width += increment;
+              progressBar.style.width = width + '%';
+              if (width >= 100) {
+                clearInterval(animationInterval);
+              }
+            }, interval);
+          }
 
-        resultadoDiv.textContent = `Equipo encontrado: ${equipoEliminado.tag || equipoEliminado.team || 'Equipo'}`;
-        mostrarEquiposInicial();
-        actualizarEquiposRestantes();
-        botonGirar.disabled = false;
-        girando = false;
-        jsConfetti.generateConfetti(); // Disparar confetti después de cada eliminación
-        if (sonidoEliminar) {
-          sonidoEliminar.play();
-        }
-      }
+          function eliminarEquipoAleatorio() {
+            const jsConfetti = new JSConfetti(); // Inicializa js-confetti aquí para poder usarlo en ambos casos
 
+            if (equiposRestantes.length <= 1) {
+              if (equiposRestantes.length === 1) {
+                resultadoDiv.textContent = `¡El equipo final es: ${equiposRestantes[0].tag || equiposRestantes[0].team || 'Equipo'}!`;
+                botonGirar.disabled = true;
+                girando = false;
+                jsConfetti.generateConfetti(); // Disparar confetti cuando queda el equipo final
+                if (sonidoGanador) {
+                  sonidoGanador.play();
+                }
+              } else {
+                resultadoDiv.textContent = "¡No quedan equipos!";
+                botonGirar.disabled = true;
+                girando = false;
+              }
+              return;
+            }
 
-      function actualizarEquiposRestantes() {
-        equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
-      }
+            const indiceAleatorio = Math.floor(Math.random() * equiposRestantes.length);
+            const equipoEliminado = equiposRestantes.splice(indiceAleatorio, 1)[0];
 
-      setTimeout(() => {
-        if (equiposRestantes.length > 0 && contenedorRuleta.offsetWidth > 0) {
-          const primeraTarjeta = document.querySelector('.tarjeta-equipo');
-          if (primeraTarjeta) {
-            anchoTarjetaConMargen = primeraTarjeta.offsetWidth + 10;
-            numTarjetasVisibles = Math.ceil(contenedorRuleta.offsetWidth / anchoTarjetaConMargen);
+            resultadoDiv.innerHTML = `
+  <div class="d-flex justify-content-center">
+    <a href="${equipoEliminado.link}">
+      <div class="card-round-roster-2">
+        <div class="card-round-team">
+          <img src="/assets/logos/${equipoEliminado.tag}.webp" alt="${equipoEliminado.team}" class="img-fluid">
+        </div>
+        <div class="card-round-title">
+          <h2>${truncateString(equipoEliminado.team, 12)}</h2>
+          <span>${equipoEliminado.tag}</span>
+        </div>
+        <div class="card-back">
+          <div class="card-color-left bg-cham"></div>
+          <div class="card-color-right bg-cham"></div>
+          <div class="card-color-logo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+`;
+            // Crear tarjeta visual para historial
+            const historial = document.getElementById("historial");
+            const cardHTML = `
+  <div class="col-6 col-md-3 col-lg-2 d-flex justify-content-center">
+    <a href="${equipoEliminado.link}">
+      <div class="card-round-roster-2">
+        <div class="card-round-team">
+          <img src="/assets/logos/${equipoEliminado.tag}.webp" alt="${equipoEliminado.team}" class="img-fluid">
+        </div>
+        <div class="card-round-title">
+          <h2>${truncateString(equipoEliminado.team, 12)}</h2>
+          <span>${equipoEliminado.tag}</span>
+        </div>
+        <div class="card-back">
+          <div class="card-color-left bg-cham"></div>
+          <div class="card-color-right bg-cham"></div>
+          <div class="card-color-logo">
+            <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+`;
+            historial.insertAdjacentHTML("beforeend", cardHTML);
+
             mostrarEquiposInicial();
-            contenedorRuleta.style.width = `${equiposRestantes.length * anchoTarjetaConMargen}px`;
+            actualizarEquiposRestantes();
+            botonGirar.disabled = false;
+            girando = false;
+            jsConfetti.generateConfetti(); // Disparar confetti después de cada eliminación
+            if (sonidoEliminar) {
+              sonidoEliminar.play();
+            }
           }
-        }
-      }, 100);
-
-      botonGirar.addEventListener('click', girarRuleta);
-    });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
 
 
-  {% include g-analytics.html %}
+
+          function actualizarEquiposRestantes() {
+            equiposRestantesDiv.textContent = `Equipos restantes: ${equiposRestantes.length}`;
+          }
+
+          setTimeout(() => {
+            if (equiposRestantes.length > 0 && contenedorRuleta.offsetWidth > 0) {
+              const primeraTarjeta = document.querySelector('.tarjeta-equipo');
+              if (primeraTarjeta) {
+                anchoTarjetaConMargen = primeraTarjeta.offsetWidth + 10;
+                numTarjetasVisibles = Math.ceil(contenedorRuleta.offsetWidth / anchoTarjetaConMargen);
+                mostrarEquiposInicial();
+                contenedorRuleta.style.width = `${equiposRestantes.length * anchoTarjetaConMargen}px`;
+              }
+            }
+          }, 100);
+
+          botonGirar.addEventListener('click', girarRuleta);
+        });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+
+
+      {% include g-analytics.html %}
 
 
 

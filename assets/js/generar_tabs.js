@@ -8,23 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     const roundSpecificData = [
-        { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30', nombreImagen: 'raichu' }, // <-- Cambia a raichu
-        { ronda: 'RONDA 3', fecha: '2025-06-02', nombreImagen: 'goodra' }, // <-- Cambia a goodra
-        { ronda: 'RONDA 4', fecha: '2025-06-03', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
-        { ronda: 'RONDA 5', fecha: '2025-06-04', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
-        { ronda: 'RONDA 6', fecha: '2025-06-05', nombreImagen: 'gengar' }, // <-- Cambia a gengar
-        { ronda: 'RONDA 7', fecha: '2025-06-06', nombreImagen: 'lapras' }, // <-- Cambia a lapras
-        { ronda: 'RONDA 8', fecha: '2025-06-09', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
-        { ronda: 'RONDA 9', fecha: '2025-06-10', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
-        { ronda: 'RONDA 10', fecha: '2025-06-11', nombreImagen: 'espeonEstrella' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 11', fecha: '2025-06-12', nombreImagen: 'gyarados' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 12', fecha: '2025-06-13', nombreImagen: 'chandelure' }, // <-- ¡CAMBIA ESTO!
-        { ronda: 'RONDA 13', fecha: '2025-06-16', nombreImagen: 'blastoise' }, // <-- ¡CAMBIA ESTO!
+        { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
+        { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' }, // <-- Cambia a raichu
+        { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' }, // <-- Cambia a goodra
+        { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
+        { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
+        { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' }, // <-- Cambia a gengar
+        { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' }, // <-- Cambia a lapras
+        { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
+        { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
+        { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' }, 
+        { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
         // ... el resto de tu array ...
         // Ejemplo para una ronda de un solo día
-        // { ronda: 'RONDA EXTRA', fecha: '2025-06-18', nombreImagen: 'skin_ronda_EXTRA' },
-        { ronda: 'HOOPA', fecha: '2025-06-18', nombreImagen: 'PORTAL' },
+        // { ronda: 'RONDA EXTRA', fecha: '2025-07-18', nombreImagen: 'skin_ronda_EXTRA' },
+        // { ronda: 'HOOPA', fecha: '2025-07-18', nombreImagen: 'PORTAL' },
         // ... más rondas si es necesario
     ];
 
@@ -71,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tab.show();
             // Find the corresponding round data and pass it to generarContenidoRonda
             const activeRoundData = roundSpecificData[activeTabIndex];
-            fetch('/assets/partidos/pnorte.json')
+            fetch('/assets/temporadas/julio2025/pnorte.json')
                 .then(response => response.json())
                 .then(data => {
                     const rondaEncontrada = data[0].rondas.find(r => r.ronda === activeRoundData.ronda);
@@ -82,10 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    fetch('/assets/partidos/pnorte.json')
+    fetch('/assets/temporadas/julio2025/pnorte.json')
         .then(response => response.json())
         .then(data => {
-            const rondasDesdeJSON = data[0].rondas.slice(0, 13);
+            const rondasDesdeJSON = data[0].rondas.slice(0, 11);
 
             roundSpecificData.slice(0, 13).forEach((roundData, index) => {
                 const listItem = document.createElement('li');
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 button.addEventListener('click', () => {
                     const roundInfo = roundSpecificData[index];
-                    fetch('/assets/partidos/pnorte.json')
+                    fetch('/assets/temporadas/julio2025/pnorte.json')
                         .then(response => response.json())
                         .then(data => {
                             const rondaEncontrada = data[0].rondas.find(r => r.ronda === roundInfo.ronda);
@@ -124,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabsContainer.appendChild(listItem);
             });
 
-            setActiveTabByDate(roundSpecificData.slice(0, 13));
+            setActiveTabByDate(roundSpecificData.slice(0, 11));
 
             const hoopaRoundData = roundSpecificData.find(data => data.ronda === 'HOOPA');
             if (hoopaRoundData) {
