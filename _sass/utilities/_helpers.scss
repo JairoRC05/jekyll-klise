@@ -45,3 +45,28 @@
     vertical-align: middle;
     margin: 0 5px;
 }
+
+
+.indigo-sidebar{
+  background: #444cf7 !important;
+  background: radial-gradient(circle, #444cf7 0%, #0000a8 100%) !important;
+
+  @include respond-to(md){
+  background:none;
+   background: radial-gradient(circle, #444df700 0%, #0000a800 100%) !important;
+  }
+  
+}
+
+
+.indigo-mini-sidebar{
+   background:none;
+   background: radial-gradient(circle, #444df700 0%, #0000a800 100%) !important;
+
+  @include respond-to(md){
+
+    background: #444cf7 !important;
+  background: radial-gradient(circle, #444cf7 0%, #0000a8 100%) !important;
+  }
+  
+}
