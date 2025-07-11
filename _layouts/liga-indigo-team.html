@@ -150,22 +150,20 @@ permalink:
     const equipoPartidos = document.getElementById('equipo-perfil-partidos');
     const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`; // HTML del footer
 
-    // La constante roundSpecificData es la fuente de verdad para las fechas de las rondas
+ 
     const roundSpecificData = [
-        { ronda: 'RONDA 1', fecha_inicio: '2025-05-27', fecha_fin: '2025-05-28' },
-        { ronda: 'RONDA 2', fecha_inicio: '2025-05-29', fecha_fin: '2025-05-30' },
-        { ronda: 'RONDA 3', fecha: '2025-06-02' },
-        { ronda: 'RONDA 4', fecha: '2025-06-03' },
-        { ronda: 'RONDA 5', fecha: '2025-06-04' },
-        { ronda: 'RONDA 6', fecha: '2025-06-05' },
-        { ronda: 'RONDA 7', fecha: '2025-06-06' },
-        { ronda: 'RONDA 8', fecha: '2025-06-09' },
-        { ronda: 'RONDA 9', fecha: '2025-06-10' },
-        { ronda: 'RONDA 10', fecha: '2025-06-11' },
-        { ronda: 'RONDA 11', fecha: '2025-06-12' },
-        { ronda: 'RONDA 12', fecha: '2025-06-13' },
-        { ronda: 'RONDA 13', fecha: '2025-06-16' },
-        { ronda: 'RONDA HOOPA', fecha: '2025-06-18' },
+        { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
+        { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' }, // <-- Cambia a raichu
+        { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' }, // <-- Cambia a goodra
+        { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
+        { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
+        { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' }, // <-- Cambia a gengar
+        { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' }, // <-- Cambia a lapras
+        { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
+        { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
+        { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' }, 
+        { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
+       
     ];
 
     if (descargarTodoBtn && equipoPerfil && equipoPartidos) {
