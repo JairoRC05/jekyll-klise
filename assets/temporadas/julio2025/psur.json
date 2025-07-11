@@ -46,8 +46,8 @@
         {
           "equipo1": "TEAM FLARE",
           "tag1": "TF",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": true,
           "hora": "22:30",
@@ -114,8 +114,8 @@
         {
           "equipo1": "PRESTACIONES DE LEY HG",
           "tag1": "PL",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -182,8 +182,8 @@
         {
           "equipo1": "IMPERIO MEXA ZAFIRO",
           "tag1": "ZAFIRO",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -250,8 +250,8 @@
         {
           "equipo1": "POLLITOS DE COLORES",
           "tag1": "PDC",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -340,8 +340,8 @@
           "match_number": 1
         },
         {
-          "equipo1": "PLAGA VILLANOS",
-          "tag1": "PLAGA",
+          "equipo1": "CACM ESPORTS",
+          "tag1": "CACM",
           "equipo2": "THE UNOWN TEAM",
           "tag2": "TUT",
           "resultado": "VS",
@@ -432,8 +432,8 @@
           "match_number": 2
         },
         {
-          "equipo1": "PLAGA VILLANOS",
-          "tag1": "PLAGA",
+          "equipo1": "CACM ESPORTS",
+          "tag1": "CACM",
           "equipo2": "HG AMATISTA",
           "tag2": "HGAMT",
           "resultado": "VS",
@@ -524,8 +524,8 @@
           "match_number": 3
         },
         {
-          "equipo1": "PLAGA VILLANOS",
-          "tag1": "PLAGA",
+          "equipo1": "CACM ESPORTS",
+          "tag1": "CACM",
           "equipo2": "AD GAMING",
           "tag2": "AD",
           "resultado": "VS",
@@ -616,8 +616,8 @@
           "match_number": 4
         },
         {
-          "equipo1": "PLAGA VILLANOS",
-          "tag1": "PLAGA",
+          "equipo1": "CACM ESPORTS",
+          "tag1": "CACM",
           "equipo2": "LOS CAPI",
           "tag2": "CAPI",
           "resultado": "VS",
@@ -708,8 +708,8 @@
           "match_number": 5
         },
         {
-          "equipo1": "PLAGA VILLANOS",
-          "tag1": "PLAGA",
+          "equipo1": "CACM ESPORTS",
+          "tag1": "CACM",
           "equipo2": "STAMINA E-SPORTS",
           "tag2": "STMN",
           "resultado": "VS",
@@ -790,8 +790,8 @@
         {
           "equipo1": "PROYECTO MEW",
           "tag1": "PM",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": false,
           "hora": null,
@@ -858,8 +858,8 @@
         {
           "equipo1": "TEAM ROCKET",
           "tag1": "TRR",
-          "equipo2": "PLAGA VILLANOS",
-          "tag2": "PLAGA",
+          "equipo2": "CACM ESPORTS",
+          "tag2": "CACM",
           "resultado": "VS",
           "stream": false,
           "hora": null,

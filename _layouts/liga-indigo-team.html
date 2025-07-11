@@ -417,8 +417,8 @@ permalink:
         });
 
         Promise.all([
-            fetch('/assets/partidos/pnorte.json').then(response => response.json()),
-            fetch('/assets/partidos/psur.json').then(response => response.json()),
+            fetch('/assets/temporadas/julio2025/pnorte.json').then(response => response.json()),
+            fetch('/assets/temporadas/julio2025/psur.json').then(response => response.json()),
             fetch('/assets/partidos/cruces.json').then(response => response.json())
         ])
         .then(allData => {

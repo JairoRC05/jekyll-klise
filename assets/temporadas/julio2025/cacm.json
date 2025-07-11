@@ -1,14 +1,14 @@
 {
-  "tag": "GDEX",
-  "team": "GANBARU DEX",
+  "tag": "CACM",
+  "team": "CACM Esports",
   "org": "",
   "activo": true,
-  "capitan": "MIPoJhon",
+  "capitan": "TEXAS",
   "region": "LAN",
   "teamNombreAnterior": "",
-  "teamNuevoNombre": "GANBARU DEX",
+  "teamNuevoNombre": "CACM Esports",
   "seguro": false,
-  "link": "/equipos/ganbaru-dex",
+  "link": "/equipos/cacm-esports",
   "grupo": "SIN ASIGNAR",
   "partidos": {
     "M1": "0",
@@ -26,44 +26,44 @@
   },
   "jugadores": [
     {
-      "nickname": "ʚDœ",
-      "ID": "3311KF2",
+      "nickname": "9!",
+      "ID": "11NE4QH",
       "avatar": "male1"
     },
     {
-      "nickname": "ʚPinzita",
-      "ID": "E0N5RKE",
+      "nickname": "Bellvii",
+      "ID": "18Q9TAH",
       "avatar": "male1"
     },
     {
-      "nickname": "ʚChrisWFttv",
-      "ID": "HNNK9E",
+      "nickname": "Fersaw",
+      "ID": "916CTAR",
       "avatar": "male1"
     },
     {
-      "nickname": "ChilindrinO",
-      "ID": "N98MHHG",
+      "nickname": "BLK・Texas",
+      "ID": "A0829K4",
       "avatar": "male1"
     },
     {
-      "nickname": "ŠaṭʊяиọĞr",
-      "ID": "R10QTME",
+      "nickname": "BLK-luis205",
+      "ID": "GM9M2YN",
       "avatar": "male1"
     },
     {
-      "nickname": "・Cristoff・",
-      "ID": "GM5E987",
+      "nickname": "7Froy",
+      "ID": "KX010TK",
       "avatar": "male1"
     },
     {
-      "nickname": "MIPoJhon",
-      "ID": "HNYFCLG",
+      "nickname": "DønLux",
+      "ID": "MAL0Q6H",
       "avatar": "male1"
     },
     {
-      "nickname": "COMEMANGO",
-      "ID": "F6KNR2G",
-      "avatar": "male1"
+      "nickname": "Listen'.",
+      "ID": "X556TRH",
+      "avatar": "female1"
     }
   ]
 }

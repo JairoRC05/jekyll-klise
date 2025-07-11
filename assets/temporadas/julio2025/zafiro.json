@@ -7,8 +7,8 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "IMPERIO MEXA ZAFIRO",
-  "seguro": "true",
-  "link": "/imperio-mexa/--zafiro",
+  "seguro": true,
+  "link": "/equipos/imperio-mexa/--zafiro",
   "grupo": "SOUTH",
   "partidos": {
     "M1": "1",
@@ -28,7 +28,7 @@
   },
   "jugadores": [
     {
-      "nickname": "MeXa • Frost",
+      "nickname": "MeXa • ElDire",
       "ID": "T30862L",
       "avatar": "male1"
     },
@@ -41,11 +41,6 @@
       "nickname": "MeXa • Nadir",
       "ID": "M3LXQGP",
       "avatar": "female1"
-    },
-    {
-      "nickname": "MeXa・Masaru",
-      "ID": "AGM28R9",
-      "avatar": "male1"
     },
     {
       "nickname": "MeXa • Ismael",
@@ -63,9 +58,9 @@
       "avatar": "male1"
     },
     {
-      "nickname": "Cøwbøyメ",
-      "ID": "M9FHRL7",
-      "avatar": "male1"
+      "nickname": "MeXa • Esme",
+      "ID": "32M2YGY",
+      "avatar": "female1"
     }
   ],
   "wins": 0,
@@ -73,5 +68,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": 0
+  "posicionDesempate": false
 }
