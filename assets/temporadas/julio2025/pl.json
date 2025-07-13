@@ -7,24 +7,24 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "PRESTACIONES DE LEY HG",
-  "seguro": "true",
+  "seguro": true,
   "link": "/equipos/house-of-ghost--prestaciones-de-ley",
-  "grupo": "NORTH",
+  "grupo": "SOUTH",
   "partidos": {
-    "M1": "3",
-    "M2": "1",
-    "M3": "0",
-    "M4": "0",
-    "M5": "0",
-    "M6": "D",
-    "M7": "2",
-    "M8": "1",
-    "M9": "2",
-    "M10": "3",
-    "M11": "3",
-    "M12": "0",
-    "M13": "3",
-    "M14": "1"
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
   },
   "jugadores": [
     {
@@ -69,5 +69,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": 0
+  "posicionDesempate": false
 }

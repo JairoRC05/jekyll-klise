@@ -7,24 +7,24 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "HG SALARIO MINIMO",
-  "seguro": "true",
+  "seguro": true,
   "link": "/equipos/house-of-ghost--salario-minimo",
-  "grupo": "SOUTH",
+  "grupo": "NORTH",
   "partidos": {
-    "M1": "3",
-    "M2": "1",
-    "M3": "2",
-    "M4": "0",
-    "M5": "3",
-    "M6": "0",
-    "M7": "2",
-    "M8": "1",
-    "M9": "0",
-    "M10": "D",
-    "M11": "3",
-    "M12": "3",
-    "M13": "0",
-    "M14": "3"
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
   },
   "jugadores": [
     {
@@ -80,5 +80,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": 0
+  "posicionDesempate": false
 }

@@ -7,7 +7,11 @@ layout:
 
 {%- include head.html -%}
 
-<body class="indigo-league">
+<body class="indigo-league" 
+    data-temporada="{{ page.temporada }}" 
+    data-grupo="{{ page.grupo }}"
+    data-div-id="{{ page.div_id }}"
+      data-copaxforze="{{ page.copaXForze | default: false }}">
 
     <div class="sidebar indigo-sidebar">
         <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/liga-indigo">
@@ -28,12 +32,12 @@ layout:
                     <span class="ms-1 trunk">Draft</span>
                 </a>
             </li>
-               <li class="nav-item iconContainer indigo indigo-active d-lg-none">
-        <a class="nav-link" href="/liga-indigo">
-          <img src="/assets/logos/LIGA-INDIGO-ALT.webp" alt="" class="imgIcon">
-          <span class="ms-1 trunk">Inicio</span>
-        </a>
-      </li>
+            <li class="nav-item iconContainer indigo indigo-active d-lg-none">
+                <a class="nav-link" href="/liga-indigo">
+                    <img src="/assets/logos/LIGA-INDIGO-ALT.webp" alt="" class="imgIcon">
+                    <span class="ms-1 trunk">Inicio</span>
+                </a>
+            </li>
             <li class="nav-item iconContainer">
                 <a class="nav-link" href="/liga-indigo-orion-ranking-julio2025">
                     <img src="/assets/smalls/orion.webp" alt="" class="imgIcon">
@@ -96,35 +100,11 @@ layout:
 
                 {{content}}
 
-                <section class="section">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-orion-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-orion" type="button" role="tab" aria-controls="pills-orion"
-                                aria-selected="true">ORION</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-hydra-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-hydra" type="button" role="tab" aria-controls="pills-hydra"
-                                aria-selected="false">HYDRA</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-orion" role="tabpanel"
-                            aria-labelledby="pills-orion-tab">
 
-                        </div>
-                        <div class="tab-pane fade" id="pills-hydra" role="tabpanel" aria-labelledby="pills-hydra-tab">
-
-                        </div>
-                    </div>
-
-
-
-                </section>
 
                 {%- include promo.html -%}
 
+                {% include sponsors.html %}
             </div>
 
             {%- include bans-indigo-league.html -%}
@@ -136,6 +116,10 @@ layout:
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+      <script src="/assets/js/utils.js"></script>
+ 
+    <script src="/assets/js/utils_rankings.js"></script>
+    <script src="/assets/js/ranking_temporada.js"></script>
     <script src="/assets/today.js"></script>
     <script src="/assets/js/timer_ins.js"></script>
     <script src="/assets/js/banners.js"></script>

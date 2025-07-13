@@ -7,24 +7,24 @@
   "region": "LAN",
   "teamNombreAnterior": "",
   "teamNuevoNombre": "STAMINA E-SPORTS",
-  "seguro": "true",
+  "seguro": true,
   "link": "/equipos/stamina-e-sports",
-  "grupo": "NORTH",
+  "grupo": "SOUTH",
   "partidos": {
-    "M1": "D",
-    "M2": "3",
-    "M3": "3",
-    "M4": "3",
-    "M5": "3",
-    "M6": "3",
-    "M7": "3",
-    "M8": "0",
-    "M9": "0",
-    "M10": "0",
-    "M11": "0",
-    "M12": "0",
-    "M13": "0",
-    "M14": "0"
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
   },
   "jugadores": [
     {
@@ -63,5 +63,5 @@
   "draws": 0,
   "points": 0,
   "logo": "",
-  "posicionDesempate": 0
+  "posicionDesempate": false
 }

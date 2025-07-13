@@ -1,7 +1,9 @@
 // utils_ranking.js
 
-async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) {
-    contenedor.innerHTML = '';
+async function mostrarEquipos(equipos, contenedor, grupo, opciones = {}) {
+     contenedor.innerHTML = '';
+    const mostrarPlayoffs = true; // Siempre mostrar LIGA INDIGO
+    const mostrarCopaXforze = opciones.incluirCopaXForze === true;
 
     const resultadoMapeo = {
         3: 'V',
@@ -29,7 +31,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
         let grupoDeEquipos = equiposPorPuntos[puntos];
 
         // Desempate por enfrentamiento directo
-        console.log(`Equipos con ${puntos} puntos:`, grupoDeEquipos.map(equipo => `${equipo.team} (${equipo.tag})`));
+        // console.log(`Equipos con ${puntos} puntos:`, grupoDeEquipos.map(equipo => `${equipo.team} (${equipo.tag})`));
         if (grupoDeEquipos.length > 1) {
             grupoDeEquipos.sort((equipoA, equipoB) => {
                 // Primero, verifica la propiedad posicionDesempate
@@ -50,7 +52,10 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
 
         grupoDeEquipos.forEach(equipo => {
             const colDiv = document.createElement('div');
-            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6','col-xl-4');
+            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6', 'col-xl-4');
+            // Añadir el tag como un data-attribute para fácil referencia
+            colDiv.dataset.teamTag = equipo.tag;
+
             const cardRoundListDiv = document.createElement('div');
             cardRoundListDiv.classList.add('card-round-list');
             const cardRoundTeamDiv = document.createElement('div');
@@ -68,22 +73,33 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
             const titleH2 = document.createElement('h2');
             titleH2.textContent = equipo.team;
 
-            if (mostrarIconos) {
-                if (overallIndex < 4) {
-                    const vipLogo = document.createElement('i');
-                    vipLogo.classList.add('ti', 'ti-vip');
-                    vipLogo.style.color = 'blue';
+    
+                // Mostrar ícono de Liga Indigo (playoffs) siempre si está en top 4
+                if (mostrarPlayoffs && overallIndex < 4) {
+                    const indigoLogo = document.createElement('img');
+                    indigoLogo.src = '/assets/logos/LIGA-INDIGO.svg';
+                    indigoLogo.alt = 'Clasificado a Playoffs';
+                    indigoLogo.style.width = '20px';
+                    indigoLogo.style.height = '20px';
+                    indigoLogo.style.marginBottom = '3px';
                     titleH2.appendChild(document.createTextNode(' '));
-                    titleH2.appendChild(vipLogo);
+                    titleH2.appendChild(indigoLogo);
                 }
-                if (overallIndex < 8) {
-                    const shieldLogo = document.createElement('i');
-                    shieldLogo.classList.add('ti', 'ti-shield-up');
-                    shieldLogo.style.color = 'orange';
+
+                // Mostrar ícono de Copa XFORZE solo si está habilitado y en top 8
+                if (mostrarCopaXforze && overallIndex < 8) {
+                    const shieldLogo = document.createElement('img');
+                    shieldLogo.src = '/assets/logos/COPA XFORCE.svg';
+                    shieldLogo.alt = 'Clasificado a Copa XFORZE';
+                    shieldLogo.style.width = '20px';
+                    shieldLogo.style.height = '20px';
+                    shieldLogo.style.marginBottom = '3px';
                     titleH2.appendChild(document.createTextNode(' '));
                     titleH2.appendChild(shieldLogo);
                 }
-            }
+            
+
+
 
             cardRoundTitleDiv.appendChild(titleH2);
             cardRoundTeamDiv.appendChild(cardRoundTitleDiv);
@@ -146,11 +162,10 @@ async function mostrarEquipos(equipos, contenedor, grupo, mostrarIconos = true) 
     }
 }
 
-
 async function buscarResultadosDirectos(equipoTagA, equipoTagB, grupo) {
     console.log(`Buscando resultados directos entre ${equipoTagA} y ${equipoTagB} del grupo ${grupo}`);
     const resultados = { victorias: 0, derrotas: 0 };
-    const archivoPartidos = `/assets/partidos/p${grupo.toLowerCase()}.json`;
+    const archivoPartidos = `/assets/temporadas/julio2025/p${grupo.toLowerCase()}.json`;
 
     try {
         const response = await fetch(archivoPartidos);
@@ -210,77 +225,168 @@ function invertirResultado(resultado) {
 }
 
 
-
-function compararRankings(rankingAnterior, equiposData, contenedorGrupo) {
+function compararProgresoEquipos(previousTeamPoints, currentEquiposData, contenedorGrupo) {
     if (!contenedorGrupo) return;
-    const equiposOrdenados = Array.from(contenedorGrupo.querySelectorAll('.card-round-list'));
-    const rankingAnteriorMap = new Map(rankingAnterior.map(equipo => [equipo.tag, equipo.posicion]));
 
-    equiposOrdenados.forEach((cardElement, index) => {
-        const equipoTag = cardElement.querySelector('.card-color-left').classList[1];
-        const posicionActual = index + 1;
-        const posicionAnterior = rankingAnteriorMap.get(equipoTag);
+    // Obtener los elementos de las tarjetas que ya fueron renderizadas en el DOM
+    // Ahora usamos el data-team-tag en el colDiv para identificar el equipo
+    const equipoElements = Array.from(contenedorGrupo.querySelectorAll('.col-12[data-team-tag]'));
 
-        if (posicionAnterior !== undefined) {
-            const cambio = posicionAnterior - posicionActual;
-            let indicador = '';
-            let claseIcono = '';
+    equipoElements.forEach(colDivElement => {
+        const equipoTag = colDivElement.dataset.teamTag;
+        const cardRoundRecordDiv = colDivElement.querySelector('.card-round-record');
+
+        // Encontrar los datos actuales de este equipo
+        const currentEquipo = currentEquiposData.find(eq => eq.tag === equipoTag);
+
+        if (!currentEquipo) {
+            console.warn(`No se encontró data actual para el equipo ${equipoTag}.`);
+            return;
+        }
+
+        const currentSuma = currentEquipo.suma;
+        const previousSuma = previousTeamPoints[equipoTag];
+
+        let indicador = '';
+        let claseIcono = '';
+
+        if (previousSuma !== undefined) { // Si el equipo ya tenía puntos registrados
+            const cambio = currentSuma - previousSuma; // Cambio en la suma de puntos
 
             if (cambio > 0) {
-                indicador = 'SUBE';
-                claseIcono = 'fas fa-caret-up text-success';
+                indicador = '';
+                claseIcono = 'bi bi-arrow-up-circle-fill';
             } else if (cambio < 0) {
-                indicador = 'BAJA';
-                claseIcono = 'fas fa-caret-down text-danger';
+                indicador = '';
+                claseIcono = 'bi bi-arrow-down-circle-fill';
             } else {
-                indicador = 'MANTIENE';
-                claseIcono = 'fa-solid fa-equals text-primary';
-            }
-
-            const cambioSpan = document.createElement('span');
-            cambioSpan.classList.add('cambio-posicion');
-            cambioSpan.innerHTML = `<i class="${claseIcono}"></i>`;
-            const cardRoundRecordDiv = cardElement.querySelector('.card-round-record');
-            if (cardRoundRecordDiv) {
-                cardRoundRecordDiv.appendChild(document.createTextNode(' '));
-                cardRoundRecordDiv.appendChild(cambioSpan);
+                indicador = '';
+                claseIcono = 'bi bi-arrow-down-up';
             }
         } else {
-            const nuevoSpan = document.createElement('span');
-            nuevoSpan.classList.add('cambio-posicion', 'text-info');
-            nuevoSpan.innerHTML = '<i class="fas fa-star"></i> NUEVO';
-            const cardRoundRecordDiv = cardElement.querySelector('.card-round-record');
-            if (cardRoundRecordDiv) {
-                cardRoundRecordDiv.appendChild(document.createTextNode(' '));
-                cardRoundRecordDiv.appendChild(nuevoSpan);
+            // El equipo es "nuevo" en el registro de puntos, o es la primera carga.
+            indicador = '';
+            claseIcono = 'bi bi-star-fill text-info';
+        }
+
+        // Crear y añadir el span para el indicador de progreso
+        const progresoSpan = document.createElement('span');
+        progresoSpan.classList.add('progreso-individual');
+        progresoSpan.innerHTML = `<i class="${claseIcono}"></i> ${indicador}`;
+
+        // Añadirlo al div de records, justo después de los spans de los partidos
+        if (cardRoundRecordDiv) {
+            // Puedes decidir si quieres un espacio o un separador visual
+            const existingSpans = cardRoundRecordDiv.querySelectorAll('span.record');
+            if (existingSpans.length > 0) {
+                // Añadir un separador visual, por ejemplo una barra vertical
+                const separator = document.createElement('span');
+                separator.textContent = ' '; // O '&nbsp;&nbsp;'
+                cardRoundRecordDiv.appendChild(separator);
             }
+            cardRoundRecordDiv.appendChild(progresoSpan);
         }
     });
 }
 
-function descargarRanking(equiposDataNorte, equiposDataSur) {
-    const rankingActual = {
-        norte: equiposDataNorte.map((equipo, index) => ({
-            tag: equipo.tag,
-            team: equipo.team,
-            posicion: index + 1,
-            suma: equipo.suma
-        })),
-        sur: equiposDataSur.map((equipo, index) => ({
-            tag: equipo.tag,
-            team: equipo.team,
-            posicion: index + 1,
-            suma: equipo.suma
-        }))
-    };
-    const json = JSON.stringify(rankingActual, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'ranking_actual.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+
+function aplicarDesempate(equipos) {
+    const equiposCopiados = [...equipos];
+
+    const equiposPorPuntos = equiposCopiados.reduce((acc, equipo) => {
+        acc[equipo.suma] = acc[equipo.suma] || [];
+        acc[equipo.suma].push(equipo);
+        return acc;
+    }, {});
+
+    const puntosOrdenados = Object.keys(equiposPorPuntos)
+        .map(Number)
+        .sort((a, b) => b - a);
+
+    let equiposFinalOrdenados = [];
+
+    for (const puntos of puntosOrdenados) {
+        let grupoDeEquipos = equiposPorPuntos[puntos];
+
+        if (grupoDeEquipos.length > 1) {
+            grupoDeEquipos.sort((equipoA, equipoB) => {
+                // Lógica de desempate por posiciónDesempate
+                if (equipoA.posicionDesempate && !equipoB.posicionDesempate) {
+                    return -1; // equipoA sube
+                }
+                if (!equipoA.posicionDesempate && equipoB.posicionDesempate) {
+                    return 1; // equipoB sube
+                }
+
+
+                if (equipoA.enfrentamientos && equipoB.enfrentamientos) {
+                    const resultadoDesempate = mostrarResultadosPartidoDesempate(equipoA, equipoB); // Suponiendo que esta función existe y es accesible
+                    if (resultadoDesempate === 1) return -1; // A gana, A sube
+                    if (resultadoDesempate === -1) return 1; // B gana, B sube
+                }
+
+                if (equipoA.desempateAdicional > equipoB.desempateAdicional) return -1;
+                if (equipoA.desempateAdicional < equipoB.desempateAdicional) return 1;
+
+                return 0; // Mantener el orden actual si no hay diferencia
+            });
+        }
+        equiposFinalOrdenados = equiposFinalOrdenados.concat(grupoDeEquipos);
+    }
+    return equiposFinalOrdenados;
 }
+
+
+async function cargarEquiposDesdeIndice(rutaTemporada, grupoObjetivo, divContenedorID, incluirCopaXForze = false) {
+    try {
+        const response = await fetch(`${rutaTemporada}/equipos-index.json`);
+        const archivos = await response.json(); // array de nombres JSON
+        const rutasCompletas = archivos.map(nombre => `${rutaTemporada}/${nombre}`);
+
+        // Carga dinámica usando la función ya existente
+        await loadAndDisplayRanking(divContenedorID, rutasCompletas, grupoObjetivo, rutaTemporada, incluirCopaXForze);
+    } catch (error) {
+        console.error(`Error al cargar equipos desde el índice:`, error);
+    }
+}
+
+
+async function loadAndDisplayRanking(grupoDivId, teamFiles, grupoNombre, incluirCopaXForze = false) {
+  const grupoDiv = document.getElementById(grupoDivId);
+  const equiposData = [];
+
+  const fetchPromises = teamFiles.map(file =>
+    fetch(file)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status} for ${file}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data && data.grupo === grupoNombre) {
+          let suma = 0;
+          if (data.partidos) {
+            for (const partido in data.partidos) {
+              suma += parseInt(data.partidos[partido]) || 0;
+            }
+          }
+          equiposData.push({ ...data, suma: suma });
+        }
+      })
+      .catch(error => console.error(`Error fetching ${file}:`, error))
+  );
+
+  await Promise.all(fetchPromises);
+
+  equiposData.sort((a, b) => b.suma - a.suma);
+
+  const equiposRankeadosConDesempate = aplicarDesempate(equiposData);
+
+  if (grupoDiv) {
+    await mostrarEquipos(equiposRankeadosConDesempate, grupoDiv, grupoNombre, true, incluirCopaXForze);
+  }
+
+  return equiposRankeadosConDesempate;
+}
+

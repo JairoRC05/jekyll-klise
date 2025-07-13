@@ -9,7 +9,7 @@ let teamsDataTable;
 // --- Funciones de Utilidad ---
 
 async function loadExternalMatchData() {
-    const filePaths = ['/assets/partidos/pnorte.json', '/assets/partidos/psur.json', '/assets/partidos/cruces.json'];
+    const filePaths = ['/assets/temporadas/julio2025/pnorte.json', '/assets/temporadas/julio2025/psur.json'];
     const fetchPromises = filePaths.map(path =>
         fetch(path)
             .then(response => {
@@ -955,7 +955,7 @@ function showMatchesModal(teamTag) {
         matchesInputList.empty(); // Limpia el contenido anterior de la edición manual
 
         // Genera dinámicamente campos de entrada para cada partido de la edición manual
-         const matchKeys = Object.keys(team.partidos).sort((a, b) => {
+        const matchKeys = Object.keys(team.partidos).sort((a, b) => {
             const numA = parseInt(a.replace('M', ''), 10);
             const numB = parseInt(b.replace('M', ''), 10);
             return numA - numB;
@@ -1214,7 +1214,7 @@ $(document).ready(function () {
                     return data ? data.length : 0; // Display the length of the 'jugadores' array, or 0 if it's null/undefined
                 }
             },
-            { 
+            {
                 data: null,
                 title: 'Partidos',
                 render: function (data, type, row) {
@@ -1223,7 +1223,7 @@ $(document).ready(function () {
                 orderable: false,
                 searchable: false
             },
-            { 
+            {
                 data: null,
                 title: 'Acciones',
                 render: function (data, type, row) {
@@ -1955,6 +1955,18 @@ $(document).ready(function () {
         });
     });
 
+    // Manejador para el botón de reset en el modal de partidos
+    // Manejador para el botón de reset en el modal de partidos
+    $(document).on('click', '#resetMatchInputs', function () {
+        // Solo limpia los inputs dentro de #matchesInputList que tienen el atributo data-match-key
+        $('#matchesInputList input[data-match-key]').val('');
+
+        // Si también tienes elementos select dentro de los inputs de partidos, puedes añadir:
+        // $('#matchesInputList select').prop('selectedIndex', 0);
+
+        // Asegúrate de que esto no afecte a otros inputs importantes fuera de #matchesInputList,
+        // como el #editMatchesTeamTag, que debería estar en otra parte del modal y no ser un input de partido.
+    });
 
     populateTeamDatalist(); // Asegúrate de llamar a la nueva función
     refreshTables();      // Dibuja las tablas con los datos iniciales de localStorage
