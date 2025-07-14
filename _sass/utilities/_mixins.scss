@@ -43,7 +43,8 @@
   background: $white-transparent;
   backdrop-filter: $glass-blur;
   -webkit-backdrop-filter: $glass-blur;
-  border: $color-glass-border
+  border: $color-glass-border;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @mixin glass-effect-indigo {

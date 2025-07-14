@@ -97,3 +97,28 @@
         padding-right: 0;
     }
 }
+
+
+
+
+
+.nav-link .tab-text {
+
+    margin-left: 5px;
+
+    @media screen and (max-width: 472px) {
+        display: none;
+
+    }
+
+
+}
+
+.nav-link.active .tab-text {
+
+    @media screen and (max-width: 472px) {
+        display: inline;
+    }
+
+
+}
