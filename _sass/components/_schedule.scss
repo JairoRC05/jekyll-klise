@@ -1,0 +1,160 @@
+ .content {
+    max-width: 1200px;
+    margin: auto;
+   height: 650px;
+   overflow: hidden;
+   overflow-y: scroll;
+
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .section-title {
+    grid-column: 1 / -1; /* Que el título abarque ambas columnas */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+  }
+
+  .section-title .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .arrow-down {
+    margin-left: auto;
+    font-size: 20px;
+    color: #888;
+  }
+
+  .schedule-item {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3px;
+  }
+
+  .schedule-item-date {
+    width: 60px;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .schedule-item-date .month {
+    font-size: 12px;
+    color: #888;
+  }
+
+  .schedule-item-date .day {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .day.blue { background-color: #32A0F8; }
+  .day.green { background-color: #55BC8E; }
+
+  .schedule-item-details {
+    flex-grow: 1;
+  }
+
+  .time-and-ref {
+    display: flex;
+    justify-content: start;
+    font-size: 12px;
+    color: #3e3e3e;
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1d1d1d;
+  }
+
+  .description {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+
+  .location {
+    font-size: 13px;
+    color: #555;
+  }
+
+
+  .tag {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+
+  .tag.purple {
+    background-color: #E6E0FF;
+    color: #6C42F8;
+  }
+
+  .tag.light-blue {
+    background-color: #E0F2FE;
+    color: #007BFF;
+  }
+
+  .payment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .amount {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .pay-button {
+    background-color: #3B82F6;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .status-tag {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #E6FFED;
+    color: #4CAF50;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }

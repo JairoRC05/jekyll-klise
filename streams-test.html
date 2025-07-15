@@ -1,0 +1,279 @@
+---
+layout: 
+permalink: /test-stream
+
+
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Agenda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px;
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .section-title {
+    grid-column: 1 / -1; /* Que el título abarque ambas columnas */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+  }
+
+  .section-title .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .arrow-down {
+    margin-left: auto;
+    font-size: 20px;
+    color: #888;
+  }
+
+  .schedule-item {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .schedule-item-date {
+    width: 60px;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .schedule-item-date .month {
+    font-size: 12px;
+    color: #888;
+  }
+
+  .schedule-item-date .day {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .day.blue { background-color: #32A0F8; }
+  .day.green { background-color: #55BC8E; }
+
+  .schedule-item-details {
+    flex-grow: 1;
+  }
+
+  .time-and-ref {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+
+  .location {
+    font-size: 13px;
+    color: #555;
+  }
+
+  .location::before {
+    content: '📍';
+    margin-right: 5px;
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+
+  .tag.purple {
+    background-color: #E6E0FF;
+    color: #6C42F8;
+  }
+
+  .tag.light-blue {
+    background-color: #E0F2FE;
+    color: #007BFF;
+  }
+
+  .payment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .amount {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .pay-button {
+    background-color: #3B82F6;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .status-tag {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #E6FFED;
+    color: #4CAF50;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  
+
+
+        <div class="content">
+            <div class="section-title">
+                <span class="dot blue"></span>
+                <span>Upcoming(2)</span>
+                <span class="arrow-down">⌄</span>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-item-date">
+                    <span class="month">APR</span>
+                    <span class="day blue">25</span>
+                </div>
+                <div class="schedule-item-details">
+                    <div class="time-and-ref">
+                        <span>10:00 - 11:00 AM</span>
+                        <span>#RSV10102</span>
+                    </div>
+                    <div class="title">
+                        Tooth Scaling <span class="tag purple">MULTIPLE</span>
+                    </div>
+                    <div class="description">
+                        Visit #2 - Scalling Maxilla (Q1+Q2)
+                    </div>
+                    <div class="location">
+                        Zendral Dental
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <span class="dot green"></span>
+                <span>Finished(2)</span>
+                <span class="arrow-down">⌄</span>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-item-date">
+                    <span class="month">APR</span>
+                    <span class="day green">20</span>
+                </div>
+                <div class="schedule-item-details">
+                    <div class="time-and-ref">
+                        <span>09:00 - 10:00 AM</span>
+                        <span>#RSV10105</span>
+                    </div>
+                    <div class="title">
+                        Simple extractions <span class="tag purple">MULTIPLE</span>
+                    </div>
+                    <div class="description">
+                        Visit #2 - Simple extractions (Q1+Q2)
+                    </div>
+                    <div class="location">
+                        Zendral Dental
+                    </div>
+                    <div class="payment-info">
+                        <div>
+                            <div class="total">Total payment</div>
+                            <div class="amount">$240,00</div>
+                        </div>
+                        <button class="pay-button blue">Pay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-item-date">
+                    <span class="month">APR</span>
+                    <span class="day green">19</span>
+                </div>
+                <div class="schedule-item-details">
+                    <div class="time-and-ref">
+                        <span>17:00 - 18:00 PM</span>
+                        <span>#RSV10094</span>
+                    </div>
+                    <div class="title">
+                        Emergency care <span class="tag light-blue">SINGLE</span>
+                    </div>
+                    <div class="location">
+                        Zendral Dental
+                    </div>
+                    <span class="status-tag paid">PAID</span>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+</html>
