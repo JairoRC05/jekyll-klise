@@ -1,886 +1,891 @@
 [
   {
-  "rondas": [
-    {
-      "ronda": "RONDA 1",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 1,
-          "match_number": 1
-        },
-        {
-          "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-11",
-          "round_number": 1,
-          "match_number": 2
-        },
-        {
-          "equipo1": "GANBARU DEX",
-          "tag1": "GDEX",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 1,
-          "match_number": 3
-        },
-        {
-          "equipo1": "HG FLOW",
-          "tag1": "FLOW",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 1,
-          "match_number": 4
-        },
-        {
-          "equipo1": "PHOBIUS AURA",
-          "tag1": "PØĄ",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-14",
-          "round_number": 1,
-          "match_number": 5
-        },
-        {
-          "equipo1": "HG SALARIO MINIMO",
-          "tag1": "SM",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 1,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 2",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 2,
-          "match_number": 1
-        },
-        {
-          "equipo1": "Descansa",
-          "tag1": "BYE",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 2,
-          "match_number": 2
-        },
-        {
-          "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-16",
-          "round_number": 2,
-          "match_number": 3
-        },
-        {
-          "equipo1": "GANBARU DEX",
-          "tag1": "GDEX",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 2,
-          "match_number": 4
-        },
-        {
-          "equipo1": "HG FLOW",
-          "tag1": "FLOW",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-16",
-          "round_number": 2,
-          "match_number": 5
-        },
-        {
-          "equipo1": "PHOBIUS AURA",
-          "tag1": "PØĄ",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 2,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 3",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 3,
-          "match_number": 1
-        },
-        {
-          "equipo1": "PAW PATROL",
-          "tag1": "PP",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-18",
-          "round_number": 3,
-          "match_number": 2
-        },
-        {
-          "equipo1": "Descansa",
-          "tag1": "BYE",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 3,
-          "match_number": 3
-        },
-        {
-          "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-18",
-          "round_number": 3,
-          "match_number": 4
-        },
-        {
-          "equipo1": "GANBARU DEX",
-          "tag1": "GDEX",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 3,
-          "match_number": 5
-        },
-        {
-          "equipo1": "HG FLOW",
-          "tag1": "FLOW",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 3,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 4",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 4,
-          "match_number": 1
-        },
-        {
-          "equipo1": "TUT ONECOIN",
-          "tag1": "TUTOC",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-21",
-          "round_number": 4,
-          "match_number": 2
-        },
-        {
-          "equipo1": "PAW PATROL",
-          "tag1": "PP",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-21",
-          "round_number": 4,
-          "match_number": 3
-        },
-        {
-          "equipo1": "Descansa",
-          "tag1": "BYE",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 4,
-          "match_number": 4
-        },
-        {
-          "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-22",
-          "round_number": 4,
-          "match_number": 5
-        },
-        {
-          "equipo1": "GANBARU DEX",
-          "tag1": "GDEX",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-22",
-          "round_number": 4,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 5",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 1
-        },
-        {
-          "equipo1": "FROSTBITE",
-          "tag1": "FTB",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 2
-        },
-        {
-          "equipo1": "TUT ONECOIN",
-          "tag1": "TUTOC",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 3
-        },
-        {
-          "equipo1": "PAW PATROL",
-          "tag1": "PP",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 4
-        },
-        {
-          "equipo1": "Descansa",
-          "tag1": "BYE",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 5
-        },
-        {
-          "equipo1": "DFS PLATINUM",
-          "tag1": "PLATINO",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 5,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 6",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "DINASTY",
-          "tag2": "DINASTY",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 6,
-          "match_number": 1
-        },
-        {
-          "equipo1": "TEAM AETHER",
-          "tag1": "TAE",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 6,
-          "match_number": 2
-        },
-        {
-          "equipo1": "FROSTBITE",
-          "tag1": "FTB",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 6,
-          "match_number": 3
-        },
-        {
-          "equipo1": "TUT ONECOIN",
-          "tag1": "TUTOC",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 6,
-          "match_number": 4
-        },
-        {
-          "equipo1": "PAW PATROL",
-          "tag1": "PP",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-25",
-          "round_number": 6,
-          "match_number": 5
-        },
-        {
-          "equipo1": "Descansa",
-          "tag1": "BYE",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 6,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 7",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "HG SALARIO MINIMO",
-          "tag2": "SM",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 7,
-          "match_number": 1
-        },
-        {
-          "equipo1": "DINASTY",
-          "tag1": "DINASTY",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-28",
-          "round_number": 7,
-          "match_number": 2
-        },
-        {
-          "equipo1": "TEAM AETHER",
-          "tag1": "TAE",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 7,
-          "match_number": 3
-        },
-        {
-          "equipo1": "FROSTBITE",
-          "tag1": "FTB",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 7,
-          "match_number": 4
-        },
-        {
-          "equipo1": "TUT ONECOIN",
-          "tag1": "TUTOC",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 7,
-          "match_number": 5
-        },
-        {
-          "equipo1": "PAW PATROL",
-          "tag1": "PP",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 7,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 8",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "PHOBIUS AURA",
-          "tag2": "PØĄ",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 8,
-          "match_number": 1
-        },
-        {
-          "equipo1": "HG SALARIO MINIMO",
-          "tag1": "SM",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-29",
-          "round_number": 8,
-          "match_number": 2
-        },
-        {
-          "equipo1": "DINASTY",
-          "tag1": "DINASTY",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 8,
-          "match_number": 3
-        },
-        {
-          "equipo1": "TEAM AETHER",
-          "tag1": "TAE",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 8,
-          "match_number": 4
-        },
-        {
-          "equipo1": "FROSTBITE",
-          "tag1": "FTB",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 8,
-          "match_number": 5
-        },
-        {
-          "equipo1": "TUT ONECOIN",
-          "tag1": "TUTOC",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 8,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 9",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "HG FLOW",
-          "tag2": "FLOW",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 9,
-          "match_number": 1
-        },
-        {
-          "equipo1": "PHOBIUS AURA",
-          "tag1": "PØĄ",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 9,
-          "match_number": 2
-        },
-        {
-          "equipo1": "HG SALARIO MINIMO",
-          "tag1": "SM",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 9,
-          "match_number": 3
-        },
-        {
-          "equipo1": "DINASTY",
-          "tag1": "DINASTY",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 9,
-          "match_number": 4
-        },
-        {
-          "equipo1": "TEAM AETHER",
-          "tag1": "TAE",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 9,
-          "match_number": 5
-        },
-        {
-          "equipo1": "FROSTBITE",
-          "tag1": "FTB",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-30",
-          "round_number": 9,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 10",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "GANBARU DEX",
-          "tag2": "GDEX",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 10,
-          "match_number": 1
-        },
-        {
-          "equipo1": "HG FLOW",
-          "tag1": "FLOW",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 10,
-          "match_number": 2
-        },
-        {
-          "equipo1": "PHOBIUS AURA",
-          "tag1": "PØĄ",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 10,
-          "match_number": 3
-        },
-        {
-          "equipo1": "HG SALARIO MINIMO",
-          "tag1": "SM",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 10,
-          "match_number": 4
-        },
-        {
-          "equipo1": "DINASTY",
-          "tag1": "DINASTY",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "22:30",
-          "dia": "2025-07-31",
-          "round_number": 10,
-          "match_number": 5
-        },
-        {
-          "equipo1": "TEAM AETHER",
-          "tag1": "TAE",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-07-31",
-          "round_number": 10,
-          "match_number": 6
-        }
-      ]
-    },
-    {
-      "ronda": "RONDA 11",
-      "fecha_inicio": "",
-      "fecha_fin": "",
-      "hora": "",
-      "partidos": [
-        {
-          "equipo1": "IMPERIO MEXA OBSIDIANA",
-          "tag1": "OBS",
-          "equipo2": "DFS PLATINUM",
-          "tag2": "PLATINO",
-          "resultado": "VS",
-          "stream": true,
-          "hora": "21:30",
-          "dia": "2025-08-04",
-          "round_number": 11,
-          "match_number": 1
-        },
-        {
-          "equipo1": "GANBARU DEX",
-          "tag1": "GDEX",
-          "equipo2": "Descansa",
-          "tag2": "BYE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 11,
-          "match_number": 2
-        },
-        {
-          "equipo1": "HG FLOW",
-          "tag1": "FLOW",
-          "equipo2": "PAW PATROL",
-          "tag2": "PP",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 11,
-          "match_number": 3
-        },
-        {
-          "equipo1": "PHOBIUS AURA",
-          "tag1": "PØĄ",
-          "equipo2": "TUT ONECOIN",
-          "tag2": "TUTOC",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 11,
-          "match_number": 4
-        },
-        {
-          "equipo1": "HG SALARIO MINIMO",
-          "tag1": "SM",
-          "equipo2": "FROSTBITE",
-          "tag2": "FTB",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 11,
-          "match_number": 5
-        },
-        {
-          "equipo1": "DINASTY",
-          "tag1": "DINASTY",
-          "equipo2": "TEAM AETHER",
-          "tag2": "TAE",
-          "resultado": "VS",
-          "stream": false,
-          "hora": null,
-          "dia": "",
-          "round_number": 11,
-          "match_number": 6
-        }
-      ]
-    }
-  ]
-}
+    "rondas": [
+      {
+        "ronda": "RONDA 1",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 1,
+            "match_number": 1
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "0-2",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-11",
+            "round_number": 1,
+            "match_number": 2,
+            "fecha": ""
+          },
+          {
+            "equipo1": "GANBARU DEX",
+            "tag1": "GDEX",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "0-2",
+            "stream": false,
+            "hora": "",
+            "dia": "",
+            "round_number": 1,
+            "match_number": 3,
+            "fecha": ""
+          },
+          {
+            "equipo1": "HG FLOW",
+            "tag1": "FLOW",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "0-2",
+            "stream": false,
+            "hora": "",
+            "dia": "",
+            "round_number": 1,
+            "match_number": 4,
+            "fecha": ""
+          },
+          {
+            "equipo1": "PHOBIUS AURA",
+            "tag1": "PØĄ",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "1-2",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-14",
+            "round_number": 1,
+            "match_number": 5,
+            "fecha": ""
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "0-2",
+            "stream": false,
+            "hora": "",
+            "dia": "",
+            "round_number": 1,
+            "match_number": 6,
+            "fecha": ""
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 2",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 1
+          },
+          {
+            "equipo1": "Descansa",
+            "tag1": "BYE",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 2
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-16",
+            "round_number": 2,
+            "match_number": 3
+          },
+          {
+            "equipo1": "GANBARU DEX",
+            "tag1": "GDEX",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 4
+          },
+          {
+            "equipo1": "HG FLOW",
+            "tag1": "FLOW",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-16",
+            "round_number": 2,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PHOBIUS AURA",
+            "tag1": "PØĄ",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 2,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 3",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 1
+          },
+          {
+            "equipo1": "PAW PATROL",
+            "tag1": "PP",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-18",
+            "round_number": 3,
+            "match_number": 2
+          },
+          {
+            "equipo1": "Descansa",
+            "tag1": "BYE",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 3
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-18",
+            "round_number": 3,
+            "match_number": 4
+          },
+          {
+            "equipo1": "GANBARU DEX",
+            "tag1": "GDEX",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 5
+          },
+          {
+            "equipo1": "HG FLOW",
+            "tag1": "FLOW",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 3,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 4",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 1
+          },
+          {
+            "equipo1": "TUT ONECOIN",
+            "tag1": "TUTOC",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-21",
+            "round_number": 4,
+            "match_number": 2
+          },
+          {
+            "equipo1": "PAW PATROL",
+            "tag1": "PP",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-21",
+            "round_number": 4,
+            "match_number": 3
+          },
+          {
+            "equipo1": "Descansa",
+            "tag1": "BYE",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 4,
+            "match_number": 4
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-22",
+            "round_number": 4,
+            "match_number": 5
+          },
+          {
+            "equipo1": "GANBARU DEX",
+            "tag1": "GDEX",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-22",
+            "round_number": 4,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 5",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 1
+          },
+          {
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TUT ONECOIN",
+            "tag1": "TUTOC",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 3
+          },
+          {
+            "equipo1": "PAW PATROL",
+            "tag1": "PP",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 4
+          },
+          {
+            "equipo1": "Descansa",
+            "tag1": "BYE",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 5
+          },
+          {
+            "equipo1": "DFS PLATINUM",
+            "tag1": "PLATINO",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 5,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 6",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "DINASTY",
+            "tag2": "DINASTY",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 1
+          },
+          {
+            "equipo1": "TEAM AETHER",
+            "tag1": "TAE",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 2
+          },
+          {
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 3
+          },
+          {
+            "equipo1": "TUT ONECOIN",
+            "tag1": "TUTOC",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 4
+          },
+          {
+            "equipo1": "PAW PATROL",
+            "tag1": "PP",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-25",
+            "round_number": 6,
+            "match_number": 5
+          },
+          {
+            "equipo1": "Descansa",
+            "tag1": "BYE",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 6,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 7",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "HG SALARIO MINIMO",
+            "tag2": "SM",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 1
+          },
+          {
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-28",
+            "round_number": 7,
+            "match_number": 2
+          },
+          {
+            "equipo1": "TEAM AETHER",
+            "tag1": "TAE",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 3
+          },
+          {
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TUT ONECOIN",
+            "tag1": "TUTOC",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 5
+          },
+          {
+            "equipo1": "PAW PATROL",
+            "tag1": "PP",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 7,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 8",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "PHOBIUS AURA",
+            "tag2": "PØĄ",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 1
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-29",
+            "round_number": 8,
+            "match_number": 2
+          },
+          {
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 3
+          },
+          {
+            "equipo1": "TEAM AETHER",
+            "tag1": "TAE",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 4
+          },
+          {
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TUT ONECOIN",
+            "tag1": "TUTOC",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 8,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 9",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "HG FLOW",
+            "tag2": "FLOW",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 1
+          },
+          {
+            "equipo1": "PHOBIUS AURA",
+            "tag1": "PØĄ",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 2
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 3
+          },
+          {
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 4
+          },
+          {
+            "equipo1": "TEAM AETHER",
+            "tag1": "TAE",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 9,
+            "match_number": 5
+          },
+          {
+            "equipo1": "FROSTBITE",
+            "tag1": "FTB",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-30",
+            "round_number": 9,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 10",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "GANBARU DEX",
+            "tag2": "GDEX",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 1
+          },
+          {
+            "equipo1": "HG FLOW",
+            "tag1": "FLOW",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 2
+          },
+          {
+            "equipo1": "PHOBIUS AURA",
+            "tag1": "PØĄ",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 3
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 10,
+            "match_number": 4
+          },
+          {
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "22:30",
+            "dia": "2025-07-31",
+            "round_number": 10,
+            "match_number": 5
+          },
+          {
+            "equipo1": "TEAM AETHER",
+            "tag1": "TAE",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-07-31",
+            "round_number": 10,
+            "match_number": 6
+          }
+        ]
+      },
+      {
+        "ronda": "RONDA 11",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "hora": "",
+        "partidos": [
+          {
+            "equipo1": "IMPERIO MEXA OBSIDIANA",
+            "tag1": "OBS",
+            "equipo2": "DFS PLATINUM",
+            "tag2": "PLATINO",
+            "resultado": "VS",
+            "stream": true,
+            "hora": "21:30",
+            "dia": "2025-08-04",
+            "round_number": 11,
+            "match_number": 1
+          },
+          {
+            "equipo1": "GANBARU DEX",
+            "tag1": "GDEX",
+            "equipo2": "Descansa",
+            "tag2": "BYE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 2
+          },
+          {
+            "equipo1": "HG FLOW",
+            "tag1": "FLOW",
+            "equipo2": "PAW PATROL",
+            "tag2": "PP",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 3
+          },
+          {
+            "equipo1": "PHOBIUS AURA",
+            "tag1": "PØĄ",
+            "equipo2": "TUT ONECOIN",
+            "tag2": "TUTOC",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 4
+          },
+          {
+            "equipo1": "HG SALARIO MINIMO",
+            "tag1": "SM",
+            "equipo2": "FROSTBITE",
+            "tag2": "FTB",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 5
+          },
+          {
+            "equipo1": "DINASTY",
+            "tag1": "DINASTY",
+            "equipo2": "TEAM AETHER",
+            "tag2": "TAE",
+            "resultado": "VS",
+            "stream": false,
+            "hora": null,
+            "dia": "",
+            "round_number": 11,
+            "match_number": 6
+          }
+        ]
+      }
+    ]
+  }
 ]

@@ -194,6 +194,116 @@ function exportAllData() {
 }
 
 /**
+ * Abre el modal para que el usuario seleccione qué equipos desea exportar en un archivo ZIP.
+ * Pobla el modal con una lista de checkboxes de todos los equipos activos.
+ */
+function openExportTeamsZipModal() {
+    const teamListContainer = $('#zip-team-selection-list');
+    teamListContainer.empty(); // Limpiar la lista anterior
+
+    // Obtener solo los equipos activos, excluyendo a "SIN_EQUIPO"
+    const activeTeams = allTeamData.filter(team => team.activo && team.tag !== 'SIN_EQUIPO');
+
+    if (activeTeams.length === 0) {
+        Swal.fire({
+            icon: 'info',
+            title: 'No hay equipos activos',
+            text: 'No hay equipos activos disponibles para exportar.'
+        });
+        return;
+    }
+    
+    // Crear una casilla de verificación por cada equipo activo
+    activeTeams.forEach(team => {
+        const checkboxHtml = `
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="${team.tag}" id="zip-team-${team.tag}">
+                <label class="form-check-label" for="zip-team-${team.tag}">
+                    ${team.team} (${team.tag})
+                </label>
+            </div>`;
+        teamListContainer.append(checkboxHtml);
+    });
+
+    const exportModal = new bootstrap.Modal(document.getElementById('exportTeamsZipModal'));
+    exportModal.show();
+}
+
+/**
+ * Recopila los equipos seleccionados, los empaqueta en un archivo ZIP usando JSZip
+ * y lo descarga usando FileSaver.js.
+ */
+async function exportSelectedTeamsAsZip() {
+    // 1. Obtener los tags de los equipos seleccionados
+    const selectedTeamTags = [];
+    $('#selectTeamsForZipForm input[type="checkbox"]:checked').each(function() {
+        selectedTeamTags.push($(this).val());
+    });
+
+    if (selectedTeamTags.length === 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Ningún Equipo Seleccionado',
+            text: 'Por favor, selecciona al menos un equipo para exportar.'
+        });
+        return;
+    }
+
+    // 2. Crear una instancia de JSZip
+    const zip = new JSZip();
+
+    // 3. Iterar sobre los equipos seleccionados y agregarlos al ZIP
+    selectedTeamTags.forEach(tag => {
+        const teamData = allTeamData.find(team => team.tag === tag);
+        if (teamData) {
+            // Convertir los datos del equipo a un string JSON formateado
+            const teamJsonString = JSON.stringify(teamData, null, 2);
+            // Crear un nombre de archivo descriptivo
+            const fileName = `${teamData.tag.toLowerCase()}.json`;
+            // Agregar el archivo al ZIP
+            zip.file(fileName, teamJsonString);
+        }
+    });
+
+    // 4. Generar el archivo ZIP de forma asíncrona
+    try {
+        const zipBlob = await zip.generateAsync({
+            type: "blob",
+            compression: "DEFLATE",
+            compressionOptions: {
+                level: 9 // Nivel máximo de compresión
+            }
+        });
+
+        // 5. Descargar el archivo ZIP usando FileSaver.js
+        const date = new Date();
+        const timestamp = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
+        const zipFilename = `Exportacion_Equipos_${timestamp}.zip`;
+        
+        saveAs(zipBlob, zipFilename); // ¡La magia de FileSaver!
+
+        // Cerrar el modal y mostrar un mensaje de éxito
+        const exportModal = bootstrap.Modal.getInstance(document.getElementById('exportTeamsZipModal'));
+        if (exportModal) {
+            exportModal.hide();
+        }
+
+        Swal.fire({
+            icon: 'success',
+            title: '¡Exportación Exitosa!',
+            text: `Se ha generado el archivo "${zipFilename}" con ${selectedTeamTags.length} equipos.`
+        });
+
+    } catch (error) {
+        console.error("Error al generar el archivo ZIP:", error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error de Exportación',
+            text: 'Hubo un problema al crear el archivo ZIP. Revisa la consola para más detalles.'
+        });
+    }
+}
+/**
  * Procesa el archivo JSON seleccionado por el usuario para importar datos.
  * @param {File} file El objeto File del archivo JSON.
  */
@@ -1966,6 +2076,17 @@ $(document).ready(function () {
 
         // Asegúrate de que esto no afecte a otros inputs importantes fuera de #matchesInputList,
         // como el #editMatchesTeamTag, que debería estar en otra parte del modal y no ser un input de partido.
+    });
+
+
+      // Listener para el nuevo botón de exportación a ZIP
+    $('#exportSelectedTeamsBtn').on('click', function () {
+        openExportTeamsZipModal();
+    });
+
+    // Listener para el botón de generar ZIP dentro del modal
+    $('#generateZipBtn').on('click', function () {
+        exportSelectedTeamsAsZip();
     });
 
     populateTeamDatalist(); // Asegúrate de llamar a la nueva función
