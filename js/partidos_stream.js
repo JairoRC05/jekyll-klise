@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       streamContainer.innerHTML = `
-        <h5 class="mb-3">Partidos Vía Stream</h5>
+        
         ${partidosConStream.map(generarScheduleItemStream).join('')}
       `;
     })
@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const dia = fecha.getDate();
 
     return `
+       <div>
+            <div class="amount">Transmisión ${estado === 'pasado' ? 'Finalizado' : estado === 'vivo' ? 'En Vivo' : 'Próximamente'}</div>
+        </div>
       <div class="schedule-item">
         <div class="schedule-item-date">
           <span class="month">${mes}</span>
@@ -80,10 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="location"><i class="bi bi-twitch"></i> Hollywood Forze</div>
           <div class="payment-info">
-            <div>
-              <div class="total">Transmisión</div>
-              <div class="amount">${estado === 'pasado' ? 'Finalizado' : estado === 'vivo' ? 'En Vivo' : 'Próximamente'}</div>
-            </div>
+           
             ${botonHTML}
           </div>
         </div>

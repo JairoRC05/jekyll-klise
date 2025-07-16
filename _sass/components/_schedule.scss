@@ -1,4 +1,4 @@
- .content {
+ .schedule-content {
     max-width: 1200px;
     margin: auto;
    height: 650px;
@@ -8,7 +8,7 @@
   }
 
   @media (min-width: 768px) {
-    .content {
+    .schedule-content {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -126,7 +126,8 @@
 
   .payment-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border-top: 1px solid #eee;
     padding-top: 10px;
