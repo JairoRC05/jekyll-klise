@@ -1,11 +1,16 @@
  .schedule-content {
     max-width: 1200px;
     margin: auto;
-   height: 650px;
+   height: 450px;
    overflow: hidden;
    overflow-y: scroll;
-
+     scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
   }
+
+  .schedule-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 
   @media (min-width: 768px) {
     .schedule-content {
@@ -37,14 +42,13 @@
   }
 
   .schedule-item {
-    background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     position: relative;
     overflow: hidden;
-    margin-bottom: 3px;
+    margin-bottom: 20px;
   }
 
   .schedule-item-date {
@@ -55,7 +59,7 @@
 
   .schedule-item-date .month {
     font-size: 12px;
-    color: #888;
+    color: #ffffff;
   }
 
   .schedule-item-date .day {
@@ -82,7 +86,7 @@
     display: flex;
     justify-content: start;
     font-size: 12px;
-    color: #3e3e3e;
+    color: #ffff00;
     margin-bottom: 5px;
   }
 
@@ -90,7 +94,7 @@
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #1d1d1d;
+    color: #ffffff;
   }
 
   .description {
@@ -101,7 +105,7 @@
 
   .location {
     font-size: 13px;
-    color: #555;
+    color: #ffffff;
   }
 
 
@@ -135,6 +139,7 @@
   }
 
   .amount {
+    color: rgb(32, 32, 32);
     font-weight: bold;
     font-size: 16px;
   }
@@ -144,6 +149,8 @@
     color: #fff;
     padding: 8px 16px;
     border: none;
+    font-size: 12px;
+    text-decoration: none;
     border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
@@ -159,3 +166,18 @@
     font-size: 12px;
     font-weight: 600;
   }
+
+
+
+.schedule-item.pasado {
+  background-color: #888888;
+}
+
+.schedule-item.vivo {
+  background-color: #b30000;
+  border-left: 4px solid #00cc99;
+}
+
+.schedule-item.futuro {
+  background-color: #0400f8;
+}

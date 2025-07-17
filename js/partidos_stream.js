@@ -33,18 +33,37 @@ document.addEventListener('DOMContentLoaded', function () {
         
         ${partidosConStream.map(generarScheduleItemStream).join('')}
       `;
+
+      setTimeout(() => {
+        const partidoHoy = document.getElementById('partido-hoy');
+        if (partidoHoy) {
+          if (window.innerWidth >= 768) {
+         
+            partidoHoy.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+         
+          partidoHoy.classList.add('partido-hoy');
+        }
+      }, 100);
+
+
+
     })
     .catch(err => {
       console.error('Error al cargar archivos JSON de partidos con stream:', err);
       streamContainer.innerHTML = '<p class="text-danger">Error al cargar los partidos con stream.</p>';
     });
 
+
+  let partidoHoyAsignado = false;
+
   function generarScheduleItemStream(partido) {
     const fecha = new Date(`${partido.dia}T${partido.hora}`);
     const ahora = new Date();
 
-    const diferenciaMin = (fecha - ahora) / 60000; // Diferencia en minutos
+    const esHoy = fecha.toDateString() === ahora.toDateString();
 
+    const diferenciaMin = (fecha - ahora) / 60000;
     let estado = 'futuro';
     if (diferenciaMin < -60) {
       estado = 'pasado'; // ya terminó
@@ -54,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let botonHTML = '';
     if (estado === 'pasado') {
-      botonHTML = `<a href="https://twitch.tv/hollywoodforze" target="_blank" class="pay-button blue">Ver Repetición</a>`;
+      botonHTML = `<a href="/liga-indigo-streams" target="_blank" class="pay-button blue">Ver Repetición</a>`;
     } else if (estado === 'vivo') {
       botonHTML = `<span class="status-tag">🟢 En Curso</span>`;
     } else {
@@ -63,12 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const mes = fecha.toLocaleString('default', { month: 'short' }).toUpperCase();
     const dia = fecha.getDate();
+    const claseEstado = estado === 'pasado' ? 'pasado' : estado === 'vivo' ? 'vivo' : 'futuro';
+    const idHTML = esHoy && !partidoHoyAsignado ? 'id="partido-hoy"' : '';
+    if (esHoy && !partidoHoyAsignado) partidoHoyAsignado = true;
 
     return `
        <div>
-            <div class="amount">Transmisión ${estado === 'pasado' ? 'Finalizado' : estado === 'vivo' ? 'En Vivo' : 'Próximamente'}</div>
+            <div class="amount">Transmisión ${estado === 'pasado' ? 'Finalizada' : estado === 'vivo' ? 'En Vivo' : 'Próximamente'}</div>
         </div>
-      <div class="schedule-item">
+      <div class="schedule-item ${claseEstado}"  ${idHTML}>
         <div class="schedule-item-date">
           <span class="month">${mes}</span>
           <span class="day green">${dia}</span>
