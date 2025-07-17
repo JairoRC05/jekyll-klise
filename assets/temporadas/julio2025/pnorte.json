@@ -97,72 +97,78 @@
             "tag1": "OBS",
             "equipo2": "PAW PATROL",
             "tag2": "PP",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "Descansa",
             "tag1": "BYE",
             "equipo2": "TUT ONECOIN",
             "tag2": "TUTOC",
-            "resultado": "VS",
+            "resultado": "DES",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS PLATINUM",
             "tag1": "PLATINO",
             "equipo2": "FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-07-16",
             "round_number": 2,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "GANBARU DEX",
             "tag1": "GDEX",
             "equipo2": "TEAM AETHER",
             "tag2": "TAE",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "HG FLOW",
             "tag1": "FLOW",
             "equipo2": "DINASTY",
             "tag2": "DINASTY",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:30",
             "dia": "2025-07-16",
             "round_number": 2,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "PHOBIUS AURA",
             "tag1": "PØĄ",
             "equipo2": "HG SALARIO MINIMO",
             "tag2": "SM",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 2,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
