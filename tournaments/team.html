@@ -3,13 +3,44 @@ layout: ligaIndigo
 permalink: 
 ---
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
 
+<body class="bg-home">
 
+  <nav class="navbar top sticky-top indigo-yellow">
+    <div class="container d-flex justify-content-center align-items-center text-white">
+      <a href="/">
+        <span class=" text-white"><b>LA REPÚBLICA DEL UNITE</b>
+        </span>
+      </a>
+    </div>
+  </nav>
+  
+  <nav class="navbar top sticky-top bg-cham">
+    <div class="container d-flex justify-content-between align-items-center text-white ">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logos/LIGA INDIGO_LOGO.webp" alt="Bootstrap" width="50px" height="44px">
+      </a>
+
+      <div class="d-none d-md-block text-white">
+
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-orion-ranking-junio2025" class="text-white">ORION</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/liga-indigo-hydra-ranking-junio2025" class="text-white">HYDRA</a></span>
+        <span class="navbar-brand mb-0 h1"><a href="/reglamento-liga-indigo" class="text-white">REGLAMENTO</a></span>
+        <!-- <span class="navbar-brand mb-0 h1"><a href="#online" class="text-white">STREAMS</a></span> -->
+    
+      </div>
  
+    </div>
+  
+  </nav>
+  
 
- 
-<div id="equipo-perfil" class="">
-
+ <div class="container-fluid bg-cham">
+    <div id="equipo-perfil" class="container mb-5">
+  </div>
 
  </div>
 
@@ -51,11 +82,63 @@ permalink:
     {% include paypal.html  %}
 
 
+  <div class="container teams-table"  id="home">  
+      <h1 class="teams-title text-center">PATROCINADORES</h1>
+      {% include sponsors.html %}
+    </div>
+
+
+  <div class="d-none d-md-block">
+    {% include footer-transparent.html %}
+</div> 
+
+  <div class="d-block d-md-none ">
+    <nav class="navbar fixed-bottom navbar-light bg-cham">
+      <div class="container d-flex justify-content-center align-items-center">
+      
+        <div class="item-bar">
+          <a href="/liga-indigo-orion-ranking-junio2025">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            <span>ORION</span>
+          </a>
+        </div>
+        
+        <div class="item-bar">
+          <a href="/liga-indigo-mvps">
+       <i class="bi bi-stars"></i>
+            <span>MVPS</span>
+          </a>
+        </div>
+        <div class="item-bar">
+          <a href="/liga-indigo-estatus">
+            <i class="bi bi-door-open-fill"></i>
+            <span>ESTATUS</span>
+          </a>
+        </div>
+        <div class="item-bar">
+          <a href="/reglamento-liga-indigo">
+            <i class="bi bi-book-half"></i>
+            <span>REGLAS</span>
+          </a>
+        </div>
+          <div class="item-bar">
+          <a href="/liga-indigo-hydra-ranking-junio2025">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            <span>HYDRA</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
 
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    {% include g-analytics.html %}
 
   <script>
    document.addEventListener('DOMContentLoaded', function() {
@@ -179,56 +262,71 @@ permalink:
         partidosBannerHTML += '</div></div>';
 
         const bannerHTML = `
-            <div class="profile indigo">
-                <div class="profile-team">
+            <div class="banner_bg_team">
+                <div class="container banner_team">
                     <a href="/assets/logos/${equipo.tag}.png" role="button" download="${equipo.team.replace(/ /g, '-')}.png">
-                        <img src="/assets/logos/${equipo.tag}.webp" class="drop" alt="${equipo.team}">
+                        <img src="/assets/logos/${equipo.tag}.webp" class="drop img-fluid" alt="${equipo.team}">
                     </a>
                     <div class="bannerText">
                         {% assign ligas_num = page.ligas | plus: 0 %}
-                        {% assign cxf_num = page.cxf | plus: 0 %}
-                        {% assign cham_num = page.cham | plus: 0 %}
-                        {% assign verified_bool = page.verified %}
-                    <div class="record-line">  
-                     {% if ligas_num >= 1 %}
-                    <div class="trofeos">
-                      <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
-                      <span>x{{ ligas_num }}</span>
-                     </div>
-                     {% endif %}
-                     {% if cxf_num >= 1 %}
-                      <div class="trofeos ms-2">
-                       <img src="/assets/smalls/CXF.webp" alt="COPA CXF TROFEO">
-                       <span>x{{ cxf_num }}</span>
-                      </div>
-                    {% endif %}
-                    {% if cham_num >= 1 %}
-                     <div class="trofeos ms-2">
-                      <img src="/assets/smalls/CHAM.webp" alt="CHAMPIONS TROFEO">
-                      <span>x{{ cham_num }}</span>
-                     </div>
-                    {% endif %}
-                    {% if verified_bool %}
-                     <div class="trofeos ms-2">
-                      <img src="/assets/smalls/verified.webp" alt="CHAMPIONS TROFEO">
-                     </div>
-                    {% endif %}
-                </div>
-                      
+{% assign cxf_num = page.cxf | plus: 0 %}
+{% assign cham_num = page.cham | plus: 0 %}
+{% assign verified_bool = page.verified %}
+
+<div class="record-line">
+  {% if ligas_num >= 1 %}
+    <div class="trofeos">
+      <img src="/assets/smalls/LI-TROFEO.webp" alt="LIGA INDIGO TROFEO">
+      <span>x{{ ligas_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if cxf_num >= 1 %}
+    <div class="trofeos ms-2">
+      <img src="/assets/smalls/CXF.webp" alt="COPA CXF TROFEO">
+      <span>x{{ cxf_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if cham_num >= 1 %}
+    <div class="trofeos ms-2">
+      <img src="/assets/smalls/CHAM.webp" alt="CHAMPIONS TROFEO">
+      <span>x{{ cham_num }}</span>
+    </div>
+  {% endif %}
+
+  {% if verified_bool %}
+    <div class="trofeos ms-2">
+        <img src="/assets/smalls/verified.webp" alt="CHAMPIONS TROFEO">
+    </div>
+  {% endif %}
+</div>
+
+
+                        <h1 class="exo-style d-none d-md-block">${equipo.team}</h1>
+                        <span class="exo d-none d-md-block">${equipo.tag} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
                         <div class="region">
-                        <div class="localization">
-                          <h1 class="exo-style ">${equipo.team}</h1>
-                         <span class="exo">${equipo.tag} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
-                         <img class="ms-2" src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}">
-                         <span class="ms-2"> ${equipo.region}</span>
-                        </div>
+                            <div class="localization">
+                                <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}">
+                                <span class="ms-2"> ${equipo.region}</span>
+                            </div>
                             ${partidosBannerHTML}
                         </div>
-                      
                     </div>
-                      
                 </div>
-             
+                <div class="container banner-info d-block d-sm-none p-0">
+                    <h1 class="exo-style">${equipo.team}</h1>
+                    <span class="exo">${equipo.ID} ● ${calcularSumaPartidos(equipo.partidos)} PTS</span>
+                    <div class="region">
+                        <img src="https://flagcdn.com/h20/{{page.pais}}.webp" alt="REGION: {{page.pais}}" class="flag">
+                        <span class="ms-2"> ${equipo.region}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-cham d-block d-md-none">
+                <div class="container record-mobile bbt">
+                    ${partidosBannerHTML}
+                </div>
             </div>
         `;
         document.getElementById(containerId).innerHTML = bannerHTML;
@@ -447,3 +545,9 @@ permalink:
     }
 });
  </script>
+  
+  
+
+</body>
+
+</html>
