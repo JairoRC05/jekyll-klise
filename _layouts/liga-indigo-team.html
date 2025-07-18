@@ -403,22 +403,26 @@ permalink:
                                         <h6>${equipo1T}</h6>
                                     </div>
                                     <div class="card-round-promo mx-2">
-  <span>${partido.rondaNombre}</span>
-
-  ${partido.stream ? `
-    ${partido.resultado !== "VS" ? `
-      <h6>${partido.resultado}</h6>
-    ` : `
-      <span>TWITCH</span>
-      <span>${partido.dia}</span>
-      <span>${partido.hora}</span>
-    `}
-  ` : `
-    <span>22:10</span>
+ 
+${partido.stream ? `
+  ${partido.resultado !== "VS" ? `
+    <span>${partido.rondaNombre}</span>
     <h6>${partido.resultado}</h6>
-      <span>${formattedRondaFecha}</span>
+    <span>${formattedRondaFecha}</span>
+  ` : `
+    <span>${partido.rondaNombre}</span>
+    <span>TWITCH</span>
+    <span>${partido.dia}</span>
+    <span>${partido.hora}</span>
   `}
-
+` : `
+  <span>${partido.rondaNombre}</span>
+  ${partido.resultado === "VS" ? `
+    <span>22:10</span>
+  ` : ``}
+  <h6>${partido.resultado}</h6>
+  <span>${formattedRondaFecha}</span>
+`}
 
 </div>
 

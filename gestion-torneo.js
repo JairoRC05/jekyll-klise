@@ -212,7 +212,7 @@ function openExportTeamsZipModal() {
         });
         return;
     }
-    
+
     // Crear una casilla de verificación por cada equipo activo
     activeTeams.forEach(team => {
         const checkboxHtml = `
@@ -236,7 +236,7 @@ function openExportTeamsZipModal() {
 async function exportSelectedTeamsAsZip() {
     // 1. Obtener los tags de los equipos seleccionados
     const selectedTeamTags = [];
-    $('#selectTeamsForZipForm input[type="checkbox"]:checked').each(function() {
+    $('#selectTeamsForZipForm input[type="checkbox"]:checked').each(function () {
         selectedTeamTags.push($(this).val());
     });
 
@@ -279,7 +279,7 @@ async function exportSelectedTeamsAsZip() {
         const date = new Date();
         const timestamp = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
         const zipFilename = `Exportacion_Equipos_${timestamp}.zip`;
-        
+
         saveAs(zipBlob, zipFilename); // ¡La magia de FileSaver!
 
         // Cerrar el modal y mostrar un mensaje de éxito
@@ -1192,7 +1192,7 @@ $(document).ready(function () {
     playersDataTable = $('#playersTable').DataTable({
         data: getFlatPlayersData(),
         columns: [
-            { data: 'ID', title: 'ID', searchable: true },
+            { data: 'ID', title: 'ID', searchable: true, className: 'editable' },
             { data: 'nickname', title: 'Nickname', searchable: true, className: 'editable' },
             { data: 'avatar', title: 'Avatar', searchable: false, className: 'editable' },
             { data: 'teamTag', title: 'Equipo', searchable: true },
@@ -1256,7 +1256,38 @@ $(document).ready(function () {
                 if (team) {
                     const playerIndex = team.jugadores.findIndex(p => p.ID === playerID);
                     if (playerIndex !== -1) {
-                        team.jugadores[playerIndex][column] = newValue;
+                        if (column === 'ID') {
+                            // Validar longitud
+                            if (newValue.length === 0 || newValue.length > 7) {
+                                Swal.fire({
+                                    icon: 'warning',
+                                    title: 'ID inválido',
+                                    text: 'El ID debe tener entre 1 y 7 caracteres.',
+                                });
+                                cell.text(originalValue);
+                                return;
+                            }
+
+                            // Validar que no esté duplicado
+                            const isDuplicate = allTeamData.some(t =>
+                                t.jugadores.some(p => p.ID === newValue && p.ID !== playerID)
+                            );
+
+                            if (isDuplicate) {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'ID duplicado',
+                                    text: `El ID "${newValue}" ya está en uso por otro jugador.`,
+                                });
+                                cell.text(originalValue);
+                                return;
+                            }
+
+                            team.jugadores[playerIndex].ID = newValue;
+                        } else {
+                            team.jugadores[playerIndex][column] = newValue;
+                        }
+
                         playerFound = true;
                     }
                 }
@@ -2079,7 +2110,7 @@ $(document).ready(function () {
     });
 
 
-      // Listener para el nuevo botón de exportación a ZIP
+    // Listener para el nuevo botón de exportación a ZIP
     $('#exportSelectedTeamsBtn').on('click', function () {
         openExportTeamsZipModal();
     });
