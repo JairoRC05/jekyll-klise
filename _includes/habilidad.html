@@ -1,0 +1,31 @@
+{% comment %}
+  Este es el componente reutilizable para mostrar una habilidad.
+  Se usa así: {% include habilidad.html habilidad=page.set1.habilidad1 %}
+{% endcomment %}
+
+<div class="habilidad {{ include.extra_class }}">
+  <div class="encabezado {{page.rol}}">
+    <div class="imagen"><img src="/assets/licencias/latios/{{ include.habilidad.nombre }}.webp" alt=""></div>
+    <div class="nombre">{{ include.habilidad.nombre }}</div>
+    
+    <div class="info">
+      {% if include.habilidad.tipo %}
+        <div class="badge tipo">
+          {{ include.habilidad.tipo }}</div>
+      {% endif %}
+      {% if include.habilidad.recarga %}
+        <div class="badge recarga">{{ include.habilidad.recarga }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="descripcion">
+    {{ include.habilidad.descripcion | newline_to_br }}
+
+    {% if include.habilidad.mejora %}
+      <div class="mejora">
+        <strong>Mejora:</strong> {{ include.habilidad.mejora | newline_to_br }}
+      </div>
+    {% endif %}
+  </div>
+</div>

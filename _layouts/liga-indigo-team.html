@@ -2,11 +2,6 @@
 layout: ligaIndigo
 permalink: 
 ---
-
-
-
- 
-
  
 <div id="equipo-perfil" class="">
 
@@ -236,11 +231,11 @@ permalink:
 
 
     function renderRoster(equipo, containerId) {
-        let rosterHTML = '<h2>ROSTER DEL EQUIPO</h2><div class="row">';
+        let rosterHTML = '<h2 class="text-black">Roster del equipo</h2><div class="row">';
         equipo.jugadores.forEach(jugador => {
             rosterHTML += `
                 <div class="col-md-6 col-lg-3 col-xl-2">
-                    <div class="card-round-roster">
+                    <div class="card-roster">
                         <div class="card-round-team">
                             <a href="#"> <img src="/assets/avatars/${jugador.avatar}.webp" alt="${jugador.nickname}" class="img-fluid">
                             </a>
@@ -261,7 +256,7 @@ permalink:
             `;
         });
         rosterHTML += '</div>';
-        const rosterContainer = document.querySelector(`#${containerId} .container`);
+        const rosterContainer = document.querySelector(`#${containerId} `);
         if (rosterContainer) {
             rosterContainer.innerHTML = rosterHTML;
         } else {

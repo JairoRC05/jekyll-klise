@@ -1,4 +1,4 @@
-.card-round-roster {
+.card-team {
   height: 250px;
   position: relative;
   display: flex;
@@ -669,6 +669,11 @@
 
         a {
             font-size: 25px;
+        }
+
+        .link{
+          font-size: 16px;
+          text-decoration: none;
         }
 
         img {

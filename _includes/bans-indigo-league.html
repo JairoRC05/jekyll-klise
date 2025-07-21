@@ -1,14 +1,37 @@
 <div class="bans-section">
- 
+
 
     <h5 class="text-dark mb-3">Partidos Vía Stream</h5>
     <div id="partidos-con-stream-container" class="schedule-content">
-           
+
     </div>
 
 
     <h5 class="mt-5">BANS</h5>
+    {% for licencia in site.licencias %}
+    {% if licencia.ban %}
+    <a href="{{licencia.url}}">
+        <div class="card-ban-license">
+            <div class="card-ban-pick">
+                <img src="/assets/licencias/{{licencia.nombre}}.webp" alt="{{licencia.nombre}}" class="img-fluid">
+            </div>
+            <div class="card-round-title">
+                <h2>{{licencia.nombre}}</h2>
+                <span>{{licencia.rol}}</span>
+            </div>
+            <div class="card-back">
+                <div class="card-color-left {{licencia.rol}}"></div>
+                <div class="card-color-right bg-cham"></div>
+                <div class="card-color-logo">
+                    <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO">
+                </div>
+            </div>
+        </div>
+    </a>
+
+    {% else %}
     <p>Por el momento no hay Licencias Unite en Zona de BANS</p>
+    {% endif %}
+    {% endfor %}
 
 </div>
-

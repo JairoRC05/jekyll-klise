@@ -1,0 +1,250 @@
+---
+layout: ligaIndigo
+permalink: /admin-licencias
+title: Generador de Licencias Pokémon
+---
+
+<div class="mb-3">
+  <label for="importFile">Importar archivo .md</label>
+  <input type="file" class="form-control" id="importFile" accept=".md">
+</div>
+
+<form id="formLicenciaPokemon" class="p-4 bg-light rounded border">
+  <h3>Licencia Pokémon</h3>
+
+  <div class="mb-3">
+    <label>Nombre</label>
+    <input type="text" class="form-control" name="nombre" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Rol</label>
+    <select class="form-select" name="rol" required>
+      <option value="">Selecciona rol</option>
+      <option>Atacante</option>
+      <option>Defensivo</option>
+      <option>Equilibrado</option>
+      <option>Auxiliar</option>
+      <option>Ágil</option>
+    </select>
+  </div>
+
+  <hr>
+  <h4 class="text-dark">Pasiva</h4>
+  <div class="mb-3">
+    <label>Nombre</label>
+    <input type="text" class="form-control" name="pasiva_nombre">
+  </div>
+  <div class="mb-3">
+    <label>Descripción</label>
+    <textarea class="form-control" name="pasiva_descripcion"></textarea>
+  </div>
+
+  <hr>
+  <h4 class="text-dark">Set 1</h4>
+  <div id="set1"></div>
+
+  <hr>
+  <h4 class="text-dark">Set 2</h4>
+  <div id="set2"></div>
+
+  <hr>
+  <h4 class="text-dark">Movimiento Unite</h4>
+  <div class="mb-3">
+    <label>Nombre</label>
+    <input type="text" class="form-control" name="unite_nombre">
+  </div>
+  <div class="mb-3">
+    <label>Descripción</label>
+    <textarea class="form-control" name="unite_descripcion"></textarea>
+  </div>
+  <div class="mb-3">
+    <label>Tipo</label>
+    <select class="form-select" name="unite_tipo">
+      <option>Área</option>
+      <option>Infalible</option>
+      <option>Avance</option>
+      <option>Largo alcance</option>
+      <option>Perjuicio</option>
+      <option>Curación</option>
+      <option>Restricción</option>
+      <option>Beneficio</option>
+      <option>Corto alcance</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Recarga</label>
+    <input type="text" class="form-control" name="unite_recarga">
+  </div>
+
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="ban" id="ban">
+    <label class="form-check-label" for="ban">¿Está baneado?</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Generar Markdown</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+<script>
+const tipos = [
+  "Área", "Infalible", "Avance", "Largo alcance",
+  "Perjuicio", "Curación", "Restricción", "Beneficio", "Corto alcance"
+];
+
+function crearHabilidadHTML(set, n) {
+  return `
+    <div class="border p-3 rounded mb-3">
+      <h5>${set.toUpperCase()} - Habilidad ${n}</h5>
+      <label>Nombre</label>
+      <input type="text" class="form-control mb-2" name="${set}_habilidad${n}_nombre">
+      <label>Descripción</label>
+      <textarea class="form-control mb-2" name="${set}_habilidad${n}_descripcion"></textarea>
+      <label>Tipo</label>
+      <select class="form-select mb-2" name="${set}_habilidad${n}_tipo">
+        ${tipos.map(t => `<option>${t}</option>`).join("")}
+      </select>
+      <label>Recarga</label>
+      <input type="text" class="form-control" name="${set}_habilidad${n}_recarga">
+    </div>`;
+}
+
+["set1", "set2"].forEach(set => {
+  const contenedor = document.getElementById(set);
+  for (let i = 1; i <= 3; i++) {
+    contenedor.innerHTML += crearHabilidadHTML(set, i);
+  }
+});
+
+function quoteMultiline(text) {
+  return `|
+  ${text.split('\n').join('\n  ')}`;
+}
+
+
+// Función para escapar comillas dobles en texto
+function escapeQuotes(text) {
+  return text.replace(/"/g, '\\"');
+}
+
+// Función para convertir texto multilínea a YAML con pipe | y correcta indentación
+function toYamlMultiline(text, indent = 4) {
+  if (!text) return '""'; // cadena vacía
+  const spaces = ' '.repeat(indent);
+  const lines = text.trim().split('\n').map(line => spaces + line.trim());
+  return '|\n' + lines.join('\n');
+}
+
+// Construcción YAML con descripciones multilínea y sangrías correctas
+document.getElementById("formLicenciaPokemon").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const get = name => form[name]?.value || "";
+  const getBool = name => form[name]?.checked || false;
+
+  const buildHabilidad = (setPrefix, i) => {
+    const nombre = escapeQuotes(get(`${setPrefix}_habilidad${i}_nombre`));
+    const descripcion = get(`${setPrefix}_habilidad${i}_descripcion`);
+    const tipo = escapeQuotes(get(`${setPrefix}_habilidad${i}_tipo`));
+    const recarga = escapeQuotes(get(`${setPrefix}_habilidad${i}_recarga`));
+
+    return `  habilidad${i}:\n` +
+      `    nombre: "${nombre}"\n` +
+      `    descripcion: ${toYamlMultiline(descripcion, 6)}\n` +
+      `    tipo: "${tipo}"\n` +
+      `    recarga: "${recarga}"`;
+  };
+
+  const nombre = escapeQuotes(get("nombre"));
+  const rol = escapeQuotes(get("rol"));
+  const pasivaNombre = escapeQuotes(get("pasiva_nombre"));
+  const pasivaDescripcion = get("pasiva_descripcion");
+
+  const uniteNombre = escapeQuotes(get("unite_nombre"));
+  const uniteDescripcion = get("unite_descripcion");
+  const uniteTipo = escapeQuotes(get("unite_tipo"));
+  const uniteRecarga = escapeQuotes(get("unite_recarga"));
+
+  const yaml = `---\n` +
+    `nombre: "${nombre}"\n` +
+    `rol: "${rol}"\n` +
+    `pasiva:\n` +
+    `  nombre: "${pasivaNombre}"\n` +
+    `  descripcion: ${toYamlMultiline(pasivaDescripcion, 4)}\n` +
+    `set1:\n` +
+    [1, 2, 3].map(i => buildHabilidad("set1", i)).join('\n') + '\n' +
+    `set2:\n` +
+    [1, 2, 3].map(i => buildHabilidad("set2", i)).join('\n') + '\n' +
+    `movimiento_unite:\n` +
+    `  nombre: "${uniteNombre}"\n` +
+    `  descripcion: ${toYamlMultiline(uniteDescripcion, 4)}\n` +
+    `  tipo: "${uniteTipo}"\n` +
+    `  recarga: "${uniteRecarga}"\n` +
+    `ban: ${getBool("ban")}\n` +
+    `---`;
+
+  const blob = new Blob([yaml], { type: "text/yaml" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${nombre.toLowerCase().replace(/\s+/g, "_") || "licencia"}.md`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+
+document.getElementById("importFile").addEventListener("change", function (e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    const text = event.target.result;
+    const match = text.match(/---\s*([\s\S]*?)\s*---/);
+    if (!match) return alert("No se encontró YAML válido en el archivo.");
+
+    let data;
+    try {
+      data = jsyaml.load(match[1]);
+    } catch (err) {
+      return alert("Error al parsear YAML: " + err.message);
+    }
+
+    const setField = (name, value) => {
+      const field = document.querySelector(`[name="${name}"]`);
+      if (field) field.value = value || "";
+    };
+
+    const fillHabilidades = (setKey) => {
+      const set = data[setKey];
+      if (!set) return;
+      for (let i = 1; i <= 3; i++) {
+        const h = set[`habilidad${i}`];
+        if (!h) continue;
+        setField(`${setKey}_habilidad${i}_nombre`, h.nombre);
+        setField(`${setKey}_habilidad${i}_descripcion`, h.descripcion);
+        setField(`${setKey}_habilidad${i}_tipo`, h.tipo);
+        setField(`${setKey}_habilidad${i}_recarga`, h.recarga);
+      }
+    };
+
+    setField("nombre", data.nombre);
+    setField("rol", data.rol);
+    setField("pasiva_nombre", data.pasiva?.nombre);
+    setField("pasiva_descripcion", data.pasiva?.descripcion);
+
+    fillHabilidades("set1");
+    fillHabilidades("set2");
+
+    setField("unite_nombre", data.movimiento_unite?.nombre);
+    setField("unite_descripcion", data.movimiento_unite?.descripcion);
+    setField("unite_tipo", data.movimiento_unite?.tipo);
+    setField("unite_recarga", data.movimiento_unite?.recarga);
+
+    const ban = document.querySelector(`[name="ban"]`);
+    ban.checked = !!data.ban;
+  };
+  reader.readAsText(file);
+});
+</script>

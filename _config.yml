@@ -47,6 +47,12 @@ redes_sociales:
 collections:
   posts:
     output: true
+  streams:
+    output: true
+    permalink: /streams/:name
+  licencias:
+    output: true
+    permalink: /licencias-unite/:name
 
 # Markdown settings
 markdown: kramdown

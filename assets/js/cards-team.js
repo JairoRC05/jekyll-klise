@@ -49,7 +49,7 @@ const cargarEquipos = async () => {
       const card = `
         <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center">
           <a href="${equipo.link}">  
-        <div class="card-round-roster">
+        <div class="card-team">
             <div class="card-round-team">
                 <img src="/assets/logos/${equipo.tag}.webp" alt="${equipo.team}" class="img-fluid">
             </div>

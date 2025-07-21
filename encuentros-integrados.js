@@ -70,13 +70,18 @@ function populatePlayerDraggables(tag, local) {
 }
 
 function inicializarDragDrop() {
-  ['jugadores-local', 'jugadores-visitante'].forEach(id => {
-    new Sortable(document.getElementById(id), {
-      group: 'mvps',
-      animation: 150,
-      sort: false
-    });
+['jugadores-local', 'jugadores-visitante'].forEach(id => {
+  new Sortable(document.getElementById(id), {
+    group: {
+      name: 'mvps',
+      pull: 'clone',
+      put: false
+    },
+    animation: 150,
+    sort: false
   });
+});
+
 
   ['mvp-local', 'mvp-visitante'].forEach(id => {
     new Sortable(document.getElementById(id), {

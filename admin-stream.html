@@ -1,0 +1,119 @@
+---
+layout: ligaIndigo
+permalink: /admin-streams
+title: Generador de Streams
+---
+
+<div class="container my-5">
+  <h2 class="mb-4">Generador de archivo para nuevo stream</h2>
+
+  <form id="streamForm">
+    <div class="mb-3">
+      <label>Título</label>
+      <input type="text" class="form-control" id="titulo" placeholder="Pollitos vs Dinasty">
+    </div>
+    <div class="mb-3">
+      <label>Equipo 1</label>
+      <input type="text" class="form-control" id="equipo1" placeholder="Pollitos de Colores">
+    </div>
+    <div class="mb-3">
+      <label>Equipo 2</label>
+      <input type="text" class="form-control" id="equipo2" placeholder="Dinasty Esports">
+    </div>
+    <div class="mb-3">
+      <label>Fecha y hora</label>
+      <input type="datetime-local" class="form-control" id="fecha">
+    </div>
+    <div class="mb-3">
+      <label>URL del video</label>
+      <input type="text" class="form-control" id="video_url" placeholder="https://www.twitch.tv/videos/...">
+    </div>
+    <div class="mb-3">
+      <label>Ruta del thumbnail</label>
+      <input type="text" class="form-control" id="thumbnail" placeholder="/assets/streams/nombre.jpg">
+    </div>
+    <div class="mb-3">
+      <label>Nombre de la liga</label>
+      <input type="text" class="form-control" id="liga" value="Liga Índigo SPC">
+    </div>
+    <button type="submit" class="btn btn-primary">Generar Markdown</button>
+  </form>
+
+  <div class="mt-4">
+    <h5>Nombre sugerido del archivo:</h5>
+    <input type="text" class="form-control mb-3" id="nombreArchivo" readonly>
+
+    <h5>Contenido del archivo Markdown:</h5>
+    <textarea id="resultado" class="form-control mb-3" rows="12" readonly></textarea>
+
+    <button id="descargarBtn" class="btn btn-success" style="display:none;">Descargar archivo .md</button>
+  </div>
+</div>
+
+<script>
+
+// Establecer fecha y hora actual por defecto al abrir el formulario
+window.addEventListener("DOMContentLoaded", function () {
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); // Corrige la zona horaria local
+
+  const formatted = now.toISOString().slice(0,16); // yyyy-MM-ddTHH:mm
+  document.getElementById("fecha").value = formatted;
+});
+
+
+
+  function slugify(text) {
+    return text.toString().toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  }
+
+  document.getElementById("streamForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const titulo = document.getElementById("titulo").value;
+    const equipo1 = document.getElementById("equipo1").value;
+    const equipo2 = document.getElementById("equipo2").value;
+    const fecha = document.getElementById("fecha").value;
+    const video_url = document.getElementById("video_url").value;
+    const thumbnail = document.getElementById("thumbnail").value;
+    const liga = document.getElementById("liga").value;
+
+    const nombreArchivo = `${slugify(equipo1)}-vs-${slugify(equipo2)}.md`;
+
+    const markdown = `---\ntitle: ${titulo}
+fecha: ${fecha}
+thumbnail: ${thumbnail}
+video_url: ${video_url}
+equipo1: ${equipo1}
+equipo2: ${equipo2}
+liga: ${liga}
+layout: null
+---`;
+
+    document.getElementById("nombreArchivo").value = nombreArchivo;
+    document.getElementById("resultado").value = markdown;
+
+    // Mostrar el botón de descarga
+    const downloadBtn = document.getElementById("descargarBtn");
+    downloadBtn.style.display = "inline-block";
+
+    // Preparar archivo para descarga
+    downloadBtn.onclick = function () {
+      const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = nombreArchivo;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+  });
+</script>

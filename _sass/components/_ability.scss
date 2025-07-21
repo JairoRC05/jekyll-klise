@@ -1,0 +1,72 @@
+// _habilidad.scss
+
+.habilidad {
+  border: 2px solid #d86700;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  .encabezado {
+    background: linear-gradient(to right, #d86700 70%, #a00000 100%);
+    padding: 0.75rem 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .imagen{
+      
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .nombre {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .info {
+      display: flex;
+      gap: 0.5rem;
+
+      .badge {
+        background-color: #222;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        color: white;
+
+        &.tipo {
+          background-color: #6a32b9;
+        }
+        &.recarga {
+          background-color: #555;
+        }
+      }
+    }
+  }
+
+  .descripcion {
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+  }
+
+
+   .mejora {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      color: #1a6a3a; // Un verde oscuro que combina
+
+      strong {
+        color: #222; // Restablece el color del texto en negritas
+      }
+    }
+}
