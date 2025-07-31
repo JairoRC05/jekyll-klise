@@ -614,72 +614,78 @@
             "tag1": "OBS",
             "equipo2": "PHOBIUS AURA",
             "tag2": "PØĄ",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 8,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "HG SALARIO MINIMO",
             "tag1": "SM",
             "equipo2": "HG FLOW",
             "tag2": "FLOW",
-            "resultado": "VS",
+            "resultado": "0-0",
             "stream": true,
             "hora": "21:30",
             "dia": "2025-07-29",
             "round_number": 8,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "GANBARU DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 8,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "TEAM AETHER",
             "tag1": "TAE",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLATINO",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 8,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "FROSTBITE",
             "tag1": "FTB",
             "equipo2": "Descansa",
             "tag2": "BYE",
-            "resultado": "VS",
+            "resultado": "DES",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 8,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "TUT ONECOIN",
             "tag1": "TUTOC",
             "equipo2": "PAW PATROL",
             "tag2": "PP",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 8,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
