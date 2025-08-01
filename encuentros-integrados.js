@@ -230,7 +230,7 @@ function actualizarTablaPorRonda() {
     const tablaDiv = document.createElement('div');
     tablaDiv.className = `tab-pane fade${activa ? ' show active' : ''}`;
     tablaDiv.id = tabId;
-    tablaDiv.style.marginTop = '-1rem';
+    tablaDiv.classList.add('pt-2'); 
 
     const table = document.createElement('table');
     table.className = 'table table-bordered table-sm';

@@ -163,7 +163,7 @@
             "tag1": "HGAMT",
             "equipo2": "TEAM ROCKET",
             "tag2": "TRR",
-            "resultado": "2-0",
+            "resultado": "2-1",
             "stream": false,
             "hora": "",
             "dia": "",
@@ -322,7 +322,7 @@
             "tag1": "PL",
             "equipo2": "HG AMATISTA",
             "tag2": "HGAMT",
-            "resultado": "2-0",
+            "resultado": "2-1",
             "stream": false,
             "hora": "",
             "dia": "",
@@ -700,72 +700,78 @@
             "tag1": "PDC",
             "equipo2": "TEAM FLARE",
             "tag2": "TF",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 9,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "HG AMATISTA",
             "tag1": "HGAMT",
             "equipo2": "AD GAMING",
             "tag2": "AD",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 9,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "TEAM ROCKET",
             "tag1": "TRR",
             "equipo2": "PRESTACIONES DE LEY HG",
             "tag2": "PL",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 9,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "THE UNOWN TEAM",
             "tag1": "TUT",
             "equipo2": "LOS CAPI",
             "tag2": "CAPI",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 9,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "PROYECTO MEW",
             "tag1": "PM",
             "equipo2": "IMPERIO MEXA ZAFIRO",
             "tag2": "ZAFIRO",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 9,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "CACM ESPORTS",
             "tag1": "CACM",
             "equipo2": "STAMINA E-SPORTS",
             "tag2": "STMN",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-07-30",
             "round_number": 9,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
