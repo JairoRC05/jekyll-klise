@@ -20,11 +20,8 @@
     "M7": "3",
     "M8": "3",
     "M9": "3",
-    "M10": "",
-    "M11": "",
-    "M12": "",
-    "M13": "",
-    "M14": ""
+    "M10": "3",
+    "M11": "3"
   },
   "jugadores": [
     {
@@ -43,7 +40,7 @@
       "avatar": "male1"
     },
     {
-      "nickntame": "STMN・Pachy",
+      "nickname": "STMN・Pachy",
       "ID": "Q3HCM3A",
       "avatar": "male1"
     },

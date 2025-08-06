@@ -20,9 +20,8 @@
     "M7": "3",
     "M8": "0",
     "M9": "3",
-    "M10": "",
-    "M11": "",
-    "M12": ""
+    "M10": "0",
+    "M11": "0"
   },
   "jugadores": [
     {
@@ -56,5 +55,5 @@
       "avatar": "male1"
     }
   ],
-  "posicionDesempate": false
+  "posicionDesempate": true
 }
