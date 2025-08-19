@@ -1,0 +1,63 @@
+---
+layout: ligaIndigo
+
+title: Mi Perfil
+permalink: perfil.html
+---
+
+<div class="container">
+  <h2>Mi Perfil</h2>
+  <div id="perfil-container"></div>
+  <button id="logout-btn">Cerrar sesión</button>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+      authDomain: "unite-mex.firebaseapp.com",
+      databaseURL: "https://unite-mex-default-rtdb.firebaseio.com",
+      projectId: "unite-mex",
+      storageBucket: "unite-mex.appspot.com",
+      messagingSenderId: "248961873504",
+      appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+      measurementId: "G-87W4VS8QYX"
+    };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      // Usuario logueado
+      const docRef = doc(db, "usuarios", user.uid);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        document.getElementById("perfil-container").innerHTML = `
+          <p><strong>Nombre:</strong> ${data.nombre}</p>
+          <p><strong>Correo:</strong> ${data.email}</p>
+          <p><strong>Rol:</strong> ${data.rol}</p>
+          <p><strong>Fecha de registro:</strong> ${data.fechaRegistro?.toDate().toLocaleString() || '-'}</p>
+        `;
+      } else {
+        document.getElementById("perfil-container").innerText = "No se encontraron datos del usuario.";
+      }
+    } else {
+      // Usuario no logueado, redirigir al login
+      window.location.href = "/login.html"; 
+    }
+  });
+
+  // Logout
+  document.getElementById("logout-btn").addEventListener("click", async () => {
+    await signOut(auth);
+    window.location.href = "/login.html";
+  });
+</script>

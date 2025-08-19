@@ -1,0 +1,90 @@
+---
+layout: null
+permalink: /particulas-minecraft.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+      background: #0b0f17;
+}
+.particles {
+  position: relative;
+  width: 100%;
+  height: 100vh;        /* altura visible */
+  overflow: hidden;     /* oculta partículas fuera del área */
+  background: #0b0f17;  /* fondo opcional para contraste */
+}
+
+/* Partícula base */
+.particles span {
+  position: absolute;
+  bottom: -10px; /* comienza un poco más abajo */
+  width: 8px;
+  height: 8px;
+  background: #e6da7c;
+  opacity: 0;
+  animation: rise 5s linear infinite;
+}
+
+/* Animación de subida */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* aparece suavemente */
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-320px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Distribución pseudo-aleatoria */
+.particles span:nth-child(1)  { left: 5%;  animation-delay: 0s;  animation-duration: 6s; background: #e6da7c; }
+.particles span:nth-child(2)  { left: 15%; animation-delay: 1s;  animation-duration: 5s; background: #feca57; }
+.particles span:nth-child(3)  { left: 25%; animation-delay: 0.5s;animation-duration: 7s; }
+.particles span:nth-child(4)  { left: 35%; animation-delay: 2s;  animation-duration: 6s; background: #f6e773; }
+.particles span:nth-child(5)  { left: 45%; animation-delay: 1.5s;animation-duration: 5s; }
+
+.particles span:nth-child(6)  { left: 55%; animation-delay: 0.8s;animation-duration: 7s; }
+.particles span:nth-child(7)  { left: 65%; animation-delay: 2.2s;animation-duration: 6s; background: #d1c670; }
+.particles span:nth-child(8)  { left: 75%; animation-delay: 0.3s;animation-duration: 8s; }
+.particles span:nth-child(9)  { left: 85%; animation-delay: 1.7s;animation-duration: 6s; background: #d5cb81; }
+.particles span:nth-child(10) { left: 95%; animation-delay: 0.9s;animation-duration: 5s; }
+
+/* Repite patrón para todas las demás partículas */
+.particles span:nth-child(n+11) {
+  left: calc((var(--i, 1) * 5%) + 3%);
+}
+
+   
+    </style>
+</head>
+
+<body>
+<div class="particles">
+  <!-- 30 partículas -->
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+
+</body>
+
+</html>

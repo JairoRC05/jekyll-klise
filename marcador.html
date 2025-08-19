@@ -1,0 +1,206 @@
+---
+permalink: /marcadorsnipe
+layout: null
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>The Sniper – Marcador Oficial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        background: #0d1117;
+        color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 20px;
+        margin: 0;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        color: #00c3ff;
+        text-shadow: 0 0 10px #00c3ff;
+        margin-bottom: 5px;
+    }
+    #faseActual {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: #ffeb3b;
+        text-shadow: 0 0 8px #ffeb3b;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    th {
+        background: linear-gradient(90deg, #00c3ff, #0078ff);
+        padding: 10px;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    td {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.95rem;
+    }
+    tr.eliminado td {
+        background: rgba(255, 0, 0, 0.3) !important;
+        color: #ffaaaa;
+        text-decoration: line-through;
+    }
+    .btn {
+        background: #00c3ff;
+        border: none;
+        color: #000;
+        padding: 5px 8px;
+        margin: 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+    .btn:hover {
+        background: #00a0cc;
+    }
+    .panel-control {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .panel-control button {
+        background: #ffeb3b;
+        border: none;
+        color: #000;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .panel-control button:hover {
+        background: #e6d000;
+    }
+</style>
+</head>
+<body>
+
+<h1>Marcador – The Sniper: Inteleon Challenge</h1>
+<h2 id="faseActual">Día 1 – Fase de Puntuación</h2>
+
+<table id="tablaJugadores">
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Puntos</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<div class="panel-control">
+    <button onclick="cambiarDia()">➡ Cambiar Día</button>
+</div>
+
+<script>
+let jugadores = [
+    { nombre: "Jugador 1", puntos: 0, eliminado: false },
+    { nombre: "Jugador 2", puntos: 0, eliminado: false },
+    { nombre: "Jugador 3", puntos: 0, eliminado: false },
+    { nombre: "Jugador 4", puntos: 0, eliminado: false },
+    { nombre: "Jugador 5", puntos: 0, eliminado: false },
+    { nombre: "Jugador 6", puntos: 0, eliminado: false },
+    { nombre: "Jugador 7", puntos: 0, eliminado: false },
+    { nombre: "Jugador 8", puntos: 0, eliminado: false }
+];
+
+let dia = 1;
+
+const sistemaPuntos = {
+    victoria: 10,
+    killNormal: 3,
+    killSniper: 6,
+    asistencia: 2,
+    objetivo: 5,
+    objetivoSniper: 10,
+    killExtra: 2,
+    muerteInnecesaria: -2
+};
+
+function renderTabla() {
+    const tbody = document.querySelector("#tablaJugadores tbody");
+    tbody.innerHTML = "";
+    jugadores.forEach((j, index) => {
+        let row = document.createElement("tr");
+        if (j.eliminado) row.classList.add("eliminado");
+
+        row.innerHTML = `
+            <td>${j.nombre}</td>
+            <td>${j.puntos}</td>
+            <td>
+                <button class="btn" onclick="sumarPuntos(${index}, 'victoria')">Victoria</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'killNormal')">Kill</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'killSniper')">Sniper</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'asistencia')">Asist</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'objetivo')">Obj</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'objetivoSniper')">Obj Sniper</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'killExtra')">Kill Extra</button>
+                <button class="btn" onclick="sumarPuntos(${index}, 'muerteInnecesaria')">Muerte</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function sumarPuntos(index, tipo) {
+    if (jugadores[index].eliminado) return;
+    jugadores[index].puntos += sistemaPuntos[tipo];
+    renderTabla();
+}
+
+function cambiarDia() {
+    let activos = jugadores.filter(j => !j.eliminado);
+    activos.sort((a, b) => a.puntos - b.puntos);
+
+    if (dia === 2) {
+        for (let i = 0; i < 4 && i < activos.length; i++) {
+            activos[i].eliminado = true;
+        }
+    } else if (dia === 3 || dia === 4) {
+        for (let i = 0; i < 3 && i < activos.length; i++) {
+            activos[i].eliminado = true;
+        }
+    } else if (dia === 5) {
+        alert("Comienza la final: eliminar 1 por ronda manualmente");
+    }
+
+    dia++;
+    document.getElementById("faseActual").innerText = faseTexto();
+    renderTabla();
+}
+
+function faseTexto() {
+    switch (dia) {
+        case 1: return "Día 1 – Fase de Puntuación";
+        case 2: return "Día 2 – Fase de Puntuación";
+        case 3: return "Día 3 – Eliminación (3 peores)";
+        case 4: return "Día 4 – Eliminación (3 peores)";
+        case 5: return "Día 5 – Gran Final Eliminación Directa";
+        default: return "Evento Finalizado";
+    }
+}
+
+renderTabla();
+</script>
+
+</body>
+</html>

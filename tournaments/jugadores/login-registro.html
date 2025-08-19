@@ -1,0 +1,81 @@
+---
+layout: ligaIndigo
+permalink: /login.html
+---
+
+<input type="email" id="email" placeholder="Correo electrónico">
+<input type="password" id="password" placeholder="Contraseña">
+<input type="text" id="nombre" placeholder="Nombre completo">
+<select id="rol">
+  <option value="jugador">Jugador</option>
+  <option value="streamer">Streamer</option>
+  <option value="coach">Coach</option>
+</select>
+
+<button id="registro-btn">Registrarse</button>
+<button id="login-btn">Iniciar sesión</button>
+
+
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  import { getFirestore,collection,doc,setDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+      authDomain: "unite-mex.firebaseapp.com",
+      databaseURL: "https://unite-mex-default-rtdb.firebaseio.com",
+      projectId: "unite-mex",
+      storageBucket: "unite-mex.appspot.com",
+      messagingSenderId: "248961873504",
+      appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+      measurementId: "G-87W4VS8QYX"
+    };
+    
+      const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+    const db = getFirestore(app);
+
+
+  // REGISTRO
+document.getElementById("registro-btn").addEventListener("click", async () => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const nombre = document.getElementById("nombre").value;
+  const rol = document.getElementById("rol").value;
+
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Guardar datos extra en Firestore
+    await setDoc(doc(db, "usuarios", user.uid), {
+      nombre: nombre,
+      rol: rol,
+      email: email,
+      uid: user.uid,
+      fechaRegistro: serverTimestamp()
+    });
+
+    alert("Registro exitoso. Datos guardados.");
+    window.location.href = "/perfil.html"; // ← redirección
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
+});
+
+  // LOGIN
+  document.getElementById("login-btn").addEventListener("click", async () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      alert("Inicio de sesión exitoso");
+      window.location.href = "/perfil.html"; // ← redirección
+    } catch (error) {
+      alert(error.message);
+    }
+  });
+</script>

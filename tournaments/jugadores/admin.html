@@ -1,0 +1,79 @@
+---
+layout: ligaIndigo
+permalink: /admin.html
+---
+
+<div class="container mt-4">
+  <h2>Registrar nuevo jugador</h2>
+  <form id="form-jugador">
+    <div>
+      <label>Nombre:</label>
+      <input type="text" id="nombre" required>
+    </div>
+    <div>
+      <label>Rol:</label>
+      <select id="rol">
+        <option value="jugador">Jugador</option>
+        <option value="coach">Coach</option>
+        <option value="streamer">Streamer</option>
+      </select>
+    </div>
+    <div>
+      <label>Equipo:</label>
+      <input type="text" id="equipo">
+    </div>
+    <div>
+      <label>Liga:</label>
+      <input type="text" id="liga">
+    </div>
+    <button type="submit">Guardar jugador</button>
+  </form>
+
+  <div id="mensaje"></div>
+</div>
+
+
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+      authDomain: "unite-mex.firebaseapp.com",
+      databaseURL: "https://unite-mex-default-rtdb.firebaseio.com",
+      projectId: "unite-mex",
+      storageBucket: "unite-mex.appspot.com",
+      messagingSenderId: "248961873504",
+      appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+      measurementId: "G-87W4VS8QYX"
+    };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const form = document.getElementById('form-jugador');
+  const mensaje = document.getElementById('mensaje');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const jugador = {
+      nombre: document.getElementById('nombre').value,
+      rol: document.getElementById('rol').value,
+      equipo: document.getElementById('equipo').value,
+      liga: document.getElementById('liga').value,
+      reclamado: false,
+      fechaRegistro: new Date().toISOString()
+    };
+
+    try {
+      await addDoc(collection(db, 'jugadores'), jugador);
+      mensaje.innerText = "Jugador registrado con éxito.";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      mensaje.innerText = "Error al registrar jugador.";
+    }
+  });
+</script>

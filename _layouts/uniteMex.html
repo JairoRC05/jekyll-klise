@@ -11,9 +11,9 @@ layout:
   data-div-id="{{ page.div_id }}" data-copaxforze="{{ page.copaXForze | default: false }}">
 
   <div class="sidebar Ofensivo">
-    <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="#">
+    <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/">
       <i class="bi bi-controller me-2"></i>
-      <span>UniteZone</span>
+      <span>Nación Unite</span>
     </a>
     <ul class="nav flex-lg-column flex-md-row">
 
@@ -36,12 +36,12 @@ layout:
           <span class="ms-1 trunk">Inicio</span>
         </a>
       </li>
-      <li class="nav-item iconContainer">
+      <!-- <li class="nav-item iconContainer">
         <a class="nav-link " href="{{ site.links_navegacion.supercxf }}">
           <img src="/assets/logos/SCXF.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Super Copa XF</span>
         </a>
-      </li>
+      </li> -->
       <!-- <li class="nav-item iconContainer">
         <a class="nav-link" href="{{ site.links_navegacion.sorteos }}">
           <img src="/assets/logos/icons/sorteos.webp" alt="" class="imgIcon">
@@ -49,7 +49,7 @@ layout:
         </a>
       </li> -->
       <li class="nav-item iconContainer">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" href="/unite-mex">
           <img src="/assets/logos/icons/unite-mex.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk">Unite Mex</span>
         </a>
@@ -75,7 +75,7 @@ layout:
     <div class="top-bar Ofensivo">
 
       <h1 class="m-0 exo-style title-league" data-title="{{ page.title }}"></h1>
-       <div class="flex-grow-1"></div>
+      <div class="flex-grow-1"></div>
 
     </div>
 
@@ -124,7 +124,7 @@ layout:
       </div>
 
 
-       <div class="side-section">
+      <div class="side-section">
         <h5 class="text-dark">Preguntas Frecuentes (FAQs)</h5>
         <div class="accordion" id="faqAccordion">
 
@@ -257,10 +257,37 @@ layout:
               </div>
             </div>
           </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                ¿Pueden registrarse suplentes?
+              </button>
+            </h2>
+            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                No manejamos suplentes de manera formal, pero somos muy flexibles en ese aspecto. Entendemos que, al
+                tratarse de un torneo presencial, pueden surgir imprevistos de último momento. Por ello, mientras el
+                capitán del equipo se presente y dé de alta a los nuevos jugadores, podremos actualizar el roster
+                directamente en Start.gg antes de su siguiente partida.
+                <br>
+                En caso de incidentes durante el torneo —como situaciones médicas, accidentes o cualquier evento fuera
+                del control del equipo— se permitirá completar la alineación con alguien que no esté participando en
+                otro equipo, siempre y cuando sea aprobado por la organización.
+                <br>
+                Eso sí, situaciones como ausencias por irresponsabilidad (por ejemplo, si un jugador simplemente no se
+                presenta sin justificación válida) serán evaluadas caso por caso. Nuestra prioridad es apoyar a los
+                equipos y mantener el torneo lo más justo y humano posible, pero también es importante fomentar el
+                compromiso.
+
+              </div>
+            </div>
+          </div>
 
         </div>
 
-         <h5 class="text-dark mt-5">¿Buscas equipo? ¿Te falta un jugador?
+        <h5 class="text-dark mt-5">¿Buscas equipo? ¿Te falta un jugador?
           ¡Participa en el Draft de Unite Mex!</h5>
 
         <p>✔️ Publica en nuestro foro de <a class="text-decoration-none" href="https://discord.gg/GbGVUeB4c8"
@@ -272,14 +299,17 @@ layout:
         </ul>
 
 
-      
+
         <h5 class="text-dark mt-5">📍​ Ubicación</h5>
 
         <div class="map-responsive" style="overflow:hidden; padding-bottom:56.25%; position:relative; height:0;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.89835280386!2d-103.40818412414185!3d20.673713999877286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afd7146844c7%3A0xb25761f34b0e55be!2sMonou%20XO%20Gaming%20Center%20Guadalajara!5e0!3m2!1ses-419!2smx!4v1754298026064!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.89835280386!2d-103.40818412414185!3d20.673713999877286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afd7146844c7%3A0xb25761f34b0e55be!2sMonou%20XO%20Gaming%20Center%20Guadalajara!5e0!3m2!1ses-419!2smx!4v1754298026064!5m2!1ses-419!2smx"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-       <p>Zapopan Jalisco, en la ciudad de Guadalajara. Monou XO Gaming Gran Plaza</p>
-      </div>  
+        <p>Zapopan Jalisco, en la ciudad de Guadalajara. Monou XO Gaming Gran Plaza</p>
+      </div>
 
 
 
