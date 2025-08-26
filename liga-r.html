@@ -1,88 +1,12 @@
-<div class="row">
-    <div class="col-12 col-md-12 col-lg-12 col-xl-9">
-        <div class="card-rules">
-            <h2 class="title-group">Fase final</h2>
-            <div class="title-star">
-                <h1>Top 8</h1><span>4tos de Final > Semifinales > Gran Final</span>
-            </div>
-            <p class="descrip">Bracket: Cruces definidos (Se mostrará en pagina el orden de los partidos).</p>
-        </div>
-    </div>
-
-
-  
-     <div class="col-12 col-md-12 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Fase Play-In</h2>
-            <div class="title-star">
-                <h1>4</h1><span>Grupos</span>
-            </div>
-            <p class="descrip">Clasificaran a la siguiente Fase Final los mejores 2 de cada grupo.</p>
-        </div>
-    </div>
-
-      <div class="col-12 col-md-12 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Fase regular</h2>
-            <div class="title-star">
-                <h1>2</h1><span>Grupos</span>
-            </div>
-            <p class="descrip">Clasificaran a la Fase Play-In ronda los mejores 8 de cada grupo.</p>
-        </div>
-    </div>
-
-
-    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Victoria</h2>
-            <div class="title-star">
-                <h1>3 pts</h1><span>2-0</span>
-            </div>
-         </div>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Victoria</h2>
-            <div class="title-star">
-                <h1>2 pts</h1><span>2-1</span>
-            </div>
-         </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Victoria</h2>
-            <div class="title-star">
-                <h1>1 pt</h1><span>1-2</span>
-            </div>
-         </div>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Derrota</h2>
-            <div class="title-star">
-                <h1>0 pts</h1><span>0-2</span>
-            </div>
-         </div>
-    </div>
-
-    <div class="col-12 col-md-12 col-lg-6 col-xl-3">
-        <div class="card-rules">
-            <h2 class="title-group">Desempates</h2>
-            <div class="title-star">
-                <h1>=</h1><span></span>
-            </div>
-            <p class="descrip">Empate en tabla: resultado directo entre equipos. Empate múltiple sin ganador directo: Bo1 entre involucrados.</p>
-           </div>
-    </div>
-</div>
+---
+layout: ligaIndigo
+permalink: /formato-de-competencia
+---
 
   <style>
     :root {
       --bg: #0b0f19;
-      --card: #ffffff00;
+      --card: #ffffff;
       --muted: #9fb0c3;
       --text: #e9f0fa;
       --accent: #7cc1ff;
@@ -104,6 +28,7 @@
     .subtitle { color: var(--muted); font-size: 14px; }
 
     .note {
+      background: #fff;
       border: 1px solid rgba(124,193,255,.25);
       border-radius: var(--radius);
       padding: 16px 18px; margin: 20px 0 28px; box-shadow: var(--shadow);
@@ -139,7 +64,7 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Formato de Competencia</h1>
+      <h1>Formato de Competencia — Liga Pokémon Unite</h1>
       <div class="subtitle">Round Robin (Bo3) en fases de grupos • Eliminación directa desde Cuartos</div>
     </header>
 
@@ -218,7 +143,7 @@
           <li><strong>Cruces:</strong> Definidos por <strong>sorteo aleatorio</strong> (o por cruce directo si no hay Play-In: <span class="kbd">1A vs 4B</span>, <span class="kbd">1B vs 4A</span>, <span class="kbd">2A vs 3B</span>, <span class="kbd">2B vs 3A</span>).</li>
           <li><strong>Avance:</strong> Ganadores a Semifinales y posteriormente a la Gran Final.</li>
         </ul>
-        <p class="muted pill warn text-black">La Gran Final se juega en Bo5.</p>
+        <p class="muted pill warn">La organización podrá definir si Semifinales y Final se juegan en Bo3 o Bo5.</p>
       </section>
 
       <section class="card">
@@ -233,9 +158,8 @@
       </section>
     </div>
 
-    <footer class="mb-5">
+    <footer>
       © Liga Indigo — Formato de Competencia. Última actualización: <script>document.write(new Date().toLocaleDateString('es-MX'))</script>
     </footer>
   </div>
 </body>
-
