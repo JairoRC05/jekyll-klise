@@ -334,7 +334,7 @@ title: Equipos inscritos
                     ${equipo.jugadores.map(jugador => `
                         <div class="jugador-item">
                             <span>${jugador.nombre} (${jugador.rol})</span>
-                            <span>${jugador.idJuego} ${jugador.esCapitan ? '<span class="capitan-tag">Capitán</span>' : ''}</span>
+                            <span>${jugador.esCapitan ? '<span class="capitan-tag">Capitán</span>' : ''} ${jugador.idJuego}</span>
                         </div>
                     `).join('')}
                 </div>

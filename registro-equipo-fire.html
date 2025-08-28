@@ -2,6 +2,7 @@
 layout: ligaIndigo
 permalink: /registro-equipos-liga-indigo
 title: REGISTRO DE EQUIPO
+inscripcion: true
 ---
 
 <!DOCTYPE html>
@@ -19,7 +20,6 @@ title: REGISTRO DE EQUIPO
 
         .container {
             background-color: white;
-            padding: 30px;
             color: #000;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -281,7 +281,7 @@ title: REGISTRO DE EQUIPO
             <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
 
             <div id="jugadoresError" class="error"></div>
-            <button type="submit" class="btn btn-submit">Registrar Equipo</button>
+            <button type="submit" class="btn btn-submit mb-3">Registrar Equipo</button>
             <div id="generalError" class="error"></div>
         </form>
     </div>
@@ -289,8 +289,8 @@ title: REGISTRO DE EQUIPO
     <div class="container mt-5 ">
         <div class="row indigo rounded">
             <div class="col-12 col-md-6">
-                <div class="d-flex flex-column justify-content-center">
-                    <img src="/assets/logos/LIGA INDIGO_LOGO.png" alt="img-fluid">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="/assets/logos/LIGA INDIGO_LOGO.png" class="img-fluid">
                     <span class="text-white">Garantizamos la confidencialidad de tus datos, usados solo para la gestión
                         interna de la Liga
                         Indigo.</span>
@@ -402,9 +402,9 @@ title: REGISTRO DE EQUIPO
     </div>
 
 
-     <div class="d-flex justify-content-center align-items-center">
-      <a href="https://wa.me/525539600935" class="btn btn-add mt-5">WhatsApp <i class="ti ti-brand-whatsapp"></i></a>
-      <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a>
+    <div class="d-flex justify-content-center align-items-center">
+        <a href="https://wa.me/525539600935" class="btn btn-add mt-5">WhatsApp <i class="ti ti-brand-whatsapp"></i></a>
+        <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a>
     </div>
 
     <!-- Contenedor oculto para la tarjeta de confirmación -->
@@ -584,21 +584,33 @@ title: REGISTRO DE EQUIPO
             const div = document.createElement("div");
             div.classList.add("jugador");
             div.innerHTML = `
-                <input type="text" placeholder="Nombre del jugador" value="${nombre}" required>
+            <div class="row g-3">
+                <div class="col-12 col-lg-3">
+                  <input type="text" placeholder="Nombre del jugador" value="${nombre}" maxlength="12" required>    
+                    <small>Nombre: máx. 12 caracteres</small>
+                  </div>
+                <div class="col-12 col-lg-3">
                 <select required>
                     <option value="">Rol</option>
                     <option value="ADC">ADC</option>
                     <option value="Auxiliar">Auxiliar</option>
                     <option value="Top">Top</option>
                     <option value="Defensivo">Defensivo</option>
-                    <option value="Jungle">Jungle</option>
+                    <option value="Jungle">Jungla</option>
                 </select>
-                <input type="text" placeholder="ID (ej: 1HQ5X78)" value="${ID}" required>
+                </div>
+                   <div class="col-12 col-lg-3">
+                <input type="text" placeholder="ID (ej: 1HQ5X78)" value="${ID}" maxlength="7" required>
+                <small>ID: máx: 7 caracteres</small>
+                </div>
+                   <div class="col-12 col-lg-3">
                 <label>
                     <input type="checkbox" class="capitan-checkbox" ${esCapitan ? 'checked' : ''}>
                     Capitán
                 </label>
                 <button type="button" class="btn btn-remove">X</button>
+                </div>
+                </div>
             `;
 
             // Seleccionar el valor del rol si viene predefinido
@@ -867,24 +879,29 @@ title: REGISTRO DE EQUIPO
             const jugadores = [];
             let capitánNombre = "";
 
+      
             document.querySelectorAll("#jugadoresContainer .jugador").forEach(div => {
                 const inputs = div.querySelectorAll("input");
                 const select = div.querySelector("select");
                 const esCapitan = div.querySelector(".capitan-checkbox").checked;
 
-                // Validar que todos los campos del jugador estén completos
-                if (inputs[0].value && select.value && inputs[2].value) {
+           
+                const nombre = inputs[0].value;
+                const idJuego = inputs[1].value;  
+
+          
+                if (nombre && select.value && idJuego) {
                     const jugador = {
-                        nombre: inputs[0].value,
+                        nombre: nombre,
                         rol: select.value,
-                        idJuego: inputs[2].value,
+                        idJuego: idJuego,       
                         esCapitan: esCapitan
                     };
 
                     jugadores.push(jugador);
 
                     if (esCapitan) {
-                        capitánNombre = inputs[0].value;
+                        capitánNombre = nombre;
                     }
                 }
             });
