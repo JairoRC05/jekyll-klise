@@ -1,0 +1,460 @@
+---
+
+layout: ligaIndigo
+permalink: /equipos-inscritos-liga-indigo
+title: Equipos inscritos
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos Inscritos</title>
+    <style>
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .info {
+            font-size: 1.1em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        #searchInput {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 500px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        #searchInput:focus {
+            border-color: #007bff;
+        }
+        
+        .equipos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .equipo-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #007bff;
+        }
+        
+        .equipo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .equipo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .equipo-nombre {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        
+        .equipo-tag {
+            background: #007bff;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .equipo-info {
+            margin-bottom: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 100px;
+            color: #555;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: #333;
+        }
+        
+        .jugadores-container {
+            margin-top: 15px;
+        }
+        
+        .jugadores-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        
+        .jugador-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .capitan-tag {
+            background-color: #ffc107;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .empty-state i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .equipos-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalEquipos">0</div>
+                <div class="stat-label">Equipos Registrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="espaciosRestantes">32</div>
+                <div class="stat-label">Espacios Disponibles</div>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar equipo por nombre, tag o jugador...">
+        </div>
+        
+        <div id="loading" class="loading">
+            Cargando equipos inscritos...
+        </div>
+        
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <i>📊</i>
+            <p>Aún no hay equipos registrados.</p>
+            <p>Los equipos aparecerán aquí una vez que se registren.</p>
+        </div>
+        
+        <div id="equiposContainer" class="equipos-container">
+            <!-- Los equipos se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script type="module">
+        // Importar Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // Configuración de Firebase (misma que en el formulario de registro)
+        const firebaseConfig = {
+            apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+            authDomain: "unite-mex.firebaseapp.com",
+            projectId: "unite-mex",
+            storageBucket: "unite-mex.appspot.com",
+            messagingSenderId: "248961873504",
+            appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+            measurementId: "G-87W4VS8QYX"
+        };
+
+        // Inicializar Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Elementos del DOM
+        const equiposContainer = document.getElementById("equiposContainer");
+        const loadingElement = document.getElementById("loading");
+        const emptyStateElement = document.getElementById("emptyState");
+        const totalEquiposElement = document.getElementById("totalEquipos");
+        const espaciosRestantesElement = document.getElementById("espaciosRestantes");
+        const searchInput = document.getElementById("searchInput");
+
+        // Variable para almacenar todos los equipos
+        let todosLosEquipos = [];
+
+        // Función para formatear el número de WhatsApp
+        function formatoWhatsApp(numero) {
+            if (!numero) return "No disponible";
+            const str = numero.toString();
+            return `${str.substring(0,2)} ${str.substring(2,6)} ${str.substring(6,10)}`;
+        }
+
+        // Función para crear la tarjeta de equipo
+        function crearTarjetaEquipo(equipo, index) {
+            const div = document.createElement("div");
+            div.className = "equipo-card";
+            div.dataset.index = index;
+            
+            // Buscar el capitán
+            const capitán = equipo.jugadores.find(j => j.esCapitan);
+            const nombreCapitán = capitán ? capitán.nombre : "No especificado";
+            
+            div.innerHTML = `
+                <div class="equipo-header">
+                    <h3 class="equipo-nombre">${equipo.nombreEquipo}</h3>
+                    <span class="equipo-tag">${equipo.tagEquipo}</span>
+                </div>
+                
+                <div class="equipo-info">
+                    <div class="info-item">
+                        <span class="info-label">Capitán:</span>
+                        <span class="info-value">${nombreCapitán}</span>
+                    </div>
+               
+                    <div class="info-item">
+                        <span class="info-label">Fecha:</span>
+                        <span class="info-value">${new Date(equipo.fechaRegistro).toLocaleDateString('es-MX', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        })}</span>
+                    </div>
+                </div>
+                
+                <div class="jugadores-container">
+                    <div class="jugadores-title">Jugadores (${equipo.jugadores.length})</div>
+                    ${equipo.jugadores.map(jugador => `
+                        <div class="jugador-item">
+                            <span>${jugador.nombre} (${jugador.rol})</span>
+                            <span>${jugador.idJuego} ${jugador.esCapitan ? '<span class="capitan-tag">Capitán</span>' : ''}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            return div;
+        }
+
+        // Función para cargar equipos desde Firestore
+        async function cargarEquipos() {
+            try {
+                const equiposRef = collection(db, "equipos");
+                const snapshot = await getDocs(equiposRef);
+                
+                // Ocultar estado de carga
+                loadingElement.style.display = "none";
+                
+                if (snapshot.empty) {
+                    emptyStateElement.style.display = "block";
+                    totalEquiposElement.textContent = "0";
+                    espaciosRestantesElement.textContent = "32";
+                    return;
+                }
+                
+                // Limpiar contenedor
+                equiposContainer.innerHTML = "";
+                todosLosEquipos = [];
+                
+                // Convertir snapshot a array de equipos
+                snapshot.forEach(doc => {
+                    const equipo = doc.data();
+                    equipo.id = doc.id;
+                    todosLosEquipos.push(equipo);
+                });
+                
+                // Ordenar equipos por fecha de registro (más recientes primero)
+                todosLosEquipos.sort((a, b) => new Date(b.fechaRegistro) - new Date(a.fechaRegistro));
+                
+                // Mostrar todos los equipos
+                todosLosEquipos.forEach((equipo, index) => {
+                    const tarjeta = crearTarjetaEquipo(equipo, index);
+                    equiposContainer.appendChild(tarjeta);
+                });
+                
+                // Actualizar estadísticas
+                totalEquiposElement.textContent = todosLosEquipos.length;
+                espaciosRestantesElement.textContent = Math.max(0, 32 - todosLosEquipos.length);
+                
+            } catch (error) {
+                console.error("Error al cargar equipos:", error);
+                loadingElement.innerHTML = `
+                    <div style="color: #dc3545;">
+                        Error al cargar los equipos: ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        // Función para buscar equipos
+        function buscarEquipos(termino) {
+            if (!termino.trim()) {
+                // Si no hay término de búsqueda, mostrar todos
+                equiposContainer.innerHTML = "";
+                todosLosEquipos.forEach((equipo, index) => {
+                    const tarjeta = crearTarjetaEquipo(equipo, index);
+                    equiposContainer.appendChild(tarjeta);
+                });
+                return;
+            }
+            
+            const terminoBusqueda = termino.toLowerCase();
+            const equiposFiltrados = todosLosEquipos.filter(equipo => {
+                // Buscar en nombre del equipo
+                if (equipo.nombreEquipo.toLowerCase().includes(terminoBusqueda)) return true;
+                
+                // Buscar en tag del equipo
+                if (equipo.tagEquipo.toLowerCase().includes(terminoBusqueda)) return true;
+                
+                // Buscar en nombre del capitán
+                const capitán = equipo.jugadores.find(j => j.esCapitan);
+                if (capitán && capitán.nombre.toLowerCase().includes(terminoBusqueda)) return true;
+                
+                // Buscar en nombres de jugadores
+                if (equipo.jugadores.some(j => j.nombre.toLowerCase().includes(terminoBusqueda))) return true;
+                
+                // Buscar en IDs de jugadores
+                if (equipo.jugadores.some(j => j.idJuego.toLowerCase().includes(terminoBusqueda))) return true;
+                
+                // Buscar en número de contacto
+                if (equipo.contacto && equipo.contacto.includes(terminoBusqueda.replace(/\D/g, ''))) return true;
+                
+                return false;
+            });
+            
+            // Limpiar y mostrar resultados filtrados
+            equiposContainer.innerHTML = "";
+            
+            if (equiposFiltrados.length === 0) {
+                equiposContainer.innerHTML = `
+                    <div class="empty-state">
+                        <p>No se encontraron equipos que coincidan con "${termino}"</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            equiposFiltrados.forEach((equipo, index) => {
+                const tarjeta = crearTarjetaEquipo(equipo, todosLosEquipos.indexOf(equipo));
+                equiposContainer.appendChild(tarjeta);
+            });
+        }
+
+        // Evento de búsqueda
+        searchInput.addEventListener("input", (e) => {
+            buscarEquipos(e.target.value);
+        });
+
+        // Cargar equipos cuando la página se cargue
+        window.addEventListener("load", cargarEquipos);
+    </script>
+</body>
+
+</html>

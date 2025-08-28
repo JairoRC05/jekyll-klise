@@ -25,6 +25,12 @@
   color: #000000;
 }
 
+.btn-sucess-custom {
+  @extend %btn-base;
+  background-color: #078a2a;
+  color: #e6e6e6;
+}
+
 
 .btn-dark-custom {
   @extend %btn-base;
