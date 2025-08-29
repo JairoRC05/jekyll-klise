@@ -25,24 +25,7 @@ inscripcion: true
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .jugador {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
 
-        .jugador input,
-        .jugador select {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
 
         .btn {
             padding: 6px 12px;
@@ -58,9 +41,20 @@ inscripcion: true
             color: white;
             margin-bottom: 15px;
         }
+        .btn-add:hover {
+            background: #218538;
+            color: white;
+            margin-bottom: 15px;
+        }
 
         .btn-remove {
             background: #dc3545;
+            color: white;
+            padding: 2px 6px;
+        }
+      
+        .btn-remove:hover {
+            background: #e20017;
             color: white;
             padding: 2px 6px;
         }
@@ -73,26 +67,19 @@ inscripcion: true
             font-size: 16px;
             width: 100%;
         }
-
-        input,
-        select {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+     
+        .btn-submit:hover {
+            background: #1586ff;
+            color: white;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
             width: 100%;
-            box-sizing: border-box;
         }
 
-        label {
-            font-weight: bold;
-            color: #333;
-        }
+      
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        h2 {
+        .line-form {
             color: #333;
             border-bottom: 2px solid #007bff;
             padding-bottom: 10px;
@@ -108,11 +95,6 @@ inscripcion: true
 
         .error.show {
             display: block;
-        }
-
-        .capitan-checkbox {
-            margin-left: 10px;
-            transform: scale(1.2);
         }
 
         .contacto-container {
@@ -226,8 +208,8 @@ inscripcion: true
 
 <body>
 
-    <div class="container mb-3">
-        <h3>INSTRUCCIONES PARA INSCRIBIR A TU EQUIPO</h3>
+    <div class="games-section mb-3">
+        <h3 class="line-form">INSTRUCCIONES PARA INSCRIBIR A TU EQUIPO</h3>
         <ul>
             <li>1. Registra a tu equipo recuerda que son 5 jugadores minimo y máximo 9 jugadores</li>
             <li>2. Despues acepta el reglamento, términos y condiciones.</li>
@@ -237,46 +219,46 @@ inscripcion: true
                 administrador.</li>
             <li>4. Envie el archivo del reglamento donde aceptaste el reglamento terminos y condiocnes al numero de
                 WhatsApp que se muestra al final.</li>
-            <li>5. El adminstrador de enviará el numero de cuenta a depositar el pago de inscripcion tienes 2 dias para
+            <li>5. El adminstrador te enviará el numero de cuenta a depositar el pago de inscripcion tienes 2 dias para
                 hacer pago en caso contrario el equipo de dará de baja y se tendra que crear nuevo registro, si
                 registras tu equipo en el último dia de inscripciones el plazo que tendras para realizar el pago es de
                 una 1h. Cierre de inscripciones: 05 sep a las 11:30 PM. Inicio de la Liga 08 Sep </li>
         </ul>
     </div>
 
-    <div class="container">
-        <h2>Registro de Equipos (máx. 32 equipos)</h2>
+    <div class="games-section">
+        <h3 class="line-form">REGÍSTRA A TU EQUIPO (máx. 32 equipos)</h3>
 
-        <form id="registroForm">
-            <div class="form-group">
+        <form class="row g-3" id="registroForm">
+            <div class="col-12 col-md-6 col-lg-4">
                 <label>Nombre del Equipo:</label><br>
-                <input type="text" id="nombreEquipo" maxlength="20" required>
+                <input class="form-control" type="text" id="nombreEquipo" maxlength="20" required>
                 <div id="nombreEquipoError" class="error"></div>
                 <small>Máximo 20 caracteres</small>
             </div>
 
-            <div class="form-group">
+            <div class="col-12 col-md-6 col-lg-4">
                 <label>Tag del Equipo:</label><br>
-                <input type="text" id="tagEquipo" maxlength="5" required>
+                <input class="form-control" type="text" id="tagEquipo" maxlength="5" required>
                 <div id="tagEquipoError" class="error"></div>
                 <small>Máximo 5 caracteres</small>
             </div>
 
-            <div class="form-group">
+            <div class="col-12 col-md-6 col-lg-4">
                 <label>Contacto WhatsApp:</label><br>
                 <div class="contacto-container">
-                    <input type="tel" id="contacto" placeholder="55 1234 5678" required>
+                    <input class="form-control" maxlength="12" type="tel" id="contacto" placeholder="55 1234 5678" required>
                 </div>
                 <div id="contactoError" class="error"></div>
-                <small>Formato: 10 dígitos (ej: 5512345678)</small>
+                <small>Formato: 12 dígitos (ej: 52 55 1234 5678)</small>
             </div>
 
-            <div class="capitan-info">
+            <div class="col-12 capitan-info">
                 <strong>Capitán del equipo:</strong> Selecciona un jugador del equipo como capitán marcando la casilla
                 "Capitán". Solo puedes seleccionar un capitán.
             </div>
 
-            <h3>Jugadores (mínimo 5, máximo 9)</h3>
+            <h3 class="line-form">JUGADORES (mínimo 5, máximo 9)</h3>
             <div id="jugadoresContainer"></div>
             <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
 
@@ -331,7 +313,7 @@ inscripcion: true
             <li>Las <b>restricciones de nombres y logos</b>.</li>
             <li>Cualquier otra disposición detallada en este documento.</li>
         </ul>
-        <h3>Modificaciones al Reglamento</h3>
+        <h3 class="line-form">Modificaciones al Reglamento</h3>
         <p>La administración de la Liga Indigo se reserva el derecho de <b>modificar o ajustar este reglamento en
                 cualquier
                 momento</b> durante el transcurso del torneo. Esto puede ocurrir para abordar situaciones imprevistas,
@@ -375,7 +357,7 @@ inscripcion: true
                         <li>Las <b>restricciones de nombres y logos</b>.</li>
                         <li>Cualquier otra disposición detallada en este documento.</li>
                     </ul>
-                    <h3>Modificaciones al Reglamento</h3>
+                    <h3 class="line-form">Modificaciones al Reglamento</h3>
                     <p>La administración de la Liga Indigo se reserva el derecho de <b>modificar o
                             ajustar este reglamento en cualquier momento</b> durante el transcurso del torneo. Esto
                         puede ocurrir para
@@ -407,11 +389,11 @@ inscripcion: true
         <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a>
     </div>
 
-    <!-- Contenedor oculto para la tarjeta de confirmación -->
+
     <div id="confirmacionContainer" class="confirmacion-container">
         <div class="confirmacion-card" id="confirmacionCard">
             <div class="confirmacion-header">
-                <h3>✅ ¡Equipo Registrado con Éxito!</h3>
+                <h3 class="line-form">✅ ¡Equipo Registrado con Éxito!</h3>
             </div>
             <div class="confirmacion-content" id="capturaContenido">
                 <div class="equipo-info">
@@ -584,13 +566,15 @@ inscripcion: true
             const div = document.createElement("div");
             div.classList.add("jugador");
             div.innerHTML = `
-            <div class="row g-3">
+            <div class="row gy-2 gx-3 align-items-center">
                 <div class="col-12 col-lg-3">
-                  <input type="text" placeholder="Nombre del jugador" value="${nombre}" maxlength="12" required>    
-                    <small>Nombre: máx. 12 caracteres</small>
+                  <label for="namePlayer" class="form-label">Nickname</label>
+                  <input class="form-control" type="text" placeholder="Nombre del jugador" value="${nombre}" maxlength="12" required>    
+                  <small>Máx. 12 caracteres</small>
                   </div>
                 <div class="col-12 col-lg-3">
-                <select required>
+                 <label for="selectRol" class="form-label">Selecciona rol</label>
+                <select class="form-select" required>
                     <option value="">Rol</option>
                     <option value="ADC">ADC</option>
                     <option value="Auxiliar">Auxiliar</option>
@@ -598,17 +582,20 @@ inscripcion: true
                     <option value="Defensivo">Defensivo</option>
                     <option value="Jungle">Jungla</option>
                 </select>
+                <small>Solo una opción</small>
+                </div>
+                <div class="col-12 col-lg-3">
+                 <label for="IDPlayer" class="form-label">ID</label>
+                <input class="form-control" type="text" placeholder="1HQ5X78" value="${ID}" minlebght="5" maxlength="7" required>
+                <small>Máx: 7 caracteres</small>
                 </div>
                    <div class="col-12 col-lg-3">
-                <input type="text" placeholder="ID (ej: 1HQ5X78)" value="${ID}" maxlength="7" required>
-                <small>ID: máx: 7 caracteres</small>
-                </div>
-                   <div class="col-12 col-lg-3">
-                <label>
-                    <input type="checkbox" class="capitan-checkbox" ${esCapitan ? 'checked' : ''}>
-                    Capitán
-                </label>
-                <button type="button" class="btn btn-remove">X</button>
+                    <div class="form-check">
+                    <input type="checkbox" class="capitan-checkbox form-check-input" ${esCapitan ? 'checked' : ''}>
+                    <label class="form-check-label" for="gridCheck">Capitán</label>
+                    <button type="button" class="btn btn-remove">X</button>
+                   </div>     
+       
                 </div>
                 </div>
             `;
@@ -691,7 +678,7 @@ inscripcion: true
                 errorDiv.textContent = "El número de contacto es requerido";
                 errorDiv.classList.add("show");
                 return false;
-            } else if (soloNumeros.length !== 10) {
+            } else if (soloNumeros.length !== 12) {
                 errorDiv.textContent = "El número debe tener 10 dígitos";
                 errorDiv.classList.add("show");
                 return false;
