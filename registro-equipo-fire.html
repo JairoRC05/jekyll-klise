@@ -265,14 +265,12 @@ inscripcion: true
             <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
 
             <div id="jugadoresError" class="error"></div>
-            <button type="submit" class="btn btn-submit mb-3">Registrar Equipo</button>
+            <button type="submit" class="btn btn-submit mb-3" disabled>Registrar Equipo</button>
             <div id="generalError" class="error"></div>
         </form>
     </div>
 
-    <div id="countdown" class="countdown">
-        Tiempo restante para registrar: <span id="tiempoRestante">Cargando...</span>
-    </div>
+    
 
     <div class="container mt-5 ">
         <div class="row indigo rounded">
@@ -961,63 +959,8 @@ inscripcion: true
         });
 
 
-        // === CONFIGURACIÓN: Fecha y hora límite para registrar equipos ===
-        const FECHA_LIMITE_REGISTRO = new Date("2025-09-05T23:59:59"); 
+   
 
-        // === Elementos del DOM ===
-        const btnRegistrar = document.getElementById("btnRegistrar");
-        const generalError = document.getElementById("generalError");
-        const tiempoRestante = document.getElementById("tiempoRestante");
-
-        // === Función que verifica la fecha límite y actualiza UI ===
-        function verificarFechaLimite() {
-            const ahora = new Date();
-            const diff = FECHA_LIMITE_REGISTRO - ahora;
-
-            if (diff <= 0) {
-                // Tiempo agotado
-                btnRegistrar.disabled = true;
-                tiempoRestante.textContent = "Tiempo agotado";
-                tiempoRestante.style.color = "#e74c3c";
-                generalError.textContent = "El registro de equipos ha finalizado.";
-                generalError.style.display = "block";
-                return false;
-            } else {
-                // Aún hay tiempo
-                actualizarContador(diff);
-                btnRegistrar.disabled = false;
-                generalError.style.display = "none";
-                return true;
-            }
-        }
-
-        // === Función que actualiza el contador (días, horas, minutos, segundos) ===
-        function actualizarContador(ms) {
-            const dias = Math.floor(ms / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((ms % (1000 * 60)) / 1000);
-
-            tiempoRestante.innerHTML = `
-        <strong>${dias}</strong>d <strong>${horas}</strong>h <strong>${minutos}</strong>m <strong>${segundos}</strong>s
-    `;
-            tiempoRestante.style.color = "#27ae60";
-        }
-
-    
-
-        // === Iniciar el temporizador al cargar la página ===
-        let temporizador;
-
-        document.addEventListener("DOMContentLoaded", () => {
-            // Verificar inmediatamente
-            verificarFechaLimite();
-
-            // Actualizar cada segundo
-            temporizador = setInterval(() => {
-                verificarFechaLimite();
-            }, 1000);
-        });
 
 
         // Agregar un jugador inicial
