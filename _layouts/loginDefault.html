@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title }} - Mi Sitio</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+header {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #4a6fa5;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.form-container button:hover {
+  background-color: #3a5a80;
+}
+
+#message {
+  margin-top: 1rem;
+  min-height: 1.5rem;
+}
+
+.protected-page {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Sitio con Jekyll + Firebase</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <span id="auth-links">
+        <!-- Se actualiza dinámicamente -->
+      </span>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script>
+    // Configuración de Firebase
+   const firebaseConfig = {
+            apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+            authDomain: "unite-mex.firebaseapp.com",
+            projectId: "unite-mex",
+            storageBucket: "unite-mex.appspot.com",
+            messagingSenderId: "248961873504",
+            appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+            measurementId: "G-87W4VS8QYX"
+        };
+
+
+
+
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Actualiza enlaces de autenticación según el estado del usuario
+    firebase.auth().onAuthStateChanged((user) => {
+      const authLinks = document.getElementById('auth-links');
+      if (user) {
+        authLinks.innerHTML = `
+          <a href="/dashboard/">Panel</a> |
+          <a href="#" onclick="logout()">Cerrar sesión</a>
+        `;
+      } else {
+        authLinks.innerHTML = `
+          <a href="/login.html">Iniciar sesión</a> |
+          <a href="/register.html">Registrarse</a>
+        `;
+      }
+    });
+
+    function logout() {
+      firebase.auth().signOut().then(() => {
+        alert("Sesión cerrada");
+        window.location.href = "/inicio/";
+      }).catch((error) => {
+        alert("Error al cerrar sesión: " + error.message);
+      });
+    }
+  </script>
+</body>
+</html>

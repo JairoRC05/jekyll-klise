@@ -1,0 +1,38 @@
+---
+layout: loginDefault
+title: Iniciar sesión
+permalink: /login
+---
+
+<div class="form-container">
+  <h2>Iniciar sesión</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Correo electrónico" required /><br />
+    <input type="password" id="password" placeholder="Contraseña" required /><br />
+    <button type="submit">Iniciar sesión</button>
+  </form>
+  <p id="message"></p>
+  <p>¿No tienes cuenta? <a href="/register/">Regístrate aquí</a></p>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const message = document.getElementById('message');
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      message.style.color = "green";
+      message.textContent = "¡Bienvenido!";
+      setTimeout(() => {
+        window.location.href = "/dashboard/";
+      }, 1000);
+    })
+    .catch((error) => {
+      message.style.color = "red";
+      message.textContent = "Error: " + error.message;
+    });
+});
+</script>

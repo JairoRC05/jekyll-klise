@@ -1,0 +1,27 @@
+---
+layout: loginDefault
+title: Panel
+permalink: /dashboard/
+---
+
+<div class="protected-page">
+  <h2>Panel de Usuario</h2>
+  <p id="user-info">Cargando información...</p>
+  <button onclick="logout()">Cerrar sesión</button>
+</div>
+
+<script>
+firebase.auth().onAuthStateChanged((user) => {
+  const userInfo = document.getElementById('user-info');
+  if (user) {
+    userInfo.innerHTML = `
+      <strong>Usuario autenticado:</strong> ${user.email} <br><br>
+      Aquí puedes agregar contenido protegido: datos, configuraciones, etc.
+    `;
+  } else {
+    userInfo.innerHTML = `
+      <span style="color: red;">Acceso no autorizado. <a href="/login/">Inicia sesión</a>.</span>
+    `;
+  }
+});
+</script>
