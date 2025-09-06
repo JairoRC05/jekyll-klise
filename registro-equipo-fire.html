@@ -41,6 +41,7 @@ inscripcion: true
             color: white;
             margin-bottom: 15px;
         }
+
         .btn-add:hover {
             background: #218538;
             color: white;
@@ -52,7 +53,7 @@ inscripcion: true
             color: white;
             padding: 2px 6px;
         }
-      
+
         .btn-remove:hover {
             background: #e20017;
             color: white;
@@ -67,7 +68,7 @@ inscripcion: true
             font-size: 16px;
             width: 100%;
         }
-     
+
         .btn-submit:hover {
             background: #1586ff;
             color: white;
@@ -77,7 +78,7 @@ inscripcion: true
             width: 100%;
         }
 
-      
+
 
         .line-form {
             color: #333;
@@ -247,7 +248,8 @@ inscripcion: true
             <div class="col-12 col-md-6 col-lg-4">
                 <label>Contacto WhatsApp:</label><br>
                 <div class="contacto-container">
-                    <input class="form-control" maxlength="12" type="tel" id="contacto" placeholder="55 1234 5678" required>
+                    <input class="form-control" maxlength="12" type="tel" id="contacto" placeholder="55 1234 5678"
+                        required>
                 </div>
                 <div id="contactoError" class="error"></div>
                 <small>Formato: 12 dígitos (ej: 52 55 1234 5678)</small>
@@ -266,6 +268,10 @@ inscripcion: true
             <button type="submit" class="btn btn-submit mb-3">Registrar Equipo</button>
             <div id="generalError" class="error"></div>
         </form>
+    </div>
+
+    <div id="countdown" class="countdown">
+        Tiempo restante para registrar: <span id="tiempoRestante">Cargando...</span>
     </div>
 
     <div class="container mt-5 ">
@@ -866,22 +872,22 @@ inscripcion: true
             const jugadores = [];
             let capitánNombre = "";
 
-      
+
             document.querySelectorAll("#jugadoresContainer .jugador").forEach(div => {
                 const inputs = div.querySelectorAll("input");
                 const select = div.querySelector("select");
                 const esCapitan = div.querySelector(".capitan-checkbox").checked;
 
-           
-                const nombre = inputs[0].value;
-                const idJuego = inputs[1].value;  
 
-          
+                const nombre = inputs[0].value;
+                const idJuego = inputs[1].value;
+
+
                 if (nombre && select.value && idJuego) {
                     const jugador = {
                         nombre: nombre,
                         rol: select.value,
-                        idJuego: idJuego,       
+                        idJuego: idJuego,
                         esCapitan: esCapitan
                     };
 
@@ -953,6 +959,66 @@ inscripcion: true
                 confirmacionContainer.style.display = 'none';
             }
         });
+
+
+        // === CONFIGURACIÓN: Fecha y hora límite para registrar equipos ===
+        const FECHA_LIMITE_REGISTRO = new Date("2025-09-05T23:59:59"); 
+
+        // === Elementos del DOM ===
+        const btnRegistrar = document.getElementById("btnRegistrar");
+        const generalError = document.getElementById("generalError");
+        const tiempoRestante = document.getElementById("tiempoRestante");
+
+        // === Función que verifica la fecha límite y actualiza UI ===
+        function verificarFechaLimite() {
+            const ahora = new Date();
+            const diff = FECHA_LIMITE_REGISTRO - ahora;
+
+            if (diff <= 0) {
+                // Tiempo agotado
+                btnRegistrar.disabled = true;
+                tiempoRestante.textContent = "Tiempo agotado";
+                tiempoRestante.style.color = "#e74c3c";
+                generalError.textContent = "El registro de equipos ha finalizado.";
+                generalError.style.display = "block";
+                return false;
+            } else {
+                // Aún hay tiempo
+                actualizarContador(diff);
+                btnRegistrar.disabled = false;
+                generalError.style.display = "none";
+                return true;
+            }
+        }
+
+        // === Función que actualiza el contador (días, horas, minutos, segundos) ===
+        function actualizarContador(ms) {
+            const dias = Math.floor(ms / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((ms % (1000 * 60)) / 1000);
+
+            tiempoRestante.innerHTML = `
+        <strong>${dias}</strong>d <strong>${horas}</strong>h <strong>${minutos}</strong>m <strong>${segundos}</strong>s
+    `;
+            tiempoRestante.style.color = "#27ae60";
+        }
+
+    
+
+        // === Iniciar el temporizador al cargar la página ===
+        let temporizador;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Verificar inmediatamente
+            verificarFechaLimite();
+
+            // Actualizar cada segundo
+            temporizador = setInterval(() => {
+                verificarFechaLimite();
+            }, 1000);
+        });
+
 
         // Agregar un jugador inicial
         agregarJugador();
