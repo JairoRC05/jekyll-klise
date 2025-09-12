@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!streamContainer) return;
 
   const archivosJson = [
-    '/assets/temporadas/julio2025/psur.json',
-    '/assets/temporadas/julio2025/pnorte.json'
+    '/assets/temporadas/sep2025/calendario.json'
   ];
 
   Promise.all(archivosJson.map(url => fetch(url).then(res => res.json())))

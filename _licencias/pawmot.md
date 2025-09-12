@@ -1,7 +1,7 @@
 ---
-nombre: "LATIOS"
+nombre: "PAWMOT"
 layout: licencias
-rol: Ofensivo
+rol:  Equilibrado
 tipo: Ataque especial
 modo: Largo alcance
 dificultad: media
@@ -74,5 +74,5 @@ movimiento_unite:
     y causan una explosión que inflige daño alrededor del objetivo.
   tipo: "Largo alcance"
   recarga: "000s"
-ban: false
+ban: true
 ---
