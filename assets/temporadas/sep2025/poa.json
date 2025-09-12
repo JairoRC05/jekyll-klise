@@ -1,0 +1,67 @@
+{
+  "tag": "POA",
+  "team": "PHOBIUS AURA",
+  "org": "",
+  "activo": true,
+  "capitan": "Mostaza",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "PHOBIUS AURA",
+  "seguro": true,
+  "link": "/equipos/phobius-aura",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": "",
+    "M13": "",
+    "M14": ""
+  },
+  "jugadores": [
+    {
+      "nickname": "PøĄ°Møstązą",
+      "ID": "REYM7Q3",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PøĄ°Doni",
+      "ID": "8GYY47G",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PøĄ°Jumper",
+      "ID": "HGQ3G2K",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PøĄ°Kev",
+      "ID": "G80T3A2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "PøĄ°Gąbøsøre",
+      "ID": "HFPNNKK",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Jelosaツ",
+      "ID": "KT2XRNK",
+      "avatar": "female1"
+    }
+  ],
+  "wins": 0,
+  "losses": 0,
+  "draws": 0,
+  "points": 0,
+  "logo": "",
+  "posicionDesempate": true
+}

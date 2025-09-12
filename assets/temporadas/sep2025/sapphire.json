@@ -1,0 +1,60 @@
+{
+  "tag": "DFS",
+  "team": "DFS SAPPHIRE",
+  "org": "",
+  "activo": true,
+  "capitan": "TREVOR",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DFS SAPPHIRE",
+  "seguro": false,
+  "link": "/equipos/dfs-sapphire",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "DFs・Trevor",
+      "ID": "6NC11M4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Mudkip",
+      "ID": "17ANET6",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Arepa",
+      "ID": "HM0FQ75",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・TheBaez",
+      "ID": "XYGHX92",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Destiny",
+      "ID": "H0Q78ET",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・HaKuna",
+      "ID": "CM30NA3",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

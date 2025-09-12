@@ -1,0 +1,68 @@
+{
+  "tag": "TUTOC",
+  "team": "TUT ONECOIN",
+  "org": "THE UNOWN TEAM",
+  "activo": true,
+  "capitan": "GERD",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "TUT ONECOIN",
+  "seguro": true,
+  "link": "/equipos/theunownteam--one-coin",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": ""
+  },
+  "jugadores": [
+    {
+      "nickname": "夕мilwåüкєє",
+      "ID": "A9390CX",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "Raydemort",
+      "ID": "H8Y27LQ",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "Dr.Mario(Z)",
+      "ID": "GGA8QFL",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Overtony",
+      "ID": "RMEPEEA",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "を・SaYoNaRa",
+      "ID": "4F1X6AH",
+      "avatar": "male1",
+      "teamTag": "TUTW"
+    },
+    {
+      "nickname": "DannGP",
+      "ID": "77GCPT4",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "OverToñita",
+      "ID": "CT23992",
+      "avatar": "female1"
+    }
+  ],
+  "posicionDesempate": false
+}

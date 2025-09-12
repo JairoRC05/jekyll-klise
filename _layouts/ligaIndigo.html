@@ -130,10 +130,16 @@ layout:
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="/assets/js/utils.js"></script>
+     <script src="/assets/js/utils.js"></script> 
 
     <script src="/assets/js/utils_rankings.js"></script>
-    <script src="/assets/js/ranking_temporada.js"></script>
+
+    <script>
+// Cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", () => {
+    cargarRankingsDesdeIndice("/assets/temporadas/sep2025", false); 
+});
+</script>
     <script src="/assets/today.js"></script>
     <script src="/assets/js/timer_ins.js"></script>
     <script src="/assets/js/banners.js"></script>

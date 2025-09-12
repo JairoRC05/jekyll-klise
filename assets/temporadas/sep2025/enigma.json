@@ -1,0 +1,72 @@
+{
+  "tag": "ENG",
+  "team": "ENIGMA ESPORTS",
+  "org": "",
+  "activo": true,
+  "capitan": "RODMAN",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "ENIGMA ESPORTS",
+  "seguro": false,
+  "link": "/equipos/enigma-esports",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "SPC・Rodman",
+      "ID": "A6YE7LQ",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 1,
+      "m1": "HG"
+    },
+    {
+      "nickname": "Listen'.",
+      "ID": "X556TRH",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "・Blancoツ",
+      "ID": "QN0E8LQ",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "SPC・Lolfe教",
+      "ID": "F942677",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 1,
+      "m1": 1,
+      "m4": 1
+    },
+    {
+      "nickname": "千RICモ",
+      "ID": "HR3X0NP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "rokü",
+      "ID": "P0YAR9T",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "氷・NɎox",
+      "ID": "PRR9TMH",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

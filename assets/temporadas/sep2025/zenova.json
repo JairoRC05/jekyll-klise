@@ -1,0 +1,60 @@
+{
+  "tag": "ZVS",
+  "team": "ZENOVA",
+  "org": "",
+  "activo": true,
+  "capitan": "QUIET",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "ZENOVA",
+  "seguro": false,
+  "link": "/equipos/zenova",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "Cœur・Bear熊",
+      "ID": "P136PCP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Sofikut!",
+      "ID": "A83EQTN",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "虹・WillyAHR",
+      "ID": "C20KFAQ",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs • Amari",
+      "ID": "FGPFK86",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "Psy-ay-ay",
+      "ID": "YK2T59N",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "YisusMC5ツ",
+      "ID": "NLRL181",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

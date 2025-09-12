@@ -1,0 +1,75 @@
+{
+  "tag": "PHY",
+  "team": "THE PHAMILY",
+  "org": "",
+  "activo": true,
+  "capitan": "DARKIRYA",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "THE PHAMILY",
+  "seguro": false,
+  "link": "/equipos/the-phamily",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "・Sorrow・",
+      "ID": "7M7TNHA",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MxNSpiDeRs",
+      "ID": "50F1N8Y",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "A§tro・Meiro",
+      "ID": "TYLMP54",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "AD • 3MG",
+      "ID": "H1C8745",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "天来タキオン",
+      "ID": "XHAQ5YM",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Tini¿",
+      "ID": "HXXTPTN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Overhaul.-.",
+      "ID": "41NREGX",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "・Agnesる",
+      "ID": "19CHRG4",
+      "avatar": "female1"
+    },
+    {
+      "nickname": "Ahrulo",
+      "ID": "GN43X9X",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

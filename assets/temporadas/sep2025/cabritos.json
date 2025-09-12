@@ -1,0 +1,61 @@
+{
+  "tag": "CTS",
+  "team": "CABRITOS",
+  "org": "",
+  "activo": true,
+  "capitan": "TOKITO",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "CABRITOS",
+  "seguro": false,
+  "link": "/equipos/cabritos",
+  "grupo": "NORTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "STMN • Tokito",
+      "ID": "820R14M",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m4": 2
+    },
+    {
+      "nickname": "Anysus",
+      "ID": "T43P240",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Hades地獄",
+      "ID": "C5C89CK",
+      "avatar": "male1",
+      "mvp": true,
+      "numero": 2,
+      "m3": 2
+    },
+    {
+      "nickname": "Pollolocottv",
+      "ID": "5M71QPP",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Ranmā",
+      "ID": "A38905X",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

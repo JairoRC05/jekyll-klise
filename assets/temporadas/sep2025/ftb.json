@@ -1,0 +1,65 @@
+{
+  "tag": "DFSFTB",
+  "team": "DFS FROSTBITE",
+  "org": "",
+  "activo": true,
+  "capitan": "EFESTO",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DFS FROSTBITE",
+  "seguro": false,
+  "link": "/equipos/dfs-frostbite",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0",
+    "M4": "0",
+    "M5": "0",
+    "M6": "0",
+    "M7": "0",
+    "M8": "0",
+    "M9": "0",
+    "M10": "0",
+    "M11": "0",
+    "M12": "0"
+  },
+  "jugadores": [
+    {
+      "nickname": "DFs・Efesto",
+      "ID": "7QT4YAA",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Googoo",
+      "ID": "NFN0FN",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Pikinツ",
+      "ID": "LY3YYX3",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Perro乡",
+      "ID": "KFCPP44",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・Icɛяツ",
+      "ID": "Y39HPAF",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・4T",
+      "ID": "LGAGE2Y",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "DFs・MerGas",
+      "ID": "C3EG7EF",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

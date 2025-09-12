@@ -9,7 +9,7 @@ let teamsDataTable;
 // --- Funciones de Utilidad ---
 
 async function loadExternalMatchData() {
-    const filePaths = ['/assets/temporadas/julio2025/pnorte.json', '/assets/temporadas/julio2025/psur.json'];
+    const filePaths = ['/assets/temporadas/sep2025/calendario.json'];
     const fetchPromises = filePaths.map(path =>
         fetch(path)
             .then(response => {

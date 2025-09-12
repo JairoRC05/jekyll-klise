@@ -1,0 +1,1202 @@
+[
+  {
+  "rondas": [
+    {
+      "ronda": "RONDA 1",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 1,
+          "match_number": 1
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-09",
+          "round_number": 1,
+          "match_number": 2
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-09",
+          "round_number": 1,
+          "match_number": 3
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-08",
+          "round_number": 1,
+          "match_number": 4
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-09",
+          "round_number": 1,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-08",
+          "round_number": 1,
+          "match_number": 6
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-08",
+          "round_number": 1,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 2",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-11",
+          "round_number": 2,
+          "match_number": 1
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 2,
+          "match_number": 2
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-10",
+          "round_number": 2,
+          "match_number": 3
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-11",
+          "round_number": 2,
+          "match_number": 4
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-10",
+          "round_number": 2,
+          "match_number": 5
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-11",
+          "round_number": 2,
+          "match_number": 6
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-10",
+          "round_number": 2,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 3",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-12",
+          "round_number": 3,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-12",
+          "round_number": 3,
+          "match_number": 2
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 3,
+          "match_number": 3
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-15",
+          "round_number": 3,
+          "match_number": 4
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-12",
+          "round_number": 3,
+          "match_number": 5
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-15",
+          "round_number": 3,
+          "match_number": 6
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-15",
+          "round_number": 3,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 4",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-16",
+          "round_number": 4,
+          "match_number": 1
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-16",
+          "round_number": 4,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-16",
+          "round_number": 4,
+          "match_number": 3
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 4,
+          "match_number": 4
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": "21:50",
+          "dia": "2025-09-17",
+          "round_number": 4,
+          "match_number": 5
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": false,
+          "hora": "22:30",
+          "dia": "2025-09-17",
+          "round_number": 4,
+          "match_number": 6
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": "21:00",
+          "dia": "2025-09-17",
+          "round_number": 4,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 5",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 2
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 4
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 5,
+          "match_number": 5
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 6
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-18",
+          "round_number": 5,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 6",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 1
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 3
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 5
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 6,
+          "match_number": 6
+        },
+        {
+          "equipo1": "PHOBIUS AURA",
+          "tag1": "POA",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-19",
+          "round_number": 6,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 7",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "DFS SAPPHIRE",
+          "tag2": "SAPPHIRE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 1
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 2
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 4
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "2025-09-22",
+          "round_number": 7,
+          "match_number": 6
+        },
+        {
+          "equipo1": "Descansa",
+          "tag1": "BYE",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 7,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 8",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "AMNESIA",
+          "tag2": "AMS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-23",
+          "round_number": 8,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-23",
+          "round_number": 8,
+          "match_number": 2
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-23",
+          "round_number": 8,
+          "match_number": 3
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-24",
+          "round_number": 8,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-24",
+          "round_number": 8,
+          "match_number": 5
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-24",
+          "round_number": 8,
+          "match_number": 6
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 8,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 9",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-25",
+          "round_number": 9,
+          "match_number": 1
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-25",
+          "round_number": 9,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-25",
+          "round_number": 9,
+          "match_number": 3
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-26",
+          "round_number": 9,
+          "match_number": 4
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-26",
+          "round_number": 9,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 9,
+          "match_number": 6
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENG",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-26",
+          "round_number": 9,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 10",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "ZENOVA",
+          "tag2": "ZVS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-29",
+          "round_number": 10,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-29",
+          "round_number": 10,
+          "match_number": 2
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-29",
+          "round_number": 10,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-09-30",
+          "round_number": 10,
+          "match_number": 4
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 10,
+          "match_number": 5
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-09-30",
+          "round_number": 10,
+          "match_number": 6
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "PLATINUM",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-09-30",
+          "round_number": 10,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 11",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-01",
+          "round_number": 11,
+          "match_number": 1
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-01",
+          "round_number": 11,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-01",
+          "round_number": 11,
+          "match_number": 3
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 11,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-02",
+          "round_number": 11,
+          "match_number": 5
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-02",
+          "round_number": 11,
+          "match_number": 6
+        },
+        {
+          "equipo1": "GANBARU DEX",
+          "tag1": "GDEX",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-02",
+          "round_number": 11,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 12",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "CABRITOS",
+          "tag2": "CTS",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-03",
+          "round_number": 12,
+          "match_number": 1
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-03",
+          "round_number": 12,
+          "match_number": 2
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 12,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-03",
+          "round_number": 12,
+          "match_number": 4
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-06",
+          "round_number": 12,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-06",
+          "round_number": 12,
+          "match_number": 6
+        },
+        {
+          "equipo1": "THE PHAMILY",
+          "tag1": "PHY",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-06",
+          "round_number": 12,
+          "match_number": 7
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 13",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "TUT ONECOIN",
+          "tag1": "TUTOC",
+          "equipo2": "PHOBIUS AURA",
+          "tag2": "POA",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-07",
+          "round_number": 13,
+          "match_number": 1
+        },
+        {
+          "equipo1": "CABRITOS",
+          "tag1": "CTS",
+          "equipo2": "Descansa",
+          "tag2": "BYE",
+          "resultado": "VS",
+          "stream": false,
+          "hora": null,
+          "dia": "",
+          "round_number": 13,
+          "match_number": 2
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-07",
+          "round_number": 13,
+          "match_number": 3
+        },
+        {
+          "equipo1": "ZENOVA",
+          "tag1": "ZVS",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENG",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-07",
+          "round_number": 13,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "PLATINUM",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-08",
+          "round_number": 13,
+          "match_number": 5
+        },
+        {
+          "equipo1": "AMNESIA",
+          "tag1": "AMS",
+          "equipo2": "GANBARU DEX",
+          "tag2": "GDEX",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-08",
+          "round_number": 13,
+          "match_number": 6
+        },
+        {
+          "equipo1": "DFS SAPPHIRE",
+          "tag1": "SAPPHIRE",
+          "equipo2": "THE PHAMILY",
+          "tag2": "PHY",
+          "resultado": "VS",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-08",
+          "round_number": 13,
+          "match_number": 7
+        }
+      ]
+    }
+  ]
+}
+]

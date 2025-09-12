@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn("Faltan datos en el <body> para cargar el ranking.");
   }
 });
+  

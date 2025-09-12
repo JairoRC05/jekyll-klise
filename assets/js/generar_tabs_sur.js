@@ -68,7 +68,7 @@ const roundSpecificData = [
             tab.show();
             // Find the corresponding round data and pass it to generarContenidoRonda
             const activeRoundData = roundSpecificData[activeTabIndex];
-            fetch('/assets/temporadas/julio2025/psur.json')
+            fetch('/assets/temporadas/sep2025/psur.json')
                 .then(response => response.json())
                 .then(data => {
                     const rondaEncontrada = data[0].rondas.find(r => r.ronda === activeRoundData.ronda);
@@ -79,7 +79,7 @@ const roundSpecificData = [
         }
     }
 
-    fetch('/assets/temporadas/julio2025/psur.json')
+    fetch('/assets/temporadas/sep2025/psur.json')
         .then(response => response.json())
         .then(data => {
             const rondasDesdeJSON = data[0].rondas.slice(0, 13);
@@ -102,7 +102,7 @@ const roundSpecificData = [
 
                 button.addEventListener('click', () => {
                     const roundInfo = roundSpecificData[index];
-                    fetch('/assets/temporadas/julio2025/psur.json')
+                    fetch('/assets/temporadas/sep2025/psur.json')
                         .then(response => response.json())
                         .then(data => {
                             const rondaEncontrada = data[0].rondas.find(r => r.ronda === roundInfo.ronda);

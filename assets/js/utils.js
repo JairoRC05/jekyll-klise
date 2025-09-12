@@ -40,7 +40,6 @@ function generarPartidoHTML(partido) {
       <span>${partido.hora}</span>
     `}
   ` : `
-    <span>22:10</span>
     <h6>${partido.resultado}</h6>
   `}
           </div>

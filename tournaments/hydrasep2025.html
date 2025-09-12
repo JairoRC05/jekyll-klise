@@ -1,0 +1,153 @@
+---
+layout: ligaIndigo
+title: HYDRA | LIGA INDIGO
+grupo: SOUTH
+permalink: /liga-indigo-hydra-ranking-sep2025
+temporada: sep2025
+div_id: grupoSurSep
+---
+
+    <div class="section-title">
+      <h1 class="exo-style-black">RANKING</h1>
+      <span class="exo"></span>
+    </div>
+    <div class="row" id="grupoSurSep">
+    </div>
+
+    <div class="section-title">
+      <h1 class="exo-style-black">RONDAS</h1>
+      <span class="exo"></span>
+    </div>
+  <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+  </ul>
+  
+  <div id="rondas-league-container">
+  </div>
+
+  <div id="ultimos-resultados-container" class="d-none"></div>
+
+  <div id="rondaEspecial" class="d-none"></div>
+
+  <div class="container-fluid indigo mt-5 d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="imagen-container">
+                        <img src="/assets/picks/cyberLUCARIO.webp" alt="Ho-OH"
+                            class="glowing-figure img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="mt-5 text-center exo-style text-uppercase">Gran Final</h3>
+                    <div id="finalContainer">
+                    </div>
+
+                    <h4 class="mt-5 text-center exo-style text-uppercase">Semifinales</h4>
+                    <div id="semifinalesContainer">
+                    </div>
+
+                    <div class="d-block">
+                        <h4 class="mt-5 text-center exo-style text-uppercase">Cuartos de Final</h4>
+                        <div id="encuentrosCruzadosContainer">
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+          <!-- <div class="nebula-layer"></div>
+         <div class="stars-layer" id="stars-container"></div> -->
+  </div>
+
+
+<div class="d-none">
+    <table class="table table-bordered table-hover mt-3">
+  <thead class="table-dark">
+    <tr>
+      <th>Ronda</th>
+      <th>Equipo 1</th>
+      <th>Victorias</th>
+      <th>Equipo 2</th>
+      <th>Victorias</th>
+      <th>Proyección</th>
+    </tr>
+  </thead>
+  <tbody id="tabla-proyecciones"></tbody>
+</table>
+</div>
+
+  <script>
+  async function proyectarGanadoresDesdeJSON(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    const rondas = data[0].rondas;
+
+    // 1. Contar victorias por equipo
+    const victorias = {};
+
+    rondas.forEach(ronda => {
+      ronda.partidos.forEach(p => {
+        const eq1 = p.equipo1;
+        const eq2 = p.equipo2;
+        const res = p.resultado;
+
+        if (["VS", "DES", "0-0"].includes(res) || eq1 === "Descansa" || eq2 === "Descansa") return;
+
+        const [s1, s2] = res.split("-").map(Number);
+        if (s1 > s2) victorias[eq1] = (victorias[eq1] || 0) + 1;
+        else if (s2 > s1) victorias[eq2] = (victorias[eq2] || 0) + 1;
+      });
+    });
+
+    // 2. Analizar partidos pendientes y proyectar ganador
+    const proyecciones = [];
+
+    rondas.forEach(ronda => {
+      ronda.partidos.forEach(p => {
+        if (p.resultado !== "VS" || p.equipo1 === "Descansa" || p.equipo2 === "Descansa") return;
+
+        const v1 = victorias[p.equipo1] || 0;
+        const v2 = victorias[p.equipo2] || 0;
+        let proyeccion = "Muy parejo";
+
+        if (v1 > v2) proyeccion = p.equipo1;
+        else if (v2 > v1) proyeccion = p.equipo2;
+
+        proyecciones.push({
+          ronda: p.round_number,
+          equipo1: p.equipo1,
+          victorias1: v1,
+          equipo2: p.equipo2,
+          victorias2: v2,
+          proyeccion
+        });
+      });
+    });
+
+    return proyecciones;
+  }
+
+  // Ejemplo de uso con Bootstrap 5
+  proyectarGanadoresDesdeJSON('/assets/temporadas/julio2025/psur.json')
+    .then(proyecciones => {
+      const tabla = document.getElementById('tabla-proyecciones');
+      proyecciones.forEach(p => {
+        tabla.innerHTML += `
+          <tr>
+            <td>Ronda ${p.ronda}</td>
+            <td>${p.equipo1}</td>
+            <td>${p.victorias1}</td>
+            <td>${p.equipo2}</td>
+            <td>${p.victorias2}</td>
+            <td><strong>${p.proyeccion}</strong></td>
+          </tr>
+        `;
+      });
+    });
+</script>
+
+
+
+
+<script src="/assets/js/generar_tabs_sur.js"></script>
+

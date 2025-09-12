@@ -257,5 +257,3 @@ async function buscarResultadosDirectosGeneral(equipoTagA, equipoTagB, listaArch
     console.log(`Resultados directos finales para ${equipoTagA} vs ${equipoTagB}:`, resultados);
     return resultados; // { victoriasA: X, derrotasA: Y, empates: Z }
 }
-
-// ... (tus otras funciones como invertirResultado, compararRankings, etc., pueden necesitar ajustes si las usas para el ranking general)

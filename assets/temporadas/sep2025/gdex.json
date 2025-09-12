@@ -1,0 +1,65 @@
+{
+  "tag": "GDEX",
+  "team": "GANBARU DEX",
+  "org": "",
+  "activo": true,
+  "capitan": "MIPoJhon",
+  "region": "LAN",
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "GANBARU DEX",
+  "seguro": true,
+  "link": "/equipos/ganbaru-dex",
+  "grupo": "SOUTH",
+  "partidos": {
+    "M1": "",
+    "M2": "",
+    "M3": "",
+    "M4": "",
+    "M5": "",
+    "M6": "",
+    "M7": "",
+    "M8": "",
+    "M9": "",
+    "M10": "",
+    "M11": "",
+    "M12": ""
+  },
+  "jugadores": [
+    {
+      "nickname": "ʚDœ",
+      "ID": "3311KF2",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ʚPinzita",
+      "ID": "E0N5RKE",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ʚChrisWFttv",
+      "ID": "HNNK9E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "ChilindrinO",
+      "ID": "N98MHHG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "MIPoJhon",
+      "ID": "HNYFCLG",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "TheRaYMoNzzz",
+      "ID": "AQC5Q2E",
+      "avatar": "male1"
+    },
+    {
+      "nickname": "Prometeo95",
+      "ID": "NC2LMY8",
+      "avatar": "male1"
+    }
+  ],
+  "posicionDesempate": false
+}

@@ -176,7 +176,7 @@ title: DRAFT | LIGA INDIGO
           const grupoB = document.getElementById('grupo-b');
           let equiposData = [];
 
-          const rutaTemporada = "/assets/temporadas/julio2025";
+          const rutaTemporada = "/assets/temporadas/sep2025";
 
           try {
             const indexResp = await fetch(`${rutaTemporada}/equipos-index.json`);
@@ -291,7 +291,7 @@ title: DRAFT | LIGA INDIGO
             return frasesSorteo[indiceAleatorio];
           }
 
-          const rutaTemporada = "/assets/temporadas/julio2025";
+          const rutaTemporada = "/assets/temporadas/sep2025";
 
           fetch(`${rutaTemporada}/equipos-index.json`)
             .then(response => response.json())

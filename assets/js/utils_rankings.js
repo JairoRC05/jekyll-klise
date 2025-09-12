@@ -52,7 +52,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, opciones = {}) {
 
         grupoDeEquipos.forEach(equipo => {
             const colDiv = document.createElement('div');
-            colDiv.classList.add('col-12', 'col-md-6', 'col-lg-6', 'col-xl-4');
+            colDiv.classList.add('col-12');
             // Añadir el tag como un data-attribute para fácil referencia
             colDiv.dataset.teamTag = equipo.tag;
 
@@ -336,18 +336,157 @@ function aplicarDesempate(equipos) {
     return equiposFinalOrdenados;
 }
 
+function truncateString(str, maxLength) {
+    if (!str) return '';
+    return str.length > maxLength ? str.substring(0, maxLength) + '...' : str;
+}
 
-async function cargarEquiposDesdeIndice(rutaTemporada, grupoObjetivo, divContenedorID, incluirCopaXForze = false) {
+async function cargarRankingsDesdeIndice(rutaTemporada, incluirCopaXForze = false) {
+    const contenedorNorth = document.getElementById('ranking-north');
+    const contenedorSouth = document.getElementById('ranking-south');
+    const contenedorMejor = document.getElementById('mejor-equipo');
+
+    if (!contenedorNorth || !contenedorSouth || !contenedorMejor) {
+        console.error("Faltan contenedores");
+        return;
+    }
+
     try {
         const response = await fetch(`${rutaTemporada}/equipos-index.json`);
-        const archivos = await response.json(); // array de nombres JSON
+        const archivos = await response.json();
         const rutasCompletas = archivos.map(nombre => `${rutaTemporada}/${nombre}`);
 
-        // Carga dinámica usando la función ya existente
-        await loadAndDisplayRanking(divContenedorID, rutasCompletas, grupoObjetivo, rutaTemporada, incluirCopaXForze);
+        const equiposData = [];
+        const fetchPromises = rutasCompletas.map(async (ruta) => {
+            try {
+                const res = await fetch(ruta);
+                if (!res.ok) throw new Error();
+                const data = await res.json();
+
+                if (data && data.tag && data.grupo) {
+                    let suma = Object.values(data.partidos).reduce((acc, val) => {
+                        const pts = parseInt(val) || 0;
+                        return acc + (val === '3' ? 3 : val === '2' ? 2 : val === '1' ? 1 : 0);
+                    }, 0);
+                    equiposData.push({ ...data, suma });
+                }
+            } catch (err) {
+                console.warn(`Error cargando ${ruta}`);
+            }
+        });
+
+        await Promise.all(fetchPromises);
+
+        // Separar y ordenar por grupo
+        const northEquipos = aplicarDesempate(equiposData.filter(eq => eq.grupo === "NORTH"));
+        const southEquipos = aplicarDesempate(equiposData.filter(eq => eq.grupo === "SOUTH"));
+
+        // Encontrar el MEJOR EQUIPO GENERAL
+        const todosOrdenados = [...northEquipos, ...southEquipos]
+            .sort((a, b) => b.suma - a.suma);
+
+        const mejorEquipo = todosOrdenados[0];
+
+        // Mostrarlo en el card destacado
+        if (mejorEquipo) {
+            mostrarMejorEquipo(mejorEquipo, contenedorMejor);
+        }
+
+        // Mostrar rankings normales
+        await mostrarEquipos(northEquipos, contenedorNorth, "NORTH", { incluirCopaXForze });
+        await mostrarEquipos(southEquipos, contenedorSouth, "SOUTH", { incluirCopaXForze });
+
     } catch (error) {
-        console.error(`Error al cargar equipos desde el índice:`, error);
+        console.error("Error:", error);
     }
+}
+
+function mostrarMejorEquipo(equipo, contenedor) {
+    contenedor.innerHTML = '';
+
+    // Crear columna centrada con tamaño ampliado
+    const colDiv = document.createElement('div');
+    colDiv.classList.add(
+        'col-12',
+        'col-md-6', // Más ancho que las otras
+        'col-lg-5',
+        'mx-auto',
+        'text-center',
+        'mejor-equipo-card'
+    );
+
+    const link = document.createElement('a');
+    link.href = equipo.link;
+    link.style.textDecoration = 'none';
+
+    const cardTeamDiv = document.createElement('div');
+    cardTeamDiv.classList.add('card-team', 'position-relative');
+
+    // Logo grande
+    const cardRoundTeamDiv = document.createElement('div');
+    cardRoundTeamDiv.classList.add('card-round-team');
+    const img = document.createElement('img');
+    img.src = `/assets/logos/${equipo.tag}.webp`;
+    img.alt = equipo.team;
+    img.classList.add('img-fluid');
+    cardRoundTeamDiv.appendChild(img);
+
+    // Nombre y tag
+    const cardRoundTitleDiv = document.createElement('div');
+    cardRoundTitleDiv.classList.add('card-round-title');
+    const h2 = document.createElement('h2');
+    h2.textContent = truncateString(equipo.team, 14); // Puedes ajustar
+    const spanTag = document.createElement('span');
+    spanTag.textContent = equipo.tag;
+
+    cardRoundTitleDiv.appendChild(h2);
+    cardRoundTitleDiv.appendChild(spanTag);
+
+    // Card back con detalles
+    const cardBackDiv = document.createElement('div');
+    cardBackDiv.classList.add('card-back');
+
+    const colorLeftDiv = document.createElement('div');
+    colorLeftDiv.classList.add(
+        'card-color-left',
+        equipo.tag === '7Z' ? 'S7Z' : equipo.tag
+    );
+
+    const colorRightDiv = document.createElement('div');
+    colorRightDiv.classList.add('card-color-right', 'bg-cham');
+
+    const colorLogoDiv = document.createElement('div');
+    colorLogoDiv.classList.add('card-color-logo');
+    const logoIndigo = document.createElement('img');
+    logoIndigo.src = '/assets/logos/LIGA-INDIGO.webp';
+    logoIndigo.alt = 'LIGA INDIGO';
+    colorLogoDiv.appendChild(logoIndigo);
+
+    cardBackDiv.appendChild(colorLeftDiv);
+    cardBackDiv.appendChild(colorRightDiv);
+    cardBackDiv.appendChild(colorLogoDiv);
+
+    // Añadir todo al card
+    cardTeamDiv.appendChild(cardRoundTeamDiv);
+    cardTeamDiv.appendChild(cardRoundTitleDiv);
+    cardTeamDiv.appendChild(cardBackDiv);
+
+
+
+    // Añadir puntos grandes debajo
+    const ptsBadge = document.createElement('div');
+    ptsBadge.textContent = `${equipo.suma} pts`;
+    ptsBadge.style.marginTop = '8px';
+    ptsBadge.style.fontSize = '1.2rem';
+    ptsBadge.style.fontWeight = 'bold';
+    ptsBadge.style.color = '#ffd700';
+    ptsBadge.style.textShadow = '0 0 3px #000';
+
+    link.appendChild(cardTeamDiv);
+    link.appendChild(ptsBadge);
+
+    colDiv.appendChild(link);
+    contenedor.appendChild(colDiv);
 }
 
 
