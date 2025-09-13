@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function cargarPartidos(archivo) {
         try {
-            const response = await fetch(`/assets/temporadas/julio2025/${archivo}.json`);
+            const response = await fetch(`/assets/temporadas/sep2025/${archivo}.json`);
             if (!response.ok) {
                 console.error(`Error al cargar ${archivo}: ${response.status} ${response.statusText}`);
                 return null;
