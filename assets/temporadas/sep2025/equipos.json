@@ -1,0 +1,93 @@
+[
+  {
+    "tag": "TUTOC",
+    "equipo": "TUT ONECOIN",
+    "categoria": "oro",
+    "peso_categoria": 1000,
+    "peso_equipo": 122
+  },
+  {
+    "tag": "POA",
+    "equipo": "PHOBIUS AURA",
+    "categoria": "platino",
+    "peso_categoria": 800,
+    "peso_equipo": 115
+  },
+  {
+    "tag": "DINASTY",
+    "equipo": "DINASTY",
+    "categoria": "oro",
+    "peso_categoria": 1000,
+    "peso_equipo": 118
+  },
+  {
+    "tag": "CTS",
+    "equipo": "CABRITOS",
+    "categoria": "plata",
+    "peso_categoria": 600,
+    "peso_equipo": 98
+  },
+  {
+    "tag": "ENG",
+    "equipo": "ENIGMA ESPORTS",
+    "categoria": "bronce",
+    "peso_categoria": 400,
+    "peso_equipo": 85
+  },
+  {
+    "tag": "TUT",
+    "equipo": "THE UNOWN TEAM",
+    "categoria": "oro",
+    "peso_categoria": 1000,
+    "peso_equipo": 122
+  },
+  {
+    "tag": "ZVS",
+    "equipo": "ZENOVA",
+    "categoria": "platino",
+    "peso_categoria": 800,
+    "peso_equipo": 110
+  },
+  {
+    "tag": "GDEX",
+    "equipo": "GANBARU DEX",
+    "categoria": "plata",
+    "peso_categoria": 600,
+    "peso_equipo": 95
+  },
+  {
+    "tag": "FTB",
+    "equipo": "DFS FROSTBITE",
+    "categoria": "plata",
+    "peso_categoria": 600,
+    "peso_equipo": 100
+  },
+  {
+    "tag": "AMS",
+    "equipo": "AMNESIA",
+    "categoria": "bronze",
+    "peso_categoria": 400,
+    "peso_equipo": 88
+  },
+  {
+    "tag": "PLATINUM",
+    "equipo": "DFS PLATINUM",
+    "categoria": "platino",
+    "peso_categoria": 800,
+    "peso_equipo": 117
+  },
+  {
+    "tag": "PHY",
+    "equipo": "THE PHAMILY",
+    "categoria": "plata",
+    "peso_categoria": 600,
+    "peso_equipo": 97
+  },
+  {
+    "tag": "SAPPHIRE",
+    "equipo": "DFS SAPPHIRE",
+    "categoria": "plata",
+    "peso_categoria": 600,
+    "peso_equipo": 96
+  }
+]

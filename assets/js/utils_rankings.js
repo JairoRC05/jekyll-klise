@@ -473,18 +473,18 @@ function mostrarMejorEquipo(equipo, contenedor) {
 
 
 
-    // Añadir puntos grandes debajo
-    const ptsBadge = document.createElement('div');
-    ptsBadge.textContent = `${equipo.suma} pts`;
-    ptsBadge.style.marginTop = '8px';
-    ptsBadge.style.fontSize = '1.2rem';
-    ptsBadge.style.fontWeight = 'bold';
-    ptsBadge.style.color = '#ffd700';
-    ptsBadge.style.textShadow = '0 0 3px #000';
+    // // Añadir puntos grandes debajo
+    // const ptsBadge = document.createElement('div');
+    // ptsBadge.textContent = `${equipo.suma} pts`;
+    // ptsBadge.style.marginTop = '8px';
+    // ptsBadge.style.fontSize = '1.2rem';
+    // ptsBadge.style.fontWeight = 'bold';
+    // ptsBadge.style.color = '#ffd700';
+    // ptsBadge.style.textShadow = '0 0 3px #000';
 
+    // link.appendChild(ptsBadge);
+    
     link.appendChild(cardTeamDiv);
-    link.appendChild(ptsBadge);
-
     colDiv.appendChild(link);
     contenedor.appendChild(colDiv);
 }

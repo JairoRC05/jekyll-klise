@@ -374,7 +374,7 @@ permalink:
                                         <h3>DESCANSO</h3>
                                     </div>
                                     <div class="bracket-round-team">
-                                        <a href="/teams/${partido.equipo1}">
+                                        <a href="/equipos/${partido.equipo1}">
                                             <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
                                         </a>
                                     </div>
@@ -392,7 +392,7 @@ permalink:
                             ` : `
                                 <div class="bracket-round-list">
                                     <div class="bracket-round-team">
-                                        <a href="/teams/${partido.tag1}">
+                                        <a href="/equipos/${partido.tag1}">
                                             <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
                                         </a>
                                     </div>
@@ -405,7 +405,7 @@ permalink:
                                                 ${partido.resultado !== "VS" ? `
                                                     <span>${partido.rondaNombre}</span>
                                                     <h6>${partido.resultado}</h6>
-                                                    <span>${formattedRondaFecha}</span>
+                                                      <span>${partido.dia}</span>
                                                 ` : `
                                                     <span>${partido.rondaNombre}</span>
                                                     <span>TWITCH</span>

@@ -38,7 +38,29 @@ copaXForze: false
 </div>
 
 
+<div class="comparador-equipos mt-5 d-none">
+  <h3>⚔️ Comparador de Equipos</h3>
+  
+  <div class="row mb-3">
+    <div class="col-md-5">
+      <select id="equipo1-select" class="form-select">
+        <option value="">Equipo 1</option>
+      </select>
+    </div>
+    <div class="col-md-2 text-center d-flex align-items-center justify-content-center">
+      <span>vs</span>
+    </div>
+    <div class="col-md-5">
+      <select id="equipo2-select" class="form-select">
+        <option value="">Equipo 2</option>
+      </select>
+    </div>
+  </div>
 
+  <button id="comparar-btn" class="btn btn-primary">Comparar</button>
+
+  <div id="resultado-comparacion" class="mt-4"></div>
+</div>
 
 
 <div class="section-title">
@@ -174,5 +196,5 @@ copaXForze: false
 </script>
 
 
-
+<script src="/assets/js/comparador.js"></script>
 <script src="/assets/js/generar_tabs.js"></script>
