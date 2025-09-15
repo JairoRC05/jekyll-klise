@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
+   cargarRankingsDesdeIndice("/assets/temporadas/sep2025", false); 
   await cargarEquipos(); 
 
   const carrusel = document.getElementById("contenedor-cards");

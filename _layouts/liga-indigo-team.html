@@ -55,7 +55,7 @@ permalink:
   <script>
    document.addEventListener('DOMContentLoaded', function() {
     const pageID = "{{ page.ID }}";
-    const jsonURL = `/assets/temporadas/julio2025/${pageID.toLowerCase()}.json`;
+    const jsonURL = `/assets/temporadas/sep2025/${pageID.toLowerCase()}.json`;
 
     const descargarTodoBtn = document.getElementById('descargarTodo');
     const equipoPerfil = document.getElementById('equipo-perfil');
@@ -75,6 +75,8 @@ permalink:
         { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
         { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' }, 
         { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
+        { ronda: 'RONDA 12', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
+        { ronda: 'RONDA 13', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
        
     ];
 
@@ -303,155 +305,149 @@ permalink:
     const teamTag = equipo.tag;
     let partidosHTML = '<div class=""><h2>CALENDARIO</h2><div class="row">';
 
+    // Mapa de fechas por ronda desde roundSpecificData
     const roundDatesMap = new Map();
     roundsDatesFromScript.forEach(r => {
         const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
         roundDatesMap.set(r.ronda, fechaStr);
     });
 
-    Promise.all([
-        fetch('/assets/temporadas/julio2025/pnorte.json').then(r => r.json()),
-        fetch('/assets/temporadas/julio2025/psur.json').then(r => r.json())
-        // fetch('/assets/partidos/cruces.json').then(r => r.json())
-    ])
-    .then(allData => {
-        const allRelevantMatches = [];
+    fetch('/assets/temporadas/sep2025/calendario.json')
+        .then(r => r.json())
+        .then(data => {
+            if (!data || !Array.isArray(data) || data.length === 0 || !data[0].rondas) {
+                throw new Error('Estructura de calendario.json inválida');
+            }
 
-        allData.forEach(data => {
-            if (data && data.length > 0 && data[0].rondas) {
-                data[0].rondas.forEach(ronda => {
-                    if (ronda.partidos && ronda.partidos.length > 0) {
-                        ronda.partidos.forEach(partido => {
-                            if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
-                                allRelevantMatches.push({
-                                    ...partido,
-                                    rondaNombre: ronda.ronda
-                                });
-                            }
+            const rondas = data[0].rondas;
+
+            // Paso 1: Recopilar todos los partidos del equipo
+            const partidosEquipo = [];
+
+            rondas.forEach(ronda => {
+                ronda.partidos.forEach(partido => {
+                    if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
+                        partidosEquipo.push({
+                            ...partido,
+                            rondaNombre: ronda.ronda
                         });
                     }
                 });
-            }
-        });
-
-        allRelevantMatches.sort((a, b) => {
-            const indexA = roundsDatesFromScript.findIndex(r => r.ronda === a.rondaNombre);
-            const indexB = roundsDatesFromScript.findIndex(r => r.ronda === b.rondaNombre);
-            return indexA - indexB;
-        });
-
-        if (allRelevantMatches.length > 0) {
-            allRelevantMatches.forEach(partidoOriginal => {
-                const partido = { ...partidoOriginal }; // evitar mutar el original
-                const originalRondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
-                const formattedRondaFecha = formatDateToDayMonth(originalRondaFecha);
-
-                // 🔄 INVERTIR SI ES RONDA PAR
-                const numeroRonda = parseInt(partido.rondaNombre.replace('RONDA ', ''));
-                const invertir = !isNaN(numeroRonda) && numeroRonda % 2 === 0 && partido.equipo2 !== "DES";
-
-                if (invertir) {
-                    [partido.equipo1, partido.equipo2] = [partido.equipo2, partido.equipo1];
-                    [partido.tag1, partido.tag2] = [partido.tag2, partido.tag1];
-
-                    if (partido.resultado && partido.resultado.includes('-')) {
-                        const [r1, r2] = partido.resultado.split('-');
-                        partido.resultado = `${r2}-${r1}`;
-                    }
-                }
-
-                const equipo1T = truncateString(partido.equipo1, 12);
-                const equipo2T = truncateString(partido.equipo2, 12);
-
-                partidosHTML += `
-                    <div class="col-12 col-md-6 col-lg-6 col-xl-4">
-                        ${partido.equipo2 === "DES" ? `
-                            <div class="bracket-round-list-zzz">
-                                <div class="card-round-promo">
-                                    <h3>DESCANSO</h3>
-                                </div>
-                                <div class="bracket-round-team">
-                                    <a href="/teams/${partido.equipo1}">
-                                        <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="card-round-promo-left">
-                                    <span>${partido.rondaNombre}</span>
-                                </div>
-                                <div class="card-round-promo-right">
-                                    <span>${formattedRondaFecha}</span>
-                                </div>
-                                <div class="card-back">
-                                    <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
-                                    <div class="card-color-right bg-cham"></div>
-                                </div>
-                            </div>
-                        ` : `
-                            <div class="bracket-round-list">
-                                <div class="bracket-round-team">
-                                    <a href="/teams/${partido.tag1}">
-                                        <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="round-titles">
-                                    <div class="card-round-promo left">
-                                        <h6>${equipo1T}</h6>
-                                    </div>
-                                    <div class="card-round-promo mx-2">
- 
-${partido.stream ? `
-  ${partido.resultado !== "VS" ? `
-    <span>${partido.rondaNombre}</span>
-    <h6>${partido.resultado}</h6>
-    <span>${formattedRondaFecha}</span>
-  ` : `
-    <span>${partido.rondaNombre}</span>
-    <span>TWITCH</span>
-    <span>${partido.dia}</span>
-    <span>${partido.hora}</span>
-  `}
-` : `
-  <span>${partido.rondaNombre}</span>
-  ${partido.resultado === "VS" ? `
-    <span>22:10</span>
-  ` : ``}
-  <h6>${partido.resultado}</h6>
-  <span>${formattedRondaFecha}</span>
-`}
-
-</div>
-
-                                    <div class="card-round-promo right">
-                                        <h6>${equipo2T}</h6>
-                                    </div>
-                                </div>
-                                <div class="bracket-round-team-right">
-                                    <a href="/teams/${partido.tag2}">
-                                        <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="card-back">
-                                    <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
-                                    <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
-                                </div>
-                            </div>
-                        `}
-                    </div>
-                `;
             });
-        } else {
-            partidosHTML += '<p>No se encontraron partidos para este equipo en las rondas definidas.</p>';
-        }
 
-        partidosHTML += '</div></div>';
-        document.getElementById(containerId).innerHTML = partidosHTML;
-    })
-    .catch(error => {
-        console.error('Error al cargar los archivos de partidos:', error);
-        document.getElementById(containerId).innerText = 'Error al cargar la información de los partidos.';
-    });
+            // Paso 2: Ordenar por el orden definido en roundSpecificData
+            const orderedMatches = [];
+            roundsDatesFromScript.forEach(roundDef => {
+                const matchesOfRound = partidosEquipo.filter(p => p.rondaNombre === roundDef.ronda);
+                orderedMatches.push(...matchesOfRound);
+            });
+
+            // Paso 3: Renderizar en orden
+            if (orderedMatches.length > 0) {
+                orderedMatches.forEach(partidoOriginal => {
+                    const partido = { ...partidoOriginal };
+                    const originalRondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
+                    const formattedRondaFecha = formatDateToDayMonth(originalRondaFecha);
+
+                    // 🔄 INVERTIR SI ES RONDA PAR
+                    const numeroRonda = parseInt(partido.rondaNombre.replace('RONDA ', ''));
+                    const invertir = !isNaN(numeroRonda) && numeroRonda % 2 === 0 && partido.equipo2 !== "DES";
+
+                    if (invertir) {
+                        [partido.equipo1, partido.equipo2] = [partido.equipo2, partido.equipo1];
+                        [partido.tag1, partido.tag2] = [partido.tag2, partido.tag1];
+
+                        if (partido.resultado && partido.resultado.includes('-')) {
+                            const [r1, r2] = partido.resultado.split('-');
+                            partido.resultado = `${r2}-${r1}`;
+                        }
+                    }
+
+                    const equipo1T = truncateString(partido.equipo1, 12);
+                    const equipo2T = truncateString(partido.equipo2, 12);
+
+                    partidosHTML += `
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+                            ${partido.equipo2 === "DES" ? `
+                                <div class="bracket-round-list-zzz">
+                                    <div class="card-round-promo">
+                                        <h3>DESCANSO</h3>
+                                    </div>
+                                    <div class="bracket-round-team">
+                                        <a href="/teams/${partido.equipo1}">
+                                            <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="card-round-promo-left">
+                                        <span>${partido.rondaNombre}</span>
+                                    </div>
+                                    <div class="card-round-promo-right">
+                                        <span>${formattedRondaFecha}</span>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
+                                        <div class="card-color-right bg-cham"></div>
+                                    </div>
+                                </div>
+                            ` : `
+                                <div class="bracket-round-list">
+                                    <div class="bracket-round-team">
+                                        <a href="/teams/${partido.tag1}">
+                                            <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="round-titles">
+                                        <div class="card-round-promo left">
+                                            <h6>${equipo1T}</h6>
+                                        </div>
+                                        <div class="card-round-promo mx-2">
+                                            ${partido.stream ? `
+                                                ${partido.resultado !== "VS" ? `
+                                                    <span>${partido.rondaNombre}</span>
+                                                    <h6>${partido.resultado}</h6>
+                                                    <span>${formattedRondaFecha}</span>
+                                                ` : `
+                                                    <span>${partido.rondaNombre}</span>
+                                                    <span>TWITCH</span>
+                                                    <span>${partido.dia}</span>
+                                                    <span>${partido.hora}</span>
+                                                `}
+                                            ` : `
+                                                <span>${partido.rondaNombre}</span>
+                                                ${partido.resultado !== "VS" ? `<h6>${partido.resultado}</h6>` : ''}
+                                                <span>${partido.dia}</span>
+                                            `}
+                                        </div>
+                                        <div class="card-round-promo right">
+                                            <h6>${equipo2T}</h6>
+                                        </div>
+                                    </div>
+                                    <div class="bracket-round-team-right">
+                                        <a href="/teams/${partido.tag2}">
+                                            <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
+                                        <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
+                                    </div>
+                                </div>
+                            `}
+                        </div>
+                    `;
+                });
+            } else {
+                partidosHTML += '<p>No se encontraron partidos para este equipo en las rondas definidas.</p>';
+            }
+
+            partidosHTML += '</div></div>';
+            document.getElementById(containerId).innerHTML = partidosHTML;
+        })
+        .catch(error => {
+            console.error('Error al cargar calendario.json:', error);
+            document.getElementById(containerId).innerHTML = '<p>Error al cargar la información de los partidos.</p>';
+        });
 }
-
 
     function truncateString(str, maxLength) {
         if (str.length > maxLength) {
