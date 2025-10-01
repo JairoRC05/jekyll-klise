@@ -1,5 +1,5 @@
 ---
-nombre: "PAWMOT"
+nombre: MEGA LUCARIO
 layout: licencias
 rol:  Equilibrado
 tipo: Ataque especial
@@ -74,5 +74,5 @@ movimiento_unite:
     y causan una explosión que inflige daño alrededor del objetivo.
   tipo: "Largo alcance"
   recarga: "000s"
-ban: false
+ban: true
 ---
