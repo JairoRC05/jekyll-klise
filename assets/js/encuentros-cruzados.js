@@ -2,39 +2,45 @@
 
 document.addEventListener('DOMContentLoaded', async function() {
     
-    const teamFilesNorte = [
-        '/assets/temporadas/julio2025/tutoc.json',
-        '/assets/temporadas/julio2025/dinasty.json',
-        '/assets/temporadas/julio2025/ftb.json',
-        '/assets/temporadas/julio2025/gdex.json',
-        '/assets/temporadas/julio2025/poa.json',
-        '/assets/temporadas/julio2025/tae.json.json',
-        '/assets/temporadas/julio2025/obs',
-        '/assets/temporadas/julio2025/platino.json',
-        '/assets/temporadas/julio2025/flow.json',
-        '/assets/temporadas/julio2025/sm.json',
-        '/assets/temporadas/julio2025/pp',
-        '/assets/temporadas/julio2025/tut.json'
-    ];
+   // --- 1. Cargar el índice de equipos ---
+    let listaEquipos;
+    try {
+        const indexResponse = await fetch('/assets/temporadas/sep2025/equipos-index.json');
+        if (!indexResponse.ok) throw new Error(`Error al cargar equipos-index.json: ${indexResponse.status}`);
+        listaEquipos = await indexResponse.json(); // array de nombres de archivos
+    } catch (error) {
+        console.error("Error al cargar el índice de equipos:", error);
+        return; // o manejar error como prefieras
+    }
 
-    const teamFilesSur = [
-        '/assets/temporadas/julio2025/stmn.json',
-        '/assets/temporadas/julio2025/cacm.json',
-        '/assets/temporadas/julio2025/tut.json',
-        '/assets/temporadas/julio2025/pm.json',
-        '/assets/temporadas/julio2025/trr.json',
-        '/assets/temporadas/julio2025/capi.json',
-        '/assets/temporadas/julio2025/pl.json',
-        '/assets/temporadas/julio2025/ad.json',
-        '/assets/temporadas/julio2025/pdc.json',
-        '/assets/temporadas/julio2025/hgamt.json',
-        '/assets/temporadas/julio2025/zafiro.json',
-        '/assets/temporadas/julio2025/tf.json'
-    ];
+    // --- 2. Leer cada archivo y clasificar por grupo ---
+    const teamFilesNorte = [];
+    const teamFilesSur = [];
 
+    for (const archivo of listaEquipos) {
+        try {
+            const ruta = `/assets/temporadas/sep2025/${archivo}`;
+            const res = await fetch(ruta);
+            if (!res.ok) {
+                console.warn(`Archivo no encontrado o inválido: ${ruta}`);
+                continue;
+            }
+            const data = await res.json();
+            if (data.grupo === 'NORTH') {
+                teamFilesNorte.push(ruta);
+            } else if (data.grupo === 'SOUTH') {
+                teamFilesSur.push(ruta);
+            } else {
+                console.warn(`Equipo sin grupo válido en: ${archivo}`, data.grupo);
+            }
+        } catch (err) {
+            console.error(`Error al procesar ${archivo}:`, err);
+        }
+    }
+
+    // --- 3. Cargar Rankings ---
     const rankingNorte = await loadAndDisplayRanking('grupoNorte', teamFilesNorte, 'NORTH');
     const rankingSur = await loadAndDisplayRanking('grupoSur', teamFilesSur, 'SOUTH');
-
 
      // --- NUEVO: Cargar el JSON de ganadores simulados ---
     let ganadoresSimulados = {};

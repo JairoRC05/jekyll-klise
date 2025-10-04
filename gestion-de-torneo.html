@@ -18,9 +18,6 @@ title: Gestion | Nacion Unite
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css">
 
     <style>
-      
-      
-
         .section-separator {
             margin-top: 40px;
             margin-bottom: 40px;
@@ -57,6 +54,10 @@ title: Gestion | Nacion Unite
             /* Amarillo claro para indicar sin equipo */
             color: #664d03;
             /* Texto más oscuro */
+        }
+
+        .card-title{
+            font-size: 10px;
         }
     </style>
 </head>
@@ -152,39 +153,39 @@ title: Gestion | Nacion Unite
 
 
         <!-- Panel de Control de Altas y Bajas -->
-<div class="card mb-5">
-    <div class="card-header bg-warning text-white">
-        <h2><i class="bi bi-arrow-up-down"></i> Control de Altas y Bajas</h2>
-    </div>
-    <div class="card-body">
-        <p>Cada equipo tiene derecho a <strong>3 altas y 3 bajas</strong> durante la temporada. 
-           Los jugadores dados de baja <strong>no pueden volver a inscribirse</strong> en ningún equipo.</p>
-        
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h5>Resumen por Equipo</h5>
-            <button class="btn btn-outline-secondary" onclick="TransferControl.exportTransferReport()">
-                <i class="bi bi-file-earmark-arrow-down"></i> Exportar Reporte
-            </button>
-        </div>
+        <div class="card mb-5">
+            <div class="card-header bg-warning text-white">
+                <h2><i class="bi bi-arrow-up-down"></i> Control de Altas y Bajas</h2>
+            </div>
+            <div class="card-body">
+                <p>Cada equipo tiene derecho a <strong>3 altas y 3 bajas</strong> durante la temporada.
+                    Los jugadores dados de baja <strong>no pueden volver a inscribirse</strong> en ningún equipo.</p>
 
-        <div class="table-responsive">
-            <table id="transfersTable" class="table table-striped table-bordered w-100">
-                <thead>
-                    <tr>
-                        <th>Equipo</th>
-                        <th>Nombre</th>
-                        <th>Altas (3)</th>
-                        <th>Bajas (3)</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Se llenará dinámicamente con transfer-control.js -->
-                </tbody>
-            </table>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5>Resumen por Equipo</h5>
+                    <button class="btn btn-outline-secondary" onclick="TransferControl.exportTransferReport()">
+                        <i class="bi bi-file-earmark-arrow-down"></i> Exportar Reporte
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table id="transfersTable" class="table table-striped table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>Equipo</th>
+                                <th>Nombre</th>
+                                <th>Altas (3)</th>
+                                <th>Bajas (3)</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se llenará dinámicamente con transfer-control.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
 
@@ -232,46 +233,38 @@ title: Gestion | Nacion Unite
     </div>
 
 
-
-
-
-
-
-
-
-
-      <div class="modal fade" id="newTeamModal" tabindex="-1" aria-labelledby="newTeamModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="newTeamModalLabel">Crear Nuevo Equipo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="newTeamForm">
-                            <div class="mb-3">
-                                <label for="newTeamTag" class="form-label">Tag del Equipo</label>
-                                <input type="text" class="form-control" id="newTeamTag" required maxlength="7">
-                            </div>
-                            <div class="mb-3">
-                                <label for="newTeamName" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" id="newTeamName" required maxlength="25">
-                            </div>
-                            <div class="mb-3">
-                                <label for="newTeamCaptain" class="form-label">Capitán</label>
-                                <input type="text" class="form-control" id="newTeamCaptain" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="newTeamRegion" class="form-label">Región</label>
-                                <input type="text" class="form-control" id="newTeamRegion" value="LAN">
-                            </div>
-                            <button type="submit" class="btn btn-success"><i class="bi bi-person-fill-add"></i> Crear
-                                Equipo</button>
-                        </form>
-                    </div>
+    <div class="modal fade" id="newTeamModal" tabindex="-1" aria-labelledby="newTeamModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newTeamModalLabel">Crear Nuevo Equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newTeamForm">
+                        <div class="mb-3">
+                            <label for="newTeamTag" class="form-label">Tag del Equipo</label>
+                            <input type="text" class="form-control" id="newTeamTag" required maxlength="7">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newTeamName" class="form-label">Nombre del Equipo</label>
+                            <input type="text" class="form-control" id="newTeamName" required maxlength="25">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newTeamCaptain" class="form-label">Capitán</label>
+                            <input type="text" class="form-control" id="newTeamCaptain" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newTeamRegion" class="form-label">Región</label>
+                            <input type="text" class="form-control" id="newTeamRegion" value="LAN">
+                        </div>
+                        <button type="submit" class="btn btn-success"><i class="bi bi-person-fill-add"></i> Crear
+                            Equipo</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="modal fade" id="addPlayerModal" tabindex="-1" aria-labelledby="addPlayerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -412,19 +405,24 @@ title: Gestion | Nacion Unite
                 <div class="modal-body">
 
                     <div class="row">
+                        <div class="col-12">
+                              <button id="addMatchBtn" class="btn btn-outline-primary btn-sm mb-3">
+                                <i class="bi bi-plus-circle"></i> Añadir Partido
+                            </button>
+                        </div>
                         <div class="col-8">
                             <div id="externalMatchesList">
                                 <p class="text-muted">Cargando partidos externos...</p>
                             </div>
                         </div>
                         <div class="col-4">
+                          
                             <form id="editMatchesForm">
                                 <input type="hidden" id="editMatchesTeamTag">
                                 <div id="matchesInputList" class="row">
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-save"></i> Guardar
-                                    Cambios
-                                    Manuales</button>
+                                <button type="submit" class="btn btn-primary mt-3"><i
+                                        class="bi bi-save"></i>Guardar</button>
                             </form>
                         </div>
                     </div>
@@ -438,27 +436,29 @@ title: Gestion | Nacion Unite
         </div>
     </div>
 
-    
-<div class="modal fade" id="exportTeamsZipModal" tabindex="-1" aria-labelledby="exportTeamsZipModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exportTeamsZipModalLabel">Seleccionar Equipos para Exportar</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Elige los equipos que deseas incluir en el archivo ZIP. Se exportarán solo los equipos activos.</p>
-                <form id="selectTeamsForZipForm">
-                    <div id="zip-team-selection-list"></div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" id="generateZipBtn">Generar y Descargar ZIP</button>
+
+    <div class="modal fade" id="exportTeamsZipModal" tabindex="-1" aria-labelledby="exportTeamsZipModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportTeamsZipModalLabel">Seleccionar Equipos para Exportar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Elige los equipos que deseas incluir en el archivo ZIP. Se exportarán solo los equipos activos.
+                    </p>
+                    <form id="selectTeamsForZipForm">
+                        <div id="zip-team-selection-list"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="generateZipBtn">Generar y Descargar ZIP</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -474,12 +474,12 @@ title: Gestion | Nacion Unite
     <script src="gestion-torneo.js"></script>
     <script src="transfer-control.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (typeof TransferControl !== 'undefined' && TransferControl.renderTransfersTable) {
-            TransferControl.renderTransfersTable();
-        }
-    });
-</script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof TransferControl !== 'undefined' && TransferControl.renderTransfersTable) {
+                TransferControl.renderTransfersTable();
+            }
+        });
+    </script>
 
 </body>
 

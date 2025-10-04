@@ -1056,133 +1056,163 @@ function initializeTeamsTable() {
  */
 function showMatchesModal(teamTag) {
     const team = allTeamData.find(t => t.tag === teamTag);
+    if (!team) {
+        Swal.fire('Error', 'Equipo no encontrado.', 'error');
+        return;
+    }
 
-    if (team && team.partidos) {
-        $('#matchesTeamName').text(team.team); // Establece el título del modal con el nombre del equipo
-        $('#editMatchesTeamTag').val(team.tag); // Guarda el tag del equipo en el campo oculto
+    $('#matchesTeamName').text(team.team);
+    $('#editMatchesTeamTag').val(team.tag);
 
-        const matchesInputList = $('#matchesInputList');
-        matchesInputList.empty(); // Limpia el contenido anterior de la edición manual
+    const matchesInputList = $('#matchesInputList');
+    matchesInputList.empty();
 
-        // Genera dinámicamente campos de entrada para cada partido de la edición manual
-        const matchKeys = Object.keys(team.partidos).sort((a, b) => {
-            const numA = parseInt(a.replace('M', ''), 10);
-            const numB = parseInt(b.replace('M', ''), 10);
-            return numA - numB;
-        });
+    // Asegurar que `partidos` sea un objeto
+    if (!team.partidos || typeof team.partidos !== 'object') {
+        team.partidos = {};
+    }
 
-        matchKeys.forEach(matchKey => {
-            // Obtenemos el valor tal cual está guardado.
-            // Si es null o undefined, lo convertimos a una cadena vacía para facilitar la comparación.
-            const matchValue = team.partidos[matchKey] === null || team.partidos[matchKey] === undefined ? '' : String(team.partidos[matchKey]);
+    // Obtener claves de partidos y ordenarlas numéricamente
+    const matchKeys = Object.keys(team.partidos).sort((a, b) => {
+        const numA = parseInt(a.replace('M', ''), 10) || 0;
+        const numB = parseInt(b.replace('M', ''), 10) || 0;
+        return numA - numB;
+    });
 
-            let displayValue = '';
-            // Si matchValue NO es una cadena vacía, entonces construimos el texto del input.
-            // Si es una cadena vacía, displayValue se queda como "", lo que dejará el input en blanco.
-            if (matchValue !== '') {
-                displayValue = `${matchValue}`;
-            }
-
-            matchesInputList.append(`
-                <div class="col-md-12">
-                    <label for="match-${matchKey}" class="form-label">${matchKey}</label>
-                    <input type="text" class="form-control" id="match-${matchKey}" data-match-key="${matchKey}" value="${displayValue}">
+    // Renderizar cada partido con botón de eliminar
+    matchKeys.forEach(key => {
+        const value = team.partidos[key] ?? '';
+        const html = `
+            <div class="col-md-12 match-row py-2" data-key="${key}">
+                <div class="input-group">
+                    <span class="input-group-text">${key}</span>
+                    <input type="text" class="form-control match-value" value="${value}" placeholder="Ej: 3, 0, D, VS">
+                    <button class="btn btn-outline-danger btn-sm remove-match" type="button" title="Eliminar ${key}">
+                        <i class="bi bi-trash"></i>
+                    </button>
                 </div>
+            </div>
+        `;
+        matchesInputList.append(html);
+    });
+
+    // --- Partidos externos (sin cambios) ---
+    const externalMatchesList = $('#externalMatchesList');
+    externalMatchesList.empty();
+    const teamExternalMatches = allExternalMatches.filter(match =>
+        match.tag1 === teamTag || match.tag2 === teamTag
+    );
+    if (teamExternalMatches.length > 0) {
+        teamExternalMatches.sort((a, b) => a.round_number - b.round_number || a.match_number - b.match_number);
+        teamExternalMatches.forEach(match => {
+            const isTeam1 = match.tag1 === teamTag;
+            const teamName1 = isTeam1 ? `${match.equipo1}` : match.equipo1;
+            const teamName2 = !isTeam1 ? `${match.equipo2}` : match.equipo2;
+            const result = match.resultado === "VS" ? "VS" : ` ${match.resultado}`;
+            externalMatchesList.append(`
+
+                   <div class="input-group py-2">
+                    <span class="input-group-text">R${match.round_number} - P${match.match_number}</span>
+                    <input type="text" class="form-control match-value" value="${teamName1} ${result} ${teamName2}" disabled>
+                  </div>
+            
             `);
         });
-
-        // --- Novedad: Mostrar Partidos Encontrados en Archivos Externos ---
-        const externalMatchesList = $('#externalMatchesList');
-        externalMatchesList.empty(); // Limpia el contenido anterior
-
-        // Filtra los partidos externos que involucran al equipo actual
-        const teamExternalMatches = allExternalMatches.filter(match =>
-            match.tag1 === teamTag || match.tag2 === teamTag
-        );
-
-        if (teamExternalMatches.length > 0) {
-            // Ordenar los partidos externos por número de ronda y número de partido para una mejor visualización
-            teamExternalMatches.sort((a, b) => {
-                if (a.round_number !== b.round_number) {
-                    return a.round_number - b.round_number;
-                }
-                return a.match_number - b.match_number;
-            });
-
-            teamExternalMatches.forEach(match => {
-                const isTeam1 = match.tag1 === teamTag;
-                const teamName1 = isTeam1 ? `<strong>${match.equipo1}</strong>` : match.equipo1;
-                const teamName2 = !isTeam1 ? `<strong>${match.equipo2}</strong>` : match.equipo2;
-                const matchResult = match.resultado === "VS" ? "VS" : ` ${match.resultado}`; // Muestra "VS" si no hay resultado
-
-                externalMatchesList.append(`
-                    <div class="card mb-2">
-                        <div class="card-body py-2">
-                            <h6 class="card-title mb-1">Ronda ${match.round_number} - Partido ${match.match_number}</h6>
-                            <p class="card-text mb-1">
-                                ${teamName1}  ${matchResult} ${teamName2} 
-                            </p>
-                        </div>
-                    </div>
-                `);
-            });
-        } else {
-            externalMatchesList.append('<p class="text-muted">No se encontraron partidos para este equipo en los archivos externos.</p>');
-        }
-
-        const viewMatchesModal = new bootstrap.Modal(document.getElementById('viewMatchesModal'));
-        viewMatchesModal.show();
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'No se encontraron datos de partidos para este equipo.',
-        });
+        externalMatchesList.append('<p class="text-muted">No hay partidos externos.</p>');
     }
+
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('viewMatchesModal'));
+    modal.show();
 }
 
 function saveMatchesChanges() {
     const teamTag = $('#editMatchesTeamTag').val();
-    const teamToUpdate = allTeamData.find(t => t.tag === teamTag);
-
-    if (teamToUpdate) {
-        console.log('--- Antes de guardar cambios de partidos ---');
-        console.log('Equipo actual (antes de actualizar):', JSON.parse(JSON.stringify(teamToUpdate))); // Copia profunda para ver el estado antes
-
-        // Recorre todos los inputs con data-match-key y actualiza los valores
-        $('#matchesInputList input[data-match-key]').each(function () {
-            const matchKey = $(this).data('matchKey');
-            const newMatchValue = $(this).val().trim();
-            teamToUpdate.partidos[matchKey] = newMatchValue;
-        });
-
-        console.log('--- Después de actualizar en memoria ---');
-        console.log('Equipo actualizado en memoria:', JSON.parse(JSON.stringify(teamToUpdate))); // Ve el estado después de la actualización en memoria
-
-        saveAllTeamData(); // Guarda los cambios en localStorage
-        console.log('Datos guardados en localStorage.');
-
-        const viewMatchesModal = bootstrap.Modal.getInstance(document.getElementById('viewMatchesModal'));
-        if (viewMatchesModal) {
-            viewMatchesModal.hide(); // Oculta el modal
-        }
-
-        Swal.fire({
-            icon: 'success',
-            title: '¡Partidos Actualizados!',
-            text: `Los partidos de "${teamToUpdate.team}" han sido guardados.`,
-            timer: 2000,
-            showConfirmButton: false
-        });
-
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error al guardar',
-            text: 'No se pudo encontrar el equipo para actualizar los partidos.',
-        });
+    const team = allTeamData.find(t => t.tag === teamTag);
+    if (!team) {
+        Swal.fire('Error', 'Equipo no encontrado.', 'error');
+        return;
     }
+
+    // Crear un nuevo objeto de partidos
+    const newPartidos = {};
+
+    // Recorrer todos los inputs visibles
+    $('#matchesInputList .match-row').each(function () {
+        const key = $(this).data('key');
+        const value = $(this).find('.match-value').val().trim();
+        if (key) {
+            newPartidos[key] = value; // Guardar incluso si está vacío
+        }
+    });
+
+    // Reemplazar el objeto completo
+    team.partidos = newPartidos;
+
+    saveAllTeamData();
+    const modal = bootstrap.Modal.getInstance(document.getElementById('viewMatchesModal'));
+    if (modal) modal.hide();
+
+    Swal.fire({
+        icon: 'success',
+        title: '¡Partidos actualizados!',
+        text: `Los partidos de "${team.team}" han sido guardados.`,
+        timer: 2000,
+        showConfirmButton: false
+    });
 }
+
+// Añadir nuevo partido
+$(document).on('click', '#addMatchBtn', function () {
+    const teamTag = $('#editMatchesTeamTag').val();
+    const team = allTeamData.find(t => t.tag === teamTag);
+    if (!team || !team.partidos) return;
+
+    // Encontrar el siguiente número disponible
+    const existingNumbers = Object.keys(team.partidos)
+        .map(k => parseInt(k.replace('M', ''), 10))
+        .filter(n => !isNaN(n))
+        .sort((a, b) => a - b);
+
+    const nextNumber = existingNumbers.length > 0 ? Math.max(...existingNumbers) + 1 : 1;
+    const newKey = `M${nextNumber}`;
+
+    // Añadir al DOM
+    const html = `
+        <div class="col-md-12 match-row" data-key="${newKey}">
+            <div class="input-group">
+                <span class="input-group-text">${newKey}</span>
+                <input type="text" class="form-control match-value" placeholder="Ej: 3, 0, D">
+                <button class="btn btn-outline-danger btn-sm remove-match" type="button" title="Eliminar ${newKey}">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
+        </div>
+    `;
+    $('#matchesInputList').append(html);
+}); 
+
+// Eliminar partido
+$(document).on('click', '.remove-match', function () {
+    const row = $(this).closest('.match-row');
+    const key = row.data('key');
+    
+    Swal.fire({
+        title: '¿Eliminar partido?',
+        text: `¿Estás seguro de eliminar el partido "${key}"? Esta acción no se puede deshacer.`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            row.remove();
+        }
+    });
+});
 
 
 $(document).ready(function () {
