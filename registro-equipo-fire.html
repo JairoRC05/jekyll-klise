@@ -1,6 +1,6 @@
 ---
 layout: ligaIndigo
-permalink: /registro-equipos-liga-indigo
+permalink: registro-equipos-liga-indigo
 title: REGISTRO DE EQUIPO
 inscripcion: true
 ---
@@ -204,6 +204,10 @@ inscripcion: true
             margin-top: 10px;
             width: auto;
         }
+
+        .contador-cerrado {
+            display: none;
+        }
     </style>
 </head>
 
@@ -220,10 +224,10 @@ inscripcion: true
                 administrador.</li>
             <li>4. Envie el archivo del reglamento donde aceptaste el reglamento terminos y condiocnes al numero de
                 WhatsApp que se muestra al final.</li>
-            <li>5. El adminstrador te enviará el numero de cuenta a depositar el pago de inscripcion tienes 2 dias para
-                hacer pago en caso contrario el equipo de dará de baja y se tendra que crear nuevo registro, si
-                registras tu equipo en el último dia de inscripciones el plazo que tendras para realizar el pago es de
-                una 1h. Cierre de inscripciones: 05 sep a las 11:30 PM. Inicio de la Liga 08 Sep </li>
+            <li>5. El administrador te enviará el número de cuenta a depositar el pago de inscripción tienes 2 días para
+                hacer pago...
+                Cierre de inscripciones: <strong>17 de octubre a las 11:59 PM</strong>.</li>
+            <li>Incio: <strong>20 de octubre </strong>.</li>
         </ul>
     </div>
 
@@ -265,12 +269,19 @@ inscripcion: true
             <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
 
             <div id="jugadoresError" class="error"></div>
-            <button type="submit" class="btn btn-submit mb-3" disabled>Registrar Equipo</button>
+            <button type="submit" class="btn btn-submit mb-3">Registrar Equipo</button>
             <div id="generalError" class="error"></div>
         </form>
     </div>
 
-    
+
+    <div id="contadorInscripciones" class="alert alert-info text-center" style="font-size: 1.1em; font-weight: bold;">
+        <span id="dias">--</span>d
+        <span id="horas">--</span>h
+        <span id="minutos">--</span>m
+        <span id="segundos">--</span>s
+    </div>
+
 
     <div class="container mt-5 ">
         <div class="row indigo rounded">
@@ -388,9 +399,10 @@ inscripcion: true
     </div>
 
 
+
     <div class="d-flex justify-content-center align-items-center">
         <a href="https://wa.me/527775663274" class="btn btn-add mt-5">WhatsApp <i class="ti ti-brand-whatsapp"></i></a>
-        <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a>
+        <!-- <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a> -->
     </div>
 
 
@@ -433,6 +445,8 @@ inscripcion: true
     <!-- html2canvas JS -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const acceptRulesCheckbox = document.getElementById('acceptRules');
             const captainNameInput = document.getElementById('captainName');
@@ -442,6 +456,18 @@ inscripcion: true
             const captainNameSigned = document.getElementById('captainNameSigned');
             const currentDateSpan = document.getElementById('currentDate');
             const tycDiv = document.getElementById('TYC');
+
+
+            // Verificar nuevamente la fecha (por si el usuario dejó la pestaña abierta)
+            if (new Date() > FECHA_LIMITE) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Registro cerrado',
+                    text: 'El plazo para inscribirse ha finalizado.',
+                    confirmButtonText: 'Cerrar'
+                });
+                return;
+            }
 
             // Función para habilitar/deshabilitar el botón "Continuar"
             function toggleContinueButton() {
@@ -509,10 +535,84 @@ inscripcion: true
             });
         });
     </script>
+
+
+
     <script type="module">
         // Importar Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // === 2. CONFIGURACIÓN ===
+        // IDs que NO pueden usarse en ningún equipo
+        const IDS_RESTRINGIDOS = [
+            '7K4TY1F',
+            'YAKTCQ5',
+            'CARGCC8',
+            '6R3EH5G',
+            'L3E5LAC',
+            '3M05X6G',
+            
+        ].map(id => id.toUpperCase()); // Normalizamos a mayúsculas
+
+        const FECHA_LIMITE = new Date('2025-10-17T23:59:59');
+
+        // === 3. FUNCIONES DE CONTROL DE TIEMPO ===
+        function verificarRegistroAbierto() {
+            const ahora = new Date();
+            const btnSubmit = document.querySelector('.btn-submit');
+            const agregarJugadorBtn = document.getElementById('agregarJugador');
+            const form = document.getElementById('registroForm');
+
+            if (ahora > FECHA_LIMITE) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Registro cerrado',
+                    html: 'Las inscripciones anticipadas finalizaron el <strong>4 de octubre a las 23:59</strong>.<br>¡Gracias por tu interés!',
+                    confirmButtonText: 'Entendido'
+                });
+
+                if (btnSubmit) btnSubmit.disabled = true;
+                if (agregarJugadorBtn) agregarJugadorBtn.disabled = true;
+                if (form) form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
+                return false;
+            }
+            return true;
+        }
+
+        function iniciarContadorRegresivo() {
+            const contadorDiv = document.getElementById('contadorInscripciones');
+            const diasSpan = document.getElementById('dias');
+            const horasSpan = document.getElementById('horas');
+            const minutosSpan = document.getElementById('minutos');
+            const segundosSpan = document.getElementById('segundos');
+
+            if (!contadorDiv) return;
+
+            function actualizarContador() {
+                const ahora = new Date();
+                const diferencia = FECHA_LIMITE - ahora;
+
+                if (diferencia <= 0) {
+                    contadorDiv.classList.add('alert-danger');
+                    contadorDiv.innerHTML = '<strong>¡Inscripciones cerradas!</strong>';
+                    return;
+                }
+
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+                diasSpan.textContent = String(dias).padStart(2, '0');
+                horasSpan.textContent = String(horas).padStart(2, '0');
+                minutosSpan.textContent = String(minutos).padStart(2, '0');
+                segundosSpan.textContent = String(segundos).padStart(2, '0');
+            }
+
+            actualizarContador();
+            setInterval(actualizarContador, 1000);
+        }
 
         // Configuración de Firebase
         const firebaseConfig = {
@@ -529,47 +629,53 @@ inscripcion: true
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // Elementos del DOM
-        const jugadoresContainer = document.getElementById("jugadoresContainer");
-        const btnAgregar = document.getElementById("agregarJugador");
-        const confirmacionContainer = document.getElementById("confirmacionContainer");
-        const confirmacionCard = document.getElementById("confirmacionCard");
-        const btnDownload = document.getElementById("btnDownload");
-        const btnClose = document.getElementById("btnClose");
 
-        let contadorJugadores = 0;
-        const MIN_JUGADORES = 5;
-        const MAX_JUGADORES = 9;
-        let equipoRegistrado = null;
+        // === 5. LÓGICA PRINCIPAL ===
+        if (verificarRegistroAbierto()) {
+            // Solo si está abierto: iniciar contador y configurar formulario
+            iniciarContadorRegresivo();
 
-        // Función para manejar la selección de capitán (solo uno permitido)
-        function manejarSeleccionCapitan(nuevoCheckbox) {
-            if (nuevoCheckbox.checked) {
-                // Desmarcar todos los demás checkboxes de capitán
-                document.querySelectorAll('.capitan-checkbox').forEach(checkbox => {
-                    if (checkbox !== nuevoCheckbox) {
-                        checkbox.checked = false;
-                    }
-                });
+            // Elementos del DOM
+            const jugadoresContainer = document.getElementById("jugadoresContainer");
+            const btnAgregar = document.getElementById("agregarJugador");
+            const confirmacionContainer = document.getElementById("confirmacionContainer");
+            const confirmacionCard = document.getElementById("confirmacionCard");
+            const btnDownload = document.getElementById("btnDownload");
+            const btnClose = document.getElementById("btnClose");
+
+            let contadorJugadores = 0;
+            const MIN_JUGADORES = 5;
+            const MAX_JUGADORES = 9;
+            let equipoRegistrado = null;
+
+            // Función para manejar la selección de capitán (solo uno permitido)
+            function manejarSeleccionCapitan(nuevoCheckbox) {
+                if (nuevoCheckbox.checked) {
+                    // Desmarcar todos los demás checkboxes de capitán
+                    document.querySelectorAll('.capitan-checkbox').forEach(checkbox => {
+                        if (checkbox !== nuevoCheckbox) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
             }
-        }
 
-        // Función para agregar input de jugador
-        function agregarJugador(nombre = "", rol = "", ID = "", esCapitan = false) {
-            if (contadorJugadores >= MAX_JUGADORES) {
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Límite alcanzado',
-                    text: 'Máximo 9 jugadores por equipo.',
-                    confirmButtonText: 'Entendido'
-                });
-                return;
-            }
-            contadorJugadores++;
+            // Función para agregar input de jugador
+            function agregarJugador(nombre = "", rol = "", ID = "", esCapitan = false) {
+                if (contadorJugadores >= MAX_JUGADORES) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Límite alcanzado',
+                        text: 'Máximo 9 jugadores por equipo.',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return;
+                }
+                contadorJugadores++;
 
-            const div = document.createElement("div");
-            div.classList.add("jugador");
-            div.innerHTML = `
+                const div = document.createElement("div");
+                div.classList.add("jugador");
+                div.innerHTML = `
             <div class="row gy-2 gx-3 align-items-center">
                 <div class="col-12 col-lg-3">
                   <label for="namePlayer" class="form-label">Nickname</label>
@@ -604,367 +710,427 @@ inscripcion: true
                 </div>
             `;
 
-            // Seleccionar el valor del rol si viene predefinido
-            const select = div.querySelector("select");
-            if (rol) {
-                select.value = rol;
-            }
+                // Seleccionar el valor del rol si viene predefinido
+                const select = div.querySelector("select");
+                if (rol) {
+                    select.value = rol;
+                }
 
-            // Botón eliminar jugador
-            div.querySelector(".btn-remove").addEventListener("click", () => {
-                div.remove();
-                contadorJugadores--;
+                // Botón eliminar jugador
+                div.querySelector(".btn-remove").addEventListener("click", () => {
+                    div.remove();
+                    contadorJugadores--;
+                    validarJugadores();
+                });
+
+                // Manejar la selección de capitán
+                const checkbox = div.querySelector(".capitan-checkbox");
+                checkbox.addEventListener("change", function () {
+                    manejarSeleccionCapitan(this);
+                });
+
+                jugadoresContainer.appendChild(div);
                 validarJugadores();
-            });
 
-            // Manejar la selección de capitán
-            const checkbox = div.querySelector(".capitan-checkbox");
-            checkbox.addEventListener("change", function () {
-                manejarSeleccionCapitan(this);
-            });
-
-            jugadoresContainer.appendChild(div);
-            validarJugadores();
-
-            // Si este jugador es capitán, asegurarnos de que sea el único
-            if (esCapitan) {
-                manejarSeleccionCapitan(checkbox);
-            }
-        }
-
-        // Agregar jugador por botón
-        btnAgregar.addEventListener("click", () => agregarJugador());
-
-        // Función para validar jugadores
-        function validarJugadores() {
-            const jugadores = document.querySelectorAll("#jugadoresContainer .jugador");
-            const errorDiv = document.getElementById("jugadoresError");
-
-            if (jugadores.length < MIN_JUGADORES) {
-                errorDiv.textContent = `Debes registrar al menos ${MIN_JUGADORES} jugadores.`;
-                errorDiv.classList.add("show");
-                return false;
-            } else if (jugadores.length > MAX_JUGADORES) {
-                errorDiv.textContent = `Un equipo no puede tener más de ${MAX_JUGADORES} jugadores.`;
-                errorDiv.classList.add("show");
-                return false;
-            } else {
-                errorDiv.textContent = "";
-                errorDiv.classList.remove("show");
-                return true;
-            }
-        }
-
-        // Función para validar campos individuales
-        function validarCampo(id, valor, mensaje, minLength = 0) {
-            const errorDiv = document.getElementById(id + "Error");
-            if (!valor || valor.trim() === "") {
-                errorDiv.textContent = mensaje;
-                errorDiv.classList.add("show");
-                return false;
-            } else if (valor.length < minLength) {
-                errorDiv.textContent = `Debe tener al menos ${minLength} caracteres`;
-                errorDiv.classList.add("show");
-                return false;
-            } else {
-                errorDiv.textContent = "";
-                errorDiv.classList.remove("show");
-                return true;
-            }
-        }
-
-        // Función para validar número de WhatsApp
-        function validarWhatsApp(numero) {
-            const errorDiv = document.getElementById("contactoError");
-            const soloNumeros = numero.replace(/\D/g, '');
-
-            if (!numero || numero.trim() === "") {
-                errorDiv.textContent = "El número de contacto es requerido";
-                errorDiv.classList.add("show");
-                return false;
-            } else if (soloNumeros.length !== 12) {
-                errorDiv.textContent = "El número debe tener 10 dígitos";
-                errorDiv.classList.add("show");
-                return false;
-            } else {
-                errorDiv.textContent = "";
-                errorDiv.classList.remove("show");
-                return true;
-            }
-        }
-
-        // Función para validar todos los campos
-        function validarFormulario() {
-            const nombreEquipo = document.getElementById("nombreEquipo").value;
-            const tagEquipo = document.getElementById("tagEquipo").value;
-            const contacto = document.getElementById("contacto").value;
-
-            let isValid = true;
-
-            if (!validarCampo("nombreEquipo", nombreEquipo, "El nombre del equipo es requerido", 1)) isValid = false;
-            if (nombreEquipo.length > 20) {
-                document.getElementById("nombreEquipoError").textContent = "El nombre no debe exceder 20 caracteres";
-                document.getElementById("nombreEquipoError").classList.add("show");
-                isValid = false;
-            }
-
-            if (!validarCampo("tagEquipo", tagEquipo, "El tag del equipo es requerido", 1)) isValid = false;
-            if (tagEquipo.length > 5) {
-                document.getElementById("tagEquipoError").textContent = "El tag no debe exceder 5 caracteres";
-                document.getElementById("tagEquipoError").classList.add("show");
-                isValid = false;
-            }
-
-            if (!validarWhatsApp(contacto)) isValid = false;
-
-            if (!validarJugadores()) isValid = false;
-
-            return isValid;
-        }
-
-        // Función para verificar si hay un capitán seleccionado
-        function verificarCapitan() {
-            const checkboxes = document.querySelectorAll('.capitan-checkbox');
-            let capitánSeleccionado = 0;
-
-            checkboxes.forEach(checkbox => {
-                if (checkbox.checked) {
-                    capitánSeleccionado++;
+                // Si este jugador es capitán, asegurarnos de que sea el único
+                if (esCapitan) {
+                    manejarSeleccionCapitan(checkbox);
                 }
-            });
-
-            if (capitánSeleccionado === 0) {
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Capitán requerido',
-                    text: 'Debes seleccionar un capitán para el equipo.',
-                    confirmButtonText: 'Entendido'
-                });
-                return false;
-            } else if (capitánSeleccionado > 1) {
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Demasiados capitanes',
-                    text: 'Solo puedes seleccionar un jugador como capitán.',
-                    confirmButtonText: 'Entendido'
-                });
-                return false;
             }
 
-            return true;
-        }
+            // Agregar jugador por botón
+            btnAgregar.addEventListener("click", () => agregarJugador());
 
-        // Función para mostrar la tarjeta de confirmación
-        function mostrarConfirmacion(equipo) {
-            // Rellenar los datos en la tarjeta
-            document.getElementById("displayNombreEquipo").textContent = equipo.nombreEquipo;
-            document.getElementById("displayTagEquipo").textContent = equipo.tagEquipo;
-            document.getElementById("displayContacto").textContent = formatoWhatsApp(equipo.contacto);
-            document.getElementById("displayCapitan").textContent = equipo.capitánNombre;
+            // Función para validar jugadores
+            function validarJugadores() {
+                const jugadores = document.querySelectorAll("#jugadoresContainer .jugador");
+                const errorDiv = document.getElementById("jugadoresError");
 
-            // Limpiar y llenar la lista de jugadores
-            const listaJugadores = document.getElementById("listaJugadores");
-            listaJugadores.innerHTML = '';
-
-            equipo.jugadores.forEach(jugador => {
-                const div = document.createElement("div");
-                div.classList.add("jugador-item");
-
-                const nombreRol = `${jugador.nombre} (${jugador.rol}) - ID: ${jugador.idJuego}`;
-
-                if (jugador.esCapitan) {
-                    div.innerHTML = `${nombreRol} <span class="capitan-tag">Capitán</span>`;
+                if (jugadores.length < MIN_JUGADORES) {
+                    errorDiv.textContent = `Debes registrar al menos ${MIN_JUGADORES} jugadores.`;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (jugadores.length > MAX_JUGADORES) {
+                    errorDiv.textContent = `Un equipo no puede tener más de ${MAX_JUGADORES} jugadores.`;
+                    errorDiv.classList.add("show");
+                    return false;
                 } else {
-                    div.textContent = nombreRol;
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
+
+
+            function validarIDsJugadores(jugadores) {
+                const idsUsados = new Set(); // Para detectar duplicados en el mismo equipo
+                const errores = [];
+
+                for (const jugador of jugadores) {
+                    const idNormalizado = jugador.idJuego.trim().toUpperCase();
+
+                    // Validar ID restringido
+                    if (IDS_RESTRINGIDOS.includes(idNormalizado)) {
+                        errores.push(`El ID "${jugador.idJuego}" no está permitido.`);
+                    }
+
+                    // Validar duplicado en el mismo equipo (opcional pero recomendado)
+                    if (idsUsados.has(idNormalizado)) {
+                        errores.push(`El ID "${jugador.idJuego}" está repetido en el equipo.`);
+                    }
+                    idsUsados.add(idNormalizado);
                 }
 
-                listaJugadores.appendChild(div);
-            });
+                return errores;
+            }
 
-            // Guardar el equipo para la descarga
-            equipoRegistrado = equipo;
+            // Función para validar campos individuales
+            function validarCampo(id, valor, mensaje, minLength = 0) {
+                const errorDiv = document.getElementById(id + "Error");
+                if (!valor || valor.trim() === "") {
+                    errorDiv.textContent = mensaje;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (valor.length < minLength) {
+                    errorDiv.textContent = `Debe tener al menos ${minLength} caracteres`;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else {
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
 
-            // Mostrar el contenedor
-            confirmacionContainer.style.display = 'flex';
-        }
+            // Función para validar número de WhatsApp
+            function validarWhatsApp(numero) {
+                const errorDiv = document.getElementById("contactoError");
+                const soloNumeros = numero.replace(/\D/g, '');
 
-        // Función para formatear el número de WhatsApp
-        function formatoWhatsApp(numero) {
-            const str = numero.toString();
-            return `${str.substring(0, 2)} ${str.substring(2, 6)} ${str.substring(6, 10)}`;
-        }
+                if (!numero || numero.trim() === "") {
+                    errorDiv.textContent = "El número de contacto es requerido";
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (soloNumeros.length !== 12) {
+                    errorDiv.textContent = "El número debe tener 10 dígitos";
+                    errorDiv.classList.add("show");
+                    return false;
+                } else {
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
 
-        // Función para registrar equipo
-        async function registrarEquipo(equipo) {
-            try {
-                // Validar máximo de equipos
-                const equiposRef = collection(db, "equipos");
-                const snapshot = await getDocs(equiposRef);
+            // Función para validar todos los campos
+            function validarFormulario() {
+                const nombreEquipo = document.getElementById("nombreEquipo").value;
+                const tagEquipo = document.getElementById("tagEquipo").value;
+                const contacto = document.getElementById("contacto").value;
 
-                if (snapshot.size >= 32) {
+                let isValid = true;
+
+                if (!validarCampo("nombreEquipo", nombreEquipo, "El nombre del equipo es requerido", 1)) isValid = false;
+                if (nombreEquipo.length > 20) {
+                    document.getElementById("nombreEquipoError").textContent = "El nombre no debe exceder 20 caracteres";
+                    document.getElementById("nombreEquipoError").classList.add("show");
+                    isValid = false;
+                }
+
+                if (!validarCampo("tagEquipo", tagEquipo, "El tag del equipo es requerido", 1)) isValid = false;
+                if (tagEquipo.length > 5) {
+                    document.getElementById("tagEquipoError").textContent = "El tag no debe exceder 5 caracteres";
+                    document.getElementById("tagEquipoError").classList.add("show");
+                    isValid = false;
+                }
+
+                if (!validarWhatsApp(contacto)) isValid = false;
+
+                if (!validarJugadores()) isValid = false;
+
+                return isValid;
+            }
+
+            // Función para verificar si hay un capitán seleccionado
+            function verificarCapitan() {
+                const checkboxes = document.querySelectorAll('.capitan-checkbox');
+                let capitánSeleccionado = 0;
+
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        capitánSeleccionado++;
+                    }
+                });
+
+                if (capitánSeleccionado === 0) {
                     Swal.fire({
-                        icon: 'info',
-                        title: 'Registro cerrado',
-                        text: 'Ya hay 32 equipos registrados. El registro está completo.',
+                        icon: 'warning',
+                        title: 'Capitán requerido',
+                        text: 'Debes seleccionar un capitán para el equipo.',
                         confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                } else if (capitánSeleccionado > 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Demasiados capitanes',
+                        text: 'Solo puedes seleccionar un jugador como capitán.',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                }
+
+                return true;
+            }
+
+            // Función para mostrar la tarjeta de confirmación
+            function mostrarConfirmacion(equipo) {
+                // Rellenar los datos en la tarjeta
+                document.getElementById("displayNombreEquipo").textContent = equipo.nombreEquipo;
+                document.getElementById("displayTagEquipo").textContent = equipo.tagEquipo;
+                document.getElementById("displayContacto").textContent = formatoWhatsApp(equipo.contacto);
+                document.getElementById("displayCapitan").textContent = equipo.capitánNombre;
+
+                // Limpiar y llenar la lista de jugadores
+                const listaJugadores = document.getElementById("listaJugadores");
+                listaJugadores.innerHTML = '';
+
+                equipo.jugadores.forEach(jugador => {
+                    const div = document.createElement("div");
+                    div.classList.add("jugador-item");
+
+                    const nombreRol = `${jugador.nombre} (${jugador.rol}) - ID: ${jugador.idJuego}`;
+
+                    if (jugador.esCapitan) {
+                        div.innerHTML = `${nombreRol} <span class="capitan-tag">Capitán</span>`;
+                    } else {
+                        div.textContent = nombreRol;
+                    }
+
+                    listaJugadores.appendChild(div);
+                });
+
+                // Guardar el equipo para la descarga
+                equipoRegistrado = equipo;
+
+                // Mostrar el contenedor
+                confirmacionContainer.style.display = 'flex';
+            }
+
+            // Función para formatear el número de WhatsApp
+            function formatoWhatsApp(numero) {
+                const str = numero.toString();
+                return `${str.substring(0, 2)} ${str.substring(2, 6)} ${str.substring(6, 10)}`;
+            }
+
+            // Función para registrar equipo
+            async function registrarEquipo(equipo) {
+                try {
+                    // Validar máximo de equipos
+                    const inscripcionesRef = collection(db, "insOctubre");
+                    const snapshot = await getDocs(inscripcionesRef);
+
+                    if (snapshot.size >= 32) {
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Registro cerrado',
+                            text: 'Ya hay 32 equipos registrados. El registro está completo.',
+                            confirmButtonText: 'Entendido'
+                        });
+                        return;
+                    }
+
+                    // Guardar en Firestore
+                    await addDoc(inscripcionesRef, equipo);
+
+                    // Mostrar la tarjeta de confirmación en lugar del SweetAlert
+                    mostrarConfirmacion(equipo);
+
+                    // Resetear formulario
+                    document.getElementById("registroForm").reset();
+                    jugadoresContainer.innerHTML = "";
+                    contadorJugadores = 0;
+                    document.getElementById("generalError").textContent = "";
+                    document.getElementById("generalError").classList.remove("show");
+
+                    // Agregar un jugador inicial
+                    agregarJugador();
+
+                } catch (error) {
+                    console.error("Error al registrar equipo:", error);
+                    let errorMessage = "No se pudo guardar en Firebase";
+
+                    if (error.message.includes("permission-denied")) {
+                        errorMessage += ": Permisos denegados. Verifica tus reglas de Firestore.";
+                    } else if (error.message.includes("unavailable")) {
+                        errorMessage += ": No se puede conectar a Firebase. Verifica tu conexión.";
+                    } else {
+                        errorMessage += ": " + error.message;
+                    }
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: errorMessage,
+                        confirmButtonText: 'Cerrar'
+                    });
+                }
+            }
+
+            // Manejo del formulario
+            document.getElementById("registroForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                if (new Date() > FECHA_LIMITE) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'El registro expiró',
+                        confirmButtonText: 'Cerrar'
                     });
                     return;
                 }
 
-                // Guardar en Firestore
-                await addDoc(equiposRef, equipo);
-
-                // Mostrar la tarjeta de confirmación en lugar del SweetAlert
-                mostrarConfirmacion(equipo);
-
-                // Resetear formulario
-                document.getElementById("registroForm").reset();
-                jugadoresContainer.innerHTML = "";
-                contadorJugadores = 0;
-                document.getElementById("generalError").textContent = "";
-                document.getElementById("generalError").classList.remove("show");
-
-                // Agregar un jugador inicial
-                agregarJugador();
-
-            } catch (error) {
-                console.error("Error al registrar equipo:", error);
-                let errorMessage = "No se pudo guardar en Firebase";
-
-                if (error.message.includes("permission-denied")) {
-                    errorMessage += ": Permisos denegados. Verifica tus reglas de Firestore.";
-                } else if (error.message.includes("unavailable")) {
-                    errorMessage += ": No se puede conectar a Firebase. Verifica tu conexión.";
-                } else {
-                    errorMessage += ": " + error.message;
+                // Validar formulario antes de procesar
+                if (!validarFormulario()) {
+                    return;
                 }
 
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: errorMessage,
-                    confirmButtonText: 'Cerrar'
-                });
-            }
-        }
+                // Verificar que haya exactamente un capitán seleccionado
+                if (!verificarCapitan()) {
+                    return;
+                }
 
-        // Manejo del formulario
-        document.getElementById("registroForm").addEventListener("submit", async (e) => {
-            e.preventDefault();
+                const nombreEquipo = document.getElementById("nombreEquipo").value;
+                const tagEquipo = document.getElementById("tagEquipo").value;
+                const contacto = document.getElementById("contacto").value.replace(/\D/g, ''); // Solo números
 
-            // Validar formulario antes de procesar
-            if (!validarFormulario()) {
-                return;
-            }
-
-            // Verificar que haya exactamente un capitán seleccionado
-            if (!verificarCapitan()) {
-                return;
-            }
-
-            const nombreEquipo = document.getElementById("nombreEquipo").value;
-            const tagEquipo = document.getElementById("tagEquipo").value;
-            const contacto = document.getElementById("contacto").value.replace(/\D/g, ''); // Solo números
-
-            // Obtener lista de jugadores
-            const jugadores = [];
-            let capitánNombre = "";
+                // Obtener lista de jugadores
+                const jugadores = [];
+                let capitánNombre = "";
 
 
-            document.querySelectorAll("#jugadoresContainer .jugador").forEach(div => {
-                const inputs = div.querySelectorAll("input");
-                const select = div.querySelector("select");
-                const esCapitan = div.querySelector(".capitan-checkbox").checked;
+                document.querySelectorAll("#jugadoresContainer .jugador").forEach(div => {
+                    const inputs = div.querySelectorAll("input");
+                    const select = div.querySelector("select");
+                    const esCapitan = div.querySelector(".capitan-checkbox").checked;
 
 
-                const nombre = inputs[0].value;
-                const idJuego = inputs[1].value;
+                    const nombre = inputs[0].value;
+                    const idJuego = inputs[1].value;
 
 
-                if (nombre && select.value && idJuego) {
-                    const jugador = {
-                        nombre: nombre,
-                        rol: select.value,
-                        idJuego: idJuego,
-                        esCapitan: esCapitan
-                    };
+                    if (nombre && select.value && idJuego) {
+                        const jugador = {
+                            nombre: nombre,
+                            rol: select.value,
+                            idJuego: idJuego,
+                            esCapitan: esCapitan
+                        };
 
-                    jugadores.push(jugador);
+                        jugadores.push(jugador);
 
-                    if (esCapitan) {
-                        capitánNombre = nombre;
+                        if (esCapitan) {
+                            capitánNombre = nombre;
+                        }
                     }
+                });
+
+
+                // Validar IDs restringidos y duplicados
+                // Dentro del evento submit, después de construir `jugadores`
+                let tieneIDRestringido = false;
+                for (const jugador of jugadores) {
+                    const idNormalizado = jugador.idJuego.trim().toUpperCase();
+                    if (IDS_RESTRINGIDOS.includes(idNormalizado)) {
+                        tieneIDRestringido = true;
+                        break; 
+                    }
+                }
+
+                if (tieneIDRestringido) {
+                    // Mensaje FALSO pero creíble
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Registro no disponible',
+                        html: 'Lo sentimos, el cupo para este torneo ya ha sido completado.<br>Gracias por tu interés.',
+                        confirmButtonText: 'Entendido',
+                        allowOutsideClick: false
+                    }).then(() => {
+                        // Opcional: recargar la página para simular "error del sistema"
+                        location.reload();
+                    });
+                    return; // Detener el registro
+                }
+
+
+                const equipo = {
+                    nombreEquipo,
+                    tagEquipo,
+                    contacto: contacto,
+                    jugadores,
+                    capitánNombre: capitánNombre,
+                    fechaRegistro: new Date().toISOString()
+                };
+
+                // Registrar equipo
+                await registrarEquipo(equipo);
+            });
+
+            // Evento para descargar la captura
+            btnDownload.addEventListener('click', async () => {
+                if (!equipoRegistrado) return;
+
+                try {
+                    // Usar html2canvas para capturar el contenido
+                    const canvas = await html2canvas(document.getElementById('capturaContenido'), {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#ffffff'
+                    });
+
+                    // Crear enlace de descarga
+                    const link = document.createElement('a');
+                    link.download = `registro-equipo-${equipoRegistrado.nombreEquipo}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Descarga completada!',
+                        text: 'La imagen del registro ha sido descargada. Envíala al administrador para completar el proceso.',
+                        confirmButtonText: 'Entendido'
+                    });
+
+                } catch (error) {
+                    console.error('Error al generar la imagen:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'No se pudo generar la imagen. Intenta nuevamente.',
+                        confirmButtonText: 'Cerrar'
+                    });
                 }
             });
 
-            const equipo = {
-                nombreEquipo,
-                tagEquipo,
-                contacto: contacto,
-                jugadores,
-                capitánNombre: capitánNombre,
-                fechaRegistro: new Date().toISOString()
-            };
-
-            // Registrar equipo
-            await registrarEquipo(equipo);
-        });
-
-        // Evento para descargar la captura
-        btnDownload.addEventListener('click', async () => {
-            if (!equipoRegistrado) return;
-
-            try {
-                // Usar html2canvas para capturar el contenido
-                const canvas = await html2canvas(document.getElementById('capturaContenido'), {
-                    scale: 2,
-                    useCORS: true,
-                    backgroundColor: '#ffffff'
-                });
-
-                // Crear enlace de descarga
-                const link = document.createElement('a');
-                link.download = `registro-equipo-${equipoRegistrado.nombreEquipo}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Descarga completada!',
-                    text: 'La imagen del registro ha sido descargada. Envíala al administrador para completar el proceso.',
-                    confirmButtonText: 'Entendido'
-                });
-
-            } catch (error) {
-                console.error('Error al generar la imagen:', error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'No se pudo generar la imagen. Intenta nuevamente.',
-                    confirmButtonText: 'Cerrar'
-                });
-            }
-        });
-
-        // Evento para cerrar la tarjeta
-        btnClose.addEventListener('click', () => {
-            confirmacionContainer.style.display = 'none';
-        });
-
-        // Cerrar con tecla Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+            // Evento para cerrar la tarjeta
+            btnClose.addEventListener('click', () => {
                 confirmacionContainer.style.display = 'none';
-            }
-        });
+            });
+
+            // Cerrar con tecla Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    confirmacionContainer.style.display = 'none';
+                }
+            });
 
 
-   
 
 
-
-        // Agregar un jugador inicial
-        agregarJugador();
+            // Agregar un jugador inicial
+            agregarJugador();
+        }
     </script>
 </body>
 
