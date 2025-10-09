@@ -80,7 +80,6 @@ layout:
 
         <div class="central-content-area">
             <div class="main-content-left">
-
                 {% if page.team or page.inscripcion %}
                 {% else %}
                 <div id="hero-slider" class="carousel slide" data-bs-ride="carousel">
@@ -97,16 +96,10 @@ layout:
                     </button>
                 </div>
                 {% endif %}
-
                 {{content}}
-
                 {% include sponsors.html %}
             </div>
-
             {%- include bans-indigo-league.html -%}
-
-
-
         </div>
     </div>
 
