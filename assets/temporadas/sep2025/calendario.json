@@ -963,7 +963,7 @@
             "tag1": "GDEX",
             "equipo2": "DINASTY",
             "tag2": "DINASTY",
-            "resultado": "2-0",
+            "resultado": "2-1",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-09-30",
@@ -1074,7 +1074,7 @@
             "tag1": "GDEX",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLATINO",
-            "resultado": "0-2",
+            "resultado": "2-1",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-10-02",
@@ -1207,12 +1207,13 @@
             "tag1": "CTS",
             "equipo2": "Descansa",
             "tag2": "BYE",
-            "resultado": "VS",
+            "resultado": "DES",
             "stream": false,
-            "hora": null,
+            "hora": "",
             "dia": "",
             "round_number": 13,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "THE UNOWN TEAM",
@@ -1245,24 +1246,26 @@
             "tag1": "DFSFTB",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLATINO",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-10-08",
             "round_number": 13,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "AMNESIA",
             "tag1": "AMS",
             "equipo2": "GANBARU DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-10-08",
             "round_number": 13,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           },
           {
             "equipo1": "DFS SAPPHIRE",
