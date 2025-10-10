@@ -445,8 +445,9 @@ inscripcion: true
     <!-- html2canvas JS -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
-
-
+        
+        const FECHA_LIMITE = new Date('2025-10-17T23:59:59');
+        
         document.addEventListener('DOMContentLoaded', function () {
             const acceptRulesCheckbox = document.getElementById('acceptRules');
             const captainNameInput = document.getElementById('captainName');
@@ -555,7 +556,6 @@ inscripcion: true
             
         ].map(id => id.toUpperCase()); // Normalizamos a mayúsculas
 
-        const FECHA_LIMITE = new Date('2025-10-17T23:59:59');
 
         // === 3. FUNCIONES DE CONTROL DE TIEMPO ===
         function verificarRegistroAbierto() {
