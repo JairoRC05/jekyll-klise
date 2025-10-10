@@ -224,7 +224,7 @@ title: EQUIPOS INSCRITOS
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
     
         
         <div class="stats">
@@ -346,7 +346,7 @@ title: EQUIPOS INSCRITOS
         // Función para cargar equipos desde Firestore
         async function cargarEquipos() {
             try {
-                const equiposRef = collection(db, "equipos");
+                const equiposRef = collection(db, "insOctubre");
                 const snapshot = await getDocs(equiposRef);
                 
                 // Ocultar estado de carga

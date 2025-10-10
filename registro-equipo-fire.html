@@ -306,7 +306,7 @@ inscripcion: true
                     </label>
                 </div>
 
-                <button class="btn btn-add mt-3" id="continueBtn">Continuar</button>
+                <button class="btn btn-add mt-3" id="continueBtn">DESCARGAR TYC</button>
             </div>
         </div>
     </div>
@@ -402,7 +402,7 @@ inscripcion: true
 
     <div class="d-flex justify-content-center align-items-center">
         <a href="https://wa.me/527775663274" class="btn btn-add mt-5">WhatsApp <i class="ti ti-brand-whatsapp"></i></a>
-        <!-- <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a> -->
+        <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a>
     </div>
 
 
@@ -445,9 +445,9 @@ inscripcion: true
     <!-- html2canvas JS -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
-        
+
         const FECHA_LIMITE = new Date('2025-10-17T23:59:59');
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             const acceptRulesCheckbox = document.getElementById('acceptRules');
             const captainNameInput = document.getElementById('captainName');
@@ -553,7 +553,7 @@ inscripcion: true
             '6R3EHG5GRRR',
             'L3E5LAGCRRR',
             '3M05X6GGRRR',
-            
+
         ].map(id => id.toUpperCase()); // Normalizamos a mayúsculas
 
 
@@ -923,13 +923,47 @@ inscripcion: true
                 return `${str.substring(0, 2)} ${str.substring(2, 6)} ${str.substring(6, 10)}`;
             }
 
+
             // Función para registrar equipo
             async function registrarEquipo(equipo) {
                 try {
-                    // Validar máximo de equipos
+                    // Mostrar loader mientras se verifica
+                    Swal.fire({
+                        title: 'Verificando jugadores...',
+                        html: 'Por favor espera unos segundos mientras verificamos la información.',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+
+                    // Referencia a la colección
                     const inscripcionesRef = collection(db, "insOctubre");
+
+                    // === 🔍 Verificar si algún jugador ya está registrado en otro equipo ===
                     const snapshot = await getDocs(inscripcionesRef);
 
+                    for (const doc of snapshot.docs) {
+                        const data = doc.data();
+                        if (data.jugadores && Array.isArray(data.jugadores)) {
+                            for (const jugadorNuevo of equipo.jugadores) {
+                                const coincidencia = data.jugadores.find(j =>
+                                    j.idJuego.trim().toUpperCase() === jugadorNuevo.idJuego.trim().toUpperCase()
+                                );
+                                if (coincidencia) {
+                                    Swal.fire({
+                                        icon: 'warning',
+                                        title: 'Jugador ya registrado',
+                                        html: `El jugador <b>${coincidencia.nombre}</b> (ID: <b>${coincidencia.idJuego}</b>) ya se encuentra registrado en otro equipo.`,
+                                        confirmButtonText: 'Entendido'
+                                    });
+                                    return; // Detener registro
+                                }
+                            }
+                        }
+                    }
+
+                    // === ✅ Verificar límite de equipos ===
                     if (snapshot.size >= 32) {
                         Swal.fire({
                             icon: 'info',
@@ -940,10 +974,13 @@ inscripcion: true
                         return;
                     }
 
-                    // Guardar en Firestore
+                    // === ✅ Si todo está bien, guardar en Firestore ===
                     await addDoc(inscripcionesRef, equipo);
 
-                    // Mostrar la tarjeta de confirmación en lugar del SweetAlert
+                    // Cerrar loader
+                    Swal.close();
+
+                    // Mostrar la tarjeta de confirmación
                     mostrarConfirmacion(equipo);
 
                     // Resetear formulario
@@ -974,8 +1011,12 @@ inscripcion: true
                         text: errorMessage,
                         confirmButtonText: 'Cerrar'
                     });
+                } finally {
+                    // En caso de que algo falle antes de cerrar el loader
+                    Swal.close();
                 }
             }
+
 
             // Manejo del formulario
             document.getElementById("registroForm").addEventListener("submit", async (e) => {
@@ -1044,7 +1085,7 @@ inscripcion: true
                     const idNormalizado = jugador.idJuego.trim().toUpperCase();
                     if (IDS_RESTRINGIDOS.includes(idNormalizado)) {
                         tieneIDRestringido = true;
-                        break; 
+                        break;
                     }
                 }
 
