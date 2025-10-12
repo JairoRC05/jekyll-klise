@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async function() {
      // --- NUEVO: Cargar el JSON de ganadores simulados ---
     let ganadoresSimulados = {};
     try {
-        const response = await fetch('/assets/temporadas/julio2025/partidos/ganadoresIndigo.json');
+        const response = await fetch('/assets/temporadas/sep2025/ganadoresIndigo.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

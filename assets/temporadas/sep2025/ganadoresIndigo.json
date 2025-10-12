@@ -1,0 +1,36 @@
+{
+  "cuartos_final": {
+    "QF1": {
+      "nombre": "TUT ONECOIN",
+      "tag": "TUTOC"
+    },
+    "QF2": {
+      "nombre": "AMNESIA",
+      "tag": "AMS"
+    },
+    "QF3": {
+      "nombre": "Ganador QF3",
+      "tag": "TBD"
+    },
+    "QF4": {
+      "nombre": "Ganador QF4",
+      "tag": "TBD"
+    }
+  },
+  "semifinales": {
+    "SF1": {
+      "nombre": "Ganador SF1",
+      "tag": "TBD"
+    },
+    "SF2": {
+      "nombre": "Ganador SF2",
+      "tag": "TBD"
+    }
+  },
+  "final": {
+    "F1": {
+      "nombre": "Ganador Final",
+      "tag": "TBD"
+    }
+  }
+}
