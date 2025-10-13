@@ -38,3 +38,5 @@ gem "webrick", "~> 1.8"
 
 gem "storyblok"
 
+
+gem "bigdecimal", "~> 3.3"
