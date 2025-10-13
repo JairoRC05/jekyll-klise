@@ -37,9 +37,7 @@
 
     &:hover,
     &.active {
-      background: $dark-overlay;
-      @include glass-effect;
-      color: #ffffff;
+      color: black;
     }
   }
 
