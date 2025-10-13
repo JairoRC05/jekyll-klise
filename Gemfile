@@ -12,6 +12,7 @@ gem "jekyll", "~> 4.1.0"
 
 gem "puma"
 gem "csv"
+gem "base64"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
