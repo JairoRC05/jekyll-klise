@@ -98,12 +98,12 @@
       font-size: 0.8rem;
       text-align: center;
 
-      i {
-        margin: 0 0 5px 0;
-        font-size: 1.2rem;
+      .textIcon {
+        color: gray;
+        font-size: 8px;  
       }
 
-      span {
+      .start-home {
         display: none;
       }
     }
