@@ -12,12 +12,12 @@ title: INICIO | NACIÓN UNITE
 
 <body class="nacion-unite">
 
-  <div class="sidebar">
-    <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="#">
+  <div class="sidebar {{page.bgColor}} ">
+    <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/">
       <i class="bi bi-controller me-2"></i>
-      <span>UniteZone</span>
+      <span>INICIO</span>
     </a>
-    <ul class="nav flex-lg-column flex-md-row">
+    <ul class="nav flex-lg-column flex-md-row  ">
       <li class="nav-item iconContainer">
         <a class="nav-link" href="/liga-indigo-home">
           <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
@@ -55,7 +55,7 @@ title: INICIO | NACIÓN UNITE
         </a>
       </li>
        <li class="nav-item iconContainer">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/comunidad">
           <img src="/assets/logos/icons/world.webp" alt="" class="imgIcon">
           <span class="ms-1 trunk textIcon">Comunidad</span>
         </a>
@@ -77,7 +77,7 @@ title: INICIO | NACIÓN UNITE
 
   <div class="main-content">
 
-    <div class="top-bar">
+    <div class="top-bar {{page.bgColor}}">
       <h1 class="m-0 exo-style">{{ page.title | default: "NACIÓN UNITE" }}</h1>
       <div class="flex-grow-1"></div>
 
@@ -91,6 +91,9 @@ title: INICIO | NACIÓN UNITE
 
     <div class="central-content-area">
       <div class="main-content-left">
+        {% if page.comunidad %}
+        {{content}}
+          {% else %}
         <div id="hero-slider" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" id="slider-content">
             <!-- Slides dinámicas aquí -->
@@ -103,10 +106,14 @@ title: INICIO | NACIÓN UNITE
           </button>
         </div>
 
+        {%- include promo.html -%}
+
+        {% endif %}
+
 
         
 
-        {%- include promo.html -%}
+        
 
         <!-- <div class="discount-banner text-center">
           <h4>¡Participa en Nuestro Sorteo Mensual!</h4>
