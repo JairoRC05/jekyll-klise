@@ -3,9 +3,9 @@
   height: 35px;
   filter: grayscale(100%) brightness(200%) contrast(100%);
 
-  @include respond-to(md) {
-    filter: grayscale(280%) brightness(70%) contrast(100%) !important;
-  }
+  // @include respond-to(md) {
+  //   filter: grayscale(280%) brightness(70%) contrast(100%) !important;
+  // }
 
 
 }

@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 95vh;
   overflow-y: auto;
   flex-shrink: 0;
   margin: 1rem;
@@ -85,12 +85,12 @@
       display: none;
     }
 
-    .nav{
+    // .nav{
      
-      backdrop-filter: none;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 12px;
-    }
+    //   backdrop-filter: none;
+    //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //   border-radius: 12px;
+    // }
 
     .nav-link {
       flex-direction: column;
@@ -99,7 +99,6 @@
       text-align: center;
 
       .textIcon {
-        color: gray;
         font-size: 8px;  
       }
 

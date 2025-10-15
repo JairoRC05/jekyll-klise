@@ -1,0 +1,152 @@
+.social-links {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.social-links h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.social-links p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.social-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 100%;
+  max-width: 360px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0.5rem 0;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: white !important;
+}
+
+.social-info {
+  flex: 1;
+}
+
+.social-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  margin-bottom: 0 !important;
+}
+
+.social-followers {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+  color: #fff !important;
+}
+
+.follow-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.follow-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Estilos específicos por red */
+.twitter {
+  background: #474747;
+  background: radial-gradient(circle, rgba(71, 71, 71, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.youtube {
+  background: #ff5757;
+  background: radial-gradient(circle, rgba(255, 87, 87, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.instagram {
+  background: #F09433;
+background: linear-gradient(45deg, rgba(240, 148, 51, 1) 20%, rgba(230, 104, 60, 1) 40%, rgba(220, 39, 67, 1) 60%, rgba(204, 35, 102, 1) 80%, rgba(188, 24, 136, 1) 100%);
+}
+
+.discord {
+  background: #818bf7;
+background: radial-gradient(circle, rgba(129, 139, 247, 1) 0%, rgba(88, 101, 242, 1) 100%);
+}
+.facebook {
+  background: #4592f7;
+background: radial-gradient(circle, rgba(69, 146, 247, 1) 0%, rgba(24, 119, 242, 1) 100%);
+}
+
+.twitch {
+  background: #a970ff;
+background: radial-gradient(circle, rgba(169, 112, 255, 1) 0%, rgba(145, 70, 255, 1) 100%);
+}
+
+@media (max-width: 500px) {
+  .social-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .social-icon {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .follow-btn {
+    margin-top: 0.5rem;
+  }
+}

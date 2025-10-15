@@ -1,4 +1,4 @@
 ---
 layout: home
-background: bg-black
+bgColor: home
 ---
