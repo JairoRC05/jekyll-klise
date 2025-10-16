@@ -1,0 +1,498 @@
+---
+layout:
+permalink: transfer-liga-indigo
+title: REGISTRO DE EQUIPO
+inscripcion: true
+bgColor: indigo
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin - Torneos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .jugador-item {
+            font-size: 0.875rem;
+        }
+
+        .capitan-tag {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="container py-4">
+        <h2 class="mb-4">📊 Panel de Administración de Temporadas</h2>
+
+        <!-- Selector de temporadas -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="tempOrigen" class="form-label">Temporada origen</label>
+                <select id="tempOrigen" class="form-select"></select>
+            </div>
+            <div class="col-md-6">
+                <label for="tempDestino" class="form-label">Temporada destino</label>
+                <select id="tempDestino" class="form-select"></select>
+            </div>
+        </div>
+
+        <!-- Botón para cargar equipos -->
+        <button id="btnCargarEquipos" class="btn btn-primary mb-4">Cargar Equipos</button>
+
+        <!-- Lista de equipos -->
+        <div id="equiposList" class="row gy-3"></div>
+    </div>
+
+    <!-- Campo de búsqueda -->
+    <div class="row mb-3">
+        <div class="col-md-8">
+            <input type="text" id="buscarEquipo" class="form-control" placeholder="Buscar equipo por nombre o tag...">
+        </div>
+        <div class="col-md-4">
+            <button id="btnBuscarEquipo" class="btn btn-outline-secondary w-100">Buscar y editar</button>
+        </div>
+    </div>
+
+    <!-- Modal de edición -->
+    <div class="modal fade" id="modalEditarEquipo" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarEquipo">
+                        <input type="hidden" id="editDocId">
+                        <input type="hidden" id="editTemp">
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del equipo</label>
+                            <input type="text" id="editNombreEquipo" class="form-control" maxlength="20" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tag (máx. 5 letras)</label>
+                            <input type="text" id="editTagEquipo" class="form-control" maxlength="5" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contacto (WhatsApp, 10 dígitos)</label>
+                            <input type="text" id="editContacto" class="form-control" required>
+                        </div>
+
+                        <h6>Jugadores (mín. 5, máx. 9)</h6>
+                        <div id="editJugadoresContainer"></div>
+                        <button type="button" id="btnAgregarJugadorEdit" class="btn btn-sm btn-outline-primary mt-2">+
+                            Agregar jugador</button>
+
+                        <div class="mt-3 d-grid">
+                            <button type="submit" class="btn btn-success">Guardar cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Plantilla de equipo -->
+    {% raw %}
+    <script id="equipoTemplate" type="text/template">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{nombreEquipo}} <small class="text-muted">({{tagEquipo}})</small></h5>
+          <p class="mb-2"><strong>Contacto:</strong> {{contacto}}</p>
+          <p class="mb-2"><strong>Capitán:</strong> {{capitanNombre}}</p>
+          <p class="mb-2"><strong>Jugadores:</strong></p>
+          <div class="jugadores-list mb-3">
+            {{jugadoresHtml}}
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-success transferir-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Mover a otra temporada</button>
+            <button class="btn btn-sm btn-outline-danger eliminar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+    {% endraw %}
+    {% raw %}
+    <script type="module">
+        // === IMPORTS ===
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import {
+            getFirestore,
+            collection,
+            getDocs,
+            getDoc,
+            doc,
+            deleteDoc,
+            addDoc
+        } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // === CONFIGURACIÓN FIREBASE ===
+        const firebaseConfig = {
+            apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+            authDomain: "unite-mex.firebaseapp.com",
+            projectId: "unite-mex",
+            storageBucket: "unite-mex.appspot.com",
+            messagingSenderId: "248961873504",
+            appId: "1:248961873504:web:b9ad5434d6a1041bc73505"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // === TEMPORADAS DISPONIBLES ===
+        const TEMPORADAS = [
+            "insEnero", "insFebrero", "insMarzo", "insAbril",
+            "insMayo", "insJunio", "insJulio", "insAgosto", "equipos",
+            "insSeptiembre", "insOctubre", "insNoviembre", "insDiciembre"
+        ];
+
+        const selectOrigen = document.getElementById("tempOrigen");
+        const selectDestino = document.getElementById("tempDestino");
+
+        TEMPORADAS.forEach(temp => {
+            const opt1 = document.createElement("option");
+            opt1.value = temp;
+            opt1.textContent = temp.replace("ins", "");
+            selectOrigen.appendChild(opt1);
+
+            const opt2 = document.createElement("option");
+            opt2.value = temp;
+            opt2.textContent = temp.replace("ins", "");
+            selectDestino.appendChild(opt2);
+        });
+
+        // === CARGAR EQUIPOS ===
+        document.getElementById("btnCargarEquipos").addEventListener("click", async () => {
+            const tempOrigen = selectOrigen.value;
+            const contenedor = document.getElementById("equiposList");
+            contenedor.innerHTML = '<div class="col-12 text-center">Cargando...</div>';
+
+            try {
+                const querySnapshot = await getDocs(collection(db, tempOrigen));
+                contenedor.innerHTML = "";
+
+                if (querySnapshot.empty) {
+                    contenedor.innerHTML = '<div class="col-12"><div class="alert alert-info">No hay equipos en esta temporada.</div></div>';
+                    return;
+                }
+
+                const template = document.getElementById("equipoTemplate").textContent;
+
+                querySnapshot.forEach(docSnap => {
+                    const data = docSnap.data();
+                    let html = template; // ✅ CORREGIDO
+
+                    const safe = (val) => val ?? "N/A";
+
+                    html = html.replace(/{{nombreEquipo}}/g, safe(data.nombreEquipo));
+                    html = html.replace(/{{tagEquipo}}/g, safe(data.tagEquipo));
+                    html = html.replace(/{{contacto}}/g, safe(data.contacto));
+                    html = html.replace(/{{capitanNombre}}/g, safe(data.capitanNombre || data.capitánNombre));
+                    html = html.replace(/{{docId}}/g, docSnap.id);
+                    html = html.replace(/{{tempOrigen}}/g, tempOrigen);
+
+                    let jugadoresHtml = "";
+                    if (Array.isArray(data.jugadores)) {
+                        data.jugadores.forEach(j => {
+                            const capitanTag = j.esCapitan ? ' <span class="capitan-tag">Capitán</span>' : '';
+                            jugadoresHtml += `<div class="jugador-item">${safe(j.nombre)} (${safe(j.rol)}) - ${safe(j.idJuego)}${capitanTag}</div>`;
+                        });
+                    }
+
+                    html = html.replace(/{{jugadoresHtml}}/g, jugadoresHtml);
+                    contenedor.insertAdjacentHTML("beforeend", html);
+                });
+
+            } catch (error) {
+                console.error("Error al cargar equipos:", error);
+                Swal.fire("Error", "No se pudieron cargar los equipos", "error");
+            }
+        });
+
+        // === DELEGACIÓN DE EVENTOS ===
+        document.getElementById("equiposList").addEventListener("click", async (e) => {
+            const btn = e.target;
+            const docId = btn.dataset.id;
+            const tempOrigen = btn.dataset.temp;
+
+            if (btn.classList.contains("transferir-btn")) {
+                const tempDestino = selectDestino.value;
+                if (tempOrigen === tempDestino) {
+                    Swal.fire("Advertencia", "No puedes mover a la misma temporada", "warning");
+                    return;
+                }
+
+                try {
+                    const equipoRef = doc(db, tempOrigen, docId);
+                    const equipoSnap = await getDoc(equipoRef);
+
+                    if (!equipoSnap.exists()) throw new Error("Equipo no encontrado");
+
+                    const equipoData = equipoSnap.data();
+
+                    await addDoc(collection(db, tempDestino), equipoData);
+                    // ✅ Si quieres que se elimine del origen, descomenta:
+                    // await deleteDoc(equipoRef);
+
+                    Swal.fire("Éxito", "Equipo movido correctamente", "success");
+                    document.getElementById("btnCargarEquipos").click();
+
+                } catch (error) {
+                    console.error("Error al mover:", error);
+                    Swal.fire("Error", "No se pudo mover el equipo", "error");
+                }
+            }
+
+            if (btn.classList.contains("eliminar-btn")) {
+                const confirm = await Swal.fire({
+                    title: "¿Eliminar?",
+                    text: "Esta acción no se puede deshacer.",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Sí, eliminar",
+                    cancelButtonText: "Cancelar"
+                });
+
+                if (confirm.isConfirmed) {
+                    try {
+                        await deleteDoc(doc(db, tempOrigen, docId));
+                        Swal.fire("Eliminado", "Equipo eliminado", "success");
+                        document.getElementById("btnCargarEquipos").click();
+                    } catch (error) {
+                        console.error("Error al eliminar:", error);
+                        Swal.fire("Error", "No se pudo eliminar", "error");
+                    }
+                }
+            }
+        });
+
+        // === FUNCIONES DE EDICIÓN ===
+
+        // Plantilla para un jugador editable
+        function crearInputJugador(jugador = null, index = 0) {
+            const esCapitan = jugador?.esCapitan || false;
+            return `
+    <div class="jugador-edit border rounded p-2 mb-2">
+      <div class="row g-2">
+        <div class="col-md-3">
+          <input type="text" class="form-control nombre-jugador" placeholder="Nombre" 
+                 value="${jugador?.nombre || ''}" maxlength="12" required>
+        </div>
+        <div class="col-md-3">
+          <select class="form-select rol-jugador" required>
+            <option value="">Rol</option>
+            <option value="ADC" ${jugador?.rol === 'ADC' ? 'selected' : ''}>ADC</option>
+            <option value="Auxiliar" ${jugador?.rol === 'Auxiliar' ? 'selected' : ''}>Auxiliar</option>
+            <option value="Top" ${jugador?.rol === 'Top' ? 'selected' : ''}>Top</option>
+            <option value="Defensivo" ${jugador?.rol === 'Defensivo' ? 'selected' : ''}>Defensivo</option>
+            <option value="Jungle" ${jugador?.rol === 'Jungle' ? 'selected' : ''}>Jungla</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control id-jugador" placeholder="ID juego" 
+                 value="${jugador?.idJuego || ''}" maxlength="7" required>
+        </div>
+        <div class="col-md-2">
+          <div class="form-check mt-2">
+            <input class="form-check-input capitan-check" type="checkbox" ${esCapitan ? 'checked' : ''}>
+            <label class="form-check-label">Capitán</label>
+          </div>
+        </div>
+        <div class="col-md-1 d-flex align-items-center">
+          <button type="button" class="btn btn-sm btn-outline-danger btn-eliminar-jugador">🗑️</button>
+        </div>
+      </div>
+    </div>
+  `;
+        }
+
+        // Manejar selección de capitán (solo uno)
+        function manejarCapitanCheck(container) {
+            container.addEventListener('change', (e) => {
+                if (e.target.classList.contains('capitan-check') && e.target.checked) {
+                    container.querySelectorAll('.capitan-check').forEach(cb => {
+                        if (cb !== e.target) cb.checked = false;
+                    });
+                }
+            });
+        }
+
+        // Cargar equipo para editar
+        async function cargarEquipoParaEditar(temp, docId) {
+            try {
+                const docSnap = await getDoc(doc(db, temp, docId));
+                if (!docSnap.exists()) {
+                    Swal.fire("Error", "Equipo no encontrado", "error");
+                    return;
+                }
+
+                const data = docSnap.data();
+
+                // Rellenar campos principales
+                document.getElementById("editDocId").value = docId;
+                document.getElementById("editTemp").value = temp;
+                document.getElementById("editNombreEquipo").value = data.nombreEquipo || "";
+                document.getElementById("editTagEquipo").value = data.tagEquipo || "";
+                document.getElementById("editContacto").value = data.contacto || "";
+
+                // Limpiar y cargar jugadores
+                const container = document.getElementById("editJugadoresContainer");
+                container.innerHTML = "";
+
+                if (Array.isArray(data.jugadores)) {
+                    data.jugadores.forEach(j => {
+                        container.insertAdjacentHTML("beforeend", crearInputJugador(j));
+                    });
+                }
+
+                // Activar manejo de capitán
+                manejarCapitanCheck(container);
+
+                // Mostrar modal
+                const modal = new bootstrap.Modal(document.getElementById('modalEditarEquipo'));
+                modal.show();
+
+            } catch (error) {
+                console.error("Error al cargar equipo para editar:", error);
+                Swal.fire("Error", "No se pudo cargar el equipo", "error");
+            }
+        }
+
+        // Validar que haya exactamente un capitán
+        function validarCapitan(container) {
+            const checks = container.querySelectorAll('.capitan-check:checked');
+            return checks.length === 1;
+        }
+
+        // Guardar cambios
+        document.getElementById("formEditarEquipo").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const container = document.getElementById("editJugadoresContainer");
+            const jugadoresInputs = container.querySelectorAll(".jugador-edit");
+
+            if (jugadoresInputs.length < 5 || jugadoresInputs.length > 9) {
+                Swal.fire("Error", "El equipo debe tener entre 5 y 9 jugadores", "error");
+                return;
+            }
+
+            if (!validarCapitan(container)) {
+                Swal.fire("Error", "Debes seleccionar exactamente un capitán", "error");
+                return;
+            }
+
+            // Recopilar datos
+            const jugadores = [];
+            let capitanNombre = "";
+
+            jugadoresInputs.forEach(div => {
+                const nombre = div.querySelector(".nombre-jugador").value.trim();
+                const rol = div.querySelector(".rol-jugador").value;
+                const idJuego = div.querySelector(".id-jugador").value.trim();
+                const esCapitan = div.querySelector(".capitan-check").checked;
+
+                if (!nombre || !rol || !idJuego) {
+                    Swal.fire("Error", "Todos los campos de jugadores son requeridos", "error");
+                    return;
+                }
+
+                jugadores.push({ nombre, rol, idJuego, esCapitan });
+                if (esCapitan) capitanNombre = nombre;
+            });
+
+            const equipoActualizado = {
+                nombreEquipo: document.getElementById("editNombreEquipo").value.trim(),
+                tagEquipo: document.getElementById("editTagEquipo").value.trim(),
+                contacto: document.getElementById("editContacto").value.replace(/\D/g, ''),
+                jugadores,
+                capitanNombre,
+                fechaActualizacion: new Date().toISOString()
+            };
+
+            // Guardar en Firestore
+            try {
+                const docId = document.getElementById("editDocId").value;
+                const temp = document.getElementById("editTemp").value;
+                await updateDoc(doc(db, temp, docId), equipoActualizado);
+
+                Swal.fire("Éxito", "Equipo actualizado correctamente", "success");
+                document.getElementById("btnCargarEquipos").click(); // Recargar lista
+
+                // Cerrar modal
+                bootstrap.Modal.getInstance(document.getElementById('modalEditarEquipo')).hide();
+            } catch (error) {
+                console.error("Error al guardar:", error);
+                Swal.fire("Error", "No se pudieron guardar los cambios", "error");
+            }
+        });
+
+        // Agregar jugador en edición
+        document.getElementById("btnAgregarJugadorEdit").addEventListener("click", () => {
+            const container = document.getElementById("editJugadoresContainer");
+            if (container.querySelectorAll(".jugador-edit").length >= 9) {
+                Swal.fire("Límite", "Máximo 9 jugadores", "warning");
+                return;
+            }
+            container.insertAdjacentHTML("beforeend", crearInputJugador());
+            manejarCapitanCheck(container);
+        });
+
+        // Eliminar jugador en edición (delegación)
+        document.getElementById("editJugadoresContainer").addEventListener("click", (e) => {
+            if (e.target.classList.contains("btn-eliminar-jugador")) {
+                e.target.closest(".jugador-edit").remove();
+            }
+        });
+
+        // Buscar y editar equipo
+        document.getElementById("btnBuscarEquipo").addEventListener("click", async () => {
+            const busqueda = document.getElementById("buscarEquipo").value.trim().toLowerCase();
+            if (!busqueda) {
+                Swal.fire("Advertencia", "Ingresa el nombre o tag del equipo", "warning");
+                return;
+            }
+
+            const tempOrigen = selectOrigen.value;
+            try {
+                const querySnapshot = await getDocs(collection(db, tempOrigen));
+                let encontrado = null;
+
+                querySnapshot.forEach(doc => {
+                    const data = doc.data();
+                    const nombre = (data.nombreEquipo || "").toLowerCase();
+                    const tag = (data.tagEquipo || "").toLowerCase();
+                    if (nombre.includes(busqueda) || tag.includes(busqueda)) {
+                        encontrado = { id: doc.id, data };
+                    }
+                });
+
+                if (encontrado) {
+                    await cargarEquipoParaEditar(tempOrigen, encontrado.id);
+                } else {
+                    Swal.fire("No encontrado", "No se encontró ningún equipo con ese nombre o tag", "info");
+                }
+            } catch (error) {
+                console.error("Error al buscar:", error);
+                Swal.fire("Error", "No se pudo realizar la búsqueda", "error");
+            }
+        });
+
+        console.log("Firebase cargado:", app ? "✅" : "❌");
+        console.log("DB:", db);
+    </script>
+    {% endraw %}
+</body>
+
+</html>
