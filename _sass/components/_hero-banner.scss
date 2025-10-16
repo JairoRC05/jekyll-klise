@@ -22,7 +22,7 @@
   }
 
   @include respond-to(sm) {
-    height: 280px;
+    height: 210px;
     padding: 1.5rem;
   }
 
@@ -42,8 +42,8 @@
         font-weight: 600;
 
         @include respond-to(sm) {
-        font-size: 0.7rem;
-      }
+          font-size: 0.7rem;
+        }
       }
     }
 
@@ -68,6 +68,12 @@
         display: none;
       }
     }
+
+    .hero-banner-buttons {
+      display: none;
+    }
+
+
   }
 
 }
