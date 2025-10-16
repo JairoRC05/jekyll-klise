@@ -234,7 +234,7 @@ bgColor: indigo
                 <div class="stat-label">Equipos Registrados</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="espaciosRestantes">32</div>
+                <div class="stat-number" id="espaciosRestantes">12</div>
                 <div class="stat-label">Espacios Disponibles</div>
             </div>
         </div>
@@ -356,7 +356,7 @@ bgColor: indigo
                 if (snapshot.empty) {
                     emptyStateElement.style.display = "block";
                     totalEquiposElement.textContent = "0";
-                    espaciosRestantesElement.textContent = "32";
+                    espaciosRestantesElement.textContent = "12";
                     return;
                 }
                 
@@ -382,7 +382,7 @@ bgColor: indigo
                 
                 // Actualizar estadísticas
                 totalEquiposElement.textContent = todosLosEquipos.length;
-                espaciosRestantesElement.textContent = Math.max(0, 32 - todosLosEquipos.length);
+                espaciosRestantesElement.textContent = Math.max(0, 12 - todosLosEquipos.length);
                 
             } catch (error) {
                 console.error("Error al cargar equipos:", error);

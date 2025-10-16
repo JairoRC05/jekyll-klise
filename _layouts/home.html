@@ -92,9 +92,7 @@ bgColor: home
 
     <div class="central-content-area">
       <div class="main-content-left">
-        {% if page.comunidad %}
-        {{content}}
-          {% else %}
+   
         <div id="hero-slider" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" id="slider-content">
             <!-- Slides dinámicas aquí -->
@@ -107,9 +105,11 @@ bgColor: home
           </button>
         </div>
 
+        {{content}}
+
         {%- include promo.html -%}
 
-        {% endif %}
+    
 
         <!-- <div class="discount-banner text-center">
           <h4>¡Participa en Nuestro Sorteo Mensual!</h4>

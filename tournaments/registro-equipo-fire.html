@@ -233,7 +233,7 @@ bgColor: indigo
     </div>
 
     <div class="games-section">
-        <h3 class="line-form">REGÍSTRA A TU EQUIPO (máx. 32 equipos)</h3>
+        <h3 class="line-form">REGÍSTRA A TU EQUIPO (máx. 12 equipos)</h3>
 
         <form class="row g-3" id="registroForm">
             <div class="col-12 col-md-6 col-lg-4">
@@ -965,11 +965,11 @@ bgColor: indigo
                     }
 
                     // === ✅ Verificar límite de equipos ===
-                    if (snapshot.size >= 32) {
+                    if (snapshot.size >= 12) {
                         Swal.fire({
                             icon: 'info',
                             title: 'Registro cerrado',
-                            text: 'Ya hay 32 equipos registrados. El registro está completo.',
+                            text: 'Ya hay 12 equipos registrados. El registro está completo.',
                             confirmButtonText: 'Entendido'
                         });
                         return;
