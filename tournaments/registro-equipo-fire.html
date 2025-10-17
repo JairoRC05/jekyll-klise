@@ -1014,7 +1014,7 @@ bgColor: indigo
                     });
                 } finally {
                     // En caso de que algo falle antes de cerrar el loader
-                    Swal.close();
+                    if (Swal.isLoading()) Swal.close();
                 }
             }
 
