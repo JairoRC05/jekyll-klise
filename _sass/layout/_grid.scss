@@ -6,6 +6,10 @@
   @include respond-to(lg) {
    flex-direction: column;
   }
+ 
+  @include respond-to(sm) {
+  margin-top: 0;  
+  }
 }
 
 .main-content-left {

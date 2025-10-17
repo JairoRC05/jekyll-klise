@@ -22,8 +22,9 @@
   }
 
   @include respond-to(sm) {
-    height: 210px;
+    height: 250px;
     padding: 1.5rem;
+    border-radius: 0;
   }
 
   .hero-banner-content {
