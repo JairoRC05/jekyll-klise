@@ -9,14 +9,219 @@ layout:
 
 {%- include head.html -%}
 
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ul{
+          color: #000;
+        }
+
+        small{
+          color: #000;
+        }
+
+
+
+        .btn {
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-add {
+            background: #28a745;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .btn-add:hover {
+            background: #218538;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .btn-remove {
+            background: #dc3545;
+            color: white;
+            padding: 2px 6px;
+        }
+
+        .btn-remove:hover {
+            background: #e20017;
+            color: white;
+            padding: 2px 6px;
+        }
+
+        .btn-submit {
+            background: #FF982E;
+            color: white;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #ef8112;
+            color: white;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+
+
+        .line-form {
+            color: #333;
+            border-bottom: 2px solid #FF982E;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 14px;
+            margin: 5px 0;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .contacto-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contacto-container input {
+            flex: 1;
+        }
+
+        .contacto-container .btn {
+            flex-shrink: 0;
+        }
+
+        .capitan-info {
+            background-color: #faaf64;
+            padding: 10px;
+            color: #000;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FF982E;
+        }
+
+        /* Estilos para la tarjeta de confirmación */
+        .confirmacion-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .confirmacion-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .confirmacion-header {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .confirmacion-content {
+            border: 2px dashed #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .equipo-info {
+            margin-bottom: 15px;
+        }
+
+        .equipo-info strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .jugadores-lista {
+            margin-top: 15px;
+        }
+
+        .jugador-item {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .capitan-tag {
+            background-color: #ffc107;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .btn-download {
+            background: #28a745;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-close {
+            background: #6c757d;
+            color: white;
+            padding: 8px 16px;
+            margin-top: 10px;
+            width: auto;
+        }
+
+        .contador-cerrado {
+            display: none;
+        }
+    </style>
 
 <body class="nacion-unite">
 
       <div class="sidebar {{page.bgColor}}">
         <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block"
-            href="/liga-indigo-home">
-            <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
-            <span class="indigoType">Lobby</span>
+            href="/copa-xforze/home">
+            <img src="/assets/logos/COPA XFORCE-ALT.webp" alt="" class="imgIcon">
+            <span>Lobby</span>
         </a>
 
         <ul class="nav flex-lg-column flex-md-row">
@@ -41,12 +246,12 @@ layout:
             </li>
 
           
-            <!-- <li class="nav-item iconContainer">
-                <a class="nav-link" href="/liga-indigo-reglamento-2025">
+             <li class="nav-item iconContainer">
+                <a class="nav-link" href="/copa-xforze/reglamento">
                     <img src="/assets/smalls/reglamento-lock.webp" alt="" class="imgIcon">
                     <span class="ms-1 trunk textIcon">Reglamento</span>
                 </a>
-            </li> -->
+            </li> 
             <li class="nav-item iconContainer">
                 <a class="nav-link" href="/sponsors">
                     <img src="/assets/smalls/sponsors.webp" alt="" class="imgIcon">

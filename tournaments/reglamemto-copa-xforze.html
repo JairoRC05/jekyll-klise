@@ -1,0 +1,108 @@
+---
+layout: copaXForze
+permalink: /copa-xforze/reglamento
+bgColor: orangeJuice
+title: COPA XFORZE REGLAMENTO
+class: CXF
+---
+
+
+
+    <ul class="nav nav-tabs nav-pills nav-fill mb-3" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="general-inscripcion-tab" data-bs-toggle="tab" data-bs-target="#general-inscripcion" type="button" role="tab" aria-controls="general-inscripcion" aria-selected="true">
+                <i class="bi bi-shield-fill-check"></i>
+                <span class="tab-text">Inscripción</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="juego-tolerancia-tab" data-bs-toggle="tab" data-bs-target="#juego-tolerancia" type="button" role="tab" aria-controls="juego-tolerancia" aria-selected="false">
+               <i class="bi bi-gear-wide-connected"></i>
+                <span class="tab-text">Formato</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="calendario-resultados-tab" data-bs-toggle="tab" data-bs-target="#calendario-resultados" type="button" role="tab" aria-controls="calendario-resultados" aria-selected="false">
+                <i class="bi bi-calendar-week"></i>
+                <span class="tab-text">Calendario</span>
+            </button>
+        </li>
+   
+ 
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="conexion-descalificacion-tab" data-bs-toggle="tab" data-bs-target="#conexion-descalificacion" type="button" role="tab" aria-controls="conexion-descalificacion" aria-selected="false">
+               <i class="bi bi-wifi"></i>
+                <span class="tab-text">Conexión</span>   
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="premios-promocion-tab" data-bs-toggle="tab" data-bs-target="#premios-promocion" type="button" role="tab" aria-controls="premios-promocion" aria-selected="false">
+              <i class="bi bi-shield-slash-fill"></i>
+                <span class="tab-text">Descalificación</span>   
+                
+            </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="prizepool-tab" data-bs-toggle="tab" data-bs-target="#prizepool" type="button" role="tab" aria-controls="prizepool" aria-selected="false">
+                 <i class="bi bi-trophy-fill"></i>
+                <span class="tab-text">Prizepool</span>  
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="general-inscripcion" role="tabpanel" aria-labelledby="general-inscripcion-tab">
+     
+                {% include reglamento-inscripcion-cxf.html %}
+            
+            
+            </div>
+
+        <div class="tab-pane fade" id="juego-tolerancia" role="tabpanel" aria-labelledby="juego-tolerancia-tab">
+  
+                {% include reglamento-juego-cxf.html %}
+        
+        </div>
+
+        <div class="tab-pane fade" id="calendario-resultados" role="tabpanel" aria-labelledby="calendario-resultados-tab">
+
+            {% include reglamento-calendario-cxf.html %}
+        </div>
+
+     
+
+        <div class="tab-pane fade" id="conexion-descalificacion" role="tabpanel" aria-labelledby="conexion-descalificacion-tab">
+             {% include reglamento-conexion.html %}
+        </div>
+
+        <div class="tab-pane fade" id="premios-promocion" role="tabpanel" aria-labelledby="premios-promocion-tab">
+            {% include reglamento-descalificacion.html %}
+        </div>
+       
+        <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+            {% include reglamento-registro.html %}
+        </div>
+     
+        <div class="tab-pane fade" id="prizepool" role="tabpanel" aria-labelledby="prizepool-tab">
+            {% include reglamento-prizepool.html %}
+        </div>
+
+       
+    </div>
+
+
+
+
+<script>
+function showTab(tabId) {
+    var tabElement = document.getElementById(tabId);
+    if (tabElement) {
+        var bsTab = new bootstrap.Tab(tabElement);
+        bsTab.show();
+
+        // Opcional: Desplazarse al inicio del contenido del tab si es muy largo
+        // tabElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>

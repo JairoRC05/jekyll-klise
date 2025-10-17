@@ -3,6 +3,7 @@ layout: copaXForze
 permalink: /copa-xforze/home
 bgColor: orangeJuice
 title: COPA XFORZE
+page: CXF
 ---
 
 
@@ -13,45 +14,989 @@ title: COPA XFORZE
     <div class="row">
         <div class="col-12 col-md-6">
 
-           <p> Descubre el próximo talento de Pokémon UNITE en Latinoamérica Norte</p>
-<p>
-La Copa XForze es un torneo abierto y competitivo, diseñado para dar espacio a nuevos equipos y jugadores emergentes de la región. Con un formato ágil y premios en efectivo, es la oportunidad ideal para probar tu estrategia contra los mejores.
-</p>
+            <p> Descubre el próximo talento de Pokémon UNITE en Latinoamérica Norte</p>
+            <p>
+                La Copa XForze es un torneo abierto y competitivo, diseñado para dar espacio a nuevos equipos y
+                jugadores emergentes de la región. Con un formato ágil y premios en efectivo, es la oportunidad ideal
+                para probar tu estrategia contra los mejores.
+            </p>
 
-<p>Detalles del torneo</p>
-<ul>
-    <li>Región: Latinoamérica Norte (México, Centroamérica, Caribe, norte de Sudamérica)</li>
-    <li>Formato: Eliminación simple o doble (según inscripciones)</li>
-    <li>Equipos: Máximo 16 equipos</li>
-    <li>Registro: Cada equipo debe inscribirse con 10 jugadores (5 iniciales + 5 suplentes)</li>
-    <li>Frecuencia: Cada 2 semanas, los domingos</li>
-    <li>Hora de inicio: 11:00 a.m. (hora de Ciudad de México / CDMX)</li>
-    <li>Premiación: El 85% de lo recaudado en inscripciones se entrega íntegramente al primer lugar</li>
-    <li>Inscripción: $100 MXN por equipo</li>
-    <li>Modo Torneo: Draft con Veto (Todos los objetos al máximo)</li>
-    <li>Servidor: NA04</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <p>Detalles del torneo</p>
+            <ul>
+                <li>Región: Latinoamérica Norte (México, Centroamérica, Caribe, norte de Sudamérica)</li>
+                <li>Formato: Eliminación simple o doble (según inscripciones)</li>
+                <li>Equipos: Máximo 16 equipos</li>
+                <li>Registro: Cada equipo debe inscribirse con 10 jugadores (5 iniciales + 5 suplentes)</li>
+                <li>Frecuencia: Cada 2 semanas, los domingos</li>
+                <li>Hora de inicio: 11:00 a.m. (hora de Ciudad de México / CDMX)</li>
+                <li>Premiación: El 85% de lo recaudado en inscripciones se entrega íntegramente al primer lugar</li>
+                <li>Inscripción: $100 MXN por equipo</li>
+                <li>Modo Torneo: Draft con Veto (Todos los objetos al máximo)</li>
+                <li>Servidor: NA04</li>
+            </ul>
+            <a class="btn" href="/copa-xforze/reglamento">Ver reglamento</a>
         </div>
         <div class="col-12 col-md-6">
             <img src="/assets/logos/COPA XFORCE.webp" class="img-fluid" alt="">
         </div>
     </div>
 </div>
+
+    <div class="games-section mb-3">
+        <h3 class="line-form">INSTRUCCIONES PARA INSCRIBIR A TU EQUIPO</h3>
+        <ul>
+            <li>1. Registra a tu equipo recuerda que son 5 jugadores minimo y máximo 10 jugadores</li>
+            <li>2. Despues acepta el reglamento, términos y condiciones.</li>
+            <li>3. Se mostrará una ventana en la cual debes leer detenidamente el Reglamento, Termino y Condiciones, da
+                clic en aceptar y continuar. Por ultimo da clic en continuar y se descargará un archivo el cual tienes
+                que enviar al
+                administrador.</li>
+            <li>4. Envie el archivo del reglamento donde aceptaste el reglamento terminos y condiocnes al numero de
+                WhatsApp que se muestra al final.</li>
+            <li>5. El administrador te enviará el número de cuenta a depositar el pago de inscripción tienes 2 días para
+                hacer pago...
+                Cierre de inscripciones: <strong>2 de noviembre a las 11:59 PM</strong>.</li>
+            <li>Incio: <strong>2 de noviembre </strong>.</li>
+        </ul>
+    </div>
+
+    <div class="games-section">
+        <h3 class="line-form">REGÍSTRA A TU EQUIPO (máx. 16 equipos)</h3>
+
+        <form class="row g-3" id="registroForm">
+            <div class="col-12 col-md-6 col-lg-4">
+                <label>Nombre del Equipo:</label><br>
+                <input class="form-control" type="text" id="nombreEquipo" maxlength="20" required>
+                <div id="nombreEquipoError" class="error"></div>
+                <small>Máximo 20 caracteres</small>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <label>Tag del Equipo:</label><br>
+                <input class="form-control" type="text" id="tagEquipo" maxlength="5" required>
+                <div id="tagEquipoError" class="error"></div>
+                <small>Máximo 5 caracteres</small>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <label>Contacto WhatsApp:</label><br>
+                <div class="contacto-container">
+                    <input class="form-control" maxlength="12" type="tel" id="contacto" placeholder="55 1234 5678"
+                        required>
+                </div>
+                <div id="contactoError" class="error"></div>
+                <small>Formato: 12 dígitos (ej: 52 55 1234 5678)</small>
+            </div>
+
+            <div class="col-12 capitan-info">
+                <strong>Capitán del equipo:</strong> Selecciona un jugador del equipo como capitán marcando la casilla
+                "Capitán". Solo puedes seleccionar un capitán.
+            </div>
+
+            <h3 class="line-form">JUGADORES (mínimo 5, máximo 10)</h3>
+            <div id="jugadoresContainer"></div>
+            <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
+
+            <div id="jugadoresError" class="error"></div>
+            <button type="submit" class="btn btn-submit mb-3">Registrar Equipo</button>
+            <div id="generalError" class="error"></div>
+        </form>
+    </div>
+
+
+    <div id="contadorInscripciones" class="alert alert-info text-center" style="font-size: 1.1em; font-weight: bold;">
+        <span id="dias">--</span>d
+        <span id="horas">--</span>h
+        <span id="minutos">--</span>m
+        <span id="segundos">--</span>s
+    </div>
+
+
+    <div class="container mt-5 ">
+        <div class="row orangeJuice rounded">
+            <div class="col-12 col-md-6">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <img src="/assets/logos/COPA XFORCE.webp" class="img-fluid">
+                    <span class="text-white">Garantizamos la confidencialidad de tus datos, usados solo para la gestión
+                        interna de la Copa XForze.</span>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mt-3">
+                    <label for="captainName" class="form-label text-white">Nombre del Capitán que registra:</label>
+                    <input type="text" class="form-control" id="captainName" placeholder="Tu nombre completo">
+                </div>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="acceptRules">
+                    <label class="form-check-label text-white" for="acceptRules">
+                        Acepto el reglamento, términos y condiciones
+                    </label>
+                </div>
+
+                <button class="btn btn-add mt-3" id="continueBtn">DESCARGAR TYC</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="TYC" class="container" style="position: absolute; left: -9999px; top: -9999px; display: block;">
+        <h2 style="text-align: center;">Aceptación del Reglamento y Condiciones - Copa XForze</h2>
+        <p>Al inscribir a su equipo en la Copa XForze, cada capitán y todos los jugadores de su roster <b>aceptan de
+                forma
+                automática e incondicional el presente reglamento en su totalidad</b>, así como todas las condiciones y
+            decisiones que la administración del torneo pueda tomar.</p>
+        <p>Entienden y se comprometen a cumplir con:</p>
+        <ul>
+            <li>Las <b>normas de conducta deportiva</b>.</li>
+            <li>Los <b>procedimientos de juego</b>.</li>
+            <li>El <b>sistema de clasificación y puntuación</b>.</li>
+            <li>Las <b>sanciones</b> por incumplimiento.</li>
+            <li>Las <b>políticas de reembolsos y gestión de roster</b>.</li>
+            <li>Las <b>restricciones de nombres y logos</b>.</li>
+            <li>Cualquier otra disposición detallada en este documento.</li>
+        </ul>
+        <h3 class="line-form">Modificaciones al Reglamento</h3>
+        <p>La administración de la Copa XForze se reserva el derecho de <b>modificar o ajustar este reglamento en
+                cualquier
+                momento</b> durante el transcurso del torneo. Esto puede ocurrir para abordar situaciones imprevistas,
+            garantizar la equidad competitiva o mejorar la experiencia general de la Liga.</p>
+        <p>Cualquier modificación será <b>comunicada de inmediato</b> a todos los equipos participantes a través de los
+            canales oficiales del torneo (ej. grupo de WhatsApp, página web, Discord). Es responsabilidad de los equipos
+            mantenerse informados sobre dichas actualizaciones. La continuidad en la participación del torneo implica la
+            aceptación de cualquier cambio realizado.</p>
+        <p>La participación en la Copa XForze implica el reconocimiento y la <b>aceptación de que las decisiones de la
+                administración son finales e inapelables</b> en todos los asuntos relacionados con el torneo.</p>
+
+        <div class="signature">
+            <p>Yo, <span id="captainNameSigned"></span>, acepto el reglamento y condiciones para participar en la Liga
+                Indigo.
+            </p>
+            <p class="date">Fecha: <span id="currentDate"></span></p>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-cham">
+                    <h5 class="modal-title text-dark" id="rulesModalLabel">Aceptación del Reglamento y Condiciones</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBodyContent">
+                    <p class="text-dark">Al inscribir a su equipo en la Copa XForze, cada capitán y todos los jugadores de
+                        su roster <b>aceptan de forma automática e incondicional el presente reglamento en su
+                            totalidad</b>, así
+                        como todas las condiciones y decisiones que la administración del torneo pueda tomar.</p>
+                    <p class="text-dark">Entienden y se comprometen a cumplir con:</p>
+                    <ul>
+                        <li>Las <b>normas de conducta deportiva</b>.</li>
+                        <li>Los <b>procedimientos de juego</b>.</li>
+                        <li>El <b>sistema de clasificación y puntuación</b>.</li>
+                        <li>Las <b>sanciones</b> por incumplimiento.</li>
+                        <li>Las <b>políticas de reembolsos y gestión de roster</b>.</li>
+                        <li>Las <b>restricciones de nombres y logos</b>.</li>
+                        <li>Cualquier otra disposición detallada en este documento.</li>
+                    </ul>
+                    <h5 class="line-form">Modificaciones al Reglamento</h5>
+                    <p class="text-dark">La administración de la Copa XForze se reserva el derecho de <b>modificar o
+                        ajustar este reglamento en cualquier momento</b> durante el transcurso del torneo. Esto
+                        puede ocurrir para
+                        abordar situaciones imprevistas, garantizar la equidad competitiva o mejorar la experiencia
+                        general de la Copa.</p>
+                    <p class="text-dark">Cualquier modificación será <b>comunicada de inmediato</b> a todos los equipos
+                        participantes a través de los canales oficiales del torneo (ej. grupo de WhatsApp, página web,
+                        Discord). Es
+                        responsabilidad de los equipos mantenerse informados sobre dichas actualizaciones. La
+                        continuidad en la
+                        participación del torneo implica la aceptación de cualquier cambio realizado.</p>
+                    <p class="text-dark">La participación en la Copa XForze implica el reconocimiento y la <b>aceptación
+                            de que las decisiones de la administración son finales e inapelables</b> en todos los
+                        asuntos relacionados
+                        con el torneo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="confirmAcceptance">Aceptar y Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="d-flex justify-content-center align-items-center">
+        <a href="https://wa.me/527775663274" class="btn btn-add mt-5">WhatsApp <i class="ti ti-brand-whatsapp"></i></a>
+        <!-- <a href="/equipos-inscritos-liga-indigo" class="btn btn-add mt-5" target="_blank">Ver equipos inscritos</a> -->
+    </div>
+
+
+    <div id="confirmacionContainer" class="confirmacion-container">
+        <div class="confirmacion-card" id="confirmacionCard">
+            <div class="confirmacion-header">
+                <h3 class="line-form">✅ ¡Equipo Registrado con Éxito!</h3>
+            </div>
+            <div class="confirmacion-content" id="capturaContenido">
+                <div class="equipo-info">
+                    <strong>Nombre del Equipo:</strong> <span id="displayNombreEquipo"></span>
+                </div>
+                <div class="equipo-info">
+                    <strong>Tag del Equipo:</strong> <span id="displayTagEquipo"></span>
+                </div>
+                <div class="equipo-info">
+                    <strong>Contacto WhatsApp:</strong> <span id="displayContacto"></span>
+                </div>
+                <div class="equipo-info">
+                    <strong>Capitán:</strong> <span id="displayCapitan"></span>
+                </div>
+
+                <div class="jugadores-lista">
+                    <strong>Jugadores:</strong>
+                    <div id="listaJugadores"></div>
+                </div>
+
+                <div class="equipo-info" style="margin-top: 15px; color: #dc3545;">
+                    <strong>Importante:</strong> Descarga esta imagen y envíala al administrador para obtener la
+                    información de la cuenta de inscripción.
+                </div>
+            </div>
+            <button id="btnDownload" class="btn-download">📥 Descargar Captura</button>
+            <button id="btnClose" class="btn-close">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- html2canvas JS -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+
+        const FECHA_LIMITE = new Date('2025-10-18T23:59:59');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const acceptRulesCheckbox = document.getElementById('acceptRules');
+            const captainNameInput = document.getElementById('captainName');
+            const continueBtn = document.getElementById('continueBtn');
+            const rulesModal = new bootstrap.Modal(document.getElementById('rulesModal'));
+            const confirmAcceptanceBtn = document.getElementById('confirmAcceptance');
+            const captainNameSigned = document.getElementById('captainNameSigned');
+            const currentDateSpan = document.getElementById('currentDate');
+            const tycDiv = document.getElementById('TYC');
+
+
+            // Verificar nuevamente la fecha (por si el usuario dejó la pestaña abierta)
+            if (new Date() > FECHA_LIMITE) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Registro cerrado',
+                    text: 'El plazo para inscribirse ha finalizado.',
+                    confirmButtonText: 'Cerrar'
+                });
+                return;
+            }
+
+            // Función para habilitar/deshabilitar el botón "Continuar"
+            function toggleContinueButton() {
+                if (acceptRulesCheckbox.checked && captainNameInput.value.trim() !== '') {
+                    continueBtn.disabled = false;
+                } else {
+                    continueBtn.disabled = true;
+                }
+            }
+
+            // Event listener para el checkbox
+            acceptRulesCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    rulesModal.show(); // Mostrar el modal al chequear
+                } else {
+                    toggleContinueButton(); // Actualizar estado del botón si se desmarca
+                }
+            });
+
+            // Event listener para el input del nombre del capitán
+            captainNameInput.addEventListener('input', toggleContinueButton);
+
+            // Event listener para el botón "Aceptar y Continuar" del modal
+            confirmAcceptanceBtn.addEventListener('click', function () {
+                rulesModal.hide(); // Cerrar el modal
+                acceptRulesCheckbox.checked = true; // Asegurar que el checkbox esté marcado
+                toggleContinueButton(); // Habilitar el botón de continuar
+            });
+
+            // Event listener para el botón "Continuar" principal
+            continueBtn.addEventListener('click', function () {
+                if (acceptRulesCheckbox.checked && captainNameInput.value.trim() !== '') {
+                    // Rellenar el contenido del div oculto con la información del capitán y la fecha
+                    captainNameSigned.textContent = captainNameInput.value.trim();
+
+                    const today = new Date();
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    currentDateSpan.textContent = today.toLocaleDateString('es-ES', options);
+
+                    // Capturar el div oculto con html2canvas
+                    html2canvas(tycDiv, {
+                        scale: 2, // Aumenta la escala para mejor calidad de imagen
+                        logging: false // Deshabilita los logs en consola para producción
+                    }).then(canvas => {
+                        // Convertir el canvas a una imagen PNG y descargarla
+                        const link = document.createElement('a');
+                        link.download = `Aceptacion_Reglamento_${captainNameInput.value.trim().replace(/\s/g, '_')}.png`;
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    });
+                } else {
+                    alert('Por favor, acepte el reglamento y complete su nombre para continuar.');
+                }
+            });
+
+            // Asegurar que el modal se muestre si el checkbox ya está marcado al cargar la página
+            // o si el usuario intenta marcarlo.
+            document.getElementById('rulesModal').addEventListener('hide.bs.modal', function () {
+                if (!acceptRulesCheckbox.checked) {
+                    // Si el usuario cierra el modal sin aceptar (ej. con el botón de cerrar),
+                    // asegúrate de que el checkbox esté desmarcado
+                    acceptRulesCheckbox.checked = false;
+                    toggleContinueButton();
+                }
+            });
+        });
+    </script>
+
+
+
+    <script type="module">
+        // Importar Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+        // === 2. CONFIGURACIÓN ===
+        // IDs que NO pueden usarse en ningún equipo
+        const IDS_RESTRINGIDOS = [
+            '7KL4TY1FRRR',
+            'YAKGTCQ5RRR',
+            'CARGGCC8RRR',
+            '6R3EHG5GRRR',
+            'L3E5LAGCRRR',
+            '3M05X6GGRRR',
+
+        ].map(id => id.toUpperCase()); // Normalizamos a mayúsculas
+
+
+        // === 3. FUNCIONES DE CONTROL DE TIEMPO ===
+        function verificarRegistroAbierto() {
+            const ahora = new Date();
+            const btnSubmit = document.querySelector('.btn-submit');
+            const agregarJugadorBtn = document.getElementById('agregarJugador');
+            const form = document.getElementById('registroForm');
+
+            if (ahora > FECHA_LIMITE) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Registro cerrado',
+                    html: 'Las inscripciones anticipadas finalizaron el <strong>4 de octubre a las 23:59</strong>.<br>¡Gracias por tu interés!',
+                    confirmButtonText: 'Entendido'
+                });
+
+                if (btnSubmit) btnSubmit.disabled = true;
+                if (agregarJugadorBtn) agregarJugadorBtn.disabled = true;
+                if (form) form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
+                return false;
+            }
+            return true;
+        }
+
+        function iniciarContadorRegresivo() {
+            const contadorDiv = document.getElementById('contadorInscripciones');
+            const diasSpan = document.getElementById('dias');
+            const horasSpan = document.getElementById('horas');
+            const minutosSpan = document.getElementById('minutos');
+            const segundosSpan = document.getElementById('segundos');
+
+            if (!contadorDiv) return;
+
+            function actualizarContador() {
+                const ahora = new Date();
+                const diferencia = FECHA_LIMITE - ahora;
+
+                if (diferencia <= 0) {
+                    contadorDiv.classList.add('alert-danger');
+                    contadorDiv.innerHTML = '<strong>¡Inscripciones cerradas!</strong>';
+                    return;
+                }
+
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+                diasSpan.textContent = String(dias).padStart(2, '0');
+                horasSpan.textContent = String(horas).padStart(2, '0');
+                minutosSpan.textContent = String(minutos).padStart(2, '0');
+                segundosSpan.textContent = String(segundos).padStart(2, '0');
+            }
+
+            actualizarContador();
+            setInterval(actualizarContador, 1000);
+        }
+
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+            authDomain: "unite-mex.firebaseapp.com",
+            projectId: "unite-mex",
+            storageBucket: "unite-mex.appspot.com",
+            messagingSenderId: "248961873504",
+            appId: "1:248961873504:web:b9ad5434d6a1041bc73505",
+            measurementId: "G-87W4VS8QYX"
+        };
+
+        // Inicializar Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+
+        // === 5. LÓGICA PRINCIPAL ===
+        if (verificarRegistroAbierto()) {
+            // Solo si está abierto: iniciar contador y configurar formulario
+            iniciarContadorRegresivo();
+
+            // Elementos del DOM
+            const jugadoresContainer = document.getElementById("jugadoresContainer");
+            const btnAgregar = document.getElementById("agregarJugador");
+            const confirmacionContainer = document.getElementById("confirmacionContainer");
+            const confirmacionCard = document.getElementById("confirmacionCard");
+            const btnDownload = document.getElementById("btnDownload");
+            const btnClose = document.getElementById("btnClose");
+
+            let contadorJugadores = 0;
+            const MIN_JUGADORES = 5;
+            const MAX_JUGADORES = 10;
+            let equipoRegistrado = null;
+
+            // Función para manejar la selección de capitán (solo uno permitido)
+            function manejarSeleccionCapitan(nuevoCheckbox) {
+                if (nuevoCheckbox.checked) {
+                    // Desmarcar todos los demás checkboxes de capitán
+                    document.querySelectorAll('.capitan-checkbox').forEach(checkbox => {
+                        if (checkbox !== nuevoCheckbox) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            }
+
+            // Función para agregar input de jugador
+            function agregarJugador(nombre = "", rol = "", ID = "", esCapitan = false) {
+                if (contadorJugadores >= MAX_JUGADORES) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Límite alcanzado',
+                        text: 'Máximo 9 jugadores por equipo.',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return;
+                }
+                contadorJugadores++;
+
+                const div = document.createElement("div");
+                div.classList.add("jugador");
+                div.innerHTML = `
+            <div class="row gy-2 gx-3 align-items-center">
+                <div class="col-12 col-lg-3">
+                  <label for="namePlayer" class="form-label">Nickname</label>
+                  <input class="form-control" type="text" placeholder="Nombre del jugador" value="${nombre}" maxlength="12" required>    
+                  <small>Máx. 12 caracteres</small>
+                  </div>
+                <div class="col-12 col-lg-3">
+                 <label for="selectRol" class="form-label">Selecciona rol</label>
+                <select class="form-select" required>
+                    <option value="">Rol</option>
+                    <option value="ADC">ADC</option>
+                    <option value="Auxiliar">Auxiliar</option>
+                    <option value="Top">Top</option>
+                    <option value="Defensivo">Defensivo</option>
+                    <option value="Jungle">Jungla</option>
+                </select>
+                <small>Solo una opción</small>
+                </div>
+                <div class="col-12 col-lg-3">
+                 <label for="IDPlayer" class="form-label">ID</label>
+                <input class="form-control" type="text" placeholder="1HQ5X78" value="${ID}" minlebght="5" maxlength="7" required>
+                <small>Máx: 7 caracteres</small>
+                </div>
+                   <div class="col-12 col-lg-3">
+                    <div class="form-check">
+                    <input type="checkbox" class="capitan-checkbox form-check-input" ${esCapitan ? 'checked' : ''}>
+                    <label class="form-check-label" for="gridCheck">Capitán</label>
+                    <button type="button" class="btn btn-remove">X</button>
+                   </div>     
+       
+                </div>
+                </div>
+            `;
+
+                // Seleccionar el valor del rol si viene predefinido
+                const select = div.querySelector("select");
+                if (rol) {
+                    select.value = rol;
+                }
+
+                // Botón eliminar jugador
+                div.querySelector(".btn-remove").addEventListener("click", () => {
+                    div.remove();
+                    contadorJugadores--;
+                    validarJugadores();
+                });
+
+                // Manejar la selección de capitán
+                const checkbox = div.querySelector(".capitan-checkbox");
+                checkbox.addEventListener("change", function () {
+                    manejarSeleccionCapitan(this);
+                });
+
+                jugadoresContainer.appendChild(div);
+                validarJugadores();
+
+                // Si este jugador es capitán, asegurarnos de que sea el único
+                if (esCapitan) {
+                    manejarSeleccionCapitan(checkbox);
+                }
+            }
+
+            // Agregar jugador por botón
+            btnAgregar.addEventListener("click", () => agregarJugador());
+
+            // Función para validar jugadores
+            function validarJugadores() {
+                const jugadores = document.querySelectorAll("#jugadoresContainer .jugador");
+                const errorDiv = document.getElementById("jugadoresError");
+
+                if (jugadores.length < MIN_JUGADORES) {
+                    errorDiv.textContent = `Debes registrar al menos ${MIN_JUGADORES} jugadores.`;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (jugadores.length > MAX_JUGADORES) {
+                    errorDiv.textContent = `Un equipo no puede tener más de ${MAX_JUGADORES} jugadores.`;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else {
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
+
+
+            function validarIDsJugadores(jugadores) {
+                const idsUsados = new Set(); // Para detectar duplicados en el mismo equipo
+                const errores = [];
+
+                for (const jugador of jugadores) {
+                    const idNormalizado = jugador.idJuego.trim().toUpperCase();
+
+                    // Validar ID restringido
+                    if (IDS_RESTRINGIDOS.includes(idNormalizado)) {
+                        errores.push(`El ID "${jugador.idJuego}" no está permitido.`);
+                    }
+
+                    // Validar duplicado en el mismo equipo (opcional pero recomendado)
+                    if (idsUsados.has(idNormalizado)) {
+                        errores.push(`El ID "${jugador.idJuego}" está repetido en el equipo.`);
+                    }
+                    idsUsados.add(idNormalizado);
+                }
+
+                return errores;
+            }
+
+            // Función para validar campos individuales
+            function validarCampo(id, valor, mensaje, minLength = 0) {
+                const errorDiv = document.getElementById(id + "Error");
+                if (!valor || valor.trim() === "") {
+                    errorDiv.textContent = mensaje;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (valor.length < minLength) {
+                    errorDiv.textContent = `Debe tener al menos ${minLength} caracteres`;
+                    errorDiv.classList.add("show");
+                    return false;
+                } else {
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
+
+            // Función para validar número de WhatsApp
+            function validarWhatsApp(numero) {
+                const errorDiv = document.getElementById("contactoError");
+                const soloNumeros = numero.replace(/\D/g, '');
+
+                if (!numero || numero.trim() === "") {
+                    errorDiv.textContent = "El número de contacto es requerido";
+                    errorDiv.classList.add("show");
+                    return false;
+                } else if (soloNumeros.length !== 12) {
+                    errorDiv.textContent = "El número debe tener 10 dígitos";
+                    errorDiv.classList.add("show");
+                    return false;
+                } else {
+                    errorDiv.textContent = "";
+                    errorDiv.classList.remove("show");
+                    return true;
+                }
+            }
+
+            // Función para validar todos los campos
+            function validarFormulario() {
+                const nombreEquipo = document.getElementById("nombreEquipo").value;
+                const tagEquipo = document.getElementById("tagEquipo").value;
+                const contacto = document.getElementById("contacto").value;
+
+                let isValid = true;
+
+                if (!validarCampo("nombreEquipo", nombreEquipo, "El nombre del equipo es requerido", 1)) isValid = false;
+                if (nombreEquipo.length > 20) {
+                    document.getElementById("nombreEquipoError").textContent = "El nombre no debe exceder 20 caracteres";
+                    document.getElementById("nombreEquipoError").classList.add("show");
+                    isValid = false;
+                }
+
+                if (!validarCampo("tagEquipo", tagEquipo, "El tag del equipo es requerido", 1)) isValid = false;
+                if (tagEquipo.length > 5) {
+                    document.getElementById("tagEquipoError").textContent = "El tag no debe exceder 5 caracteres";
+                    document.getElementById("tagEquipoError").classList.add("show");
+                    isValid = false;
+                }
+
+                if (!validarWhatsApp(contacto)) isValid = false;
+
+                if (!validarJugadores()) isValid = false;
+
+                return isValid;
+            }
+
+            // Función para verificar si hay un capitán seleccionado
+            function verificarCapitan() {
+                const checkboxes = document.querySelectorAll('.capitan-checkbox');
+                let capitánSeleccionado = 0;
+
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        capitánSeleccionado++;
+                    }
+                });
+
+                if (capitánSeleccionado === 0) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Capitán requerido',
+                        text: 'Debes seleccionar un capitán para el equipo.',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                } else if (capitánSeleccionado > 1) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Demasiados capitanes',
+                        text: 'Solo puedes seleccionar un jugador como capitán.',
+                        confirmButtonText: 'Entendido'
+                    });
+                    return false;
+                }
+
+                return true;
+            }
+
+            // Función para mostrar la tarjeta de confirmación
+            function mostrarConfirmacion(equipo) {
+                // Rellenar los datos en la tarjeta
+                document.getElementById("displayNombreEquipo").textContent = equipo.nombreEquipo;
+                document.getElementById("displayTagEquipo").textContent = equipo.tagEquipo;
+                document.getElementById("displayContacto").textContent = formatoWhatsApp(equipo.contacto);
+                document.getElementById("displayCapitan").textContent = equipo.capitánNombre;
+
+                // Limpiar y llenar la lista de jugadores
+                const listaJugadores = document.getElementById("listaJugadores");
+                listaJugadores.innerHTML = '';
+
+                equipo.jugadores.forEach(jugador => {
+                    const div = document.createElement("div");
+                    div.classList.add("jugador-item");
+
+                    const nombreRol = `${jugador.nombre} (${jugador.rol}) - ID: ${jugador.idJuego}`;
+
+                    if (jugador.esCapitan) {
+                        div.innerHTML = `${nombreRol} <span class="capitan-tag">Capitán</span>`;
+                    } else {
+                        div.textContent = nombreRol;
+                    }
+
+                    listaJugadores.appendChild(div);
+                });
+
+                // Guardar el equipo para la descarga
+                equipoRegistrado = equipo;
+
+                // Mostrar el contenedor
+                confirmacionContainer.style.display = 'flex';
+            }
+
+            // Función para formatear el número de WhatsApp
+            function formatoWhatsApp(numero) {
+                const str = numero.toString();
+                return `${str.substring(0, 2)} ${str.substring(2, 6)} ${str.substring(6, 10)}`;
+            }
+
+
+            // Función para registrar equipo
+            async function registrarEquipo(equipo) {
+                try {
+                    // Mostrar loader mientras se verifica
+                    Swal.fire({
+                        title: 'Verificando jugadores...',
+                        html: 'Por favor espera unos segundos mientras verificamos la información.',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+
+                    // Referencia a la colección
+                    const inscripcionesRef = collection(db, "insCXFNov");
+
+                    // === 🔍 Verificar si algún jugador ya está registrado en otro equipo ===
+                    const snapshot = await getDocs(inscripcionesRef);
+
+                    for (const doc of snapshot.docs) {
+                        const data = doc.data();
+                        if (data.jugadores && Array.isArray(data.jugadores)) {
+                            for (const jugadorNuevo of equipo.jugadores) {
+                                const coincidencia = data.jugadores.find(j =>
+                                    j.idJuego.trim().toUpperCase() === jugadorNuevo.idJuego.trim().toUpperCase()
+                                );
+                                if (coincidencia) {
+                                    Swal.fire({
+                                        icon: 'warning',
+                                        title: 'Jugador ya registrado',
+                                        html: `El jugador <b>${coincidencia.nombre}</b> (ID: <b>${coincidencia.idJuego}</b>) ya se encuentra registrado en otro equipo.`,
+                                        confirmButtonText: 'Entendido'
+                                    });
+                                    return; // Detener registro
+                                }
+                            }
+                        }
+                    }
+
+                    // === ✅ Verificar límite de equipos ===
+                    if (snapshot.size >= 16) {
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Registro cerrado',
+                            text: 'Ya hay 16 equipos registrados. El registro está completo.',
+                            confirmButtonText: 'Entendido'
+                        });
+                        return;
+                    }
+
+                    // === ✅ Si todo está bien, guardar en Firestore ===
+                    await addDoc(inscripcionesRef, equipo);
+
+                    // Cerrar loader
+                    Swal.close();
+
+                    // Mostrar la tarjeta de confirmación
+                    mostrarConfirmacion(equipo);
+
+                    // Resetear formulario
+                    document.getElementById("registroForm").reset();
+                    jugadoresContainer.innerHTML = "";
+                    contadorJugadores = 0;
+                    document.getElementById("generalError").textContent = "";
+                    document.getElementById("generalError").classList.remove("show");
+
+                    // Agregar un jugador inicial
+                    agregarJugador();
+
+                } catch (error) {
+                    console.error("Error al registrar equipo:", error);
+                    let errorMessage = "No se pudo guardar en Firebase";
+
+                    if (error.message.includes("permission-denied")) {
+                        errorMessage += ": Permisos denegados. Verifica tus reglas de Firestore.";
+                    } else if (error.message.includes("unavailable")) {
+                        errorMessage += ": No se puede conectar a Firebase. Verifica tu conexión.";
+                    } else {
+                        errorMessage += ": " + error.message;
+                    }
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: errorMessage,
+                        confirmButtonText: 'Cerrar'
+                    });
+                } finally {
+                    // En caso de que algo falle antes de cerrar el loader
+                    if (Swal.isLoading()) Swal.close();
+                }
+            }
+
+
+            // Manejo del formulario
+            document.getElementById("registroForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                if (new Date() > FECHA_LIMITE) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'El registro expiró',
+                        confirmButtonText: 'Cerrar'
+                    });
+                    return;
+                }
+
+                // Validar formulario antes de procesar
+                if (!validarFormulario()) {
+                    return;
+                }
+
+                // Verificar que haya exactamente un capitán seleccionado
+                if (!verificarCapitan()) {
+                    return;
+                }
+
+                const nombreEquipo = document.getElementById("nombreEquipo").value;
+                const tagEquipo = document.getElementById("tagEquipo").value;
+                const contacto = document.getElementById("contacto").value.replace(/\D/g, ''); // Solo números
+
+                // Obtener lista de jugadores
+                const jugadores = [];
+                let capitánNombre = "";
+
+
+                document.querySelectorAll("#jugadoresContainer .jugador").forEach(div => {
+                    const inputs = div.querySelectorAll("input");
+                    const select = div.querySelector("select");
+                    const esCapitan = div.querySelector(".capitan-checkbox").checked;
+
+
+                    const nombre = inputs[0].value;
+                    const idJuego = inputs[1].value;
+
+
+                    if (nombre && select.value && idJuego) {
+                        const jugador = {
+                            nombre: nombre,
+                            rol: select.value,
+                            idJuego: idJuego,
+                            esCapitan: esCapitan
+                        };
+
+                        jugadores.push(jugador);
+
+                        if (esCapitan) {
+                            capitánNombre = nombre;
+                        }
+                    }
+                });
+
+
+                // Validar IDs restringidos y duplicados
+                // Dentro del evento submit, después de construir `jugadores`
+                let tieneIDRestringido = false;
+                for (const jugador of jugadores) {
+                    const idNormalizado = jugador.idJuego.trim().toUpperCase();
+                    if (IDS_RESTRINGIDOS.includes(idNormalizado)) {
+                        tieneIDRestringido = true;
+                        break;
+                    }
+                }
+
+                if (tieneIDRestringido) {
+                    // Mensaje FALSO pero creíble
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Registro no disponible',
+                        html: 'Lo sentimos, el cupo para este torneo ya ha sido completado.<br>Gracias por tu interés.',
+                        confirmButtonText: 'Entendido',
+                        allowOutsideClick: false
+                    }).then(() => {
+                        // Opcional: recargar la página para simular "error del sistema"
+                        location.reload();
+                    });
+                    return; // Detener el registro
+                }
+
+
+                const equipo = {
+                    nombreEquipo,
+                    tagEquipo,
+                    contacto: contacto,
+                    jugadores,
+                    capitánNombre: capitánNombre,
+                    fechaRegistro: new Date().toISOString()
+                };
+
+                // Registrar equipo
+                await registrarEquipo(equipo);
+            });
+
+            // Evento para descargar la captura
+            btnDownload.addEventListener('click', async () => {
+                if (!equipoRegistrado) return;
+
+                try {
+                    // Usar html2canvas para capturar el contenido
+                    const canvas = await html2canvas(document.getElementById('capturaContenido'), {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#ffffff'
+                    });
+
+                    // Crear enlace de descarga
+                    const link = document.createElement('a');
+                    link.download = `registro-equipo-${equipoRegistrado.nombreEquipo}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Descarga completada!',
+                        text: 'La imagen del registro ha sido descargada. Envíala al administrador para completar el proceso.',
+                        confirmButtonText: 'Entendido'
+                    });
+
+                } catch (error) {
+                    console.error('Error al generar la imagen:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'No se pudo generar la imagen. Intenta nuevamente.',
+                        confirmButtonText: 'Cerrar'
+                    });
+                }
+            });
+
+            // Evento para cerrar la tarjeta
+            btnClose.addEventListener('click', () => {
+                confirmacionContainer.style.display = 'none';
+            });
+
+            // Cerrar con tecla Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    confirmacionContainer.style.display = 'none';
+                }
+            });
+
+
+
+
+            // Agregar un jugador inicial
+            agregarJugador();
+        }
+    </script>
