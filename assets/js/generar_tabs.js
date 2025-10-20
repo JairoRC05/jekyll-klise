@@ -18,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'RONDA 8': 'psyduck',
         'RONDA 9': 'cleafable',
         'RONDA 10': 'espeonEstrella',
-        'RONDA 11': 'gyarados',
-        'RONDA 12': 'gyarados',
-        'RONDA 13': 'gyarados'
+        'RONDA 11': 'gyarados'
     };
 
     function calcularFechasRonda(ronda) {
