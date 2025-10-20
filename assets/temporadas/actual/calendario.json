@@ -1,0 +1,884 @@
+[{
+  "rondas": [
+    {
+      "ronda": "RONDA 1",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-20",
+          "round_number": 1,
+          "match_number": 1
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-20",
+          "round_number": 1,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DORADITTOS",
+          "tag1": "DTS",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-20",
+          "round_number": 1,
+          "match_number": 3
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENIGMA",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-21",
+          "round_number": 1,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "DFS",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-21",
+          "round_number": 1,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-21",
+          "round_number": 1,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 2",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-22",
+          "round_number": 2,
+          "match_number": 1
+        },
+        {
+          "equipo1": "GANBARÚ DEX",
+          "tag1": "GDEX",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-22",
+          "round_number": 2,
+          "match_number": 2
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-22",
+          "round_number": 2,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DORADITTOS",
+          "tag1": "DTS",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-23",
+          "round_number": 2,
+          "match_number": 4
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENIGMA",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-23",
+          "round_number": 2,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "DFS",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-23",
+          "round_number": 2,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 3",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-24",
+          "round_number": 3,
+          "match_number": 1
+        },
+        {
+          "equipo1": "SLEEPKNOT",
+          "tag1": "SK",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-24",
+          "round_number": 3,
+          "match_number": 2
+        },
+        {
+          "equipo1": "GANBARÚ DEX",
+          "tag1": "GDEX",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-24",
+          "round_number": 3,
+          "match_number": 3
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-27",
+          "round_number": 3,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DORADITTOS",
+          "tag1": "DTS",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-27",
+          "round_number": 3,
+          "match_number": 5
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENIGMA",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-27",
+          "round_number": 3,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 4",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-28",
+          "round_number": 4,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-28",
+          "round_number": 4,
+          "match_number": 2
+        },
+        {
+          "equipo1": "SLEEPKNOT",
+          "tag1": "SK",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-28",
+          "round_number": 4,
+          "match_number": 3
+        },
+        {
+          "equipo1": "GANBARÚ DEX",
+          "tag1": "GDEX",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-29",
+          "round_number": 4,
+          "match_number": 4
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-29",
+          "round_number": 4,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DORADITTOS",
+          "tag1": "DTS",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-29",
+          "round_number": 4,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 5",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-31",
+          "round_number": 5,
+          "match_number": 1
+        },
+        {
+          "equipo1": "HAKKESSHU",
+          "tag1": "傑",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-31",
+          "round_number": 5,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-31",
+          "round_number": 5,
+          "match_number": 3
+        },
+        {
+          "equipo1": "SLEEPKNOT",
+          "tag1": "SK",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-10-30",
+          "round_number": 5,
+          "match_number": 4
+        },
+        {
+          "equipo1": "GANBARÚ DEX",
+          "tag1": "GDEX",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-10-30",
+          "round_number": 5,
+          "match_number": 5
+        },
+        {
+          "equipo1": "THE UNOWN TEAM",
+          "tag1": "TUT",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-10-30",
+          "round_number": 5,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 6",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "CAPIBAYAS",
+          "tag2": "CAPI",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-03",
+          "round_number": 6,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS RUBY",
+          "tag1": "RUBY",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-03",
+          "round_number": 6,
+          "match_number": 2
+        },
+        {
+          "equipo1": "HAKKESSHU",
+          "tag1": "傑",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-03",
+          "round_number": 6,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-04",
+          "round_number": 6,
+          "match_number": 4
+        },
+        {
+          "equipo1": "SLEEPKNOT",
+          "tag1": "SK",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-04",
+          "round_number": 6,
+          "match_number": 5
+        },
+        {
+          "equipo1": "GANBARÚ DEX",
+          "tag1": "GDEX",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-04",
+          "round_number": 6,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 7",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "DINASTY",
+          "tag2": "DINASTY",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-06",
+          "round_number": 7,
+          "match_number": 1
+        },
+        {
+          "equipo1": "CAPIBAYAS",
+          "tag1": "CAPI",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-06",
+          "round_number": 7,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS RUBY",
+          "tag1": "RUBY",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-06",
+          "round_number": 7,
+          "match_number": 3
+        },
+        {
+          "equipo1": "HAKKESSHU",
+          "tag1": "傑",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-07",
+          "round_number": 7,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-07",
+          "round_number": 7,
+          "match_number": 5
+        },
+        {
+          "equipo1": "SLEEPKNOT",
+          "tag1": "SK",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-07",
+          "round_number": 7,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 8",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "DFS PLATINUM",
+          "tag2": "DFS",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-10",
+          "round_number": 8,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-10",
+          "round_number": 8,
+          "match_number": 2
+        },
+        {
+          "equipo1": "CAPIBAYAS",
+          "tag1": "CAPI",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-10",
+          "round_number": 8,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS RUBY",
+          "tag1": "RUBY",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-11",
+          "round_number": 8,
+          "match_number": 4
+        },
+        {
+          "equipo1": "HAKKESSHU",
+          "tag1": "傑",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-11",
+          "round_number": 8,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS FROSTBITE",
+          "tag1": "FTB",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-11",
+          "round_number": 8,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 9",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "ENIGMA ESPORTS",
+          "tag2": "ENIGMA",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-12",
+          "round_number": 9,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "DFS",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-12",
+          "round_number": 9,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-13",
+          "round_number": 9,
+          "match_number": 3
+        },
+        {
+          "equipo1": "CAPIBAYAS",
+          "tag1": "CAPI",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-13",
+          "round_number": 9,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DFS RUBY",
+          "tag1": "RUBY",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-12",
+          "round_number": 9,
+          "match_number": 5
+        },
+        {
+          "equipo1": "HAKKESSHU",
+          "tag1": "傑",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-13",
+          "round_number": 9,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 10",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "DORADITTOS",
+          "tag2": "DTS",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-14",
+          "round_number": 10,
+          "match_number": 1
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENIGMA",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-14",
+          "round_number": 10,
+          "match_number": 2
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "DFS",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-14",
+          "round_number": 10,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-17",
+          "round_number": 10,
+          "match_number": 4
+        },
+        {
+          "equipo1": "CAPIBAYAS",
+          "tag1": "CAPI",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-17",
+          "round_number": 10,
+          "match_number": 5
+        },
+        {
+          "equipo1": "DFS RUBY",
+          "tag1": "RUBY",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-17",
+          "round_number": 10,
+          "match_number": 6
+        }
+      ]
+    },
+    {
+      "ronda": "RONDA 11",
+      "fecha_inicio": "",
+      "fecha_fin": "",
+      "hora": "",
+      "partidos": [
+        {
+          "equipo1": "NEW FORCE",
+          "tag1": "FORCE",
+          "equipo2": "THE UNOWN TEAM",
+          "tag2": "TUT",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-18",
+          "round_number": 11,
+          "match_number": 1
+        },
+        {
+          "equipo1": "DORADITTOS",
+          "tag1": "DTS",
+          "equipo2": "GANBARÚ DEX",
+          "tag2": "GDEX",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-18",
+          "round_number": 11,
+          "match_number": 2
+        },
+        {
+          "equipo1": "ENIGMA ESPORTS",
+          "tag1": "ENIGMA",
+          "equipo2": "SLEEPKNOT",
+          "tag2": "SK",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-18",
+          "round_number": 11,
+          "match_number": 3
+        },
+        {
+          "equipo1": "DFS PLATINUM",
+          "tag1": "DFS",
+          "equipo2": "DFS FROSTBITE",
+          "tag2": "FTB",
+          "resultado": "",
+          "stream": true,
+          "hora": "22:30",
+          "dia": "2025-11-19",
+          "round_number": 11,
+          "match_number": 4
+        },
+        {
+          "equipo1": "DINASTY",
+          "tag1": "DINASTY",
+          "equipo2": "HAKKESSHU",
+          "tag2": "傑",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:00",
+          "dia": "2025-11-19",
+          "round_number": 11,
+          "match_number": 5
+        },
+        {
+          "equipo1": "CAPIBAYAS",
+          "tag1": "CAPI",
+          "equipo2": "DFS RUBY",
+          "tag2": "RUBY",
+          "resultado": "",
+          "stream": true,
+          "hora": "21:50",
+          "dia": "2025-11-19",
+          "round_number": 11,
+          "match_number": 6
+        }
+      ]
+    }
+  ]
+}]

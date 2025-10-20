@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    fetch('/assets/temporadas/sep2025/calendario.json')
+    fetch('/assets/temporadas/actual/calendario.json')
         .then(response => response.json())
         .then(data => {
             const rondas = data[0].rondas;
