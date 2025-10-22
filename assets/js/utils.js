@@ -1,6 +1,26 @@
 // utils.js
+   const equipoSlugs = {
+            "ENIGMA ESPORTS": "enigma-esports",
+            "THE UNOWN TEAM": "the-unown-team",
+            "DFS RUBY": "dragonflies-gaming-ruby",
+            "DFS FROSTBITE": "dragonflies-gaming-frostbite",
+            "DFS PLATINUM": "dragonflies-gaming-platino",
+            "CAPIBYAS": "capibayas",
+            "DINASTY": "dinasty",
+            "GANBARÚ DEX": "ganbaru-dex",
+            "NEW FORCE": "new-force",
+            "HAKKESSHU": "hakkesshu",
+            "SLEEPKNOT": "sleepknot",
+            "DORADITTOS": "doradittos",
+  
+        };
+
 
 function generarPartidoHTML(partido) {
+    // Obtener slugs seguros
+    const slug1 = equipoSlugs[partido.equipo1] || partido.equipo1.toLowerCase().replace(/\s+/g, '-');
+    const slug2 = equipoSlugs[partido.equipo2] || partido.equipo2.toLowerCase().replace(/\s+/g, '-');
+
     if (partido.equipo2 === "DES") {
         return `
       <div class="bracket-round-list-zzz">
@@ -8,7 +28,7 @@ function generarPartidoHTML(partido) {
           <h3>DESCANSO</h3>
         </div>
         <div class="bracket-round-team">
-          <a href="/teams/${partido.equipo1}">
+          <a href="/teams/${slug1}">
             <img src="/assets/logos/${partido.equipo1}.webp" alt="" class="img-fluid">
           </a>
         </div>
@@ -22,7 +42,7 @@ function generarPartidoHTML(partido) {
         return `
       <div class="bracket-round-list">
         <div class="bracket-round-team">
-          <a href="/teams/${partido.equipo1}">
+          <a href="/liga-indigo/equipos/${slug1}">
             <img src="/assets/logos/${partido.tag1}.webp" alt="" class="img-fluid">
           </a>
         </div>
@@ -48,7 +68,7 @@ function generarPartidoHTML(partido) {
           </div>
         </div>
         <div class="bracket-round-team-right">
-          <a href="/teams/${partido.equipo2}">
+          <a href="/liga-indigo/equipos/${slug2}">
             <img src="/assets/logos/${partido.tag2}.webp" alt="" class="img-fluid">
           </a>
         </div>

@@ -1,181 +1,196 @@
 ---
 layout: ligaIndigo
-permalink: 
+permalink:
 ---
- 
+
 <div id="equipo-perfil" class="">
 
 
- </div>
+</div>
 
-  <div id="equipo-perfil-partidos" class="mb-5">
+<div id="equipo-perfil-partidos" class="mb-5">
 
-  </div>
+</div>
 
- <div class="d-none justify-content-center align-items-center">
-   <button id="descargarTodo" class="btn btn-primary mt-3">Descargar Calendario</button>
- </div>
+<div class="d-none justify-content-center align-items-center">
+    <button id="descargarTodo" class="btn btn-primary mt-3">Descargar Calendario</button>
+</div>
 
 <div id="equipo-perfil-roster" class="mb-5">
-  <div class="container">
+    <div class="container">
 
 
-  </div>
-  </div>
+    </div>
+</div>
 
 
-  <div id="equipo-perfil-footer" style="display: none;">
-  <img src="/assets/backgrounds/uniteforzestadium.png" alt="">
+<div id="equipo-perfil-footer" style="display: none;">
+    <img src="/assets/backgrounds/uniteforzestadium.png" alt="">
 </div>
 
 
 
 
 
-  <div id="stars1"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+<div id="stars1"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+
+
+
+
+
+
+
+
+{% include paypal.html %}
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const pageID = "{{ page.ID }}";
+        const jsonURL = `/assets/temporadas/actual/${pageID.toLowerCase()}.json`;
+
+        const descargarTodoBtn = document.getElementById('descargarTodo');
+        const equipoPerfil = document.getElementById('equipo-perfil');
+        const equipoPartidos = document.getElementById('equipo-perfil-partidos');
+        const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`; // HTML del footer
+
+        const equipoSlugs = {
+            "ENIGMA ESPORTS": "enigma-esports",
+            "THE UNOWN TEAM": "the-unown-team",
+            "DFS RUBY": "dragonflies-gaming-ruby",
+            "DFS FROSTBITE": "dragonflies-gaming-frostbite",
+            "DFS PLATINUM": "dragonflies-gaming-platino",
+            "CAPIBYAS": "capibayas",
+            "DINASTY": "dinasty",
+            "GANBARÚ DEX": "ganbaru-dex",
+            "NEW FORCE": "new-force",
+            "HAKKESSHU": "hakkesshu",
+            "SLEEPKNOT": "sleepknot",
+            "DORADITTOS": "doradittos",
   
+        };
 
+        const roundSpecificData = [
+            { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
+            { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' }, // <-- Cambia a raichu
+            { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' }, // <-- Cambia a goodra
+            { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
+            { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
+            { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' }, // <-- Cambia a gengar
+            { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' }, // <-- Cambia a lapras
+            { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
+            { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
+            { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' },
+            { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' },
+            { ronda: 'RONDA 12', fecha: '2025-08-04', nombreImagen: 'gyarados' },
+            { ronda: 'RONDA 13', fecha: '2025-08-04', nombreImagen: 'gyarados' },
 
+        ];
 
+        if (descargarTodoBtn && equipoPerfil && equipoPartidos) {
+            descargarTodoBtn.addEventListener('click', function () {
+                const bannerHTML = equipoPerfil.outerHTML;
+                const partidosHTML = equipoPartidos.outerHTML;
 
+                const tempDescargaDiv = document.createElement('div');
+                tempDescargaDiv.style.position = 'absolute';
+                tempDescargaDiv.style.top = '-9999px';
+                tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
 
+                document.body.appendChild(tempDescargaDiv);
 
+                html2canvas(tempDescargaDiv).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
+                    link.href = canvas.toDataURL();
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
 
-    {% include paypal.html  %}
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-  <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const pageID = "{{ page.ID }}";
-    const jsonURL = `/assets/temporadas/actual/${pageID.toLowerCase()}.json`;
-
-    const descargarTodoBtn = document.getElementById('descargarTodo');
-    const equipoPerfil = document.getElementById('equipo-perfil');
-    const equipoPartidos = document.getElementById('equipo-perfil-partidos');
-    const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`; // HTML del footer
-
- 
-    const roundSpecificData = [
-        { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' }, // <-- Cambia a raichu
-        { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' }, // <-- Cambia a goodra
-        { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
-        { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
-        { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' }, // <-- Cambia a gengar
-        { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' }, // <-- Cambia a lapras
-        { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
-        { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
-        { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' }, 
-        { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
-        { ronda: 'RONDA 12', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
-        { ronda: 'RONDA 13', fecha: '2025-08-04', nombreImagen: 'gyarados' }, 
-       
-    ];
-
-    if (descargarTodoBtn && equipoPerfil && equipoPartidos) {
-        descargarTodoBtn.addEventListener('click', function() {
-            const bannerHTML = equipoPerfil.outerHTML;
-            const partidosHTML = equipoPartidos.outerHTML;
-
-            const tempDescargaDiv = document.createElement('div');
-            tempDescargaDiv.style.position = 'absolute';
-            tempDescargaDiv.style.top = '-9999px';
-            tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
-
-            document.body.appendChild(tempDescargaDiv);
-
-            html2canvas(tempDescargaDiv).then(canvas => {
-                const link = document.createElement('a');
-                link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
-                link.href = canvas.toDataURL();
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                document.body.removeChild(tempDescargaDiv);
+                    document.body.removeChild(tempDescargaDiv);
+                });
             });
-        });
-    }
+        }
 
-    fetch(jsonURL)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data) {
-                const equipo = data;
-                renderBanner(equipo, 'equipo-perfil');
-                renderRoster(equipo, 'equipo-perfil-roster');
+        fetch(jsonURL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data) {
+                    const equipo = data;
+                    renderBanner(equipo, 'equipo-perfil');
+                    renderRoster(equipo, 'equipo-perfil-roster');
 
-                // Pasar roundSpecificData a renderMatchInfo
-                renderMatchInfo(equipo, 'equipo-perfil-partidos', roundSpecificData);
-            } else {
-                document.getElementById('equipo-perfil').innerText = 'No se encontraron datos para este equipo.';
+                    // Pasar roundSpecificData a renderMatchInfo
+                    renderMatchInfo(equipo, 'equipo-perfil-partidos', roundSpecificData);
+                } else {
+                    document.getElementById('equipo-perfil').innerText = 'No se encontraron datos para este equipo.';
+                    document.getElementById('equipo-perfil-roster').innerText = '';
+                    document.getElementById('equipo-perfil-partidos').innerText = '';
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar o procesar el archivo JSON:', error);
+                document.getElementById('equipo-perfil').innerText = 'Error al cargar los datos del equipo.';
                 document.getElementById('equipo-perfil-roster').innerText = '';
                 document.getElementById('equipo-perfil-partidos').innerText = '';
-            }
-        })
-        .catch(error => {
-            console.error('Error al cargar o procesar el archivo JSON:', error);
-            document.getElementById('equipo-perfil').innerText = 'Error al cargar los datos del equipo.';
-            document.getElementById('equipo-perfil-roster').innerText = '';
-            document.getElementById('equipo-perfil-partidos').innerText = '';
-        });
+            });
 
-    function calcularSumaPartidos(partidos) {
-        let suma = 0;
-        for (const key in partidos) {
-            const valor = partidos[key];
-            if (valor !== "" && !isNaN(parseInt(valor))) {
-                suma += parseInt(valor);
+        function calcularSumaPartidos(partidos) {
+            let suma = 0;
+            for (const key in partidos) {
+                const valor = partidos[key];
+                if (valor !== "" && !isNaN(parseInt(valor))) {
+                    suma += parseInt(valor);
+                }
             }
+            return suma;
         }
-        return suma;
-    }
 
-    function renderBanner(equipo, containerId) {
-        let partidosBannerHTML = '<div class="card-round-title"><div class="card-round-record">';
-        for (const partidoKey in equipo.partidos) {
-            const resultado = equipo.partidos[partidoKey];
-            let classRecord = '';
-            let textoResultado = '';
+        function renderBanner(equipo, containerId) {
+            let partidosBannerHTML = '<div class="card-round-title"><div class="card-round-record">';
+            for (const partidoKey in equipo.partidos) {
+                const resultado = equipo.partidos[partidoKey];
+                let classRecord = '';
+                let textoResultado = '';
 
-            if (resultado === "3") {
-                classRecord = 'sup';
-                textoResultado = '3';
-            } else if (resultado === "2") {
-                classRecord = 'win';
-                textoResultado = '2';
-            } else if (resultado === "1") {
-                classRecord = 'one';
-                textoResultado = '1';
-            } else if (resultado === "R") {
-                classRecord = 'rea';
-                textoResultado = 'R';
-            } else if (resultado === "D") {
-                classRecord = 'des';
-                textoResultado = 'D';
-            } else if (resultado === "0") {
-                classRecord = 'loss';
-                textoResultado = '0';
+                if (resultado === "3") {
+                    classRecord = 'sup';
+                    textoResultado = '3';
+                } else if (resultado === "2") {
+                    classRecord = 'win';
+                    textoResultado = '2';
+                } else if (resultado === "1") {
+                    classRecord = 'one';
+                    textoResultado = '1';
+                } else if (resultado === "R") {
+                    classRecord = 'rea';
+                    textoResultado = 'R';
+                } else if (resultado === "D") {
+                    classRecord = 'des';
+                    textoResultado = 'D';
+                } else if (resultado === "0") {
+                    classRecord = 'loss';
+                    textoResultado = '0';
+                }
+
+                partidosBannerHTML += `<span class="record ${classRecord}">${textoResultado}</span>`;
             }
+            partidosBannerHTML += '</div></div>';
 
-            partidosBannerHTML += `<span class="record ${classRecord}">${textoResultado}</span>`;
-        }
-        partidosBannerHTML += '</div></div>';
-
-        const bannerHTML = `
+            const bannerHTML = `
             <div class="profile indigo">
                 <div class="profile-team">
                     <a href="/assets/logos/${equipo.tag}.png" role="button" download="${equipo.team.replace(/ /g, '-')}.png">
@@ -228,14 +243,14 @@ permalink:
              
             </div>
         `;
-        document.getElementById(containerId).innerHTML = bannerHTML;
-    }
+            document.getElementById(containerId).innerHTML = bannerHTML;
+        }
 
 
-    function renderRoster(equipo, containerId) {
-        let rosterHTML = '<h2 class="text-black">Roster del equipo</h2><div class="row">';
-        equipo.jugadores.forEach(jugador => {
-            rosterHTML += `
+        function renderRoster(equipo, containerId) {
+            let rosterHTML = '<h2 class="text-black">Roster del equipo</h2><div class="row">';
+            equipo.jugadores.forEach(jugador => {
+                rosterHTML += `
                 <div class="col-md-6 col-lg-3 col-xl-2">
                     <div class="card-roster">
                         <div class="card-round-team">
@@ -256,204 +271,210 @@ permalink:
                     </div>
                 </div>
             `;
-        });
-        rosterHTML += '</div>';
-        const rosterContainer = document.querySelector(`#${containerId} `);
-        if (rosterContainer) {
-            rosterContainer.innerHTML = rosterHTML;
-        } else {
-            console.error(`No se encontró el contenedor con la clase 'container' dentro de #${containerId}`);
-            document.getElementById(containerId).innerHTML = rosterHTML; // Fallback si no se encuentra el container
-        }
-    }
-
-    /**
-     * Formatea una cadena de fecha YYYY-MM-DD a DD MES (ej. 28 MAY).
-     * Si la fecha incluye un rango (ej. YYYY-MM-DD - YYYY-MM-DD), formatea el rango.
-     * @param {string} dateString La cadena de fecha a formatear.
-     * @returns {string} La fecha formateada.
-     */
-    function formatDateToDayMonth(dateString) {
-        const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
-
-        if (dateString.includes(' - ')) {
-            const [startDateStr, endDateStr] = dateString.split(' - ');
-            const startDate = new Date(startDateStr + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
-            const endDate = new Date(endDateStr + 'T00:00:00');
-
-            const startDay = startDate.getDate();
-            const startMonth = months[startDate.getMonth()];
-            const endDay = endDate.getDate();
-            const endMonth = months[endDate.getMonth()];
-
-            if (startDate.getMonth() === endDate.getMonth()) {
-                return `${startDay}-${endDay} ${startMonth}`;
+            });
+            rosterHTML += '</div>';
+            const rosterContainer = document.querySelector(`#${containerId} `);
+            if (rosterContainer) {
+                rosterContainer.innerHTML = rosterHTML;
             } else {
-                return `${startDay} ${startMonth} - ${endDay} ${endMonth}`;
+                console.error(`No se encontró el contenedor con la clase 'container' dentro de #${containerId}`);
+                document.getElementById(containerId).innerHTML = rosterHTML; // Fallback si no se encuentra el container
             }
-        } else if (dateString === 'Fecha no definida') {
-            return 'Fecha no definida';
-        } else {
-            const date = new Date(dateString + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
-            const day = date.getDate();
-            const month = months[date.getMonth()];
-            return `${day} ${month}`;
         }
-    }
 
-    function renderMatchInfo(equipo, containerId, roundsDatesFromScript) {
-    const teamTag = equipo.tag;
-    let partidosHTML = '<div class=""><h2>CALENDARIO</h2><div class="row">';
+        /**
+         * Formatea una cadena de fecha YYYY-MM-DD a DD MES (ej. 28 MAY).
+         * Si la fecha incluye un rango (ej. YYYY-MM-DD - YYYY-MM-DD), formatea el rango.
+         * @param {string} dateString La cadena de fecha a formatear.
+         * @returns {string} La fecha formateada.
+         */
+        function formatDateToDayMonth(dateString) {
+            const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
 
-    // Mapa de fechas por ronda desde roundSpecificData
-    const roundDatesMap = new Map();
-    roundsDatesFromScript.forEach(r => {
-        const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
-        roundDatesMap.set(r.ronda, fechaStr);
-    });
+            if (dateString.includes(' - ')) {
+                const [startDateStr, endDateStr] = dateString.split(' - ');
+                const startDate = new Date(startDateStr + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
+                const endDate = new Date(endDateStr + 'T00:00:00');
 
-    fetch('/assets/temporadas/actual/calendario.json')
-        .then(r => r.json())
-        .then(data => {
-            if (!data || !Array.isArray(data) || data.length === 0 || !data[0].rondas) {
-                throw new Error('Estructura de calendario.json inválida');
+                const startDay = startDate.getDate();
+                const startMonth = months[startDate.getMonth()];
+                const endDay = endDate.getDate();
+                const endMonth = months[endDate.getMonth()];
+
+                if (startDate.getMonth() === endDate.getMonth()) {
+                    return `${startDay}-${endDay} ${startMonth}`;
+                } else {
+                    return `${startDay} ${startMonth} - ${endDay} ${endMonth}`;
+                }
+            } else if (dateString === 'Fecha no definida') {
+                return 'Fecha no definida';
+            } else {
+                const date = new Date(dateString + 'T00:00:00'); // Añadir T00:00:00 para evitar problemas de zona horaria
+                const day = date.getDate();
+                const month = months[date.getMonth()];
+                return `${day} ${month}`;
             }
+        }
 
-            const rondas = data[0].rondas;
+        function renderMatchInfo(equipo, containerId, roundsDatesFromScript) {
+            const teamTag = equipo.tag;
+            let partidosHTML = '<div class=""><h2>CALENDARIO</h2><div class="row">';
 
-            // Paso 1: Recopilar todos los partidos del equipo
-            const partidosEquipo = [];
+            // Mapa de fechas por ronda desde roundSpecificData
+            const roundDatesMap = new Map();
+            roundsDatesFromScript.forEach(r => {
+                const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
+                roundDatesMap.set(r.ronda, fechaStr);
+            });
 
-            rondas.forEach(ronda => {
-                ronda.partidos.forEach(partido => {
-                    if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
-                        partidosEquipo.push({
-                            ...partido,
-                            rondaNombre: ronda.ronda
+            fetch('/assets/temporadas/actual/calendario.json')
+                .then(r => r.json())
+                .then(data => {
+                    if (!data || !Array.isArray(data) || data.length === 0 || !data[0].rondas) {
+                        throw new Error('Estructura de calendario.json inválida');
+                    }
+
+                    const rondas = data[0].rondas;
+
+                    // Paso 1: Recopilar todos los partidos del equipo
+                    const partidosEquipo = [];
+
+                    rondas.forEach(ronda => {
+                        ronda.partidos.forEach(partido => {
+                            if (partido.tag1 === teamTag || partido.tag2 === teamTag) {
+                                partidosEquipo.push({
+                                    ...partido,
+                                    rondaNombre: ronda.ronda
+                                });
+                            }
                         });
-                    }
-                });
-            });
+                    });
 
-            // Paso 2: Ordenar por el orden definido en roundSpecificData
-            const orderedMatches = [];
-            roundsDatesFromScript.forEach(roundDef => {
-                const matchesOfRound = partidosEquipo.filter(p => p.rondaNombre === roundDef.ronda);
-                orderedMatches.push(...matchesOfRound);
-            });
+                    // Paso 2: Ordenar por el orden definido en roundSpecificData
+                    const orderedMatches = [];
+                    roundsDatesFromScript.forEach(roundDef => {
+                        const matchesOfRound = partidosEquipo.filter(p => p.rondaNombre === roundDef.ronda);
+                        orderedMatches.push(...matchesOfRound);
+                    });
 
-            // Paso 3: Renderizar en orden
-            if (orderedMatches.length > 0) {
-                orderedMatches.forEach(partidoOriginal => {
-                    const partido = { ...partidoOriginal };
-                    const originalRondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
-                    const formattedRondaFecha = formatDateToDayMonth(originalRondaFecha);
+                    // Paso 3: Renderizar en orden
+                    if (orderedMatches.length > 0) {
+                        orderedMatches.forEach(partidoOriginal => {
+                            const partido = { ...partidoOriginal };
+                            const originalRondaFecha = roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida';
+                            const formattedRondaFecha = formatDateToDayMonth(originalRondaFecha);
 
-                    // 🔄 INVERTIR SI ES RONDA PAR
-                    const numeroRonda = parseInt(partido.rondaNombre.replace('RONDA ', ''));
-                    const invertir = !isNaN(numeroRonda) && numeroRonda % 2 === 0 && partido.equipo2 !== "DES";
+                            // 🔄 INVERTIR SI ES RONDA PAR
+                            const numeroRonda = parseInt(partido.rondaNombre.replace('RONDA ', ''));
+                            const invertir = !isNaN(numeroRonda) && numeroRonda % 2 === 0 && partido.equipo2 !== "DES";
 
-                    if (invertir) {
-                        [partido.equipo1, partido.equipo2] = [partido.equipo2, partido.equipo1];
-                        [partido.tag1, partido.tag2] = [partido.tag2, partido.tag1];
+                            if (invertir) {
+                                [partido.equipo1, partido.equipo2] = [partido.equipo2, partido.equipo1];
+                                [partido.tag1, partido.tag2] = [partido.tag2, partido.tag1];
 
-                        if (partido.resultado && partido.resultado.includes('-')) {
-                            const [r1, r2] = partido.resultado.split('-');
-                            partido.resultado = `${r2}-${r1}`;
-                        }
-                    }
+                                if (partido.resultado && partido.resultado.includes('-')) {
+                                    const [r1, r2] = partido.resultado.split('-');
+                                    partido.resultado = `${r2}-${r1}`;
+                                }
+                            }
 
-                    const equipo1T = truncateString(partido.equipo1, 12);
-                    const equipo2T = truncateString(partido.equipo2, 12);
+                            const equipo1T = truncateString(partido.equipo1, 12);
+                            const equipo2T = truncateString(partido.equipo2, 12);
 
-                    partidosHTML += `
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
-                            ${partido.equipo2 === "DES" ? `
-                                <div class="bracket-round-list-zzz">
-                                    <div class="card-round-promo">
-                                        <h3>DESCANSO</h3>
-                                    </div>
-                                    <div class="bracket-round-team">
-                                        <a href="/liga-indigo/equipos/${partido.equipo1}">
-                                            <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="card-round-promo-left">
-                                        <span>${partido.rondaNombre}</span>
-                                    </div>
-                                    <div class="card-round-promo-right">
-                                        <span>${formattedRondaFecha}</span>
-                                    </div>
-                                    <div class="card-back">
-                                        <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
-                                        <div class="card-color-right bg-cham"></div>
-                                    </div>
-                                </div>
+                            // ... dentro del bucle orderedMatches.forEach ...
+
+                            const slugEquipo1 = equipoSlugs[partido.equipo1] || partido.equipo1.toLowerCase().replace(/\s+/g, '-');
+                            const slugEquipo2 = equipoSlugs[partido.equipo2] || partido.equipo2.toLowerCase().replace(/\s+/g, '-');
+
+                            partidosHTML += `
+    <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+        ${partido.equipo2 === "DES" ? `
+            <div class="bracket-round-list-zzz">
+                <div class="card-round-promo">
+                    <h3>DESCANSO</h3>
+                </div>
+                <div class="bracket-round-team">
+                    <a href="/liga-indigo/equipos/${slugEquipo1}">
+                        <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card-round-promo-left">
+                    <span>${partido.rondaNombre}</span>
+                </div>
+                <div class="card-round-promo-right">
+                    <span>${formattedRondaFecha}</span>
+                </div>
+                <div class="card-back">
+                    <div class="card-color-left ${partido.equipo1 === '7Z' ? 'S7Z' : partido.equipo1}"></div>
+                    <div class="card-color-right bg-cham"></div>
+                </div>
+            </div>
+        ` : `
+            <div class="bracket-round-list">
+                <div class="bracket-round-team">
+                    <a href="/liga-indigo/equipos/${slugEquipo1}">
+                        <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
+                    </a>
+                </div>
+                <div class="round-titles">
+                    <div class="card-round-promo left">
+                        <h6>${equipo1T}</h6>
+                    </div>
+                    <div class="card-round-promo mx-2">
+                        ${partido.stream ? `
+                            ${partido.resultado !== "VS" ? `
+                                <span>${partido.rondaNombre}</span>
+                                <h6>${partido.resultado}</h6>
+                                <span>${partido.dia}</span>
                             ` : `
-                                <div class="bracket-round-list">
-                                    <div class="bracket-round-team">
-                                        <a href="/liga-indigo/equipos/${partido.equipo1}">
-                                            <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="round-titles">
-                                        <div class="card-round-promo left">
-                                            <h6>${equipo1T}</h6>
-                                        </div>
-                                        <div class="card-round-promo mx-2">
-                                            ${partido.stream ? `
-                                                ${partido.resultado !== "VS" ? `
-                                                    <span>${partido.rondaNombre}</span>
-                                                    <h6>${partido.resultado}</h6>
-                                                      <span>${partido.dia}</span>
-                                                ` : `
-                                                    <span>${partido.rondaNombre}</span>
-                                                    <span>TWITCH</span>
-                                                    <span>${partido.dia}</span>
-                                                    <span>${partido.hora}</span>
-                                                `}
-                                            ` : `
-                                                <span>${partido.rondaNombre}</span>
-                                                ${partido.resultado !== "VS" ? `<h6>${partido.resultado}</h6>` : ''}
-                                                <span>${partido.dia}</span>
-                                            `}
-                                        </div>
-                                        <div class="card-round-promo right">
-                                            <h6>${equipo2T}</h6>
-                                        </div>
-                                    </div>
-                                    <div class="bracket-round-team-right">
-                                        <a href="/liga-indigo/equipos/${partido.equipo2}">
-                                            <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="card-back">
-                                        <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
-                                        <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
-                                    </div>
-                                </div>
+                                <span>${partido.rondaNombre}</span>
+                                <span>TWITCH</span>
+                                <span>${partido.dia}</span>
+                                <span>${partido.hora}</span>
                             `}
-                        </div>
-                    `;
+                        ` : `
+                            <span>${partido.rondaNombre}</span>
+                            ${partido.resultado !== "VS" ? `<h6>${partido.resultado}</h6>` : ''}
+                            <span>${partido.dia}</span>
+                        `}
+                    </div>
+                    <div class="card-round-promo right">
+                        <h6>${equipo2T}</h6>
+                    </div>
+                </div>
+                <div class="bracket-round-team-right">
+                    <a href="/liga-indigo/equipos/${slugEquipo2}">
+                        <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card-back">
+                    <div class="card-color-left ${partido.tag1 === '7Z' ? 'S7Z' : partido.tag1}"></div>
+                    <div class="card-color-right ${partido.tag2 === '7Z' ? 'S7Z' : partido.tag2}"></div>
+                </div>
+            </div>
+        `}
+    </div>
+`;
+
+                        });
+                    } else {
+                        partidosHTML += '<p>No se encontraron partidos para este equipo en las rondas definidas.</p>';
+                    }
+
+                    partidosHTML += '</div></div>';
+                    document.getElementById(containerId).innerHTML = partidosHTML;
+                })
+                .catch(error => {
+                    console.error('Error al cargar calendario.json:', error);
+                    document.getElementById(containerId).innerHTML = '<p>Error al cargar la información de los partidos.</p>';
                 });
-            } else {
-                partidosHTML += '<p>No se encontraron partidos para este equipo en las rondas definidas.</p>';
-            }
-
-            partidosHTML += '</div></div>';
-            document.getElementById(containerId).innerHTML = partidosHTML;
-        })
-        .catch(error => {
-            console.error('Error al cargar calendario.json:', error);
-            document.getElementById(containerId).innerHTML = '<p>Error al cargar la información de los partidos.</p>';
-        });
-}
-
-    function truncateString(str, maxLength) {
-        if (str.length > maxLength) {
-            return str.substring(0, maxLength) + '...';
         }
-        return str;
-    }
-});
- </script>
+
+        function truncateString(str, maxLength) {
+            if (str.length > maxLength) {
+                return str.substring(0, maxLength) + '...';
+            }
+            return str;
+        }
+    });
+</script>
