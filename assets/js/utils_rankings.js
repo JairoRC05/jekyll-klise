@@ -165,7 +165,7 @@ async function mostrarEquipos(equipos, contenedor, grupo, opciones = {}) {
 async function buscarResultadosDirectos(equipoTagA, equipoTagB, grupo) {
     console.log(`Buscando resultados directos entre ${equipoTagA} y ${equipoTagB} del grupo ${grupo}`);
     const resultados = { victorias: 0, derrotas: 0 };
-    const archivoPartidos = `/assets/temporadas/julio2025/p${grupo.toLowerCase()}.json`;
+    const archivoPartidos = `/assets/temporadas/actual/p${grupo.toLowerCase()}.json`;
 
     try {
         const response = await fetch(archivoPartidos);

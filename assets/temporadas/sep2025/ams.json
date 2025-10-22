@@ -1,13 +1,8 @@
 {
   "tag": "AMS",
   "team": "AMNESIA",
-  "org": "",
-  "activo": true,
   "capitan": "GOLDITTO",
   "region": "LAN",
-  "teamNombreAnterior": "",
-  "teamNuevoNombre": "AMNESIA",
-  "seguro": false,
   "link": "/equipos/amnesia",
   "grupo": "NORTH",
   "partidos": {

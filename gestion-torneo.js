@@ -9,7 +9,7 @@ let teamsDataTable;
 // --- Funciones de Utilidad ---
 
 async function loadExternalMatchData() {
-    const filePaths = ['/assets/temporadas/sep2025/calendario.json'];
+    const filePaths = ['/assets/temporadas/actual/calendario.json'];
     const fetchPromises = filePaths.map(path =>
         fetch(path)
             .then(response => {
@@ -77,7 +77,8 @@ function getFlatPlayersData() {
                 ID: player.ID,
                 nickname: player.nickname,
                 avatar: player.avatar || 'male1', // Asegura un avatar por defecto
-                teamTag: team.tag // Añade la referencia al equipo del jugador
+                teamTag: team.tag, // Añade la referencia al equipo del jugador
+                rol: player.rol // Añade la referencia al equipo del jugador
             });
         });
     });
@@ -478,7 +479,7 @@ function downloadTeamJson(teamTag) {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${team.team.replace(/\s/g, '_')}_${team.tag}_data.json`;
+        a.download = `${team.tag.toLowerCase()}.json`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -860,7 +861,8 @@ function generateTeamPlayersPdf(teamTag) {
         const playerData = [
             player.nickname,
             player.ID,
-            player.avatar
+            player.avatar,
+            player.rol
         ];
         tableRows.push(playerData);
     });
@@ -910,12 +912,13 @@ function generateTeamPlayersCsv(teamTag) {
         return;
     }
 
-    const headers = ["Nickname", "ID", "Avatar", "Equipo"];
+    const headers = ["Nickname", "ID", "Avatar", "Equipo", "Rol"];
     const rows = team.jugadores.map(player => [
         `"${player.nickname.replace(/"/g, '""')}"`, // Escapar comillas dobles
         `"${player.ID.replace(/"/g, '""')}"`,
         `"${player.avatar.replace(/"/g, '""')}"`,
-        `"${team.team.replace(/"/g, '""')} (${team.tag})"`
+        `"${team.team.replace(/"/g, '""')} (${team.tag})"`,
+        `"${player.rol.replace(/"/g, '""')}"`,
     ]);
 
     let csvContent = headers.join(",") + "\n";
@@ -1226,6 +1229,7 @@ $(document).ready(function () {
             { data: 'nickname', title: 'Nickname', searchable: true, className: 'editable' },
             { data: 'avatar', title: 'Avatar', searchable: false, className: 'editable' },
             { data: 'teamTag', title: 'Equipo', searchable: true },
+            { data: 'rol', title: 'Rol', searchable: true },
             {
                 // Columna de acciones para jugador
                 data: null,
@@ -1377,7 +1381,7 @@ $(document).ready(function () {
                     return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
                 }
             },
-            { data: 'grupo', title: 'Grupo' },
+            { data: 'grupo', title: 'Grupo', className: 'editable-team'},
             {
                 data: 'jugadores', // Use the 'jugadores' array data
                 title: 'NoJ', // Column title
@@ -2095,7 +2099,7 @@ $(document).ready(function () {
 
         // Si el campo 'link' está vacío, regenerarlo basado en el nombre actual del equipo
         if (!newLink) {
-            newLink = `/equipos/${teamToUpdate.team.toLowerCase().replace(/\s/g, '-')}`;
+            newLink = `/liga-indigo/equipos/${teamToUpdate.team.toLowerCase().replace(/\s/g, '-')}`;
         }
 
 

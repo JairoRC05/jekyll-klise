@@ -30,6 +30,7 @@ bgColor: indigo
 <body class="bg-light">
 
     <div class="container py-4">
+
         <h2 class="mb-4">📊 Panel de Administración de Temporadas</h2>
 
         <!-- Selector de temporadas -->
@@ -52,14 +53,7 @@ bgColor: indigo
     </div>
 
     <!-- Campo de búsqueda -->
-    <div class="row mb-3">
-        <div class="col-md-8">
-            <input type="text" id="buscarEquipo" class="form-control" placeholder="Buscar equipo por nombre o tag...">
-        </div>
-        <div class="col-md-4">
-            <button id="btnBuscarEquipo" class="btn btn-outline-secondary w-100">Buscar y editar</button>
-        </div>
-    </div>
+
 
     <!-- Modal de edición -->
     <div class="modal fade" id="modalEditarEquipo" tabindex="-1">
@@ -86,6 +80,18 @@ bgColor: indigo
                             <label class="form-label">Contacto (WhatsApp, 10 dígitos)</label>
                             <input type="text" id="editContacto" class="form-control" required>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Link</label>
+                            <input type="text" id="editLink" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Grupo</label>
+                            <input type="text" id="editGrupo" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Región</label>
+                            <input type="text" id="editRegion" class="form-control" required>
+                        </div>
 
                         <h6>Jugadores (mín. 5, máx. 9)</h6>
                         <div id="editJugadoresContainer"></div>
@@ -106,24 +112,28 @@ bgColor: indigo
     <!-- Plantilla de equipo -->
     {% raw %}
     <script id="equipoTemplate" type="text/template">
-    <div class="col-12">
+    <div class="col-12 col-md-6 col-lg-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{nombreEquipo}} <small class="text-muted">({{tagEquipo}})</small></h5>
           <p class="mb-2"><strong>Contacto:</strong> {{contacto}}</p>
           <p class="mb-2"><strong>Capitán:</strong> {{capitanNombre}}</p>
+          <p class="mb-2"><strong>Link:</strong> {{link}}</p>
+          <p class="mb-2"><strong>Grupo:</strong> {{grupo}}</p>
+          <p class="mb-2"><strong>Region:</strong> {{region}}</p>
           <p class="mb-2"><strong>Jugadores:</strong></p>
           <div class="jugadores-list mb-3">
             {{jugadoresHtml}}
           </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-outline-success transferir-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Mover a otra temporada</button>
-            <button class="btn btn-sm btn-outline-danger eliminar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Eliminar</button>
-          </div>
+           <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-sm btn-outline-primary editar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Editar</button>
+        <button class="btn btn-sm btn-outline-success transferir-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Mover a otra temporada</button>
+        <button class="btn btn-sm btn-outline-danger eliminar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Eliminar</button>
+      </div>
         </div>
       </div>
     </div>
-  </script>
+    </script>
     {% endraw %}
     {% raw %}
     <script type="module">
@@ -201,6 +211,9 @@ bgColor: indigo
                     html = html.replace(/{{nombreEquipo}}/g, safe(data.nombreEquipo));
                     html = html.replace(/{{tagEquipo}}/g, safe(data.tagEquipo));
                     html = html.replace(/{{contacto}}/g, safe(data.contacto));
+                    html = html.replace(/{{link}}/g, safe(data.link));
+                    html = html.replace(/{{grupo}}/g, safe(data.grupo));
+                    html = html.replace(/{{region}}/g, safe(data.region));
                     html = html.replace(/{{capitanNombre}}/g, safe(data.capitanNombre || data.capitánNombre));
                     html = html.replace(/{{docId}}/g, docSnap.id);
                     html = html.replace(/{{tempOrigen}}/g, tempOrigen);
@@ -209,7 +222,7 @@ bgColor: indigo
                     if (Array.isArray(data.jugadores)) {
                         data.jugadores.forEach(j => {
                             const capitanTag = j.esCapitan ? ' <span class="capitan-tag">Capitán</span>' : '';
-                            jugadoresHtml += `<div class="jugador-item">${safe(j.nombre)} (${safe(j.rol)}) - ${safe(j.idJuego)}${capitanTag}</div>`;
+                            jugadoresHtml += `<div class="jugador-item">${safe(j.nickname)} (${safe(j.rol)}) - ${safe(j.ID)}${capitanTag}</div>`;
                         });
                     }
 
@@ -228,6 +241,11 @@ bgColor: indigo
             const btn = e.target;
             const docId = btn.dataset.id;
             const tempOrigen = btn.dataset.temp;
+
+            if (btn.classList.contains("editar-btn")) {
+                await cargarEquipoParaEditar(tempOrigen, docId);
+                return; // salir temprano
+            }
 
             if (btn.classList.contains("transferir-btn")) {
                 const tempDestino = selectDestino.value;
@@ -290,7 +308,7 @@ bgColor: indigo
       <div class="row g-2">
         <div class="col-md-3">
           <input type="text" class="form-control nombre-jugador" placeholder="Nombre" 
-                 value="${jugador?.nombre || ''}" maxlength="12" required>
+                 value="${jugador?.nickname || ''}" maxlength="12" required>
         </div>
         <div class="col-md-3">
           <select class="form-select rol-jugador" required>
@@ -304,7 +322,7 @@ bgColor: indigo
         </div>
         <div class="col-md-3">
           <input type="text" class="form-control id-jugador" placeholder="ID juego" 
-                 value="${jugador?.idJuego || ''}" maxlength="7" required>
+                 value="${jugador?.ID || ''}" maxlength="7" required>
         </div>
         <div class="col-md-2">
           <div class="form-check mt-2">
@@ -348,6 +366,9 @@ bgColor: indigo
                 document.getElementById("editNombreEquipo").value = data.nombreEquipo || "";
                 document.getElementById("editTagEquipo").value = data.tagEquipo || "";
                 document.getElementById("editContacto").value = data.contacto || "";
+                document.getElementById("editLink").value = data.link || "";
+                document.getElementById("editGrupo").value = data.grupo || "";
+                document.getElementById("editRegion").value = data.region || "";
 
                 // Limpiar y cargar jugadores
                 const container = document.getElementById("editJugadoresContainer");
@@ -380,46 +401,53 @@ bgColor: indigo
             return checks.length === 1;
         }
 
-        // Guardar cambios
+        // Reemplaza el listener submit existente por este
         document.getElementById("formEditarEquipo").addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const container = document.getElementById("editJugadoresContainer");
             const jugadoresInputs = container.querySelectorAll(".jugador-edit");
 
-            if (jugadoresInputs.length < 5 || jugadoresInputs.length > 9) {
-                Swal.fire("Error", "El equipo debe tener entre 5 y 9 jugadores", "error");
+            // Validaciones de cantidad
+            if (jugadoresInputs.length < 5 || jugadoresInputs.length > 10) {
+                Swal.fire("Error", "El equipo debe tener entre 5 y 10 jugadores", "error");
                 return;
             }
 
+            // Validar capitán único
             if (!validarCapitan(container)) {
                 Swal.fire("Error", "Debes seleccionar exactamente un capitán", "error");
                 return;
             }
 
-            // Recopilar datos
+            // Recopilar datos de jugadores (usar for para permitir return correcto)
             const jugadores = [];
             let capitanNombre = "";
 
-            jugadoresInputs.forEach(div => {
-                const nombre = div.querySelector(".nombre-jugador").value.trim();
-                const rol = div.querySelector(".rol-jugador").value;
-                const idJuego = div.querySelector(".id-jugador").value.trim();
-                const esCapitan = div.querySelector(".capitan-check").checked;
+            for (let i = 0; i < jugadoresInputs.length; i++) {
+                const div = jugadoresInputs[i];
+                const nickname = (div.querySelector(".nombre-jugador")?.value || "").trim();
+                const rol = (div.querySelector(".rol-jugador")?.value || "").trim();
+                const ID = (div.querySelector(".id-jugador")?.value || "").trim();
+                const esCapitan = !!div.querySelector(".capitan-check")?.checked;
 
-                if (!nombre || !rol || !idJuego) {
+                if (!nickname || !rol || !ID) {
                     Swal.fire("Error", "Todos los campos de jugadores son requeridos", "error");
                     return;
                 }
 
-                jugadores.push({ nombre, rol, idJuego, esCapitan });
-                if (esCapitan) capitanNombre = nombre;
-            });
+                jugadores.push({ nickname, rol, ID, esCapitan });
+                if (esCapitan) capitanNombre = nickname;
+            }
 
+            // Datos del equipo actualizados
             const equipoActualizado = {
                 nombreEquipo: document.getElementById("editNombreEquipo").value.trim(),
                 tagEquipo: document.getElementById("editTagEquipo").value.trim(),
                 contacto: document.getElementById("editContacto").value.replace(/\D/g, ''),
+                link: document.getElementById("editLink").value.trim(),
+                grupo: document.getElementById("editGrupo").value.trim(),
+                region: document.getElementById("editRegion").value.trim(),
                 jugadores,
                 capitanNombre,
                 fechaActualizacion: new Date().toISOString()
@@ -429,24 +457,52 @@ bgColor: indigo
             try {
                 const docId = document.getElementById("editDocId").value;
                 const temp = document.getElementById("editTemp").value;
+
+                Swal.fire({
+                    title: "Guardando cambios...",
+                    html: "Por favor espera ⏳",
+                    allowOutsideClick: false,
+                    didOpen: () => Swal.showLoading()
+                });
+
                 await updateDoc(doc(db, temp, docId), equipoActualizado);
 
-                Swal.fire("Éxito", "Equipo actualizado correctamente", "success");
-                document.getElementById("btnCargarEquipos").click(); // Recargar lista
+                // Cerrar loader y mostrar éxito
+                Swal.close();
+                await Swal.fire({
+                    icon: "success",
+                    title: "Equipo actualizado",
+                    text: "Los cambios se guardaron correctamente ✅",
+                    showConfirmButton: false,
+                    timer: 1200,
+                    timerProgressBar: true
+                });
 
-                // Cerrar modal
-                bootstrap.Modal.getInstance(document.getElementById('modalEditarEquipo')).hide();
+                // Cerrar modal y recargar lista
+                const modalEl = document.getElementById('modalEditarEquipo');
+                const modalInst = bootstrap.Modal.getInstance(modalEl);
+                if (modalInst) modalInst.hide();
+
+                // Recarga suave de la lista
+                document.getElementById("btnCargarEquipos").click();
+
             } catch (error) {
                 console.error("Error al guardar:", error);
-                Swal.fire("Error", "No se pudieron guardar los cambios", "error");
+
+                if (error?.code === "permission-denied") {
+                    Swal.fire("Permisos insuficientes", "Tu usuario no puede editar esta colección", "error");
+                } else {
+                    Swal.fire("Error", "No se pudieron guardar los cambios", "error");
+                }
             }
         });
+
 
         // Agregar jugador en edición
         document.getElementById("btnAgregarJugadorEdit").addEventListener("click", () => {
             const container = document.getElementById("editJugadoresContainer");
             if (container.querySelectorAll(".jugador-edit").length >= 9) {
-                Swal.fire("Límite", "Máximo 9 jugadores", "warning");
+                Swal.fire("Límite", "Máximo 10 jugadores", "warning");
                 return;
             }
             container.insertAdjacentHTML("beforeend", crearInputJugador());
@@ -460,38 +516,6 @@ bgColor: indigo
             }
         });
 
-        // Buscar y editar equipo
-        document.getElementById("btnBuscarEquipo").addEventListener("click", async () => {
-            const busqueda = document.getElementById("buscarEquipo").value.trim().toLowerCase();
-            if (!busqueda) {
-                Swal.fire("Advertencia", "Ingresa el nombre o tag del equipo", "warning");
-                return;
-            }
-
-            const tempOrigen = selectOrigen.value;
-            try {
-                const querySnapshot = await getDocs(collection(db, tempOrigen));
-                let encontrado = null;
-
-                querySnapshot.forEach(doc => {
-                    const data = doc.data();
-                    const nombre = (data.nombreEquipo || "").toLowerCase();
-                    const tag = (data.tagEquipo || "").toLowerCase();
-                    if (nombre.includes(busqueda) || tag.includes(busqueda)) {
-                        encontrado = { id: doc.id, data };
-                    }
-                });
-
-                if (encontrado) {
-                    await cargarEquipoParaEditar(tempOrigen, encontrado.id);
-                } else {
-                    Swal.fire("No encontrado", "No se encontró ningún equipo con ese nombre o tag", "info");
-                }
-            } catch (error) {
-                console.error("Error al buscar:", error);
-                Swal.fire("Error", "No se pudo realizar la búsqueda", "error");
-            }
-        });
 
         console.log("Firebase cargado:", app ? "✅" : "❌");
         console.log("DB:", db);

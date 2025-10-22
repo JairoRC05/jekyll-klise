@@ -447,7 +447,7 @@ bgColor: indigo
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
 
-        const FECHA_LIMITE = new Date('2025-10-18T23:59:59');
+        const FECHA_LIMITE = new Date('2025-10-30T23:59:59');
 
         document.addEventListener('DOMContentLoaded', function () {
             const acceptRulesCheckbox = document.getElementById('acceptRules');
@@ -939,7 +939,7 @@ bgColor: indigo
                     });
 
                     // Referencia a la colección
-                    const inscripcionesRef = collection(db, "insOctubre");
+                    const inscripcionesRef = collection(db, "insOct");
 
                     // === 🔍 Verificar si algún jugador ya está registrado en otro equipo ===
                     const snapshot = await getDocs(inscripcionesRef);
@@ -965,7 +965,7 @@ bgColor: indigo
                     }
 
                     // === ✅ Verificar límite de equipos ===
-                    if (snapshot.size >= 12) {
+                    if (snapshot.size >= 13) {
                         Swal.fire({
                             icon: 'info',
                             title: 'Registro cerrado',

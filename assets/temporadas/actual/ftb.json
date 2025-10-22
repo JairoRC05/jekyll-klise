@@ -1,0 +1,59 @@
+{
+  "tag": "FTB",
+  "team": "DFs FROSTBITE",
+  "capitan": "DFs・Efesto",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "NORTH",
+  "jugadores": [
+    {
+      "ID": "7QT4YAA",
+      "nickname": "DFs・Efesto",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "NFN0FN",
+      "nickname": "DFs・Googoo",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "LY3YYX3",
+      "nickname": "DFs・Pikinツ",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "KFCPP44",
+      "nickname": "DFs・Perro乡",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "C3EG7EF",
+      "nickname": "DFs・MerGas",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "Y39HPAF",
+      "nickname": "DFs・Icɛяツ",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "LGAGE2Y",
+      "nickname": "DFs・4T",
+      "avatar": "male1",
+      "rol": "Jungle"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/dragonflies-gaming-frostbite",
+  "id": "kQbz2mNMBjKpjNHPJMLb",
+  "partidos": {
+    "M1": "2"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "tag": "DTS",
+  "team": "DORADITTOS",
+  "capitan": "Golditto.TTV",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "E7ERYF9",
+      "nickname": "Golditto.TTV",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "#F6KNR2",
+      "nickname": "FreePoints*",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "MRA5GPT",
+      "nickname": "Sableye",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "NP03QT",
+      "nickname": "ºFloppisツ",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "MT42FC1",
+      "nickname": "アレックス04",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "CT23992",
+      "nickname": "OverToñita",
+      "avatar": "female1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "RMEPEEA",
+      "nickname": "Overtony",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "F3TEE13",
+      "nickname": "HungryRick",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/doradittos",
+  "id": "4faCRbH4HarzwDpzFo7Q",
+  "partidos": {
+    "M1": "1"
+  }
+}

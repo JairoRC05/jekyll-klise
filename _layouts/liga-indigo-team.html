@@ -55,7 +55,7 @@ permalink:
   <script>
    document.addEventListener('DOMContentLoaded', function() {
     const pageID = "{{ page.ID }}";
-    const jsonURL = `/assets/temporadas/sep2025/${pageID.toLowerCase()}.json`;
+    const jsonURL = `/assets/temporadas/actual/${pageID.toLowerCase()}.json`;
 
     const descargarTodoBtn = document.getElementById('descargarTodo');
     const equipoPerfil = document.getElementById('equipo-perfil');
@@ -312,7 +312,7 @@ permalink:
         roundDatesMap.set(r.ronda, fechaStr);
     });
 
-    fetch('/assets/temporadas/sep2025/calendario.json')
+    fetch('/assets/temporadas/actual/calendario.json')
         .then(r => r.json())
         .then(data => {
             if (!data || !Array.isArray(data) || data.length === 0 || !data[0].rondas) {
@@ -374,7 +374,7 @@ permalink:
                                         <h3>DESCANSO</h3>
                                     </div>
                                     <div class="bracket-round-team">
-                                        <a href="/equipos/${partido.equipo1}">
+                                        <a href="/liga-indigo/equipos/${partido.equipo1}">
                                             <img src="/assets/logos/${partido.equipo1}.webp" alt="${partido.equipo1}" class="img-fluid">
                                         </a>
                                     </div>
@@ -392,7 +392,7 @@ permalink:
                             ` : `
                                 <div class="bracket-round-list">
                                     <div class="bracket-round-team">
-                                        <a href="/equipos/${partido.tag1}">
+                                        <a href="/liga-indigo/equipos/${partido.equipo1}">
                                             <img src="/assets/logos/${partido.tag1}.webp" alt="${partido.equipo1}" class="img-fluid">
                                         </a>
                                     </div>
@@ -423,7 +423,7 @@ permalink:
                                         </div>
                                     </div>
                                     <div class="bracket-round-team-right">
-                                        <a href="/teams/${partido.tag2}">
+                                        <a href="/liga-indigo/equipos/${partido.equipo2}">
                                             <img src="/assets/logos/${partido.tag2}.webp" alt="${partido.equipo2}" class="img-fluid">
                                         </a>
                                     </div>

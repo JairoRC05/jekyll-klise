@@ -1,0 +1,59 @@
+{
+  "tag": "PLA",
+  "team": "DFs PLATINUM",
+  "capitan": "DFs・Perron",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "NORTH",
+  "jugadores": [
+    {
+      "ID": "74HHH8H",
+      "nickname": "DFs・Perron",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "FKH2R49",
+      "nickname": "DFs・Forti",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "PFG5F6H",
+      "nickname": "DFs・Яalek",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "GCNQ65",
+      "nickname": "刃Maaaarॢ",
+      "avatar": "female1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "K6GHMN6",
+      "nickname": "Frantsbb",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "3FX577Q",
+      "nickname": "AlexT力",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "43CHANR",
+      "nickname": "刃Daaaanㅤ",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/dragonflies-gaming-platino",
+  "id": "SWLtUts9DWeApCLuOF44",
+  "partidos": {
+    "M1": "3"
+  }
+}

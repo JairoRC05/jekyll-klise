@@ -1,0 +1,53 @@
+{
+  "tag": "FORCE",
+  "team": "NEW FORCE",
+  "capitan": "Estrella'sBF",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "NORTH",
+  "jugadores": [
+    {
+      "ID": "6990CYH",
+      "nickname": "Estrella'sBF",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "A0829K4",
+      "nickname": "BLK • Texas",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "A38905X",
+      "nickname": "Ranmā",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "E9ENLYE",
+      "nickname": "Rêgi195",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "MAL0Q6H",
+      "nickname": "DønLux",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "MNAYXG1",
+      "nickname": "UkeLeleph:)",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/new-force",
+  "id": "odiQgt6RHgU8Aisa6nxZ",
+  "partidos": {
+    "M1": "3"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "tag": "ENIGMA",
+  "team": "ENIGMA ESPORTS",
+  "capitan": "ENG・Wing",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "A6YE7LQ",
+      "nickname": "ENG・Wing",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "F942677",
+      "nickname": "SPC・Lolfe教",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "X556TRH",
+      "nickname": "Listen'.",
+      "avatar": "female1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "HR3X0NP",
+      "nickname": "千RICモ",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "QN0E8LQ",
+      "nickname": "・Blancoツ",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "GN43X9X",
+      "nickname": "Ahrulo",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "87NMQ19",
+      "nickname": "LaSugar",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "YT7R2HR",
+      "nickname": "Wįjnäldūmツ",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "KP3MGGK",
+      "nickname": "人・Heavenly",
+      "avatar": "male1",
+      "rol": "Top"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/enigma-esports",
+  "id": "WZLOK35bqdkN93BTqlvS",
+  "partidos": {
+    "M1": "3"
+  }
+}

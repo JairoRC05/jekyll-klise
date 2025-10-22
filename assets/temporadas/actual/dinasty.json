@@ -1,0 +1,68 @@
+{
+  "tag": "DINASTY",
+  "team": "DINASTY",
+  "capitan": "龍・Toro",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "RNCXGAK",
+      "nickname": "龍・Toro",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "43LKYHQ",
+      "nickname": "龍・Kinsei",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "446HY4X",
+      "nickname": "龍・Vicleo",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "83AFR37",
+      "nickname": "龍・Ji9star",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "95R97RL",
+      "nickname": "AmaiLu",
+      "avatar": "female1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "CY9PT5K",
+      "nickname": "Máx・獅",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "N526F33",
+      "nickname": "龍・Ikman",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "1NT2288",
+      "nickname": "龍・Ądяiana",
+      "avatar": "female2",
+      "rol": "Auxiliar"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/dinasty",
+  "id": "DbWVLOI3THBjQQjUUHhJ",
+  "partidos": {
+    "M1": "3"
+  },
+  "teamNombreAnterior": "",
+  "teamNuevoNombre": "DINASTY",
+  "posicionDesempate": true
+}

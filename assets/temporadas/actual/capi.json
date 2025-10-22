@@ -1,0 +1,59 @@
+{
+  "tag": "CAPI",
+  "team": "CAPIBAYAS",
+  "capitan": "CapiDrFix",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "EFE5E97",
+      "nickname": "CapiDrFix",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "TMRR3XN",
+      "nickname": "Capikalls",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "7759CK5",
+      "nickname": "CapiHambre",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "A2AG7X1",
+      "nickname": "CapiCrypto",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "FLM92",
+      "nickname": "Elröhir",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "T646RFY",
+      "nickname": "Hornet乂",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "51M77Q5",
+      "nickname": "Ḯsbjørn",
+      "avatar": "female1",
+      "rol": "ADC"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/capibayas",
+  "id": "fk0Z7rMKa3SX55y5bJbz",
+  "partidos": {
+    "M1": "0"
+  }
+}
