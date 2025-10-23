@@ -10,7 +10,7 @@
     {
       "ID": "2XX1PF0",
       "nickname": "TuT•Bren10",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "Auxiliar"
     },
     {
@@ -48,6 +48,11 @@
       "nickname": "BE,André,4f0",
       "avatar": "male1",
       "rol": "Jungle"
+    },
+    {
+      "nickname": "Sнōтаツ",
+      "ID": "HRHANKP",
+      "avatar": "male1"
     }
   ],
   "org": "",
