@@ -77,6 +77,11 @@
             <p class="descrip">Empate en tabla: resultado directo entre equipos. Empate múltiple sin ganador directo: Bo1 entre involucrados.</p>
            </div>
     </div>
+
+     
+
+
+
 </div>
 
   <style>
@@ -89,8 +94,8 @@
       --accent-2: #9ef7c5;
       --warn: #ffe08a;
       --danger: #ff9aa2;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 5px;
+      --shadow: 0 4px 8px rgba(0,0,0,.2);
     }
     * { box-sizing: border-box; }
  
@@ -118,7 +123,7 @@
     h2 { font-size: clamp(18px, 3vw, 22px); margin: 0; }
 
    
-    li + li { margin-top: 6px; }
+
     .muted { color: var(--muted); }
 
     .pill { display:inline-flex; align-items:center; gap:8px; background: rgba(158,247,197,.12); color: #c8ffe3; border: 1px solid rgba(158,247,197,.35); padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
@@ -139,7 +144,7 @@
     </header>
 
     <div class="note">
-      <h3>Nota de aplicación del formato</h3>
+      <h3></h3>
       <p>
         Este formato <strong>aplica si hay más de 16 equipos inscritos</strong>.
         En caso contrario (<em>16 o menos equipos</em>), <strong>la fase de Play-In no se jugará</strong> y
@@ -213,7 +218,7 @@
           <li><strong>Cruces:</strong> Definidos por <strong>sorteo aleatorio</strong> (o por cruce directo si no hay Play-In: <span class="kbd">1A vs 4B</span>, <span class="kbd">1B vs 4A</span>, <span class="kbd">2A vs 3B</span>, <span class="kbd">2B vs 3A</span>).</li>
           <li><strong>Avance:</strong> Ganadores a Semifinales y posteriormente a la Gran Final.</li>
         </ul>
-        <p class="muted pill warn text-black">La Gran Final se juega en Bo5.</p>
+        <p class="muted pill warn text-black">La Gran Final se juega en Bo3.</p>
       </section>
 
       <section class="card">

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async function() {
    // --- 1. Cargar el índice de equipos ---
     let listaEquipos;
     try {
-        const indexResponse = await fetch('/assets/temporadas/sep2025/equipos-index.json');
+        const indexResponse = await fetch('/assets/temporadas/actual/equipos-index.json');
         if (!indexResponse.ok) throw new Error(`Error al cargar equipos-index.json: ${indexResponse.status}`);
         listaEquipos = await indexResponse.json(); // array de nombres de archivos
     } catch (error) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     for (const archivo of listaEquipos) {
         try {
-            const ruta = `/assets/temporadas/sep2025/${archivo}`;
+            const ruta = `/assets/temporadas/actual/${archivo}`;
             const res = await fetch(ruta);
             if (!res.ok) {
                 console.warn(`Archivo no encontrado o inválido: ${ruta}`);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async function() {
      // --- NUEVO: Cargar el JSON de ganadores simulados ---
     let ganadoresSimulados = {};
     try {
-        const response = await fetch('/assets/temporadas/sep2025/ganadoresIndigo.json');
+        const response = await fetch('/assets/temporadas/actual/ganadoresIndigo.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Si no se genera un cruce (ej. no hay 4to Sur), su objeto partidoSimulado asociado no se usará.
         const datosPartidosSimulados = [
             // Datos para el cruce "1 Norte vs 4 Sur"
-            { resultado: 'QF1', stream: true, fecha: 'VIE 10-OCT', hora: '21:30' },
+            { resultado: 'QF1', stream: true, fecha: '20-OCT', hora: '21:30' },
             // Datos para el cruce "2 Norte vs 3 Sur"
-            { resultado: 'QF2', stream: true, fecha: 'VIE 10-OCT', hora: '22:30' },
+            { resultado: 'QF2', stream: true, fecha: '20-OCT', hora: '22:30' },
             // Datos para el cruce "1 Sur vs 4 Norte"
-            { resultado: 'QF3', stream: true, fecha: 'LUN 13-OCT', hora: '21:30' }, 
+            { resultado: 'QF3', stream: true, fecha: '21-OCT', hora: '21:30' }, 
             // Datos para el cruce "2 Sur vs 3 Norte"
-            { resultado: 'QF4', stream: true, fecha: 'LUN 13-OCT', hora: '22:30' }
+            { resultado: 'QF4', stream: true, fecha: '21-OCT', hora: '22:30' }
         ];
 
         let partidoIndex = 0; // Para asignar el dato de partido correcto a cada cruce
@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         {
             equipo1: { team: ganadoresSimulados.cuartos_final.QF1.nombre, tag: ganadoresSimulados.cuartos_final.QF1.tag, link: '#' },
             equipo2: { team: ganadoresSimulados.cuartos_final.QF4.nombre, tag: ganadoresSimulados.cuartos_final.QF4.tag, link: '#' },
-            partidoInfo: { resultado: 'SF1', stream: true, fecha: 'MAR 14-OCT', hora: '21:00' },
+            partidoInfo: { resultado: 'SF1', stream: true, fecha: '24 NOV', hora: '21:00' },
             tipo: 'Semifinal 1'
         },
         // Semifinal 2 (Ganador QF2 vs Ganador QF3)
         {
             equipo1: { team: ganadoresSimulados.cuartos_final.QF2.nombre, tag: ganadoresSimulados.cuartos_final.QF2.tag, link: '#' },
             equipo2: { team: ganadoresSimulados.cuartos_final.QF3.nombre, tag: ganadoresSimulados.cuartos_final.QF3.tag, link: '#' },
-            partidoInfo: { resultado: 'SF2', stream: true, fecha: 'MAR 14-OCT', hora: '21:50' },
+            partidoInfo: { resultado: 'SF2', stream: true, fecha: '24 NOV', hora: '21:50' },
             tipo: 'Semifinal 2'
         }
     ];
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         {
             equipo1: { team: ganadoresSimulados.semifinales.SF1.nombre, tag: ganadoresSimulados.semifinales.SF1.tag, link: '#' },
             equipo2: { team: ganadoresSimulados.semifinales.SF2.nombre, tag: ganadoresSimulados.semifinales.SF2.tag, link: '#' },
-            partidoInfo: { resultado: 'LAST DANCE', stream: true, fecha: 'MAR 14-OCT', hora: '22:30' },
+            partidoInfo: { resultado: 'LAST DANCE', stream: true, fecha: '24 NOV', hora: '22:30' },
             tipo: 'Gran Final'
         }
     ];

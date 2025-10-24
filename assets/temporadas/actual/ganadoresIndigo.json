@@ -1,0 +1,36 @@
+{
+  "cuartos_final": {
+    "QF1": {
+      "nombre": "QF1",
+      "tag": "TBD"
+    },
+    "QF2": {
+      "nombre": "QF2",
+      "tag": "TBD"
+    },
+    "QF3": {
+      "nombre": "QF3",
+      "tag": "TBD"
+    },
+    "QF4": {
+      "nombre": "QF3",
+      "tag": "TBD"
+    }
+  },
+  "semifinales": {
+    "SF1": {
+      "nombre": "SF1",
+      "tag": "TBD"
+    },
+    "SF2": {
+      "nombre": "SF2",
+      "tag": "TBD"
+    }
+  },
+  "final": {
+    "F1": {
+      "nombre": "Ganador Final",
+      "tag": "TBD"
+    }
+  }
+}

@@ -74,5 +74,5 @@ movimiento_unite:
     y causan una explosión que inflige daño alrededor del objetivo.
   tipo: "Largo alcance"
   recarga: "000s"
-ban: true
+ban: false
 ---

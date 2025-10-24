@@ -10,7 +10,7 @@
     },
     "QF3": {
       "nombre": "DFS FROSTBITE",
-      "tag": "DFSFTB"
+      "tag": "FTB"
     },
     "QF4": {
       "nombre": "DINASTY",
@@ -19,12 +19,12 @@
   },
   "semifinales": {
     "SF1": {
-      "nombre": "Ganador SF1",
-      "tag": "TBD"
+      "nombre": "AMNESIA",
+      "tag": "AMS"
     },
     "SF2": {
-      "nombre": "Ganador SF2",
-      "tag": "TBD"
+      "nombre": "DINASTY",
+      "tag": "DINASTY"
     }
   },
   "final": {
