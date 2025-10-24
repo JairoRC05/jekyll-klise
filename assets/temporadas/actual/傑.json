@@ -22,7 +22,7 @@
     {
       "ID": "R40T877",
       "nickname": "Jäsmine",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "ADC"
     },
     {
@@ -54,6 +54,7 @@
   "link": "/liga-indigo/equipos/hakkesshu",
   "id": "fT0yMWKmbP40IeyaQde6",
   "partidos": {
-    "M1": "0"
+    "M1": "0",
+    "M2": "0"
   }
 }

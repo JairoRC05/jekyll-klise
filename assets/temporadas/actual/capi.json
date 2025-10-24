@@ -46,7 +46,7 @@
     {
       "ID": "51M77Q5",
       "nickname": "Ḯsbjørn",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "ADC"
     }
   ],
@@ -54,6 +54,7 @@
   "link": "/liga-indigo/equipos/capibayas",
   "id": "fk0Z7rMKa3SX55y5bJbz",
   "partidos": {
-    "M1": "0"
+    "M1": "0",
+    "M2": "0"
   }
 }

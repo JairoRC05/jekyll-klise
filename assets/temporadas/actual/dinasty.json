@@ -34,7 +34,7 @@
     {
       "ID": "95R97RL",
       "nickname": "AmaiLu",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "ADC"
     },
     {
@@ -52,7 +52,7 @@
     {
       "ID": "1NT2288",
       "nickname": "龍・Ądяiana",
-      "avatar": "female2",
+      "avatar": "male1",
       "rol": "Auxiliar"
     }
   ],
@@ -60,7 +60,8 @@
   "link": "/liga-indigo/equipos/dinasty",
   "id": "DbWVLOI3THBjQQjUUHhJ",
   "partidos": {
-    "M1": "3"
+    "M1": "3",
+    "M2": "3"
   },
   "teamNombreAnterior": "",
   "teamNuevoNombre": "DINASTY",

@@ -22,7 +22,7 @@
     {
       "ID": "X556TRH",
       "nickname": "Listen'.",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "ADC"
     },
     {
@@ -66,6 +66,7 @@
   "link": "/liga-indigo/equipos/enigma-esports",
   "id": "WZLOK35bqdkN93BTqlvS",
   "partidos": {
-    "M1": "3"
+    "M1": "3",
+    "M2": "3"
   }
 }

@@ -10,7 +10,7 @@
     {
       "ID": "EG449ML",
       "nickname": "DFs・Charbet",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "Defensivo"
     },
     {
@@ -54,6 +54,7 @@
   "link": "/liga-indigo/equipos/dragonflies-gaming-ruby",
   "id": "GnMRFV0Ac6fHi2MhDczz",
   "partidos": {
-    "M1": "0"
+    "M1": "0",
+    "M2": "0"
   }
 }

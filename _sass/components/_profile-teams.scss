@@ -14,6 +14,10 @@
     align-items: center;
   }
 
+  @include respond-to(md) {
+    border-radius: 0;
+  }
+
   @media screen and (max-width: 576px) {
     display: block;
     height: 240px;
@@ -27,7 +31,7 @@
     align-items: center;
 
     @media screen and (max-width: 576px) {
-      padding-top: 20%;
+      padding-top: 10%;
     }
 
 

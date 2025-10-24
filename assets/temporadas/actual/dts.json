@@ -40,7 +40,7 @@
     {
       "ID": "CT23992",
       "nickname": "OverToñita",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "ADC"
     },
     {
@@ -60,6 +60,7 @@
   "link": "/liga-indigo/equipos/doradittos",
   "id": "4faCRbH4HarzwDpzFo7Q",
   "partidos": {
-    "M1": "1"
+    "M1": "1",
+    "M2": "3"
   }
 }

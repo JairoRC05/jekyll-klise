@@ -28,7 +28,7 @@
     {
       "ID": "GCNQ65",
       "nickname": "刃Maaaarॢ",
-      "avatar": "female1",
+      "avatar": "male1",
       "rol": "Auxiliar"
     },
     {
@@ -54,6 +54,7 @@
   "link": "/liga-indigo/equipos/dragonflies-gaming-platino",
   "id": "SWLtUts9DWeApCLuOF44",
   "partidos": {
-    "M1": "3"
+    "M1": "3",
+    "M2": "0"
   }
 }
