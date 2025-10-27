@@ -1,0 +1,295 @@
+---
+layout: null
+permalink: /qr-menu
+---
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generador de Menús Digitales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .seccion-card {
+            border-left: 4px solid #0d6efd;
+        }
+
+        .producto-item {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 8px 0;
+        }
+
+        .precio-tag {
+            font-weight: bold;
+            color: #e07a5f;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container py-4">
+        <h2 class="mb-4">🍽️ Generador de Menú Digital</h2>
+
+        <div class="mb-3">
+            <label for="nombreMenu" class="form-label">Nombre del menú</label>
+            <input type="text" id="nombreMenu" class="form-control" placeholder="Ej. Taquería El Rey">
+        </div>
+
+        <div class="mb-4">
+            <button class="btn btn-primary" onclick="agregarSeccion()">
+                <i class="bi bi-plus-circle"></i> Nueva Sección
+            </button>
+            <button class="btn btn-success ms-2" onclick="cargarJSON()">
+                <i class="bi bi-upload"></i> Cargar JSON
+            </button>
+            <button class="btn btn-dark ms-2" onclick="descargarJSON()">
+                <i class="bi bi-download"></i> Descargar JSON
+            </button>
+        </div>
+
+        <div id="contenedorSecciones"></div>
+    </div>
+
+    <!-- Modal para producto -->
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductoLabel">Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editandoSeccionIdx">
+                    <input type="hidden" id="editandoProductoIdx">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del producto</label>
+                        <input type="text" id="inpNombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Precio ($)</label>
+                        <input type="number" id="inpPrecio" class="form-control" step="0.01" min="0" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Descripción</label>
+                        <textarea id="inpDescripcion" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarProducto()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let secciones = [];
+        const modalProducto = new bootstrap.Modal(document.getElementById('modalProducto'));
+
+        function render() {
+            const cont = document.getElementById('contenedorSecciones');
+            cont.innerHTML = '';
+
+            if (secciones.length === 0) {
+                cont.innerHTML = '<div class="alert alert-info">Aún no hay secciones. Agrega una.</div>';
+                return;
+            }
+
+            secciones.forEach((sec, i) => {
+                const card = document.createElement('div');
+                card.className = 'card mb-3 seccion-card';
+                card.innerHTML = `
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <strong>${sec.nombre}</strong>
+        <div>
+          <button class="btn btn-sm btn-outline-primary" onclick="abrirModalProducto(${i}, null)">
+            + Producto
+          </button>
+          <button class="btn btn-sm btn-outline-secondary ms-1" onclick="renombrarSeccion(${i})">
+            ✏️ Renombrar
+          </button>
+          <button class="btn btn-sm btn-outline-secondary ms-1" onclick="duplicarSeccion(${i})">
+            🔄 Duplicar
+          </button>
+          <button class="btn btn-sm btn-outline-danger ms-1" onclick="eliminarSeccion(${i})">
+            ❌
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        ${sec.productos.length === 0 ? '<p class="text-muted">Sin productos.</p>' : ''}
+        ${sec.productos.map((prod, j) => `
+          <div class="producto-item">
+            <div><strong>${prod.nombre}</strong> <span class="precio-tag">$${prod.precio.toFixed(2)}</span></div>
+            <div class="text-muted small">${prod.descripcion || ''}</div>
+            <div class="mt-2">
+              <button class="btn btn-sm btn-outline-warning" onclick="abrirModalProducto(${i}, ${j})">Editar</button>
+              <button class="btn btn-sm btn-outline-secondary ms-1" onclick="duplicarProducto(${i}, ${j})">🔄 Duplicar</button>
+              <button class="btn btn-sm btn-outline-danger ms-1" onclick="eliminarProducto(${i}, ${j})">❌</button>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+                cont.appendChild(card);
+            });
+        }
+
+        // ✨ NUEVO: Renombrar sección
+        function renombrarSeccion(idx) {
+            const nuevoNombre = prompt('Nuevo nombre de la sección:', secciones[idx].nombre);
+            if (nuevoNombre !== null && nuevoNombre.trim() !== '') {
+                secciones[idx].nombre = nuevoNombre.trim();
+                render();
+            }
+        }
+
+        function abrirModalProducto(seccionIdx, productoIdx) {
+            document.getElementById('editandoSeccionIdx').value = seccionIdx;
+            const modalTitle = document.getElementById('modalProductoLabel');
+
+            if (productoIdx === null) {
+                modalTitle.textContent = 'Agregar Producto';
+                document.getElementById('inpNombre').value = '';
+                document.getElementById('inpPrecio').value = '';
+                document.getElementById('inpDescripcion').value = '';
+                document.getElementById('editandoProductoIdx').value = '';
+            } else {
+                modalTitle.textContent = 'Editar Producto';
+                const prod = secciones[seccionIdx].productos[productoIdx];
+                document.getElementById('inpNombre').value = prod.nombre;
+                document.getElementById('inpPrecio').value = prod.precio;
+                document.getElementById('inpDescripcion').value = prod.descripcion || '';
+                document.getElementById('editandoProductoIdx').value = productoIdx;
+            }
+            modalProducto.show();
+        }
+
+        function guardarProducto() {
+            const seccionIdx = parseInt(document.getElementById('editandoSeccionIdx').value);
+            const productoIdx = document.getElementById('editandoProductoIdx').value;
+            const nombre = document.getElementById('inpNombre').value.trim();
+            const precio = parseFloat(document.getElementById('inpPrecio').value);
+            const descripcion = document.getElementById('inpDescripcion').value.trim();
+
+            if (!nombre || isNaN(precio)) {
+                alert('Por favor, complete nombre y precio.');
+                return;
+            }
+
+            const nuevoProd = { nombre, precio, descripcion };
+
+            if (productoIdx === '') {
+                secciones[seccionIdx].productos.push(nuevoProd);
+            } else {
+                secciones[seccionIdx].productos[parseInt(productoIdx)] = nuevoProd;
+            }
+
+            modalProducto.hide();
+            render();
+        }
+
+        function agregarSeccion() {
+            const nombre = prompt('Nombre de la sección (ej. Tacos, Tortas, Bebidas):');
+            if (nombre && nombre.trim()) {
+                secciones.push({ nombre: nombre.trim(), productos: [] });
+                render();
+            }
+        }
+
+        // ✨ NUEVO: Duplicar sección
+        function duplicarSeccion(idx) {
+            const copia = JSON.parse(JSON.stringify(secciones[idx]));
+            copia.nombre = `Copia de ${copia.nombre}`;
+            secciones.push(copia);
+            render();
+        }
+
+        // ✨ NUEVO: Duplicar producto
+        function duplicarProducto(seccionIdx, productoIdx) {
+            const prod = JSON.parse(JSON.stringify(secciones[seccionIdx].productos[productoIdx]));
+            secciones[seccionIdx].productos.push(prod);
+            render();
+        }
+
+        function eliminarSeccion(idx) {
+            if (confirm('¿Eliminar esta sección y todos sus productos?')) {
+                secciones.splice(idx, 1);
+                render();
+            }
+        }
+
+        function eliminarProducto(seccionIdx, productoIdx) {
+            if (confirm('¿Eliminar este producto?')) {
+                secciones[seccionIdx].productos.splice(productoIdx, 1);
+                render();
+            }
+        }
+
+        function descargarJSON() {
+            const nombreMenu = document.getElementById('nombreMenu').value.trim();
+            if (!nombreMenu) {
+                alert('Por favor, escribe el nombre del menú.');
+                return;
+            }
+            if (secciones.length === 0) {
+                alert('Agrega al menos una sección.');
+                return;
+            }
+
+            const menu = {
+                menu_id: nombreMenu.toLowerCase().replace(/\s+/g, '_'),
+                nombre_menu: nombreMenu,
+                activo: true,
+                secciones: secciones.map(sec => ({
+                    nombre_seccion: sec.nombre,
+                    productos: sec.productos
+                }))
+            };
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(menu, null, 2));
+            const link = document.createElement('a');
+            link.setAttribute('href', dataStr);
+            link.setAttribute('download', `${menu.menu_id}.json`);
+            link.click();
+        }
+
+        function cargarJSON() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = e => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = ev => {
+                    try {
+                        const data = JSON.parse(ev.target.result);
+                        document.getElementById('nombreMenu').value = data.nombre_menu || '';
+                        secciones = (data.secciones || []).map(sec => ({
+                            nombre: sec.nombre_seccion,
+                            productos: sec.productos || []
+                        }));
+                        render();
+                        alert('Menú cargado correctamente.');
+                    } catch (err) {
+                        alert('Error al leer el archivo JSON. Verifique el formato.');
+                        console.error(err);
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

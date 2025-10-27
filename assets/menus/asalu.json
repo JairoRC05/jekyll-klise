@@ -1,0 +1,347 @@
+{
+  "menu_id": "antojitos_salu",
+  "nombre_menu": "ANTOJITOS SALU",
+  "activo": true,
+  "secciones": [
+    {
+      "nombre_seccion": "TORTAS",
+      "productos": [
+        {
+          "nombre": "HUEVO",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "JAMÓN",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "QUESO DE PUERCO",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA",
+          "precio": 56,
+          "descripcion": ""
+        },
+        {
+          "nombre": "HUEVO CON JAMÓN",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA CON QUESO",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA CON HUEVO",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "CHORIZO",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "POLLO",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "MILANESA",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "BISTEC CON QUESO",
+          "precio": 96,
+          "descripcion": ""
+        },
+        {
+          "nombre": "ALEMANA",
+          "precio": 96,
+          "descripcion": "SALCHICHA, PIERNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "ARGENTINA",
+          "precio": 96,
+          "descripcion": "MILANESA, CHORIZO Y QUESO OAXACA"
+        },
+        {
+          "nombre": "CUBANA",
+          "precio": 96,
+          "descripcion": "CHORIZO, POLLO, SALCHICHA, JAMÓN, QUESO AMARILLO Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "HAWAIANA",
+          "precio": 96,
+          "descripcion": "PEIRNA, JAMÓN, PIÑA Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "PASTOR",
+          "precio": 96,
+          "descripcion": "CARNE AL PASTOR, PIÑA Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "RANCHERA",
+          "precio": 96,
+          "descripcion": "CHORIZO, POLLO, SALCHICHA, PIERNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "RUSA",
+          "precio": 96,
+          "descripcion": "MILANESA, PEIRNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "TOLUQUEÑA",
+          "precio": 96,
+          "descripcion": "CHORIZO, HUEVO Y QUESO OAXACA"
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "BAGUETTES",
+      "productos": [
+        {
+          "nombre": "HUEVO",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "JAMÓN",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "QUESO DE PUERCO",
+          "precio": 48,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA",
+          "precio": 56,
+          "descripcion": ""
+        },
+        {
+          "nombre": "HUEVO CON JAMÓN",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA CON QUESO",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "SALCHICHA CON HUEVO",
+          "precio": 64,
+          "descripcion": ""
+        },
+        {
+          "nombre": "CHORIZO",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "POLLO",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "MILANESA",
+          "precio": 79,
+          "descripcion": ""
+        },
+        {
+          "nombre": "BISTEC CON QUESO",
+          "precio": 96,
+          "descripcion": ""
+        },
+        {
+          "nombre": "ALEMAN",
+          "precio": 96,
+          "descripcion": "SALCHICHA, PIERNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "ARGENTINA",
+          "precio": 96,
+          "descripcion": "MILANESA, CHORIZO Y QUESO OAXACA"
+        },
+        {
+          "nombre": "CUBANO",
+          "precio": 96,
+          "descripcion": "CHORIZO, POLLO, SALCHICHA, JAMÓN, QUESO AMARILLO Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "HAWAIANO",
+          "precio": 96,
+          "descripcion": "PEIRNA, JAMÓN, PIÑA Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "PASTOR",
+          "precio": 96,
+          "descripcion": "CARNE AL PASTOR, PIÑA Y QUESO DE PUERCO"
+        },
+        {
+          "nombre": "RANCHERO",
+          "precio": 96,
+          "descripcion": "CHORIZO, POLLO, SALCHICHA, PIERNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "RUSO",
+          "precio": 96,
+          "descripcion": "MILANESA, PEIRNA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "TOLUQUEÑO",
+          "precio": 96,
+          "descripcion": "CHORIZO, HUEVO Y QUESO OAXACA"
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "HOT-DOGS",
+      "productos": [
+        {
+          "nombre": "SENCILLO",
+          "precio": 22,
+          "descripcion": ""
+        },
+        {
+          "nombre": "TOCINO Y QUESO",
+          "precio": 34,
+          "descripcion": ""
+        },
+        {
+          "nombre": "HAWAIANO",
+          "precio": 34,
+          "descripcion": "PIÑA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "NORTEÑO",
+          "precio": 34,
+          "descripcion": "CHORIZO Y QUESO OAXACA"
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "HOT-DOGS JUMBO",
+      "productos": [
+        {
+          "nombre": "SENCILLO",
+          "precio": 35,
+          "descripcion": ""
+        },
+        {
+          "nombre": "TOCINO Y QUESO",
+          "precio": 46,
+          "descripcion": ""
+        },
+        {
+          "nombre": "HAWAIANO",
+          "precio": 46,
+          "descripcion": "PIÑA Y QUESO OAXACA"
+        },
+        {
+          "nombre": "NORTEÑO",
+          "precio": 46,
+          "descripcion": "CHORIZO Y QUESO OAXACA"
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "ENCHILADAS",
+      "productos": [
+        {
+          "nombre": "ORDEN DE 3 PIEZAS",
+          "precio": 49,
+          "descripcion": ""
+        },
+        {
+          "nombre": "ORDEN DE 4 PIEZAS",
+          "precio": 58,
+          "descripcion": ""
+        },
+        {
+          "nombre": "ORDEN DE 6 PIEZAS",
+          "precio": 72,
+          "descripcion": ""
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "BURRITOS",
+      "productos": [
+        {
+          "nombre": "MILANESA CON QUESO OAXACA",
+          "precio": 72,
+          "descripcion": ""
+        },
+        {
+          "nombre": "BISTEC CON QUESO OAXACA",
+          "precio": 72,
+          "descripcion": ""
+        },
+        {
+          "nombre": "CHORIZO CON QUESO OAXACA",
+          "precio": 72,
+          "descripcion": ""
+        },
+        {
+          "nombre": "POLLO CON QUESO OAXACA",
+          "precio": 72,
+          "descripcion": ""
+        },
+        {
+          "nombre": "PASTOR CON QUESO OAXACA",
+          "precio": 72,
+          "descripcion": ""
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "GRINGAS",
+      "productos": [
+        {
+          "nombre": "MILANESA CON QUESO OAXACA",
+          "precio": 58,
+          "descripcion": ""
+        },
+        {
+          "nombre": "BISTEC CON QUESO OAXACA",
+          "precio": 58,
+          "descripcion": ""
+        },
+        {
+          "nombre": "CHORIZO CON QUESO OAXACA",
+          "precio": 58,
+          "descripcion": ""
+        },
+        {
+          "nombre": "POLLO CON QUESO OAXACA",
+          "precio": 58,
+          "descripcion": ""
+        },
+        {
+          "nombre": "PASTOR CON QUESO OAXACA",
+          "precio": 58,
+          "descripcion": ""
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "SINCRONIZADAS",
+      "productos": [
+        {
+          "nombre": "ORDEN DE 3 PIEZAS",
+          "precio": 55,
+          "descripcion": ""
+        }
+      ]
+    }
+  ]
+}
