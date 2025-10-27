@@ -184,36 +184,39 @@
             "tag1": "FORCE",
             "equipo2": "DFS FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-10-24",
             "round_number": 3,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "SLEEPKNOT",
             "tag1": "SK",
             "equipo2": "HAKKESSHU",
             "tag2": "傑",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-10-24",
             "round_number": 3,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "GANBARÚ DEX",
             "tag1": "GDEX",
             "equipo2": "DFS RUBY",
             "tag2": "RUBY",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-10-24",
             "round_number": 3,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "THE UNOWN TEAM",

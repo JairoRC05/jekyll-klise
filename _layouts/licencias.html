@@ -10,54 +10,58 @@ layout:
 <body class="license-unite">
 
     <div class="sidebar {{page.rol}}">
-        <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/liga-indigo">
-            <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
-            <span class="indigoType">Lobby</span>
+        <a class="navbar-brand d-flex align-items-center justify-content-center d-none d-lg-block" href="/">
+            <i class="bi bi-controller me-2"></i>
+            <span>INICIO</span>
         </a>
-
-        <ul class="nav flex-lg-column flex-md-row">
-            <li class="nav-item iconContainer d-none d-lg-block">
+        <ul class="nav flex-lg-column flex-md-row  ">
+            <li class="nav-item iconContainer">
+                <a class="nav-link" href="/liga-indigo/home">
+                    <img src="/assets/logos/LIGA-INDIGO.webp" alt="" class="imgIcon">
+                    <span class=" trunk textIcon">Liga Indigo</span>
+                </a>
+            </li>
+            <li class="nav-item iconContainer">
+                <a class="nav-link" href="/copa-xforze/home">
+                    <img src="/assets/logos/COPA XFORCE-ALT.webp" alt="" class="imgIcon">
+                    <span class=" trunk textIcon">Copa XForze</span>
+                </a>
+            </li>
+            <li class="nav-item iconContainer home star-active d-lg-none">
                 <a class="nav-link" href="/">
-                    <img src="/assets/smalls/nacion-unite.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Nación Unite</span>
+                    <img src="/assets/logos/LRDU.webp" alt="" class="imgIcon">
+                    <span class=" trunk start-home">Inicio</span>
+                </a>
+            </li>
+            <!-- <li class="nav-item iconContainer">
+        <a class="nav-link" href="{{ site.links_navegacion.supercxf }}">
+          <img src="/assets/logos/SCXF.webp" alt="" class="imgIcon">
+          <span class=" trunk">Super Copa XF</span>
+        </a>
+      </li> -->
+            <!-- <li class="nav-item iconContainer">
+        <a class="nav-link" href="{{ site.links_navegacion.sorteos }}">
+          <img src="/assets/logos/icons/sorteos.webp" alt="" class="imgIcon">
+          <span class=" trunk">Sorteos</span>
+        </a>
+      </li> -->
+            <li class="nav-item iconContainer">
+                <a class="nav-link" href="/unite-mex">
+                    <img src="/assets/logos/icons/unite-mex.webp" alt="" class="imgIcon">
+                    <span class=" trunk textIcon">Unite Mex</span>
                 </a>
             </li>
             <li class="nav-item iconContainer">
-                <a class="nav-link" href="/liga-indigo-draft">
-                    <img src="/assets/smalls/icon-transfer.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Draft</span>
-                </a>
-            </li>
-            <li class="nav-item iconContainer">
-                <a class="nav-link" href="/liga-indigo-orion-ranking-julio2025">
-                    <img src="/assets/smalls/orion.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Orion</span>
-                </a>
-            </li>
-            <li class="nav-item iconContainer indigo indigo-active d-lg-none">
-                <a class="nav-link" href="/liga-indigo">
-                    <img src="/assets/logos/LIGA-INDIGO-ALT.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Inicio</span>
-                </a>
-            </li>
-
-            <li class="nav-item iconContainer">
-                <a class="nav-link" href="/liga-indigo-hydra-ranking-julio2025">
-                    <img src="/assets/smalls/hydra.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Hydra</span>
-                </a>
-            </li>
-            <li class="nav-item iconContainer">
-                <a class="nav-link" href="/liga-indigo-reglamento-julio">
-                    <img src="/assets/smalls/reglamento-lock.webp" alt="" class="imgIcon">
-                    <span class="ms-1 trunk">Reglamento</span>
+                <a class="nav-link" href="/comunidad">
+                    <img src="/assets/logos/icons/world.webp" alt="" class="imgIcon">
+                    <span class=" trunk textIcon">Comunidad</span>
                 </a>
             </li>
         </ul>
 
         <ul class="nav  mt-auto d-none d-lg-block">
             <li class="nav-item">
-                <a class="nav-link small" href="/nacion-unite-aviso-legal.html">Aviso Legal</a>
+                <a class="nav-link small" href="/nacion-unite-aviso-legal">Aviso Legal</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link small" href="/nacion-unite-politica-de-privacidad.html">Política de Privacidad</a>
@@ -71,7 +75,7 @@ layout:
     <div class="main-content">
 
         <div class="top-bar {{page.rol}}">
-            <h1 class="m-0 exo-style title-league text-uppercase" data-title="NACIÓN UNITE"></h1>  
+            <h1 class="m-0 exo-style title-league text-uppercase" data-title="NACIÓN UNITE"></h1>
             <div class="flex-grow-1"></div>
             <div class="top-icons d-flex align-items-center d-none d-md-block">
                 <a href="{{ site.redes_sociales.x }}" target="_blank" class="btn ms-3"><i class="bi bi-twitter"></i></a>
@@ -85,59 +89,36 @@ layout:
         <div class="central-content-area">
             <div class="main-content-left">
 
-         <div class="card-license">
-            <div class="card-pick">
-                <img src="/assets/licencias/{{page.nombre}}.webp" alt="{{page.nombre}}" class="img-fluid">
+                <div class="card-license">
+                    <div class="card-pick">
+                        <img src="/assets/licencias/{{page.nombre}}.webp" alt="{{page.nombre}}" class="img-fluid">
+                    </div>
+                    <div class="card-title">
+                        <h2 class="exo-style">{{page.nombre}}</h2>
+
+                    </div>
+                    <div class="card-mode">
+                        <span class="text-uppercase">{{page.rol}}</span>
+                        <span class="text-uppercase">{{page.modo}}</span>
+                        <span class="text-uppercase">{{page.tipo}}</span>
+                        <span class="text-uppercase">dificultad {{page.dificultad}}</span>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-color-left {{page.rol}}"></div>
+                    </div>
+
+                </div>
+
+                <!-- Habilidad Principal: Calcificación -->
+            {{content}}
+
+
             </div>
-            <div class="card-title">
-                <h2 class="exo-style">{{page.nombre}}</h2>
-           
-            </div>
-            <div class="card-mode">
-                <span class="text-uppercase">{{page.rol}}</span>
-                <span class="text-uppercase">{{page.modo}}</span>
-                <span class="text-uppercase">{{page.tipo}}</span>
-                <span class="text-uppercase">dificultad {{page.dificultad}}</span>
-            </div>
-            <div class="card-back">
-                <div class="card-color-left {{page.rol}}"></div>
-            </div>
-        </div>
-
-        <!-- Pasiva -->
-{% if page.pasiva %}
-  <div class="habilidad">
-    <div class="encabezado {{page.rol}}">
-      <div class="nombre">{{ page.pasiva.nombre }}</div>
-      <div class="info">
-        <div class="badge tipo">Pasiva</div>
-      </div>
-    </div>
-    <div class="descripcion">{{ page.pasiva.descripcion | newline_to_br }}</div>
-
-  </div>
-{% endif %}
-
-{% comment %} Habilidades del Set 1 {% endcomment %}
-{% include habilidad.html habilidad=page.set1.habilidad1 %}
-{% include habilidad.html habilidad=page.set1.habilidad2 %}
-{% include habilidad.html habilidad=page.set1.habilidad3 %}
-
-{% comment %} Habilidades del Set 2 {% endcomment %}
-{% include habilidad.html habilidad=page.set2.habilidad1 %}
-{% include habilidad.html habilidad=page.set2.habilidad2 %}
-{% include habilidad.html habilidad=page.set2.habilidad3 %}
 
 
-<h3>Movimiento Unite</h3>
-{% include habilidad.html habilidad=page.movimiento_unite extra_class="unite" %}
-
-   </div>
-
-            {%- include bans-indigo-league.html -%}
 
 
-           
+
         </div>
     </div>
 
