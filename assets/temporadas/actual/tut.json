@@ -10,7 +10,7 @@
     {
       "ID": "2XX1PF0",
       "nickname": "TuT•Bren10",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Auxiliar"
     },
     {
@@ -50,9 +50,10 @@
       "rol": "Jungle"
     },
     {
-      "nickname": "Sнōтаツ",
       "ID": "HRHANKP",
-      "avatar": "male1"
+      "nickname": "Sнōтаツ",
+      "avatar": "male1",
+      "rol": "Jungle"
     }
   ],
   "org": "",
@@ -60,6 +61,7 @@
   "id": "tpQDyuvu29VzypPn03Rc",
   "partidos": {
     "M1": "3",
-    "M2": "3"
+    "M2": "3",
+    "M3": "3"
   }
 }

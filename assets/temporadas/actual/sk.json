@@ -46,8 +46,14 @@
     {
       "ID": "XAA8CC3",
       "nickname": "SK•MadRose",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Jungle"
+    },
+    {
+      "ID": "HK100ME",
+      "nickname": "Pecas:)",
+      "avatar": "female1",
+      "rol": "Auxiliar"
     }
   ],
   "org": "",
@@ -55,6 +61,7 @@
   "id": "1gKvhLyqWzFEvhWelFgw",
   "partidos": {
     "M1": "0",
-    "M2": "0"
+    "M2": "0",
+    "M3": "0"
   }
 }

@@ -223,36 +223,39 @@
             "tag1": "TUT",
             "equipo2": "CAPIBAYAS",
             "tag2": "CAPI",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-10-27",
             "round_number": 3,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "DORADITTOS",
             "tag1": "DTS",
             "equipo2": "DINASTY",
             "tag2": "DINASTY",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-10-27",
             "round_number": 3,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "ENIGMA ESPORTS",
             "tag1": "ENIGMA",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLA",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-10-27",
             "round_number": 3,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },

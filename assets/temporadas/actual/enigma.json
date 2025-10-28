@@ -22,7 +22,7 @@
     {
       "ID": "X556TRH",
       "nickname": "Listen'.",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "ADC"
     },
     {
@@ -46,7 +46,7 @@
     {
       "ID": "87NMQ19",
       "nickname": "LaSugar",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Auxiliar"
     },
     {
@@ -67,6 +67,7 @@
   "id": "WZLOK35bqdkN93BTqlvS",
   "partidos": {
     "M1": "3",
-    "M2": "3"
+    "M2": "3",
+    "M3": "3"
   }
 }

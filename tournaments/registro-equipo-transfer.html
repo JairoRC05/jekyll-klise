@@ -306,11 +306,11 @@ bgColor: indigo
             return `
     <div class="jugador-edit border rounded p-2 mb-2">
       <div class="row g-2">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <input type="text" class="form-control nombre-jugador" placeholder="Nombre" 
                  value="${jugador?.nickname || ''}" maxlength="12" required>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <select class="form-select rol-jugador" required>
             <option value="">Rol</option>
             <option value="ADC" ${jugador?.rol === 'ADC' ? 'selected' : ''}>ADC</option>
@@ -320,9 +320,13 @@ bgColor: indigo
             <option value="Jungle" ${jugador?.rol === 'Jungle' ? 'selected' : ''}>Jungla</option>
           </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <input type="text" class="form-control id-jugador" placeholder="ID juego" 
                  value="${jugador?.ID || ''}" maxlength="7" required>
+        </div>
+         <div class="col-md-3">
+          <input type="text" class="form-control avatar-jugador" placeholder="URL del avatar"
+                 value="${jugador?.avatar || ''}">
         </div>
         <div class="col-md-2">
           <div class="form-check mt-2">
@@ -430,13 +434,15 @@ bgColor: indigo
                 const rol = (div.querySelector(".rol-jugador")?.value || "").trim();
                 const ID = (div.querySelector(".id-jugador")?.value || "").trim();
                 const esCapitan = !!div.querySelector(".capitan-check")?.checked;
+                const avatar = (div.querySelector(".avatar-jugador")?.value || "").trim();
+
 
                 if (!nickname || !rol || !ID) {
                     Swal.fire("Error", "Todos los campos de jugadores son requeridos", "error");
                     return;
                 }
 
-                jugadores.push({ nickname, rol, ID, esCapitan });
+                jugadores.push({ nickname, rol, ID, avatar, esCapitan });
                 if (esCapitan) capitanNombre = nickname;
             }
 

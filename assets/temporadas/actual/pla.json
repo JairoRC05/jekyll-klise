@@ -28,7 +28,7 @@
     {
       "ID": "GCNQ65",
       "nickname": "刃Maaaarॢ",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Auxiliar"
     },
     {
@@ -55,6 +55,7 @@
   "id": "SWLtUts9DWeApCLuOF44",
   "partidos": {
     "M1": "3",
-    "M2": "0"
+    "M2": "0",
+    "M3": "0"
   }
 }

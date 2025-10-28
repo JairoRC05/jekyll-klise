@@ -22,7 +22,7 @@
     {
       "ID": "R40T877",
       "nickname": "Jäsmine",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "ADC"
     },
     {
@@ -55,6 +55,7 @@
   "id": "fT0yMWKmbP40IeyaQde6",
   "partidos": {
     "M1": "0",
-    "M2": "0"
+    "M2": "0",
+    "M3": "3"
   }
 }

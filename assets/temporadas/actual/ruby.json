@@ -10,13 +10,13 @@
     {
       "ID": "EG449ML",
       "nickname": "DFs・Charbet",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Defensivo"
     },
     {
       "ID": "373QLY6",
       "nickname": "DFs・Shūji",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "Jungle"
     },
     {
@@ -55,6 +55,7 @@
   "id": "GnMRFV0Ac6fHi2MhDczz",
   "partidos": {
     "M1": "0",
-    "M2": "0"
+    "M2": "0",
+    "M3": "0"
   }
 }

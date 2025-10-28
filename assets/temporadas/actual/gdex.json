@@ -48,6 +48,12 @@
       "nickname": "天来タキオン",
       "avatar": "male1",
       "rol": "Defensivo"
+    },
+    {
+      "ID": "3311KF2",
+      "nickname": "ʚııxvɞ",
+      "avatar": "female1",
+      "rol": "Defensivo"
     }
   ],
   "org": "",
@@ -55,6 +61,7 @@
   "id": "8LikO4yD3EWkQGJ69ofD",
   "partidos": {
     "M1": "0",
-    "M2": "3"
+    "M2": "3",
+    "M3": "3"
   }
 }

@@ -40,7 +40,7 @@
     {
       "ID": "CT23992",
       "nickname": "OverToñita",
-      "avatar": "male1",
+      "avatar": "female1",
       "rol": "ADC"
     },
     {
@@ -61,6 +61,7 @@
   "id": "4faCRbH4HarzwDpzFo7Q",
   "partidos": {
     "M1": "1",
-    "M2": "3"
+    "M2": "3",
+    "M3": "3"
   }
 }
