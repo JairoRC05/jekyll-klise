@@ -3,7 +3,7 @@ layout: menu
 title: "Antojitos Salu"
 ID: ASALU
 permalink: /menus/antojitos-salu
-logo: /assets/logos/asalu.png          # opcional
+logo: /assets/menus/logos/ASALU.webp          # opcional
 foto_local: /assets/fotos/asalu.jpg    # opcional
 telefono: "5512345678"
 whatsapp: "5512345678"                 # sin espacios, con código de país
