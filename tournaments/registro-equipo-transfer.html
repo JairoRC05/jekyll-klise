@@ -125,11 +125,12 @@ bgColor: indigo
           <div class="jugadores-list mb-3">
             {{jugadoresHtml}}
           </div>
-           <div class="d-flex gap-2 flex-wrap">
-        <button class="btn btn-sm btn-outline-primary editar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Editar</button>
-        <button class="btn btn-sm btn-outline-success transferir-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Mover a otra temporada</button>
-        <button class="btn btn-sm btn-outline-danger eliminar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Eliminar</button>
-      </div>
+     <div class="d-flex gap-2 flex-wrap">
+       <button class="btn btn-sm btn-outline-primary editar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Editar</button>
+       <button class="btn btn-sm btn-outline-success transferir-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Mover a otra temporada</button>
+       <button class="btn btn-sm btn-outline-danger eliminar-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Eliminar</button>
+       <button class="btn btn-sm btn-outline-info descargar-json-btn" data-id="{{docId}}" data-temp="{{tempOrigen}}">Descargar JSON</button>
+    </div>
         </div>
       </div>
     </div>
@@ -521,6 +522,68 @@ bgColor: indigo
                 e.target.closest(".jugador-edit").remove();
             }
         });
+
+        // Botón de descarga JSON
+        document.addEventListener("click", async (e) => {
+            if (e.target.classList.contains("descargar-json-btn")) {
+                const id = e.target.dataset.id;
+                const temp = e.target.dataset.temp;
+
+                try {
+                    // Obtener datos del equipo desde Firestore
+                    const equipoRef = doc(db, temp, id);
+                    const equipoSnap = await getDoc(equipoRef);
+
+                    if (!equipoSnap.exists()) {
+                        Swal.fire("Error", "El equipo no existe en Firebase.", "error");
+                        return;
+                    }
+
+                    const equipo = equipoSnap.data();
+
+                    // Crear estructura final
+                    const equipoJSON = {
+                        tag: equipo.tagEquipo || equipo.nombre?.toUpperCase() || "",
+                        team: equipo.nombreEquipo || "",
+                        capitan:
+                            (equipo.jugadores || []).find((j) => j.esCapitan)?.nickname || "",
+                        region: equipo.region || "LAN",
+                        activo: equipo.activo ?? true,
+                        seguro: equipo.seguro ?? true,
+                        grupo: equipo.grupo || "SIN ASIGNAR",
+                        jugadores: (equipo.jugadores || []).map((j) => ({
+                            ID: j.ID,
+                            nickname: j.nickname,
+                            avatar: j.avatar || "male1",
+                            rol: j.rol || ""
+                        })),
+                        org: equipo.org || "",
+                        link: `/liga-indigo/equipos/${(equipo.nombreEquipo || "")
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}`,
+                        id: id
+                    };
+
+                    // Crear y descargar el archivo JSON
+                    const jsonContent = JSON.stringify(equipoJSON, null, 2);
+                    const blob = new Blob([jsonContent], { type: "application/json" });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = `${(equipo.nombreEquipo || "equipo")
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}.json`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+
+                    Swal.fire("Descarga lista", `Se generó ${a.download}`, "success");
+                } catch (error) {
+                    console.error(error);
+                    Swal.fire("Error", "No se pudo generar el JSON del equipo.", "error");
+                }
+            }
+        });
+
 
 
         console.log("Firebase cargado:", app ? "✅" : "❌");

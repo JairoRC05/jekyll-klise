@@ -1,0 +1,61 @@
+{
+  "tag": "傑",
+  "team": "HAKKESSHU",
+  "capitan": "Padrino火",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "NORTH",
+  "jugadores": [
+    {
+      "ID": "KAXFQ4K",
+      "nickname": "Padrino火",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "11NMF1E",
+      "nickname": "达雷克-DK",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "R40T877",
+      "nickname": "Jäsmine",
+      "avatar": "female1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "MFKPHY7",
+      "nickname": "・Phanpy・",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "LFNKXF1",
+      "nickname": "Latios才",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "N6MC23T",
+      "nickname": "金drage",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "PXXKY9M",
+      "nickname": "Littledraco",
+      "avatar": "male1",
+      "rol": "Jungle"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/hakkesshu",
+  "id": "fT0yMWKmbP40IeyaQde6",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "3"
+  }
+}

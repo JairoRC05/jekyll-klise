@@ -57,88 +57,98 @@ permalink:
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const pageID = "{{ page.ID }}";
+        const jsonURL = `/assets/temporadas/actual/rosters/${pageID.toLowerCase()}.json`;
 
-    const jsonRosterURL = `/assets/temporadas/actual/rosters/${pageID.toLowerCase()}.json`;
-    const jsonBannerURL = `/assets/temporadas/actual/${pageID.toLowerCase()}.json`;
+        const descargarTodoBtn = document.getElementById('descargarTodo');
+        const equipoPerfil = document.getElementById('equipo-perfil');
+        const equipoPartidos = document.getElementById('equipo-perfil-partidos');
+        const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`; // HTML del footer
 
-    const descargarTodoBtn = document.getElementById('descargarTodo');
-    const equipoPerfil = document.getElementById('equipo-perfil');
-    const equipoPartidos = document.getElementById('equipo-perfil-partidos');
-    const equipoFooterHTML = `<div id="temp-footer-descarga"><img src="/assets/backgrounds/uniteforzestadium.png" alt=""></div>`;
+        const equipoSlugs = {
+            "ENIGMA ESPORTS": "enigma-esports",
+            "THE UNOWN TEAM": "the-unown-team",
+            "DFS RUBY": "dragonflies-gaming-ruby",
+            "DFS FROSTBITE": "dragonflies-gaming-frostbite",
+            "DFS PLATINUM": "dragonflies-gaming-platino",
+            "CAPIBYAS": "capibayas",
+            "DINASTY": "dinasty",
+            "GANBARÚ DEX": "ganbaru-dex",
+            "NEW FORCE": "new-force",
+            "HAKKESSHU": "hakkesshu",
+            "SLEEPKNOT": "sleepknot",
+            "DORADITTOS": "doradittos",
 
-    const equipoSlugs = {
-        "ENIGMA ESPORTS": "enigma-esports",
-        "THE UNOWN TEAM": "the-unown-team",
-        "DFS RUBY": "dragonflies-gaming-ruby",
-        "DFS FROSTBITE": "dragonflies-gaming-frostbite",
-        "DFS PLATINUM": "dragonflies-gaming-platino",
-        "CAPIBYAS": "capibayas",
-        "DINASTY": "dinasty",
-        "GANBARÚ DEX": "ganbaru-dex",
-        "NEW FORCE": "new-force",
-        "HAKKESSHU": "hakkesshu",
-        "SLEEPKNOT": "sleepknot",
-        "DORADITTOS": "doradittos",
-    };
+        };
 
-    const roundSpecificData = [
-        { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
-        { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' },
-        { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' },
-        { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' },
-        { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' },
-        { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' },
-        { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' },
-        { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' },
-        { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' },
-        { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' },
-        { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' },
-        { ronda: 'RONDA 12', fecha: '2025-08-04', nombreImagen: 'gyarados' },
-        { ronda: 'RONDA 13', fecha: '2025-08-04', nombreImagen: 'gyarados' },
-    ];
+        const roundSpecificData = [
+            { ronda: 'RONDA 1', fecha_inicio: '2025-07-10', fecha_fin: '2025-07-14', nombreImagen: 'scizor' },
+            { ronda: 'RONDA 2', fecha_inicio: '2025-07-15', fecha_fin: '2025-07-16', nombreImagen: 'raichu' }, // <-- Cambia a raichu
+            { ronda: 'RONDA 3', fecha_inicio: '2025-07-17', fecha_fin: '2025-07-18', nombreImagen: 'goodra' }, // <-- Cambia a goodra
+            { ronda: 'RONDA 4', fecha_inicio: '2025-07-21', fecha_fin: '2025-07-22', nombreImagen: 'mimikyu' }, // <-- Cambia a mimikyu
+            { ronda: 'RONDA 5', fecha_inicio: '2025-07-23', fecha_fin: '2025-07-24', nombreImagen: 'urshifu' }, // <-- Cambia a urshifu
+            { ronda: 'RONDA 6', fecha: '2025-07-25', nombreImagen: 'gengar' }, // <-- Cambia a gengar
+            { ronda: 'RONDA 7', fecha: '2025-07-28', nombreImagen: 'lapras' }, // <-- Cambia a lapras
+            { ronda: 'RONDA 8', fecha: '2025-07-29', nombreImagen: 'psyduck' }, // <-- Cambia a psyduck
+            { ronda: 'RONDA 9', fecha: '2025-07-30', nombreImagen: 'cleafable' }, // <-- Cambia a cleafable
+            { ronda: 'RONDA 10', fecha_inicio: '2025-07-31', fecha_fin: '2025-08-01', nombreImagen: 'espeonEstrella' },
+            { ronda: 'RONDA 11', fecha: '2025-08-04', nombreImagen: 'gyarados' },
+            { ronda: 'RONDA 12', fecha: '2025-08-04', nombreImagen: 'gyarados' },
+            { ronda: 'RONDA 13', fecha: '2025-08-04', nombreImagen: 'gyarados' },
+
+        ];
 
         if (descargarTodoBtn && equipoPerfil && equipoPartidos) {
-        descargarTodoBtn.addEventListener('click', function () {
-            const bannerHTML = equipoPerfil.outerHTML;
-            const partidosHTML = equipoPartidos.outerHTML;
-            const tempDescargaDiv = document.createElement('div');
-            tempDescargaDiv.style.position = 'absolute';
-            tempDescargaDiv.style.top = '-9999px';
-            tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
-            document.body.appendChild(tempDescargaDiv);
-            html2canvas(tempDescargaDiv).then(canvas => {
-                const link = document.createElement('a');
-                link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
-                link.href = canvas.toDataURL();
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                document.body.removeChild(tempDescargaDiv);
-            });
-        });
-    }
+            descargarTodoBtn.addEventListener('click', function () {
+                const bannerHTML = equipoPerfil.outerHTML;
+                const partidosHTML = equipoPartidos.outerHTML;
 
-     fetch(jsonBannerURL)
-        .then(response => response.ok ? response.json() : Promise.reject(response.status))
-        .then(equipo => {
-            renderBanner(equipo, 'equipo-perfil');
-            renderMatchInfo(equipo, 'equipo-perfil-partidos', roundSpecificData);
-        })
-        .catch(err => {
-            console.error("Error cargando banner/calendario:", err);
-            document.getElementById('equipo-perfil').innerText = 'Error al cargar datos del equipo.';
-            document.getElementById('equipo-perfil-partidos').innerText = '';
-        });
-        
-    fetch(jsonRosterURL)
-        .then(response => response.ok ? response.json() : Promise.reject(response.status))
-        .then(equipoRoster => {
-            renderRoster(equipoRoster, 'equipo-perfil-roster');
-        })
-        .catch(err => {
-            console.error("Error cargando roster:", err);
-            document.getElementById('equipo-perfil-roster').innerText = 'No se encontró roster actualizado.';
-        });
+                const tempDescargaDiv = document.createElement('div');
+                tempDescargaDiv.style.position = 'absolute';
+                tempDescargaDiv.style.top = '-9999px';
+                tempDescargaDiv.innerHTML = bannerHTML + partidosHTML + equipoFooterHTML;
+
+                document.body.appendChild(tempDescargaDiv);
+
+                html2canvas(tempDescargaDiv).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = `perfil-completo-${pageID.toLowerCase()}.png`;
+                    link.href = canvas.toDataURL();
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    document.body.removeChild(tempDescargaDiv);
+                });
+            });
+        }
+
+        fetch(jsonURL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data) {
+                    const equipo = data;
+                    renderBanner(equipo, 'equipo-perfil');
+                    renderRoster(equipo, 'equipo-perfil-roster');
+
+                    // Pasar roundSpecificData a renderMatchInfo
+                    renderMatchInfo(equipo, 'equipo-perfil-partidos', roundSpecificData);
+                } else {
+                    document.getElementById('equipo-perfil').innerText = 'No se encontraron datos para este equipo.';
+                    document.getElementById('equipo-perfil-roster').innerText = '';
+                    document.getElementById('equipo-perfil-partidos').innerText = '';
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar o procesar el archivo JSON:', error);
+                document.getElementById('equipo-perfil').innerText = 'Error al cargar los datos del equipo.';
+                document.getElementById('equipo-perfil-roster').innerText = '';
+                document.getElementById('equipo-perfil-partidos').innerText = '';
+            });
 
         function calcularSumaPartidos(partidos) {
             let suma = 0;

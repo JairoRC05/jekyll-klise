@@ -1,0 +1,67 @@
+{
+  "tag": "SK",
+  "team": "SLEEPKNOT",
+  "capitan": "SK•Bowleth",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "NORTH",
+  "jugadores": [
+    {
+      "ID": "H34374A",
+      "nickname": "SK•Bowleth",
+      "avatar": "male1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "81HK4NM",
+      "nickname": "KingAttacus",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "HT14T4F",
+      "nickname": "天竜•Banjo",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "LQ0R79Q",
+      "nickname": "SK•dop",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "NX7T7A5",
+      "nickname": "SK•Trenin",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "RNEQNX3",
+      "nickname": "CruelAngel!",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "XAA8CC3",
+      "nickname": "SK•MadRose",
+      "avatar": "female1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "HK100ME",
+      "nickname": "Pecas:)",
+      "avatar": "female1",
+      "rol": "Auxiliar"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/sleepknot",
+  "id": "1gKvhLyqWzFEvhWelFgw",
+  "partidos": {
+    "M1": "0",
+    "M2": "0",
+    "M3": "0"
+  }
+}

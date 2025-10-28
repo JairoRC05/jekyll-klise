@@ -1,0 +1,62 @@
+{
+  "tag": "RUBY",
+  "team": "DFs RUBY",
+  "capitan": "DFs・Charbet",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "EG449ML",
+      "nickname": "DFs・Charbet",
+      "avatar": "female1",
+      "rol": "Defensivo"
+    },
+    {
+      "ID": "373QLY6",
+      "nickname": "DFs・Shūji",
+      "avatar": "female1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "7TN9RY2",
+      "nickname": "DFs・Samm",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "T6Q62NX",
+      "nickname": "をMakirexな",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "YTQFX0Y",
+      "nickname": "DFs希Kaiser",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "AC56KG5",
+      "nickname": "Jack~NN",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "5F9X6LC",
+      "nickname": "ムlixendカモ",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "N844XAT",
+      "nickname": "DFS • DRAG8D",
+      "avatar": "male1",
+      "rol": "Top"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/dfs-ruby",
+  "id": "GnMRFV0Ac6fHi2MhDczz"
+}

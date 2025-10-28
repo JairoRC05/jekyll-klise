@@ -1,0 +1,67 @@
+{
+  "tag": "TUT",
+  "team": "THE UNOWN TEAM",
+  "capitan": "TuT•Bren10",
+  "region": "LAN",
+  "activo": true,
+  "seguro": true,
+  "grupo": "SOUTH",
+  "jugadores": [
+    {
+      "ID": "2XX1PF0",
+      "nickname": "TuT•Bren10",
+      "avatar": "female1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "RH49KXK",
+      "nickname": "TuT-Bernylml",
+      "avatar": "male1",
+      "rol": "ADC"
+    },
+    {
+      "ID": "XTK010",
+      "nickname": "7Froy",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "AGLF2L9",
+      "nickname": "Šашакоツ",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "MMQ5RQ",
+      "nickname": "TuTChevaz",
+      "avatar": "male1",
+      "rol": "Auxiliar"
+    },
+    {
+      "ID": "NLRL181",
+      "nickname": "YisusMC5ツ",
+      "avatar": "male1",
+      "rol": "Top"
+    },
+    {
+      "ID": "9EN2E3Q",
+      "nickname": "BE,André,4f0",
+      "avatar": "male1",
+      "rol": "Jungle"
+    },
+    {
+      "ID": "HRHANKP",
+      "nickname": "Sнōтаツ",
+      "avatar": "male1",
+      "rol": "Jungle"
+    }
+  ],
+  "org": "",
+  "link": "/liga-indigo/equipos/the-unown-team",
+  "id": "tpQDyuvu29VzypPn03Rc",
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "3"
+  }
+}
