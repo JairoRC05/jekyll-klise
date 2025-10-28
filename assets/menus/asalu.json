@@ -108,97 +108,97 @@
       "productos": [
         {
           "nombre": "HUEVO",
-          "precio": 48,
+          "precio": 80,
           "descripcion": ""
         },
         {
           "nombre": "JAMÓN",
-          "precio": 48,
+          "precio": 80,
           "descripcion": ""
         },
         {
           "nombre": "QUESO DE PUERCO",
-          "precio": 48,
+          "precio": 80,
           "descripcion": ""
         },
         {
           "nombre": "SALCHICHA",
-          "precio": 56,
+          "precio": 84,
           "descripcion": ""
         },
         {
           "nombre": "HUEVO CON JAMÓN",
-          "precio": 64,
+          "precio": 92,
           "descripcion": ""
         },
         {
           "nombre": "SALCHICHA CON QUESO",
-          "precio": 64,
+          "precio": 92,
           "descripcion": ""
         },
         {
           "nombre": "SALCHICHA CON HUEVO",
-          "precio": 64,
+          "precio": 92,
           "descripcion": ""
         },
         {
           "nombre": "CHORIZO",
-          "precio": 79,
+          "precio": 110,
           "descripcion": ""
         },
         {
           "nombre": "POLLO",
-          "precio": 79,
+          "precio": 110,
           "descripcion": ""
         },
         {
           "nombre": "MILANESA",
-          "precio": 79,
+          "precio": 110,
           "descripcion": ""
         },
         {
           "nombre": "BISTEC CON QUESO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": ""
         },
         {
           "nombre": "ALEMAN",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "SALCHICHA, PIERNA Y QUESO OAXACA"
         },
         {
           "nombre": "ARGENTINA",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "MILANESA, CHORIZO Y QUESO OAXACA"
         },
         {
           "nombre": "CUBANO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "CHORIZO, POLLO, SALCHICHA, JAMÓN, QUESO AMARILLO Y QUESO DE PUERCO"
         },
         {
           "nombre": "HAWAIANO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "PEIRNA, JAMÓN, PIÑA Y QUESO DE PUERCO"
         },
         {
           "nombre": "PASTOR",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "CARNE AL PASTOR, PIÑA Y QUESO DE PUERCO"
         },
         {
           "nombre": "RANCHERO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "CHORIZO, POLLO, SALCHICHA, PIERNA Y QUESO OAXACA"
         },
         {
           "nombre": "RUSO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "MILANESA, PEIRNA Y QUESO OAXACA"
         },
         {
           "nombre": "TOLUQUEÑO",
-          "precio": 96,
+          "precio": 120,
           "descripcion": "CHORIZO, HUEVO Y QUESO OAXACA"
         }
       ]
@@ -340,6 +340,86 @@
           "nombre": "ORDEN DE 3 PIEZAS",
           "precio": 55,
           "descripcion": ""
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "HAMBURGUESAS",
+      "productos": [
+        {
+          "nombre": "SENCILLA",
+          "precio": 44,
+          "descripcion": ""
+        },
+        {
+          "nombre": "QUESO AMARILLO",
+          "precio": 47,
+          "descripcion": ""
+        },
+        {
+          "nombre": "MILANESA",
+          "precio": 52,
+          "descripcion": ""
+        },
+        {
+          "nombre": "JAMÓN CON QUESO",
+          "precio": 52,
+          "descripcion": ""
+        },
+        {
+          "nombre": "HAWAIANA",
+          "precio": 60,
+          "descripcion": "PIÑA, JAMÓN Y QUESO OAXACA"
+        },
+        {
+          "nombre": "TOCINO Y QUESO",
+          "precio": 60,
+          "descripcion": ""
+        },
+        {
+          "nombre": "NORTEÑA",
+          "precio": 60,
+          "descripcion": "CHORIZO Y QUESO"
+        }
+      ]
+    },
+    {
+      "nombre_seccion": "COMBOS HAMBURGUESAS",
+      "productos": [
+        {
+          "nombre": "COMBO 1",
+          "precio": 76,
+          "descripcion": "HAMBURGUESA SENCILLA + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 2",
+          "precio": 79,
+          "descripcion": "HAMBURGUESA CON QUESO + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 3",
+          "precio": 84,
+          "descripcion": "HAMBURGUESA DE MILANESA + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 4",
+          "precio": 84,
+          "descripcion": "HAMBURGUESA CON JAMÓN Y QUESO + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 5",
+          "precio": 92,
+          "descripcion": "HAMBURGUESA HAWAIANA + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 6",
+          "precio": 92,
+          "descripcion": "HAMBURGUESA CON TOCINO Y QUESO + PORCIÓN DE PAPAS"
+        },
+        {
+          "nombre": "COMBO 7",
+          "precio": 92,
+          "descripcion": "HAMBURGUESA NORTEÑA + PORCIÓN DE PAPAS"
         }
       ]
     }
