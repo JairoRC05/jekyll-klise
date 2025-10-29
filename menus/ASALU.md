@@ -4,10 +4,10 @@ title: "Antojitos Salu"
 ID: ASALU
 permalink: /menus/antojitos-salu
 logo: /assets/menus/logos/ASALU.webp          # opcional
-foto_local: /assets/fotos/asalu.jpg    # opcional
+foto_local: ASALU    # opcional
 telefono: "5512345678"
-whatsapp: "5512345678"                 # sin espacios, con código de país
-ubicacion: "Av. Revolución 123, CDMX"
-horario: "Lun–Dom: 12:00 – 22:00"
+whatsapp: "52777"                 # sin espacios, con código de país
+ubicacion: "U. MORELOS, AND 406"
+horario: "Lun–Dom: 18:00 – 23:00"
 domicilio: true
 ---
