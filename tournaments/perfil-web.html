@@ -1,6 +1,223 @@
 ---
-layout: ligaIndigo
+layout: vista
 permalink: /perfil-web
-bgColor: indigo
+bgColor: electric
 title: PERFIL WEB
 ---
+
+<head>
+    <style>
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .plan {
+            border: 2px solid #444;
+            border-radius: 16px;
+            padding: 30px 20px;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .plan.bronze {
+            border-top: 4px solid #cd7f32;
+        }
+
+        .plan.silver {
+            border-top: 4px solid #c0c0c0;
+            position: relative;
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 0 0 25px rgba(192, 192, 192, 0.4);
+        }
+
+        .plan.gold {
+            border-top: 4px solid #ffd700;
+        }
+
+        .plan.silver:hover {
+            transform: scale(1.07) translateY(-5px);
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .bronze .plan-name {
+            color: #cd7f32;
+        }
+
+        .silver .plan-name {
+            color: #c0c0c0;
+        }
+
+        .gold .plan-name {
+            color: #ffd700;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #00eeff;
+        }
+
+        .features {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            color: #ddd;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #ff33cc, #6666ff);
+            transform: scale(1.05);
+        }
+
+        .promo-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: #ff0066;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 900px) {
+            .pricing-table {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .plan.silver {
+                transform: scale(1);
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+
+
+<div class="info-section">
+
+
+    <div class="d-flex align-items-center justify-content-center">
+        <h3>¿Eres jugador o streamer de Pokémon Unite?</h3>
+    </div>
+    <p class="subtitle">¿Quieres tener tu propia perfil web profesional, con tus logros, estilos, redes y horarios?  
+        Te la creamos tú solo tienes que contactarnos.</p>
+        
+            <div class="d-flex align-items-center justify-content-center">
+                <h3>Nuestros Planes (Pago Anual)</h3>
+            </div>
+
+  
+
+    <div class="pricing-table mt-5">
+
+        <!-- BRONCE -->
+        <div class="plan bronze electric">
+            <div class="plan-name">Jugador</div>
+            <div class="price">$450 MXN</div>
+            <ul class="features">
+                <li>Mini-sitio web con tu nombre nacion-unite.com/tunickname</li>
+                <li>Bio personalizada + foto de perfil</li>
+                <li>Redes sociales</li>
+                <li>Sección de “Logros” (niveles, Pokémon favoritos, rank)</li>
+                <li>Trayectoria</li>
+            </ul>
+            <a href="https://wa.me/527775663274" target="_blank" class="cta-button">¡ELIGIR ESTE!</a>
+        </div>
+
+        <!-- PLATA (Destacado) -->
+        <div class="plan silver electric">
+            <!-- <div class="promo-badge">¡MÁS POPULAR!</div> -->
+            <div class="plan-name">Streamer</div>
+            <div class="price">$850 MXN</div>
+            <ul class="features">
+                <li>Todo lo del Básico +</li>
+                <li>Diseño premium con animaciones suaves + colores</li>
+                <li>5 Categorias de juegos </li>
+                <li>Sección de “Clips Destacados” (embed de YouTube/Twitch)</li>
+                <li>Horario de transmisión en vivo</li>
+                <li>Promoción de stream en otras partes del sitio</li>
+                <li>Banner de perfil</li>
+            </ul>
+            <a href="https://wa.me/527775663274" target="_blank" class="cta-button">¡ELIGIR ESTE!</a>
+        </div>
+
+        <!-- ORO -->
+        <div class="plan gold electric">
+            <div class="plan-name">Duo (2 jugadores)</div>
+            <div class="price">$750 MXN</div>
+              <ul class="features">
+                <li>2 Mini-sitios web con tu nombre nacion-unite.com/tunickname, ideal para parejas de ranked</li>
+                <li>Bio personalizada + foto de perfil</li>
+                <li>Redes sociales</li>
+                <li>Sección de “Logros” (niveles, Pokémon favoritos, rank)</li>
+                <li>Trayectoria</li>
+            </ul>
+            <a href="https://wa.me/527775663274" target="_blank" class="cta-button">¡ELIGIR ESTE!</a>
+        </div>
+
+    </div>
+
+
+     
+
+    <p class="subtitle mt-5"><strong>¿Estás en Liga Indigo?</strong> ¡Indícalo en el formulario y activamos tu tarjeta de roster personalizada!  
+    <br>¡Tu logros se actualizará solo durante todo el año!</p>
+
+
+
+
+
+</div>

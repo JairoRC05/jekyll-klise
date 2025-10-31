@@ -9,13 +9,7 @@
   margin-bottom: 1rem;
   overflow: hidden;
 
-   @include respond-to(md) {
-     height: 70px;
-   }
-
-   @include respond-to(sm) {
-     height: 60px;
-  }
+ 
 
   &::before {
     content: "";
@@ -46,14 +40,7 @@
       width: 100%;
       margin-bottom: 30px;
 
-      @include respond-to(md) {
-        width: 70px;
-        margin-bottom: 0;
-      }
 
-      @include respond-to(sm) {
-        width: 50px;
-      }
     }
   }
 

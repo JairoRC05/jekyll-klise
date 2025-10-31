@@ -217,7 +217,7 @@ bgColor: indigo
     <div class="games-section mb-3">
         <h3 class="line-form">INSTRUCCIONES PARA INSCRIBIR A TU EQUIPO</h3>
         <ul>
-            <li>1. Registra a tu equipo recuerda que son 5 jugadores minimo y máximo 9 jugadores</li>
+            <li>1. Registra a tu equipo recuerda que son 5 jugadores minimo y máximo 10 jugadores</li>
             <li>2. Despues acepta el reglamento, términos y condiciones.</li>
             <li>3. Se mostrará una ventana en la cual debes leer detenidamente el Reglamento, Termino y Condiciones, da
                 clic en aceptar y continuar. Por ultimo da clic en continuar y se descargará un archivo el cual tienes
@@ -265,7 +265,7 @@ bgColor: indigo
                 "Capitán". Solo puedes seleccionar un capitán.
             </div>
 
-            <h3 class="line-form">JUGADORES (mínimo 5, máximo 9)</h3>
+            <h3 class="line-form">JUGADORES (mínimo 5, máximo 10)</h3>
             <div id="jugadoresContainer"></div>
             <button type="button" class="btn btn-add" id="agregarJugador">+ Agregar jugador</button><br><br>
 
@@ -447,7 +447,7 @@ bgColor: indigo
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
 
-        const FECHA_LIMITE = new Date('2025-10-30T23:59:59');
+        const FECHA_LIMITE = new Date('2025-11-11T23:59:59');
 
         document.addEventListener('DOMContentLoaded', function () {
             const acceptRulesCheckbox = document.getElementById('acceptRules');
@@ -646,7 +646,7 @@ bgColor: indigo
 
             let contadorJugadores = 0;
             const MIN_JUGADORES = 5;
-            const MAX_JUGADORES = 9;
+            const MAX_JUGADORES = 10;
             let equipoRegistrado = null;
 
             // Función para manejar la selección de capitán (solo uno permitido)
@@ -667,7 +667,7 @@ bgColor: indigo
                     Swal.fire({
                         icon: 'warning',
                         title: 'Límite alcanzado',
-                        text: 'Máximo 9 jugadores por equipo.',
+                        text: 'Máximo 10 jugadores por equipo.',
                         confirmButtonText: 'Entendido'
                     });
                     return;
@@ -965,11 +965,11 @@ bgColor: indigo
                     }
 
                     // === ✅ Verificar límite de equipos ===
-                    if (snapshot.size >= 13) {
+                    if (snapshot.size >= 32) {
                         Swal.fire({
                             icon: 'info',
                             title: 'Registro cerrado',
-                            text: 'Ya hay 12 equipos registrados. El registro está completo.',
+                            text: 'Ya hay 32 equipos registrados. El registro está completo.',
                             confirmButtonText: 'Entendido'
                         });
                         return;

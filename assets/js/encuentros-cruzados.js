@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Si no se genera un cruce (ej. no hay 4to Sur), su objeto partidoSimulado asociado no se usará.
         const datosPartidosSimulados = [
             // Datos para el cruce "1 Norte vs 4 Sur"
-            { resultado: 'QF1', stream: true, fecha: '20-OCT', hora: '21:30' },
+            { resultado: 'QF1', stream: true, fecha: '20-NOV', hora: '21:30' },
             // Datos para el cruce "2 Norte vs 3 Sur"
-            { resultado: 'QF2', stream: true, fecha: '20-OCT', hora: '22:30' },
+            { resultado: 'QF2', stream: true, fecha: '20-NOV', hora: '22:30' },
             // Datos para el cruce "1 Sur vs 4 Norte"
-            { resultado: 'QF3', stream: true, fecha: '21-OCT', hora: '21:30' }, 
+            { resultado: 'QF3', stream: true, fecha: '21-NOV', hora: '21:30' }, 
             // Datos para el cruce "2 Sur vs 3 Norte"
-            { resultado: 'QF4', stream: true, fecha: '21-OCT', hora: '22:30' }
+            { resultado: 'QF4', stream: true, fecha: '21-NOV', hora: '22:30' }
         ];
 
         let partidoIndex = 0; // Para asignar el dato de partido correcto a cada cruce
