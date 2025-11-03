@@ -50,12 +50,6 @@
       "rol": "Jungle"
     },
     {
-      "ID": "1NT2288",
-      "nickname": "龍・Ądяiana",
-      "avatar": "female1",
-      "rol": "Auxiliar"
-    },
-    {
       "ID": "2NNA9P4",
       "nickname": "龍・Kraft",
       "avatar": "male1",
@@ -70,10 +64,5 @@
   ],
   "org": "",
   "link": "/liga-indigo/equipos/dinasty",
-  "id": "DbWVLOI3THBjQQjUUHhJ",
-  "partidos": {
-    "M1": "3",
-    "M2": "3",
-    "M3": "0"
-  }
+  "id": "DbWVLOI3THBjQQjUUHhJ"
 }

@@ -70,5 +70,12 @@
   ],
   "org": "",
   "link": "/liga-indigo/equipos/dinasty",
-  "id": "DbWVLOI3THBjQQjUUHhJ"
+  "id": "DbWVLOI3THBjQQjUUHhJ",
+  "partidos": {
+    "M1": "3",
+    "M2": "3",
+    "M3": "0",
+    "M4": "3",
+    "M5": "3"
+  }
 }

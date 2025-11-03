@@ -20,12 +20,6 @@
       "rol": "Auxiliar"
     },
     {
-      "ID": "R40T877",
-      "nickname": "Jäsmine",
-      "avatar": "female1",
-      "rol": "ADC"
-    },
-    {
       "ID": "MFKPHY7",
       "nickname": "・Phanpy・",
       "avatar": "male1",
@@ -48,14 +42,15 @@
       "nickname": "Littledraco",
       "avatar": "male1",
       "rol": "Jungle"
+    },
+    {
+      "ID": "7M7TNHA",
+      "nickname": "・Sorrow・",
+      "avatar": "male1",
+      "rol": "Jungle"
     }
   ],
   "org": "",
   "link": "/liga-indigo/equipos/hakkesshu",
-  "id": "fT0yMWKmbP40IeyaQde6",
-  "partidos": {
-    "M1": "0",
-    "M2": "0",
-    "M3": "3"
-  }
+  "id": "fT0yMWKmbP40IeyaQde6"
 }

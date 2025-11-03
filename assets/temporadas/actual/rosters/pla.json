@@ -48,15 +48,16 @@
       "nickname": "刃Daaaanㅤ",
       "avatar": "male1",
       "rol": "Defensivo"
-    },
-    {
-      "ID": "AY3RQXK",
-      "nickname": "Ʀɛ・Drakyo天",
-      "avatar": "male1",
-      "rol": "Top"
     }
   ],
   "org": "",
-  "link": "/liga-indigo/equipos/dfs-platinum",
-  "id": "SWLtUts9DWeApCLuOF44"
+  "link": "/liga-indigo/equipos/dragonflies-gaming-platino",
+  "id": "SWLtUts9DWeApCLuOF44",
+  "partidos": {
+    "M1": "3",
+    "M2": "0",
+    "M3": "0",
+    "M4": "1",
+    "M5": ""
+  }
 }
