@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let botonHTML = '';
     if (estado === 'pasado') {
-      botonHTML = `<a href="/liga-indigo-streams" target="_blank" class="pay-button blue">Ver Repetición</a>`;
+      botonHTML = `<a href="https://www.twitch.tv/nacion_unite" target="_blank" class="pay-button blue">Ver Repetición</a>`;
     } else if (estado === 'vivo') {
       botonHTML = `<span class="status-tag">🟢 En Curso</span>`;
     } else {
-      botonHTML = `<a href="https://twitch.tv/hollywoodforze" target="_blank" class="pay-button blue">Ver Stream</a>`;
+      botonHTML = `<a href="https://www.twitch.tv/nacion_unite" target="_blank" class="pay-button blue">Ver Stream</a>`;
     }
 
     const mes = fecha.toLocaleString('default', { month: 'short' }).toUpperCase();
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="title">
             ${partido.equipo1} vs ${partido.equipo2} 
           </div>
-          <div class="location"><i class="bi bi-twitch"></i> Hollywood Forze</div>
+          <div class="location"><i class="bi bi-twitch"></i> Nacion Unite</div>
           <div class="payment-info">
            
             ${botonHTML}
