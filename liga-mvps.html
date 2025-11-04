@@ -1,0 +1,311 @@
+---
+layout: ligaIndigo
+permalink: /news-mvps
+---
+
+<!-- HTML básico -->
+ <div class="container mt-3">
+  <div class="d-flex gap-2 mb-3">
+    <button id="exportBtn" class="btn btn-success">.Exportar MVPs</button>
+    <button id="importBtn" class="btn btn-warning">Importar MVPs</button>
+    <input type="file" id="importFile" accept=".json" style="display:none" />
+  </div>
+
+   <div class="mb-3">
+    <input
+      type="text"
+      id="searchInput"
+      class="form-control"
+      placeholder="Buscar por nickname, ID o tag de equipo..."
+    >
+  </div>
+
+  <div id="players-list"></div>
+</div>
+
+
+
+<!-- Modal para editar MVPs/nick -->
+<div class="modal fade" id="editModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar jugador</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="editNickname" class="form-control mb-2" placeholder="Nickname">
+        <div id="mvpInputs"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="saveChanges">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    // Rondas fijas
+const RONDAS = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11'];
+let currentPlayersData = {};
+let currentSearchTerm = '';
+
+// Cargar lista de equipos desde equipos-index.json
+async function loadAllPlayers() {
+  const response = await fetch('/assets/temporadas/actual/equipos-index.json');
+  const teamFiles = await response.json();
+
+  const allPlayers = {};
+  for (const file of teamFiles) {
+    const res = await fetch(`/assets/temporadas/actual/rosters/${file}`);
+    if (!res.ok) {
+      console.warn(`No se pudo cargar: ${file}`);
+      continue;
+    }
+    const team = await res.json();
+    for (const player of team.jugadores) {
+      allPlayers[player.ID] = {
+        ID: player.ID,
+        nickname: player.nickname,
+        teamTag: team.tag,
+        avatar: player.avatar || 'male1'  // valor por defecto por si acaso
+      };
+    }
+  }
+  return allPlayers;
+}
+
+// Cargar o inicializar datos desde localStorage
+function getPlayersData(initialPlayers) {
+  const saved = localStorage.getItem('playersData');
+  const savedObj = saved ? JSON.parse(saved) : {};
+
+  for (const id in initialPlayers) {
+    if (!savedObj[id]) {
+      savedObj[id] = {
+        nickname: initialPlayers[id].nickname,
+        teamTag: initialPlayers[id].teamTag,
+        avatar: initialPlayers[id].avatar, // ✅ ahora se guarda
+        mvps: RONDAS.reduce((acc, r) => ({ ...acc, [r]: 0 }), {})
+      };
+    } else {
+      // Asegurar que `avatar` exista (por compatibilidad con datos antiguos)
+      if (savedObj[id].avatar === undefined) {
+        savedObj[id].avatar = initialPlayers[id].avatar || 'male1';
+      }
+    }
+  }
+
+  localStorage.setItem('playersData', JSON.stringify(savedObj));
+  return savedObj;
+}
+// Renderizar lista de jugadores
+function renderPlayers(playersData, searchTerm = '') {
+  currentPlayersData = playersData;
+  currentSearchTerm = searchTerm.toLowerCase().trim();
+
+  const container = document.getElementById('players-list');
+  container.innerHTML = '';
+
+  const playersArray = Object.entries(playersData)
+    .map(([id, data]) => ({ id, ...data }))
+    .filter(player => {
+      if (!currentSearchTerm) return true;
+      return (
+        player.nickname.toLowerCase().includes(currentSearchTerm) ||
+        player.id.toLowerCase().includes(currentSearchTerm) ||
+        player.teamTag.toLowerCase().includes(currentSearchTerm)
+      );
+    })
+    .sort((a, b) => {
+      if (a.teamTag !== b.teamTag) return a.teamTag.localeCompare(b.teamTag);
+      return a.nickname.localeCompare(b.nickname);
+    });
+
+  if (playersArray.length === 0) {
+    container.innerHTML = '<div class="alert alert-warning">No se encontraron jugadores.</div>';
+    return;
+  }
+
+  playersArray.forEach(player => {
+    const totalMVPs = Object.values(player.mvps).reduce((a, b) => a + b, 0);
+    const div = document.createElement('div');
+    div.className = 'card mb-2 shadow-sm';
+    div.innerHTML = `
+      <div class="card-body d-flex align-items-center">
+        <img 
+          src="/assets/avatars/${player.avatar}.webp" 
+          alt="${player.nickname}" 
+          class="rounded me-3" 
+          style="width: 40px; height: 40px; object-fit: cover;"
+        >
+        <div class="flex-grow-1">
+          <strong>${player.nickname}</strong> 
+          <span class="badge bg-secondary ms-2">${player.teamTag}</span>
+          <small class="d-block text-muted">ID: ${player.id}</small>
+          <small class="text-muted">Total MVPs: ${totalMVPs}</small>
+        </div>
+        <button class="btn btn-sm btn-outline-primary edit-btn" data-id="${player.id}">
+          Editar
+        </button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+
+  // Reasignar listeners
+  document.querySelectorAll('.edit-btn').forEach(btn => {
+    btn.addEventListener('click', () => openEditModal(btn.dataset.id, currentPlayersData));
+  });
+}
+
+// Abrir modal de edición
+function openEditModal(playerId, playersData) {
+  const player = playersData[playerId];
+  document.getElementById('editNickname').value = player.nickname;
+
+  const mvpContainer = document.getElementById('mvpInputs');
+  mvpContainer.innerHTML = '';
+  RONDAS.forEach(ronda => {
+    mvpContainer.innerHTML += `
+      <div class="input-group mb-2">
+        <span class="input-group-text">${ronda}</span>
+        <input type="number" class="form-control mvp-input" data-ronda="${ronda}" value="${player.mvps[ronda] || 0}" min="0">
+      </div>
+    `;
+  });
+
+  // Guardar cambios
+  const saveBtn = document.getElementById('saveChanges');
+  // Evitar acumular múltiples listeners
+  saveBtn.replaceWith(saveBtn.cloneNode(true));
+  document.getElementById('saveChanges').onclick = () => {
+    const newNickname = document.getElementById('editNickname').value.trim() || player.nickname;
+    const newMvps = {};
+    RONDAS.forEach(r => {
+      const input = document.querySelector(`.mvp-input[data-ronda="${r}"]`);
+      newMvps[r] = Math.max(0, parseInt(input.value) || 0);
+    });
+
+    playersData[playerId] = {
+      ...playersData[playerId],
+      nickname: newNickname,
+      mvps: newMvps
+    };
+
+    localStorage.setItem('playersData', JSON.stringify(playersData));
+    renderPlayers(playersData, currentSearchTerm);
+    bootstrap.Modal.getInstance(document.getElementById('editModal')).hide();
+  };
+
+  new bootstrap.Modal(document.getElementById('editModal')).show();
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const initialPlayers = await loadAllPlayers();
+    const playersData = getPlayersData(initialPlayers);
+    renderPlayers(playersData); // ← esto ya asigna currentPlayersData
+  } catch (err) {
+    console.error('Error al cargar jugadores:', err);
+    document.getElementById('players-list').innerHTML = 
+      '<div class="alert alert-danger">Error al cargar los datos de los equipos.</div>';
+  }
+});
+
+// Filtrado en tiempo real
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  const term = e.target.value;
+  // Usamos los datos actuales (ya en memoria)
+  renderPlayers(currentPlayersData, term);
+});
+
+// === EXPORTAR MVPs (solo jugadores con al menos 1 MVP) ===
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const playersData = JSON.parse(localStorage.getItem('playersData') || '{}');
+  
+  const mvpPlayers = {};
+  for (const [id, data] of Object.entries(playersData)) {
+    const total = Object.values(data.mvps).reduce((sum, val) => sum + val, 0);
+    if (total > 0) {
+      mvpPlayers[id] = {
+        ID: id,
+        nickname: data.nickname,
+        teamTag: data.teamTag,
+        avatar: data.avatar,  
+        mvps: { ...data.mvps }
+      };
+    }
+  }
+
+  if (Object.keys(mvpPlayers).length === 0) {
+    alert('No hay jugadores con MVPs para exportar.');
+    return;
+  }
+
+  const dataStr = JSON.stringify(mvpPlayers, null, 2);
+  const dataBlob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(dataBlob);
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `mvps_temporada_${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+});
+
+// === IMPORTAR MVPs ===
+document.getElementById('importBtn').addEventListener('click', () => {
+  document.getElementById('importFile').click();
+});
+
+document.getElementById('importFile').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    try {
+      const imported = JSON.parse(event.target.result);
+
+      // Validar estructura básica
+      if (typeof imported !== 'object' || Array.isArray(imported)) {
+        throw new Error('Formato inválido: debe ser un objeto JSON.');
+      }
+
+      // Cargar datos actuales para preservar jugadores sin MVP
+      const currentData = JSON.parse(localStorage.getItem('playersData') || '{}');
+
+      // Actualizar solo los jugadores del archivo importado
+      for (const [id, importedPlayer] of Object.entries(imported)) {
+        if (currentData[id]) {
+          // Actualizar nickname y mvps, mantener teamTag del actual (más seguro)
+          currentData[id].nickname = importedPlayer.nickname || currentData[id].nickname;
+          currentData[id].mvps = importedPlayer.mvps || currentData[id].mvps;
+        } else {
+          // Si no existe, lo agregamos (por si se añadió manualmente)
+          currentData[id] = {
+            nickname: importedPlayer.nickname || 'Desconocido',
+            teamTag: importedPlayer.teamTag || 'SIN-TEAM',
+             avatar: importedPlayer.avatar || 'male1',
+            mvps: importedPlayer.mvps || RONDAS.reduce((acc, r) => ({ ...acc, [r]: 0 }), {})
+          };
+        }
+      }
+
+      localStorage.setItem('playersData', JSON.stringify(currentData));
+      alert('Datos de MVPs importados correctamente.');
+      renderPlayers(currentData);
+    } catch (err) {
+      console.error(err);
+      alert('Error al importar el archivo: ' + err.message);
+    }
+    e.target.value = ''; // reset input
+  };
+  reader.readAsText(file);
+});
+
+</script>

@@ -1,0 +1,838 @@
+{
+  "EFE5E97": {
+    "ID": "EFE5E97",
+    "nickname": "CapiDrFix",
+    "teamTag": "CAPI",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "A2AG7X1": {
+    "ID": "A2AG7X1",
+    "nickname": "CapiCrypto",
+    "teamTag": "CAPI",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "51M77Q5": {
+    "ID": "51M77Q5",
+    "nickname": "Ḯsbjørn",
+    "teamTag": "CAPI",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "RNCXGAK": {
+    "ID": "RNCXGAK",
+    "nickname": "龍・Toro",
+    "teamTag": "DINASTY",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "446HY4X": {
+    "ID": "446HY4X",
+    "nickname": "龍・Vicleo",
+    "teamTag": "DINASTY",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 1,
+      "M3": 0,
+      "M4": 0,
+      "M5": 2,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "83AFR37": {
+    "ID": "83AFR37",
+    "nickname": "龍・Ji9star",
+    "teamTag": "DINASTY",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 2,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "2NNA9P4": {
+    "ID": "2NNA9P4",
+    "nickname": "龍・Kraft",
+    "teamTag": "DINASTY",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 2,
+      "M3": 0,
+      "M4": 2,
+      "M5": 1,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "E7ERYF9": {
+    "ID": "E7ERYF9",
+    "nickname": "Golditto.TTV",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "#F6KNR2": {
+    "ID": "#F6KNR2",
+    "nickname": "FreePoints*",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 2,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "MRA5GPT": {
+    "ID": "MRA5GPT",
+    "nickname": "Sableye",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "MT42FC1": {
+    "ID": "MT42FC1",
+    "nickname": "アレックス04",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 1,
+      "M3": 2,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "CT23992": {
+    "ID": "CT23992",
+    "nickname": "OverToñita",
+    "teamTag": "DTS",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "RMEPEEA": {
+    "ID": "RMEPEEA",
+    "nickname": "Overtony",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 2,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "F3TEE13": {
+    "ID": "F3TEE13",
+    "nickname": "HungryRick",
+    "teamTag": "DTS",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 2,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "A6YE7LQ": {
+    "ID": "A6YE7LQ",
+    "nickname": "ENG・Wing",
+    "teamTag": "ENIGMA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 1,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "F942677": {
+    "ID": "F942677",
+    "nickname": "SPC・Lolfe教",
+    "teamTag": "ENIGMA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 2,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "X556TRH": {
+    "ID": "X556TRH",
+    "nickname": "Listen'.",
+    "teamTag": "ENIGMA",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "QN0E8LQ": {
+    "ID": "QN0E8LQ",
+    "nickname": "・Blancoツ",
+    "teamTag": "ENIGMA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "KP3MGGK": {
+    "ID": "KP3MGGK",
+    "nickname": "人・Heavenly",
+    "teamTag": "ENIGMA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "6990CYH": {
+    "ID": "6990CYH",
+    "nickname": "Estrella'sBF",
+    "teamTag": "FORCE",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 1,
+      "M3": 1,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "A0829K4": {
+    "ID": "A0829K4",
+    "nickname": "BLK • Texas",
+    "teamTag": "FORCE",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 1,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "A38905X": {
+    "ID": "A38905X",
+    "nickname": "Ranmā",
+    "teamTag": "FORCE",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 2,
+      "M3": 1,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "E9ENLYE": {
+    "ID": "E9ENLYE",
+    "nickname": "Rêgi195",
+    "teamTag": "FORCE",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "MAL0Q6H": {
+    "ID": "MAL0Q6H",
+    "nickname": "DønLux",
+    "teamTag": "FORCE",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 1,
+      "M3": 1,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "7QT4YAA": {
+    "ID": "7QT4YAA",
+    "nickname": "DFs・Efesto",
+    "teamTag": "FTB",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "NFN0FN": {
+    "ID": "NFN0FN",
+    "nickname": "DFs・Googoo",
+    "teamTag": "FTB",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "LY3YYX3": {
+    "ID": "LY3YYX3",
+    "nickname": "DFs・Pikinツ",
+    "teamTag": "FTB",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "KFCPP44": {
+    "ID": "KFCPP44",
+    "nickname": "DFs・Perro乡",
+    "teamTag": "FTB",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "C3EG7EF": {
+    "ID": "C3EG7EF",
+    "nickname": "DFs・MerGas",
+    "teamTag": "FTB",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "#E0N5RK": {
+    "ID": "#E0N5RK",
+    "nickname": "ʚPinzita",
+    "teamTag": "GDEX",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 2,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "#HNNK9E": {
+    "ID": "#HNNK9E",
+    "nickname": "ʚChrisWFttv",
+    "teamTag": "GDEX",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 2,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "#FFNN7F": {
+    "ID": "#FFNN7F",
+    "nickname": "TheRaYMoNz",
+    "teamTag": "GDEX",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 2,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "XHAQ5YM": {
+    "ID": "XHAQ5YM",
+    "nickname": "天来タキオン",
+    "teamTag": "GDEX",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 2,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "FKH2R49": {
+    "ID": "FKH2R49",
+    "nickname": "DFs・Forti",
+    "teamTag": "PLA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "GCNQ65": {
+    "ID": "GCNQ65",
+    "nickname": "刃Maaaarॢ",
+    "teamTag": "PLA",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "3FX577Q": {
+    "ID": "3FX577Q",
+    "nickname": "AlexT力",
+    "teamTag": "PLA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "43CHANR": {
+    "ID": "43CHANR",
+    "nickname": "刃Daaaanㅤ",
+    "teamTag": "PLA",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 2,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "H34374A": {
+    "ID": "H34374A",
+    "nickname": "SK•Bowleth",
+    "teamTag": "SK",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "XAA8CC3": {
+    "ID": "XAA8CC3",
+    "nickname": "SK•MadRose",
+    "teamTag": "SK",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 0,
+      "M2": 0,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "2XX1PF0": {
+    "ID": "2XX1PF0",
+    "nickname": "TuT•Bren10",
+    "teamTag": "TUT",
+    "avatar": "female1",
+    "mvps": {
+      "M1": 1,
+      "M2": 2,
+      "M3": 0,
+      "M4": 2,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "AGLF2L9": {
+    "ID": "AGLF2L9",
+    "nickname": "Šашакоツ",
+    "teamTag": "TUT",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 1,
+      "M2": 0,
+      "M3": 2,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "NLRL181": {
+    "ID": "NLRL181",
+    "nickname": "YisusMC5ツ",
+    "teamTag": "TUT",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 0,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "9EN2E3Q": {
+    "ID": "9EN2E3Q",
+    "nickname": "BE,André,4f0",
+    "teamTag": "TUT",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 2,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  },
+  "HRHANKP": {
+    "ID": "HRHANKP",
+    "nickname": "Sнōтаツ",
+    "teamTag": "TUT",
+    "avatar": "male1",
+    "mvps": {
+      "M1": 0,
+      "M2": 1,
+      "M3": 2,
+      "M4": 1,
+      "M5": 0,
+      "M6": 0,
+      "M7": 0,
+      "M8": 0,
+      "M9": 0,
+      "M10": 0,
+      "M11": 0
+    }
+  }
+}

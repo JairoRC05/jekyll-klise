@@ -344,9 +344,8 @@ function truncateString(str, maxLength) {
 async function cargarRankingsDesdeIndice(rutaTemporada, incluirCopaXForze = false) {
     const contenedorNorth = document.getElementById('ranking-north');
     const contenedorSouth = document.getElementById('ranking-south');
-    const contenedorMejor = document.getElementById('mejor-equipo');
 
-    if (!contenedorNorth || !contenedorSouth || !contenedorMejor) {
+    if (!contenedorNorth || !contenedorSouth) {
         console.error("Faltan contenedores");
         return;
     }
@@ -364,40 +363,44 @@ async function cargarRankingsDesdeIndice(rutaTemporada, incluirCopaXForze = fals
                 const data = await res.json();
 
                 if (data && data.tag && data.grupo) {
-                    let suma = Object.values(data.partidos).reduce((acc, val) => {
-                        const pts = parseInt(val) || 0;
-                        return acc + (val === '3' ? 3 : val === '2' ? 2 : val === '1' ? 1 : 0);
+                    const suma = Object.values(data.partidos || {}).reduce((acc, val) => {
+                        const num = parseInt(val);
+                        if (num === 3) return acc + 3;
+                        if (num === 2) return acc + 2;
+                        if (num === 1) return acc + 1;
+                        return acc;
                     }, 0);
                     equiposData.push({ ...data, suma });
                 }
-            } catch (err) {
+            } catch {
                 console.warn(`Error cargando ${ruta}`);
             }
         });
 
         await Promise.all(fetchPromises);
 
-        // Separar y ordenar por grupo
+        // ==========================
+        //  Mostrar rankings por región
+        // ==========================
         const northEquipos = aplicarDesempate(equiposData.filter(eq => eq.grupo === "NORTH"));
         const southEquipos = aplicarDesempate(equiposData.filter(eq => eq.grupo === "SOUTH"));
 
-        // Encontrar el MEJOR EQUIPO GENERAL
-        const todosOrdenados = [...northEquipos, ...southEquipos]
-            .sort((a, b) => b.suma - a.suma);
-
-        const mejorEquipo = todosOrdenados[0];
-
-        // Mostrarlo en el card destacado
-        if (mejorEquipo) {
-            mostrarMejorEquipo(mejorEquipo, contenedorMejor);
+        if (northEquipos.length > 0) {
+            await mostrarEquipos(northEquipos, contenedorNorth, "NORTH", { incluirCopaXForze });
+        } else {
+            contenedorNorth.innerHTML = '<p class="text-center text-muted">Sin equipos en NORTH</p>';
         }
 
-        // Mostrar rankings normales
-        await mostrarEquipos(northEquipos, contenedorNorth, "NORTH", { incluirCopaXForze });
-        await mostrarEquipos(southEquipos, contenedorSouth, "SOUTH", { incluirCopaXForze });
+        if (southEquipos.length > 0) {
+            await mostrarEquipos(southEquipos, contenedorSouth, "SOUTH", { incluirCopaXForze });
+        } else {
+            contenedorSouth.innerHTML = '<p class="text-center text-muted">Sin equipos en SOUTH</p>';
+        }
 
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Error general:", error);
+        contenedorNorth.innerHTML = '<p class="text-center text-danger">Error al cargar rankings</p>';
+        contenedorSouth.innerHTML = '<p class="text-center text-danger">Error al cargar rankings</p>';
     }
 }
 

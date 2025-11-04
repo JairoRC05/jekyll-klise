@@ -15,20 +15,23 @@ bgColor: indigo
 
 
 <div class="games-section">
-<h1 class="exo-style-black">RANKING</h1>
+
   <span class="exo"></span>
   <div class="row mt-4">
-    <div class="col-12 col-md-6 col-lg-4">
-      <h2 class="text-center">MEJOR EQUIPO</h2>
-      <div id="mejor-equipo" class="d-flex justify-content-center">
-        
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
+ 
+    <div class="col-12 col-md-6 col-lg-4 order-2 order-md-1">
       <h2>ORION</h2>
       <div id="ranking-north" class="row"></div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 order-1 order-md-2">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+          <img src="/assets/logos/LIGA-INDIGO.webp" alt="LIGA INDIGO" class="img-fluid">
+        <h1 class="exo-style-black">RANKING</h1>
+        <p class="m-0">LIGA INDIGO SPC</p>
+        <p>TEMPORADA OCT-NOV</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 order-3 order-md-3">
       <h2>HYDRA</h2>
       <div id="ranking-south" class="row"></div>
     </div>
@@ -36,6 +39,17 @@ bgColor: indigo
 
 </div>
 
+<div class="games-section">
+   <h1 class="exo-style-black">MVP'S</h1>
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-7">
+<img src="/assets/img/MVPS.png" class="img-fluid" alt="MVPS">
+    </div>
+    <div class="col-12 col-md-12 col-lg-4">
+   <div id="mvpRanking"></div>
+    </div>
+  </div>
+</div>
 
 <div class="comparador-equipos mt-5 d-none">
   <h3>⚔️ Comparador de Equipos</h3>
@@ -196,7 +210,72 @@ bgColor: indigo
       });
     });
 </script>
+ 
+<script>
+   const RUTA_MVPS = '/assets/temporadas/actual/mvps.json';
+    const MAX_JUGADORES = 7;
 
+  
+
+    async function cargarYMostrarMVPs() {
+      try {
+        const response = await fetch(RUTA_MVPS);
+        if (!response.ok) throw new Error(`Error ${response.status}: No se encontró el archivo de MVPs.`);
+        
+        const jugadores = await response.json();
+
+        // Convertir a array y calcular total
+        const jugadoresConTotal = Object.values(jugadores).map(jug => ({
+          ...jug,
+          totalMVPs: Object.values(jug.mvps).reduce((sum, val) => sum + val, 0)
+        }));
+
+        // Ordenar y tomar top 12
+        const top12 = jugadoresConTotal
+          .sort((a, b) => b.totalMVPs - a.totalMVPs)
+          .slice(0, MAX_JUGADORES);
+
+        const container = document.getElementById('mvpRanking');
+
+        if (top12.length === 0) {
+          container.innerHTML = '<div class="text-center text-muted">No hay MVPs registrados.</div>';
+          return;
+        }
+
+        container.innerHTML = top12.map((jug, idx) => {
+          const posicion = String(idx + 1).padStart(2, '0');
+          const avatarUrl = `/assets/avatars/${jug.avatar}.webp`;
+
+          return `
+            <div class="card-round-list">
+              <div class="card-round-team">
+               <a> <img src="${avatarUrl}" alt="${jug.nickname}" class="img-fluid"></a>
+                <div class="card-round-title">
+                  <h2>${jug.nickname}</h2>
+                  <div class="card-round-record">${jug.teamTag}</div>
+                </div>
+              </div>
+              <div class="card-round-pts">
+                <h6>${jug.totalMVPs} MVP's</h6>
+              </div>
+              <div class="card-round-place"><span>${posicion}</span></div>
+              <div class="card-back">
+                <div class="card-color-left ${jug.teamTag}"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+      } catch (err) {
+        console.error('Error al cargar MVPs:', err);
+        document.getElementById('mvpRanking').innerHTML = 
+          `<div class="alert alert-danger text-center">⚠️ No se pudieron cargar los MVPs.<br>${err.message}</div>`;
+      }
+    }
+
+    // Iniciar
+    document.addEventListener('DOMContentLoaded', cargarYMostrarMVPs);
+</script>
 
 <script src="/assets/js/comparador.js"></script>
 <script src="/assets/js/generar_tabs.js"></script>
