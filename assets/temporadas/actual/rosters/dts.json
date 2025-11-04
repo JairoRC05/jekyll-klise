@@ -14,7 +14,7 @@
       "rol": "Defensivo"
     },
     {
-      "ID": "#F6KNR2",
+      "ID": "F6KNR2G",
       "nickname": "FreePoints*",
       "avatar": "male1",
       "rol": "ADC"
@@ -58,12 +58,5 @@
   ],
   "org": "",
   "link": "/liga-indigo/equipos/doradittos",
-  "id": "4faCRbH4HarzwDpzFo7Q",
-  "partidos": {
-    "M1": "1",
-    "M2": "3",
-    "M3": "3",
-    "M4": "1",
-    "M5": "3"
-  }
+  "id": "4faCRbH4HarzwDpzFo7Q"
 }

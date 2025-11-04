@@ -1,4 +1,4 @@
-const rutaTemporada = "/assets/temporadas/sep2025";
+const rutaTemporada = "/assets/temporadas/actual";
 
 const truncateString = (str, num) =>
   str.length > num ? str.slice(0, num) + "..." : str;
