@@ -1,0 +1,132 @@
+<div class="container my-5">
+    <!-- Banner -->
+    <div class="promo-banner shadow-sm">
+        <!-- Imagen de fondo: cambia la URL a la tuya -->
+        <div class="bg-img indigo">
+        </div>
+
+
+        <div class="promo-content w-100">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h2 class="mb-1">Gran promoción de temporada</h2>
+                    <p class="mb-3">Aprovecha descuentos especiales solo por tiempo limitado. ¡No te lo pierdas!</p>
+
+
+                    <!-- Cuenta regresiva -->
+                    <div class="countdown d-flex" id="countdown">
+                        <div class="unit">
+                            <div id="days">00</div>
+                            <div class="label">Días</div>
+                        </div>
+                        <div class="unit">
+                            <div id="hours">00</div>
+                            <div class="label">Horas</div>
+                        </div>
+                        <div class="unit">
+                            <div id="minutes">00</div>
+                            <div class="label">Min</div>
+                        </div>
+                        <div class="unit">
+                            <div id="seconds">00</div>
+                            <div class="label">Seg</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                    <!-- Botón más información abre un modal -->
+                    <button type="button" class="btn btn-lg btn-outline-light" data-bs-toggle="modal"
+                        data-bs-target="#infoModal">Más información</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal de información -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Detalles de la promoción</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aquí puedes poner los detalles de la promoción: condiciones, códigos, duración, restricciones y
+                        enlace para comprar o registrarse.</p>
+                    <p class="mb-0"><strong>Oferta válida hasta:</strong> <span id="targetDateLabel"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="/liga-indigo/promociones" class="btn btn-primary">Ir a la oferta</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+// ===== CONFIGURACIÓN =====
+// (formato: YYYY, M-1, D, H, m, s)
+// Ejemplo: 2025-12-01 00:00 -> new Date(2025, 11, 1, 0, 0, 0)
+const targetDate = new Date(2025, 10, 20, 0, 0, 0); // 1 de diciembre de 2025 a 00:00
+
+
+// Muestra fecha legible en el modal
+document.getElementById('targetDateLabel').textContent = targetDate.toLocaleString('es-ES');
+
+
+// Elementos
+const daysEl = document.getElementById('days');
+const hoursEl = document.getElementById('hours');
+const minutesEl = document.getElementById('minutes');
+const secondsEl = document.getElementById('seconds');
+
+
+function updateCountdown() {
+const now = new Date();
+const diff = targetDate - now;
+
+
+if (diff <= 0) {
+// Cuando llegue la fecha
+daysEl.textContent = '00';
+hoursEl.textContent = '00';
+minutesEl.textContent = '00';
+secondsEl.textContent = '00';
+// Puedes cambiar el texto o mostrar un mensaje de expirado
+clearInterval(timerInterval);
+return;
+}
+
+
+const secs = Math.floor(diff / 1000);
+const days = Math.floor(secs / (3600 * 24));
+const hours = Math.floor((secs % (3600 * 24)) / 3600);
+const minutes = Math.floor((secs % 3600) / 60);
+const seconds = secs % 60;
+
+
+daysEl.textContent = String(days).padStart(2, '0');
+hoursEl.textContent = String(hours).padStart(2, '0');
+minutesEl.textContent = String(minutes).padStart(2, '0');
+secondsEl.textContent = String(seconds).padStart(2, '0');
+}
+
+
+// Primera actualización y intervalo cada segundo
+updateCountdown();
+const timerInterval = setInterval(updateCountdown, 1000);
+
+
+// Accesibilidad: parar el contador cuando la página está en background (opcional)
+document.addEventListener('visibilitychange', () => {
+if (document.hidden) clearInterval(timerInterval);
+else timerInterval = setInterval(updateCountdown, 1000);
+});
+</script>
