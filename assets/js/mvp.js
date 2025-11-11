@@ -4,16 +4,43 @@ const JUGADORES_POR_PAGINA = 7;
 
 
 let todosLosJugadores = [];
+let jugadoresFiltrados = [];
 let paginaActual = 1;
 
 function calcularTotalMVPs(mvps) {
   return Object.values(mvps).reduce((sum, val) => sum + val, 0);
 }
 
+
+function filtrarJugadores(texto) {
+  texto = texto.trim().toLowerCase();
+
+  if (texto === "") {
+    jugadoresFiltrados = [...todosLosJugadores];
+  } else {
+    jugadoresFiltrados = todosLosJugadores.filter(jug => {
+      const coincideNickname = jug.nickname.toLowerCase().includes(texto);
+      const coincideID = jug.ID.toLowerCase().includes(texto);
+      const coincideTeam = jug.teamTag.toLowerCase().includes(texto);
+
+      // Buscar match: "m3", "m6", etc.
+      const coincideMatch = Object.keys(jug.mvps).some(key => 
+        key.toLowerCase() === texto && jug.mvps[key] > 0
+      );
+
+      return coincideNickname || coincideID || coincideTeam || coincideMatch;
+    });
+  }
+
+  paginaActual = 1;
+  renderPagina(paginaActual);
+}
+
+
 function renderPagina(pagina) {
   const inicio = (pagina - 1) * JUGADORES_POR_PAGINA;
   const fin = inicio + JUGADORES_POR_PAGINA;
-  const jugadoresPagina = todosLosJugadores.slice(inicio, fin);
+  const jugadoresPagina = jugadoresFiltrados.slice(inicio, fin);
 
   const container = document.getElementById('mvpRanking');
   container.innerHTML = jugadoresPagina.map((jug, idxGlobal) => {
@@ -43,11 +70,11 @@ function renderPagina(pagina) {
 
   renderPaginacion();
   document.getElementById('totalCount').textContent = 
-    `Total: ${todosLosJugadores.length} jugadores con MVPs`;
+    `Total: ${jugadoresFiltrados.length} jugadores con MVPs`;
 }
 
 function renderPaginacion() {
-  const totalPaginas = Math.ceil(todosLosJugadores.length / JUGADORES_POR_PAGINA);
+  const totalPaginas = Math.ceil(jugadoresFiltrados.length / JUGADORES_POR_PAGINA);
   const ul = document.getElementById('pagination');
   ul.innerHTML = '';
 
@@ -114,6 +141,8 @@ async function cargarYMostrarMVPs() {
       }))
       .sort((a, b) => b.totalMVPs - a.totalMVPs);
 
+      jugadoresFiltrados = [...todosLosJugadores];
+
     if (todosLosJugadores.length === 0) {
       document.getElementById('mvpRanking').innerHTML = 
         '<div class="alert alert-warning text-center">No hay MVPs registrados.</div>';
@@ -133,3 +162,7 @@ async function cargarYMostrarMVPs() {
 }
 
 document.addEventListener('DOMContentLoaded', cargarYMostrarMVPs);
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  filtrarJugadores(e.target.value);
+});
+
