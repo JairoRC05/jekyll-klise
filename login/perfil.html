@@ -1,0 +1,275 @@
+---
+layout: login
+title: Mi Perfil - Nación Unite
+permalink: /mi-perfil
+---
+
+<style>
+  .profile-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .form-group textarea {
+    height: 80px;
+    resize: vertical;
+  }
+  .btn {
+    background: #ff7300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .btn:hover { background: #e06500; }
+  #mensaje { margin-top: 15px; padding: 10px; border-radius: 4px; }
+  .exito { background: #e8f5e9; color: #2e7d32; }
+  .error { background: #ffebee; color: #d32f2f; }
+  .loading { color: #555; }
+</style>
+
+
+
+  <nav class="navbar">
+    <div class="logo">Unite Mex</div>
+
+    <!-- Contenedor dinámico para usuario -->
+    <div id="user-info" style="display: none; align-items: center; gap: 10px;">
+      <img id="nav-avatar" src="/assets/avatars/female1.webp" width="32" height="32" style="border-radius: 50%;">
+      <span id="nav-nickname"></span>
+      <!-- Opcional: mostrar ID si lo deseas -->
+      <!-- <small id="nav-id"></small> -->
+      <button onclick="firebase.auth().signOut()" style="margin-left: 10px;">Salir</button>
+    </div>
+
+    <!-- Enlace para invitados -->
+    <div id="guest-links" style="display: block;">
+      <a href="/login/sesion">Iniciar sesión</a>
+    </div>
+  </nav>
+
+<div class="profile-container">
+  <h2>Mi Perfil</h2>
+  <p id="loading">Cargando tu perfil...</p>
+  <form id="profileForm" style="display:none;">
+
+    <div class="form-group">
+      <label for="nickname">Nickname *</label>
+      <input type="text" id="nickname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mains">Main(s) *</label>
+      <select id="mains" required>
+        <option value="">Selecciona tu main</option>
+        <option value="Pikachu">Pikachu</option>
+        <option value="Blastoise">Blastoise</option>
+        <option value="Venusaur">Venusaur</option>
+        <option value="Charizard">Charizard</option>
+        <option value="Lucario">Lucario</option>
+        <option value="Absol">Absol</option>
+        <option value="Greninja">Greninja</option>
+        <option value="Talonflame">Talonflame</option>
+        <option value="Cinderace">Cinderace</option>
+        <option value="Gardevoir">Gardevoir</option>
+        <!-- Agrega más según necesites -->
+      </select>
+    </div>
+
+    <div class="form-group">
+  <label>Selecciona tu avatar</label>
+  <div id="avatarSelector" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+    <!-- Los avatares se generarán con JS -->
+  </div>
+</div>
+
+    <div class="form-group">
+      <label for="rol">Rol principal *</label>
+      <select id="rol" required>
+        <option value="">Selecciona tu rol</option>
+        <option value="ADC">ADC</option>
+        <option value="Support">Support</option>
+        <option value="Toplaner">Toplaner</option>
+        <option value="Jungle">Jungle</option>
+        <option value="Defense">Defense</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="discord">Usuario de Discord (ej: Jugador#1234) *</label>
+      <input type="text" id="discord" placeholder="nombre#0000" required>
+    </div>
+
+    <div class="form-group">
+      <label for="equipo">Estado de equipo</label>
+      <input type="text" id="equipo" placeholder="Nombre del equipo o 'Disponible'">
+    </div>
+
+    <div class="form-group">
+      <label for="partidas">Partidas jugadas</label>
+      <select id="partidas">
+        <option value="">Selecciona rango</option>
+        <option value="100">Más de 100</option>
+        <option value="500">Más de 500</option>
+        <option value="1000">Más de 1,000</option>
+        <option value="1000">Más de 3,000</option>
+        <option value="1000">Más de 5,000</option>
+        <option value="1000">Más de 7,000</option>
+        <option value="1000">Más de 9,000</option>
+        <option value="1000">Más de 10,000</option>
+        <option value="1000">Más de 15,000</option>
+        <option value="1000">Más de 20,000</option>
+        <option value="1000">Más de 25,000</option>
+        <option value="1000">Más de 30,000</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cumpleaños">Fecha de cumpleaños</label>
+      <input type="date" id="cumpleaños">
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Acerca de mí</label>
+      <textarea id="descripcion" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+    </div>
+
+    <button type="submit" class="btn">Guardar cambios</button>
+  </form>
+  <p id="mensaje"></p>
+</div>
+
+
+<script>
+
+
+  // 🖼️ Lista de avatares
+  const AVATARES = [
+    'female1', 'female2',
+    'male1', 'male2',
+    'female3', 'male3'
+  ];
+
+  const loadingEl = document.getElementById('loading');
+  const formEl = document.getElementById('profileForm');
+  const mensajeEl = document.getElementById('mensaje');
+  let avatarSeleccionado = 'female1'; // valor por defecto
+
+  // Generar avatares
+  function renderAvatares(seleccionado = 'female1') {
+    const container = document.getElementById('avatarSelector');
+    container.innerHTML = '';
+    AVATARES.forEach(nombre => {
+      const img = document.createElement('img');
+      img.src = `/assets/avatars/${nombre}.webp`;
+      img.alt = nombre;
+      img.style.width = '60px';
+      img.style.height = '60px';
+      img.style.cursor = 'pointer';
+      img.style.border = (nombre === seleccionado) ? '2px solid #ff7300' : '2px solid transparent';
+      img.style.borderRadius = '8px';
+      img.onclick = () => {
+        avatarSeleccionado = nombre;
+        renderAvatares(nombre); // actualizar bordes
+      };
+      container.appendChild(img);
+    });
+  }
+
+  // Cargar perfil
+  auth.onAuthStateChanged(user => {
+    if (!user) {
+      window.location.href = '/login/';
+      return;
+    }
+
+    db.collection('usuarios').doc(user.uid).get()
+      .then(doc => {
+        loadingEl.style.display = 'none';
+        formEl.style.display = 'block';
+
+        if (doc.exists) {
+          const data = doc.data();
+          document.getElementById('nickname').value = data.nickname || '';
+          document.getElementById('mains').value = data.mains || '';
+          document.getElementById('rol').value = data.rol || '';
+          document.getElementById('discord').value = data.discord || '';
+          document.getElementById('equipo').value = data.equipo || '';
+          document.getElementById('partidas').value = data.partidas || '';
+          if (data.cumpleaños) {
+            const fecha = new Date(data.cumpleaños.seconds * 1000);
+            document.getElementById('cumpleaños').value = fecha.toISOString().split('T')[0];
+          }
+          document.getElementById('descripcion').value = data.descripcion || '';
+
+          // Avatar
+          const avatarGuardado = data.avatar || 'female1';
+          avatarSeleccionado = avatarGuardado;
+          renderAvatares(avatarGuardado);
+        } else {
+          renderAvatares('female1');
+        }
+      })
+      .catch(err => {
+        mensajeEl.className = 'error';
+        mensajeEl.textContent = 'Error al cargar tu perfil: ' + err.message;
+      });
+  });
+
+  // Guardar
+  document.getElementById('profileForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const user = auth.currentUser;
+    if (!user) return;
+
+    const updates = {
+      nickname: document.getElementById('nickname').value.trim(),
+      mains: document.getElementById('mains').value,
+      rol: document.getElementById('rol').value,
+      discord: document.getElementById('discord').value.trim(),
+      equipo: document.getElementById('equipo').value.trim() || 'Disponible',
+      partidas: document.getElementById('partidas').value,
+      descripcion: document.getElementById('descripcion').value.trim(),
+      avatar: avatarSeleccionado  // 👈 Guardamos SOLO el nombre
+    };
+
+    const cumple = document.getElementById('cumpleaños').value;
+    if (cumple) {
+      updates.cumpleaños = new Date(cumple);
+    }
+
+    db.collection('usuarios').doc(user.uid).update(updates)
+      .then(() => {
+        mensajeEl.className = 'exito';
+        mensajeEl.textContent = '¡Perfil actualizado!';
+        setTimeout(() => mensajeEl.textContent = '', 3000);
+      })
+      .catch(err => {
+        mensajeEl.className = 'error';
+        mensajeEl.textContent = 'Error: ' + err.message;
+      });
+  });
+
+</script>

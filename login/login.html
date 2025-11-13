@@ -1,38 +1,97 @@
 ---
-layout: loginDefault
+layout: login
 title: Iniciar sesión
-permalink: /login
----
+permalink: /iniciar-sesion
+
+
+
+<style>
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7300;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .form-container button:hover {
+    background-color: #e06500;
+  }
+  #mensaje {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  .error { color: #d32f2f; background-color: #ffebee; }
+  .exito { color: #2e7d32; background-color: #e8f5e9; }
+</style>
 
 <div class="form-container">
-  <h2>Iniciar sesión</h2>
+  <h2>Iniciar Sesión</h2>
   <form id="loginForm">
-    <input type="email" id="email" placeholder="Correo electrónico" required /><br />
-    <input type="password" id="password" placeholder="Contraseña" required /><br />
-    <button type="submit">Iniciar sesión</button>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button type="submit">Entrar</button>
   </form>
-  <p id="message"></p>
-  <p>¿No tienes cuenta? <a href="/register/">Regístrate aquí</a></p>
+  <p id="mensaje"></p>
+  <p style="text-align: center; margin-top: 15px;">
+    ¿No tienes cuenta? <a href="/registrar">Regístrate aquí</a>
+  </p>
 </div>
 
-<script>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const message = document.getElementById('message');
 
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      message.style.color = "green";
-      message.textContent = "¡Bienvenido!";
-      setTimeout(() => {
-        window.location.href = "/dashboard/";
-      }, 1000);
-    })
-    .catch((error) => {
-      message.style.color = "red";
-      message.textContent = "Error: " + error.message;
-    });
-});
+<script>
+
+
+ 
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const mensajeEl = document.getElementById('mensaje');
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // ✅ Inicio de sesión exitoso
+        mensajeEl.className = 'exito';
+        mensajeEl.textContent = '¡Inicio de sesión exitoso! Redirigiendo...';
+
+        // Opcional: redirigir a página protegida
+        setTimeout(() => {
+          window.location.href = '/mi-perfil'; // o '/dashboard/' si tienes una
+        }, 1500);
+      })
+      .catch((error) => {
+        // ❌ Error
+        mensajeEl.className = 'error';
+        let msg = error.message;
+        if (msg.includes('user-not-found')) {
+          msg = 'No existe una cuenta con ese correo.';
+        } else if (msg.includes('wrong-password')) {
+          msg = 'Contraseña incorrecta.';
+        } else if (msg.includes('invalid-email')) {
+          msg = 'Formato de correo inválido.';
+        }
+        mensajeEl.textContent = msg;
+      });
+  });
 </script>
