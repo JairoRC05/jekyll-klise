@@ -200,7 +200,7 @@ permalink: /mi-perfil
   // Cargar perfil
   auth.onAuthStateChanged(user => {
     if (!user) {
-      window.location.href = '/login/';
+      window.location.href = '/iniciar-sesion';
       return;
     }
 
@@ -252,7 +252,7 @@ permalink: /mi-perfil
       equipo: document.getElementById('equipo').value.trim() || 'Disponible',
       partidas: document.getElementById('partidas').value,
       descripcion: document.getElementById('descripcion').value.trim(),
-      avatar: avatarSeleccionado  // 👈 Guardamos SOLO el nombre
+      avatar: avatarSeleccionado  
     };
 
     const cumple = document.getElementById('cumpleaños').value;
