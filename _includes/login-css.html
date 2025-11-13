@@ -1,0 +1,293 @@
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #f1fdfd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-container {
+  width: 900px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.24);
+  display: flex;
+  background-color: #f1fdfd;
+}
+
+.login-panel {
+  display: flex;
+  width: 100%;
+}
+
+.login-left {
+  flex: 1;
+  background: url('/assets/backgrounds/backdrop.webp') center/cover no-repeat;
+  position: relative;
+}
+
+.login-left .overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.login-left h2 {
+  font-size: 22px;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.login-left h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.login-left h1 span {
+  color: #FFD600;
+}
+
+.login-left p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.login-right {
+  flex: 1;
+  background-color: #edebf0;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #070707;
+}
+
+.login-right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-right input {
+  padding: 12px 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #000000;
+  outline: none;
+  width: 100%;
+}
+
+.login-right input:focus {
+  border: 1px solid #ff6b10;
+}
+
+
+
+.forgot {
+  display: block;
+  text-align: right;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  color: #fff;
+}
+
+.new {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #5f5f5f;
+}
+
+.new a {
+  color: #ff6b10;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-login {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.social-login p {
+  font-size: 13px;
+  opacity: 0.8;
+  color: #5f5f5f;
+  margin-bottom: 10px;
+}
+
+.icons i {
+  font-size: 20px;
+  margin: 0 8px;
+  color: #ff6b10;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+/* 📱 --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .login-container {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+    padding: 30px 0;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .login-panel {
+    flex-direction: column;
+  }
+
+  .login-left {
+    height: 220px;
+    flex: none;
+  }
+
+  .login-left .overlay {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .login-left h2 {
+    font-size: 18px;
+  }
+
+  .login-left h1 {
+    font-size: 30px;
+  }
+
+  .login-right {
+    padding: 30px 25px;
+  }
+
+  .login-right h2 {
+    font-size: 24px;
+  }
+
+  .login-right input, .login-right button {
+    font-size: 16px;
+  }
+
+  .social-login {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left h1 {
+    font-size: 26px;
+  }
+
+  .login-right {
+    padding: 25px 20px;
+  }
+
+  .login-right h2 {
+    font-size: 22px;
+  }
+
+  .icons i {
+    font-size: 18px;
+  }
+}
+
+
+
+
+.btn-unite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 40px;
+  background:#FF6B00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 28px;
+  border: 2px solid #f8954d;
+  border-radius: 999px;
+  box-shadow: 0 3px 0 #C85600, 0 0px 0px rgba(255, 107, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-unite img {
+  width: 50px;
+  height: 50px;
+  right: -5px;
+  position: absolute;
+  opacity: 0.3;
+  rotate: -30deg;
+}
+
+.btn-unite:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-unite:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #C85600;
+}
+
+
+.btn-unite.small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.btn-unite.small img {
+  width: 18px;
+  height: 18px;
+}
+
+
+</style>
