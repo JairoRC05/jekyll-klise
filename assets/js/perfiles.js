@@ -140,6 +140,7 @@ auth.onAuthStateChanged(user => {
                 const data = doc.data();
                 const planUsuario = data.plan || 'free';
                 const esFree = planUsuario === 'free';
+                const esStreamer = (planUsuario === 'streamer');
 
                 // Campos editables
                 document.getElementById('nickname').value = data.nickname || '';
@@ -148,11 +149,20 @@ auth.onAuthStateChanged(user => {
                 document.getElementById('discord').value = data.discord || '';
                 document.getElementById('equipo').value = data.equipo || '';
                 document.getElementById('partidas').value = data.partidas || '';
+                document.getElementById('saldo-monedas').textContent = data.monedas || 0;
+
+
+
+                document.getElementById('descripcion').value = data.descripcion || '';
+
                 if (data.cumpleaños) {
                     const fecha = new Date(data.cumpleaños.seconds * 1000);
                     document.getElementById('cumpleaños').value = fecha.toISOString().split('T')[0];
                 }
-                document.getElementById('descripcion').value = data.descripcion || '';
+
+                document.getElementById('redes-section').style.display = esFree ? 'none' : 'block';
+                document.getElementById('stream-section').style.display = esStreamer ? 'block' : 'none';
+                document.getElementById('streamer-extra').style.display = esStreamer ? 'block' : 'none';
 
                 // Avatar
                 avatarSeleccionado = data.avatar || 'female1';
@@ -196,8 +206,6 @@ auth.onAuthStateChanged(user => {
                 // Mostrar/ocultar secciones
                 mostrarSeccionesPorPlan(planUsuario);
 
-                // 🪙 Monedas (solo lectura)
-                document.getElementById('saldo-monedas').textContent = data.monedas || 0;
             } else {
                 renderAvatares('female1');
                 document.getElementById('saldo-monedas').textContent = 0;
@@ -208,13 +216,14 @@ auth.onAuthStateChanged(user => {
             mensajeEl.textContent = 'Error al cargar tu perfil: ' + err.message;
         });
 
-    // Cargar historial de monedas
+
+    // Cargar historial de monedas (sin error si no existe)
     const historialRef = db.collection('usuarios').doc(user.uid).collection('historial_monedas');
     historialRef.orderBy('fecha', 'desc').limit(10).get()
         .then(snapshot => {
             const historialEl = document.getElementById('historial-monedas');
             if (snapshot.empty) {
-                historialEl.innerHTML = '<p><em>No hay transacciones aún.</em></p>';
+                historialEl.innerHTML = '<p><em>No tienes transacciones aún.</em></p>';
                 return;
             }
 
@@ -235,10 +244,10 @@ auth.onAuthStateChanged(user => {
             historialEl.innerHTML = html;
         })
         .catch(err => {
+            // Solo mostrar error si es inesperado (ej: permisos)
             console.warn("No se pudo cargar historial:", err);
-            document.getElementById('historial-monedas').innerHTML = '<p><em>Error al cargar historial.</em></p>';
+            document.getElementById('historial-monedas').innerHTML = '<p><em>No disponible.</em></p>';
         });
-
 
 });
 
