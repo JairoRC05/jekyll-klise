@@ -138,9 +138,8 @@ auth.onAuthStateChanged(user => {
             if (doc.exists) {
 
                 const data = doc.data();
-                     const planUsuario = data.plan || 'free';
+                const planUsuario = data.plan || 'free';
                 const esFree = planUsuario === 'free';
-
 
                 // Campos editables
                 document.getElementById('nickname').value = data.nickname || '';
@@ -171,8 +170,6 @@ auth.onAuthStateChanged(user => {
 
                 document.getElementById('trayectoria-section').style.display =
                     (data.trayectoria && data.trayectoria.length) ? 'block' : 'none';
-
-           
 
                 // Redes sociales
                 if (!esFree) {
@@ -211,13 +208,13 @@ auth.onAuthStateChanged(user => {
             mensajeEl.textContent = 'Error al cargar tu perfil: ' + err.message;
         });
 
-    // Cargar historial de monedas (sin error si no existe)
+    // Cargar historial de monedas
     const historialRef = db.collection('usuarios').doc(user.uid).collection('historial_monedas');
     historialRef.orderBy('fecha', 'desc').limit(10).get()
         .then(snapshot => {
             const historialEl = document.getElementById('historial-monedas');
             if (snapshot.empty) {
-                historialEl.innerHTML = '<p><em>No tienes transacciones aún.</em></p>';
+                historialEl.innerHTML = '<p><em>No hay transacciones aún.</em></p>';
                 return;
             }
 
@@ -238,9 +235,8 @@ auth.onAuthStateChanged(user => {
             historialEl.innerHTML = html;
         })
         .catch(err => {
-            // Solo mostrar error si es inesperado (ej: permisos)
             console.warn("No se pudo cargar historial:", err);
-            document.getElementById('historial-monedas').innerHTML = '<p><em>No disponible.</em></p>';
+            document.getElementById('historial-monedas').innerHTML = '<p><em>Error al cargar historial.</em></p>';
         });
 
 
