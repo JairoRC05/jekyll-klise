@@ -1,0 +1,126 @@
+---
+layout: login
+title: Admin
+permalink: /admin-user
+---
+
+<style>
+  .admin-container { max-width: 600px; margin: 30px auto; padding: 20px; }
+  input, button, select { padding: 8px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+  .log { background: #f5f5f5; padding: 10px; margin-top: 15px; border-radius: 4px; }
+</style>
+
+<div class="admin-container">
+  <h2>Dashboard de Monedas</h2>
+
+  <div>
+    <input type="text" id="busqueda" placeholder="Nickname o ID de juego">
+    <button onclick="buscarJugador()">Buscar jugador</button>
+  </div>
+
+  <div id="resultado" style="display:none; margin-top:20px; padding:15px; border:1px solid #ccc; border-radius:6px;">
+    <p><strong>Jugador:</strong> <span id="nombre"></span></p>
+    <p><strong>Monedas actuales:</strong> <span id="saldo"></span></p>
+    <div style="margin-top:10px;">
+      <input type="number" id="cantidad" placeholder="Cantidad (positiva o negativa)" min="-1000" max="1000">
+      <input type="text" id="motivo" placeholder="Motivo (ej: Liga Abril)">
+      <button onclick="otorgarMonedas()">Actualizar monedas</button>
+    </div>
+  </div>
+
+  <div id="mensaje"></div>
+</div>
+
+
+
+<script>
+ 
+
+  let jugadorSeleccionado = null;
+
+  // Verificar que eres admin
+  auth.onAuthStateChanged(user => {
+    if (!user || user.uid !== '3PLlmGJbrucsk87qhBG7xNpD3rJ2') {
+      alert("Acceso denegado. Solo para administradores.");
+      window.location.href = '/iniciar-sesion';
+    }
+  });
+
+  async function buscarJugador() {
+    const query = document.getElementById('busqueda').value.trim();
+    if (!query) return;
+
+    try {
+      // Buscar por nickname o id_juego
+      const snapshot = await db.collection('usuarios')
+        .where('nickname', '==', query)
+        .limit(1)
+        .get();
+
+      let doc;
+      if (snapshot.empty) {
+        const snapshot2 = await db.collection('usuarios')
+          .where('id_juego', '==', query)
+          .limit(1)
+          .get();
+        doc = !snapshot2.empty ? snapshot2.docs[0] : null;
+      } else {
+        doc = snapshot.docs[0];
+      }
+
+      if (doc) {
+        const data = doc.data();
+        jugadorSeleccionado = { id: doc.id, ...data };
+        document.getElementById('nombre').textContent = data.nickname;
+        document.getElementById('saldo').textContent = data.monedas || 0;
+        document.getElementById('resultado').style.display = 'block';
+        document.getElementById('mensaje').textContent = '';
+      } else {
+        document.getElementById('mensaje').textContent = 'Jugador no encontrado.';
+        document.getElementById('resultado').style.display = 'none';
+      }
+    } catch (err) {
+      console.error(err);
+      document.getElementById('mensaje').textContent = 'Error al buscar: ' + err.message;
+    }
+  }
+
+  async function otorgarMonedas() {
+    if (!jugadorSeleccionado) return;
+
+    const cantidad = parseInt(document.getElementById('cantidad').value);
+    const motivo = document.getElementById('motivo').value.trim();
+
+    if (isNaN(cantidad)) {
+      alert("Ingresa una cantidad válida.");
+      return;
+    }
+    if (!motivo) {
+      alert("Ingresa un motivo.");
+      return;
+    }
+
+    try {
+      const nuevoSaldo = (jugadorSeleccionado.monedas || 0) + cantidad;
+      await db.collection('usuarios').doc(jugadorSeleccionado.id).update({
+        monedas: nuevoSaldo
+      });
+
+      // Opcional: guardar historial en subcolección
+      await db.collection('usuarios').doc(jugadorSeleccionado.id).collection('historial_monedas').add({
+        cantidad: cantidad,
+        motivo: motivo,
+        admin: 'YoungForze',
+        fecha: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      document.getElementById('saldo').textContent = nuevoSaldo;
+      document.getElementById('mensaje').innerHTML = `<strong>¡Monedas actualizadas!</strong> ${cantidad > 0 ? '+' : ''}${cantidad}`;
+      document.getElementById('cantidad').value = '';
+      document.getElementById('motivo').value = '';
+    } catch (err) {
+      console.error(err);
+      document.getElementById('mensaje').textContent = 'Error: ' + err.message;
+    }
+  }
+</script>

@@ -4,6 +4,9 @@ title: Mi Perfil - Nación Unite
 permalink: /mi-perfil
 ---
 
+
+
+
 <style>
   .profile-container {
     max-width: 600px;
@@ -33,6 +36,16 @@ permalink: /mi-perfil
     height: 80px;
     resize: vertical;
   }
+  .monedas-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7300;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff8e1;
+    border-radius: 6px;
+  }
   .btn {
     background: #ff7300;
     color: white;
@@ -41,42 +54,49 @@ permalink: /mi-perfil
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%;
   }
   .btn:hover { background: #e06500; }
   #mensaje { margin-top: 15px; padding: 10px; border-radius: 4px; }
   .exito { background: #e8f5e9; color: #2e7d32; }
   .error { background: #ffebee; color: #d32f2f; }
-  .loading { color: #555; }
+  #avatarSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  #avatarSelector img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+  }
+  #avatarSelector img.selected {
+    border: 2px solid #ff7300;
+  }
 </style>
-
-
-
-  <nav class="navbar">
-    <div class="logo">Unite Mex</div>
-
-    <!-- Contenedor dinámico para usuario -->
-    <div id="user-info" style="display: none; align-items: center; gap: 10px;">
-      <img id="nav-avatar" src="/assets/avatars/female1.webp" width="32" height="32" style="border-radius: 50%;">
-      <span id="nav-nickname"></span>
-      <!-- Opcional: mostrar ID si lo deseas -->
-      <!-- <small id="nav-id"></small> -->
-      <button onclick="firebase.auth().signOut()" style="margin-left: 10px;">Salir</button>
-    </div>
-
-    <!-- Enlace para invitados -->
-    <div id="guest-links" style="display: block;">
-      <a href="/login/sesion">Iniciar sesión</a>
-    </div>
-  </nav>
 
 <div class="profile-container">
   <h2>Mi Perfil</h2>
+
+  <!-- Mostrar monedas arriba del formulario -->
+  <div class="monedas-display">
+    🪙 <span id="saldo-monedas">0</span> monedas
+  </div>
+
   <p id="loading">Cargando tu perfil...</p>
   <form id="profileForm" style="display:none;">
 
     <div class="form-group">
       <label for="nickname">Nickname *</label>
       <input type="text" id="nickname" required>
+    </div>
+
+    <div class="form-group">
+      <label>Avatar</label>
+      <div id="avatarSelector"></div>
     </div>
 
     <div class="form-group">
@@ -93,16 +113,8 @@ permalink: /mi-perfil
         <option value="Talonflame">Talonflame</option>
         <option value="Cinderace">Cinderace</option>
         <option value="Gardevoir">Gardevoir</option>
-        <!-- Agrega más según necesites -->
       </select>
     </div>
-
-    <div class="form-group">
-  <label>Selecciona tu avatar</label>
-  <div id="avatarSelector" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
-    <!-- Los avatares se generarán con JS -->
-  </div>
-</div>
 
     <div class="form-group">
       <label for="rol">Rol principal *</label>
@@ -128,20 +140,20 @@ permalink: /mi-perfil
 
     <div class="form-group">
       <label for="partidas">Partidas jugadas</label>
-      <select id="partidas">
+       <select id="partidas">
         <option value="">Selecciona rango</option>
         <option value="100">Más de 100</option>
         <option value="500">Más de 500</option>
         <option value="1000">Más de 1,000</option>
-        <option value="1000">Más de 3,000</option>
-        <option value="1000">Más de 5,000</option>
-        <option value="1000">Más de 7,000</option>
-        <option value="1000">Más de 9,000</option>
-        <option value="1000">Más de 10,000</option>
-        <option value="1000">Más de 15,000</option>
-        <option value="1000">Más de 20,000</option>
-        <option value="1000">Más de 25,000</option>
-        <option value="1000">Más de 30,000</option>
+        <option value="3000">Más de 3,000</option>
+        <option value="5000">Más de 5,000</option>
+        <option value="7000">Más de 7,000</option>
+        <option value="9000">Más de 9,000</option>
+        <option value="10000">Más de 10,000</option>
+        <option value="1500">Más de 15,000</option>
+        <option value="20000">Más de 20,000</option>
+        <option value="25000">Más de 25,000</option>
+        <option value="30000">Más de 30,000</option>
       </select>
     </div>
 
@@ -160,23 +172,22 @@ permalink: /mi-perfil
   <p id="mensaje"></p>
 </div>
 
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
 <script>
 
-
-  // 🖼️ Lista de avatares
-  const AVATARES = [
-    'female1', 'female2',
-    'male1', 'male2',
-    'female3', 'male3'
-  ];
+    
+  const AVATARES = ['female1','female2','male1','male2','pikachu','blastoise','venusaur','charizard'];
+  let avatarSeleccionado = 'female1';
 
   const loadingEl = document.getElementById('loading');
   const formEl = document.getElementById('profileForm');
   const mensajeEl = document.getElementById('mensaje');
-  let avatarSeleccionado = 'female1'; // valor por defecto
 
-  // Generar avatares
+  // Renderizar avatares
   function renderAvatares(seleccionado = 'female1') {
     const container = document.getElementById('avatarSelector');
     container.innerHTML = '';
@@ -184,23 +195,19 @@ permalink: /mi-perfil
       const img = document.createElement('img');
       img.src = `/assets/avatars/${nombre}.webp`;
       img.alt = nombre;
-      img.style.width = '60px';
-      img.style.height = '60px';
-      img.style.cursor = 'pointer';
-      img.style.border = (nombre === seleccionado) ? '2px solid #ff7300' : '2px solid transparent';
-      img.style.borderRadius = '8px';
+      img.className = (nombre === seleccionado) ? 'selected' : '';
       img.onclick = () => {
         avatarSeleccionado = nombre;
-        renderAvatares(nombre); // actualizar bordes
+        renderAvatares(nombre);
       };
       container.appendChild(img);
     });
   }
 
-  // Cargar perfil
+  // Escuchar autenticación
   auth.onAuthStateChanged(user => {
     if (!user) {
-      window.location.href = '/iniciar-sesion';
+      window.location.href = '/login/';
       return;
     }
 
@@ -211,6 +218,8 @@ permalink: /mi-perfil
 
         if (doc.exists) {
           const data = doc.data();
+
+          // Campos editables
           document.getElementById('nickname').value = data.nickname || '';
           document.getElementById('mains').value = data.mains || '';
           document.getElementById('rol').value = data.rol || '';
@@ -224,11 +233,14 @@ permalink: /mi-perfil
           document.getElementById('descripcion').value = data.descripcion || '';
 
           // Avatar
-          const avatarGuardado = data.avatar || 'female1';
-          avatarSeleccionado = avatarGuardado;
-          renderAvatares(avatarGuardado);
+          avatarSeleccionado = data.avatar || 'female1';
+          renderAvatares(avatarSeleccionado);
+
+          // 🪙 Monedas (solo lectura)
+          document.getElementById('saldo-monedas').textContent = data.monedas || 0;
         } else {
           renderAvatares('female1');
+          document.getElementById('saldo-monedas').textContent = 0;
         }
       })
       .catch(err => {
@@ -237,7 +249,7 @@ permalink: /mi-perfil
       });
   });
 
-  // Guardar
+  // Guardar cambios
   document.getElementById('profileForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -252,7 +264,7 @@ permalink: /mi-perfil
       equipo: document.getElementById('equipo').value.trim() || 'Disponible',
       partidas: document.getElementById('partidas').value,
       descripcion: document.getElementById('descripcion').value.trim(),
-      avatar: avatarSeleccionado  
+      avatar: avatarSeleccionado
     };
 
     const cumple = document.getElementById('cumpleaños').value;
@@ -271,5 +283,4 @@ permalink: /mi-perfil
         mensajeEl.textContent = 'Error: ' + err.message;
       });
   });
-
 </script>
