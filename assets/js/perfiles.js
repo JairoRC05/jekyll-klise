@@ -249,12 +249,14 @@ auth.onAuthStateChanged(user => {
 });
 
 
+// Guardar cambios
 document.getElementById('profileForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const user = auth.currentUser;
     if (!user) return;
 
+    // === 1. Recopilar datos PRIVADOS ===
     const updatesPrivado = {
         nickname: document.getElementById('nickname').value.trim(),
         mains: document.getElementById('mains').value,
@@ -264,60 +266,70 @@ document.getElementById('profileForm').addEventListener('submit', function (e) {
         partidas: document.getElementById('partidas').value,
         descripcion: document.getElementById('descripcion').value.trim(),
         avatar: avatarSeleccionado,
-        plan: planUsuario
+        plan: planUsuario // asegúrate de que 'planUsuario' esté definido
     };
 
+    // Fecha de cumpleaños
     const cumple = document.getElementById('cumpleaños').value;
     if (cumple) {
-        updates.cumpleaños = new Date(cumple);
+        updatesPrivado.cumpleaños = new Date(cumple);
     }
 
-
-
+    // Redes sociales (solo si no es free)
     if (planUsuario !== 'free') {
-        updates.instagram = document.getElementById('instagram')?.value.trim() || '';
-        updates.x = document.getElementById('x')?.value.trim() || '';
-        updates.fac
-        ebook = document.getElementById('facebook')?.value.trim() || '';
+        updatesPrivado.instagram = document.getElementById('instagram')?.value.trim() || '';
+        updatesPrivado.x = document.getElementById('x')?.value.trim() || '';
+        updatesPrivado.facebook = document.getElementById('facebook')?.value.trim() || '';
     }
 
-
-
+    // Datos de streamer
     if (planUsuario === 'streamer') {
-        updates.twitch = document.getElementById('twitch')?.value.trim() || '';
-        updates.youtube = document.getElementById('youtube')?.value.trim() || '';
-        updates.kick = document.getElementById('kick')?.value.trim() || '';
-        updates.horario = document.getElementById('horario')?.value.trim() || '';
-        updates.seguidores = parseInt(document.getElementById('seguidores')?.value) || 0;
-        updates.clip1 = document.getElementById('clip1')?.value.trim() || '';
-        updates.clip2 = document.getElementById('clip2')?.value.trim() || '';
-        updates.clip3 = document.getElementById('clip3')?.value.trim() || '';
-        updates.clip_yt = document.getElementById('clip_yt')?.value.trim() || '';
-        updates.categorias = document.getElementById('categorias')?.value.trim() || '';
+        updatesPrivado.twitch = document.getElementById('twitch')?.value.trim() || '';
+        updatesPrivado.youtube = document.getElementById('youtube')?.value.trim() || '';
+        updatesPrivado.kick = document.getElementById('kick')?.value.trim() || '';
+        updatesPrivado.horario = document.getElementById('horario')?.value.trim() || '';
+        updatesPrivado.seguidores = parseInt(document.getElementById('seguidores')?.value) || 0;
+        updatesPrivado.clip1 = document.getElementById('clip1')?.value.trim() || '';
+        updatesPrivado.clip2 = document.getElementById('clip2')?.value.trim() || '';
+        updatesPrivado.clip3 = document.getElementById('clip3')?.value.trim() || '';
+        updatesPrivado.clip_yt = document.getElementById('clip_yt')?.value.trim() || '';
+        updatesPrivado.categorias = document.getElementById('categorias')?.value.trim() || '';
     }
 
-
-
+    // Picks
     const picks = [];
     document.querySelectorAll('#picks-container input').forEach(input => {
         if (input.value.trim()) picks.push(input.value.trim());
     });
-    updates.picks = picks;
+    updatesPrivado.picks = picks;
 
+    // === 2. Guardar en Firestore (encadenado) ===
     db.collection('usuarios').doc(user.uid).update(updatesPrivado)
         .then(() => {
 
             const updatesPublico = {
+                // Siempre públicos (para todos los planes)
                 nickname: updatesPrivado.nickname,
                 avatar: updatesPrivado.avatar,
                 rol: updatesPrivado.rol,
                 equipo: updatesPrivado.equipo,
+                picks: updatesPrivado.picks || [],
+                mains: updatesPrivado.mains || '',
+                partidas: updatesPrivado.partidas || '',
+                trayectoria: updatesPrivado.trayectoria || [],
+                logros: updatesPrivado.logros || [],
+                discord: updatesPrivado.discord || '',        
+                id_juego: updatesPrivado.id_juego || '',     
+                descripcion: updatesPrivado.descripcion || '', 
+                instagram: planUsuario !== 'free' ? (updatesPrivado.instagram || '') : '',
+                x: planUsuario !== 'free' ? (updatesPrivado.x || '') : '',
+                facebook: planUsuario !== 'free' ? (updatesPrivado.facebook || '') : '',
                 plan: planUsuario
             };
             return db.collection('jugadores_publicos').doc(user.uid).set(updatesPublico);
         })
         .then(() => {
-
+            // Éxito
             mensajeEl.className = 'exito';
             mensajeEl.textContent = '¡Perfil actualizado!';
             setTimeout(() => mensajeEl.textContent = '', 3000);
@@ -325,7 +337,6 @@ document.getElementById('profileForm').addEventListener('submit', function (e) {
         .catch((err) => {
             console.error("Error al guardar:", err);
             mensajeEl.className = 'error';
-            mensajeEl.textContent = 'Error: ' + (err.message || 'No se pudo guardar.');
+            mensajeEl.textContent = 'Error: ' + (err.message || 'No se pudo actualizar.');
         });
-
 });

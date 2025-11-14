@@ -57,56 +57,80 @@ permalink: /registro
 
 
 <script type="module">
-  document.getElementById('registroForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+document.getElementById('registroForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const nickname = document.getElementById('nickname').value;
-    const idJuego = document.getElementById('idJuego').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const nickname = document.getElementById('nickname').value;
+  const idJuego = document.getElementById('idJuego').value.trim();
 
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
+  // === 1. Verificar si el ID de juego ya existe ===
+  firebase.firestore().collection('jugadores_publicos')
+    .where('id_juego', '==', idJuego)
+    .limit(1)
+    .get()
+    .then(snapshot => {
+      if (!snapshot.empty) {
+       
+        document.getElementById('mensaje').textContent = 
+            'Este ID de juego ya está registrado. <a href="/iniciar-sesion">¿Iniciar sesión?</a>';
+        return;
+      }
 
-        const datosPrivado = {
-          email: email,
-          nickname: nickname,
-          id_juego: idJuego,
-          plan: "free",
-          monedas: 0,
-          logros: [],
-          trayectoria: [],
-          equipo: "Disponible",
-          createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        };
+      // === 2. Registrar en Firebase Auth ===
+      return firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
 
-        const datosPublico = {
-          nickname: nickname,
-          avatar: "female1",
-          rol: "",
-          equipo: "Disponible",
-          plan: "free"
-        };
+          // Datos privados
+          const datosPrivado = {
+            email: email,
+            nickname: nickname,
+            id_juego: idJuego,
+            plan: "free",
+            monedas: 0,
+            logros: [],
+            trayectoria: [],
+            equipo: "Disponible",
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          };
 
-        // Guardar documento privado
-        return firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado)
-          .then(() => {
-            // Luego guardar documento público
-            return firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
-          });
-      })
-      .then(() => {
-        // Éxito total
-        document.getElementById('mensaje').style.color = 'green';
-        document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
-        setTimeout(() => {
-          window.location.href = '/mi-perfil';
-        }, 2000);
-      })
-      .catch((error) => {
-        document.getElementById('mensaje').textContent = error.message;
-      });
+          // Datos públicos
+          const datosPublico = {
+            nickname: nickname,
+            avatar: "female1",
+            rol: "",
+            equipo: "Disponible",
+            discord: "",
+            id_juego: idJuego,
+            descripcion: "",
+            picks: [],
+            mains: "",
+            partidas: "",
+            trayectoria: [],
+            logros: [],
+            plan: "free"
+          };
 
-  });
+          // Guardar ambos
+          return firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado)
+            .then(() => {
+              return firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
+            });
+        })
+        .then(() => {
+          // ✅ Éxito
+          document.getElementById('mensaje').style.color = 'green';
+          document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
+          setTimeout(() => {
+            window.location.href = '/mi-perfil/';
+          }, 2000);
+        });
+    })
+    .catch(error => {
+      // Manejo de errores (correo duplicado, contraseña débil, etc.)
+      document.getElementById('mensaje').textContent = error.message;
+    });
+});
 </script>
