@@ -119,7 +119,7 @@ function mostrarSeccionesPorPlan(plan) {
 }
 
 
-// Escuchar autenticación
+
 auth.onAuthStateChanged(user => {
 
 
@@ -251,14 +251,14 @@ auth.onAuthStateChanged(user => {
 
 });
 
-// Guardar cambios
+
 document.getElementById('profileForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const user = auth.currentUser;
     if (!user) return;
 
-    const updates = {
+    const updatesPrivado = {
         nickname: document.getElementById('nickname').value.trim(),
         mains: document.getElementById('mains').value,
         rol: document.getElementById('rol').value,
@@ -266,25 +266,26 @@ document.getElementById('profileForm').addEventListener('submit', function (e) {
         equipo: document.getElementById('equipo').value.trim() || 'Disponible',
         partidas: document.getElementById('partidas').value,
         descripcion: document.getElementById('descripcion').value.trim(),
-        avatar: avatarSeleccionado
+        avatar: avatarSeleccionado,
+        plan: planUsuario
     };
 
-    // Siempre guardar picks
-    const picks = [];
-    document.querySelectorAll('#picks-container input').forEach(input => {
-        if (input.value.trim()) picks.push(input.value.trim());
-    });
-    updates.picks = picks;
-
-    // Solo guardar redes si no es free
-    if (planUsuario !== 'free') {
-        updates.instagram = document.getElementById('instagram')?.value.trim() || '';
-        updates.x = document.getElementById('x')?.value.trim() || '';
-        updates.facebook = document.getElementById('facebook')?.value.trim() || '';
+    const cumple = document.getElementById('cumpleaños').value;
+    if (cumple) {
+        updates.cumpleaños = new Date(cumple);
     }
 
 
-    // Solo guardar datos de streamer si es streamer
+
+    if (planUsuario !== 'free') {
+        updates.instagram = document.getElementById('instagram')?.value.trim() || '';
+        updates.x = document.getElementById('x')?.value.trim() || '';
+        updates.fac
+        ebook = document.getElementById('facebook')?.value.trim() || '';
+    }
+
+
+
     if (planUsuario === 'streamer') {
         updates.twitch = document.getElementById('twitch')?.value.trim() || '';
         updates.youtube = document.getElementById('youtube')?.value.trim() || '';
@@ -298,19 +299,38 @@ document.getElementById('profileForm').addEventListener('submit', function (e) {
         updates.categorias = document.getElementById('categorias')?.value.trim() || '';
     }
 
-    const cumple = document.getElementById('cumpleaños').value;
-    if (cumple) {
-        updates.cumpleaños = new Date(cumple);
+
+
+    const picks = [];
+    document.querySelectorAll('#picks-container input').forEach(input => {
+        if (input.value.trim()) picks.push(input.value.trim());
+    });
+    updates.picks = picks;
+
+    try {
+        // === 2. Guardar en documento PRIVADO ===
+        db.collection('usuarios').doc(user.uid).update(updatesPrivado);
+
+        // === 3. Preparar y guardar en documento PÚBLICO ===
+        const updatesPublico = {
+            nickname: updatesPrivado.nickname,
+            avatar: updatesPrivado.avatar,
+            rol: updatesPrivado.rol,
+            equipo: updatesPrivado.equipo,
+            plan: planUsuario
+        };
+
+        db.collection('jugadores_publicos').doc(user.uid).set(updatesPublico);
+
+        // === 4. Feedback al usuario ===
+        mensajeEl.className = 'exito';
+        mensajeEl.textContent = '¡Perfil actualizado!';
+        setTimeout(() => mensajeEl.textContent = '', 3000);
+
+    } catch (err) {
+        console.error("Error al guardar:", err);
+        mensajeEl.className = 'error';
+        mensajeEl.textContent = 'Error: ' + err.message;
     }
 
-    db.collection('usuarios').doc(user.uid).update(updates)
-        .then(() => {
-            mensajeEl.className = 'exito';
-            mensajeEl.textContent = '¡Perfil actualizado!';
-            setTimeout(() => mensajeEl.textContent = '', 3000);
-        })
-        .catch(err => {
-            mensajeEl.className = 'error';
-            mensajeEl.textContent = 'Error: ' + err.message;
-        });
 });

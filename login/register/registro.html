@@ -56,7 +56,7 @@ permalink: /registro
 
 
 
-<script>
+<script type="module">
   document.getElementById('registroForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -69,8 +69,7 @@ permalink: /registro
       .then((userCredential) => {
         const user = userCredential.user;
 
-        // Guardar datos adicionales en Firestore
-        return firebase.firestore().collection('usuarios').doc(user.uid).set({
+        const datosPrivado = {
           email: email,
           nickname: nickname,
           id_juego: idJuego,
@@ -78,15 +77,28 @@ permalink: /registro
           monedas: 0,
           logros: [],
           trayectoria: [],
+          equipo: "Disponible", 
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        });
-      })
-      .then(() => {
+        };
+
+
+        const datosPublico = {
+          nickname: nickname,
+          avatar: "female1", 
+          rol: "", 
+          equipo: "Disponible",
+          plan: "free"
+        };
+
+
+        firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado);
+        firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
+
+
         document.getElementById('mensaje').style.color = 'green';
         document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
-        // Opcional: redirigir al dashboard o perfil
         setTimeout(() => {
-          window.location.href = '/mi-perfil'; // o '/perfil/'
+          window.location.href = '/mi-perfil/'; // o '/dashboard/'
         }, 2000);
       })
       .catch((error) => {
