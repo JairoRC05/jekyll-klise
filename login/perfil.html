@@ -8,279 +8,267 @@ permalink: /mi-perfil
 
 
 <style>
-  .profile-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fafafa;
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  .form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .form-group textarea {
-    height: 80px;
-    resize: vertical;
-  }
-  .monedas-display {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff7300;
-    text-align: center;
-    margin: 15px 0;
-    padding: 10px;
-    background: #fff8e1;
-    border-radius: 6px;
-  }
-  .btn {
-    background: #ff7300;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-  }
-  .btn:hover { background: #e06500; }
-  #mensaje { margin-top: 15px; padding: 10px; border-radius: 4px; }
-  .exito { background: #e8f5e9; color: #2e7d32; }
-  .error { background: #ffebee; color: #d32f2f; }
-  #avatarSelector {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
-  }
-  #avatarSelector img {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 2px solid transparent;
-  }
-  #avatarSelector img.selected {
-    border: 2px solid #ff7300;
-  }
+    .profile-container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: #fafafa;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        height: 80px;
+        resize: vertical;
+    }
+
+    .monedas-display {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff7300;
+        text-align: center;
+        margin: 15px 0;
+        padding: 10px;
+        background: #fff8e1;
+        border-radius: 6px;
+    }
+
+    .btn {
+        background: #ff7300;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .btn:hover {
+        background: #e06500;
+    }
+
+    #mensaje {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .exito {
+        background: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .error {
+        background: #ffebee;
+        color: #d32f2f;
+    }
+
+    #avatarSelector {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    #avatarSelector img {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 2px solid transparent;
+    }
+
+    #avatarSelector img.selected {
+        border: 2px solid #ff7300;
+    }
 </style>
 
 <div class="profile-container">
-  <h2>Mi Perfil</h2>
+    <h2>Mi Perfil</h2>
 
-  <!-- Mostrar monedas arriba del formulario -->
-  <div class="monedas-display">
-    🪙 <span id="saldo-monedas">0</span> monedas
+    <!-- Mostrar monedas arriba del formulario -->
+    <div class="monedas-display">
+        🪙 <span id="saldo-monedas">0</span> monedas
+    </div>
+
+    <p id="loading">Cargando tu perfil...</p>
+    <form id="profileForm" style="display:none;">
+
+        <div class="form-group">
+            <label for="nickname">Nickname *</label>
+            <input type="text" id="nickname" required>
+        </div>
+
+        <div class="form-group">
+            <label>Avatar</label>
+            <div id="avatarSelector"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="mains">Main(s) *</label>
+            <select id="mains" required>
+                <option value="">Selecciona tu main</option>
+                <option value="Pikachu">Pikachu</option>
+                <option value="Blastoise">Blastoise</option>
+                <option value="Venusaur">Venusaur</option>
+                <option value="Charizard">Charizard</option>
+                <option value="Lucario">Lucario</option>
+                <option value="Absol">Absol</option>
+                <option value="Greninja">Greninja</option>
+                <option value="Talonflame">Talonflame</option>
+                <option value="Cinderace">Cinderace</option>
+                <option value="Gardevoir">Gardevoir</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rol">Rol principal *</label>
+            <select id="rol" required>
+                <option value="">Selecciona tu rol</option>
+                <option value="ADC">ADC</option>
+                <option value="Support">Support</option>
+                <option value="Toplaner">Toplaner</option>
+                <option value="Jungle">Jungle</option>
+                <option value="Defense">Defense</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="discord">Usuario de Discord (ej: Jugador#1234) *</label>
+            <input type="text" id="discord" placeholder="nombre#0000" required>
+        </div>
+
+        <div class="form-group">
+            <label for="equipo">Estado de equipo</label>
+            <input type="text" id="equipo" placeholder="Nombre del equipo o 'Disponible'">
+        </div>
+
+        <div class="form-group">
+            <label for="partidas">Partidas jugadas</label>
+            <select id="partidas">
+                <option value="">Selecciona rango</option>
+                <option value="100">Más de 100</option>
+                <option value="500">Más de 500</option>
+                <option value="1000">Más de 1,000</option>
+                <option value="3000">Más de 3,000</option>
+                <option value="5000">Más de 5,000</option>
+                <option value="7000">Más de 7,000</option>
+                <option value="9000">Más de 9,000</option>
+                <option value="10000">Más de 10,000</option>
+                <option value="1500">Más de 15,000</option>
+                <option value="20000">Más de 20,000</option>
+                <option value="25000">Más de 25,000</option>
+                <option value="30000">Más de 30,000</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cumpleaños">Fecha de nacimiento</label>
+            <input type="date" id="cumpleaños">
+        </div>
+
+        <!-- Picks (3 o 7 según plan) -->
+        <div class="form-group">
+            <label>Mis picks principales</label>
+            <div id="picks-container"></div>
+        </div>
+
+        <div id="redes-section" class="form-group" style="display:none;">
+            <label>Redes sociales</label>
+            <input type="text" id="instagram" placeholder="Instagram (usuario)">
+            <input type="text" id="x" placeholder="X / Twitter (usuario)">
+            <input type="text" id="facebook" placeholder="Facebook (URL o usuario)">
+        </div>
+
+        <div id="stream-section" class="form-group" style="display:none;">
+            <label>Plataformas de streaming</label>
+            <input type="text" id="twitch" placeholder="Twitch">
+            <input type="text" id="youtube" placeholder="YouTube">
+            <input type="text" id="kick" placeholder="Kick">
+        </div>
+
+
+        <!-- Sección Streamer extra (solo streamer) -->
+        <div id="streamer-extra" class="form-group" style="display:none;">
+            <label>Horario de transmisión</label>
+            <input type="text" id="horario" placeholder="Ej: Lunes y Miércoles 8PM">
+
+            <label>Seguidores (aprox.)</label>
+            <input type="number" id="seguidores" placeholder="1000">
+
+            <label>Clips de TikTok (URLs, máx. 3)</label>
+            <input type="url" id="clip1" placeholder="Clip 1">
+            <input type="url" id="clip2" placeholder="Clip 2">
+            <input type="url" id="clip3" placeholder="Clip 3">
+
+            <label>Clip de YouTube</label>
+            <input type="url" id="clip_yt" placeholder="YouTube clip">
+
+            <label>Categorías de juegos (máx. 5)</label>
+            <input type="text" id="categorias" placeholder="Ej: MOBA, Battle Royale, Estrategia">
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Acerca de mí</label>
+            <textarea id="descripcion" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+        </div>
+
+
+
+        <button type="submit" class="btn">Guardar cambios</button>
+
+
+
+ 
+
+    </form>
+
+<!-- Sección de Logros -->
+<div id="logros-section" style="display:none; margin-top:20px;">
+  <h3>🏆 Logros Verificados</h3>
+  <div id="logros-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
+    <!-- Se llenará con JS -->
   </div>
-
-  <p id="loading">Cargando tu perfil...</p>
-  <form id="profileForm" style="display:none;">
-
-    <div class="form-group">
-      <label for="nickname">Nickname *</label>
-      <input type="text" id="nickname" required>
-    </div>
-
-    <div class="form-group">
-      <label>Avatar</label>
-      <div id="avatarSelector"></div>
-    </div>
-
-    <div class="form-group">
-      <label for="mains">Main(s) *</label>
-      <select id="mains" required>
-        <option value="">Selecciona tu main</option>
-        <option value="Pikachu">Pikachu</option>
-        <option value="Blastoise">Blastoise</option>
-        <option value="Venusaur">Venusaur</option>
-        <option value="Charizard">Charizard</option>
-        <option value="Lucario">Lucario</option>
-        <option value="Absol">Absol</option>
-        <option value="Greninja">Greninja</option>
-        <option value="Talonflame">Talonflame</option>
-        <option value="Cinderace">Cinderace</option>
-        <option value="Gardevoir">Gardevoir</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="rol">Rol principal *</label>
-      <select id="rol" required>
-        <option value="">Selecciona tu rol</option>
-        <option value="ADC">ADC</option>
-        <option value="Support">Support</option>
-        <option value="Toplaner">Toplaner</option>
-        <option value="Jungle">Jungle</option>
-        <option value="Defense">Defense</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="discord">Usuario de Discord (ej: Jugador#1234) *</label>
-      <input type="text" id="discord" placeholder="nombre#0000" required>
-    </div>
-
-    <div class="form-group">
-      <label for="equipo">Estado de equipo</label>
-      <input type="text" id="equipo" placeholder="Nombre del equipo o 'Disponible'">
-    </div>
-
-    <div class="form-group">
-      <label for="partidas">Partidas jugadas</label>
-       <select id="partidas">
-        <option value="">Selecciona rango</option>
-        <option value="100">Más de 100</option>
-        <option value="500">Más de 500</option>
-        <option value="1000">Más de 1,000</option>
-        <option value="3000">Más de 3,000</option>
-        <option value="5000">Más de 5,000</option>
-        <option value="7000">Más de 7,000</option>
-        <option value="9000">Más de 9,000</option>
-        <option value="10000">Más de 10,000</option>
-        <option value="1500">Más de 15,000</option>
-        <option value="20000">Más de 20,000</option>
-        <option value="25000">Más de 25,000</option>
-        <option value="30000">Más de 30,000</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="cumpleaños">Fecha de cumpleaños</label>
-      <input type="date" id="cumpleaños">
-    </div>
-
-    <div class="form-group">
-      <label for="descripcion">Acerca de mí</label>
-      <textarea id="descripcion" placeholder="Cuéntanos un poco sobre ti..."></textarea>
-    </div>
-
-    <button type="submit" class="btn">Guardar cambios</button>
-  </form>
-  <p id="mensaje"></p>
 </div>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<!-- Sección de Trayectoria -->
+<div id="trayectoria-section" style="display:none; margin-top:20px;">
+  <h3>🏅 Trayectoria</h3>
+  <div id="trayectoria-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
+    <!-- Se llenará con JS -->
+  </div>
+</div>
 
-<script>
+    <div class="form-group">
+        <h3>Historial de monedas</h3>
+        <div id="historial-monedas"
+            style="max-height: 200px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 4px;">
+            <p><em>Cargando historial...</em></p>
+        </div>
+    </div>
+    <p id="mensaje"></p>
+</div>
 
-    
-  const AVATARES = ['female1','female2','male1','male2','pikachu','blastoise','venusaur','charizard'];
-  let avatarSeleccionado = 'female1';
-
-  const loadingEl = document.getElementById('loading');
-  const formEl = document.getElementById('profileForm');
-  const mensajeEl = document.getElementById('mensaje');
-
-  // Renderizar avatares
-  function renderAvatares(seleccionado = 'female1') {
-    const container = document.getElementById('avatarSelector');
-    container.innerHTML = '';
-    AVATARES.forEach(nombre => {
-      const img = document.createElement('img');
-      img.src = `/assets/avatars/${nombre}.webp`;
-      img.alt = nombre;
-      img.className = (nombre === seleccionado) ? 'selected' : '';
-      img.onclick = () => {
-        avatarSeleccionado = nombre;
-        renderAvatares(nombre);
-      };
-      container.appendChild(img);
-    });
-  }
-
-  // Escuchar autenticación
-  auth.onAuthStateChanged(user => {
-    if (!user) {
-      window.location.href = '/login/';
-      return;
-    }
-
-    db.collection('usuarios').doc(user.uid).get()
-      .then(doc => {
-        loadingEl.style.display = 'none';
-        formEl.style.display = 'block';
-
-        if (doc.exists) {
-          const data = doc.data();
-
-          // Campos editables
-          document.getElementById('nickname').value = data.nickname || '';
-          document.getElementById('mains').value = data.mains || '';
-          document.getElementById('rol').value = data.rol || '';
-          document.getElementById('discord').value = data.discord || '';
-          document.getElementById('equipo').value = data.equipo || '';
-          document.getElementById('partidas').value = data.partidas || '';
-          if (data.cumpleaños) {
-            const fecha = new Date(data.cumpleaños.seconds * 1000);
-            document.getElementById('cumpleaños').value = fecha.toISOString().split('T')[0];
-          }
-          document.getElementById('descripcion').value = data.descripcion || '';
-
-          // Avatar
-          avatarSeleccionado = data.avatar || 'female1';
-          renderAvatares(avatarSeleccionado);
-
-          // 🪙 Monedas (solo lectura)
-          document.getElementById('saldo-monedas').textContent = data.monedas || 0;
-        } else {
-          renderAvatares('female1');
-          document.getElementById('saldo-monedas').textContent = 0;
-        }
-      })
-      .catch(err => {
-        mensajeEl.className = 'error';
-        mensajeEl.textContent = 'Error al cargar tu perfil: ' + err.message;
-      });
-  });
-
-  // Guardar cambios
-  document.getElementById('profileForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const user = auth.currentUser;
-    if (!user) return;
-
-    const updates = {
-      nickname: document.getElementById('nickname').value.trim(),
-      mains: document.getElementById('mains').value,
-      rol: document.getElementById('rol').value,
-      discord: document.getElementById('discord').value.trim(),
-      equipo: document.getElementById('equipo').value.trim() || 'Disponible',
-      partidas: document.getElementById('partidas').value,
-      descripcion: document.getElementById('descripcion').value.trim(),
-      avatar: avatarSeleccionado
-    };
-
-    const cumple = document.getElementById('cumpleaños').value;
-    if (cumple) {
-      updates.cumpleaños = new Date(cumple);
-    }
-
-    db.collection('usuarios').doc(user.uid).update(updates)
-      .then(() => {
-        mensajeEl.className = 'exito';
-        mensajeEl.textContent = '¡Perfil actualizado!';
-        setTimeout(() => mensajeEl.textContent = '', 3000);
-      })
-      .catch(err => {
-        mensajeEl.className = 'error';
-        mensajeEl.textContent = 'Error: ' + err.message;
-      });
-  });
-</script>
+<script src="/assets/js/perfiles.js"></script>

@@ -29,15 +29,16 @@ permalink: /registro
 
 
         <button type="submit" class="btn-unite">
-             <img src="/assets/mis/pokeball-1.webp" alt="icono">
+          <img src="/assets/mis/pokeball-1.webp" alt="icono">
           Crear cuenta
         </button>
       </form>
       <p id="mensaje" style="color: red;"></p>
-      <p class="new">¿Ya tienes cuenta? 
-      
-        
-      <a href="/iniciar-sesion"> Iniciar sesión</a></p>
+      <p class="new">¿Ya tienes cuenta?
+
+
+        <a href="/iniciar-sesion"> Iniciar sesión</a>
+      </p>
 
       <div class="social-login">
         <p>Síguenos</p>
@@ -73,6 +74,10 @@ permalink: /registro
           email: email,
           nickname: nickname,
           id_juego: idJuego,
+          plan: "free",
+          monedas: 0,
+          logros: [],
+          trayectoria: [],
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
       })
