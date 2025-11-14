@@ -138,7 +138,9 @@ auth.onAuthStateChanged(user => {
             if (doc.exists) {
 
                 const data = doc.data();
-                planUsuario = data.plan || 'free';
+                     const planUsuario = data.plan || 'free';
+                const esFree = planUsuario === 'free';
+
 
                 // Campos editables
                 document.getElementById('nickname').value = data.nickname || '';
@@ -170,8 +172,7 @@ auth.onAuthStateChanged(user => {
                 document.getElementById('trayectoria-section').style.display =
                     (data.trayectoria && data.trayectoria.length) ? 'block' : 'none';
 
-                const planUsuario = data.plan || 'free';
-                const esFree = planUsuario === 'free';
+           
 
                 // Redes sociales
                 if (!esFree) {
