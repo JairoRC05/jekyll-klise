@@ -122,9 +122,6 @@ function mostrarSeccionesPorPlan(plan) {
 
 auth.onAuthStateChanged(user => {
 
-
-
-
     if (!user) {
         window.location.href = '/iniciar-sesion';
         return;
@@ -307,30 +304,28 @@ document.getElementById('profileForm').addEventListener('submit', function (e) {
     });
     updates.picks = picks;
 
-    try {
-        // === 2. Guardar en documento PRIVADO ===
-        db.collection('usuarios').doc(user.uid).update(updatesPrivado);
+    db.collection('usuarios').doc(user.uid).update(updatesPrivado)
+        .then(() => {
 
-        // === 3. Preparar y guardar en documento PÚBLICO ===
-        const updatesPublico = {
-            nickname: updatesPrivado.nickname,
-            avatar: updatesPrivado.avatar,
-            rol: updatesPrivado.rol,
-            equipo: updatesPrivado.equipo,
-            plan: planUsuario
-        };
+            const updatesPublico = {
+                nickname: updatesPrivado.nickname,
+                avatar: updatesPrivado.avatar,
+                rol: updatesPrivado.rol,
+                equipo: updatesPrivado.equipo,
+                plan: planUsuario
+            };
+            return db.collection('jugadores_publicos').doc(user.uid).set(updatesPublico);
+        })
+        .then(() => {
 
-        db.collection('jugadores_publicos').doc(user.uid).set(updatesPublico);
-
-        // === 4. Feedback al usuario ===
-        mensajeEl.className = 'exito';
-        mensajeEl.textContent = '¡Perfil actualizado!';
-        setTimeout(() => mensajeEl.textContent = '', 3000);
-
-    } catch (err) {
-        console.error("Error al guardar:", err);
-        mensajeEl.className = 'error';
-        mensajeEl.textContent = 'Error: ' + err.message;
-    }
+            mensajeEl.className = 'exito';
+            mensajeEl.textContent = '¡Perfil actualizado!';
+            setTimeout(() => mensajeEl.textContent = '', 3000);
+        })
+        .catch((err) => {
+            console.error("Error al guardar:", err);
+            mensajeEl.className = 'error';
+            mensajeEl.textContent = 'Error: ' + (err.message || 'No se pudo guardar.');
+        });
 
 });

@@ -77,32 +77,36 @@ permalink: /registro
           monedas: 0,
           logros: [],
           trayectoria: [],
-          equipo: "Disponible", 
+          equipo: "Disponible",
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
         };
 
-
         const datosPublico = {
           nickname: nickname,
-          avatar: "female1", 
-          rol: "", 
+          avatar: "female1",
+          rol: "",
           equipo: "Disponible",
           plan: "free"
         };
 
-
-        firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado);
-        firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
-
-
+        // Guardar documento privado
+        return firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado)
+          .then(() => {
+            // Luego guardar documento público
+            return firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
+          });
+      })
+      .then(() => {
+        // Éxito total
         document.getElementById('mensaje').style.color = 'green';
         document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
         setTimeout(() => {
-          window.location.href = '/mi-perfil/'; // o '/dashboard/'
+          window.location.href = '/mi-perfil';
         }, 2000);
       })
       .catch((error) => {
         document.getElementById('mensaje').textContent = error.message;
       });
+
   });
 </script>
