@@ -101,6 +101,7 @@ permalink: /busqueda
 function renderJugador(jugador, uid) {
   const avatar = jugador.avatar || 'female1';
   const rol = jugador.rol || '—';
+  const idJuego = encodeURIComponent(jugador.id_juego || uid);
   const colorRol = {
     ADC: 'bg-danger',
     Support: 'bg-success',
@@ -112,7 +113,7 @@ function renderJugador(jugador, uid) {
 
   return `
     <div class="col-12 col-md-6 col-lg-4">
-    <a href="/jugador.html?uid=${uid}" class="text-decoration-none">
+       <a href="/jugador/${idJuego}" class="text-decoration-none">
         <div class="card jugador-card h-100">
           <div class="card-body d-flex align-items-center">
             <img src="/assets/avatars/${avatar}.webp" class="avatar-img me-3" alt="Avatar">

@@ -1,83 +1,129 @@
 ---
 layout: login
 title: Perfil del Jugador - Unite Mex
+permalink: /jugador.html
 ---
 
 <style>
+  /* --- HEADER --- */
   .perfil-header {
     text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+    border-radius: 18px;
     margin-bottom: 2rem;
   }
+
   .avatar-xl {
     width: 120px;
     height: 120px;
+    border: 4px solid #fff;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
   }
+
   .plan-badge {
-    font-size: 0.9em;
-    padding: 4px 10px;
-    border-radius: 20px;
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 50px;
   }
+
+  /* --- SECCIONES --- */
+
   .seccion {
-    background: #fff;
-    border-radius: 8px;
-    padding: 1.25rem;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
   }
+
   .seccion h3 {
-    margin-top: 0;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
-    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
+
+  /* --- GRID CARDS --- */
+
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 1rem;
   }
+
   .item {
     background: #f8f9fa;
-    padding: 0.75rem;
-    border-radius: 6px;
+    border-radius: 12px;
+    padding: 0.8rem;
     text-align: center;
+    border: 1px solid #e5e5e5;
+    transition: 0.2s;
   }
+
+  .item:hover {
+    background: #eef3ff;
+    transform: translateY(-2px);
+  }
+
+  /* --- LOGROS Y TRAYECTORIA --- */
+
   .logro-item, .trayectoria-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f1f1;
   }
+
+  .logro-item:last-child,
+  .trayectoria-item:last-child {
+    border-bottom: none;
+  }
+
   .logro-item img, .trayectoria-item img {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
     object-fit: cover;
-    border-radius: 4px;
+  }
+
+  /* --- ICONOS SECCIONES --- */
+  h3::before {
+    color: #0d6efd;
   }
 </style>
 
+
 <div class="container py-4">
+  
+  <!-- Loading -->
   <div id="loading" class="text-center">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Cargando perfil...</span>
-    </div>
+    <div class="spinner-border text-primary"></div>
+    <p class="mt-2 text-muted">Cargando perfil...</p>
   </div>
 
+  <!-- Contenido -->
   <div id="perfil" style="display:none;">
-    <!-- Header -->
+
+    <!-- HEADER -->
     <div class="perfil-header">
       <img id="avatar" class="avatar-xl" src="/assets/avatars/female1.webp" alt="Avatar">
-      <h1 id="nickname">Jugador</h1>
-      <div>
-        <span id="plan-badge" class="plan-badge bg-secondary">Free</span>
-        <span class="text-muted ms-2" id="rol-equipo">—</span>
+      <h1 id="nickname" class="fw-bold mb-0">Jugador</h1>
+      <div class="mt-2">
+        <span id="plan-badge" class="plan-badge bg-secondary text-white">Free</span>
+        <div id="rol-equipo" class="mt-1 small opacity-75">—</div>
       </div>
     </div>
 
-    <!-- Contacto (siempre visible) -->
+    <!-- CONTACTO -->
     <div class="seccion">
       <h3>💬 Contacto</h3>
       <p><strong>ID de juego:</strong> <span id="id-juego">—</span></p>
@@ -85,186 +131,213 @@ title: Perfil del Jugador - Unite Mex
       <p id="descripcion" class="mt-2 text-muted">—</p>
     </div>
 
-    <!-- Estadísticas -->
+    <!-- ESTADISTICAS -->
     <div class="seccion">
       <h3>📊 Estadísticas</h3>
+
       <div class="grid">
         <div class="item">
-          <div>Partidas</div>
+          <div class="text-muted small">Partidas</div>
           <strong id="partidas">—</strong>
         </div>
         <div class="item">
-          <div>Main</div>
+          <div class="text-muted small">Main</div>
           <strong id="main">—</strong>
         </div>
         <div class="item">
-          <div>Rol</div>
+          <div class="text-muted small">Rol</div>
           <strong id="rol">—</strong>
         </div>
       </div>
 
-      <div class="mt-3">
-        <h4>Picks</h4>
-        <div id="picks" class="grid"></div>
-      </div>
+      <h4 class="mt-4 mb-2 fs-5 fw-semibold">Picks</h4>
+      <div id="picks" class="grid"></div>
     </div>
 
-    <!-- Trayectoria -->
+    <!-- TRAYECTORIA -->
     <div id="seccion-trayectoria" class="seccion" style="display:none;">
       <h3>🏅 Trayectoria</h3>
       <div id="trayectoria-lista"></div>
     </div>
 
-    <!-- Logros -->
+    <!-- LOGROS -->
     <div id="seccion-logros" class="seccion" style="display:none;">
       <h3>🏆 Logros</h3>
       <div id="logros-lista"></div>
     </div>
 
-    <!-- Redes sociales (solo premium+) -->
+    <!-- REDES -->
     <div id="seccion-redes" class="seccion" style="display:none;">
       <h3>📱 Redes sociales</h3>
       <div id="redes-lista"></div>
     </div>
 
-    <!-- Datos de streamer (solo streamer) -->
+    <!-- STREAMER -->
     <div id="seccion-streamer" class="seccion" style="display:none;">
       <h3>🎥 Streamer</h3>
       <div id="streamer-datos"></div>
     </div>
+
   </div>
 
-  <div id="error" class="alert alert-danger" style="display:none;"></div>
+  <div id="error" class="alert alert-danger mt-3" style="display:none;"></div>
 </div>
 
 
 
 <script>
+  // ---------- Verifica que Firestore esté inicializado ----------
+  if (typeof db === 'undefined') {
+    // Si usas firebase v8:
+    if (window.firebase && firebase.firestore) {
+      window.db = firebase.firestore();
+    } else {
+      console.error('Firestore no está inicializado. Asegúrate de importar e inicializar Firebase antes de este script.');
+    }
+  }
 
+  // ---------- Extraer idJuego (último segmento de la ruta) ----------
+  function getIdJuegoFromPath() {
+    const path = window.location.pathname; // ejemplo: "/jugador/1HQ5X78" o "/jugador/1HQ5X78/"
+    const parts = path.split('/').filter(Boolean); // elimina segmentos vacíos
+    // toma el último segmento
+    return parts.length ? parts[parts.length - 1] : null;
+  }
 
+  const idJuego = getIdJuegoFromPath();
 
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const uid = urlParams.get('uid');
-
-  if (!uid || uid < 20) {
+  if (!idJuego || idJuego.length < 2) {
     document.getElementById('error').textContent = "Jugador no válido.";
     document.getElementById('error').style.display = 'block';
     document.getElementById('loading').style.display = 'none';
   } else {
-    cargarPerfil(uid);
+    cargarPerfilPorIdJuego(idJuego);
   }
 
-
-
-
-  async function cargarPerfil(uid) {
+  // ---------- Función principal para cargar perfil ----------
+  async function cargarPerfilPorIdJuego(idJuego) {
     try {
-      const doc = await db.collection('jugadores_publicos').doc(uid).get();
-      if (!doc.exists) {
-        throw new Error("Perfil no encontrado.");
+      console.log('Buscando jugador con id_juego =', idJuego);
+
+      const snapshot = await db.collection('jugadores_publicos')
+        .where('id_juego', '==', idJuego)
+        .limit(1)
+        .get();
+
+      // DEBUG: imprimir snapshot
+      console.log('Snapshot size:', snapshot.size);
+      snapshot.docs.forEach(d => console.log('Doc id:', d.id, 'data:', d.data()));
+
+      if (snapshot.empty) {
+        // Mensaje más útil para debug
+        console.warn('No se encontró jugador con id_juego =', idJuego);
+        throw new Error("Jugador no encontrado.");
       }
 
+      const doc = snapshot.docs[0];
       const data = doc.data();
+      const uid = doc.id;
+
+      // Mostrar el perfil
       document.getElementById('loading').style.display = 'none';
       document.getElementById('perfil').style.display = 'block';
 
-      // Header
+      // HEADER
       document.getElementById('avatar').src = `/assets/avatars/${data.avatar || 'female1'}.webp`;
       document.getElementById('nickname').textContent = data.nickname || 'Jugador';
       document.getElementById('rol-equipo').textContent = `${data.rol || '—'} • ${data.equipo || '—'}`;
 
       // Plan badge
       const badge = document.getElementById('plan-badge');
-      badge.textContent = data.plan || 'Free';
+      badge.textContent = (data.plan || 'Free').toString().charAt(0).toUpperCase() + (data.plan || 'Free').slice(1);
       badge.className = 'plan-badge';
       if (data.plan === 'premium') badge.classList.add('bg-warning', 'text-dark');
       else if (data.plan === 'streamer') badge.classList.add('bg-pink', 'text-white');
       else if (data.plan === 'coach') badge.classList.add('bg-success', 'text-white');
       else badge.classList.add('bg-secondary', 'text-white');
 
-      // Contacto
+      // CONTACTO
       document.getElementById('id-juego').textContent = data.id_juego || '—';
       document.getElementById('discord').textContent = data.discord || '—';
       document.getElementById('descripcion').textContent = data.descripcion || 'Sin descripción.';
 
-      // Estadísticas
-      document.getElementById('partidas').textContent = data.partidas ? `+${data.partidas}` : '—';
+      // ESTADÍSTICAS
+      document.getElementById('partidas').textContent = (typeof data.partidas !== 'undefined') ? data.partidas : '—';
       document.getElementById('main').textContent = data.mains || '—';
       document.getElementById('rol').textContent = data.rol || '—';
 
-      // Picks
+      // PICKS
       const picksEl = document.getElementById('picks');
       picksEl.innerHTML = '';
       (data.picks || []).forEach(pick => {
-        picksEl.innerHTML += `<div class="item">${pick}</div>`;
+        const node = document.createElement('div');
+        node.className = 'item';
+        node.textContent = pick;
+        picksEl.appendChild(node);
       });
 
-      // Trayectoria
+      // Trayectoria / Logros / Redes / Streamer
       renderTrayectoria(data.trayectoria || []);
-      // Logros
       renderLogros(data.logros || []);
+      if (data.plan && data.plan !== 'free') renderRedes(data);
+      if (data.plan === 'streamer') renderStreamer(data);
 
-      // Redes sociales (solo si plan != free)
-      if (data.plan && data.plan !== 'free') {
-        renderRedes(data);
-      }
-
-      // Datos de streamer (solo si es streamer)
-      if (data.plan === 'streamer') {
-        renderStreamer(data);
-      }
+      // Ya no llamamos a renderPerfil (no existe)
+      // renderPerfil(data);  <-- eliminado
 
     } catch (err) {
       console.error(err);
       document.getElementById('loading').style.display = 'none';
-      document.getElementById('error').textContent = "Jugador no encontrado.";
+      document.getElementById('error').textContent = err.message || "Ocurrió un error al cargar el perfil.";
       document.getElementById('error').style.display = 'block';
     }
   }
 
+  // ---------- Render functions (las dejé igual que las tuyas pero usando append) ----------
   function renderTrayectoria(trayectoria) {
     const cont = document.getElementById('trayectoria-lista');
     const seccion = document.getElementById('seccion-trayectoria');
-    if (!trayectoria.length) {
+    if (!trayectoria || trayectoria.length === 0) {
       seccion.style.display = 'none';
       return;
     }
     seccion.style.display = 'block';
     cont.innerHTML = '';
     trayectoria.forEach(t => {
-      cont.innerHTML += `
-        <div class="trayectoria-item">
-          <img src="${t.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
-          <div>
-            <div><strong>${t.equipoNombre || '—'}</strong></div>
-            <div>${t.rol || '—'} • ${t.tiempo || '—'}</div>
-          </div>
+      const wrap = document.createElement('div');
+      wrap.className = 'trayectoria-item';
+      wrap.innerHTML = `
+        <img src="${t.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
+        <div>
+          <div><strong>${t.equipoNombre || '—'}</strong></div>
+          <div class="text-muted small">${t.rol || '—'} • ${t.tiempo || '—'}</div>
         </div>
       `;
+      cont.appendChild(wrap);
     });
   }
 
   function renderLogros(logros) {
     const cont = document.getElementById('logros-lista');
     const seccion = document.getElementById('seccion-logros');
-    if (!logros.length) {
+    if (!logros || logros.length === 0) {
       seccion.style.display = 'none';
       return;
     }
     seccion.style.display = 'block';
     cont.innerHTML = '';
     logros.forEach(l => {
-      cont.innerHTML += `
-        <div class="logro-item">
-          <img src="${l.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
-          <div>
-            <div><strong>${l.posicion || '—'}</strong></div>
-            <div>${l.torneoNombre || '—'} • ${l.fecha || '—'}</div>
-          </div>
-          <img src="${l.torneoLogo || '/assets/placeholder-tournament.webp'}" alt="Torneo">
+      const wrap = document.createElement('div');
+      wrap.className = 'logro-item';
+      wrap.innerHTML = `
+        <img src="${l.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
+        <div>
+          <div><strong>${l.posicion || '—'}</strong></div>
+          <div class="text-muted small">${l.torneoNombre || '—'} • ${l.fecha || '—'}</div>
         </div>
+        <img src="${l.torneoLogo || '/assets/placeholder-tournament.webp'}" alt="Torneo" style="width:40px;height:40px;border-radius:6px;object-fit:cover;margin-left:auto;">
       `;
+      cont.appendChild(wrap);
     });
   }
 
@@ -278,8 +351,8 @@ title: Perfil del Jugador - Unite Mex
       const cont = document.getElementById('redes-lista');
       const seccion = document.getElementById('seccion-redes');
       seccion.style.display = 'block';
-      cont.innerHTML = redes.map(r => 
-        `<p><strong>${r.icon} ${r.name}:</strong> ${r.value}</p>`
+      cont.innerHTML = redes.map(r =>
+        `<p class="mb-1"><strong>${r.icon} ${r.name}:</strong> ${r.value}</p>`
       ).join('');
     }
   }
@@ -300,10 +373,4 @@ title: Perfil del Jugador - Unite Mex
       cont.innerHTML = items.join('<br>');
     }
   }
-
-
-
-
-
-
 </script>
