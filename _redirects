@@ -1,0 +1,2 @@
+# Rewrites para rutas dinámicas (SPA)
+/jugador/* /jugador/index.html 200
