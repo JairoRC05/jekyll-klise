@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: login
 title: Perfil del Jugador - Unite Mex
 ---
 
@@ -137,42 +137,25 @@ title: Perfil del Jugador - Unite Mex
   <div id="error" class="alert alert-danger" style="display:none;"></div>
 </div>
 
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
 
 <script>
 
 
- const firebaseConfig = {
-   apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
-      authDomain: "unite-mex.firebaseapp.com",
-      projectId: "unite-mex",
-      appId: "1:248961873504:web:b9ad5434d6a1041bc73505"
-  };
-  if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+
   const db = firebase.firestore();
 
 
-  // Extraer UID de la URL tipo: /jugador/DzozQtqbQ4Q7sFnnBubcke9NEh53
+  const urlParams = new URLSearchParams(window.location.search);
+  const uid = urlParams.get('uid');
 
-function getUidFromPath() {
-  const path = window.location.pathname;
-  const segments = path.split('/').filter(segment => segment.trim() !== '');
-  // Ej: "/jugador/abc123" → ["jugador", "abc123"]
-  return segments.length >= 2 ? segments[1] : null;
-}
-
-const uid = getUidFromPath();
-
-if (!uid || uid.length < 20) { // UID de Firebase tiene 28 chars
-  document.getElementById('error').textContent = "Jugador no válido.";
-  document.getElementById('error').style.display = 'block';
-  document.getElementById('loading').style.display = 'none';
-} else {
-  console.log("Cargando perfil de UID:", uid); // para diagnóstico
-  cargarPerfil(uid);
-}
+  if (!uid || uid < 20) {
+    document.getElementById('error').textContent = "Jugador no válido.";
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('loading').style.display = 'none';
+  } else {
+    cargarPerfil(uid);
+  }
 
 
 
