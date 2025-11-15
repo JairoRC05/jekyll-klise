@@ -78,10 +78,10 @@ permalink: /busqueda
 <script>
 
     const firebaseConfig = {
-        apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
-        authDomain: "unite-mex.firebaseapp.com",
-        projectId: "unite-mex",
-        appId: "1:248961873504:web:b9ad5434d6a1041bc73505"
+           apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+      authDomain: "unite-mex.firebaseapp.com",
+      projectId: "unite-mex",
+      appId: "1:248961873504:web:b9ad5434d6a1041bc73505"
     };
     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
@@ -97,14 +97,22 @@ permalink: /busqueda
         'Capitán': 'bg-dark'
     };
 
-    // Renderizar un jugador en card
-    function renderJugador(jugador) {
-        const avatar = jugador.avatar || 'female1';
-        const rol = jugador.rol || '—';
-        const colorRol = ROL_COLORES[rol] || 'bg-secondary';
+   // Renderizar un jugador en card
+function renderJugador(jugador, uid) {
+  const avatar = jugador.avatar || 'female1';
+  const rol = jugador.rol || '—';
+  const colorRol = {
+    ADC: 'bg-danger',
+    Support: 'bg-success',
+    Toplaner: 'bg-primary',
+    Jungle: 'bg-warning text-dark',
+    Defense: 'bg-info',
+    'Capitán': 'bg-dark'
+  }[rol] || 'bg-secondary';
 
-        return `
-      <div class="col-12 col-md-6 col-lg-4">
+  return `
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="/jugador/${uid}" class="text-decoration-none">
         <div class="card jugador-card h-100">
           <div class="card-body d-flex align-items-center">
             <img src="/assets/avatars/${avatar}.webp" class="avatar-img me-3" alt="Avatar">
@@ -114,50 +122,48 @@ permalink: /busqueda
             </div>
           </div>
         </div>
-      </div>
-    `;
+      </a>
+    </div>
+  `;
+}
+   // Cargar jugadores por estado
+async function cargarJugadores(estado, contenedorGrid, contenedorCarga) {
+  try {
+    let query = db.collection('jugadores_publicos');
+
+    if (estado === 'disponibles') {
+      query = query.where('equipo', '==', 'Disponible');
+    } else if (estado === 'con-equipo') {
+      query = query.where('equipo', '!=', 'Disponible');
     }
 
-    // Cargar jugadores por estado
-    async function cargarJugadores(estado, contenedorGrid, contenedorCarga) {
-        try {
-            let query = db.collection('jugadores_publicos');
+    const snapshot = await query.get();
+    const grid = document.getElementById(contenedorGrid);
+    const loading = document.getElementById(contenedorCarga);
 
-            if (estado === 'disponibles') {
-                // Equipo == "Disponible" o no definido
-                query = query.where('equipo', '==', 'Disponible');
-            } else if (estado === 'con-equipo') {
-                query = query.where('equipo', '!=', 'Disponible');
-                // Nota: Firestore no permite `!=` con null, así que asumimos que todos tienen valor
-            }
-
-            const snapshot = await query.get();
-            const grid = document.getElementById(contenedorGrid);
-            const loading = document.getElementById(contenedorCarga);
-
-            if (snapshot.empty) {
-                grid.innerHTML = '<div class="col-12"><p class="text-center text-muted">No hay jugadores.</p></div>';
-            } else {
-                let html = '';
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    // Solo mostrar si es jugador público (evitar admins sin nickname)
-                    if (data.nickname) {
-                        html += renderJugador(data);
-                    }
-                });
-                grid.innerHTML = html;
-            }
-
-            grid.style.display = 'flex';
-            loading.style.display = 'none';
-        } catch (err) {
-            console.error("Error al cargar jugadores:", err);
-            document.getElementById(contenedorCarga).innerHTML =
-                '<p class="text-danger">Error al cargar. Intenta más tarde.</p>';
+    if (snapshot.empty) {
+      grid.innerHTML = '<div class="col-12"><p class="text-center text-muted">No hay jugadores.</p></div>';
+    } else {
+      let html = '';
+      snapshot.forEach((doc) => {
+          console.log("UID:", doc.id, "Data:", doc.data());
+        const data = doc.data();
+        // ✅ Aseguramos que el documento tenga nickname y UID
+        if (data.nickname && doc.id) {
+          html += renderJugador(data, doc.id); // ← doc.id es el UID
         }
+      });
+      grid.innerHTML = html;
     }
 
+    grid.style.display = 'flex';
+    loading.style.display = 'none';
+  } catch (err) {
+    console.error("Error al cargar jugadores:", err);
+    document.getElementById(contenedorCarga).innerHTML = 
+      '<p class="text-danger">Error al cargar. Intenta más tarde.</p>';
+  }
+}
     // Cargar al inicio
     document.addEventListener('DOMContentLoaded', () => {
         cargarJugadores('disponibles', 'grid-disponibles', 'cargando-disponibles');

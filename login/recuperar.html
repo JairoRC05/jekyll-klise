@@ -1,0 +1,72 @@
+---
+layout: login
+title: Recuperar contraseña
+permalink: /recuperar-contraseña
+---
+
+
+{% include login-css.html %}
+
+
+
+<div class="pattern-fondo">
+  <div class="login-container">
+    <div class="login-panel">
+      <div class="login-left">
+        <div class="overlay">
+          <h2>¡BIENVENIDO A</h2>
+          <h1><span>NACIÓN</span> UNITE!</h1>
+          <p>Tu aventura Pokémon Unite comienza aquí.</p>
+        </div>
+      </div>
+      <div class="login-right">
+        <h2>¿Olvidaste tu contraseña?</h2>
+
+        <form id="resetForm">
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+
+          <button type="submit" class="btn-unite">
+            <img src="/assets/mis/pokeball-1.webp" alt="icono">
+            Enviar enlace
+          </button>
+        </form>
+
+        <p id="mensaje" style="margin-top: 15px;"></p>
+        <p class="new"> <a href="/iniciar-sesion">← Volver a iniciar sesión</a></p>
+
+
+        <div class="social-login">
+          <p>Síguenos</p>
+          <div class="icons">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  document.getElementById('resetForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+
+    firebase.auth().sendPasswordResetEmail(email)
+      .then(() => {
+        document.getElementById('mensaje').style.color = 'green';
+        document.getElementById('mensaje').textContent =
+          '¡Listo! Revisa tu correo para restablecer tu contraseña.';
+      })
+      .catch(error => {
+        let msg = error.message;
+        if (msg.includes('user-not-found')) {
+          msg = 'No hay una cuenta asociada a este correo.';
+        }
+        document.getElementById('mensaje').textContent = msg;
+      });
+  });
+</script>

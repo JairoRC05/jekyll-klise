@@ -8,129 +8,259 @@ permalink: /registro
 
 {% include login-css.html %}
 
+<div class="pattern-fondo">
 
-<div class="login-container">
-  <div class="login-panel">
-    <div class="login-left">
-      <div class="overlay">
-        <h2>¡BIENVENIDO A</h2>
-        <h1><span>NACIÓN</span> UNITE!</h1>
-        <p>Tu aventura Pokémon Unite comienza aquí.</p>
+
+
+  <div class="login-container shake">
+    <div class="login-panel">
+      <div class="login-left">
+        <div class="overlay">
+          <h2>¡BIENVENIDO A</h2>
+          <h1><span>NACIÓN</span> UNITE!</h1>
+          <p>Tu aventura Pokémon Unite comienza aquí.</p>
+        </div>
       </div>
-    </div>
-    <div class="login-right">
-      <h2>Regístrate</h2>
-      <form id="registroForm">
-        <input type="email" id="email" placeholder="Correo electrónico" required>
-        <input type="password" id="password" placeholder="Contraseña (mín. 6 caracteres)" required>
-        <input type="text" id="nickname" placeholder="Nickname" required>
-        <input type="text" id="idJuego" placeholder="ID de Juego" required>
+      <div class="login-right">
+        <h2 class="mt-3">Regístrate</h2>
+        <form id="registroForm">
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+
+          <input type="text" id="nickname" placeholder="Nickname" required>
+          <input type="text" id="idJuego" placeholder="ID de Juego" required>
+
+          <div class="input-icon">
+            <input type="password" id="password" placeholder="Contraseña (mín. 6 caracteres)" required>
+            <i class="bi bi-eye" id="togglePass"></i>
+          </div>
+          <p id="passFeedback" class="mt-1 fw-bold"></p>
+          <div class="password-bar mt-1">
+            <div id="passwordLevel"></div>
+          </div>
+          <button type="submit" class="btn-unite">
+            <img src="/assets/mis/pokeball-1.webp" alt="icono">
+            Crear cuenta
+          </button>
+        </form>
+        <p id="mensaje" style="margin-top: 15px; color: rgb(10, 10, 10); text-align: justify;"></p>
+        <p class="new">¿Ya tienes cuenta?
 
 
+          <a href="/iniciar-sesion"> Iniciar sesión</a>
+        </p>
 
-        <button type="submit" class="btn-unite">
-          <img src="/assets/mis/pokeball-1.webp" alt="icono">
-          Crear cuenta
-        </button>
-      </form>
-      <p id="mensaje" style="color: red;"></p>
-      <p class="new">¿Ya tienes cuenta?
-
-
-        <a href="/iniciar-sesion"> Iniciar sesión</a>
-      </p>
-
-      <div class="social-login">
-        <p>Síguenos</p>
-        <div class="icons">
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-twitter-x"></i>
+        <div class="social-login">
+          <p>Síguenos</p>
+          <div class="icons">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+
 </div>
 
-
-
-
-
 <script type="module">
-document.getElementById('registroForm').addEventListener('submit', function(e) {
-  e.preventDefault();
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const nickname = document.getElementById('nickname').value;
-  const idJuego = document.getElementById('idJuego').value.trim();
+  // ============================
+  //  CONFIG: ROLES Y COLORES
+  // ============================
+  const levels = [
+    { role: "Atacante", color: "#F06D38", min: 0, texto: "muy débil como Decidueye" },   // Débil
+    { role: "Ágil", color: "#28A4E3", min: 1, texto: "Contraeseña débil como Talonflame" },        // Bajo
+    { role: "Equilibrado", color: "#CF5ED3", min: 2, texto: "equilibrada como Empoleon" }, // Medio
+    { role: "Auxiliar", color: "#DD933F", min: 3, texto: "Contraeseña fuerte como Clefable" },    // Fuerte
+    { role: "Defensivo", color: "#ACED5B", min: 4, texto: "Contraeseña muy fuerte como Crustle" }    // Muy fuerte
+  ];
 
-  // === 1. Verificar si el ID de juego ya existe ===
-  firebase.firestore().collection('jugadores_publicos')
-    .where('id_juego', '==', idJuego)
-    .limit(1)
-    .get()
-    .then(snapshot => {
-      if (!snapshot.empty) {
-       
-        document.getElementById('mensaje').textContent = 
-            'Este ID de juego ya está registrado. <a href="/iniciar-sesion">¿Iniciar sesión?</a>';
-        return;
-      }
+  // ============================
+  //  FUNCION: EVALUAR CONTRASEÑA
+  // ============================
+  function evaluarContrasena(pass) {
+    let score = 0;
 
-      // === 2. Registrar en Firebase Auth ===
-      return firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
+    if (pass.length >= 6) score++;
+    if (/[A-Z]/.test(pass)) score++;
+    if (/[0-9]/.test(pass)) score++;
+    if (/[^A-Za-z0-9]/.test(pass)) score++;
+    if (pass.length >= 12) score++;
 
-          // Datos privados
-          const datosPrivado = {
-            email: email,
-            nickname: nickname,
-            id_juego: idJuego,
-            plan: "free",
-            monedas: 0,
-            logros: [],
-            trayectoria: [],
-            equipo: "Disponible",
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
-          };
+    return Math.min(score, 4); // niveles 0-4
+  }
 
-          // Datos públicos
-          const datosPublico = {
-            nickname: nickname,
-            avatar: "female1",
-            rol: "",
-            equipo: "Disponible",
-            discord: "",
-            id_juego: idJuego,
-            descripcion: "",
-            picks: [],
-            mains: "",
-            partidas: "",
-            trayectoria: [],
-            logros: [],
-            plan: "free"
-          };
+  // ============================
+  //  ELEMENTOS
+  // ============================
+  const passwordInput = document.getElementById("password");
+  const feedback = document.getElementById("passFeedback");
+  const bar = document.getElementById("passwordLevel");
+  const body = document.body;
 
-          // Guardar ambos
-          return firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado)
-            .then(() => {
-              return firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
-            });
-        })
-        .then(() => {
-          // ✅ Éxito
-          document.getElementById('mensaje').style.color = 'green';
-          document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
-          setTimeout(() => {
-            window.location.href = '/mi-perfil/';
-          }, 2000);
-        });
-    })
-    .catch(error => {
-      // Manejo de errores (correo duplicado, contraseña débil, etc.)
-      document.getElementById('mensaje').textContent = error.message;
-    });
-});
+
+
+  // ============================
+  //  EVENTO: ANIMACIÓN AL ESCRIBIR
+  // ============================
+  passwordInput.addEventListener("input", () => {
+    const score = evaluarContrasena(passwordInput.value);
+    const level = levels[score];
+
+    // Mensaje
+    feedback.textContent = `Constraseña: ${level.texto}`;
+    feedback.style.color = level.color;
+
+    // Color de la pantalla
+    body.style.background = level.color;
+    body.style.transition = "background 0.3s ease";
+
+    // Barra
+    bar.style.width = `${(score + 1) * 20}%`;
+    bar.style.background = level.color;
+  });
+
+
+
+  // ============================
+  //  SUBMIT DEL FORMULARIO
+  // ============================
+  document.getElementById('registroForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = passwordInput.value;
+    const nickname = document.getElementById('nickname').value;
+    const idJuego = document.getElementById('idJuego').value.trim();
+
+    // Evita contraseñas débiles
+    if (evaluarContrasena(password) < 2) {
+      document.getElementById('mensaje').textContent =
+        "Tu contraseña es demasiado débil. Usa mayúsculas, números y símbolos.";
+      return;
+    }
+
+    // ============================
+    //  VALIDAR ID JUEGO
+    // ============================
+    firebase.firestore().collection('jugadores_publicos')
+      .where('id_juego', '==', idJuego)
+      .limit(1)
+      .get()
+      .then(snapshot => {
+        if (!snapshot.empty) {
+          document.getElementById('mensaje').textContent =
+            'Esta cuenta ya está registrada. Más información envianos mensaje por Instagram';
+          return;
+        }
+
+        // ============================
+        //  REGISTRO FIREBASE AUTH
+        // ============================
+        return firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+
+            // Datos privados
+            const datosPrivado = {
+              email,
+              nickname,
+              id_juego: idJuego,
+              plan: "free",
+              monedas: 0,
+              logros: [],
+              trayectoria: [],
+              equipo: "Disponible",
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            };
+
+            // Datos públicos
+            const datosPublico = {
+              nickname,
+              avatar: "female1",
+              rol: "",
+              equipo: "Disponible",
+              discord: "",
+              id_juego: idJuego,
+              descripcion: "",
+              picks: [],
+              mains: "",
+              partidas: "",
+              trayectoria: [],
+              logros: [],
+              plan: "free"
+            };
+
+            // Guardar
+            return firebase.firestore().collection('usuarios').doc(user.uid).set(datosPrivado)
+              .then(() => {
+                return firebase.firestore().collection('jugadores_publicos').doc(user.uid).set(datosPublico);
+              });
+          })
+          .then(() => {
+            document.getElementById('mensaje').style.color = 'green';
+            document.getElementById('mensaje').textContent = '¡Registro exitoso! Redirigiendo...';
+
+            setTimeout(() => {
+              window.location.href = '/mi-perfil/';
+            }, 2000);
+          });
+      })
+      .catch(error => {
+        mostrarError(error.code);
+     
+      });
+
+
+    function mostrarError(code) {
+      const box = document.getElementById('mensaje');
+
+      const mensajes = {
+        "auth/email-already-in-use": "Este correo ya está registrado. Intenta iniciar sesión.",
+        "auth/invalid-email": "El correo no es válido, revisa el formato.",
+        "auth/weak-password": "La contraseña es demasiado débil (mínimo 6 caracteres).",
+        "auth/wrong-password": "La contraseña es incorrecta.",
+        "auth/user-not-found": "No encontramos una cuenta con este correo.",
+      };
+
+      // Mensaje por defecto
+      const mensaje = mensajes[code] || "Ocurrió un error inesperado. Intenta de nuevo.";
+
+      box.textContent = mensaje;
+
+      // Activar la animación shake
+      box.classList.remove('shake'); // reset
+      void box.offsetWidth;          // force reflow
+      box.classList.add('shake');
+    }
+
+
+
+
+  });
+
+
+
+
+
+
+  // ============================
+  // MOSTRAR / OCULTAR CONTRASEÑA
+  // ============================
+  document.getElementById('togglePass').addEventListener('click', () => {
+    const input = passwordInput;
+
+    if (input.type === "password") {
+      input.type = "text";
+      togglePass.classList.remove("bi-eye");
+      togglePass.classList.add("bi-eye-slash");
+    } else {
+      input.type = "password";
+      togglePass.classList.remove("bi-eye-slash");
+      togglePass.classList.add("bi-eye");
+    }
+  });
+
 </script>

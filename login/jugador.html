@@ -1,0 +1,333 @@
+---
+layout: null
+title: Perfil del Jugador - Unite Mex
+---
+
+<style>
+  .perfil-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .avatar-xl {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  .plan-badge {
+    font-size: 0.9em;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .seccion {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  .seccion h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    color: #333;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .item {
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .logro-item, .trayectoria-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .logro-item img, .trayectoria-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+</style>
+
+<div class="container py-4">
+  <div id="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Cargando perfil...</span>
+    </div>
+  </div>
+
+  <div id="perfil" style="display:none;">
+    <!-- Header -->
+    <div class="perfil-header">
+      <img id="avatar" class="avatar-xl" src="/assets/avatars/female1.webp" alt="Avatar">
+      <h1 id="nickname">Jugador</h1>
+      <div>
+        <span id="plan-badge" class="plan-badge bg-secondary">Free</span>
+        <span class="text-muted ms-2" id="rol-equipo">—</span>
+      </div>
+    </div>
+
+    <!-- Contacto (siempre visible) -->
+    <div class="seccion">
+      <h3>💬 Contacto</h3>
+      <p><strong>ID de juego:</strong> <span id="id-juego">—</span></p>
+      <p><strong>Discord:</strong> <span id="discord">—</span></p>
+      <p id="descripcion" class="mt-2 text-muted">—</p>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="seccion">
+      <h3>📊 Estadísticas</h3>
+      <div class="grid">
+        <div class="item">
+          <div>Partidas</div>
+          <strong id="partidas">—</strong>
+        </div>
+        <div class="item">
+          <div>Main</div>
+          <strong id="main">—</strong>
+        </div>
+        <div class="item">
+          <div>Rol</div>
+          <strong id="rol">—</strong>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <h4>Picks</h4>
+        <div id="picks" class="grid"></div>
+      </div>
+    </div>
+
+    <!-- Trayectoria -->
+    <div id="seccion-trayectoria" class="seccion" style="display:none;">
+      <h3>🏅 Trayectoria</h3>
+      <div id="trayectoria-lista"></div>
+    </div>
+
+    <!-- Logros -->
+    <div id="seccion-logros" class="seccion" style="display:none;">
+      <h3>🏆 Logros</h3>
+      <div id="logros-lista"></div>
+    </div>
+
+    <!-- Redes sociales (solo premium+) -->
+    <div id="seccion-redes" class="seccion" style="display:none;">
+      <h3>📱 Redes sociales</h3>
+      <div id="redes-lista"></div>
+    </div>
+
+    <!-- Datos de streamer (solo streamer) -->
+    <div id="seccion-streamer" class="seccion" style="display:none;">
+      <h3>🎥 Streamer</h3>
+      <div id="streamer-datos"></div>
+    </div>
+  </div>
+
+  <div id="error" class="alert alert-danger" style="display:none;"></div>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+
+
+ const firebaseConfig = {
+   apiKey: "AIzaSyBXznASeaw8vtU6OWwiP2kkVBh0L0b45y4",
+      authDomain: "unite-mex.firebaseapp.com",
+      projectId: "unite-mex",
+      appId: "1:248961873504:web:b9ad5434d6a1041bc73505"
+  };
+  if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+
+  // Extraer UID de la URL tipo: /jugador/DzozQtqbQ4Q7sFnnBubcke9NEh53
+function getUidFromPath() {
+  const path = window.location.pathname; // ej: "/jugador/DzozQtqbQ4Q7sFnnBubcke9NEh53"
+  const parts = path.split('/').filter(part => part.length > 0);
+  // parts = ["jugador", "DzozQtqbQ4Q7sFnnBubcke9NEh53"]
+  return parts.length >= 2 ? parts[1] : null;
+}
+
+const uid = getUidFromPath();
+
+
+
+console.log("UID extraído:", uid);
+console.log("Pathname:", window.location.pathname);
+console.log("Parts:", window.location.pathname.split('/').filter(p => p));
+
+if (!uid || uid.length < 10) { // UID de Firebase tiene ~28 caracteres
+  document.getElementById('error').textContent = "ID de jugador no válido.";
+  document.getElementById('error').style.display = 'block';
+  document.getElementById('loading').style.display = 'none';
+} else {
+  cargarPerfil(uid);
+}
+
+
+
+
+
+  async function cargarPerfil(uid) {
+    try {
+      const doc = await db.collection('jugadores_publicos').doc(uid).get();
+      if (!doc.exists) {
+        throw new Error("Perfil no encontrado.");
+      }
+
+      const data = doc.data();
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('perfil').style.display = 'block';
+
+      // Header
+      document.getElementById('avatar').src = `/assets/avatars/${data.avatar || 'female1'}.webp`;
+      document.getElementById('nickname').textContent = data.nickname || 'Jugador';
+      document.getElementById('rol-equipo').textContent = `${data.rol || '—'} • ${data.equipo || '—'}`;
+
+      // Plan badge
+      const badge = document.getElementById('plan-badge');
+      badge.textContent = data.plan || 'Free';
+      badge.className = 'plan-badge';
+      if (data.plan === 'premium') badge.classList.add('bg-warning', 'text-dark');
+      else if (data.plan === 'streamer') badge.classList.add('bg-pink', 'text-white');
+      else if (data.plan === 'coach') badge.classList.add('bg-success', 'text-white');
+      else badge.classList.add('bg-secondary', 'text-white');
+
+      // Contacto
+      document.getElementById('id-juego').textContent = data.id_juego || '—';
+      document.getElementById('discord').textContent = data.discord || '—';
+      document.getElementById('descripcion').textContent = data.descripcion || 'Sin descripción.';
+
+      // Estadísticas
+      document.getElementById('partidas').textContent = data.partidas ? `+${data.partidas}` : '—';
+      document.getElementById('main').textContent = data.mains || '—';
+      document.getElementById('rol').textContent = data.rol || '—';
+
+      // Picks
+      const picksEl = document.getElementById('picks');
+      picksEl.innerHTML = '';
+      (data.picks || []).forEach(pick => {
+        picksEl.innerHTML += `<div class="item">${pick}</div>`;
+      });
+
+      // Trayectoria
+      renderTrayectoria(data.trayectoria || []);
+      // Logros
+      renderLogros(data.logros || []);
+
+      // Redes sociales (solo si plan != free)
+      if (data.plan && data.plan !== 'free') {
+        renderRedes(data);
+      }
+
+      // Datos de streamer (solo si es streamer)
+      if (data.plan === 'streamer') {
+        renderStreamer(data);
+      }
+
+    } catch (err) {
+      console.error(err);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error').textContent = "Jugador no encontrado.";
+      document.getElementById('error').style.display = 'block';
+    }
+  }
+
+  function renderTrayectoria(trayectoria) {
+    const cont = document.getElementById('trayectoria-lista');
+    const seccion = document.getElementById('seccion-trayectoria');
+    if (!trayectoria.length) {
+      seccion.style.display = 'none';
+      return;
+    }
+    seccion.style.display = 'block';
+    cont.innerHTML = '';
+    trayectoria.forEach(t => {
+      cont.innerHTML += `
+        <div class="trayectoria-item">
+          <img src="${t.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
+          <div>
+            <div><strong>${t.equipoNombre || '—'}</strong></div>
+            <div>${t.rol || '—'} • ${t.tiempo || '—'}</div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  function renderLogros(logros) {
+    const cont = document.getElementById('logros-lista');
+    const seccion = document.getElementById('seccion-logros');
+    if (!logros.length) {
+      seccion.style.display = 'none';
+      return;
+    }
+    seccion.style.display = 'block';
+    cont.innerHTML = '';
+    logros.forEach(l => {
+      cont.innerHTML += `
+        <div class="logro-item">
+          <img src="${l.equipoLogo || '/assets/placeholder-team.webp'}" alt="Equipo">
+          <div>
+            <div><strong>${l.posicion || '—'}</strong></div>
+            <div>${l.torneoNombre || '—'} • ${l.fecha || '—'}</div>
+          </div>
+          <img src="${l.torneoLogo || '/assets/placeholder-tournament.webp'}" alt="Torneo">
+        </div>
+      `;
+    });
+  }
+
+  function renderRedes(data) {
+    const redes = [];
+    if (data.instagram) redes.push({ name: 'Instagram', value: data.instagram, icon: '📸' });
+    if (data.x) redes.push({ name: 'X', value: data.x, icon: '🐦' });
+    if (data.facebook) redes.push({ name: 'Facebook', value: data.facebook, icon: '📘' });
+
+    if (redes.length) {
+      const cont = document.getElementById('redes-lista');
+      const seccion = document.getElementById('seccion-redes');
+      seccion.style.display = 'block';
+      cont.innerHTML = redes.map(r => 
+        `<p><strong>${r.icon} ${r.name}:</strong> ${r.value}</p>`
+      ).join('');
+    }
+  }
+
+  function renderStreamer(data) {
+    const items = [];
+    if (data.horario) items.push(`<strong>Horario:</strong> ${data.horario}`);
+    if (data.seguidores) items.push(`<strong>Seguidores:</strong> ${data.seguidores}`);
+    if (data.twitch) items.push(`<strong>Twitch:</strong> <a href="https://${data.twitch}" target="_blank">${data.twitch}</a>`);
+    if (data.youtube) items.push(`<strong>YouTube:</strong> <a href="https://${data.youtube}" target="_blank">${data.youtube}</a>`);
+    if (data.kick) items.push(`<strong>Kick:</strong> <a href="https://${data.kick}" target="_blank">${data.kick}</a>`);
+    if (data.categorias) items.push(`<strong>Categorías:</strong> ${data.categorias}`);
+
+    if (items.length) {
+      const cont = document.getElementById('streamer-datos');
+      const seccion = document.getElementById('seccion-streamer');
+      seccion.style.display = 'block';
+      cont.innerHTML = items.join('<br>');
+    }
+  }
+
+
+
+
+
+
+</script>

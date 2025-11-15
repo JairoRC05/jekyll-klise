@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #f1fdfd;
+  background: #452683;
   color: #fff;
   display: flex;
   align-items: center;
@@ -17,8 +17,8 @@ body {
 }
 
 .login-container {
-  width: 900px;
-  height: 520px;
+  width: 1000px;
+  height: 600px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.24);
@@ -87,7 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 15px;
 }
 
@@ -105,6 +105,21 @@ body {
   border: 1px solid #ff6b10;
 }
 
+
+.toggle-eye {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+  z-index: 5;
+}
+
+.toggle-eye:hover {
+  color: #ff6b10;
+}
 
 
 .forgot {
@@ -287,6 +302,108 @@ body {
 .btn-unite.small img {
   width: 18px;
   height: 18px;
+}
+
+
+
+/* Contenedor */
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+
+/* Input */
+.input-icon input {
+  padding-right: 45px; /* espacio para el icono */
+}
+
+/* Ícono del ojo */
+.input-icon i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/* Hover */
+.input-icon i:hover {
+  color: #ff6b10;
+}
+
+
+.password-bar {
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  border-radius: 50px;
+  overflow: hidden;
+}
+#passwordLevel {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+
+
+
+.pattern-fondo {
+    width: 100%;
+    height: 100vh;       /* Ajusta según necesites */
+    padding: 20px;
+    color: #fff;
+    background-size: 450px;
+
+    /* El patrón fijo */
+    background-image: url('/assets/mis/square-pattern-30.svg');
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔥 Versión para móviles */
+@media (max-width: 768px) {
+    .pattern-fondo {
+        padding: 16px;
+        min-height: 220px;
+        background-size: cover;   /* Ajusta mejor al alto reducido */
+
+        /* Opcional: un overlay para legibilidad */
+        position: relative;
+    }
+
+    .pattern-fondo::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35); /* Mejora lectura */
+        border-radius: inherit;
+    }
+
+    .pattern-fondo > * {
+        position: relative; /* Para estar encima del overlay */
+        z-index: 2;
+    }
+}
+
+.shake {
+    animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
 }
 
 
