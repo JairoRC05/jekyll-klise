@@ -1,342 +1,400 @@
+// 📁 Archivo: /assets/js/perfiles.js
 
+import {
+    renderPicks,
+    obtenerAvataresDisponibles
+} from './modules/config-juego.js';
+import {
+    renderAvatares,
+    renderLogros,
+    renderTrayectoria,
+    renderLogrosCoach,
+    mostrarSeccionesPorRoles,
+    renderEstadoNickname,
+    renderTags,
+    renderInsignias,
+    renderHistorialNicks,
+} from './modules/ui-render.js';
+import { cargarListasGlobales } from './modules/data-fetch.js';
+import { iniciarFiltro } from './modules/validation.js';
+import { guardarPerfil } from './modules/save-logic.js';
 
-let planUsuario = 'free';
+// Variables globales de estado
+let dataGlobal = null;
+let membership = 'free';
+let rolesUsuario = { isPlayer: true };
 let avatarSeleccionado = 'female1';
-const loadingEl = document.getElementById('loading');
-const formEl = document.getElementById('profileForm');
-const mensajeEl = document.getElementById('mensaje');
-const PICKS_MAX = { free: 3, premium: 7, coach: 7, streamer: 7 };
+let CACHE_POKEMONS = [];
+let CACHE_REGIONES = [];
+let inputObjetivo = null; 
 
-// Avatares por plan
-const AVATARES_POR_PLAN = {
-    free: ['female1', 'female2', 'male1', 'male2'],
-    premium: ['female1', 'female2', 'male1', 'male2', 'female3', 'male3', 'female4'],
-    coach: ['female1', 'female2', 'male1', 'male2', 'female3', 'male3', 'female4'],
-    streamer: [
-        'female1', 'female2', 'male1', 'male2',
-        'female3', 'male3', 'female4',
-        'pikachu', 'blastoise', 'venusaur', 'charizard'
-    ]
-};
+// === 1. INICIALIZACIÓN ===
+document.addEventListener('DOMContentLoaded', async () => {
+    // A. Cargar datos
+    const datos = await cargarListasGlobales();
+    CACHE_REGIONES = datos.regiones;
+    CACHE_POKEMONS = datos.pokemons;
 
+    iniciarFiltro(datos.badwords);
 
-function renderLogros(logros = []) {
-    const cont = document.getElementById('logros-lista');
-    if (!logros.length) {
-        cont.innerHTML = '<p>No hay logros verificados aún.</p>';
-        return;
-    }
+    // B. Configurar Listeners de Interacción (Horario, Teléfono, Equipo)
+    setupFormListeners();
+});
 
-    let html = '<div style="display: flex; flex-direction: column; gap: 12px;">';
-    logros.forEach(l => {
-        html += `
-      <div style="display: flex; align-items: center; gap: 12px; padding: 8px; border-bottom: 1px solid #f0f0f0;">
-        <img src="${l.equipoLogo || '/assets/placeholder-team.webp'}" 
-             alt="Equipo" width="40" height="40" style="border-radius:4px; object-fit:cover;">
-        <div><strong>${l.posicion || '—'}</strong></div>
-        <img src="${l.torneoLogo || '/assets/placeholder-tournament.webp'}" 
-             alt="Torneo" width="40" height="40" style="border-radius:4px; object-fit:cover;">
-        <div>
-          <div><strong>${l.torneoNombre || 'Torneo'}</strong></div>
-          <div><small>${l.fecha || '—'}</small></div>
-        </div>
-      </div>
-    `;
-    });
-    html += '</div>';
-    cont.innerHTML = html;
-}
-
-function renderTrayectoria(trayectoria = []) {
-    const cont = document.getElementById('trayectoria-lista');
-    if (!trayectoria.length) {
-        cont.innerHTML = '<p>No hay trayectoria registrada.</p>';
-        return;
-    }
-
-    let html = '<div style="display: flex; flex-direction: column; gap: 12px;">';
-    trayectoria.forEach(t => {
-        html += `
-      <div style="display: flex; align-items: center; gap: 12px; padding: 8px; border-bottom: 1px solid #f0f0f0;">
-        <img src="${t.equipoLogo || '/assets/placeholder-team.webp'}" 
-             alt="Equipo" width="40" height="40" style="border-radius:4px; object-fit:cover;">
-        <div>
-          <div><strong>${t.equipoNombre || 'Equipo'}</strong></div>
-          <div>${t.rol || '—'} • ${t.tiempo || '—'}</div>
-        </div>
-      </div>
-    `;
-    });
-    html += '</div>';
-    cont.innerHTML = html;
-}
-
-
-
-function renderAvatares(seleccionado = 'female1', plan = 'free') {
-    const lista = AVATARES_POR_PLAN[plan] || AVATARES_POR_PLAN.free;
-    const container = document.getElementById('avatarSelector');
-    container.innerHTML = '';
-    lista.forEach(nombre => {
-        const img = document.createElement('img');
-        img.src = `/assets/avatars/${nombre}.webp`;
-        img.alt = nombre;
-        img.className = (nombre === seleccionado) ? 'selected' : '';
-        img.onclick = () => {
-            avatarSeleccionado = nombre;
-            renderAvatares(nombre, plan);
-        };
-        container.appendChild(img);
-    });
-}
-
-
-function renderPicks(picks = [], plan = 'free') {
-    const max = PICKS_MAX[plan] || 3;
-    const container = document.getElementById('picks-container');
-    container.innerHTML = '';
-    for (let i = 0; i < max; i++) {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.placeholder = `Pick ${i + 1}`;
-        input.value = picks[i] || '';
-        input.style.marginTop = '5px';
-        input.dataset.index = i;
-        container.appendChild(input);
-    }
-}
-
-function mostrarSeccionesPorPlan(plan) {
-    const esFree = plan === 'free';
-    const esStreamer = plan === 'streamer';
-
-    // Redes sociales
-    document.getElementById('redes-section').style.display = esFree ? 'none' : 'block';
-
-    // Stream (solo streamer)
-    document.getElementById('stream-section').style.display = esStreamer ? 'block' : 'none';
-    document.getElementById('streamer-extra').style.display = esStreamer ? 'block' : 'none';
-}
-
-
-
+// === 2. AUTH & CARGA DE DATOS ===
 auth.onAuthStateChanged(user => {
+    if (!user) { window.location.href = '/iniciar-sesion'; return; }
 
-    if (!user) {
-        window.location.href = '/iniciar-sesion';
-        return;
-    }
+    const loadingEl = document.getElementById('loading');
+    const formEl = document.getElementById('profileForm');
 
-    db.collection('usuarios').doc(user.uid).get()
-        .then(doc => {
-            loadingEl.style.display = 'none';
-            formEl.style.display = 'block';
+    db.collection('usuarios').doc(user.uid).get().then(doc => {
+        if (loadingEl) loadingEl.style.display = 'none';
+        if (formEl) formEl.style.display = 'block';
 
-            if (doc.exists) {
+        if (doc.exists) {
+            const data = doc.data();
+            dataGlobal = data;
 
-                const data = doc.data();
-                const planUsuario = data.plan || 'free';
-                const esFree = planUsuario === 'free';
-                const esStreamer = (planUsuario === 'streamer');
-
-                // Campos editables
-                document.getElementById('nickname').value = data.nickname || '';
-                document.getElementById('mains').value = data.mains || '';
-                document.getElementById('rol').value = data.rol || '';
-                document.getElementById('discord').value = data.discord || '';
-                document.getElementById('equipo').value = data.equipo || '';
-                document.getElementById('partidas').value = data.partidas || '';
-                document.getElementById('saldo-monedas').textContent = data.monedas || 0;
+            membership = data.membership || 'free';
+            rolesUsuario = data.roles || { isPlayer: true };
 
 
+            const esPremium = membership === 'premium' || rolesUsuario.isCoach || rolesUsuario.isStreamer;
+            llenarInputsBasicos(data, esPremium);
 
-                document.getElementById('descripcion').value = data.descripcion || '';
+            // --- A. Renderizados Modulares (UI) ---
+            // Avatar
+            const listaAvatares = obtenerAvataresDisponibles(membership, rolesUsuario);
+            renderAvatares(avatarSeleccionado, listaAvatares, (nuevo) => {
+                avatarSeleccionado = nuevo;
+            });
 
-                if (data.cumpleaños) {
-                    const fecha = new Date(data.cumpleaños.seconds * 1000);
-                    document.getElementById('cumpleaños').value = fecha.toISOString().split('T')[0];
-                }
-
-                document.getElementById('redes-section').style.display = esFree ? 'none' : 'block';
-                document.getElementById('stream-section').style.display = esStreamer ? 'block' : 'none';
-                document.getElementById('streamer-extra').style.display = esStreamer ? 'block' : 'none';
-
-                // Avatar
-                avatarSeleccionado = data.avatar || 'female1';
-                renderAvatares(avatarSeleccionado, planUsuario);
-
-                // Picks
-                renderPicks(data.picks || [], planUsuario);
-                // Renderizar logros y trayectoria (solo lectura para el jugador)
-                renderLogros(data.logros || []);
-                renderTrayectoria(data.trayectoria || []);
-
-                // Mostrar secciones si hay datos
-                document.getElementById('logros-section').style.display =
-                    (data.logros && data.logros.length) ? 'block' : 'none';
-
-                document.getElementById('trayectoria-section').style.display =
-                    (data.trayectoria && data.trayectoria.length) ? 'block' : 'none';
-
-                // Redes sociales
-                if (!esFree) {
-                    document.getElementById('instagram').value = data.instagram || '';
-                    document.getElementById('x').value = data.x || '';
-                    document.getElementById('facebook').value = data.facebook || '';
-                }
+            // Picks & Tags
+            renderPicks(data.picks || [], membership, rolesUsuario, CACHE_POKEMONS);
+            renderTags(data.estilosJuego || []);
 
 
-                // Streamer
-                if (esStreamer) {
-                    document.getElementById('twitch').value = data.twitch || '';
-                    document.getElementById('youtube').value = data.youtube || '';
-                    document.getElementById('kick').value = data.kick || '';
-                    document.getElementById('horario').value = data.horario || '';
-                    document.getElementById('seguidores').value = data.seguidores || '';
-                    document.getElementById('clip1').value = data.clip1 || '';
-                    document.getElementById('clip2').value = data.clip2 || '';
-                    document.getElementById('clip3').value = data.clip3 || '';
-                    document.getElementById('clip_yt').value = data.clip_yt || '';
-                    document.getElementById('categorias').value = data.categorias || '';
-                }
 
-                // Mostrar/ocultar secciones
-                mostrarSeccionesPorPlan(planUsuario);
+            // Secciones Visuales
+            renderInsignias(data.insignias || []);
+            renderLogros(data.logros || []);
+            renderTrayectoria(data.trayectoria || []);
+            renderLogrosCoach(data.perfilCoach?.logros || []);
+            renderEstadoNickname(user.uid, db); // Verifica fecha y pinta tooltip
+            renderHistorialNicks(data.historial_nicks || []);
+            cargarHistorialMonedas(user.uid);
 
-            } else {
-                renderAvatares('female1');
-                document.getElementById('saldo-monedas').textContent = 0;
-            }
-        })
-        .catch(err => {
-            mensajeEl.className = 'error';
-            mensajeEl.textContent = 'Error al cargar tu perfil: ' + err.message;
-        });
+            // Mostrar/Ocultar según rol
+            mostrarSeccionesPorRoles(rolesUsuario);
 
 
-    // Cargar historial de monedas (sin error si no existe)
-    const historialRef = db.collection('usuarios').doc(user.uid).collection('historial_monedas');
-    historialRef.orderBy('fecha', 'desc').limit(10).get()
+            // Estado del Equipo y horario 
+            inicializarHorariosRoles(data);
+            inicializarEstadoEquipo(data.equipo, data.disponibilidad);
+
+        } else {
+            // Usuario nuevo (sin doc en DB)
+            const listaAvataresBase = obtenerAvataresDisponibles('free', { isPlayer: true });
+            renderAvatares('female1', listaAvataresBase, (nuevo) => {
+                avatarSeleccionado = nuevo;
+            });
+            document.getElementById('saldo-monedas').textContent = 0;
+        }
+    }).catch(err => console.error("Error carga perfil:", err));
+});
+
+document.getElementById('profileForm').addEventListener('submit', (e) => {
+    const user = auth.currentUser;
+    guardarPerfil(e, user, db, dataGlobal, avatarSeleccionado);
+});
+
+function cargarHistorialMonedas(uid) {
+    const historialEl = document.getElementById('historial-monedas');
+    if (!historialEl) return;
+
+    db.collection('usuarios').doc(uid).collection('historial_monedas')
+        .orderBy('fecha', 'desc').limit(10).get()
         .then(snapshot => {
-            const historialEl = document.getElementById('historial-monedas');
             if (snapshot.empty) {
-                historialEl.innerHTML = '<p><em>No tienes transacciones aún.</em></p>';
+                historialEl.innerHTML = '<p class="text-muted small">Sin transacciones.</p>';
                 return;
             }
-
-            let html = '<ul style="list-style: none; padding: 0;">';
+            let html = '<ul class="list-unstyled mb-0">';
             snapshot.forEach(doc => {
                 const t = doc.data();
-                const fecha = new Date(t.fecha.seconds * 1000).toLocaleDateString();
+                const fecha = t.fecha ? new Date(t.fecha.seconds * 1000).toLocaleDateString() : '';
+                const color = t.cantidad >= 0 ? 'text-success' : 'text-danger';
                 const signo = t.cantidad >= 0 ? '+' : '';
                 html += `
-        <li style="padding: 6px 0; border-bottom: 1px solid #eee;">
-          <strong>${signo}${t.cantidad}</strong> 
-          — ${t.motivo || 'Sin motivo'} 
-          <small>(${fecha})</small>
-        </li>
-      `;
+                <li class="border-bottom py-2 d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fw-bold ${color}">${signo}${t.cantidad}</span> 
+                    <span class="small text-muted ms-1">${t.motivo}</span>
+                  </div>
+                  <small class="text-muted" style="font-size:0.7rem">${fecha}</small>
+                </li>`;
             });
             html += '</ul>';
             historialEl.innerHTML = html;
         })
-        .catch(err => {
-            // Solo mostrar error si es inesperado (ej: permisos)
-            console.warn("No se pudo cargar historial:", err);
-            document.getElementById('historial-monedas').innerHTML = '<p><em>No disponible.</em></p>';
+        .catch(e => console.error("Error monedas:", e));
+}
+
+function llenarInputsBasicos(data, esFree) {
+    const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val || ''; };
+
+    setVal('nickname', data.nickname);
+    setVal('main-input', data.mains);
+    setVal('rol', data.rol);
+    setVal('discord', data.discord);
+    setVal('partidas', data.partidas);
+    setVal('descripcion', data.descripcion);
+    setVal('telefono', data.telefono);
+    setVal('win-rate', data.winRate);
+    setVal('licencias', data.licencias);
+    setVal('veces-maestro', data.vecesMaestro);
+    setVal('racha-maestro', data.rachaMaestro);
+    setVal('horario-juego', data.horarioJuego);
+
+    if (document.getElementById('saldo-monedas'))
+        document.getElementById('saldo-monedas').textContent = data.monedas || 0;
+
+    // Fecha Cumpleaños
+    const cumpleInput = document.getElementById('cumpleaños');
+    if (data.cumpleaños && cumpleInput) {
+        cumpleInput.value = new Date(data.cumpleaños.seconds * 1000).toISOString().split('T')[0];
+        cumpleInput.readOnly = true;
+    }
+
+    // Redes y Streamer
+    if (!esFree) {
+        setVal('instagram', data.instagram);
+        setVal('x', data.x);
+        setVal('facebook', data.facebook);
+        setVal('pais', data.pais);
+        setVal('region', data.region);
+        if (data.pais) document.getElementById('pais')?.dispatchEvent(new Event('input'));
+    }
+
+    if (data.roles?.isStreamer) {
+        const s = data.perfilStreamer;
+        setVal('twitch', s.twitch);
+        setVal('youtube', s.youtube);
+        setVal('kick', s.kick);
+        setVal('clip1', s.clips?.[0]);
+        setVal('clip2', s.clips?.[1]);
+        setVal('clip3', s.clips?.[2]);
+        document.getElementById('stream-section').style.display = 'block';
+        setVal('horario-stream', data.perfilStreamer?.horario);
+    }
+
+    if (data.roles?.isCoach) {
+        setVal('coach-paypal', data.perfilCoach.paypal);
+        setVal('coach-bio', data.perfilCoach.biografiaExtensa);
+        document.getElementById('coach-inputs-section').style.display = 'block';
+        setVal('horario-coach', data.perfilCoach?.horario);
+    }
+}
+
+function inicializarHorariosRoles(data) {
+    // Jugador
+    const inputJuego = document.getElementById('horario-juego');
+    if (inputJuego) {
+        inputJuego.value = data.horarioJuego || '';
+        // Disparar evento para actualizar visualmente los botoncitos si hiciste la función "inversa"
+        // o simplemente dejar que el componente muestre el texto preview
+    }
+
+    // Streamer
+    if (data.roles?.isStreamer) {
+        const inputStream = document.getElementById('horario-stream');
+        if (inputStream) inputStream.value = data.perfilStreamer?.horario || '';
+    }
+
+    // Coach
+    if (data.roles?.isCoach) {
+        const inputCoach = document.getElementById('horario-coach');
+        if (inputCoach) inputCoach.value = data.perfilCoach?.horario || '';
+    }
+}
+
+function inicializarEstadoEquipo(equipoGuardado, disponibilidadGuardada) {
+    const inputEq = document.getElementById('equipo-input');
+    const checkBuscando = document.getElementById('buscando-equipo');
+    const selectDisp = document.getElementById('disponibilidad');
+
+    if (!inputEq) return;
+
+    selectDisp.value = disponibilidadGuardada || 'siempre';
+
+    if (equipoGuardado === 'Disponible') {
+        if (checkBuscando) checkBuscando.checked = true;
+        inputEq.value = 'Disponible';
+    } else if (disponibilidadGuardada === 'no') {
+        inputEq.value = 'No disponible';
+    } else {
+        if (checkBuscando) checkBuscando.checked = false;
+        inputEq.value = equipoGuardado || '';
+    }
+    // Disparamos la lógica visual
+    selectDisp.dispatchEvent(new Event('change'));
+}
+
+function setupFormListeners() {
+    // 1. Autocompletado Región
+    document.getElementById('pais')?.addEventListener('input', function () {
+        const val = this.value.trim();
+        const match = CACHE_REGIONES.find(r => r.pais === val);
+        const regInput = document.getElementById('region');
+        if (regInput) regInput.value = match ? match.region : '';
+    });
+
+    // 2. Formato Teléfono
+    const telInput = document.getElementById('telefono');
+    if (telInput) {
+        telInput.addEventListener('input', (e) => {
+            let x = e.target.value.replace(/\D/g, '').substring(0, 10);
+            if (x.length > 6) x = `${x.substring(0, 3)} ${x.substring(3, 6)} ${x.substring(6)}`;
+            else if (x.length > 3) x = `${x.substring(0, 3)} ${x.substring(3)}`;
+            e.target.value = x;
         });
+    }
 
-});
+    // 4. Lógica Equipo (Toggle)
+    const dispSelect = document.getElementById('disponibilidad');
+    const busCheck = document.getElementById('buscando-equipo');
+    const eqInput = document.getElementById('equipo-input');
+    const hint = document.getElementById('equipo-hint');
+    const horarioWrap = document.getElementById('horario-wrapper');
 
+    const updateEq = () => {
+        const disp = dispSelect.value;
+        const buscando = busCheck.checked;
 
-// Guardar cambios
-document.getElementById('profileForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+        if (disp === 'no') {
+            eqInput.value = 'No disponible';
+            eqInput.disabled = true;
+            busCheck.disabled = true;
+            busCheck.checked = false;
+            if (horarioWrap) horarioWrap.style.display = 'none';
+            return;
+        }
+        busCheck.disabled = false;
 
-    const user = auth.currentUser;
-    if (!user) return;
-
-    // === 1. Recopilar datos PRIVADOS ===
-    const updatesPrivado = {
-        nickname: document.getElementById('nickname').value.trim(),
-        mains: document.getElementById('mains').value,
-        rol: document.getElementById('rol').value,
-        discord: document.getElementById('discord').value.trim(),
-        equipo: document.getElementById('equipo').value.trim() || 'Disponible',
-        partidas: document.getElementById('partidas').value,
-        descripcion: document.getElementById('descripcion').value.trim(),
-        avatar: avatarSeleccionado,
-        plan: planUsuario // asegúrate de que 'planUsuario' esté definido
+        if (buscando) {
+            eqInput.value = 'Disponible';
+            eqInput.disabled = true;
+            eqInput.classList.add('bg-light');
+            if (hint) hint.innerHTML = '<span class="text-success">✅ Buscando equipo (Agente Libre)</span>';
+            if (horarioWrap) horarioWrap.style.display = 'block';
+        } else {
+            eqInput.disabled = false;
+            eqInput.classList.remove('bg-light');
+            if (eqInput.value === 'Disponible' || eqInput.value === 'No disponible') eqInput.value = '';
+            if (horarioWrap) horarioWrap.style.display = 'none';
+            if (hint) hint.textContent = 'Escribe tu equipo actual.';
+        }
     };
 
-    // Fecha de cumpleaños
-    const cumple = document.getElementById('cumpleaños').value;
-    if (cumple) {
-        updatesPrivado.cumpleaños = new Date(cumple);
-    }
+    dispSelect?.addEventListener('change', updateEq);
+    busCheck?.addEventListener('change', updateEq);
+}
 
-    // Redes sociales (solo si no es free)
-    if (planUsuario !== 'free') {
-        updatesPrivado.instagram = document.getElementById('instagram')?.value.trim() || '';
-        updatesPrivado.x = document.getElementById('x')?.value.trim() || '';
-        updatesPrivado.facebook = document.getElementById('facebook')?.value.trim() || '';
-    }
+function setupHorarioModal() {
+    const modalEl = document.getElementById('horarioModal');
+    if (!modalEl) return;
+    
+    const modalBs = new bootstrap.Modal(modalEl); // Instancia Bootstrap
+    
+    // --- Referencias de Inputs del Modal ---
+    const checks = modalEl.querySelectorAll('.dia-check-modal');
+    const horaIni = document.getElementById('modal-hora-inicio');
+    const horaFin = document.getElementById('modal-hora-fin');
+    const previewText = document.getElementById('modal-preview-text');
+    const btnSave = document.getElementById('modal-save-horario');
 
-    // Datos de streamer
-    if (planUsuario === 'streamer') {
-        updatesPrivado.twitch = document.getElementById('twitch')?.value.trim() || '';
-        updatesPrivado.youtube = document.getElementById('youtube')?.value.trim() || '';
-        updatesPrivado.kick = document.getElementById('kick')?.value.trim() || '';
-        updatesPrivado.horario = document.getElementById('horario')?.value.trim() || '';
-        updatesPrivado.seguidores = parseInt(document.getElementById('seguidores')?.value) || 0;
-        updatesPrivado.clip1 = document.getElementById('clip1')?.value.trim() || '';
-        updatesPrivado.clip2 = document.getElementById('clip2')?.value.trim() || '';
-        updatesPrivado.clip3 = document.getElementById('clip3')?.value.trim() || '';
-        updatesPrivado.clip_yt = document.getElementById('clip_yt')?.value.trim() || '';
-        updatesPrivado.categorias = document.getElementById('categorias')?.value.trim() || '';
-    }
+    // Función para construir la cadena visual y llenar el preview
+    const actualizarPreview = () => {
+        const dias = Array.from(checks).filter(c => c.checked).map(c => c.value);
+        const ini = horaIni.value;
+        const fin = horaFin.value;
 
-    // Picks
-    const picks = [];
-    document.querySelectorAll('#picks-container input').forEach(input => {
-        if (input.value.trim()) picks.push(input.value.trim());
+        if (!dias.length || !ini || !fin) {
+            previewText.textContent = "Sin selección válida";
+            return "";
+        }
+        // Lógica de condensación de días
+        let txt = dias.join(", ");
+        if (dias.length === 5 && dias.includes('Lun') && dias.includes('Vie')) txt = "Lunes a Viernes";
+        if (dias.length === 7) txt = "Todos los días";
+
+        const resultado = `${txt} de ${ini} a ${fin}`;
+        previewText.textContent = resultado;
+        return resultado;
+    };
+
+    // 1. CARGA DE DATOS al ABRIR EL MODAL
+    modalEl.addEventListener('show.bs.modal', function (e) {
+        // Obtenemos el botón que disparó el evento
+        const button = e.relatedTarget; 
+        const targetInputId = button.getAttribute('data-target-input');
+        
+        inputObjetivo = document.getElementById(targetInputId);
+        if (!inputObjetivo) return;
+
+        // Limpiar el modal
+        checks.forEach(c => c.checked = false);
+        horaIni.value = '';
+        horaFin.value = '';
+        previewText.textContent = '';
+        
+        // Cargar datos existentes si los hay
+        const valorActual = inputObjetivo.value;
+        if (valorActual) {
+            // Lógica inversa (muy básica): Intentamos cargar los tiempos
+            const [_, diasStr, horaIniStr, horaFinStr] = valorActual.match(/(.*) de (.*) a (.*)/) || [];
+            if (diasStr) {
+                 // Simplificamos la carga: solo se cargan las horas
+                 horaIni.value = horaIniStr || '';
+                 horaFin.value = horaFinStr || '';
+            }
+        }
     });
-    updatesPrivado.picks = picks;
 
-    // === 2. Guardar en Firestore (encadenado) ===
-    db.collection('usuarios').doc(user.uid).update(updatesPrivado)
-        .then(() => {
+    // 2. LISTENERS INTERNOS DEL MODAL
+    checks.forEach(c => c.addEventListener('change', actualizarPreview));
+    horaIni.addEventListener('input', actualizarPreview);
+    horaFin.addEventListener('input', actualizarPreview);
 
-            const updatesPublico = {
-                // Siempre públicos (para todos los planes)
-                nickname: updatesPrivado.nickname,
-                avatar: updatesPrivado.avatar,
-                rol: updatesPrivado.rol,
-                equipo: updatesPrivado.equipo,
-                picks: updatesPrivado.picks || [],
-                mains: updatesPrivado.mains || '',
-                partidas: updatesPrivado.partidas || '',
-                trayectoria: updatesPrivado.trayectoria || [],
-                logros: updatesPrivado.logros || [],
-                discord: updatesPrivado.discord || '',        
-                id_juego: updatesPrivado.id_juego || '',     
-                descripcion: updatesPrivado.descripcion || '', 
-                instagram: planUsuario !== 'free' ? (updatesPrivado.instagram || '') : '',
-                x: planUsuario !== 'free' ? (updatesPrivado.x || '') : '',
-                facebook: planUsuario !== 'free' ? (updatesPrivado.facebook || '') : '',
-                plan: planUsuario
-            };
-            return db.collection('jugadores_publicos').doc(user.uid).set(updatesPublico);
-        })
-        .then(() => {
-            // Éxito
-            mensajeEl.className = 'exito';
-            mensajeEl.textContent = '¡Perfil actualizado!';
-            setTimeout(() => mensajeEl.textContent = '', 3000);
-        })
-        .catch((err) => {
-            console.error("Error al guardar:", err);
-            mensajeEl.className = 'error';
-            mensajeEl.textContent = 'Error: ' + (err.message || 'No se pudo actualizar.');
-        });
-});
+    // 3. GUARDAR DATOS Y CERRAR
+    btnSave.addEventListener('click', () => {
+        const stringFinal = actualizarPreview();
+        if (inputObjetivo && stringFinal) {
+            inputObjetivo.value = stringFinal; // Guarda en el input oculto
+            
+            // Actualizar el texto visible en el formulario principal
+            const previewEl = document.getElementById(`preview-${inputObjetivo.id}`);
+            if (previewEl) {
+                previewEl.textContent = stringFinal;
+                previewEl.classList.remove('text-muted');
+                previewEl.classList.add('text-success', 'fw-bold');
+            }
+            modalBs.hide(); // Cierra el modal
+        } else {
+             Swal.fire('Error', 'Debes seleccionar días y un rango de horas válido.', 'warning');
+        }
+    });
+
+    // Asegura que los previews de texto se carguen al inicio
+    document.querySelectorAll('.preview-texto').forEach(p => {
+        const inputId = p.id.replace('preview-', '');
+        const input = document.getElementById(inputId);
+        if(input && input.value) {
+            p.textContent = input.value;
+            p.classList.add('text-success', 'fw-bold');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupHorarioModal);

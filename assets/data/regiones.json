@@ -1,0 +1,10 @@
+[
+  { "pais": "Estados Unidos", "region": "NA" },
+  { "pais": "Canadá", "region": "NA" },
+  { "pais": "México", "region": "LAN" },
+  { "pais": "Perú", "region": "LAS" },
+  { "pais": "Chile", "region": "LAS" },
+  { "pais": "Argentina", "region": "LAS" },
+  { "pais": "Brasil", "region": "LAS" },
+  { "pais": "Colombia", "region": "LAS" }
+]

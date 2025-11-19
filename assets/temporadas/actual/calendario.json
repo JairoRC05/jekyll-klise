@@ -38,7 +38,7 @@
             "tag1": "DTS",
             "equipo2": "DFS FROSTBITE",
             "tag2": "FTB",
-            "resultado": "1-2",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-10-20",
@@ -137,7 +137,7 @@
             "tag1": "DTS",
             "equipo2": "DFS RUBY",
             "tag2": "RUBY",
-            "resultado": "2-0",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-10-23",
@@ -236,7 +236,7 @@
             "tag1": "DTS",
             "equipo2": "DINASTY",
             "tag2": "DINASTY",
-            "resultado": "2-0",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-10-27",
@@ -335,7 +335,7 @@
             "tag1": "DTS",
             "equipo2": "ENIGMA ESPORTS",
             "tag2": "ENIGMA",
-            "resultado": "1-2",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-10-29",
@@ -421,7 +421,7 @@
             "tag1": "TUT",
             "equipo2": "DORADITTOS",
             "tag2": "DTS",
-            "resultado": "0-2",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-10-30",
@@ -614,72 +614,78 @@
             "tag1": "FORCE",
             "equipo2": "DFS PLATINUM",
             "tag2": "PLA",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-10",
             "round_number": 8,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "ENIGMA ESPORTS",
             "tag2": "ENIGMA",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-10",
             "round_number": 8,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "CAPIBAYAS",
             "tag1": "CAPI",
             "equipo2": "DORADITTOS",
             "tag2": "DTS",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-10",
             "round_number": 8,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "DFS RUBY",
             "tag1": "RUBY",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-11",
             "round_number": 8,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "HAKKESSHU",
             "tag1": "傑",
             "equipo2": "GANBARÚ DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-11",
             "round_number": 8,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "DFS FROSTBITE",
             "tag1": "FTB",
             "equipo2": "SLEEPKNOT",
             "tag2": "SK",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-11",
             "round_number": 8,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -694,72 +700,78 @@
             "tag1": "FORCE",
             "equipo2": "ENIGMA ESPORTS",
             "tag2": "ENIGMA",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-12",
             "round_number": 9,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DFS PLATINUM",
             "tag1": "PLA",
             "equipo2": "DORADITTOS",
             "tag2": "DTS",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-12",
             "round_number": 9,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-13",
             "round_number": 9,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "CAPIBAYAS",
             "tag1": "CAPI",
             "equipo2": "GANBARÚ DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-13",
             "round_number": 9,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "DFS RUBY",
             "tag1": "RUBY",
             "equipo2": "SLEEPKNOT",
             "tag2": "SK",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-12",
             "round_number": 9,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "HAKKESSHU",
             "tag1": "傑",
             "equipo2": "DFS FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-13",
             "round_number": 9,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -774,72 +786,78 @@
             "tag1": "FORCE",
             "equipo2": "DORADITTOS",
             "tag2": "DTS",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-14",
             "round_number": 10,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "ENIGMA ESPORTS",
             "tag1": "ENIGMA",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-14",
             "round_number": 10,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "DFS PLATINUM",
             "tag1": "PLA",
             "equipo2": "GANBARÚ DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-14",
             "round_number": 10,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "SLEEPKNOT",
             "tag2": "SK",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-17",
             "round_number": 10,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "CAPIBAYAS",
             "tag1": "CAPI",
             "equipo2": "DFS FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-17",
             "round_number": 10,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "DFS RUBY",
             "tag1": "RUBY",
             "equipo2": "HAKKESSHU",
             "tag2": "傑",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-17",
             "round_number": 10,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       },
@@ -854,36 +872,39 @@
             "tag1": "FORCE",
             "equipo2": "THE UNOWN TEAM",
             "tag2": "TUT",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-18",
             "round_number": 11,
-            "match_number": 1
+            "match_number": 1,
+            "fecha": ""
           },
           {
             "equipo1": "DORADITTOS",
             "tag1": "DTS",
             "equipo2": "GANBARÚ DEX",
             "tag2": "GDEX",
-            "resultado": "VS",
+            "resultado": "0-2",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-18",
             "round_number": 11,
-            "match_number": 2
+            "match_number": 2,
+            "fecha": ""
           },
           {
             "equipo1": "ENIGMA ESPORTS",
             "tag1": "ENIGMA",
             "equipo2": "SLEEPKNOT",
             "tag2": "SK",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-18",
             "round_number": 11,
-            "match_number": 3
+            "match_number": 3,
+            "fecha": ""
           },
           {
             "equipo1": "DFS PLATINUM",

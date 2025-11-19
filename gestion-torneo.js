@@ -1057,12 +1057,16 @@ function initializeTeamsTable() {
  * También muestra partidos encontrados en archivos externos para referencia.
  * @param {string} teamTag - El tag del equipo cuyos partidos se van a mostrar.
  */
+
+let matchesModal = null;
+
 function showMatchesModal(teamTag) {
     const team = allTeamData.find(t => t.tag === teamTag);
     if (!team) {
         Swal.fire('Error', 'Equipo no encontrado.', 'error');
         return;
     }
+
 
     $('#matchesTeamName').text(team.team);
     $('#editMatchesTeamTag').val(team.tag);
@@ -1125,9 +1129,14 @@ function showMatchesModal(teamTag) {
         externalMatchesList.append('<p class="text-muted">No hay partidos externos.</p>');
     }
 
-    // Mostrar modal
-    const modal = new bootstrap.Modal(document.getElementById('viewMatchesModal'));
-    modal.show();
+    if (!matchesModal) {
+        matchesModal = new bootstrap.Modal(document.getElementById('viewMatchesModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+    }
+
+    matchesModal.show();
 }
 
 function saveMatchesChanges() {
@@ -1155,7 +1164,10 @@ function saveMatchesChanges() {
 
     saveAllTeamData();
     const modal = bootstrap.Modal.getInstance(document.getElementById('viewMatchesModal'));
-    if (modal) modal.hide();
+
+    if (matchesModal) {
+        matchesModal.hide();
+    }
 
     Swal.fire({
         icon: 'success',
@@ -1168,22 +1180,23 @@ function saveMatchesChanges() {
 
 // Añadir nuevo partido
 $(document).on('click', '#addMatchBtn', function () {
-    const teamTag = $('#editMatchesTeamTag').val();
-    const team = allTeamData.find(t => t.tag === teamTag);
-    if (!team || !team.partidos) return;
-
-    // Encontrar el siguiente número disponible
-    const existingNumbers = Object.keys(team.partidos)
-        .map(k => parseInt(k.replace('M', ''), 10))
+    // Buscar todos los partidos actuales desde el DOM
+    const existingNumbers = $('#matchesInputList .match-row')
+        .map(function () {
+            const key = $(this).data('key');
+            return parseInt(key.replace('M', ''), 10);
+        })
+        .get() // convierte jQuery a array real
         .filter(n => !isNaN(n))
         .sort((a, b) => a - b);
 
+    // Nuevo número correcto
     const nextNumber = existingNumbers.length > 0 ? Math.max(...existingNumbers) + 1 : 1;
     const newKey = `M${nextNumber}`;
 
-    // Añadir al DOM
+    // Insertar nuevo bloque
     const html = `
-        <div class="col-md-12 match-row" data-key="${newKey}">
+        <div class="col-md-12 match-row py-2" data-key="${newKey}">
             <div class="input-group">
                 <span class="input-group-text">${newKey}</span>
                 <input type="text" class="form-control match-value" placeholder="Ej: 3, 0, D">
@@ -1194,13 +1207,14 @@ $(document).on('click', '#addMatchBtn', function () {
         </div>
     `;
     $('#matchesInputList').append(html);
-}); 
+});
+
 
 // Eliminar partido
 $(document).on('click', '.remove-match', function () {
     const row = $(this).closest('.match-row');
     const key = row.data('key');
-    
+
     Swal.fire({
         title: '¿Eliminar partido?',
         text: `¿Estás seguro de eliminar el partido "${key}"? Esta acción no se puede deshacer.`,
@@ -1215,6 +1229,38 @@ $(document).on('click', '.remove-match', function () {
             row.remove();
         }
     });
+});
+
+
+$(document).on('click', '#sortMatchesBtn', function () {
+
+    // Obtener las filas como elementos reales
+    const rows = $('#matchesInputList .match-row').get();
+
+    // Ordenar según el número Mx
+    rows.sort((a, b) => {
+        const numA = parseInt($(a).data('key').replace('M', ''), 10);
+        const numB = parseInt($(b).data('key').replace('M', ''), 10);
+        return numA - numB;
+    });
+
+    // Renumerar después de ordenar
+    rows.forEach((row, index) => {
+        const newKey = `M${index + 1}`;
+
+        $(row).attr('data-key', newKey);
+        $(row).find('.input-group-text').text(newKey);
+        $(row).find('.remove-match').attr('title', `Eliminar ${newKey}`);
+    });
+
+    // Actualizar DOM
+    $('#matchesInputList').empty().append(rows);
+});
+
+
+document.getElementById('viewMatchesModal').addEventListener('hidden.bs.modal', function () {
+    $('.modal-backdrop').remove();
+    $('body').removeClass('modal-open').css('padding-right', '');
 });
 
 
@@ -1381,7 +1427,7 @@ $(document).ready(function () {
                     return data ? '<span class="badge bg-success">Sí</span>' : '<span class="badge bg-danger">No</span>';
                 }
             },
-            { data: 'grupo', title: 'Grupo', className: 'editable-team'},
+            { data: 'grupo', title: 'Grupo', className: 'editable-team' },
             {
                 data: 'jugadores', // Use the 'jugadores' array data
                 title: 'NoJ', // Column title

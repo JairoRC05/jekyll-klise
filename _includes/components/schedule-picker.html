@@ -1,0 +1,30 @@
+<div id="wrapper-horario-{{ include.id }}" class="schedule-wrapper mb-3">
+    <label class="form-label fw-bold">{{ include.label }}</label>
+    
+    <div class="btn-group w-100 mb-2" role="group">
+        {% for dia in site.data.dias %} 
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-{{ dia.val }}" value="{{ dia.val }}">
+        <label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-{{ dia.val }}">{{ dia.short }}</label>
+        {% endfor %}
+        
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-lun" value="Lun"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-lun">L</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-mar" value="Mar"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-mar">M</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-mie" value="Mié"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-mie">X</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-jue" value="Jue"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-jue">J</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-vie" value="Vie"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-vie">V</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-sab" value="Sáb"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-sab">S</label>
+        <input type="checkbox" class="btn-check dia-check" id="d-{{ include.id }}-dom" value="Dom"><label class="btn btn-outline-secondary btn-sm" for="d-{{ include.id }}-dom">D</label>
+    </div>
+
+    <div class="row g-2 align-items-center">
+        <div class="col-6">
+            <input type="time" class="form-control hora-inicio" placeholder="Desde">
+        </div>
+        <div class="col-6">
+            <input type="time" class="form-control hora-fin" placeholder="Hasta">
+        </div>
+    </div>
+
+    <input type="hidden" id="{{ include.input_id }}">
+    <small class="text-muted d-block mt-1 text-center preview-texto">Sin horario definido</small>
+</div>

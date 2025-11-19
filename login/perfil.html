@@ -1,6 +1,6 @@
 ---
 layout: login
-title: Mi Perfil - Nación Unite
+title: MI PERFIL
 permalink: /mi-perfil
 ---
 
@@ -8,16 +8,6 @@ permalink: /mi-perfil
 
 
 <style>
-    .profile-container {
-        max-width: 600px;
-        margin: 30px auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background: #fafafa;
-    }
-
     .form-group {
         margin-bottom: 15px;
     }
@@ -31,43 +21,27 @@ permalink: /mi-perfil
     .form-group input,
     .form-group select,
     .form-group textarea {
+        padding: 12px 15px;
+        border: 1px solid #e6e6e6;
+        background-color: #ffffff;
+        color: #000000;
+        outline: none;
         width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
     }
+
+
+
+    .form-group input:focus {
+        border: 1px solid #ff6b10;
+    }
+
 
     .form-group textarea {
         height: 80px;
         resize: vertical;
     }
 
-    .monedas-display {
-        font-size: 24px;
-        font-weight: bold;
-        color: #ff7300;
-        text-align: center;
-        margin: 15px 0;
-        padding: 10px;
-        background: #fff8e1;
-        border-radius: 6px;
-    }
 
-    .btn {
-        background: #ff7300;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        width: 100%;
-    }
-
-    .btn:hover {
-        background: #e06500;
-    }
 
     #mensaje {
         margin-top: 15px;
@@ -103,172 +77,526 @@ permalink: /mi-perfil
     #avatarSelector img.selected {
         border: 2px solid #ff7300;
     }
+
+
+    .input-with-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .poke-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        margin-right: 8px;
+        display: none;
+        /* Se muestra cuando hay pokemon valido */
+    }
 </style>
 
-<div class="profile-container">
-    <h2>Mi Perfil</h2>
+<div class="tab-content" id="perfilTabsContent">
 
-    <!-- Mostrar monedas arriba del formulario -->
-    <div class="monedas-display">
-        🪙 <span id="saldo-monedas">0</span> monedas
+    <div class="tab-pane fade show active" id="perfil-content" role="tabpanel">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-header bg-primary bg-opacity-10 text-primary fw-bold">
+                <i class="bi bi-person-circle"></i> Perfil
+            </div>
+            <div class="card-body">
+                <p id="loading">Cargando tu perfil...</p>
+                <form id="profileForm" style="display:none;">
+
+                    <div class="row g-3">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="nickname" class="form-label d-flex align-items-center">
+                                    Nickname (ID en juego)*
+                                    <i id="nick-status-icon" class="bi bi-info-circle-fill ms-2"
+                                        style="cursor: help; font-size: 1.1rem;" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" data-bs-html="true"
+                                        title="Verificando disponibilidad...">
+                                    </i>
+                                </label>
+                                <input type="text" id="nickname" class="form-control"
+                                    placeholder="Tu nombre en el juego" min="4" maxlength="12">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="cumpleaños">Fecha de cumpleaños*
+                                    <i class="bi bi-info-circle-fill ms-2" style="cursor: help; font-size: 1.1rem;"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
+                                        title="Solo se puede establecer una vez, esta información no es visible públicamente">
+                                    </i>
+                                </label>
+                                <input type="date" id="cumpleaños" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="discord">Discord</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-discord"></i></span>
+                                    <input type="text" id="discord" class="form-control" placeholder="nombre#000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono / WhatsApp
+                                    <i class="bi bi-info-circle-fill ms-2" style="cursor: help; font-size: 1.1rem;"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
+                                        title="Esta información no es visible públicamente">
+                                    </i>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                                    <input type="tel" id="telefono" class="form-control" placeholder="000 000 0000"
+                                        maxlength="12">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="">
+                        <div class="form-group">
+                            <label>Avatar</label>
+                            <div id="avatars-container"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">Define tu Estilo de Juego <small class="text-muted">(Máx
+                                3)</small></label>
+
+                        <div class="d-flex flex-wrap gap-2" id="tags-container">
+                            <input type="checkbox" class="btn-check tag-check" id="tag-shotcaller" value="Shotcaller"
+                                autocomplete="off">
+                            <label class="btn btn-outline-info btn-sm rounded-pill" for="tag-shotcaller">🗣️
+                                Shotcaller</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-agresivo" value="Agresivo"
+                                autocomplete="off">
+                            <label class="btn btn-outline-danger btn-sm rounded-pill" for="tag-agresivo">⚔️
+                                Agresivo</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-macro" value="Macro Player"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary btn-sm rounded-pill" for="tag-macro">🧠 Macro
+                                Player</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-flex" value="Flex"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success btn-sm rounded-pill" for="tag-flex">🔄 Flex</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-otp" value="OTP"
+                                autocomplete="off">
+                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-otp">⭐ OTP (Main
+                                puro)</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-defensivo" value="Defensivo"
+                                autocomplete="off">
+                            <label class="btn btn-outline-secondary btn-sm rounded-pill" for="tag-defensivo">🛡️
+                                Defensivo</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-coach" value="Estratégico"
+                                autocomplete="off">
+                            <label class="btn btn-outline-dark btn-sm rounded-pill" for="tag-coach">📋
+                                Estratégico</label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-chill" value="Chill"
+                                autocomplete="off">
+                            <label class="btn btn-outline-light text-dark border btn-sm rounded-pill" for="tag-chill">😌
+                                Chill /
+                                Relax</label>
+                        </div>
+                        <small id="tags-feedback" class="text-muted mt-1 d-block">Seleccionados: <span
+                                id="tags-count">0</span>/3</small>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="descripcion" class="form-label fw-bold">Bio / Detalles Extra</label>
+                        <textarea class="form-control" id="descripcion" rows="2" maxlength="150"
+                            placeholder="Ej: Ex-jugador de LoL, busco equipo para llegar a Mundial."></textarea>
+                        <small class="text-end d-block text-muted"><span id="chars-count">0</span>/150</small>
+                    </div>
+
+                    <hr>
+
+                    <div class="row g-3">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="rol">Rol principal*</label>
+                                <select id="rol" class="form-select" required>
+                                    <option value="">Selecciona tu rol</option>
+                                    <option value="ADC">ADC</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Toplaner">Toplaner</option>
+                                    <option value="Jungle">Jungle</option>
+                                    <option value="Defense">Defense</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="main-input">Main*</label>
+
+                                <div class="input-with-icon">
+                                    <img id="main-icon" class="poke-icon" src="" alt="">
+                                    <input list="pokemon-list" id="main-input" class="form-control"
+                                        placeholder="Selecciona tu main" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="partidas">Partidas jugadas</label>
+                                <select id="partidas">
+                                    <option value="">Selecciona rango</option>
+                                    <option value="100">Más de 100</option>
+                                    <option value="500">Más de 500</option>
+                                    <option value="1000">Más de 1,000</option>
+                                    <option value="3000">Más de 3,000</option>
+                                    <option value="5000">Más de 5,000</option>
+                                    <option value="7000">Más de 7,000</option>
+                                    <option value="9000">Más de 9,000</option>
+                                    <option value="10000">Más de 10,000</option>
+                                    <option value="1500">Más de 15,000</option>
+                                    <option value="20000">Más de 20,000</option>
+                                    <option value="25000">Más de 25,000</option>
+                                    <option value="30000">Más de 30,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>¿Estás disponible para jugar/clasificatoria/torneos?</label>
+                            <select id="disponibilidad" class="form-select">
+                                <option value="siempre">Siempre</option>
+                                <option value="fines">Solo fines de semana</option>
+                                <option value="solo-torneos">Solo torneos</option>
+                                <option value="no">No disponible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-lg-12">
+                            <div class="form-group" id="equipo-section"
+                                style="padding: 15px; background-color: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+
+                                <label class="form-label fw-bold mb-2">Estado del Equipo</label>
+
+                                <div class="input-group mb-2">
+                                    <input type="text" id="equipo-input" list="teams-list"
+                                        class="form-control form-control-lg"
+                                        placeholder="Escribe el nombre de tu equipo...">
+
+                                    <datalist id="teams-list"></datalist>
+
+                                    <input type="checkbox" class="btn-check" id="buscando-equipo" autocomplete="off">
+                                    <label class="btn btn-outline-success d-flex align-items-center gap-2"
+                                        for="buscando-equipo" style="margin: 0; border-radius: 0;">
+                                        <i class="bi bi-person-plus-fill"></i>
+                                        <span>Soy Agente Libre</span>
+                                    </label>
+                                </div>
+
+                                <small id="equipo-hint" class="text-muted">
+                                    Si tienes equipo escríbelo, si no, pulsa el botón de Agente Libre.
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div id="seccion-agente-libre" style="display:none;">
+                            <div id="horario-wrapper">
+                                <label class="form-label fw-bold">Horario de Juego</label>
+
+                                <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#horarioModal" data-target-input="horario-juego"
+                                    id="btn-horario-juego">
+                                    <i class="bi bi-clock"></i> Configurar Horario
+                                </button>
+
+                                <input type="hidden" id="horario-juego">
+                                <small class="text-muted d-block mt-1 preview-texto" id="preview-horario-juego">Sin
+                                    horario definido</small>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" style="display: none;" id="region-section">
+                            <div class="form-control">
+                                <label>Pais / Región</label>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <input list="paises-america" id="pais" class="form-control"
+                                        placeholder="Selecciona tu país">
+                                    <datalist id="paises-america"></datalist>
+                                    <input type="text" id="region" readonly class="form-control"
+                                        placeholder="Región auto-detectada">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <div>
+                                    <label>Win Rate (%)</label>
+                                    <input class="form-control" type="number" id="win-rate" min="0" max="100"
+                                        placeholder="Ej: 75">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Número de licencias</label>
+                                <input class="form-control" type="number" id="licencias" min="0" max="81"
+                                    placeholder="Ej: 5">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Veces que alcanzó Rango Maestro</label>
+                                <input class="form-control" type="number" id="veces-maestro" min="0" max="31"
+                                    placeholder="Ej: 3">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Mayor racha en Rango Maestro</label>
+                                <input class="form-control" type="number" id="racha-maestro" min="0" max="31"
+                                    placeholder="Ej: 14">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DATALIST general -->
+                    <datalist id="pokemon-list"></datalist>
+
+
+                    <!-- PICKS (tu contenedor actual) -->
+                    <div id="picks-container"></div>
+
+
+                    <div id="redes-section" class="form-group" style="display:none;">
+                        <label>Redes sociales</label>
+                        <input type="text" id="instagram" placeholder="Instagram (usuario)">
+                        <input type="text" id="x" placeholder="X / Twitter (usuario)">
+                        <input type="text" id="facebook" placeholder="Facebook (URL o usuario)">
+                    </div>
+
+                    <div id="stream-section" class="form-group" style="display:none;">
+                        <label>Plataformas de streaming</label>
+                        <input type="text" id="twitch" placeholder="Twitch">
+                        <input type="text" id="youtube" placeholder="YouTube">
+                        <input type="text" id="kick" placeholder="Kick">
+                    </div>
+
+
+                    <!-- Sección Streamer extra (solo streamer) -->
+                    <div id="streamer-extra" class="form-group" style="display:none;">
+                        <div id="stream-section" style="display:none;">
+                            <div id="horario-wrapper">
+                                <label class="form-label fw-bold">Horario de Juego</label>
+
+                                <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#horarioModal" data-target-input="horario-juego"
+                                    id="btn-horario-juego">
+                                    <i class="bi bi-clock"></i> Configurar Horario
+                                </button>
+
+                                <input type="hidden" id="horario-juego">
+                                <small class="text-muted d-block mt-1 preview-texto" id="preview-horario-juego">Sin
+                                    horario definido</small>
+                            </div>
+                        </div>
+
+                        <label>Seguidores (aprox.)</label>
+                        <input type="number" id="seguidores" placeholder="1000">
+
+                        <label>Clips de TikTok (URLs, máx. 3)</label>
+                        <input type="url" id="clip1" placeholder="Clip 1">
+                        <input type="url" id="clip2" placeholder="Clip 2">
+                        <input type="url" id="clip3" placeholder="Clip 3">
+
+
+                        <label>Categorías de juegos (máx. 5)</label>
+                        <input type="text" id="categorias" placeholder="Ej: MOBA, Battle Royale, Estrategia">
+                    </div>
+
+                    <div id="coach-section" style="display: none;">
+                        <h5 class="text-primary"><i class="bi bi-easel"></i> Perfil de Entrenador</h5>
+
+                        <div class="mb-3">
+                            <label class="form-label">Enlace de PayPal / Método de Cobro</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-paypal"></i></span>
+                                <input type="text" id="coach-paypal" class="form-control"
+                                    placeholder="paypal.me/tu_usuario">
+                            </div>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label class="form-label">Biografía Profesional / Metodología</label>
+                            <textarea id="coach-bio" class="form-control" rows="6" maxlength="1000"
+                                placeholder="Explica tu experiencia, equipos que has entrenado, tu forma de analizar partidas, etc..."></textarea>
+                            <small class="text-muted">Máximo 1000 caracteres.</small>
+                        </div>
+
+
+                        <div id="coach-inputs-section" style="display:none;">
+                            <div id="horario-wrapper">
+                                <label class="form-label fw-bold">Horario de Juego</label>
+
+                                <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#horarioModal" data-target-input="horario-juego"
+                                    id="btn-horario-juego">
+                                    <i class="bi bi-clock"></i> Configurar Horario
+                                </button>
+
+                                <input type="hidden" id="horario-juego">
+                                <small class="text-muted d-block mt-1 preview-texto" id="preview-horario-juego">Sin
+                                    horario definido</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Guardar cambios</button>
+                </form>
+                <p id="mensaje"></p>
+            </div>
+        </div>
     </div>
 
-    <p id="loading">Cargando tu perfil...</p>
-    <form id="profileForm" style="display:none;">
+    <div class="tab-pane fade" id="logros-content" role="tabpanel">
 
-        <div class="form-group">
-            <label for="nickname">Nickname *</label>
-            <input type="text" id="nickname" required>
+
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-header bg-dark bg-opacity-10 text-dark fw-bold">
+                <i class="bi bi-pencil-square"></i> Mis insignias
+            </div>
+            <div class="card-body">
+                <div id="mis-insignias" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:10px;">
+                    <p><em>Cargando...</em></p>
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label>Avatar</label>
-            <div id="avatarSelector"></div>
+        <hr class="my-3">
+
+
+        <div id="seccion-logros-coach" style="display: none;" class="mb-4">
+            <h5 class="text-primary mb-3"><i class="bi bi-clipboard-data"></i> Palmarés como Coach</h5>
+            <div id="lista-logros-coach" class="list-group list-group-flush">
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="mains">Main(s) *</label>
-            <select id="mains" required>
-                <option value="">Selecciona tu main</option>
-                <option value="Pikachu">Pikachu</option>
-                <option value="Blastoise">Blastoise</option>
-                <option value="Venusaur">Venusaur</option>
-                <option value="Charizard">Charizard</option>
-                <option value="Lucario">Lucario</option>
-                <option value="Absol">Absol</option>
-                <option value="Greninja">Greninja</option>
-                <option value="Talonflame">Talonflame</option>
-                <option value="Cinderace">Cinderace</option>
-                <option value="Gardevoir">Gardevoir</option>
-            </select>
-        </div>
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-header bg-dark bg-opacity-10 text-dark fw-bold">
+                <i class="bi bi-controller"></i> Logros
+            </div>
+            <div class="card-body">
+                <div id="logros-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
 
-        <div class="form-group">
-            <label for="rol">Rol principal *</label>
-            <select id="rol" required>
-                <option value="">Selecciona tu rol</option>
-                <option value="ADC">ADC</option>
-                <option value="Support">Support</option>
-                <option value="Toplaner">Toplaner</option>
-                <option value="Jungle">Jungle</option>
-                <option value="Defense">Defense</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="discord">Usuario de Discord (ej: Jugador#1234) *</label>
-            <input type="text" id="discord" placeholder="nombre#0000" required>
-        </div>
-
-        <div class="form-group">
-            <label for="equipo">Estado de equipo</label>
-            <input type="text" id="equipo" placeholder="Nombre del equipo o 'Disponible'">
-        </div>
-
-        <div class="form-group">
-            <label for="partidas">Partidas jugadas</label>
-            <select id="partidas">
-                <option value="">Selecciona rango</option>
-                <option value="100">Más de 100</option>
-                <option value="500">Más de 500</option>
-                <option value="1000">Más de 1,000</option>
-                <option value="3000">Más de 3,000</option>
-                <option value="5000">Más de 5,000</option>
-                <option value="7000">Más de 7,000</option>
-                <option value="9000">Más de 9,000</option>
-                <option value="10000">Más de 10,000</option>
-                <option value="1500">Más de 15,000</option>
-                <option value="20000">Más de 20,000</option>
-                <option value="25000">Más de 25,000</option>
-                <option value="30000">Más de 30,000</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="cumpleaños">Fecha de nacimiento</label>
-            <input type="date" id="cumpleaños">
-        </div>
-
-        <!-- Picks (3 o 7 según plan) -->
-        <div class="form-group">
-            <label>Mis picks principales</label>
-            <div id="picks-container"></div>
-        </div>
-
-        <div id="redes-section" class="form-group" style="display:none;">
-            <label>Redes sociales</label>
-            <input type="text" id="instagram" placeholder="Instagram (usuario)">
-            <input type="text" id="x" placeholder="X / Twitter (usuario)">
-            <input type="text" id="facebook" placeholder="Facebook (URL o usuario)">
-        </div>
-
-        <div id="stream-section" class="form-group" style="display:none;">
-            <label>Plataformas de streaming</label>
-            <input type="text" id="twitch" placeholder="Twitch">
-            <input type="text" id="youtube" placeholder="YouTube">
-            <input type="text" id="kick" placeholder="Kick">
-        </div>
-
-
-        <!-- Sección Streamer extra (solo streamer) -->
-        <div id="streamer-extra" class="form-group" style="display:none;">
-            <label>Horario de transmisión</label>
-            <input type="text" id="horario" placeholder="Ej: Lunes y Miércoles 8PM">
-
-            <label>Seguidores (aprox.)</label>
-            <input type="number" id="seguidores" placeholder="1000">
-
-            <label>Clips de TikTok (URLs, máx. 3)</label>
-            <input type="url" id="clip1" placeholder="Clip 1">
-            <input type="url" id="clip2" placeholder="Clip 2">
-            <input type="url" id="clip3" placeholder="Clip 3">
-
-            <label>Clip de YouTube</label>
-            <input type="url" id="clip_yt" placeholder="YouTube clip">
-
-            <label>Categorías de juegos (máx. 5)</label>
-            <input type="text" id="categorias" placeholder="Ej: MOBA, Battle Royale, Estrategia">
-        </div>
-
-        <div class="form-group">
-            <label for="descripcion">Acerca de mí</label>
-            <textarea id="descripcion" placeholder="Cuéntanos un poco sobre ti..."></textarea>
-        </div>
-
-
-
-        <button type="submit" class="btn">Guardar cambios</button>
-
-
-
- 
-
-    </form>
-
-<!-- Sección de Logros -->
-<div id="logros-section" style="display:none; margin-top:20px;">
-  <h3>🏆 Logros Verificados</h3>
-  <div id="logros-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
-    <!-- Se llenará con JS -->
-  </div>
-</div>
-
-<!-- Sección de Trayectoria -->
-<div id="trayectoria-section" style="display:none; margin-top:20px;">
-  <h3>🏅 Trayectoria</h3>
-  <div id="trayectoria-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
-    <!-- Se llenará con JS -->
-  </div>
-</div>
-
-    <div class="form-group">
-        <h3>Historial de monedas</h3>
-        <div id="historial-monedas"
-            style="max-height: 200px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 4px;">
-            <p><em>Cargando historial...</em></p>
+                </div>
+            </div>
         </div>
     </div>
-    <p id="mensaje"></p>
+
+    <div class="tab-pane fade" id="trayectoria-content" role="tabpanel">
+        <div id="trayectoria-section" style="display:none; margin-top:20px;">
+            <h3>🏅 Trayectoria</h3>
+            <div id="trayectoria-lista" style="border:1px solid #eee; border-radius:6px; padding:10px;">
+                <!-- Se llenará con JS -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="historial-content" role="tabpanel">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-warning bg-opacity-10 text-warning fw-bold">
+                        <i class="bi bi-coin"></i> Historial de Monedas
+                    </div>
+                    <div class="card-body">
+                        <div id="historial-monedas"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-secondary bg-opacity-10 text-secondary fw-bold">
+                        <i class="bi bi-pencil-square"></i> Cambios de Nickname
+                    </div>
+                    <div class="card-body">
+                        <p class="small text-muted mb-2">Historial de nombres usados:</p>
+                        <div id="historial-nicks-mi-perfil" class="fw-bold"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<script src="/assets/js/perfiles.js"></script>
+<div class="modal fade" id="horarioModal" tabindex="-1" aria-labelledby="horarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="horarioModalLabel">Seleccionar Disponibilidad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted small">Selecciona los días y el rango de horas habituales (GMT-5).</p>
+                
+                <div class="btn-group w-100 mb-3" role="group" id="modal-dias-checks">
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-lun" value="Lun"><label class="btn btn-outline-secondary btn-sm" for="d-m-lun">L</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mar" value="Mar"><label class="btn btn-outline-secondary btn-sm" for="d-m-mar">M</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mie" value="Mié"><label class="btn btn-outline-secondary btn-sm" for="d-m-mie">X</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-jue" value="Jue"><label class="btn btn-outline-secondary btn-sm" for="d-m-jue">J</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-vie" value="Vie"><label class="btn btn-outline-secondary btn-sm" for="d-m-vie">V</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-sab" value="Sáb"><label class="btn btn-outline-secondary btn-sm" for="d-m-sab">S</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-dom" value="Dom"><label class="btn btn-outline-secondary btn-sm" for="d-m-dom">D</label>
+                </div>
+
+                <div class="row g-2 align-items-center">
+                    <div class="col-6">
+                        <label class="small text-muted mb-1">Desde</label>
+                        <input type="time" class="form-control" id="modal-hora-inicio">
+                    </div>
+                    <div class="col-6">
+                        <label class="small text-muted mb-1">Hasta</label>
+                        <input type="time" class="form-control" id="modal-hora-fin">
+                    </div>
+                </div>
+
+                <div class="mt-3 text-center">
+                    <strong id="modal-preview-text" class="text-info"></strong>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="modal-save-horario">Guardar Horario</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/assets/js/perfiles.js"></script>

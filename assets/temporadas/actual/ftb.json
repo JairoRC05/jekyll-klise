@@ -54,12 +54,16 @@
   "link": "/liga-indigo/equipos/dragonflies-gaming-frostbite",
   "id": "kQbz2mNMBjKpjNHPJMLb",
   "partidos": {
-    "M1": "2",
+    "M1": "3",
     "M2": "0",
     "M3": "0",
     "M4": "3",
     "M5": "0",
     "M6": "2",
-    "M7": "3"
+    "M7": "3",
+    "M8": "3",
+    "M9": "3",
+    "M10": "3",
+    "M11": ""
   }
 }

@@ -22,7 +22,7 @@ permalink: /jugador.html
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   }
 
   .plan-badge {
@@ -39,7 +39,7 @@ permalink: /jugador.html
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid #e9ecef;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   }
 
   .seccion h3 {
@@ -75,7 +75,8 @@ permalink: /jugador.html
 
   /* --- LOGROS Y TRAYECTORIA --- */
 
-  .logro-item, .trayectoria-item {
+  .logro-item,
+  .trayectoria-item {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -88,7 +89,8 @@ permalink: /jugador.html
     border-bottom: none;
   }
 
-  .logro-item img, .trayectoria-item img {
+  .logro-item img,
+  .trayectoria-item img {
     width: 44px;
     height: 44px;
     border-radius: 8px;
@@ -103,7 +105,7 @@ permalink: /jugador.html
 
 
 <div class="container py-4">
-  
+
   <!-- Loading -->
   <div id="loading" class="text-center">
     <div class="spinner-border text-primary"></div>
@@ -129,6 +131,11 @@ permalink: /jugador.html
       <p><strong>ID de juego:</strong> <span id="id-juego">—</span></p>
       <p><strong>Discord:</strong> <span id="discord">—</span></p>
       <p id="descripcion" class="mt-2 text-muted">—</p>
+    </div>
+
+    <div class="seccion">
+      <h3>🏅 Insignias</h3>
+      <div id="insignias-lista"></div>
     </div>
 
     <!-- ESTADISTICAS -->
@@ -178,6 +185,13 @@ permalink: /jugador.html
       <div id="streamer-datos"></div>
     </div>
 
+    <div class="seccion">
+      <h3>🔄 Historial de nicknames</h3>
+      <p id="historial-nicks" class="text-muted">Sin cambios.</p>
+    </div>
+
+
+
   </div>
 
   <div id="error" class="alert alert-danger mt-3" style="display:none;"></div>
@@ -213,6 +227,10 @@ permalink: /jugador.html
   } else {
     cargarPerfilPorIdJuego(idJuego);
   }
+
+
+  // En cargarPerfilPorIdJuego()
+
 
   // ---------- Función principal para cargar perfil ----------
   async function cargarPerfilPorIdJuego(idJuego) {
@@ -282,8 +300,40 @@ permalink: /jugador.html
       if (data.plan && data.plan !== 'free') renderRedes(data);
       if (data.plan === 'streamer') renderStreamer(data);
 
-      // Ya no llamamos a renderPerfil (no existe)
-      // renderPerfil(data);  <-- eliminado
+
+      if (data.historial_nicks && data.historial_nicks.length > 0) {
+        const nicks = data.historial_nicks
+          .map(n => n.nickname)
+          .filter((nick, i, arr) => arr.indexOf(nick) === i) // Eliminar duplicados
+          .join(', ');
+
+        document.getElementById('historial-nicks').textContent = nicks;
+      }
+
+
+      // Cargar insignias
+      const insigniasSnap = await db.collection('usuarios').doc(uid).collection('insignias').get();
+      const insignias = [];
+      insigniasSnap.forEach(doc => insignias.push(doc.data()));
+
+      // Renderizar
+      const cont = document.getElementById('insignias-lista');
+      if (insignias.length) {
+        let html = '<div class="d-flex flex-wrap gap-3 justify-content-center">';
+        insignias.forEach(b => {
+          html += `
+      <div class="text-center" title="${b.nombre}">
+        <img src="/assets/insignias/${b.imagen}" width="50" height="50" style="object-fit: contain;">
+        <div><small>${b.nombre}</small></div>
+      </div>
+    `;
+        });
+        html += '</div>';
+        cont.innerHTML = html;
+      } else {
+        cont.innerHTML = '<p class="text-muted text-center">Sin insignias.</p>';
+      }
+
 
     } catch (err) {
       console.error(err);
@@ -293,7 +343,27 @@ permalink: /jugador.html
     }
   }
 
-  // ---------- Render functions (las dejé igual que las tuyas pero usando append) ----------
+  function renderInsignias(insignias) {
+    const cont = document.getElementById('insignias-lista');
+    if (!insignias.length) {
+      cont.innerHTML = '<p class="text-muted">Sin insignias.</p>';
+      return;
+    }
+
+    let html = '<div class="d-flex flex-wrap gap-2">';
+    insignias.forEach(b => {
+      html += `
+      <div title="${b.nombre}" style="text-align:center;">
+        <img src="/assets/insignias/${b.imagen}" width="40" height="40" style="object-fit:contain;">
+        <div><small>${b.nombre}</small></div>
+      </div>
+    `;
+    });
+    html += '</div>';
+    cont.innerHTML = html;
+  }
+
+
   function renderTrayectoria(trayectoria) {
     const cont = document.getElementById('trayectoria-lista');
     const seccion = document.getElementById('seccion-trayectoria');

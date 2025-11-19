@@ -1,15 +1,60 @@
 // Top-bar styles converted to SASS
 .top-bar {
-  @include glass-effect;
   padding: 1rem 1.5rem;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 999;
+
+
+  .top-solar-coins{
+         font-size: 24px;
+        font-weight: bold;
+        color: #ff7300;
+  }
+
+  .top-user-info {
+
+    .top-avatar {
+      border-radius: 999px;
+      border: 2px solid #fff;
+      background: rgb(202, 202, 202);
+      height: 60px;
+      width: 60px;
+    }
+
+    .top-block {
+
+      .top-verified{
+
+        display: flex;
+        gap: 5px;
+         .top-nickname {
+        color: #131313;
+        margin: 0;
+        font-size: 1.5rem;
+
+        @include respond-to(sm) {
+          font-size: 1.5rem;
+
+        }
+      }
+
+      }
+     
+
+      .top-id {
+        color: #363636;
+      }
+
+    }
+
+
+
+  }
 
   h1 {
     @include respond-to(sm) {
@@ -38,7 +83,7 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-  border-radius: 0;
+    border-radius: 0;
 
   }
 }
