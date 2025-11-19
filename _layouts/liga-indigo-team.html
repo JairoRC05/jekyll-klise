@@ -569,155 +569,156 @@ permalink:
     `).join('');
         }
 
-        // ===== RENDERIZAR COMPARACIÓN =====
-        function renderCalendarComparison(equipoA, rivalTag, rivalName, containerId, roundsDatesFromScript) {
-            const teamTagA = equipoA.tag;
-            const teamNameA = equipoA.team || equipoA.tag;
+  // ===== NUEVA FUNCIÓN: RENDERIZAR COMPARACIÓN SIMPLE =====
+function renderCalendarComparison(equipoA, rivalTag, rivalName, containerId, roundsDatesFromScript) {
+    const teamTagA = equipoA.tag;
+    const teamNameA = equipoA.team || equipoA.tag;
 
-            if (!teamTagA || !rivalTag || teamTagA === rivalTag) {
-                document.getElementById(containerId).innerHTML = '<p>Selecciona un rival válido.</p>';
-                return;
-            }
+    if (!rivalTag || teamTagA === rivalTag) {
+        document.getElementById(containerId).innerHTML = '<p>Selecciona un rival para comparar.</p>';
+        return;
+    }
 
-            const roundDatesMap = new Map();
-            roundsDatesFromScript.forEach(r => {
-                const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
-                roundDatesMap.set(r.ronda, fechaStr);
+    const roundDatesMap = new Map();
+    roundsDatesFromScript.forEach(r => {
+        const fechaStr = r.fecha || (r.fecha_inicio && r.fecha_fin ? `${r.fecha_inicio} - ${r.fecha_fin}` : 'Fecha no definida');
+        roundDatesMap.set(r.ronda, fechaStr);
+    });
+
+    fetch('/assets/temporadas/actual/calendario.json')
+        .then(r => r.json())
+        .then(data => {
+            if (!data?.[0]?.rondas) throw new Error('calendario.json inválido');
+
+            // 1. Recopilar y ordenar los partidos del Equipo A
+            const partidosA = [];
+            // 2. Recopilar y ordenar los partidos del Equipo B (Rival)
+            const partidosB = [];
+            const rondas = data[0].rondas;
+            const todosLosPartidos = []; // Usaremos esta lista para asegurar el orden
+
+            rondas.forEach(ronda => {
+                ronda.partidos.forEach(p => {
+                    if (p.tag1 === teamTagA || p.tag2 === teamTagA) {
+                        partidosA.push({ ...p, rondaNombre: ronda.ronda });
+                    }
+                    if (p.tag1 === rivalTag || p.tag2 === rivalTag) {
+                        partidosB.push({ ...p, rondaNombre: ronda.ronda });
+                    }
+                });
             });
 
-            fetch('/assets/temporadas/actual/calendario.json')
-                .then(r => r.json())
-                .then(data => {
-                    if (!data?.[0]?.rondas) throw new Error('calendario.json inválido');
+            // Usamos roundSpecificData para mantener el orden de las rondas
+            roundsDatesFromScript.forEach(roundDef => {
+                const matchesA = partidosA.filter(p => p.rondaNombre === roundDef.ronda);
+                const matchesB = partidosB.filter(p => p.rondaNombre === roundDef.ronda);
+                todosLosPartidos.push({ ronda: roundDef.ronda, partidosA: matchesA, partidosB: matchesB });
+            });
 
-                    const tagToName = new Map();
-                    const partidosA = [];
-                    const partidosB = [];
+            // Función auxiliar (MOVIDA FUERA del bucle)
+            const buildCard = (partido, teamTag, teamName) => {
+                if (!partido) {
+                    return `
+                        <div class="col-12 col-md-6">
+                            <div class="bracket-round-list-zzz">
+                                <div class="card-round-promo"><h3>—</h3></div>
+                                <div class="card-back">
+                                    <div class="card-color-left bg-light"></div>
+                                    <div class="card-color-right bg-light"></div>
+                                </div>
+                            </div>
+                        </div>`;
+                }
 
-                    data[0].rondas.forEach(ronda => {
-                        ronda.partidos.forEach(p => {
-                            if (p.tag1 && p.equipo1) tagToName.set(p.tag1, p.equipo1);
-                            if (p.tag2 && p.equipo2 && p.tag2 !== "DES") tagToName.set(p.tag2, p.equipo2);
+                const fecha = formatDateToDayMonth(roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida');
+                const resultado = partido.resultado || 'VS';
+                
+                // Determinamos quién es el rival
+                const rivalTag = partido.tag1 === teamTag ? partido.tag2 : partido.tag1;
+                const rivalName = partido.equipo1 === teamName ? partido.equipo2 : partido.equipo1;
+                
+                // El equipo actual (Local) y el rival (Visitante)
+                const tagLocal = teamTag;
+                const nameLocal = teamName;
+                const tagRival = rivalTag;
+                const nameRival = rivalName;
+                
+                // Truncamos
+                const localT = truncateString(nameLocal, 12);
+                const rivalT = truncateString(nameRival, 12);
 
-                            if (p.tag1 === teamTagA || p.tag2 === teamTagA) {
-                                const partidoConRonda = { ...p, rondaNombre: ronda.ronda };
-                                const partidoA = aplicarInversionPorEquipo(partidoConRonda, teamTagA);
-                                const rivalTagA = partidoA.tag1 === teamTagA ? partidoA.tag2 : partidoA.tag1;
-                                const rivalNameA = partidoA.tag1 === teamTagA ? partidoA.equipo2 : partidoA.equipo1;
-                                partidosA.push({ ...partidoA, rondaNombre: ronda.ronda, rivalTag: rivalTagA, rivalName: rivalNameA });
-                            }
+                const slugLocal = equipoSlugs[nameLocal] || nameLocal.toLowerCase().replace(/\s+/g, '-');
+                const slugRival = equipoSlugs[nameRival] || nameRival.toLowerCase().replace(/\s+/g, '-');
 
-                            // Para equipo B (rival)
-                            if (p.tag1 === rivalTag || p.tag2 === rivalTag) {
-                                const partidoConRonda = { ...p, rondaNombre: ronda.ronda };
-                                const partidoB = aplicarInversionPorEquipo(partidoConRonda, teamTagA);
-                                const rivalTagB = partidoB.tag1 === rivalTag ? partidoB.tag2 : partidoB.tag1;
-                                const rivalNameB = partidoB.tag1 === rivalTag ? partidoB.equipo2 : partidoB.equipo1;
-                                partidosB.push({ ...partidoB, rondaNombre: ronda.ronda, rivalTag: rivalTagB, rivalName: rivalNameB });
-                            }
-                        });
-                    });
 
-                    tagToName.set(rivalTag, rivalName);
-
-                    const rivalesTags = new Set([
-                        ...partidosA.map(p => p.rivalTag),
-                        ...partidosB.map(p => p.rivalTag)
-                    ]);
-
-                    const rivalesOrdenados = Array.from(rivalesTags)
-                        .map(tag => ({ tag, name: tagToName.get(tag) || tag }))
-                        .filter(r => r.name && r.name !== "DES")
-                        .sort((a, b) => a.name.localeCompare(b.name, 'es', { sensitivity: 'base' }));
-
-                    const mapaA = new Map(partidosA.map(p => [p.rivalTag, p]));
-                    const mapaB = new Map(partidosB.map(p => [p.rivalTag, p]));
-
-                    let html = `
-                    <div class="comparacion-calendarios">
-                        <h2>Comparación: ${teamNameA} vs ${rivalName}</h2>
-                        <div class="row comparacion-grid">
+                return `
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="bracket-round-list">
+                            <div class="bracket-round-team">
+                                <a href="/liga-indigo/equipos/${slugLocal}">
+                                    <img src="/assets/logos/${tagLocal}.webp" alt="${nameLocal}" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="round-titles">
+                                <div class="card-round-promo left"><h6>${localT}</h6></div>
+                                <div class="card-round-promo mx-2">
+                                    <span>${partido.rondaNombre}</span>
+                                    ${resultado !== "VS" ? `<h6>${resultado}</h6>` : ''}
+                                    <span>${fecha}</span>
+                                </div>
+                                <div class="card-round-promo right"><h6>${rivalT}</h6></div>
+                            </div>
+                            <div class="bracket-round-team-right">
+                                <a href="/liga-indigo/equipos/${slugRival}">
+                                    <img src="/assets/logos/${tagRival}.webp" alt="${nameRival}" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-color-left ${tagLocal === '7Z' ? 'S7Z' : tagLocal}"></div>
+                                <div class="card-color-right ${tagRival === '7Z' ? 'S7Z' : tagRival}"></div>
+                            </div>
+                        </div>
+                    </div>
                 `;
+            };
 
-                    rivalesOrdenados.forEach(rival => {
-                        const pA = mapaA.get(rival.tag);
-                        const pB = mapaB.get(rival.tag);
-
-                        // Función interna para generar una card estilo renderMatchInfo
-                        const buildCard = (partido, equipoLocalTag, nombreRival, tagRival) => {
-                            if (!partido) {
-                                return `
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="bracket-round-list-zzz">
-                        <div class="card-round-promo"><h3>—</h3></div>
-                        <div class="card-back">
-                            <div class="card-color-left bg-light"></div>
-                            <div class="card-color-right bg-light"></div>
+            let html = `
+                <div class="comparacion-calendarios">
+                    <h2>Comparación: ${teamNameA} vs ${rivalName}</h2>
+                    <div class="comparacion-grid container">
+                        <div class="row text-center mb-3">
+                            <div class="col-md-6"><h4>${teamNameA}</h4></div>
+                            <div class="col-md-6"><h4>${rivalName}</h4></div>
                         </div>
-                    </div>
-                </div>`;
-                            }
+            `;
+            
+            // 3. Iterar sobre las rondas y mostrar los partidos de A y B
+            todosLosPartidos.forEach(item => {
+                const partidoA = item.partidosA[0]; // Solo tomamos el primer partido de la ronda
+                const partidoB = item.partidosB[0]; // Solo tomamos el primer partido de la ronda
+                
+                // Envolvemos el par de partidos en una sola fila
+                html += `<div class="row mb-4">`;
+                
+                // Renderizar partido de A. Le pasamos el tag y nombre del equipo A
+                html += buildCard(partidoA, teamTagA, teamNameA); 
+                
+                // Renderizar partido de B. Le pasamos el tag y nombre del rival
+                html += buildCard(partidoB, rivalTag, rivalName);
+                
+                html += `</div>`;
+            });
 
-                            const fecha = formatDateToDayMonth(roundDatesMap.get(partido.rondaNombre) || 'Fecha no definida');
-                            const resultado = partido.resultado || 'VS';
+            html += '</div></div>';
+            document.getElementById(containerId).innerHTML = html;
+        })
+        .catch(err => {
+            console.error('Error en la comparación simple:', err);
+            document.getElementById(containerId).innerHTML = '<p>Error al cargar el calendario para comparación.</p>';
+        });
+}
 
-                            const nombreLocal = partido.equipo1;
-                            const tagLocal = partido.tag1;
-                            const nombreRivalReal = partido.equipo2;
-                            const tagRivalReal = partido.tag2;
-
-                            const localT = truncateString(nombreLocal, 12);
-                            const rivalT = truncateString(nombreRival, 12);
-
-                            const slugLocal = equipoSlugs[nombreLocal] || nombreLocal.toLowerCase().replace(/\s+/g, '-');
-                            const slugRival = equipoSlugs[nombreRival] || nombreRival.toLowerCase().replace(/\s+/g, '-');
-
-                            return `
-            <div class="col-12 col-md-6 col-lg-6 col-xl-4">
-                <div class="bracket-round-list">
-                    <div class="bracket-round-team">
-                        <a href="/liga-indigo/equipos/${slugLocal}">
-                            <img src="/assets/logos/${tagLocal}.webp" alt="${nombreLocal}" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="round-titles">
-                        <div class="card-round-promo left"><h6>${localT}</h6></div>
-                        <div class="card-round-promo mx-2">
-                            <span>${partido.rondaNombre}</span>
-                            ${resultado !== "VS" ? `<h6>${resultado}</h6>` : ''}
-                            <span>${fecha}</span>
-                        </div>
-                        <div class="card-round-promo right"><h6>${rivalT}</h6></div>
-                    </div>
-                    <div class="bracket-round-team-right">
-                        <a href="/liga-indigo/equipos/${slugRival}">
-                            <img src="/assets/logos/${tagRival}.webp" alt="${nombreRival}" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="card-back">
-                        <div class="card-color-left ${tagLocal === '7Z' ? 'S7Z' : tagLocal}"></div>
-                        <div class="card-color-right ${tagRival === '7Z' ? 'S7Z' : tagRival}"></div>
-                    </div>
-                </div>
-            </div>
-        `;
-                        };
-
-                        html += `<div class="row mb-4">`;
-                        html += buildCard(pA, teamTagA, rival.name, rival.tag);
-                        html += buildCard(pB, rivalTag, rival.name, rival.tag);
-                        html += `</div>`;
-                    });
-
-                    html += '</div>';
-                    document.getElementById(containerId).innerHTML = html;
-                })
-                .catch(err => {
-                    console.error('Error comparación:', err);
-                    document.getElementById(containerId).innerHTML = '<p>Error en comparación.</p>';
-                });
-        }
-
+// ✅
         document.getElementById("dropdownBtn").addEventListener("click", () => {
             document.getElementById("rivalDropdown").classList.toggle("dropdown-open");
         });
@@ -755,47 +756,6 @@ permalink:
                 );
             }
         });
-
-     function aplicarInversionPorEquipo(partidoOriginal, equipoTag) {
-    let p = { ...partidoOriginal };
-    
-    const esEquipo1 = p.tag1 === equipoTag;
-    const esEquipo2 = p.tag2 === equipoTag;
-
-    if (!esEquipo1 && !esEquipo2) return p;
-
-    // ✅ Defensa: si no hay rondaNombre, no invertir
-    if (!p.rondaNombre) {
-        console.warn("Partido sin rondaNombre:", p);
-        return p;
-    }
-
-    const numeroRonda = parseInt(p.rondaNombre.replace('RONDA ', '')); // ✅ ahora existe
-    const esRondaPar = !isNaN(numeroRonda) && numeroRonda % 2 === 0;
-    const esDescanso = p.equipo2 === "DES";
-
-    if (esRondaPar && !esDescanso) {
-        if (esEquipo1) {
-            [p.equipo1, p.equipo2] = [p.equipo2, p.equipo1];
-            [p.tag1, p.tag2] = [p.tag2, p.tag1];
-            if (p.resultado?.includes('-')) {
-                const [a, b] = p.resultado.split('-');
-                p.resultado = `${b}-${a}`;
-            }
-        }
-    } else {
-        if (esEquipo2) {
-            [p.equipo1, p.equipo2] = [p.equipo2, p.equipo1];
-            [p.tag1, p.tag2] = [p.tag2, p.tag1];
-            if (p.resultado?.includes('-')) {
-                const [a, b] = p.resultado.split('-');
-                p.resultado = `${b}-${a}`;
-            }
-        }
-    }
-
-    return p;
-}
 
         Promise.all([
             fetch(jsonBannerURL).then(r => r.json()),
