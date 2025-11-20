@@ -24,8 +24,7 @@ export async function guardarPerfil(e, user, db, dataGlobal, avatarSeleccionado)
     const disponibilidad = document.getElementById('disponibilidad').value;
     const buscandoEquipo = document.getElementById('buscando-equipo').checked;
     const horarioJuego = document.getElementById('horario-juego').value;
-    const horarioStream = document.getElementById('horario-stream').value;
-    const horarioCoach = document.getElementById('horario-coach').value;
+
 
     // Recolectar Tags
     const estilosJuego = [];

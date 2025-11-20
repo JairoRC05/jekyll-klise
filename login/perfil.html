@@ -8,6 +8,10 @@ permalink: /mi-perfil
 
 
 <style>
+    body {
+        background-color: #141414;
+    }
+
     .form-group {
         margin-bottom: 15px;
     }
@@ -93,7 +97,275 @@ permalink: /mi-perfil
         display: none;
         /* Se muestra cuando hay pokemon valido */
     }
+
+    .card-section {
+        background: #1E1E1E;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid #292929;
+        margin-bottom: 22px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #FFBF00;
+        margin-bottom: 15px;
+    }
+
+    /* AVATAR */
+    .avatar-wrapper {
+        width: 250px;
+        height: 250px;
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border: 3px solid #FFBF00;
+        transition: 0.25s ease;
+    }
+
+    .avatar-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Overlay */
+    .avatar-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.25s ease;
+    }
+
+    .avatar-overlay i {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .avatar-wrapper:hover .avatar-overlay {
+        opacity: 1;
+    }
+
+    .avatar-wrapper:hover {
+        transform: scale(1.03);
+    }
+
+
+    .btn-action {
+        background: #FFBF00;
+        border: none;
+        padding: 6px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        color: #1E1E1E;
+    }
+
+    /* INPUTS */
+    .input-group-custom {
+        margin-bottom: 16px;
+    }
+
+    .input-group-custom label {
+        font-weight: 600;
+        margin-bottom: 4px;
+        display: block;
+        color: #ccc;
+    }
+
+    .input-icon {
+        position: relative;
+    }
+
+    .input-icon i {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #999;
+    }
+
+    .input-icon input,
+    textarea {
+        width: 100%;
+        background: #141414;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 10px 12px 10px 36px;
+        color: white;
+    }
+
+    textarea {
+        resize: none;
+        height: 80px;
+    }
+
+    .char-counter {
+        color: #777;
+        font-size: 12px;
+        float: right;
+    }
+
+    /* REDES */
+    .sub-title {
+        color: #FFBF00;
+        font-weight: 600;
+        margin-bottom: 8px;
+        margin-top: 10px;
+    }
+
+    #redes-section .input-icon {
+        margin-bottom: 10px;
+    }
+
+
+    /* Estilos dentro del Modal */
+    .avatar-opcion {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+        border: 3px solid transparent;
+    }
+
+    .avatar-opcion:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .avatar-opcion.selected {
+        border-color: #FFBF00;
+        /* Mismo color que tu botón */
+        transform: scale(1.1);
+    }
 </style>
+
+
+
+<section class="card-section">
+
+    <h3 class="section-title">Datos Básicos</h3>
+
+
+
+    <div class="row">
+
+        <div class="col-8">
+
+           <div class="row">
+            <div class="col-6">
+                 <div class="input-group-custom">
+                <label>Nickname</label>
+                <div class="input-icon">
+                    <i class="bi bi-person-fill"></i>
+                    <input id="nickname" type="text" maxlength="12">
+                </div>
+            </div>
+
+              
+
+            </div>
+            <div class="col-6">  <div class="input-group-custom">
+                <label>Fecha de cumpleaños</label>
+                <div class="input-icon">
+                    <i class="bi bi-calendar-heart-fill"></i>
+                    <input id="cumpleaños" type="date" readonly>
+                </div>
+            </div></div>
+           </div>
+
+            <div class="input-group-custom">
+                <label>Descripción</label>
+                <textarea id="descripcion" maxlength="150"></textarea>
+                <small id="desc-count" class="char-counter">0 / 150</small>
+            </div>
+
+
+            <div class="input-group-custom">
+                <label>Discord</label>
+                <div class="input-icon">
+                    <i class="bi bi-discord"></i>
+                    <input id="discord" type="text" placeholder="usuario#0000">
+                </div>
+            </div>
+
+
+        
+        </div>
+        <div class="col-4">
+           <div class="d-flex justify-content-center">
+             <div class="avatar-wrapper" id="cambiar-avatar">
+                <img id="avatar-preview" src="/assets/avatars/female2.webp" alt="Avatar">
+                <div class="avatar-overlay">
+                    <i class="bi bi-camera-fill"></i>
+                    <span>Cambiar avatar</span>
+                </div>
+            </div>
+           </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Redes sociales (solo si plan != free) -->
+    <div id="redes-section" class="mt-3">
+        <h5 class="sub-title">🌐 Redes Sociales</h5>
+
+        <div class="input-icon">
+            <i class="bi bi-instagram"></i>
+            <input id="instagram" type="text" placeholder="@usuario">
+        </div>
+
+        <div class="input-icon">
+            <i class="bi bi-twitter-x"></i>
+            <input id="x" type="text" placeholder="@usuario">
+        </div>
+
+        <div class="input-icon">
+            <i class="bi bi-facebook"></i>
+            <input id="facebook" type="text" placeholder="Perfil Facebook">
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="tab-content" id="perfilTabsContent">
 
@@ -124,7 +396,8 @@ permalink: /mi-perfil
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label for="cumpleaños">Fecha de cumpleaños*
-                                    <i class="bi bi-info-circle-fill ms-2" style="cursor: help; font-size: 1.1rem;"
+                                    <i class="bi bi-info-circle-fill ms-2"
+                                        style="cursor: help; font-size: 1.1rem; color: #949494;"
                                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                         title="Solo se puede establecer una vez, esta información no es visible públicamente">
                                     </i>
@@ -144,7 +417,8 @@ permalink: /mi-perfil
                         <div class="col-lg-3">
                             <div class="form-group">
                                 <label for="telefono">Teléfono / WhatsApp
-                                    <i class="bi bi-info-circle-fill ms-2" style="cursor: help; font-size: 1.1rem;"
+                                    <i class="bi bi-info-circle-fill ms-2"
+                                        style="cursor: help; font-size: 1.1rem; color: #949494;"
                                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
                                         title="Esta información no es visible públicamente">
                                     </i>
@@ -168,52 +442,150 @@ permalink: /mi-perfil
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label fw-bold">Define tu Estilo de Juego <small class="text-muted">(Máx
-                                3)</small></label>
+                        <label class="form-label fw-bold">
+                            Define tu Estilo de Juego
+                            <small class="text-muted">(Máx 3)</small>
+                            <i id="nick-status-icon" class="bi bi-info-circle-fill ms-2"
+                                style="cursor: help; font-size: 1.1rem; color: #949494;" data-bs-toggle="modal"
+                                data-bs-target="#modalTagsGamer">
+                            </i>
+                        </label>
 
-                        <div class="d-flex flex-wrap gap-2" id="tags-container">
+                        <div class="container-tag" id="tags-container">
                             <input type="checkbox" class="btn-check tag-check" id="tag-shotcaller" value="Shotcaller"
                                 autocomplete="off">
-                            <label class="btn btn-outline-info btn-sm rounded-pill" for="tag-shotcaller">🗣️
-                                Shotcaller</label>
+                            <label class="btn btn-outline-primary btn-sm rounded-pill" for="tag-shotcaller">
+                                <i class="fa-solid fa-brain me-1"></i> Shotcaller
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-agresivo" value="Agresivo"
                                 autocomplete="off">
-                            <label class="btn btn-outline-danger btn-sm rounded-pill" for="tag-agresivo">⚔️
-                                Agresivo</label>
+                            <label class="btn btn-outline-danger btn-sm rounded-pill" for="tag-agresivo">
+                                <i class="fa-solid fa-sword me-1"></i> Agresivo
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-macro" value="Macro Player"
                                 autocomplete="off">
-                            <label class="btn btn-outline-primary btn-sm rounded-pill" for="tag-macro">🧠 Macro
-                                Player</label>
+                            <label class="btn btn-outline-primary btn-sm rounded-pill" for="tag-macro">
+                                <i class="fa-solid fa-diagram-project me-1"></i> Macro Player
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-flex" value="Flex"
                                 autocomplete="off">
-                            <label class="btn btn-outline-success btn-sm rounded-pill" for="tag-flex">🔄 Flex</label>
+                            <label class="btn btn-outline-success btn-sm rounded-pill" for="tag-flex">
+                                <i class="fa-solid fa-arrows-rotate me-1"></i> Flex
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-otp" value="OTP"
                                 autocomplete="off">
-                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-otp">⭐ OTP (Main
-                                puro)</label>
+                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-otp">
+                                <i class="fa-solid fa-star me-1"></i> OTP
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-defensivo" value="Defensivo"
                                 autocomplete="off">
-                            <label class="btn btn-outline-secondary btn-sm rounded-pill" for="tag-defensivo">🛡️
-                                Defensivo</label>
+                            <label class="btn btn-outline-secondary btn-sm rounded-pill" for="tag-defensivo">
+                                <i class="fa-solid fa-shield-alt me-1"></i> Defensivo
+                            </label>
 
-                            <input type="checkbox" class="btn-check tag-check" id="tag-coach" value="Estratégico"
+                            <input type="checkbox" class="btn-check tag-check" id="tag-estrategico" value="Estratégico"
                                 autocomplete="off">
-                            <label class="btn btn-outline-dark btn-sm rounded-pill" for="tag-coach">📋
-                                Estratégico</label>
+                            <label class="btn btn-outline-dark btn-sm rounded-pill" for="tag-estrategico">
+                                <i class="fa-solid fa-chess-board me-1"></i> Estratégico
+                            </label>
 
                             <input type="checkbox" class="btn-check tag-check" id="tag-chill" value="Chill"
                                 autocomplete="off">
-                            <label class="btn btn-outline-light text-dark border btn-sm rounded-pill" for="tag-chill">😌
-                                Chill /
-                                Relax</label>
+                            <label class="btn btn-outline-light text-dark border btn-sm rounded-pill" for="tag-chill">
+                                <i class="fa-regular fa-face-smile me-1"></i> Chill
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-jungla" value="Jungla"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success btn-sm rounded-pill" for="tag-jungla">
+                                <i class="fa-solid fa-tree me-1"></i> Jungla
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-splitpusher" value="Splitpusher"
+                                autocomplete="off">
+                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-splitpusher">
+                                <i class="fa-solid fa-person-walking-arrow-right me-1"></i> Splitpusher
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-hardsupport" value="Hard Support"
+                                autocomplete="off">
+                            <label class="btn btn-outline-info btn-sm rounded-pill" for="tag-hardsupport">
+                                <i class="fa-solid fa-hands-helping me-1"></i> Hard Support
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-soloqueue" value="Solo Queue"
+                                autocomplete="off">
+                            <label class="btn btn-outline-secondary btn-sm rounded-pill" for="tag-soloqueue">
+                                <i class="fa-solid fa-user me-1"></i> Solo Queue
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-clutch" value="Clutch Player"
+                                autocomplete="off">
+                            <label class="btn btn-outline-danger btn-sm rounded-pill" for="tag-clutch">
+                                <i class="fa-solid fa-fire me-1"></i> Clutch Player
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-tactician" value="Tactician"
+                                autocomplete="off">
+                            <label class="btn btn-outline-dark btn-sm rounded-pill" for="tag-tactician">
+                                <i class="fa-solid fa-puzzle-piece me-1"></i> Tactician
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-adaptativo" value="Adaptativo"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary btn-sm rounded-pill" for="tag-adaptativo">
+                                <i class="fa-solid fa-sliders me-1"></i> Adaptativo
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-carry" value="Carry"
+                                autocomplete="off">
+                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-carry">
+                                <i class="fa-solid fa-crown me-1"></i> Carry
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-teamplayer" value="Team Player"
+                                autocomplete="off">
+                            <label class="btn btn-outline-success btn-sm rounded-pill" for="tag-teamplayer">
+                                <i class="fa-solid fa-users me-1"></i> Team Player
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-veterano" value="Veterano"
+                                autocomplete="off">
+                            <label class="btn btn-outline-secondary btn-sm rounded-pill" for="tag-veterano">
+                                <i class="fa-solid fa-medal me-1"></i> Veterano
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-rusher" value="Rusher"
+                                autocomplete="off">
+                            <label class="btn btn-outline-danger btn-sm rounded-pill" for="tag-rusher">
+                                <i class="fa-solid fa-bolt me-1"></i> Rusher
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-riguroso" value="Riguroso"
+                                autocomplete="off">
+                            <label class="btn btn-outline-dark btn-sm rounded-pill" for="tag-riguroso">
+                                <i class="fa-solid fa-clipboard-list me-1"></i> Riguroso
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-tilteable" value="Tilteable"
+                                autocomplete="off">
+                            <label class="btn btn-outline-warning btn-sm rounded-pill" for="tag-tilteable">
+                                <i class="fa-regular fa-face-angry me-1"></i> Tilteable
+                            </label>
+
+                            <input type="checkbox" class="btn-check tag-check" id="tag-support" value="Support"
+                                autocomplete="off">
+                            <label class="btn btn-outline-info btn-sm rounded-pill" for="tag-support">
+                                <i class="fa-solid fa-heart-circle-plus me-1"></i> Support
+                            </label>
                         </div>
                         <small id="tags-feedback" class="text-muted mt-1 d-block">Seleccionados: <span
-                                id="tags-count">0</span>/3</small>
+                                id="tags-count">0</span></small>
                     </div>
 
                     <div class="form-group mb-3">
@@ -406,7 +778,7 @@ permalink: /mi-perfil
 
                     <!-- Sección Streamer extra (solo streamer) -->
                     <div id="streamer-extra" class="form-group" style="display:none;">
-                        <div id="stream-section" style="display:none;">
+                        <div id="stream-section">
                             <div id="horario-wrapper">
                                 <label class="form-label fw-bold">Horario de Juego</label>
 
@@ -457,7 +829,7 @@ permalink: /mi-perfil
                         </div>
 
 
-                        <div id="coach-inputs-section" style="display:none;">
+                        <div id="coach-inputs-section">
                             <div id="horario-wrapper">
                                 <label class="form-label fw-bold">Horario de Juego</label>
 
@@ -564,15 +936,22 @@ permalink: /mi-perfil
             </div>
             <div class="modal-body">
                 <p class="text-muted small">Selecciona los días y el rango de horas habituales (GMT-5).</p>
-                
+
                 <div class="btn-group w-100 mb-3" role="group" id="modal-dias-checks">
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-lun" value="Lun"><label class="btn btn-outline-secondary btn-sm" for="d-m-lun">L</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mar" value="Mar"><label class="btn btn-outline-secondary btn-sm" for="d-m-mar">M</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mie" value="Mié"><label class="btn btn-outline-secondary btn-sm" for="d-m-mie">X</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-jue" value="Jue"><label class="btn btn-outline-secondary btn-sm" for="d-m-jue">J</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-vie" value="Vie"><label class="btn btn-outline-secondary btn-sm" for="d-m-vie">V</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-sab" value="Sáb"><label class="btn btn-outline-secondary btn-sm" for="d-m-sab">S</label>
-                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-dom" value="Dom"><label class="btn btn-outline-secondary btn-sm" for="d-m-dom">D</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-lun" value="Lun"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-lun">L</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mar" value="Mar"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-mar">M</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-mie" value="Mié"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-mie">X</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-jue" value="Jue"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-jue">J</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-vie" value="Vie"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-vie">V</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-sab" value="Sáb"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-sab">S</label>
+                    <input type="checkbox" class="btn-check dia-check-modal" id="d-m-dom" value="Dom"><label
+                        class="btn btn-outline-secondary btn-sm" for="d-m-dom">D</label>
                 </div>
 
                 <div class="row g-2 align-items-center">
@@ -598,5 +977,24 @@ permalink: /mi-perfil
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalAvatar" tabindex="-1" aria-labelledby="modalAvatarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="modalAvatarLabel">Elige tu Avatar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="avatars-grid-modal" class="d-flex flex-wrap justify-content-center gap-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%- include components/modal-tags.html -%}
+
+
+
 
 <script type="module" src="/assets/js/perfiles.js"></script>

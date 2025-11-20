@@ -1,27 +1,34 @@
 // Archivo: /assets/js/modules/config-juego.js
 
-// 1. CONSTANTES (Configuración)
-const LIMITES = {
-    free: 3,
-    premium: 7
-};
-
-
 const BASE_AVATARES = {
     standard: ['female1', 'female2', 'male1', 'male2'],
     premium_extra: ['female3', 'male3', 'female4', 'male4'],
     streamer_extra: ['pikachu', 'blastoise', 'venusaur', 'charizard']
 };
 
-// Función para calcular el límite real según roles
-export function obtenerLimitePicks(membership, roles) {
-    // Si tiene membresía premium O es Coach O es Streamer -> Límite alto
-    if (membership === 'premium' || roles.isCoach || roles.isStreamer) {
-        return LIMITES.premium;
-    }
-    return LIMITES.free;
-}
+const LIMITES_TAGS = {
+    free: 3,
+    premium: 7,
+    streamer: 12,
+    coach: 18
+};
 
+
+const LIMITES = {
+    free: 3,
+    premium: 7,
+    streamer: 15,
+    coach: 22
+};
+
+export function obtenerLimiteTags(membership, roles) {
+    // Jerarquía: Coach > Streamer > Premium > Free
+    if (roles?.isCoach) return LIMITES_TAGS.coach;
+    if (roles?.isStreamer) return LIMITES_TAGS.streamer;
+    if (membership === 'premium') return LIMITES_TAGS.premium;
+    
+    return LIMITES_TAGS.free;
+}
 
 export function obtenerAvataresDisponibles(membership, roles) {
     let lista = [...BASE_AVATARES.standard];
@@ -37,6 +44,15 @@ export function obtenerAvataresDisponibles(membership, roles) {
     }
 
     return lista;
+}
+
+
+export function obtenerLimitePicks(membership, roles) {
+    // Si tiene membresía premium O es Coach O es Streamer -> Límite alto
+    if (membership === 'premium' || roles.isCoach || roles.isStreamer) {
+        return LIMITES.premium;
+    }
+    return LIMITES.free;
 }
 
 // FUNCIÓN DE RENDERIZADO (Picks)

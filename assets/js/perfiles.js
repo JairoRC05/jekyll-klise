@@ -2,10 +2,12 @@
 
 import {
     renderPicks,
-    obtenerAvataresDisponibles
+    obtenerAvataresDisponibles,
+    obtenerLimiteTags
 } from './modules/config-juego.js';
 import {
     renderAvatares,
+    actualizarAvatarPreview,
     renderLogros,
     renderTrayectoria,
     renderLogrosCoach,
@@ -19,29 +21,43 @@ import { cargarListasGlobales } from './modules/data-fetch.js';
 import { iniciarFiltro } from './modules/validation.js';
 import { guardarPerfil } from './modules/save-logic.js';
 
-// Variables globales de estado
+
 let dataGlobal = null;
 let membership = 'free';
 let rolesUsuario = { isPlayer: true };
 let avatarSeleccionado = 'female1';
 let CACHE_POKEMONS = [];
 let CACHE_REGIONES = [];
-let inputObjetivo = null; 
+let inputObjetivo = null;
+let modalAvatarInstance = null;
 
-// === 1. INICIALIZACIÓN ===
+
 document.addEventListener('DOMContentLoaded', async () => {
-    // A. Cargar datos
+
     const datos = await cargarListasGlobales();
     CACHE_REGIONES = datos.regiones;
     CACHE_POKEMONS = datos.pokemons;
+    const btnAvatar = document.getElementById('cambiar-avatar');
+    const modalEl = document.getElementById('modalAvatar');
+
+    if (modalEl) {
+        modalAvatarInstance = new bootstrap.Modal(modalEl);
+    }
+
+    if (btnAvatar) {
+        btnAvatar.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            modalAvatarInstance.show();
+        });
+    }
 
     iniciarFiltro(datos.badwords);
 
-    // B. Configurar Listeners de Interacción (Horario, Teléfono, Equipo)
     setupFormListeners();
+    setupTagListeners();
 });
 
-// === 2. AUTH & CARGA DE DATOS ===
+
 auth.onAuthStateChanged(user => {
     if (!user) { window.location.href = '/iniciar-sesion'; return; }
 
@@ -59,22 +75,33 @@ auth.onAuthStateChanged(user => {
             membership = data.membership || 'free';
             rolesUsuario = data.roles || { isPlayer: true };
 
+            const limiteTags = obtenerLimiteTags(membership, rolesUsuario);
+            const tagsCount = document.getElementById('tags-count');
+            const tagsActivos = document.querySelectorAll('.tag-check:checked').length;
+            if (tagsCount) {
+                tagsCount.textContent = `${tagsActivos} / ${limiteTags}`;
+            }
+
 
             const esPremium = membership === 'premium' || rolesUsuario.isCoach || rolesUsuario.isStreamer;
             llenarInputsBasicos(data, esPremium);
 
-            // --- A. Renderizados Modulares (UI) ---
-            // Avatar
+            //Avatar
+            avatarSeleccionado = data.avatar || 'female1';
+            actualizarAvatarPreview(avatarSeleccionado);
             const listaAvatares = obtenerAvataresDisponibles(membership, rolesUsuario);
-            renderAvatares(avatarSeleccionado, listaAvatares, (nuevo) => {
-                avatarSeleccionado = nuevo;
+            renderAvatares(avatarSeleccionado, listaAvatares, (nuevoAvatar) => {
+            
+            avatarSeleccionado = nuevoAvatar;
+
+            actualizarAvatarPreview(nuevoAvatar);
+            
+            if (modalAvatarInstance) modalAvatarInstance.hide();
             });
 
             // Picks & Tags
             renderPicks(data.picks || [], membership, rolesUsuario, CACHE_POKEMONS);
             renderTags(data.estilosJuego || []);
-
-
 
             // Secciones Visuales
             renderInsignias(data.insignias || []);
@@ -94,7 +121,8 @@ auth.onAuthStateChanged(user => {
             inicializarEstadoEquipo(data.equipo, data.disponibilidad);
 
         } else {
-            // Usuario nuevo (sin doc en DB)
+           
+            actualizarAvatarPreview('female1');
             const listaAvataresBase = obtenerAvataresDisponibles('free', { isPlayer: true });
             renderAvatares('female1', listaAvataresBase, (nuevo) => {
                 avatarSeleccionado = nuevo;
@@ -267,10 +295,16 @@ function setupFormListeners() {
     const eqInput = document.getElementById('equipo-input');
     const hint = document.getElementById('equipo-hint');
     const horarioWrap = document.getElementById('horario-wrapper');
+    const seccionAgenteLibre = document.getElementById('seccion-agente-libre');
 
     const updateEq = () => {
         const disp = dispSelect.value;
         const buscando = busCheck.checked;
+
+        if (seccionAgenteLibre) {
+            seccionAgenteLibre.style.display = (disp === 'no') ? 'none' : 'block';
+        }
+
 
         if (disp === 'no') {
             eqInput.value = 'No disponible';
@@ -301,12 +335,54 @@ function setupFormListeners() {
     busCheck?.addEventListener('change', updateEq);
 }
 
+function setupTagListeners() {
+    const checkboxes = document.querySelectorAll('.tag-check');
+    const countSpan = document.getElementById('tags-count');
+
+    if (!checkboxes.length) return;
+
+    checkboxes.forEach(chk => {
+        // Remover listeners anteriores para evitar duplicados (si llamas esto varias veces)
+        // Una forma limpia es clonar el nodo, pero como es simple, asumiremos que se llama una vez.
+
+        chk.addEventListener('change', function () {
+            // 1. Calcular el límite ACTUAL en el momento del click
+            // Usamos las variables globales 'membership' y 'rolesUsuario'
+            const limiteActual = obtenerLimiteTags(membership, rolesUsuario);
+
+            // 2. Contar cuántos hay activos
+            const checkedCount = document.querySelectorAll('.tag-check:checked').length;
+
+            // 3. Actualizar contador visual
+            if (countSpan) countSpan.textContent = `${checkedCount} / ${limiteActual}`;
+
+            // 4. Validar Límite
+            if (checkedCount > limiteActual) {
+                this.checked = false; // Desmarcar el último
+                if (countSpan) countSpan.textContent = `${limiteActual} / ${limiteActual}`; // Corregir texto
+
+                // Alerta
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                Toast.fire({
+                    icon: 'info',
+                    title: `Tu plan permite máximo ${limiteActual} estilos.`
+                });
+            }
+        });
+    });
+}
+
 function setupHorarioModal() {
     const modalEl = document.getElementById('horarioModal');
     if (!modalEl) return;
-    
+
     const modalBs = new bootstrap.Modal(modalEl); // Instancia Bootstrap
-    
+
     // --- Referencias de Inputs del Modal ---
     const checks = modalEl.querySelectorAll('.dia-check-modal');
     const horaIni = document.getElementById('modal-hora-inicio');
@@ -337,9 +413,9 @@ function setupHorarioModal() {
     // 1. CARGA DE DATOS al ABRIR EL MODAL
     modalEl.addEventListener('show.bs.modal', function (e) {
         // Obtenemos el botón que disparó el evento
-        const button = e.relatedTarget; 
+        const button = e.relatedTarget;
         const targetInputId = button.getAttribute('data-target-input');
-        
+
         inputObjetivo = document.getElementById(targetInputId);
         if (!inputObjetivo) return;
 
@@ -348,16 +424,16 @@ function setupHorarioModal() {
         horaIni.value = '';
         horaFin.value = '';
         previewText.textContent = '';
-        
+
         // Cargar datos existentes si los hay
         const valorActual = inputObjetivo.value;
         if (valorActual) {
             // Lógica inversa (muy básica): Intentamos cargar los tiempos
             const [_, diasStr, horaIniStr, horaFinStr] = valorActual.match(/(.*) de (.*) a (.*)/) || [];
             if (diasStr) {
-                 // Simplificamos la carga: solo se cargan las horas
-                 horaIni.value = horaIniStr || '';
-                 horaFin.value = horaFinStr || '';
+                // Simplificamos la carga: solo se cargan las horas
+                horaIni.value = horaIniStr || '';
+                horaFin.value = horaFinStr || '';
             }
         }
     });
@@ -372,7 +448,7 @@ function setupHorarioModal() {
         const stringFinal = actualizarPreview();
         if (inputObjetivo && stringFinal) {
             inputObjetivo.value = stringFinal; // Guarda en el input oculto
-            
+
             // Actualizar el texto visible en el formulario principal
             const previewEl = document.getElementById(`preview-${inputObjetivo.id}`);
             if (previewEl) {
@@ -382,7 +458,7 @@ function setupHorarioModal() {
             }
             modalBs.hide(); // Cierra el modal
         } else {
-             Swal.fire('Error', 'Debes seleccionar días y un rango de horas válido.', 'warning');
+            Swal.fire('Error', 'Debes seleccionar días y un rango de horas válido.', 'warning');
         }
     });
 
@@ -390,7 +466,7 @@ function setupHorarioModal() {
     document.querySelectorAll('.preview-texto').forEach(p => {
         const inputId = p.id.replace('preview-', '');
         const input = document.getElementById(inputId);
-        if(input && input.value) {
+        if (input && input.value) {
             p.textContent = input.value;
             p.classList.add('text-success', 'fw-bold');
         }

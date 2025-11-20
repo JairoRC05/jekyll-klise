@@ -911,36 +911,39 @@
             "tag1": "PLA",
             "equipo2": "DFS FROSTBITE",
             "tag2": "FTB",
-            "resultado": "VS",
+            "resultado": "1-2",
             "stream": true,
             "hora": "22:30",
             "dia": "2025-11-19",
             "round_number": 11,
-            "match_number": 4
+            "match_number": 4,
+            "fecha": ""
           },
           {
             "equipo1": "DINASTY",
             "tag1": "DINASTY",
             "equipo2": "HAKKESSHU",
             "tag2": "傑",
-            "resultado": "VS",
+            "resultado": "2-0",
             "stream": true,
             "hora": "21:00",
             "dia": "2025-11-19",
             "round_number": 11,
-            "match_number": 5
+            "match_number": 5,
+            "fecha": ""
           },
           {
             "equipo1": "CAPIBAYAS",
             "tag1": "CAPI",
             "equipo2": "DFS RUBY",
             "tag2": "RUBY",
-            "resultado": "VS",
+            "resultado": "2-1",
             "stream": true,
             "hora": "21:50",
             "dia": "2025-11-19",
             "round_number": 11,
-            "match_number": 6
+            "match_number": 6,
+            "fecha": ""
           }
         ]
       }

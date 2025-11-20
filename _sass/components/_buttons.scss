@@ -38,3 +38,18 @@
   color: #fff;
   @include button-transition(#2a015d, #fff);
 }
+
+
+
+
+$purple: #6f42c1;
+
+.btn-outline-purple {
+  color: $purple;
+  border-color: $purple;
+
+  &:hover {
+    background-color: $purple;
+    color: white;
+  }
+}

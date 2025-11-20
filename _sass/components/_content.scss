@@ -34,10 +34,27 @@
 }
 
 
+
+
+
 .section-light {
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1rem;
   color: black;
+
+}
+
+
+
+
+.container-tag{
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+
+  .btn{
+    padding: 0 1em;
+  }
 
 }

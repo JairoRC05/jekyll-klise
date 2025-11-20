@@ -1,7 +1,13 @@
 // Archivo: /assets/js/modules/ui-render.js
 
 
-
+export function actualizarAvatarPreview(nombreAvatar) {
+    const imgPreview = document.getElementById('avatar-preview');
+    const topAvatar = document.getElementById('top-avatar'); 
+    
+    if (imgPreview) imgPreview.src = `/assets/avatars/${nombreAvatar}.webp`;
+    if (topAvatar) topAvatar.src = `/assets/avatars/${nombreAvatar}.webp`;
+}
 /**
  * Renderiza la lista de avatares seleccionables.
  * @param {String} avatarActual - El nombre del archivo del avatar actual.
@@ -9,7 +15,7 @@
  * @param {Function} onAvatarClick - Callback para notificar la selección.
  */
 export function renderAvatares(avatarActual = 'female1', listaAvataresDisponibles, onAvatarClick) {
-    const cont = document.getElementById('avatars-container');
+    const cont = document.getElementById('avatars-grid-modal');
     if (!cont) return;
 
     cont.innerHTML = '';
@@ -20,8 +26,7 @@ export function renderAvatares(avatarActual = 'female1', listaAvataresDisponible
         const img = document.createElement('img');
         img.src = `/assets/avatars/${avatar}.webp`; // Asegúrate que la ruta coincida con tu estructura
         img.alt = avatar;
-        // Clases Bootstrap para estética
-        img.className = 'img-thumbnail m-1 avatar-opcion'; 
+        img.className = 'avatar-opcion'; 
         img.style.width = '70px';
         img.style.height = '70px';
         img.style.objectFit = 'cover';
@@ -31,6 +36,7 @@ export function renderAvatares(avatarActual = 'female1', listaAvataresDisponible
         if (avatar === avatarActual) {
             img.style.border = '3px solid #ffcc00';
             img.style.transform = 'scale(1.1)';
+            img.classList.add('selected');
         } else {
             img.style.border = '2px solid transparent';
         }
@@ -39,8 +45,8 @@ export function renderAvatares(avatarActual = 'female1', listaAvataresDisponible
             // Ejecutamos la función que nos pasó el archivo principal
             if (onAvatarClick) onAvatarClick(avatar);
             
-            // Re-renderizamos para actualizar el borde visualmente
-            renderAvatares(avatar, plan, onAvatarClick);
+            document.querySelectorAll('.avatar-opcion').forEach(el => el.classList.remove('selected'));
+            img.classList.add('selected');
         });
 
         cont.appendChild(img);
