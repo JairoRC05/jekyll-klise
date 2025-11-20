@@ -996,12 +996,12 @@ bgColor: indigo
 
                 } catch (error) {
                     console.error("Error al registrar equipo:", error);
-                    let errorMessage = "No se pudo guardar en Firebase";
+                    let errorMessage = "No se pudo guardar contacta al administrador";
 
                     if (error.message.includes("permission-denied")) {
-                        errorMessage += ": Permisos denegados. Verifica tus reglas de Firestore.";
+                        errorMessage += ": Permisos denegados.";
                     } else if (error.message.includes("unavailable")) {
-                        errorMessage += ": No se puede conectar a Firebase. Verifica tu conexión.";
+                        errorMessage += ": No se puede conectar. Verifica tu conexión.";
                     } else {
                         errorMessage += ": " + error.message;
                     }
