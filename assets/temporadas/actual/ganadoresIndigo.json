@@ -1,8 +1,8 @@
 {
   "cuartos_final": {
     "QF1": {
-      "nombre": "QF1",
-      "tag": "TBD"
+      "nombre": "CAPIBAYAS",
+      "tag": "CAPI"
     },
     "QF2": {
       "nombre": "QF2",
@@ -13,7 +13,7 @@
       "tag": "TBD"
     },
     "QF4": {
-      "nombre": "QF3",
+      "nombre": "QF4",
       "tag": "TBD"
     }
   },
